@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /cgi-bin/
+Disallow: /index.html
+
+Sitemap: http://pro-elearning.com/sitemap.xml

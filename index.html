@@ -1,12 +1,425 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Pro-elearning</title>
-</head>
-<body>
-    
-</body>
+<html lang="en" ng-app="ProELearning">
+	<head>
+		<title ng-bind="title"></title>
+        
+        <!-- Setting Base URL for HTML5 Mode -->
+        <base href="/prodesignnew/">
+        
+        <!-- Meta Tags -->
+<!--		<meta charset="UTF-8"> -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{description}}">
+        <meta name="keywords" content="{{keywords}}">
+        <meta name="google-site-verification" content="6dfqoRBGvsm03b7lKyteHXqU7DAnr0a3bJERqvCmicU" />
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-119053115-1');
+        </script>
+        
+        <!-- Favicon -->
+		<link rel="shortcut icon" href="./images/logos/favicon.ico">
+		
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/bootstrap-dropdownhover.css" type="text/css">
+        <link rel="stylesheet" href="plugins/owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="plugins/fontawesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styles.css" type="text/css">
+		<link rel="stylesheet" href="css/app.animations.css" type="text/css">
+        <!-- //CSS -->
+		
+		<!-- Fonts -->
+		<style rel="stylesheet">
+            @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+/*			@import url('https://fonts.googleapis.com/css?family=Lato|Roboto');*/
+		</style>
+		<!-- //Fonts -->
+                
+	</head>
+	<body>
+        
+        <!-- Navbar Starts Here -->
+		<header>
+			<nav class="navbar navbar-fixed-top" id="navbar-main">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pel-main-navbar-collapse" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar icon-bar-top"></span>
+							<span class="icon-bar icon-bar-middle"></span>
+							<span class="icon-bar icon-bar-bottom"></span>
+						</button>
+						<a class="navbar-brand" ng-href="/"><img class="img-responsive" alt="Pro E-Learning Home" ng-src="images/logos/logo-h-70.png"></a>
+					</div>
+				
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="pel-main-navbar-collapse" data-hover="dropdown" data-animations="zoomIn zoomIn zoomIn zoomIn">
+						<ul class="nav navbar-nav navbar-left">
+							<!--<li class="active"><a class="hvr-underline-from-center" ng-href="/">Home</a></li>-->
+							<li class="dropdown">
+								<a ng-href="#" class="dropdown-toggle hvr-underline-from-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th" aria-hidden="true"></i> Categories <i class="fa fa-angle-down fa-fw chevron1" aria-hidden="true"></i></a>
+								<ul class="dropdown-menu">
+									<li class="dropdown">
+										<a href="information-technology" class="hvr-underline-from-center">Information Technology <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="information-technology/java" class="hvr-underline-from-center">Java</a></li>
+											<li><a ng-href="information-technology/dotnet" class="hvr-underline-from-center">.Net</a></li>
+											<li><a ng-href="information-technology/python" class="hvr-underline-from-center">Python</a></li>
+											<li><a ng-href="information-technology/embedded-systems" class="hvr-underline-from-center">Embedded Systems</a></li>
+											<li><a ng-href="information-technology/unix" class="hvr-underline-from-center">UNIX</a></li>
+											<li><a ng-href="information-technology/linux" class="hvr-underline-from-center">Linux</a></li>
+											<li><a ng-href="information-technology/build-and-deployment-engineer" class="hvr-underline-from-center">Build & Deployment Engineer</a></li>
+											<li><a ng-href="information-technology/build-release-engineer" class="hvr-underline-from-center">Build & Release Engineer</a></li>
+											<li><a ng-href="information-technology/ruby" class="hvr-underline-from-center">Ruby</a></li>
+											<li><a ng-href="information-technology/sharepoint" class="hvr-underline-from-center">SharePoint</a></li>
+											<li><a ng-href="information-technology/itil-v3-foundation" class="hvr-underline-from-center">ITIL V3 Foundation</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="web-development" class="hvr-underline-from-center">Web Development <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="web-development/ui-development" class="hvr-underline-from-center">UI Development</a></li>
+											<li><a ng-href="web-development/angular4" class="hvr-underline-from-center">Angular 4</a></li>
+											<li><a ng-href="web-development/php" class="hvr-underline-from-center">PHP</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="rpa" class="hvr-underline-from-center">RPA <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="rpa/blueprism" class="hvr-underline-from-center">Blue Prism</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="cloud-technologies" class="hvr-underline-from-center">Cloud Technologies <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="cloud-technologies/salesforce-developer" class="hvr-underline-from-center">Salesforce Developer</a></li>
+											<li><a ng-href="cloud-technologies/salesforce-administrator" class="hvr-underline-from-center">Salesforce Administrator</a></li>
+											<li><a ng-href="cloud-technologies/azure" class="hvr-underline-from-center">Azure</a></li>
+											<li><a ng-href="cloud-technologies/aws" class="hvr-underline-from-center">AWS</a></li>
+											<li><a ng-href="cloud-technologies/cloudera" class="hvr-underline-from-center">Cloudera</a></li>
+											<li><a ng-href="cloud-technologies/servicenow " class="hvr-underline-from-center">ServiceNow</a></li>
+											<li><a ng-href="cloud-technologies/openstack" class="hvr-underline-from-center">OpenStack</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="mobile-apps" class="hvr-underline-from-center">Mobile Applications <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="mobile-apps/android" class="hvr-underline-from-center">Android</a></li>
+											<li><a ng-href="mobile-apps/ios" class="hvr-underline-from-center">iOS</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="network-security" class="hvr-underline-from-center">Network & Security <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="network-security/ccna" class="hvr-underline-from-center">CCNA</a></li>
+											<li><a ng-href="network-security/cyber-network-security" class="hvr-underline-from-center">Cyber Network Security</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="application-support" class="hvr-underline-from-center">Application Support <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="application-support/devops" class="hvr-underline-from-center">DevOps</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="data-management" class="hvr-underline-from-center">Data Management <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="data-management/hadoop" class="hvr-underline-from-center">Hadoop</a></li>
+											<li><a ng-href="data-management/hadoop-administrator" class="hvr-underline-from-center">Hadoop Administrator</a></li>
+											<li><a ng-href="data-management/hp-vertica" class="hvr-underline-from-center">HP Vertica</a></li>
+											<li><a ng-href="data-management/talend" class="hvr-underline-from-center">Talend</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="business-intelligence" class="hvr-underline-from-center">Business Intelligence <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="business-intelligence/msbi" class="hvr-underline-from-center">MSBI</a></li>
+											<li><a ng-href="business-intelligence/obiee" class="hvr-underline-from-center">OBIEE</a></li>
+											<li><a ng-href="business-intelligence/power-bi" class="hvr-underline-from-center">Power BI</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="erp" class="hvr-underline-from-center">ERP <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="erp/people-soft-hrms" class="hvr-underline-from-center">People Soft HRMS</a></li>
+											<li><a ng-href="erp/salesforce-crm" class="hvr-underline-from-center">Salesforce CRM</a></li>
+											<li><a ng-href="erp/oracle-apps" class="hvr-underline-from-center">Oracle Apps</a></li>
+											<li><a ng-href="erp/sap-bi" class="hvr-underline-from-center">SAP BI</a></li>
+											<li><a ng-href="erp/sap-bo" class="hvr-underline-from-center">SAP BO</a></li>
+											<li><a ng-href="erp/sap-crm" class="hvr-underline-from-center">SAP CRM</a></li>
+											<li><a ng-href="erp/sap-fico" class="hvr-underline-from-center">SAP FICO</a></li>
+											<li><a ng-href="erp/sap-hana" class="hvr-underline-from-center">SAP HANA</a></li>
+											<li><a ng-href="erp/sap-mm" class="hvr-underline-from-center">SAP MM</a></li>
+											<li><a ng-href="erp/sas" class="hvr-underline-from-center">SAS</a></li>
+											<li><a ng-href="erp/sas-clinical-research" class="hvr-underline-from-center">SAS Clinical Research</a></li>
+											<li><a ng-href="erp/sas-bi" class="hvr-underline-from-center">SAS BI</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="etl" class="hvr-underline-from-center">ETL Tools <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="etl/datastage" class="hvr-underline-from-center">DataStage</a></li>
+											<li><a ng-href="etl/informatica" class="hvr-underline-from-center">Informatica</a></li>
+											<li><a ng-href="etl/informatica-mdm" class="hvr-underline-from-center">Informatica MDM</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="business-management" class="hvr-underline-from-center">Business Management <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="business-management/jbpm" class="hvr-underline-from-center">JBPM</a></li>
+											<li><a ng-href="business-management/pega-6.2" class="hvr-underline-from-center">Pega 6.2</a></li>
+											<li><a ng-href="business-management/pega-7" class="hvr-underline-from-center">Pega 7</a></li>
+											<li><a ng-href="business-management/business-analyst" class="hvr-underline-from-center">Business Analyst</a></li>
+											<li><a ng-href="business-management/ba-bfsi" class="hvr-underline-from-center">BA - BFSI</a></li>
+											<li><a ng-href="business-management/ba-health-care" class="hvr-underline-from-center">BA - Health Care</a></li>
+											<li><a ng-href="business-management/ba-finance" class="hvr-underline-from-center">BA - Finance</a></li>
+											<li><a ng-href="business-management/quickbooks" class="hvr-underline-from-center">QuickBooks</a></li>
+											<li><a ng-href="business-management/technical-manager" class="hvr-underline-from-center">Technical Manager</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="analytical-tools" class="hvr-underline-from-center">Analytical Tools <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="analytical-tools/tableau" class="hvr-underline-from-center">Tableau</a></li>
+											<li><a ng-href="analytical-tools/remedy-ticketing-tool" class="hvr-underline-from-center">Remedy Ticketing Tool</a></li>
+											<li><a ng-href="analytical-tools/qlikview" class="hvr-underline-from-center">QlikView</a></li>
+											<li><a ng-href="analytical-tools/tibco-spotfire" class="hvr-underline-from-center">Tibco Spotfire</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="software-testing" class="hvr-underline-from-center">Software Testing <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="software-testing/perfecto" class="hvr-underline-from-center">Perfecto</a></li>
+											<li><a ng-href="software-testing/loadrunner" class="hvr-underline-from-center">LoadRunner</a></li>
+											<li><a ng-href="software-testing/selenium" class="hvr-underline-from-center">Selenium</a></li>
+											<li><a ng-href="software-testing/etl-testing" class="hvr-underline-from-center">ETL Testing</a></li>
+											<li><a ng-href="software-testing/web-app-penetration-testing" class="hvr-underline-from-center">Web Applicaiton Penetration Testing</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="hyperion" class="hvr-underline-from-center">Hyperion <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="hyperion/hpcm" class="hvr-underline-from-center">HPCM</a></li>
+											<li><a ng-href="hyperion/hyperion-epm" class="hvr-underline-from-center">Hyperion EPM</a></li>
+											<li><a ng-href="hyperion/hyperion-essbase" class="hvr-underline-from-center">Hyperion Essbase</a></li>
+											<li><a ng-href="hyperion/hyperion-financial-management" class="hvr-underline-from-center">HFM</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="ibm" class="hvr-underline-from-center">IBM <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="ibm/webfocus" class="hvr-underline-from-center">WebFocus</a></li>
+											<li><a ng-href="ibm/websphere-admin" class="hvr-underline-from-center">WebSphere Admin</a></li>
+											<li><a ng-href="ibm/websphere-message-broker" class="hvr-underline-from-center">WebSphere Message Broker</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="oracle" class="hvr-underline-from-center">Oracle <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="oracle/oracle-adf" class="hvr-underline-from-center">Oracle ADF</a></li>
+											<li><a ng-href="oracle/oracle-dba" class="hvr-underline-from-center">Oracle DBA</a></li>
+											<li><a ng-href="oracle/oracle-developer" class="hvr-underline-from-center">Oracle Developer</a></li>
+											<li><a ng-href="oracle/oracle-ebs" class="hvr-underline-from-center">Oracle EBS</a></li>
+											<li><a ng-href="oracle/oracle-golden-gate" class="hvr-underline-from-center">Oracle Golden Gate</a></li>
+											<li><a ng-href="oracle/oracle-soa" class="hvr-underline-from-center">Oracle SOA</a></li>
+											<li><a ng-href="oracle/weblogic" class="hvr-underline-from-center">WebLogic</a></li>
+											<li><a ng-href="oracle/siebel-open-ui" class="hvr-underline-from-center">Siebel Open UI</a></li>
+											<li><a ng-href="oracle/odi-12c" class="hvr-underline-from-center">ODI 12C</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a ng-href="registration" class="hvr-underline-from-center">Register</a></li>
+							<li><a ng-href="contact" class="hvr-underline-from-center">Contact</a></li>
+						</ul>
+						
+                        <div ng-controller="searchCoursesController">
+                        <form class="navbar-form navbar-right transition" role="search">
+                            <div class="form-group">
+                                <input type="text" ng-model="keyword" class="form-control transition" placeholder="Search Categories...">
+                            </div>
+                            <button type="submit" class="btn btn-search" ng-click="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </form>
+<p ng-repeat="result in results track by $index">{{result.full_name}}</p>
+<p>{{errMsg}}</p>
+                        </div>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		<!-- Navbar Ends Here -->
+		
+		<!-- Dummy div goes here -->
+		<div class="dummy dummy-lg"></div>
+		
+		<!-- Angular JS Will Load Partial Views -->
+		<div class="view-container">
+		    <div ng-view class="view-frame"></div>
+        </div>
+		
+		<!-- Modals -->
+		<!-- Admin Login Modal -->
+<!--
+		<modal id="adminLogin" class="modal fade" tabindex="-1" role="dialog" ng-controller="adminLoginCtrl">
+		    <div class="modal-dialog" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		                <h4 class="modal-title">Admin Login</h4>
+		            </div>
+		            <div class="modal-body">
+		                <div class="row">
+                            <form id="loginForm" method="POST">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" ng-model="username" class="form-control" id="username" placeholder="Username" autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" ng-model="password" class="form-control" id="password" placeholder="Password">
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox"> Remember me
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-default" ng-click="adminLogin()">Submit</button>
+                            </form>
+		                </div>
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		            </div>
+		        </div>
+		    </div>
+		</modal>
+-->
+		<!-- //Admin Login Modal -->
+		<!-- //Modals -->
+
+		<!-- Footer Starts -->
+		<footer class="footer-main">
+			<div class="container">
+            
+                <!-- Footer Contact -->
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="contactus">
+                            <div class="contact-text text-center col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                <h2>Contact</h2>
+                            </div>
+                            <div class="tel2 text-center col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                <i class="fa fa-mobile" aria-hidden="true"></i>
+                                <h2><a ng-href="tel:+91-8340905336">+91-8340905336</a></h2>
+                            </div>
+                            <div class="email text-center col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                <h2><a ng-href="mailto:training@proelearning.com">trainings@pro-elearning.com</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                
+                <!-- Footer Menu -->
+                <div class="row">
+                    <div class="container-fluid">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <h3 class="footer-menu-title">Pro E-Learning</h3>
+                            <ul class="footer-menu">
+                                <li><a ng-href="#">Our Company</a></li>
+                                <li><a ng-href="contact">Contact Us</a></li>
+                                <li><a ng-href="#">Career</a></li>
+                                <li><a ng-href="#">Work With Us</a> <a ng-href="http://www.prodesigntek.com/current-openings" target="_blank"><img class="we-hire animated infinite swing" ng-src="images/icons/we-are-hiring_sign_red.png" width="48" height="48"></a></li>
+                                <li><a ng-href="./admin/login.html" target="_blank">Admin Login</a></li>
+                                <li><a ng-href="sitemap">Sitemap</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <h3 class="footer-menu-title">Business Consulting</h3>
+                            <ul class="footer-menu">
+                                <li><a ng-href="#">Business Intelligence</a></li>
+                                <li><a ng-href="#">Enterprise Resource Planning</a></li>
+                                <li><a ng-href="#">QA &#x0026; Testing</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix visible-md-block visible-sm-block"></div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <h3 class="footer-menu-title">Services</h3>
+                            <ul class="footer-menu">
+                                <li><a ng-href="#">Online Training</a></li>
+                                <li><a ng-href="#">Classroom Training</a></li>
+                                <li><a ng-href="#">On-demand Training</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <h3 class="footer-menu-title">Staffing</h3>
+                            <ul class="footer-menu">
+                                <li><a ng-href="#">IT Staffing</a></li>
+                                <li><a ng-href="#">Trainings</a></li>
+                                <li><a ng-href="#">Payroll &#x0026; HR Services</a></li>
+                                <li><a ng-href="#">Customer Service Transformation</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                
+                <!-- Copyright Start -->
+                <div class="row">
+                    <div class="container-fluid copy-social">
+                        <div class="copyright col-lg-5 col-md-6 col-sm-7 col-xs-12">
+                            <h5>Copyright &copy; 2018 | <a ng-href="/">pro-elearning.com</a>. All Rights Reserved.</h5>
+                        </div>
+                        <div class="social col-lg-3 col-md-4 col-sm-5 col-xs-12 col-lg-offset-4 col-md-offset-2">
+                            <ul class="social-list">
+                                <li><a href="https://www.facebook.com/Pro-elearning-138039733727866" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/pro-e-learning-6a20b6166" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                <li><a href="https://plus.google.com/u/2/114009020735948039165" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/pro_elearning" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright End -->
+            </div>
+        </footer>
+		<!-- Footer Ends -->
+		
+		<!-- Scroll To Top Button Start -->
+		<div ng-controller="ScrollToTopController">
+            <button ng-click="scrollToTop()" class="bottom-to-top">
+                <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </button>
+        </div>
+		<!-- Scroll To Top Button End -->
+		
+        <!-- Scripts -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/angular-animate.min.js"></script>
+		<script src="js/angular-touch.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+		<script src="js/bootstrap-dropdownhover.min.js"></script>
+		<script src="js/main.js"></script>
+		
+		<!-- Injecting Angular JS - Modules, Controllers, Services, Filters, Routing -->
+		<script src="js/app.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/directives.js"></script>
+		<script src="js/ng-clamp.js"></script>
+        <!-- //Scripts -->
+	</body>
 </html>
