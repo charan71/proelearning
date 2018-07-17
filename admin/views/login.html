@@ -1,0 +1,16 @@
+<div class="admin-login-bg" ng-controller="loginCtrl">
+    <div class="admin-login-form">
+        <img class="center-block mb-20" src="./../images/logos/logo-v-admin-login.png">
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" ng-model="username" required autofocus>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" ng-model="password" required>
+            </div>
+            <button class="center-block btn-custom-inverse transition btn-login" type="submit" ng-click="login()">Login</button>
+        </form>
+    </div>
+</div>

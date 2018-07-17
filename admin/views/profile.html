@@ -1,0 +1,46 @@
+<!-- Navigation Menu -->
+<header>
+    <div ng-include="'views/header.html'"></div>
+</header>
+<!-- //Navigation Menu -->
+
+<div class="main-container">
+	<!-- Side Nav -->
+	<div ng-include="'views/side-nav.html'"></div>
+	<!-- //Side Nav -->
+	
+	<!-- Partial Views -->
+	<div class="main-content-wrapper">
+		<div class="dummy"></div>
+		<div class="main-content">
+			<div ng-controller="profileCtrl">
+				<h3>Manage Your Profile</h3>
+				<div class="update-pwd">
+                    <p>Set a new password for your current profile <b class="uname">{{ user }}</b></p>
+				    <form>
+				        <div class="form-group">
+				    	    <input type="password" ng-model="newpassword" class="form-control" placeholder="Enter A New Password" ng-required autofocus>
+                        </div>
+                        <button class="btn-custom-inverse transition" ng-click="newPass()">Update</button>
+				    </form>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
+                    <i class="fa fa-check" aria-hidden="true"></i> <span ng-bind="successMessage"></span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+                    <i class="fa fa-exclamation" aria-hidden="true"></i> <span ng-bind="errorMessage"></span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+			</div>
+		</div>
+	</div>
+	<!-- //Partial Views -->
+	
+	<!-- Footer -->
+	<footer>
+		<div ng-include="'views/footer.html'"></div>
+	</footer>
+	<!-- //Footer -->
+</div>

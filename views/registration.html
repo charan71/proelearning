@@ -1,0 +1,282 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="mb-50">
+            <img class="img-responsive" src="./images/parallax-images/registration.jpg" alt="Resgistration-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="container">
+            <h1 class="">Register with us and keep in touch</h1>
+            <p>Please select your category, fill and send your details to us. Our technical team will contact you soon...</p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="reg-form col-lg-6 col-md-6 col-sm-10 col-xs-10 col-lg-offset-3 col-md-offset-3 col-sm-offset-1 col-xs-offset-1">
+            
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs nav-justified" role="tablist" id="register-tabs">
+                <li role="presentation" class="active"><a show-tab data-target="#stud-registration" aria-controls="stud-registration" role="tab" data-toggle="tab">Student Registration</a></li>
+                <li role="presentation"><a show-tab data-target="#trainer-registration" aria-controls="trainer-registration" role="tab" data-toggle="tab">Trainer Registration</a></li>
+            </ul>
+            
+            <!-- Tab panes -->
+            <div class="tab-content">
+            
+                <!-- Student Registration Form -->
+                <div role="tabpanel" class="tab-pane fade in active" id="stud-registration" ng-controller="studentController">
+                    <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
+                        <i class="fa fa-check" aria-labelled="true"></i> <span ng-bind="successMessage"></span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+                        <i class="fa fa-times" aria-labelled="true"></i> <span ng-bind="errorMessage"></span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <form novalidate name="studRegForm" method="POST" enctype="multipart/form-data" id="studRegForm" class="form-horizontal" autocomplete="on">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="sname" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Full Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="name" ng-model="sname" ng-required="true" ng-minlength="3" ng-maxlength="100" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,100}$/" class="form-control" id="sname" placeholder="Full Name" />
+                                    <span class="validation_styles" ng-show="studRegForm.name.$error.required && studRegForm.name.$dirty">* Full Name is required<br></span>
+                                    <span class="validation_styles" ng-show="studRegForm.name.$error.pattern && studRegForm.name.$invalid">* Full Name should contain only alphabets, dots and spaces<br></span>
+                                    <span class="validation_styles" ng-show="studRegForm.name.$error.minlength && studRegForm.name.$dirty">* Full Name should be minimum of 3 characters<br></span>
+                                    <span class="validation_styles" ng-show="studRegForm.name.$error.maxlength && studRegForm.name.$dirty">* Full Name should be maximum of 40 characters</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label>
+                                <div class="col-sm-9">
+                                    <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="Email ID" />
+									<span class="validation_styles" ng-show="studRegForm.email.$error.required && studRegForm.email.$dirty">* Email is required</span>
+									<span class="validation_styles" ng-show="studRegForm.email.$error.pattern && studRegForm.email.$dirty">* Please enter a valid email</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Phone</label>
+                                <div class="col-sm-9">
+                                    <input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" placeholder="Phone" />
+									<span class="validation_styles" ng-show="studRegForm.phone.$error.required && studRegForm.phone.$dirty">* Phone number required<br></span>
+									<span class="validation_styles" ng-show="studRegForm.phone.$error.pattern && studRegForm.name.$dirty">* Please enter a valid phone number</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Gender</label>
+                                <div  class="col-sm-9">
+                                    <label class="radio-inline" for="gender-male">
+                                        <input type="radio" name="gender" id="gender-male" value="M" ng-model="gender" ng-required="true">
+                                        Male
+                                    </label>
+                                    <label class="radio-inline" for="gender-female">
+                                        <input type="radio" name="gender" id="gender-female" value="F" ng-model="gender" ng-required="true">
+                                        Female
+                                    </label>
+                                    <label class="radio-inline" for="gender-other">
+                                        <input type="radio" name="gender" id="gender-other" value="O" ng-model="gender" ng-required="true">
+                                        Other
+                                    </label>
+                                    <span class="validation_styles" ng-show="studRegForm.gender.$error.required && studRegForm.gender.$dirty">* Please select your gender</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Country</label>
+                                <div class="col-sm-9">
+                                    <select id="country" name="country" class="form-control" ng-model="country" ng-required="true">
+                                        <option value="">-- Select Your Country --</option>
+                                        <option ng-repeat="item in countrys track by $index">{{item.c_name}}</option>
+                                    </select>
+                                    <span class="validation_styles" ng-show="studRegForm.country.$error.required && studRegForm.country.$dirty">* Country is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="state" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> State</label>
+                                <div class="col-sm-9">
+                                    <select id="state" name="state" class="form-control" ng-model="state" ng-required="true">
+                                        <option value="">-- Select Your State --</option>
+                                        <option ng-repeat="item in states track by $index">{{item.s_name}}</option>
+                                    </select>
+                                    <span class="validation_styles" ng-show="studRegForm.state.$error.required && studRegForm.state.$dirty">* State is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="qualification" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Highest Qualification</label>
+                                <div class="col-sm-9">
+                                    <select id="qualification" name="qualification" class="form-control" ng-model="qualification" ng-required="true">
+                                        <option value="">-- Select Your Highest Qualification --</option>
+                                        <option ng-repeat="item in qualifications track by $index">{{item.qualif}}</option>
+                                    </select>
+                                    <span class="validation_styles" ng-show="studRegForm.qualification.$error.required && studRegForm.qualification.$dirty">* Highest Qualification is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="occupation" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Occupation</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="occupation" class="form-control" id="occupation" placeholder="Occupation" ng-model="occupation" ng-required="true" ng-minlength="3" ng-maxlength="50" ng-pattern="/^[a-zA-Z ]*[a-zA-Z ]{1,50}$/">
+                                    <span class="validation_styles" ng-show="studRegForm.occupation.$error.required && studRegForm.occupation.$dirty">* Occupation is required</span>
+                                    <span class="validation_styles" ng-show="studRegForm.occupation.$error.pattern && studRegForm.occupation.$invalid">* Occupation should contain only alphabets and spaces<br></span>
+                                    <span class="validation_styles" ng-show="studRegForm.occupation.$error.minlength && studRegForm.name.$dirty">* Occupation should be minimum of 3 characters<br></span>
+                                    <span class="validation_styles" ng-show="studRegForm.occupation.$error.maxlength && studRegForm.name.$dirty">* Occupation should be maximum of 50 characters</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="course" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Course Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="course" class="form-control" id="course" placeholder="Course Name" ng-model="course" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z ]*[a-zA-Z ]{1,40}$/">
+                                    <span class="validation_styles" ng-show="studRegForm.course.$error.required && studRegForm.course.$dirty">* Course is required</span>
+                                    <span class="validation_styles" ng-show="studRegForm.course.$error.pattern && studRegForm.name.$dirty">* Course should contain only alphabets and spaces<br></span>
+                                    <span class="validation_styles" ng-show="studRegForm.course.$error.minlength && studRegForm.name.$dirty">* Course should be minimum of 3 characters<br></span>
+                                    <span class="validation_styles" ng-show="studRegForm.course.$error.maxlength && studRegForm.name.$dirty">* Course should be maximum of 40 characters</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="col-sm-3 control-label">Your Message</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="6" name="message" id="message" placeholder="Your Message . . ." ng-model="message" ng-minlength="10" ng-required="true"></textarea>
+                                    <span class="validation_styles" ng-show="studRegForm.message.$error.required && studRegForm.message.$dirty">* Message is required<br></span>
+									<span class="validation_styles" ng-show="studRegForm.message.$error.minlength && studRegForm.name.$dirty">* Message should be minium of 10 characters</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10 text-center">
+                                    <button type="submit" class="btn-custom-color btn-custom-green" id="submit" name="insertStudent" ng-disabled="studRegForm.$invalid" ng-click="fn_insertStudent()">Register</button>
+                                    <button type="reset" class="btn-custom-color btn-custom-blue" ng-click="fn_reset()">Cancel</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <h5 class="sr-only"><sup><i class="fa fa-asterisk" aria-hidden="true" style="color: red;"></i></sup> Please note that all the above fields are mandatory.</h5>
+                </div>
+                
+                <!-- Trainer Registration Form -->
+                <div role="tabpanel" class="tab-pane fade" id="trainer-registration" ng-controller="trainerController">
+                    <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
+                        <i class="fa fa-check" aria-labelled="true"></i> <span ng-bind="successMessage"></span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+                        <i class="fa fa-times" aria-labelled="true"></i> <span ng-bind="errorMessage"></span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <form novalidate name="trainerRegForm" method="POST" enctype="multipart/form-data" id="trainerRegForm" class="form-horizontal" autocomplete="on">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="tname" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Full Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="name" ng-model="tname" ng-required="true" ng-minlength="3" ng-maxlength="100" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,100}$/" class="form-control" id="tname" placeholder="Full Name">
+                                    <span class="validation_styles" ng-show="trainerRegForm.name.$error.required && trainerRegForm.name.$dirty">* Full Name is required<br></span>
+                                    <span class="validation_styles" ng-show="trainerRegForm.name.$error.pattern && trainerRegForm.name.$invalid">* Full Name should contain only alphabets, dots and spaces.<br></span>
+                                    <span class="validation_styles" ng-show="trainerRegForm.name.$error.minlength && trainerRegForm.name.$dirty">* Full Name should be minimum of 3 characters.<br></span>
+                                    <span class="validation_styles" ng-show="trainerRegForm.name.$error.maxlength && trainerRegForm.name.$dirty">* Full Name should be maximum of 40 characters</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label>
+                                <div class="col-sm-9">
+                                    <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="Email ID">
+									<span class="validation_styles" ng-show="trainerRegForm.email.$error.required && trainerRegForm.email.$dirty">* Email is required</span>
+									<span class="validation_styles" ng-show="trainerRegForm.email.$error.pattern && trainerRegForm.email.$dirty">* Please enter a valid email</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Phone</label>
+                                <div class="col-sm-9">
+                                    <input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" placeholder="Phone">
+									<span class="validation_styles" ng-show="trainerRegForm.phone.$error.required && trainerRegForm.phone.$dirty">* Phone number required<br></span>
+									<span class="validation_styles" ng-show="trainerRegForm.phone.$error.pattern && trainerRegForm.name.$dirty">* Please enter a valid phone number</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Gender</label>
+                                <div class="col-sm-9">
+                                    <label class="radio-inline" for="gender-male">
+                                        <input type="radio" name="gender" id="gender-male" value="M" ng-model="gender" ng-required="true">
+                                        Male
+                                    </label>
+                                    <label class="radio-inline" for="gender-female">
+                                        <input type="radio" name="gender" id="gender-female" value="F" ng-model="gender" ng-required="true">
+                                        Female
+                                    </label>
+                                    <label class="radio-inline" for="gender-other">
+                                        <input type="radio" name="gender" id="gender-other" value="O" ng-model="gender" ng-required="true">
+                                        Other
+                                    </label>
+                                    <span class="validation_styles" ng-show="trainerRegForm.gender.$error.required && trainerRegForm.gender.$dirty">* Please select your gender</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Country</label>
+                                <div class="col-sm-9">
+                                    <select id="country" name="country" class="form-control" ng-model="country" ng-required="true">
+                                        <option value="">-- Select Your Country --</option>
+                                        <option ng-repeat="item in countrys track by $index">{{item.c_name}}</option>
+                                    </select>
+                                    <span class="validation_styles" ng-show="trainerRegForm.country.$error.required && trainerRegForm.country.$dirty">* Country is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="state" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> State</label>
+                                <div class="col-sm-9">
+                                    <select id="state" name="state" class="form-control" ng-model="state" ng-required="true">
+                                        <option value="">-- Select Your State --</option>
+                                        <option ng-repeat="item in states track by $index">{{item.s_name}}</option>
+                                    </select>
+                                    <span class="validation_styles" ng-show="trainerRegForm.state.$error.required && trainerRegForm.state.$dirty">* State is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="workExp" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Work Experience</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="workExp" ng-model="workExp" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" class="form-control" id="workExp" placeholder="Work Experience (ex: 6.2)" ng-required="true">
+                                    <span class="validation_styles" ng-show="trainerRegForm.workExp.$error.required && trainerRegForm.workExp.$dirty">* Work experience required</span>
+                                    <span class="validation_styles" ng-show="trainerRegForm.workExp.$error.pattern && trainerRegForm.workExp.$dirty">* Enter a valid value</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="trainingExp" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Training Experience</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="trainingExp" ng-model="trainingExp" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" class="form-control" id="trainingExp" placeholder="Training Experience (ex: 6.2)" ng-required="true">
+                                    <span class="validation_styles" ng-show="trainerRegForm.trainingExp.$error.required && trainerRegForm.trainingExp.$dirty">* Training experience required</span>
+                                    <span class="validation_styles" ng-show="trainerRegForm.trainingExp.$error.pattern && trainerRegForm.trainingExp.$dirty">* Enter a valid value</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="techExp" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Technology Experience</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="techExp" ng-model="techExp" ng-pattern="/^[a-zA-Z0-9- ]{1,100}$/" class="form-control" id="techExp" placeholder="Technology Experience (eg. Java - 2yrs)" ng-required="true">
+                                    <span class="validation_styles" ng-show="trainerRegForm.techExp.$error.required && trainerRegForm.techExp.$dirty">* Technology experience required</span>
+                                    <span class="validation_styles" ng-show="trainerRegForm.techExp.$error.pattern && trainerRegForm.techExp.$dirty">* Enter a valid value</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="resume" class="col-sm-3 control-label"><!--<sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup>--> Upload CV</label>
+                                <div class="col-sm-9">
+                                    <input type="file" id="resume" name="resume" file-input="files" ng-model="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".doc,.docx,.pdf" required="true">
+                                    <span class="validation_styles" ng-show="trainerRegForm.resume.$error.required && trainerRegForm.resume.$dirty && trainerRegForm.resume.$touched">* CV required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="trainer-message" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Your Message</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="6" name="message" id="message" placeholder="Your Message . . ." ng-model="message" ng-minlength="10" ng-required="true"></textarea>
+                                    <span class="validation_styles" ng-show="trainerRegForm.message.$error.required && trainerRegForm.message.$dirty">* Message is required<br></span>
+									<span class="validation_styles" ng-show="trainerRegForm.message.$error.minlength && trainerRegForm.message.$dirty">* Message should be minium of 10 characters</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10 text-center">
+                                    <button type="submit" class="btn-custom-color btn-custom-green" id="submit" name="insertTrainer" ng-disabled="trainerRegForm.$invalid" ng-click="fn_insertTrainer()">Register</button>
+                                    <button type="reset" class="btn-custom-color btn-custom-blue" ng-click="fn_reset()">Cancel</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <h5 class="sr-only"><sup><i class="fa fa-asterisk" aria-hidden="true" style="color: red;"></i></sup> Please note that all the above fields are mandatory.</h5>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+        
+</div>

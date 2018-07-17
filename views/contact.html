@@ -1,0 +1,128 @@
+<div class="container-fluid" ng-controller="contactController">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/contact.jpg" alt="Contact-Us-Pro-eLearning">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+            <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
+                <i class="fa fa-check" aria-labelled="true"></i> <span ng-bind="successMessage"></span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+                <i class="fa fa-times" aria-labelled="true"></i> <span ng-bind="errorMessage"></span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <!-- Map -->
+            <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15226.501704753035!2d78.4497441!3d17.4297546!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc775334f6c007e63!2sProdesign+Technologies+India+PVT.LTD.!5e0!3m2!1sen!2sin!4v1510738921015" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="col-lg-5 col-md-6 col-sm-10 col-xs-10 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 col-xs-offset-1">
+                <div id="contact-form">
+                    <form novalidate name="contactForm" method="POST" enctype="multipart/form-data" id="contactForm" class="form form-horizontal contact-form" autocomplete="on">
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="name" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Full Name</label>
+                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" placeholder="Full Name" />
+                                    <br>
+                                    <span class="validation_styles" ng-show="contactForm.name.$error.required && contactForm.name.$dirty">* Full Name is required<br></span>
+                                    <span class="validation_styles" ng-show="contactForm.name.$error.pattern && contactForm.name.$invalid">* Full Name should contain only alphabets, dots and spaces.<br></span>
+                                    <span class="validation_styles" ng-show="contactForm.name.$error.minlength && contactForm.name.$dirty">* Full Name should be minimum of 3 characters<br></span>
+                                    <span class="validation_styles" ng-show="contactForm.name.$error.maxlength && contactForm.name.$dirty">* Full Name should be maximum of 40 characters</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label>
+                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="Email ID" required />
+									<span class="validation_styles" ng-show="contactForm.email.$error.required && contactForm.email.$dirty">* Email is required</span>
+									<span class="validation_styles" ng-show="contactForm.email.$error.pattern && contactForm.email.$dirty">* Please enter a valid email</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Phone</label>
+                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" placeholder="Phone" />
+									<span class="validation_styles" ng-show="contactForm.phone.$error.required && contactForm.phone.$dirty">* Phone number required<br></span>
+									<span class="validation_styles" ng-show="contactForm.phone.$error.pattern && contactForm.phone.$dirty">* Please enter a valid phone number</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="category" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Category</label>
+                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <select id="category" name="category" class="form-control" ng-model="category" ng-required="true">
+                                        <option value="">-- Select Your Category --</option>
+                                        <option value="Student">Need a Course</option>
+                                        <option value="Trainer">Want to become a Trainer</option>
+                                    </select>
+									<span class="validation_styles" ng-show="contactForm.category.$error.required && contactForm.category.$dirty">* Category is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label">Message</label>
+                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <textarea ng-model="message" ng-required="true" ng-minlength="10" class="form-control" rows="6" name="message" id="message" placeholder="Your Message..."></textarea>
+									<span class="validation_styles" ng-show="contactForm.message.$error.required && contactForm.message.$dirty">* Message is required<br></span>
+									<span class="validation_styles" ng-show="contactForm.message.$error.minlength && contactForm.message.$dirty">* Message should be minium of 10 characters</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-1 col-sm-10">
+                                    <button type="submit" class="btn btn-info" id="submit" name="insertContact" ng-disabled="contactForm.$invalid" ng-click="fn_insertContact()">Submit</button>
+                                    <button type="reset" class="btn btn-default" ng-click="fn_reset()">Cancel</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <h5><sup><i class="fa fa-asterisk" aria-hidden="true" style="color: red;"></i></sup> Please note that all the above fields are mandatory.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="addresses mt-50">
+            <h1 class="text-center mb-50">Our Offices</h1>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="address text-center">
+                   <h2>Texas</h2>
+                   <p>20731 Norwich Gulch Ln,</p>
+                   <p>Richmond, TX 77407</p>
+                   <p>Contact: +1 (713) 623-1945</p>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="address text-center">
+                   <h2>Florida</h2>
+                   <p>3151 S Babcock st. #87,</p>
+                   <p>Melbourne, FL - 32901</p>
+                   <p>Contact: +1 (518) 238-8585</p>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="address text-center">
+                   <h2>Australia</h2>
+                   <p>Unit 402, 39 Cooper Street,</p>
+                   <p>Strathfield, NSW - 2135</p>
+                   <p>Contact: +61 404335048</p>
+               </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+               <div class="address text-center">
+                   <h2>India</h2>
+                   <p>#003, H. No : 8-2-182/1, Srinagar Colony,</p>
+                   <p>Panjagutta, Hyderabad - 500082</p>
+                   <p>Contact: +91-8340905336</p>
+               </div>
+            </div>
+        </div>
+    </div>
+</div>
