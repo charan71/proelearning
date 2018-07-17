@@ -1,0 +1,29 @@
+<div class="container-fluid" ng-controller="CourseCardsController">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/information-technology.jpg" alt="Information-Technology-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <div class="col-sm-4 col-md-3 col-lg-3" ng-repeat="course in cc_info_tech">
+                <div class="thumbnail">
+                    <a ng-href="{{course.cc_info_tech_imageLink}}">
+                        <img class="img-responsive center-block" src="./images/course-thumbnails/{{course.cc_info_tech_image}}">
+                    </a>
+                    <div class="course-caption">
+                        <h4>{{course.cc_info_tech_title}}</h4>
+                        <p clamp="2">{{course.cc_info_tech_desc}}</p>
+                        <a ng-href="{{course.cc_info_tech_readMoreLink}}" class="btn btn-primary" role="button">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-3 col-sm-hidden col-xs-hidden">
+            <h4 class="text-center">New Demos</h4>
+        </div>
+    </div>
+        
+</div>

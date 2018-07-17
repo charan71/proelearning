@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="admin">
+    <head>
+        <base href="/prodesignnew/admin/">
+        <title ng-bind="title"></title>
+        
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- Favicon -->
+		<link rel="shortcut icon" href="../images/logos/favicon.ico">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="plugins/fontawesome/css/font-awesome.min.css">
+    </head>
+    <body>
+		<!-- Partial Views -->
+			<div ng-view class="view"></div>
+		<!-- //Partial Views -->
+        
+        <!-- JS -->
+        <script src="js/angular.js"></script>
+        <script src="js/angular-route.js"></script>
+        <script src="js/angular-animate.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/routes.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/filters.js"></script>
+<!--        <script src="https://use.fontawesome.com/36a221abe1.js"></script>-->
+    </body>
+</html>

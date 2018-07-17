@@ -1,0 +1,247 @@
+body, html {
+    height: 100%;
+}
+* {
+    outline: none !important;
+}
+.dummy {
+    height: 50px;
+}
+.main-container {
+/*    margin-top: 50px;*/
+    height: 100%;
+}
+
+/*-- Margins --*/
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.mb-50 {
+    margin-bottom: 50px;
+}
+/*-- //Margins --*/
+
+/*-- Transitions --*/
+.transition {
+	-webkit-transition: .3s all;
+	   -moz-transition: .3s all;
+		-ms-transition: .3s all;
+		 -o-transition: .3s all;
+			transition: .3s all;
+}
+/*-- //Transitions --*/
+
+/*-- nav --*/
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-custom {
+    background-color: #8bc34a;
+    border: none;
+}
+.navbar-custom .navbar-brand {
+    color: #fff;
+}
+.navbar-custom .navbar-nav>li>a {
+    color: #fff;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #689F38;
+}
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #689F38;
+}
+.dropdown-menu {
+    padding: 0;
+}
+.dropdown-menu>li>a {
+    padding: 10px 15px;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #fff;
+    background-color: #8bc44a;
+}
+/*-- //nav --*/
+
+/*-- side nav --*/
+.side-nav {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    padding-top: 20px;
+    background-color: #fafafa;
+    overflow-y: auto;
+}
+.side-nav ul {
+    padding-left: 0;
+}
+.active {
+    background-color: #eee;
+}
+.side-nav ul li a {
+    color: #616161;
+    display: block;
+    padding: 10px 20px;
+}
+.side-nav ul li a:hover, .side-nav ul li a:focus, .side-nav ul li a:active {
+    text-decoration: none;
+    background-color: #eee;
+}
+/*-- //side nav --*/
+
+/*-- Main Content --*/
+.main-content-wrapper {
+    margin-left: 200px;
+    min-height: 100%;
+}
+.view {
+    height: 100%;
+}
+.main-content {
+    min-height: 100%;
+    margin-bottom: -47px;
+    padding: 10px 20px 57px 20px;
+}
+.uname {
+    text-transform: capitalize;
+}
+.update-pwd {
+    background-color: #F5F5F5;
+    display: inline-block;
+    padding: 20px;
+}
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+}
+.form-control:focus, .form-control:active {
+    border: 1px solid #8bc34a;
+    box-shadow: none;
+}
+.btn-custom {
+    background-color: #fff;
+    color: #8bc34a;
+    padding: 6px 8px;
+    border: 1px solid #8bc34a;
+    box-shadow: none;
+}
+.btn-custom:hover, .btn-custom:focus {
+    background-color: #8bc34a;
+    color: #fff;
+}
+.btn-custom-inverse {
+    background-color: #8bc34a;
+    color: #fff;
+    padding: 6px 8px;
+    border: 1px solid #8bc34a;
+    box-shadow: none;
+}
+.btn-custom-inverse:hover, .btn-custom-inverse:focus {
+    background-color: #fff;
+    color: #8bc34a;
+}
+.btn-login {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.alert {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+}
+
+/*-- Trainer Registration Page --*/
+.btn-download {
+    color: #000;
+}
+.btn-download:hover, .btn-download:focus {
+    color: #8bc34a;
+}
+/*-- //Trainer Registration Page --*/
+
+/*-- Admin Login Page --*/
+.admin-login-bg {
+    height: 100%;
+    position: relative;
+    background-image: url('../../images/parallax-images/home_st_tr_bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.admin-login-form {
+    background-color: #fff;
+    width: 300px;
+    padding: 40px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+}
+/*-- //Admin Login Page --*/
+/*-- //Main Content --*/
+
+/*-- Footer --*/
+footer {
+    background-color: #212121;
+    color: #fff;
+    margin-left: 200px;
+    padding: 0 20px;
+}
+footer p {
+    font-size: 12px;
+    margin: 15px 0;
+    display: inline-block;
+}
+.copyright {
+    color: #fff;
+}
+.copyright:hover, .copyright:focus, .copyright:active {
+    color: #8bc44a;
+    text-decoration: none;
+}
+/*-- //Footer --*/
+
+/*-- Website Hits --*/
+.hits {
+    width: 200px;
+    border: 1px solid #673AB7;
+    border-radius: 2px;
+}
+.card-title {
+    background-color: #673AB7;
+    color: #d1c4e9;
+    font-weight: 600;
+    padding: 5px 10px;
+    text-align: center;
+}
+.count {
+    color: #673AB7;
+    font-size: 40px;
+    margin: 20px auto;
+}
+/*-- //Website Hits --*/
