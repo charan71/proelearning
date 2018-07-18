@@ -9,6 +9,7 @@ body
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 100px white inset !important;
+    box-shadow: 0 0 0px 100px white inset !important;
 }
 * {
     outline: none !important;
@@ -101,12 +102,13 @@ p {
 	height: auto !important;
 }
 
+.navbar-nav > li > a {
+    margin: 0 15px;
+}
 .navbar-nav li a
 {
 	letter-spacing: 0.02em;
-	//text-transform: uppercase;
 	padding: 39px 0;
-	margin: 0 15px !important;
     cursor: pointer;
 }
 .navbar-form {
@@ -156,13 +158,14 @@ p {
 		padding-bottom: 6px;
 	}
 	
-	header.small-nav .navbar-nav li a
+	header.small-nav .navbar-nav > li > a
 	{
-		padding: 18px 0;
+        padding: 18px 0;
+        margin: 0px 15px;
 	}
 	
 	header.small-nav .navbar-nav .dropdown .dropdown-menu li a {
-		padding: 8px 0;
+		padding: 4px 15px;
 	}
 	
 	header.small-nav nav
@@ -259,7 +262,7 @@ nav, a, .navbar-brand, li, a i
 	border-radius: 0;
 }
 .navbar-nav .dropdown-menu > li > a {
-	padding: 8px 0;
+	padding: 4px 15px;
 }
 .navbar-nav .dropdown a .fa-th {
     margin-right: 3px;
@@ -573,7 +576,7 @@ footer
 }
 
 .training-content {
-    //padding: 50px;
+    /* padding: 50px; */
     color: white;
     background-color: rgba(0,0,0,0.6);
 }
@@ -691,7 +694,6 @@ footer
     top: 45%;
     transform: translateY(-45%);
     z-index: 10;
-    //z-index: -10;
 }
 .owl-nav .owl-prev, .owl-nav .owl-next {
     background-color: #fff !important;
@@ -720,21 +722,21 @@ footer
 }
 .owl-nav .owl-prev {
     left: -18px;
-    //left: -26px;
+    /* left: -26px; */
     position: absolute;
     padding-right: 3px;
     float: left;
 }
 .owl-nav .owl-next {
     right: -18px;
-    //right: -26px;
+    right: -26px;
     padding-right: 16px;
     position: absolute;
 }
 .owl-nav .owl-prev.disabled, .owl-nav .owl-next.disabled {
     display: none;
-    //background-color: #eee !important;
-    //box-shadow: 0.4px 1px 1px #999;
+    /* background-color: #eee !important; */
+    /* box-shadow: 0.4px 1px 1px #999; */
 }
 .owl-nav .owl-prev.disabled .fa, .owl-nav .owl-next.disabled .fa {
     color: grey !important;

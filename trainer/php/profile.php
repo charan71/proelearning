@@ -16,7 +16,7 @@ $conn = new mysqli($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
 
 $newPass = mysqli_real_escape_string($conn, $_POST['newPass']);
 
-$query = "UPDATE `admin_users` SET `password` = '$newPass' WHERE `username` = '".$_SESSION['user']."'";
+$query = "UPDATE `trainer_users` SET `password` = '$newPass' WHERE `username` = '".$_SESSION['user']."'";
 
 $result = mysqli_query($conn, $query);
 

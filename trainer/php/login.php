@@ -16,7 +16,7 @@ $conn = new mysqli($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
 $username = mysqli_real_escape_string($conn, $_POST['username']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-$query = "SELECT * FROM `admin_users` WHERE username='$username' AND password='$password'";
+$query = "SELECT * FROM `trainer_users` WHERE username='$username' AND password='$password'";
 
 $result = mysqli_query($conn, $query);
 
