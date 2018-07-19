@@ -244,9 +244,8 @@ nav, a, .navbar-brand, li, a i
 	color: #333;
 }
 
-.navbar-nav li a:hover, .navbar-nav li a:focus, .navbar-nav li a:active, .navbar-nav li a:visited, .navbar-nav li a:link, .navbar-nav .dropdown .dropdown-menu li a:hover, .navbar-nav .dropdown .dropdown-menu li a:focus, .navbar-nav .dropdown .dropdown-menu li a:active, .navbar-nav .dropdown .dropdown-menu li a:visited
-{
-	background-color: transparent !important;
+.navbar-nav li a:hover, .navbar-nav li a:focus, .navbar-nav li a:active, .navbar-nav li a:visited, .navbar-nav li a:link, .navbar-nav .dropdown .dropdown-menu li a:hover, .navbar-nav .dropdown .dropdown-menu li a:focus, .navbar-nav .dropdown .dropdown-menu li a:active, .navbar-nav .dropdown .dropdown-menu li a:visited {
+	/* background-color: transparent !important; */
 	color: #333;
 }
 

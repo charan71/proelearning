@@ -195,12 +195,17 @@ body, html {
 .admin-login-form {
     background-color: #fff;
     width: 300px;
-    padding: 40px 30px;
+    padding: 40px 30px 25px 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
+}
+.error {
+    color: red;
+    margin-top: 15px;
+    font-style: italic;
 }
 /*-- //Admin Login Page --*/
 /*-- //Main Content --*/

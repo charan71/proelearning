@@ -183,8 +183,8 @@ body, html {
 }
 /*-- //Trainer Registration Page --*/
 
-/*-- Admin Login Page --*/
-.admin-login-bg {
+/*-- Trainer Login Page --*/
+.trainer-login-bg {
     height: 100%;
     position: relative;
     background-image: url('../../images/parallax-images/home_st_tr_bg.jpg');
@@ -192,17 +192,22 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.admin-login-form {
+.trainer-login-form {
     background-color: #fff;
     width: 300px;
-    padding: 40px 30px;
+    padding: 40px 30px 25px 30px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
 }
-/*-- //Admin Login Page --*/
+.error {
+    color: red;
+    margin-top: 15px;
+    font-style: italic;
+}
+/*-- //Trainer Login Page --*/
 /*-- //Main Content --*/
 
 /*-- Footer --*/

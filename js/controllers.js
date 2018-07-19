@@ -200,12 +200,12 @@ angular.module('ProELearning.controllers', [])
             $scope.successMessage = "Your request for trainer is successfully registered with us. Our technical team will reach you shortly. Thankyou!!";
             $timeout(function() {
                 $scope.successMessage = false;
-            }, 10000);
+            }, 5000);
         }, function(error) {
             $scope.errorMessage = "Sorry. Please try again!!";
             $timeout(function() {
                 $scope.errorMessage = false;
-            }, 10000);
+            }, 5000);
         });
     };
     $scope.fn_reset = function() {

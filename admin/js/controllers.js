@@ -17,13 +17,13 @@ angular.module('controllers', ['ngRoute'])
                 user.saveData(response.data);
                 $location.path('/dashboard');
             } else {
-                alert("Enter a valid Username or Password!");
+                $scope.errorMessage = "*Enter a valid Username or Password!";
             }
         })
 	};
 })
 
-.controller('profileCtrl', function($scope, $http, user) {
+.controller('profileCtrl', function($scope, $http, $timeout, user) {
 	$scope.user = user.getName();
 	$scope.newPass = function() {
 		var password = $scope.newpassword;
@@ -38,9 +38,15 @@ angular.module('controllers', ['ngRoute'])
 		.then(function(response) {
 			if(response.data.status == 'done') {
                 $scope.successMessage = "Password updated successfully!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
                 $scope.newpassword = '';
 			} else {
                 $scope.errorMessage = "Error updating password!";
+                $timeout(function() {
+                    $scope.errorMessage = false;
+                }, 5000);
 			}
 			
 		})
