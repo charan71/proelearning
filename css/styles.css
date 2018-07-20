@@ -149,8 +149,8 @@ p {
 	
 	header.small-nav .navbar-brand
 	{
-		width: 70%;
-		height: 80%;
+		transform: scale(0.68);
+        transform-origin: 50% 0%;
 		padding-top: 6px;
 		padding-bottom: 6px;
 	}

@@ -57,8 +57,13 @@ angular.module('controllers', ['ngRoute'])
 	
 }])
 
-.controller('dashboardCtrl', function($scope, $http, user) {
-	$scope.user = user.getName();
+.controller('dashboardCtrl', function($scope, $http, $timeout, user) {
+    $scope.user = user.getName();
+    $scope.loginMessage = "Successfully logged in as " + $scope.user;
+    $timeout(function() {
+        $scope.loginMessage = false;
+    }, 5000);
+
 })
 
 .controller('headerCtrl', function($scope, $http, user) {

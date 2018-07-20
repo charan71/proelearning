@@ -22,11 +22,11 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Dashboard - Pro E-Learning",
-		templateUrl: "views/dashboard.php",
-		controller: "dashboardCtrl"
+        title: "Trainer Dashboard - Pro-elearning",
+		templateUrl: "views/trainer-dashboard.php",
+		controller: "trainerDashboardCtrl"
 	})
-	.when("/dashboard", {
+	.when("/trainer-dashboard", {
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
@@ -34,9 +34,9 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Dashboard - Pro E-Learning",
-		templateUrl: "views/dashboard.php",
-		controller: "dashboardCtrl"
+        title: "Trainer Dashboard - Pro-elearning",
+		templateUrl: "views/trainer-dashboard.php",
+		controller: "trainerDashboardCtrl"
 	})
 	.when("/profile", {
 		resolve: {
@@ -46,6 +46,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
+        title: "Trainer Profile - Pro-elearning",
 		templateUrl: "views/profile.html",
 		controller: "profileCtrl"
 	})
@@ -57,7 +58,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Registered Students - Pro E-Learning",
+        title: "Registered Students - Pro-elearning",
         templateUrl: "views/reg-students.html",
         controller: "regStudents"
     })
@@ -69,7 +70,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Registered Trainers - Pro E-Learning",
+        title: "Registered Trainers - Pro-elearning",
         templateUrl: "views/reg-trainers.html",
         controller: "regTrainers"
     })
@@ -81,7 +82,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Contacts List - Pro E-Learning",
+        title: "Contacts List - Pro-elearning",
         templateUrl: "views/contacts-list.html",
         controller: "contactsList"
     })
@@ -93,7 +94,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "404 - Page Not Found - Pro E-Learning",
+        title: "404 - Page Not Found - Pro-elearning",
         redirectTo: "/404",
         templateUrl: "views/404.html"
     });

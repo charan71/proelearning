@@ -2,11 +2,16 @@ angular.module('services', [])
 
 .service('user', function() {
     var username;
+    var password;
     var loggedin = false;
     var id;
     
     this.getName = function() {
         return username;
+    };
+    
+    this.getPwd = function() {
+        return password;
     };
     
     this.setID = function(userID) {
@@ -21,6 +26,7 @@ angular.module('services', [])
 		loggedin = true;
 		var data = JSON.parse(localStorage.getItem('login'));
 		username = data.username;
+		password = data.password;
 		id = data.id;
 	}
 	return loggedin;
@@ -28,10 +34,12 @@ angular.module('services', [])
     
     this.saveData = function(data) {
         username = data.user;
+        password = data.pwd;
         id = data.id;
         loggedin = true;
         localStorage.setItem('login', JSON.stringify({
             username: username,
+            password: password,
             id: id
         }));
     };

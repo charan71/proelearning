@@ -13,7 +13,7 @@
 	<div class="main-content-wrapper">
 		<div class="dummy"></div>
 		<div class="main-content">
-			<div ng-controller="dashboardCtrl">
+			<div ng-controller="trainerDashboardCtrl">
 				<h3>Dashboard</h3>
 				
 				<?php

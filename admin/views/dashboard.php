@@ -31,6 +31,7 @@
                         ?>
 					</div>
 				</div>
+				<div>{{loginMessage}}</div>
 			</div>
 		</div>
 	</div>

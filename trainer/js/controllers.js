@@ -2,7 +2,7 @@ angular.module('controllers', ['ngRoute'])
 
 .controller('loginCtrl', function($scope, $http, $location, user) {
 	$scope.login = function() {
-		var username = $scope.username;
+        var username = $scope.username;
 		var password = $scope.password;
 		$http({
 			url: './php/login.php',
@@ -10,20 +10,20 @@ angular.module('controllers', ['ngRoute'])
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			},
-			data: 'username='+username+'&password='+password
+			data: 'trainer_email='+username+'&password='+password
 		})
 		.then(function(response) {
             if(response.data.status == 'loggedin') {
                 user.saveData(response.data);
-                $location.path('/dashboard');
+                $location.path('/trainer-dashboard');
             } else {
-                alert("Enter a valid Username or Password!");
+                $scope.errorMessage = "*Enter a valid Username or Password!";
             }
         })
 	};
 })
 
-.controller('profileCtrl', function($scope, $http, user) {
+.controller('profileCtrl', function($scope, $http, $timeout, user) {
 	$scope.user = user.getName();
 	$scope.newPass = function() {
 		var password = $scope.newpassword;
@@ -38,9 +38,15 @@ angular.module('controllers', ['ngRoute'])
 		.then(function(response) {
 			if(response.data.status == 'done') {
                 $scope.successMessage = "Password updated successfully!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
                 $scope.newpassword = '';
 			} else {
                 $scope.errorMessage = "Error updating password!";
+                $timeout(function() {
+                    $scope.errorMessage = false;
+                }, 5000);
 			}
 			
 		})
@@ -51,12 +57,13 @@ angular.module('controllers', ['ngRoute'])
 	
 }])
 
-.controller('dashboardCtrl', function($scope, $http, user) {
+.controller('trainerDashboardCtrl', function($scope, $http, user) {
 	$scope.user = user.getName();
 })
 
 .controller('headerCtrl', function($scope, $http, user) {
-	$scope.user = user.getName();
+    $scope.user = user.getName();
+    $scope.password = user.getPwd();
 })
 
 .controller("regStudents", ['$scope', '$http', function($scope, $http) {
