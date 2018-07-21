@@ -16,15 +16,19 @@ angular.module('controllers', ['ngRoute'])
             if(response.data.status == 'loggedin') {
                 user.saveData(response.data);
                 $location.path('/trainer-dashboard');
+                console.log($scope.username);
+                console.log($scope.password);
             } else {
                 $scope.errorMessage = "*Enter a valid Username or Password!";
+                console.log($scope.username);
+                console.log($scope.password);
             }
         })
 	};
 })
 
 .controller('profileCtrl', function($scope, $http, $timeout, user) {
-	$scope.user = user.getName();
+    $scope.data = user.getData();
 	$scope.newPass = function() {
 		var password = $scope.newpassword;
 		$http({
@@ -62,8 +66,7 @@ angular.module('controllers', ['ngRoute'])
 })
 
 .controller('headerCtrl', function($scope, $http, user) {
-    $scope.user = user.getName();
-    $scope.password = user.getPwd();
+    $scope.data = user.getData();
 })
 
 .controller("regStudents", ['$scope', '$http', function($scope, $http) {
