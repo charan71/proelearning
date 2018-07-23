@@ -1,5 +1,5 @@
-<div class="trainer-login-bg" ng-controller="loginCtrl">
-    <div class="trainer-login-form">
+<div class="admin-login-bg" ng-controller="adminLoginCtrl">
+    <div class="admin-login-form">
         <img class="center-block mb-20" src="./../images/logos/logo-v-admin-login.png">
         <form>
             <div class="form-group">
@@ -10,7 +10,7 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" ng-model="password" ng-required>
             </div>
-            <button class="center-block btn-custom-inverse transition btn-login" type="submit" ng-click="login()">Login</button>
+            <button class="center-block btn-custom-inverse transition btn-login" type="submit" ng-click="adminLogin()">Login</button>
             <div class="error" ng-bind="errorMessage"></div>
         </form>
     </div>

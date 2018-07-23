@@ -17,9 +17,9 @@ angular.module('services', [])
     };
     
     this.isUserLoggedIn = function() {
-        if(!!localStorage.getItem('login')) {
+        if(!!localStorage.getItem('admin-login')) {
 		loggedin = true;
-		var data = JSON.parse(localStorage.getItem('login'));
+		var data = JSON.parse(localStorage.getItem('admin-login'));
 		username = data.username;
 		id = data.id;
 	}
@@ -30,14 +30,14 @@ angular.module('services', [])
         username = data.user;
         id = data.id;
         loggedin = true;
-        localStorage.setItem('login', JSON.stringify({
+        localStorage.setItem('admin-login', JSON.stringify({
             username: username,
             id: id
         }));
     };
 				
     this.clearData = function() {
-		localStorage.removeItem('login');
+		localStorage.removeItem('admin-login');
 		username = "";
 		id = "";
 		loggedin = false;

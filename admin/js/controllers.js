@@ -1,11 +1,11 @@
 angular.module('controllers', ['ngRoute'])
 
-.controller('loginCtrl', function($scope, $http, $location, user) {
-	$scope.login = function() {
+.controller('adminLoginCtrl', function($scope, $http, $location, user) {
+	$scope.adminLogin = function() {
 		var username = $scope.username;
 		var password = $scope.password;
 		$http({
-			url: './php/login.php',
+			url: './php/admin-login.php',
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'

@@ -1,17 +1,13 @@
 angular.module('services', [])
 
 .service('user', function() {
-    var username;
-    var password;
+    var email;
     var loggedin = false;
     var id;
+    var d;
     
     this.getName = function() {
-        return username;
-    };
-    
-    this.getPwd = function() {
-        return password;
+        return email;
     };
     
     this.setID = function(userID) {
@@ -20,33 +16,37 @@ angular.module('services', [])
     this.getID = function() {
         return id;
     };
+
+    this.getData = function() {
+        return d;
+    }
     
     this.isUserLoggedIn = function() {
-        if(!!localStorage.getItem('login')) {
-		loggedin = true;
-		var data = JSON.parse(localStorage.getItem('login'));
-		username = data.username;
-		password = data.password;
-		id = data.id;
-	}
-	return loggedin;
+        if(!!localStorage.getItem('trainer-login')) {
+            loggedin = true;
+            var data = JSON.parse(localStorage.getItem('trainer-login'));
+            email = data.email;
+            id = data.id;
+            d = data;
+        }
+        return loggedin;
     };
     
     this.saveData = function(data) {
-        username = data.user;
-        password = data.pwd;
+        email = data.email;
         id = data.id;
+        d = data;
         loggedin = true;
-        localStorage.setItem('login', JSON.stringify({
-            username: username,
-            password: password,
-            id: id
+        localStorage.setItem('trainer-login', JSON.stringify({
+            email: email,
+            id: id,
+            d: data
         }));
     };
 				
     this.clearData = function() {
-		localStorage.removeItem('login');
-		username = "";
+		localStorage.removeItem('trainer-login');
+		email = "";
 		id = "";
 		loggedin = false;
 	};

@@ -2,15 +2,15 @@ angular.module("routes", ["ngRoute"])
 
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
-	.when("/login", {
-		templateUrl: "views/login.html",
-		controller: "loginCtrl"
+	.when("/admin-login", {
+		templateUrl: "views/admin-login.html",
+		controller: "adminLoginCtrl"
 	})
 	.when("/logout", {
 		resolve: {
 			deadResolve: function($location, user) {
 				user.clearData();
-				$location.path('/login');
+				$location.path('/admin-login');
 			}
 		}
 	})
@@ -18,7 +18,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/admin-login');
 				}
 			},
 		},
@@ -30,7 +30,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/admin-login');
 				}
 			},
 		},
@@ -42,7 +42,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/admin-login');
 				}
 			},
 		},
@@ -53,7 +53,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/admin-login');
 				}
 			},
 		},
@@ -65,7 +65,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/admin-login');
 				}
 			},
 		},
@@ -77,7 +77,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/admin-login');
 				}
 			},
 		},
@@ -89,7 +89,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/admin-login');
 				}
 			},
 		},

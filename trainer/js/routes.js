@@ -2,15 +2,15 @@ angular.module("routes", ["ngRoute"])
 
 .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     $routeProvider
-	.when("/login", {
-		templateUrl: "views/login.html",
-		controller: "loginCtrl"
+	.when("/trainer-login", {
+		templateUrl: "views/trainer-login.html",
+		controller: "trainerLoginCtrl"
 	})
 	.when("/logout", {
 		resolve: {
 			deadResolve: function($location, user) {
 				user.clearData();
-				$location.path('/login');
+				$location.path('/trainer-login');
 			}
 		}
 	})
@@ -18,7 +18,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/trainer-login');
 				}
 			},
 		},
@@ -30,7 +30,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/trainer-login');
 				}
 			},
 		},
@@ -42,7 +42,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/trainer-login');
 				}
 			},
 		},
@@ -54,7 +54,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/trainer-login');
 				}
 			},
 		},
@@ -66,7 +66,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/trainer-login');
 				}
 			},
 		},
@@ -78,7 +78,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/trainer-login');
 				}
 			},
 		},
@@ -90,7 +90,7 @@ angular.module("routes", ["ngRoute"])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/login');
+					$location.path('/trainer-login');
 				}
 			},
 		},

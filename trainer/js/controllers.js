@@ -1,11 +1,11 @@
 angular.module('controllers', ['ngRoute'])
 
-.controller('loginCtrl', function($scope, $http, $location, user) {
-	$scope.login = function() {
+.controller('trainerLoginCtrl', function($scope, $http, $location, user) {
+	$scope.trainerLogin = function() {
         var username = $scope.username;
 		var password = $scope.password;
 		$http({
-			url: './php/login.php',
+			url: './php/trainer-login.php',
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
@@ -24,7 +24,7 @@ angular.module('controllers', ['ngRoute'])
 })
 
 .controller('profileCtrl', function($scope, $http, $timeout, user) {
-	$scope.user = user.getName();
+	$scope.data = user.getData();
 	$scope.newPass = function() {
 		var password = $scope.newpassword;
 		$http({
@@ -58,12 +58,11 @@ angular.module('controllers', ['ngRoute'])
 }])
 
 .controller('trainerDashboardCtrl', function($scope, $http, user) {
-	$scope.user = user.getName();
+	$scope.data = user.getData();
 })
 
 .controller('headerCtrl', function($scope, $http, user) {
-    $scope.user = user.getName();
-    $scope.password = user.getPwd();
+    $scope.data = user.getData();
 })
 
 .controller("regStudents", ['$scope', '$http', function($scope, $http) {

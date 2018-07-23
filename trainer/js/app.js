@@ -1,4 +1,4 @@
-angular.module('trainer', ['ngRoute', 'ngAnimate', 'routes', 'controllers', 'services', 'filters'])
+angular.module('proelearning-trainer', ['ngRoute', 'ngAnimate', 'routes', 'controllers', 'services', 'filters'])
 
 /* Resolve Views Scroll Point Issue, Title */
 .run(['$rootScope', '$document', function($rootScope, $document) {
