@@ -13,19 +13,25 @@ $response = [];
 
 $conn = new mysqli($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
 
-$username = mysqli_real_escape_string($conn, $_POST['username']);
+$email = mysqli_real_escape_string($conn, $_POST['admin_email']);
 $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-$query = "SELECT * FROM `admin_users` WHERE username='$username' AND password='$password'";
+$query = "SELECT * FROM `admin_users` WHERE `admin_email`='$email' AND `password`='$password'";
 
 $result = mysqli_query($conn, $query);
 
+$row = mysqli_fetch_assoc($result);
+
 if(mysqli_num_rows($result) > 0) {
-		$response['status'] = 'loggedin';
-		$response['user'] = $username;
-        $response['id'] = md5(uniqid());
-        $_SESSION['id'] = $response['id'];
-        $_SESSION['user'] = $username;
+    extract($row);
+	$response['status'] = 'loggedin';
+	$response['username'] = $username;
+	$response['pwd'] = $password;
+	$response['email'] = $email;
+	$response['phone'] = $phone;
+    $response['id'] = md5(uniqid());
+    $_SESSION['id'] = $response['id'];
+    $_SESSION['email'] = $email;
 } else {
     $response['status'] = 'error';
 }

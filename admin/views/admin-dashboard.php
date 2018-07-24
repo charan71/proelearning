@@ -13,7 +13,7 @@
 	<div class="main-content-wrapper">
 		<div class="dummy"></div>
 		<div class="main-content">
-			<div ng-controller="dashboardCtrl">
+			<div ng-controller="adminDashboardCtrl">
 				<h3>Dashboard</h3>
 				
 				<?php
@@ -31,7 +31,7 @@
                         ?>
 					</div>
 				</div>
-				<div>{{loginMessage}}</div>
+				<div>{{ loginMessage }} {{ data.d.username }}</div>
 			</div>
 		</div>
 	</div>

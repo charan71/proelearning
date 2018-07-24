@@ -22,11 +22,11 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Dashboard - Pro E-Learning",
-		templateUrl: "views/dashboard.php",
-		controller: "dashboardCtrl"
+        title: "Admin Dashboard - Pro E-Learning",
+		templateUrl: "views/admin-dashboard.php",
+		controller: "adminDashboardCtrl"
 	})
-	.when("/dashboard", {
+	.when("/admin-dashboard", {
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
@@ -34,9 +34,9 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Dashboard - Pro E-Learning",
-		templateUrl: "views/dashboard.php",
-		controller: "dashboardCtrl"
+        title: "Admin Dashboard - Pro E-Learning",
+		templateUrl: "views/admin-dashboard.php",
+		controller: "adminDashboardCtrl"
 	})
 	.when("/profile", {
 		resolve: {

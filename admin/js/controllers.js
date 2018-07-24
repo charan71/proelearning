@@ -10,12 +10,12 @@ angular.module('controllers', ['ngRoute'])
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			},
-			data: 'username='+username+'&password='+password
+			data: 'admin_email='+username+'&password='+password
 		})
 		.then(function(response) {
             if(response.data.status == 'loggedin') {
                 user.saveData(response.data);
-                $location.path('/dashboard');
+                $location.path('/admin-dashboard');
             } else {
                 $scope.errorMessage = "*Enter a valid Username or Password!";
             }
@@ -24,7 +24,7 @@ angular.module('controllers', ['ngRoute'])
 })
 
 .controller('profileCtrl', function($scope, $http, $timeout, user) {
-	$scope.user = user.getName();
+	$scope.data = user.getData();
 	$scope.newPass = function() {
 		var password = $scope.newpassword;
 		$http({
@@ -57,17 +57,12 @@ angular.module('controllers', ['ngRoute'])
 	
 }])
 
-.controller('dashboardCtrl', function($scope, $http, $timeout, user) {
-    $scope.user = user.getName();
-    $scope.loginMessage = "Successfully logged in as " + $scope.user;
-    $timeout(function() {
-        $scope.loginMessage = false;
-    }, 5000);
-
+.controller('adminDashboardCtrl', function($scope, $http, user) {
+    $scope.data = user.getData();
 })
 
 .controller('headerCtrl', function($scope, $http, user) {
-	$scope.user = user.getName();
+	$scope.data = user.getData();
 })
 
 .controller("regStudents", ['$scope', '$http', function($scope, $http) {

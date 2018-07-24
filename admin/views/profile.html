@@ -15,8 +15,8 @@
 		<div class="main-content">
 			<div ng-controller="profileCtrl">
 				<h3>Manage Your Profile</h3>
-				<div class="update-pwd">
-                    <p>Set a new password for your current profile <b>{{ user }}</b></p>
+				<div class="content-grid">
+                    <p>Set a new password for your current profile <b>{{ data.d.email }}</b></p>
 				    <form>
 				        <div class="form-group">
 				    	    <input type="password" ng-model="newpassword" class="form-control" placeholder="Enter A New Password" ng-required autofocus>
