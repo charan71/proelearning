@@ -1,0 +1,59 @@
+<!-- Navigation Menu -->
+<header>
+        <div ng-include="'views/header.html'"></div>
+    </header>
+    <!-- //Navigation Menu -->
+    
+    <div class="main-container">
+        <!-- Side Nav -->
+        <div ng-include="'views/side-nav.html'"></div>
+        <!-- //Side Nav -->
+        
+        <!-- Partial Views -->
+        <div class="main-content-wrapper">
+            <div class="dummy"></div>
+            <div class="main-content">
+                <div ng-controller="courseUpload">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h3>Upload a new Course</h3>
+                        <div class="content-grid">
+                            <div class="clearfix">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="course-name"><span class="important">*</span> Course Name</label>
+                                        <input type="text" id="course-name" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="course-desc"><span class="important">*</span> Course Description</label>
+                                        <input type="text" id="course-desc" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="url"><span class="important">*</span> URL</label>
+                                        <input type="text" id="url" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image"><span class="important">*</span> Image</label>
+                                        <input type="file" id="image" required>
+                                        <p class="help-block">Please upload images of <strong>228x116</strong> resolution for best appearance.</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="price"><span class="important">*</span> Price (in Rupees)</label>
+                                        <input type="number" id="price" class="form-control" required>
+                                    </div>
+                                    <button type="submit" class="btn-custom-inverse transition">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Partial Views -->
+        
+        <!-- Footer -->
+        <footer>
+            <div ng-include="'views/footer.html'"></div>
+        </footer>
+        <!-- //Footer -->
+    </div>
+    

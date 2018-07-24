@@ -22,7 +22,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Admin Dashboard - Pro-elearning",
+        title: "Admin Dashboard - Pro E-Learning",
 		templateUrl: "views/admin-dashboard.php",
 		controller: "adminDashboardCtrl"
 	})
@@ -34,7 +34,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Admin Dashboard - Pro-elearning",
+        title: "Admin Dashboard - Pro E-Learning",
 		templateUrl: "views/admin-dashboard.php",
 		controller: "adminDashboardCtrl"
 	})
@@ -57,7 +57,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Registered Students - Pro-elearning",
+        title: "Registered Students - Pro E-Learning",
         templateUrl: "views/reg-students.html",
         controller: "regStudents"
     })
@@ -69,7 +69,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Registered Trainers - Pro-elearning",
+        title: "Registered Trainers - Pro E-Learning",
         templateUrl: "views/reg-trainers.html",
         controller: "regTrainers"
     })
@@ -81,21 +81,9 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "Contacts List - Pro-elearning",
+        title: "Contacts List - Pro E-Learning",
         templateUrl: "views/contacts-list.html",
         controller: "contactsList"
-    })
-    .when("/course-upload", {
-		resolve: {
-			check: function($location, user) {
-				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
-				}
-			},
-		},
-        title: "Course Upload - Pro-elearning",
-        templateUrl: "views/course-upload.html",
-        controller: "courseUpload"
     })
     .otherwise({
 		resolve: {
@@ -105,7 +93,7 @@ angular.module("routes", ["ngRoute"])
 				}
 			},
 		},
-        title: "404 - Page Not Found - Pro-elearning",
+        title: "404 - Page Not Found - Pro E-Learning",
         redirectTo: "/404",
         templateUrl: "views/404.html"
     });

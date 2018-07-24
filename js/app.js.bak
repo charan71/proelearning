@@ -27,7 +27,7 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                 })
                     .when("/search-results",
                           {
-                    title: "Search Results - Pro-elearning",
+                    title: "Search Results - Pro E-Learning",
                     templateUrl: "views/search-results.html",
                     controller: "searchCoursesController"
                 })
@@ -169,7 +169,7 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                 })
                     .when("/rpa/blueprism",
                           {
-                    title: "Blue Prism Training Institute | RPA Course in Hyderabad, India | Pro-elearning",
+                    title: "Blue Prism Training Institute | RPA Course in Hyderabad, India | Pro E-Learning",
                     description: "Get expert level certified RPA Blueprism Training with Real-Time scenarios And Live Projects Through Instructor-led Sessions In Hyderabad, India. Enroll Today, Join Course And Avail Discounts!",
                     keywords: "Blueprism training in hyderabad, blueprism rpa training, rpa blueprism training in hyderabad, rpa blueprism training, blueprism training in hyderabad, best blueprism training in hyderabad, top blueprism training in hyderabad, rpa blue prism certification, blue prism rpa certification in hyderabad, expert level blue prism training, blue prism online training, blue prism online certification, blue prism online course, blue prism training institute in ameerpet,blue prism training institute in Hyderabad,blue prism training institute in India",
                     templateUrl: "views/blueprism.html",
@@ -833,26 +833,26 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                 })
                     .when("/registration",
                           {
-                    title: "Registration - Pro-elearning",
+                    title: "Registration - Pro E-Learning",
                     templateUrl: "views/registration.html",
                     controller: ""
                 })
                     .when("/contact",
                           {
-                    title: "Contact Us - Pro-elearning",
+                    title: "Contact Us - Pro E-Learning",
                     templateUrl: "views/contact.html",
                     controller: "contactController"
                 })
                     .when("/sitemap",
                           {
-                    title: "Sitemap - Pro-elearning",
+                    title: "Sitemap - Pro E-Learning",
                     templateUrl: "views/sitemap.html",
                     controller: ""
                 })
                     /* Default Path To Load */
                     .otherwise(
                         {
-                    title: "404 Page Not Found - Pro-elearning",
+                    title: "404 Page Not Found - Pro E-Learning",
                     redirectTo: "/404",
                     templateUrl: "views/404.html"
                 })

@@ -57,7 +57,7 @@ angular.module('controllers', ['ngRoute'])
 	
 }])
 
-.controller('adminDashboardCtrl', function($scope, $http, user) {
+.controller('adminDashboardCtrl', function($scope, $http, $timeout, user) {
     $scope.data = user.getData();
 })
 
@@ -108,6 +108,21 @@ angular.module('controllers', ['ngRoute'])
     .then(function(response) {
         $scope.contacts = response.data;
     })
+}])
+
+.controller("courseUpload", ['$scope', function($scope) {
+    $scope.uploadCourse = function() {
+        $http({
+            url: './php/course-upload.php',
+            method: 'POST',
+            data: '',
+            headers: {
+                'Content-Type':'application/x-www-form-urlencoded'
+            }
+        }).then(function(response) {
+            $scope.msg = $scope.response;
+        });
+    }
 }])
 
 ;

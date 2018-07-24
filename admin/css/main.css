@@ -105,11 +105,25 @@ body, html {
 .side-nav ul li a {
     color: #616161;
     display: block;
-    padding: 10px 20px;
+    padding: 8px 20px;
+    font-size: 12px;
 }
 .side-nav ul li a:hover, .side-nav ul li a:focus, .side-nav ul li a:active {
     text-decoration: none;
     background-color: #eee;
+}
+.nav-cat-txt {
+    color: #8bc34a;
+    padding: 5px 20px;
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #BDBDBD;
 }
 /*-- //side nav --*/
 
@@ -173,6 +187,9 @@ body, html {
     top: 70px;
     right: 20px;
 }
+.acc-details-tbl {
+    margin-bottom: 0;
+}
 
 /*-- Trainer Registration Page --*/
 .btn-download {
@@ -210,6 +227,11 @@ body, html {
 /*-- //Admin Login Page --*/
 /*-- //Main Content --*/
 
+/*-- Upload Courses --*/
+.important {
+    color: red;
+}
+/*-- //Upload Courses --*/
 /*-- Footer --*/
 footer {
     background-color: #212121;

@@ -31,7 +31,6 @@
                         ?>
 					</div>
 				</div>
-				<div>{{ loginMessage }} {{ data.d.username }}</div>
 			</div>
 		</div>
 	</div>
