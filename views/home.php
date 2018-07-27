@@ -50,9 +50,12 @@
             
             <!-- Overview of Training -->
             <div class="row mt-50 mb-50">
+                <div class="container">
+                    <h1 class="text-center">Choose from any of the choices</h1>
+                </div>
                 <div class="tree-container">
                     <div class="overview-tree-1"></div>
-                    <div class="overview-tree-2" style="height:100px; width:1px; border-left:1px dashed silver;"></div>
+                    <div class="overview-tree-2"></div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-lg-4 col-md-4">

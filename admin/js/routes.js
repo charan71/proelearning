@@ -1,6 +1,6 @@
-angular.module("routes", ["ngRoute"])
+angular.module("routes", ['ngRoute', 'chart.js'])
 
-.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+.config(['$routeProvider', '$locationProvider', 'ChartJsProvider', function($routeProvider, $locationProvider, ChartJsProvider) {
     $routeProvider
 	.when("/admin-login", {
 		templateUrl: "views/admin-login.html",
@@ -111,7 +111,13 @@ angular.module("routes", ["ngRoute"])
     });
     
     /* Configure HTML5 To Get Links Working */
-    $locationProvider.html5Mode(true).hashPrefix('!');
+	$locationProvider.html5Mode(true).hashPrefix('!');
+	
+    /* Charts.js Defining Deffault Settings */
+    ChartJsProvider.setOptions({
+        chartColors: [ '#FF5252', '#FF8A80' ],
+        responsive: true
+    });
 }])
 
 ;

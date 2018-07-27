@@ -1,6 +1,7 @@
 body
 {
-	font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-color: #FAFAFA;
 }
 ::selection, ::-moz-selection {
 	background-color: #b9e3fe;
@@ -586,6 +587,8 @@ footer hr {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    height: 120px;
+    top: 65px;
 }
 .overview-tree-1 {
     height: 60px;
@@ -596,13 +599,13 @@ footer hr {
     border-top-right-radius: 50px;
 }
 .overview-tree-2 {
-    height: 100px;
+    height: 120px;
     width: 1px;
     margin-left: 50%;
     margin-right: 50%;
     border-left: 1px dashed silver;
     position: absolute;
-    top: -40px;
+    top: -60px;
 }
 .overview-grid {
     padding: 20px 30px;

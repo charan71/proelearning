@@ -31,6 +31,11 @@
                         ?>
 					</div>
 				</div>
+
+                <div style="width:300px;height:300;">
+                    <canvas class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-click="onClick" chart-colors="colors"></canvas>
+                </div>
+
 			</div>
 		</div>
 	</div>

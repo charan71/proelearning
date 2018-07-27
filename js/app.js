@@ -1,5 +1,5 @@
 /* Creating Module */
-var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ng-clamp'])
+var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ng-clamp', 'chart.js'])
 
 /* Resolve Views Scroll Point Issue */
 .run(['$rootScope', '$document', function($rootScope, $document) {
@@ -13,8 +13,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
 }])
 
 /* Creating Route Configurations For Partial Views */
-.config(['$routeProvider', '$locationProvider',
-            function ($routeProvider, $locationProvider)
+.config(['$routeProvider', '$locationProvider', 'ChartJsProvider',
+            function ($routeProvider, $locationProvider, ChartJsProvider)
             {
                 $routeProvider
                     .when("/",
@@ -859,8 +859,13 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                 
                 /* Configure HTML5 To Get Links Working */
                 $locationProvider.html5Mode(true).hashPrefix('!');
-                
-                
+
+                /* Charts.js Defining Deffault Settings */
+                ChartJsProvider.setOptions({
+                    chartColors: [ '#FF5252', '#FF8A80' ],
+                    responsive: true
+                });
+                                
 }])
 
 ;

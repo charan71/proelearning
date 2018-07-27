@@ -19,7 +19,7 @@ angular.module('ProELearning.controllers', [])
     ];
 
 }])
-    
+
 /* Testimonials Controller */
 .controller("TestimonialsController", ['$scope', function($scope) {
     $(".carousel").carousel({
