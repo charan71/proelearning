@@ -31,6 +31,14 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                     templateUrl: "views/search-results.html",
                     controller: "searchCoursesController"
                 })
+                    .when("/aboutus",
+                        {
+                    title: "About Pro-elearning| Best Software Training Company",
+                    description: "",
+                    keywords: "",
+                    templateUrl: "views/about.html",
+                    controller: ""
+                })
                     .when("/information-technology",
                           {
                     title: "IT Training Institute in Hyderabad | IT Courses in Hyderabad | Pro-elearning",

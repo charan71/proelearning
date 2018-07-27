@@ -41,7 +41,7 @@
                             <div class="container text-center">
                                 <h1 class="row-gap-small">We Provide Real-Time Training for IT Professionals &#x0026; Freshers</h1>
                                 <p class="para-desc mb-20">Pro-eLearning focuses on filling the niche in the labour market through personnel training and development. It is one of the most trusted and the largest provider of hands-on online training, classroom training, on-demand trainings and multi-course training events. The qualified trainers with market expertise and the enclosed IT Security Training Roadmap aid trainees in successful career planning.</p>
-                                <a href="#" class="btn-custom-inverse btn-custom-lg transition" role="button">Read More</a>
+                                <a href="aboutus" class="btn-custom-inverse btn-custom-lg transition" role="button">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
             <!-- Overview of Training -->
             <div class="row mt-50 mb-50">
                 <div class="container">
-                    <h1 class="text-center">Choose from any of the choices</h1>
+                    <h1 class="text-center">Choose your choice</h1>
                 </div>
                 <div class="tree-container">
                     <div class="overview-tree-1"></div>
