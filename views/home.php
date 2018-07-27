@@ -46,50 +46,51 @@
                         </div>
                     </div>
                 </div>
-			</div>
-			
-			<div class="row row-gap-big">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="home-training training1">
-                            <div class="training-content text-center">
-                                <div class="training-content-middle">
-                                    <img src="./images/content-images/online-training.png">
-                                    <h2>Online Training</h2>
-                                    <p class="training-content-desc">We offer online live interactive training programs to the consultants and students across the globe. We maintain all the quality principles and make use of latest technologies to teach in clear and descriptive manner.</p>
-                                </div>
-                            </div>
+            </div>
+            
+            <!-- Overview of Training -->
+            <div class="row mt-50 mb-50">
+                <div class="tree-container">
+                    <div class="overview-tree-1"></div>
+                    <div class="overview-tree-2" style="height:100px; width:1px; border-left:1px dashed silver;"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="overview-grid">
+                        <div class="overview-icon">
+                            <img class="img-responsive center-block" src="./images/content-images/online-training.png">
+                        </div>
+                        <div class="overview-content text-center">
+                            <h3 class="overview-title">Online Training</h3>
+                            <p>We offer online live interactive training programs to the consultants and students across the globe. We maintain all the quality principles and make use of latest technologies to teach in clear and descriptive manner.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="home-training training2">
-                            <div class="training-content text-center">
-                                <div class="training-content-middle">
-                                    <img src="./images/content-images/classroom-training.png">
-                                    <h2>Class Room Training</h2>
-                                    <p class="training-content-desc">Your employees are most important asset. Equip them with the best training, mentoring and coaching they need to move your business forward. We design and develop training programs suitable to your requirements.</p>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="overview-grid">
+                        <div class="overview-icon">
+                            <img class="img-responsive center-block" src="./images/content-images/classroom-training.png">
+                        </div>
+                        <div class="overview-content text-center">
+                            <h3 class="overview-title">Classroom Training</h3>
+                            <p>Your employees are most important asset. Equip them with the best training, mentoring and coaching they need to move your business forward. We design and develop training programs suitable to your requirements.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="home-training training3">
-                            <div class="training-content text-center">
-                                <div class="training-content-middle">
-                                    <img src="./images/content-images/ondemand-training.png">
-                                    <h2>On Demand Training</h2>
-                                    <p class="training-content-desc">On-demand training is an online training solution that gives flexibility to take training program at your convenient time. We offer training programs to individuals or small groups and we design, develop training programs suitable to your needs.</p>
-                                </div>
-                            </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="overview-grid">
+                        <div class="overview-icon">
+                            <img class="img-responsive center-block" src="./images/content-images/ondemand-training.png">
+                        </div>
+                        <div class="overview-content text-center">
+                            <h3 class="overview-title">On Demand Training</h3>
+                            <p>On-demand training is an online training solution that gives flexibility to take training program at your convenient time. We offer training programs to individuals or small groups and we design, develop training programs suitable to your needs.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+            <!-- //Overview of Training -->
+			
             <!-- Course Cards List -->
 			<div class="row row-gap-big">
                 <div class="home-courses container-fluid" ng-controller="CourseCardsController">

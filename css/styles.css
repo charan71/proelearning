@@ -41,6 +41,21 @@ p, li {
 .mt-50 {
     margin-top: 50px;
 }
+.mr-10 {
+    margin-top: 10px;
+}
+.mr-20 {
+    margin-top: 20px;
+}
+.mr-30 {
+    margin-top: 30px;
+}
+.mr-40 {
+    margin-top: 40px;
+}
+.mr-50 {
+    margin-top: 50px;
+}
 .mb-10 {
     margin-bottom: 10px;
 }
@@ -54,6 +69,21 @@ p, li {
     margin-bottom: 40px;
 }
 .mb-50 {
+    margin-bottom: 50px;
+}
+.ml-10 {
+    margin-bottom: 10px;
+}
+.ml-20 {
+    margin-bottom: 20px;
+}
+.ml-30 {
+    margin-bottom: 30px;
+}
+.ml-40 {
+    margin-bottom: 40px;
+}
+.ml-50 {
     margin-bottom: 50px;
 }
 .row-gap-top {
@@ -106,7 +136,7 @@ p {
 {
 	letter-spacing: 0.02em;
 	padding: 39px 15px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .navbar-form {
     padding-top: 33px;
@@ -377,73 +407,72 @@ nav, a, .navbar-brand, li, a i
 }
 
 /* Footer Styles Start */
-footer
-{
-	background-image: url("../images/bg-images/bg-footer.jpg");
+footer {
+    background-color: #313137;
     box-shadow: 0 -4px 8px -6px #777777;
+}
+footer hr {
+    border-top: 1px solid #424242;
 }
 .footer-main .contactus div i {
     font-size: 38px;
 }
-.footer-main .contactus div h2 a
-{
+.footer-main .contactus div h2 a {
 	text-decoration: none;
-	color: black;
+    color: #fff;
+    font-weight: 300;
 }
-.footer-main .contactus div h2 a:hover, .footer-main .contactus div h2 a:focus, .footer-main .contactus div h2 a:active, .contactus div i
-{
+.footer-main .contactus div h2 a:hover, .footer-main .contactus div h2 a:focus, .footer-main .contactus div h2 a:active, .contactus div i {
 	color: #81a312;
 }
-.footer-main .contactus
-{
-	margin-top: 20px;
+.footer-main .contactus {
+    margin-top: 20px;
 }
-.footer-menu
-{
+.footer-main .contactus .contact-text {
+    color: #fff;
+}
+.footer-main .contactus .contact-text h2 {
+    font-weight: 300;
+}
+.footer-menu {
 	list-style-type: none;
 	padding-left: 0;
 }
 .footer-about {
     text-align: justify;
 }
-.footer-menu-title
-{
+.footer-menu-title {
+    color: #fff;
     margin-bottom: 20px;
+    font-weight: 300;
 }
-.footer-menu li a
-{
+.footer-menu li a {
 	text-decoration: none;
-	color: black;
+	color: #999;
 	font-size: 12px;
 }
-.footer-menu li
-{
+.footer-menu li {
 	margin-bottom: 5px;
 }
-.footer-menu li a:hover, .footer-menu li a:focus, .footer-menu li a:active, .copyright h5 a:hover, .copyright h5 a:focus, .copyright h5 a:active
-{
-	color: #81a312;
+.footer-menu li a:hover, .footer-menu li a:focus, .footer-menu li a:active, .copyright h5 a:hover, .copyright h5 a:focus, .copyright h5 a:active {
+	color: #BDBDBD;
 }
-.we-hire
-{
+.we-hire {
 	position: absolute;
 	left: 130px;
 }
 /* Social Icons */
-.copy-social
-{
+.copy-social {
 	margin-bottom: 20px;
 }
-.copyright
-{
+.copyright {
+    color: #999;
 	padding-left: 15px;
 }
-.copyright h5 a
-{
+.copyright h5 a {
+    color: #999;
 	text-decoration: none;
-	color: inherit;
 }
-
 .social-list {
     list-style-type: none;
     padding-left: 0;
@@ -458,7 +487,7 @@ footer
     font-size: 18px;
 }
 .fa-facebook, .fa-linkedin, .fa-google-plus, .fa-twitter {
-    color: #81a312;
+    color: #999;
 }
 .fa-facebook:hover {
     color: #3C5A99;
@@ -482,7 +511,7 @@ footer
 	bottom: 30px;
 	display: none;
 	font-size: 28px;
-	padding: 0 13px 4px;
+	padding: 0px 12px 2px 12px;
 	border-radius: 24px;
     border-style: none;
     outline: none;
@@ -551,49 +580,37 @@ footer
     color:dimgray;
 }
 
-.home-training {
+/*-- Overview Section - Home --*/
+.tree-container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
-
-.training-content {
-    /* padding: 50px; */
-    color: white;
-    background-color: rgba(0,0,0,0.6);
+.overview-tree-1 {
+    height: 60px;
+    border-top: 1px dashed silver;
+    border-right: 1px dashed silver;
+    border-left: 1px dashed silver;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
-.training-content-middle {
-    min-width: 80%;
+.overview-tree-2 {
+    height: 100px;
+    width: 1px;
+    margin-left: 50%;
+    margin-right: 50%;
+    border-left: 1px dashed silver;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-       -moz-transform: translate(-50%,-50%);
-        -ms-transform: translate(-50%,-50%);
-         -o-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
+    top: -40px;
 }
-
-.training-content img {
-    padding: 10px;
+.overview-grid {
+    padding: 20px 30px;
 }
-@media (max-width: 768px) {
-    .training-content img {
-        width: auto;
-        height: 80px;
-    }
+.overview-title {
+    color: #8bc34a;
 }
-
-.training1 {
-    background-image: url("../images/bg-images/online_training.jpg");
-}
-.training2 {
-    background-image: url("../images/bg-images/classroom_training.jpg");
-}
-.training3 {
-    background-image: url("../images/bg-images/on_demand_training.jpg");
-}
+/*-- //Overview Section - Home --*/
 
 /* Home Courses */
 .course-category .course-title, .course-category .course-readmore {
@@ -889,14 +906,6 @@ span.validation_styles {
     #stud-registration h5, #instr-registration h5 {
         padding: 0 15px;
     }
-    .training-content {
-        background-color: rgba(0,0,0,0.85);
-        -webkit-transition: .3s all;
-        -moz-transition: .3s all;
-        -ms-transition: .3s all;
-        -o-transition: .3s all;
-        transition: .3s all;
-    }
 }
 
 @media (min-width: 992px) {
@@ -905,32 +914,6 @@ span.validation_styles {
     }
     #contact-form h5 {
         padding: 0 15px;
-    }
-    .training-content-desc {
-        display: none;
-    }
-    .training-content:hover .training-content-desc {
-        display: block;
-    }
-    .training-content:hover {
-        background-color: rgba(0,0,0,0.85);
-        -webkit-transition: .3s all;
-        -moz-transition: .3s all;
-        -ms-transition: .3s all;
-        -o-transition: .3s all;
-        transition: .3s all;
-    }
-}
-
-@media (max-width: 1400px) {
-    .home-training, .training-content {
-        min-height: 400px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .home-training, .training-content {
-        min-height: 500px;
     }
 }
 
@@ -1290,9 +1273,6 @@ textarea {
     }
     .home-reg-panel .grid2 {
         margin-top: 0;
-    }
-    .home-training, .training-content {
-        min-height: 250px;
     }
 }
 /*-- //Responsive Designs --*/
