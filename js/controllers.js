@@ -147,7 +147,7 @@ angular.module('ProELearning.controllers', [])
         $scope.$apply(function($scope) {
             $scope.files = element.files;
         });
-    }
+    };
     $scope.imageUpload = function(event){
 	    var files = event.target.files; //FileList object
 	    var file = files[files.length-1];
@@ -155,12 +155,13 @@ angular.module('ProELearning.controllers', [])
 	    var reader = new FileReader();
 	    reader.onload = $scope.imageIsLoaded;
 	    reader.readAsDataURL(file);
-	}    
+	};
 	$scope.imageIsLoaded = function(e){
 	    $scope.$apply(function() {
 	    	$scope.step = e.target.result;
 	    });
-	}
+    };
+    
     $scope.fn_insertTrainer = function() {
         var formData = new FormData();
         var file = $scope.files[0];
@@ -182,7 +183,9 @@ angular.module('ProELearning.controllers', [])
             url: './php/trainer_reg.php',
             data: formData,
             processData: false,
-            headers: {'Content-Type': undefined}
+            headers: {
+                'Content-Type': undefined
+            }
         }).then(function(response) {
             $scope.tname = angular.copy(orig_name);
             $scope.email = angular.copy(orig_email);
@@ -207,6 +210,8 @@ angular.module('ProELearning.controllers', [])
             }, 5000);
         });
     };
+
+    /*-- Reset all form fields and form to its initial state --*/
     $scope.fn_reset = function() {
         $scope.tname = angular.copy(orig_name);
         $scope.email = angular.copy(orig_email);

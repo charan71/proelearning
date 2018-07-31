@@ -134,19 +134,79 @@ angular.module('controllers', ['ngRoute'])
     })
 }])
 
-.controller("courseUpload", ['$scope', function($scope) {
-    $scope.uploadCourse = function() {
+.controller("courseUpload", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+    var orig_courseName = $scope.courseName;
+    var orig_courseDesc = $scope.courseDesc;
+    var orig_courseUrl = $scope.courseUrl;
+    var orig_files = $scope.files;
+    var orig_coursePrice = $scope.coursePrice;
+    $scope.dt = Date();
+    
+    $scope.uploadedFile = function(element) {
+        $scope.$apply(function($scope) {
+            $scope.files = element.files;
+        });
+    };
+    $scope.imageUpload = function(event){
+	    var files = event.target.files; //FileList object
+	    var file = files[files.length-1];
+	    $scope.file = file;
+	    var reader = new FileReader();
+	    reader.onload = $scope.imageIsLoaded;
+	    reader.readAsDataURL(file);
+	};
+	$scope.imageIsLoaded = function(e){
+	    $scope.$apply(function() {
+	    	$scope.step = e.target.result;
+	    });
+    };
+    
+    $scope.fn_uploadCourse = function() {
+        var formData = new FormData();
+        var file = $scope.files[0];
+        formData.append('course_name',$scope.courseName);
+        formData.append('course_description',$scope.courseDesc);
+        formData.append('course_url',$scope.courseUrl);
+        formData.append('file',file);
+        formData.append('course_price',$scope.coursePrice);
+        formData.append('date_time',$scope.dt);
+        
         $http({
-            url: './php/course-upload.php',
             method: 'POST',
-            data: '',
+            url: './php/course-upload.php',
+            data: formData,
+            processData: false,
             headers: {
-                'Content-Type':'application/x-www-form-urlencoded'
+                'Content-Type': undefined
             }
         }).then(function(response) {
-            $scope.msg = $scope.response;
+            $scope.courseName = angular.copy(orig_courseName);
+            $scope.courseDesc = angular.copy(orig_courseDesc);
+            $scope.courseUrl = angular.copy(orig_courseUrl);
+            $scope.files = angular.copy(orig_files);
+            $scope.coursePrice = angular.copy(orig_coursePrice);
+            $scope.courseUploadForm.$setUntouched();
+            $scope.successMessage = "New course uploaded successfully!!";
+            $timeout(function() {
+                $scope.successMessage = false;
+            }, 5000);
+        }, function(error) {
+            $scope.errorMessage = "Sorry. Please try again!!";
+            $timeout(function() {
+                $scope.errorMessage = false;
+            }, 5000);
         });
-    }
+    };
+
+    /*-- Reset all form fields and form to its initial state --*/
+    $scope.fn_reset = function() {
+    $scope.courseName = angular.copy(orig_courseName);
+    $scope.courseDesc = angular.copy(orig_courseDesc);
+    $scope.courseUrl = angular.copy(orig_courseUrl);
+    $scope.files = angular.copy(orig_files);
+    $scope.coursePrice = angular.copy(orig_coursePrice);
+    $scope.courseUploadForm.$setUntouched();
+    };
 }])
 
 ;

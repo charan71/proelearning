@@ -880,4 +880,4 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
 }])
 
 ;
-}());
+}(angular));

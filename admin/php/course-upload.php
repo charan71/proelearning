@@ -7,17 +7,24 @@ if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 }
 
-$query = $conn->query("SELECT * FROM `contacts_list` ORDER BY `sno` DESC");
-$ar = array();
-
-while($row = mysqli_fetch_assoc($query)) {
-	$ar[] = $row;
-}
+	$courseName = $_POST['course_name'];
+	$courseDesc = $_POST['course_description'];
+	$courseUrl = $_POST['course_url'];
+	$coursePrice = $_POST['course_price'];
+	$dt = $_POST['date_time'];
+	print_r($_FILES);
+	$tempPath = $_FILES['file']['tmp_name'];
+	$uploadPath = '../../images/course-thumbnails/' . $_FILES['file']['name'];
+	move_uploaded_file($tempPath, $uploadPath);
+	
+	$query = "INSERT INTO `courses_uploaded` (`course_name`, `course_description`, `course_url`, `course_image`, `course_price`, `date_time`) VALUES ('$courseName', '$courseDesc', '$courseUrl', '".$_FILES['file']['name']."', '$coursePrice', '$dt')";
+	
+	if(mysqli_query($conn, $query)) {
+		echo "Data Inserted...";
+	} else {
+		echo 'Error';
+	}
 
 $conn->close();
-
-header("Content-Type: application/json;");
-
-echo json_encode($ar);
 
 ?>

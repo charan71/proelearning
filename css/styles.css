@@ -486,7 +486,7 @@ footer hr {
     font-weight: 300;
 }
 .footer-main .contactus div h2 a:hover, .footer-main .contactus div h2 a:focus, .footer-main .contactus div h2 a:active, .contactus div i {
-	color: #81a312;
+	color: #8bc34a;
 }
 .footer-main .contactus {
     margin-top: 20px;
@@ -974,8 +974,9 @@ span.validation_styles {
 }
 .alert.alert-dismissible, .alert.alert-dismissable {
     position: fixed;
+    margin-bottom: 0;
     left: 30px;
-    bottom: 30px;
+    bottom: 20px;
     z-index: 99;
     /* top: 50%;
     left: 50%;

@@ -55,6 +55,12 @@ body, html {
 }
 /*-- //Transitions --*/
 
+span.validation_styles {
+    color: red;
+    font-size: 11px;
+    font-style: italic;
+}
+
 /*-- nav --*/
 .navbar {
     margin-bottom: 0;
@@ -177,6 +183,11 @@ body, html {
 .btn-custom-inverse:hover, .btn-custom-inverse:focus {
     background-color: #fff;
     color: #8bc34a;
+}
+.btn-custom-inverse[disabled]:hover {
+    background-color: #8bc34a;
+    color: #fff;
+    border: 1px solid #8bc34a;
 }
 .btn-login {
     padding-right: 20px;

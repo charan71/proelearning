@@ -1,20 +1,5 @@
 angular.module('ProELearning.services', [])
 
-/* Trainer Login Service */
-.service('trainerLoginService', function() {
-    this.isValidUser = function(uid, pwd) {
-        var status = "";
-        if (uid == "trainer" && pwd == "trainer") {
-            status = "* Login Successful...";
-        } else if (uid == "" || pwd == "") {
-            status = "* Please fill all the required fields!!!";
-        } else {
-            status = "* Invalid Username or Password.";
-        }
-        return status;
-    };
-})
-
 /* Modal Service */
 .factory('ModalService', function Service() {
     var modals = []; // array of modals on the page
