@@ -71,12 +71,12 @@ angular.module('ProELearning.controllers', [])
 */
 
 /* Student Registration Controller */
-.controller("studentController", ['$scope', '$http', '$controller', function($scope, $http, $controller) {
-    $controller('CountryListController', {$scope:$scope})
-    $controller('StateListController', {$scope:$scope})
+.controller("studentController", ['$scope', '$http', '$controller', '$timeout', function($scope, $http, $controller, $timeout) {
     $controller('QualificationListController', {$scope:$scope})
+
+    console.log($scope.fam);
     
-	var orig_name = $scope.sname;
+    var orig_name = $scope.sname;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;
     var orig_gender = $scope.gender;
@@ -103,9 +103,12 @@ angular.module('ProELearning.controllers', [])
                 $scope.occupation = angular.copy(orig_occupation);
                 $scope.course = angular.copy(orig_course);
                 $scope.message = angular.copy(orig_message);
-                $scope.studRegForm.$setPristine();
-                $scope.successMessage = "Your request for learning is successfully registered with us. Our technical team will reach you shortly. Thankyou!!";
-        }, function(error) {
+                $scope.studRegForm.$setUntouched();
+                $scope.successMessage = "Your request for learning a course is successfully registered with us. Our technical team will reach you shortly. Thankyou!!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
+            }, function(error) {
                 $scope.errorMessage = "Sorry. Please try again!!";
         });
     };
@@ -120,18 +123,14 @@ angular.module('ProELearning.controllers', [])
         $scope.occupation = angular.copy(orig_occupation);
         $scope.course = angular.copy(orig_course);
         $scope.message = angular.copy(orig_message);
-        $scope.studRegForm.$setPristine();
+        $scope.studRegForm.$setUntouched();
     };
 }])
 
 /* Trainer Registration Controller */
-.controller("trainerController", ['$scope', '$http', '$controller', '$timeout', function($scope, $http, $controller, $timeout) {
-    $controller('CountryListController', {$scope:$scope})
-    $controller('StateListController', {$scope:$scope})
-
-    $scope.dt = Date();
+.controller("trainerController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
     
-	var orig_name = $scope.tname;
+    var orig_name = $scope.tname;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;
     var orig_gender = $scope.gender;
@@ -142,7 +141,7 @@ angular.module('ProELearning.controllers', [])
     var orig_techExp = $scope.techExp;
     var orig_resume = $scope.files;
     var orig_message = $scope.message;
-    var orig_date = $scope.dt;
+    $scope.dt = Date();
     
     $scope.uploadedFile = function(element) {
         $scope.$apply(function($scope) {
@@ -196,8 +195,8 @@ angular.module('ProELearning.controllers', [])
             $scope.techExp = angular.copy(orig_techExp);
             $scope.resume = angular.copy(orig_resume);
             $scope.message = angular.copy(orig_message);
-            $scope.trainerRegForm.$setPristine();
-            $scope.successMessage = "Your request for trainer is successfully registered with us. Our technical team will reach you shortly. Thankyou!!";
+            $scope.trainerRegForm.$setUntouched();
+            $scope.successMessage = "Your request as a trainer is successfully registered with us. Our technical team will reach you shortly. Thankyou!!";
             $timeout(function() {
                 $scope.successMessage = false;
             }, 5000);
@@ -220,7 +219,7 @@ angular.module('ProELearning.controllers', [])
         $scope.techExp = angular.copy(orig_techExp);
         $scope.resume = angular.copy(orig_resume);
         $scope.message = angular.copy(orig_message);
-        $scope.trainerRegForm.$setPristine();
+        $scope.trainerRegForm.$setUntouched();
     };
 }])
 
@@ -242,7 +241,7 @@ angular.module('ProELearning.controllers', [])
                 $scope.phone = angular.copy(orig_phone);
                 $scope.category = angular.copy(orig_category);
                 $scope.message = angular.copy(orig_message);
-                $scope.contactForm.$setPristine();
+                $scope.contactForm.$setUntouched();
                 $scope.successMessage = "Hello. We have successfully received your details. Our technical team will reach you shortly. Thankyou & Have a Great Day!!";
         }, function(error) {
                 $scope.errorMessage = "Sorry. Please try again!!";
@@ -254,31 +253,9 @@ angular.module('ProELearning.controllers', [])
         $scope.phone = angular.copy(orig_phone);
         $scope.category = angular.copy(orig_category);
         $scope.message = angular.copy(orig_message);
-        $scope.contactForm.$setPristine();
+        $scope.contactForm.$setUntouched();
     };
 }])
-
-/* Creating CountryListController */
-.controller("CountryListController", function($scope) {
-    $scope.countrys = [
-        {c_flag:"", c_name:"India"},
-        {c_flag:"", c_name:"Malaysia"},
-        {c_flag:"", c_name:"Singapore"},
-        {c_flag:"", c_name:"Thailand"},
-        {c_flag:"", c_name:"United States"}
-    ];
-})
-
-/* Creating StateListController */
-.controller("StateListController", function($scope) {
-    $scope.states = [
-        {s_flag:"", s_name:"Arunachal Pradesh"},
-        {s_flag:"", s_name:"Andhra Pradesh"},
-        {s_flag:"", s_name:"Karnataka"},
-        {s_flag:"", s_name:"Kerala"},
-        {s_flag:"", s_name:"Maharastra"}
-    ];
-})
 
 /* Creating QualificationListController */
 .controller("QualificationListController", function($scope) {
@@ -292,7 +269,7 @@ angular.module('ProELearning.controllers', [])
 })
 
 /* OwlCarousel Controller */
-.controller("CourseCardsController",['$scope', function($scope) {
+.controller("CourseCardsController", ['$scope', function($scope) {
     $scope.cc_info_tech = [
         {cc_info_tech_imageLink:"information-technology/java", cc_info_tech_image:"java.jpg", cc_info_tech_title:"Java", cc_info_tech_desc:"Java is a programming language and computing platform first released by Sun Microsystems.", cc_info_tech_readMoreLink:"information-technology/java", cc_info_tech_price:"25000"},
         {cc_info_tech_imageLink:"information-technology/dotnet", cc_info_tech_image:"dotnet.jpg", cc_info_tech_title:".Net", cc_info_tech_desc:"A developer platform for building all your apps. Build for web, mobile, gaming, IoT, desktop, cloud and microservices.", cc_info_tech_readMoreLink:"information-technology/dotnet", cc_info_tech_price:"25000"},

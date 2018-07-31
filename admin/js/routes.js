@@ -73,7 +73,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
         templateUrl: "views/reg-trainers.html",
         controller: "regTrainers"
     })
-    .when("/contacts-list", {
+    .when("/contact-us-list", {
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
@@ -82,7 +82,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 			},
 		},
         title: "Contacts List - Pro-elearning",
-        templateUrl: "views/contacts-list.html",
+        templateUrl: "views/contacts-us-list.html",
         controller: "contactsList"
     })
     .when("/course-upload", {

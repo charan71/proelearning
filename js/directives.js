@@ -138,5 +138,4 @@ angular.module('ProELearning.directives', [])
 	}
 }])
 
-
 ;

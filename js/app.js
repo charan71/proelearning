@@ -1,5 +1,8 @@
+(function() {
+    "use strict";
+
 /* Creating Module */
-var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ng-clamp', 'chart.js'])
+var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ng-clamp', 'chart.js', 'ngCountryStateSelect'])
 
 /* Resolve Views Scroll Point Issue */
 .run(['$rootScope', '$document', function($rootScope, $document) {
@@ -877,3 +880,4 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
 }])
 
 ;
+}());

@@ -51,7 +51,7 @@
             <!-- Overview of Training -->
             <div class="row mt-50 mb-50">
                 <div class="container">
-                    <h1 class="text-center">Choose your choice</h1>
+                    <h1 class="text-center">Choose your right choice</h1>
                 </div>
                 <div class="tree-container">
                     <div class="overview-tree-1"></div>
@@ -285,6 +285,35 @@
                 </div>
 			</div>
 			
+            <div class="row text-center r-stats pt-50 pb-50">
+                <div class="container stats">
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="stats-studs-trained">
+                            <h4 class="stats-title">Students Trained</h4>
+                            <span class="stats-num" stat-animate>1000+</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="stats-studs-trained">
+                            <h4 class="stats-title">Batches Trained</h4>
+                            <span class="stats-num">100+</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="stats-studs-trained">
+                            <h4 class="stats-title">No.of Courses</h4>
+                            <span class="stats-num">100+</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="stats-studs-trained">
+                            <h4 class="stats-title">Students Placed</h4>
+                            <span class="stats-num">800+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 			<div class="row">
                 <div id="home_st_tr_bg" class="home-reg bgStyles">
                     <div class="text-center home-reg-panel">

@@ -87,6 +87,68 @@ p, li {
 .ml-50 {
     margin-bottom: 50px;
 }
+/*-- Paddings --*/
+.pt-10 {
+    padding-top: 10px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+.pt-30 {
+    padding-top: 30px;
+}
+.pt-40 {
+    padding-top: 40px;
+}
+.pt-50 {
+    padding-top: 50px;
+}
+.pr-10 {
+    padding-top: 10px;
+}
+.pr-20 {
+    padding-top: 20px;
+}
+.pr-30 {
+    padding-top: 30px;
+}
+.pr-40 {
+    padding-top: 40px;
+}
+.pr-50 {
+    padding-top: 50px;
+}
+.pb-10 {
+    padding-bottom: 10px;
+}
+.pb-20 {
+    padding-bottom: 20px;
+}
+.pb-30 {
+    padding-bottom: 30px;
+}
+.pb-40 {
+    padding-bottom: 40px;
+}
+.pb-50 {
+    padding-bottom: 50px;
+}
+.pl-10 {
+    padding-bottom: 10px;
+}
+.pl-20 {
+    padding-bottom: 20px;
+}
+.pl-30 {
+    padding-bottom: 30px;
+}
+.pl-40 {
+    padding-bottom: 40px;
+}
+.pl-50 {
+    padding-bottom: 50px;
+}
+
 .row-gap-top {
     margin-top: 60px;
 }
@@ -457,9 +519,6 @@ footer hr {
     border-radius: 0;
     margin: 0 15px;
     padding: 0;
-}
-.footer-menu li {
-	/* margin-bottom: 5px; */
 }
 .footer-menu li a:hover, .footer-menu li a:focus, .footer-menu li a:active, .copyright h5 a:hover, .copyright h5 a:focus, .copyright h5 a:active {
     background-color: transparent;
@@ -852,6 +911,18 @@ footer hr {
     margin: 65px 0;
 }
 
+/*-- Home Page Statistics --*/
+.r-stats {
+    background-color: rgba(139, 196, 74, .4);
+}
+.stats-title {
+    color: #8bc44a;
+}
+.stats-num {
+    font-size: 40px;
+}
+/*-- Home Page Statistics --*/
+
 /* Registration Page */
 .reg-form {
     padding-top: 50px;
@@ -886,7 +957,7 @@ a[role="tab"]:hover {
 input.ng-valid, textarea.ng-valid, select.ng-valid {
     border: 1px solid green !important;
 }
-input.ng-invalid.ng-dirty, textarea.ng-invalid.ng-dirty, select.ng-invalid.ng-dirty {
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
     border: 1px solid red !important;
 }
 span.validation_styles {
@@ -902,7 +973,13 @@ span.validation_styles {
     padding: 15px;
 }
 .alert.alert-dismissible, .alert.alert-dismissable {
-    padding-right: 35px;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    z-index: 99;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
 }
 
 @media (max-width: 992px) {
