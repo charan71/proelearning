@@ -239,17 +239,21 @@
 							<li><a ng-href="registration" class="hvr-underline-from-center">Register</a></li>
 							<li><a ng-href="contact" class="hvr-underline-from-center">Contact</a></li>
 						</ul>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li><a ng-href="tel:+91-8340905336"><i class="fa fa-phone" aria-hidden="true"></i> +91-8340905336</a></li>
+						</ul>
 						
-                        <div ng-controller="searchCoursesController">
-                        <form class="navbar-form navbar-right transition" role="search">
-                            <div class="form-group">
-                                <input type="text" ng-model="keyword" class="form-control transition" placeholder="Search Categories...">
-                            </div>
-                            <button type="submit" class="btn btn-search" ng-click="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
-                        </form>
-<p ng-repeat="result in results track by $index">{{result.full_name}}</p>
-<p>{{errMsg}}</p>
-                        </div>
+                        <!-- <div ng-controller="searchCoursesController">
+                        	<form class="navbar-form navbar-right transition" role="search">
+                        	    <div class="form-group">
+                        	        <input type="text" ng-model="keyword" class="form-control transition" placeholder="Search Categories...">
+                        	    </div>
+                        	    <button type="submit" class="btn btn-search" ng-click="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
+							</form>
+							<p ng-repeat="result in results track by $index">{{result.full_name}}</p>
+							<p>{{errMsg}}</p>
+                        </div> -->
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>

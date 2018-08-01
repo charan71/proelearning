@@ -913,7 +913,7 @@ footer hr {
 
 /*-- Home Page Statistics --*/
 .r-stats {
-    background-color: rgba(139, 196, 74, .4);
+    background-color: rgba(139, 196, 74, .3);
 }
 .stats-title {
     color: #8bc44a;
@@ -1314,6 +1314,7 @@ textarea {
     color: #81a312;
     display: inline-block;
     border: 1px solid #81a312;
+    border-radius: 4px;
 }
 .btn-custom-md {
     padding: 6px 12px;
@@ -1327,15 +1328,18 @@ textarea {
     text-decoration: none;
 }
 .btn-custom-inverse {
-    background-color: #81a312;
+    background-color: #8bc44a;
     color: #fff;
+    font-weight: 500;
     display: inline-block;
-    border: 1px solid #81a312;
+    border: 1px solid #8bc44a;
+    border-radius: 4px;
 }
 .btn-custom-inverse:hover, .btn-custom-inverse:focus, .btn-custom-inverse:active {
-    background-color: #fff;
-    color: #81a312;
+    background-color: #313137;
+    color: #fff;
     text-decoration: none;
+    border: 1px solid #313137;
 }
 
 /*-- Responsive Designs --*/

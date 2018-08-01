@@ -290,25 +290,33 @@
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Students Trained</h4>
-                            <span class="stats-num" stat-animate>1000+</span>
+                            <div class="stats-num">
+                                <span animate-numbers>1000</span>+
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Batches Trained</h4>
-                            <span class="stats-num">100+</span>
+                            <div class="stats-num">
+                                <span animate-numbers>86</span>+
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">No.of Courses</h4>
-                            <span class="stats-num">100+</span>
+                            <div class="stats-num">
+                                <span animate-numbers>80</span>+
+                            </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Students Placed</h4>
-                            <span class="stats-num">800+</span>
+                            <div class="stats-num">
+                                <span animate-numbers>800</span>+
+                            </div>
                         </div>
                     </div>
                 </div>

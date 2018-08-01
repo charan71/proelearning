@@ -362,32 +362,32 @@ angular.module('ProELearning.controllers', [])
 */
 
 /* Search Courses Controller */
-.controller("searchCoursesController", ['$scope', '$http', '$location', function($scope, $http, $location) {
-    $scope.search = function() {
+// .controller("searchCoursesController", ['$scope', '$http', '$location', function($scope, $http, $location) {
+//     $scope.search = function() {
         
-        $location.path("/search-results");
+//         $location.path("/search-results");
         
-        if($scope.keywords == '') {
-            $scope.res = "Please enter a keyword to search";
-        } else {
+//         if($scope.keywords == '') {
+//             $scope.res = "Please enter a keyword to search";
+//         } else {
         
-        $http({
-            url: "./php/search.php",
-            method: "POST",
-            data: {"data": $scope.keywords},
-            headers: {
-                "Content-Type":"application/json"
-            }
+//         $http({
+//             url: "./php/search.php",
+//             method: "POST",
+//             data: {"data": $scope.keywords},
+//             headers: {
+//                 "Content-Type":"application/json"
+//             }
             
-        }).then(function(response) {
-            $scope.results = response.data;
-            $scope.keywords = "";
-        }, function(error) {
-            $scope.errMsg = error.data || "Request failed!";
-        });
+//         }).then(function(response) {
+//             $scope.results = response.data;
+//             $scope.keywords = "";
+//         }, function(error) {
+//             $scope.errMsg = error.data || "Request failed!";
+//         });
             
-        }
-    };
-}])
+//         }
+//     };
+// }])
 
 ;
