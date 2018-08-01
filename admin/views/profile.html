@@ -14,55 +14,51 @@
 		<div class="dummy"></div>
 		<div class="main-content">
 			<div ng-controller="profileCtrl">
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<h3>My Account Details</h3>
-					<div class="content-grid">
-						<div class="table-responsive">
-							<table class="table acc-details-tbl">
-								<tbody>
-									<tr>
-										<td><b>Name</b></td>
-										<td>{{ data.d.username }}</td>
-									</tr>
-									<tr>
-										<td><b>Email</b></td>
-										<td>{{ data.d.email }}</td>
-									</tr>
-									<tr>
-										<td><b>Gender</b></td>
-										<td>{{ data.d.gender }}</td>
-									</tr>
-									<tr>
-										<td><b>Phone</b></td>
-										<td>{{ data.d.phone }}</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="clearfix"></div>
+				<h3>My Account Details</h3>
+				<div class="content-grid">
+					<div class="table-responsive">
+						<table class="table acc-details-tbl">
+							<tbody>
+								<tr>
+									<td><b>Name</b></td>
+									<td>{{ data.d.username }}</td>
+								</tr>
+								<tr>
+									<td><b>Email</b></td>
+									<td>{{ data.d.email }}</td>
+								</tr>
+								<tr>
+									<td><b>Gender</b></td>
+									<td>{{ data.d.gender }}</td>
+								</tr>
+								<tr>
+									<td><b>Phone</b></td>
+									<td>{{ data.d.phone }}</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
+					<div class="clearfix"></div>
 				</div>
 
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<h3>Manage Your Profile</h3>
-					<div class="content-grid">
-						<p>Set a new password for your current profile <b>{{ data.d.email }}</b></p>
-						<form>
-							<div class="form-group">
-								<input type="password" ng-model="newpassword" class="form-control" placeholder="Enter A New Password" ng-required autofocus>
-							</div>
-							<button class="btn-custom-inverse transition" ng-click="newPass()">Update</button>
-						</form>
-						<div class="clearfix"></div>
-					</div>
-					<div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
-						<i class="fa fa-check" aria-hidden="true"></i> <span ng-bind="successMessage"></span>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					</div>
-					<div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
-						<i class="fa fa-exclamation" aria-hidden="true"></i> <span ng-bind="errorMessage"></span>
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					</div>
+				<h3>Manage Your Profile</h3>
+				<div class="content-grid">
+					<p>Set a new password for your current profile <b>{{ data.d.email }}</b></p>
+					<form>
+						<div class="form-group">
+							<input type="password" ng-model="newpassword" class="form-control" placeholder="Enter A New Password" ng-required autofocus>
+						</div>
+						<button class="btn-custom-inverse transition" ng-click="newPass()">Update</button>
+					</form>
+					<div class="clearfix"></div>
+				</div>
+				<div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
+					<i class="fa fa-check" aria-hidden="true"></i> <span ng-bind="successMessage"></span>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+					<i class="fa fa-exclamation" aria-hidden="true"></i> <span ng-bind="errorMessage"></span>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				</div>
 			</div>
 		</div>

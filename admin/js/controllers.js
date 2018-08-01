@@ -134,14 +134,14 @@ angular.module('controllers', ['ngRoute'])
     })
 }])
 
-.controller("courseUpload", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+.controller("courseUploadCtrl", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
     var orig_courseName = $scope.courseName;
     var orig_courseDesc = $scope.courseDesc;
     var orig_courseUrl = $scope.courseUrl;
-    var orig_files = $scope.files;
+    var orig_courseImage = $scope.files;
     var orig_coursePrice = $scope.coursePrice;
     $scope.dt = Date();
-    
+
     $scope.uploadedFile = function(element) {
         $scope.$apply(function($scope) {
             $scope.files = element.files;
@@ -161,6 +161,7 @@ angular.module('controllers', ['ngRoute'])
 	    });
     };
     
+    /*-- Upload Course Form --*/
     $scope.fn_uploadCourse = function() {
         var formData = new FormData();
         var file = $scope.files[0];
@@ -183,7 +184,7 @@ angular.module('controllers', ['ngRoute'])
             $scope.courseName = angular.copy(orig_courseName);
             $scope.courseDesc = angular.copy(orig_courseDesc);
             $scope.courseUrl = angular.copy(orig_courseUrl);
-            $scope.files = angular.copy(orig_files);
+            $scope.files = angular.copy(orig_courseImage);
             $scope.coursePrice = angular.copy(orig_coursePrice);
             $scope.courseUploadForm.$setUntouched();
             $scope.successMessage = "New course uploaded successfully!!";
@@ -203,10 +204,24 @@ angular.module('controllers', ['ngRoute'])
     $scope.courseName = angular.copy(orig_courseName);
     $scope.courseDesc = angular.copy(orig_courseDesc);
     $scope.courseUrl = angular.copy(orig_courseUrl);
-    $scope.files = angular.copy(orig_files);
+    $scope.files = angular.copy(orig_courseImage);
     $scope.coursePrice = angular.copy(orig_coursePrice);
     $scope.courseUploadForm.$setUntouched();
     };
+
+    /*-- Fetch all uploaded courses and display in table --*/
+    $scope.newCourses = [];
+    $http({
+        url: "./php/courses-fetch.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.newCourses = response.data;
+    });
 }])
 
 ;

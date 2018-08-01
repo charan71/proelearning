@@ -289,20 +289,55 @@
                 <div class="container stats">
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
+                            <h4 class="stats-title">Website Hits</h4>
+                            <div class="stats-num">
+                                <span animate-numbers>
+<!-- Website Hits Counter -->
+<?php
+// Not to display php errors in browser
+error_reporting(0);
+session_start();
+
+// Read the Value in txt file
+$fp1 = fopen('visited.txt', "r");
+$fsize = filesize('visited.txt');
+$value = fread($fp1, $fsize);
+
+// Increment the value 
+if(!isset($_SESSION['hasVisited'])) {
+	$_SESSION['hasVisited'] = "yes";
+	$v = $value + 1;
+	$fp2 = fopen('visited.txt', "w");
+	fwrite($fp2, $v);
+}
+// Display the Value
+$fp = fopen("../../views/visited.txt","r");
+$fsize=filesize("../../views/visited.txt");
+$str = fread($fp,$fsize);
+echo "$str";
+?>
+<!-- //Website Hits Counter -->
+
+                                </span>+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="stats-studs-trained">
                             <h4 class="stats-title">Students Trained</h4>
                             <div class="stats-num">
                                 <span animate-numbers>1000</span>+
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <!-- <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Batches Trained</h4>
                             <div class="stats-num">
                                 <span animate-numbers>86</span>+
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">No.of Courses</h4>
@@ -390,23 +425,3 @@
             <!-- //Home Contact Link -->
 		</div>
 
-<!-- Website Hits Counter -->
-<?php
-// Not to display php errors in browser
-error_reporting(0);
-session_start();
-
-// Read the Value in txt file
-$fp1 = fopen('visited.txt', "r");
-$fsize = filesize('visited.txt');
-$value = fread($fp1, $fsize);
-
-// Increment the value 
-if(!isset($_SESSION['hasVisited'])) {
-	$_SESSION['hasVisited'] = "yes";
-	$v = $value + 1;
-	$fp2 = fopen('visited.txt', "w");
-	fwrite($fp2, $v);
-}
-?>
-<!-- //Website Hits Counter -->

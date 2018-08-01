@@ -13,7 +13,7 @@
     <div class="main-content-wrapper">
         <div class="dummy"></div>
         <div class="main-content">
-            <div class="" ng-controller="regTrainers">
+            <div ng-controller="regTrainers">
                 <h3>Registered Trainers List</h3>
                 <div class="table-responsive">
                     <table class="table table-striped table-bordered table-condensed">
@@ -46,7 +46,9 @@
                                 <td>{{ trainer.work_exp }}</td>
                                 <td>{{ trainer.training_exp }}</td>
                                 <td>{{ trainer.technology_exp }}</td>
-                                <td><a class="btn-download transition" href="../upload/{{ trainer.resume }}" title="{{ trainer.resume }}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a></td>
+                                <td>
+                                    <a class="btn-download transition" href="../upload/{{ trainer.resume }}" title="{{ trainer.resume }}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                </td>
                                 <td>{{ trainer.message }}</td>
                                 <td>{{ trainer.date_time }}</td>
                             </tr>

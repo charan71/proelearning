@@ -546,6 +546,7 @@ footer hr {
 .social-list {
     list-style-type: none;
     padding-left: 0;
+    display: inline-block;
 }
 .social-list li {
     float: left;
@@ -555,6 +556,18 @@ footer hr {
     margin-top: 8px;
     margin-bottom: 8px;
     font-size: 18px;
+}
+@media (max-width: 992px) {
+    .social-list {
+        float: left;
+    }
+    
+}
+@media (min-width: 993px) {
+    .social-list {
+        float: right;
+    }
+    
 }
 .fa-facebook, .fa-linkedin, .fa-google-plus, .fa-twitter {
     color: #999;
@@ -582,12 +595,12 @@ footer hr {
 	display: none;
 	font-size: 28px;
 	padding: 0px 12px 2px 12px;
-	border-radius: 24px;
+	border-radius: 50%;
     border-style: none;
     outline: none;
 	position: fixed;
 	z-index: 9999999;
-	box-shadow: 0 6px 6px -5px #777777;
+	/* box-shadow: 0 6px 6px -5px #777777; */
 }
 .bottom-to-top i
 {
@@ -615,7 +628,7 @@ footer hr {
 			transition-property: transform;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-out;
-	border-radius: 24px;
+	border-radius: 50%;
 }
 .bottom-to-top:hover:before, .bottom-to-top:hover:focus, .bottom-to-top:hover:active
 {
@@ -913,7 +926,7 @@ footer hr {
 
 /*-- Home Page Statistics --*/
 .r-stats {
-    background-color: rgba(139, 196, 74, .3);
+    background-color: #eef;
 }
 .stats-title {
     color: #8bc44a;

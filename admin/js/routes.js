@@ -95,7 +95,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		},
         title: "Course Upload - Pro-elearning",
         templateUrl: "views/course-upload.html",
-        controller: "courseUpload"
+        controller: "courseUploadCtrl"
     })
     .otherwise({
 		resolve: {
