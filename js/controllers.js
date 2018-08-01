@@ -74,8 +74,6 @@ angular.module('ProELearning.controllers', [])
 .controller("studentController", ['$scope', '$http', '$controller', '$timeout', function($scope, $http, $controller, $timeout) {
     $controller('QualificationListController', {$scope:$scope})
 
-    console.log($scope.fam);
-    
     var orig_name = $scope.sname;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;

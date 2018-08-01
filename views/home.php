@@ -311,8 +311,8 @@ if(!isset($_SESSION['hasVisited'])) {
 	fwrite($fp2, $v);
 }
 // Display the Value
-$fp = fopen("../../views/visited.txt","r");
-$fsize=filesize("../../views/visited.txt");
+$fp = fopen("./visited.txt","r");
+$fsize=filesize("./visited.txt");
 $str = fread($fp,$fsize);
 echo "$str";
 ?>
