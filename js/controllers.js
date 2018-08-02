@@ -107,7 +107,7 @@ angular.module('ProELearning.controllers', [])
                     $scope.successMessage = false;
                 }, 5000);
             }, function(error) {
-                $scope.errorMessage = "Sorry. Please try again!!";
+                $scope.errorMessage = "An error occurred. Please try again!";
         });
     };
     $scope.fn_reset = function() {
@@ -202,10 +202,7 @@ angular.module('ProELearning.controllers', [])
                 $scope.successMessage = false;
             }, 5000);
         }, function(error) {
-            $scope.errorMessage = "Sorry. Please try again!!";
-            $timeout(function() {
-                $scope.errorMessage = false;
-            }, 5000);
+            $scope.errorMessage = "An error occurred. Please try again!";
         });
     };
 
@@ -246,8 +243,11 @@ angular.module('ProELearning.controllers', [])
                 $scope.message = angular.copy(orig_message);
                 $scope.contactForm.$setUntouched();
                 $scope.successMessage = "Hello. We have successfully received your details. Our technical team will reach you shortly. Thankyou & Have a Great Day!!";
-        }, function(error) {
-                $scope.errorMessage = "Sorry. Please try again!!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
+            }, function(error) {
+                $scope.errorMessage = "An error occurred. Please try again!";
         });
     };
     $scope.fn_reset = function() {

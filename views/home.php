@@ -75,7 +75,7 @@
                             <img class="img-responsive center-block" src="./images/content-images/classroom-training.png">
                         </div>
                         <div class="overview-content text-center">
-                            <h3 class="overview-title">Classroom Training</h3>
+                            <h3 class="overview-title">On-site Training</h3>
                             <p>Your employees are most important asset. Equip them with the best training, mentoring and coaching they need to move your business forward. We design and develop training programs suitable to your requirements.</p>
                         </div>
                     </div>
@@ -109,17 +109,15 @@
                         </div>
                         <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
                             <div class="owl-item slide" ng-repeat="items in cc_info_tech">
-                                <div class="course-thumbnail">
-                                    <a ng-href="{{items.cc_info_tech_imageLink}}">
+                                <a ng-href="{{items.cc_info_tech_imageLink}}">
+                                    <div class="course-thumbnail">
                                         <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_info_tech_image}}" alt="228x116">
-                                    </a>
-                                    <div class="course-caption">
-                                        <h4>{{items.cc_info_tech_title}}</h4>
-                                        <p clamp="2">{{items.cc_info_tech_desc}}</p>
-                                        <a ng-href="{{items.cc_info_tech_readMoreLink}}" role="button" class="btn-custom btn-custom-md pull-left">Read More</a>
-                                        <p class="course-price text-right">{{items.cc_info_tech_price | currency : "&#x20B9;" : 0}}</p>
+                                        <div class="course-caption">
+                                            <h4>{{items.cc_info_tech_title}}</h4>
+                                            <p clamp="2">{{items.cc_info_tech_desc}}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </data-owl-carousel>
                         
@@ -138,17 +136,15 @@
                         </div>
                         <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
                             <div class="owl-item slide" ng-repeat="items in cc_cloud_tech">
-                                <div class="course-thumbnail">
-                                    <a ng-href="{{items.cc_cloud_tech_imageLink}}">
+                                <a ng-href="{{items.cc_cloud_tech_imageLink}}">
+                                    <div class="course-thumbnail">
                                         <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_cloud_tech_image}}" alt="228x116">
-                                    </a>
-                                    <div class="course-caption">
-                                        <h4>{{items.cc_cloud_tech_title}}</h4>
-                                        <p clamp="2">{{items.cc_cloud_tech_desc}}</p>
-                                        <a ng-href="{{items.cc_cloud_tech_readMoreLink}}" role="button" class="btn-custom btn-custom-md pull-left">Read More</a>
-                                        <p class="course-price text-right">{{items.cc_cloud_tech_price | currency : "&#x20B9;" : 0}}</p>
+                                        <div class="course-caption">
+                                            <h4>{{items.cc_cloud_tech_title}}</h4>
+                                            <p clamp="2">{{items.cc_cloud_tech_desc}}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </data-owl-carousel>
                         
@@ -167,17 +163,15 @@
                         </div>
                         <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
                             <div class="owl-item" ng-repeat="items in cc_erp">
-                                <div class="course-thumbnail">
-                                    <a href="{{items.cc_erp_imageLink}}">
+                                <a href="{{items.cc_erp_imageLink}}">
+                                    <div class="course-thumbnail">
                                         <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_erp_image}}" alt="228x116">
-                                    </a>
-                                    <div class="course-caption">
-                                        <h4>{{items.cc_erp_title}}</h4>
-                                        <p clamp="2">{{items.cc_erp_desc}}</p>
-                                        <a href="{{items.cc_erp_readMoreLink}}" role="button" class="btn btn-primary pull-left">Read More</a>
-                                        <p class="course-price text-right">{{items.cc_erp_price | currency : "&#x20B9;" : 0}}</p>
+                                        <div class="course-caption">
+                                            <h4>{{items.cc_erp_title}}</h4>
+                                            <p clamp="2">{{items.cc_erp_desc}}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </data-owl-carousel>
                         
@@ -196,17 +190,15 @@
                         </div>
                         <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
                             <div class="owl-item" ng-repeat="items in cc_buss_mgmt">
-                                <div class="course-thumbnail">
-                                    <a href="{{items.cc_buss_mgmt_imageLink}}">
+                                <a href="{{items.cc_buss_mgmt_imageLink}}">
+                                    <div class="course-thumbnail">
                                         <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_buss_mgmt_image}}" alt="228x116">
-                                    </a>
-                                    <div class="course-caption">
-                                        <h4>{{items.cc_buss_mgmt_title}}</h4>
-                                        <p clamp="2">{{items.cc_buss_mgmt_desc}}</p>
-                                        <a href="{{items.cc_buss_mgmt_readMoreLink}}" role="button" class="btn btn-primary pull-left">Read More</a>
-                                        <p class="course-price text-right">{{items.cc_buss_mgmt_price | currency : "&#x20B9;" : 0}}</p>
+                                        <div class="course-caption">
+                                            <h4>{{items.cc_buss_mgmt_title}}</h4>
+                                            <p clamp="2">{{items.cc_buss_mgmt_desc}}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </data-owl-carousel>
                         
@@ -225,17 +217,15 @@
                         </div>
                         <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
                             <div class="owl-item" ng-repeat="items in cc_oracle">
-                                <div class="course-thumbnail">
-                                    <a href="{{items.cc_oracle_imageLink}}">
+                                <a href="{{items.cc_oracle_imageLink}}">
+                                    <div class="course-thumbnail">
                                         <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_oracle_image}}" alt="228x116">
-                                    </a>
-                                    <div class="course-caption">
-                                        <h4>{{items.cc_oracle_title}}</h4>
-                                        <p clamp="2">{{items.cc_oracle_desc}}</p>
-                                        <a href="{{items.cc_oracle_readMoreLink}}" role="button" class="btn btn-primary pull-left">Read More</a>
-                                        <p class="course-price text-right">{{items.cc_oracle_price | currency : "&#x20B9;" : 0}}</p>
+                                        <div class="course-caption">
+                                            <h4>{{items.cc_oracle_title}}</h4>
+                                            <p clamp="2">{{items.cc_oracle_desc}}</p>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                             </div>
                         </data-owl-carousel>
                         
@@ -259,15 +249,15 @@
                         <div class="row">
                             <div class="col-md-4 mt-40 mb-40">
                                 <div class="text-center demos" id="demos1">
-                                    <a href="#">
-                                        <h4>New Demos</h4>
+                                    <a ng-href="course-schedules">
+                                        <h4>Course Schedules</h4>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mt-40 mb-40">
                                 <div class="text-center demos" id="demos2">
                                     <a href="#">
-                                        <h4>Latest Technologies</h4>
+                                        <h4>New Demos</h4>
                                     </a>
                                 </div>
                             </div>
@@ -287,6 +277,7 @@
 			
             <div class="row text-center r-stats pt-50 pb-50">
                 <div class="container stats">
+                    <h1 class="mt-0 mb-30">So Far Sooo Good</h1>
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Website Hits</h4>
@@ -413,7 +404,7 @@ echo "$str";
                     <div class="contact-link">
                         <div class="contact-link-text col-xs-9 col-sm-9 col-md-9 col-lg-9">
                             <h1>Need to request a demo?</h1>
-                            <p>Then hit the button</p>
+                            <p class="para-desc">Then hit the button</p>
                             <img class="paper-pl-fly img-responsive hidden-xs hidden-sm" src="./images/content-images/arrow-flying-400.png">
                         </div>
                         <div class="contact-link-btn  col-xs-3 col-sm-3 col-md-3 col-lg-3">
