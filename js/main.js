@@ -39,10 +39,10 @@ jQuery(document).ready(function () {
 		}
 		
 		/* Bottom to Top Button Display On Scroll */
-		if ($(document).scrollTop() > 100) {
-			$(".bottom-to-top").css("display", "block");
+		if ($(document).scrollTop() > 400) {
+			$(".bottom-to-top").css("transform", "scale(1,1)");
 		} else {
-			$(".bottom-to-top").css("display", "none");
+			$(".bottom-to-top").css("transform", "scale(0,0)");
 		}
 	});
 	

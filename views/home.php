@@ -34,14 +34,14 @@
 				<!-- Carousel Ends Here -->
 			</div>
 		
-			<div class="row">
-				<div class="container-fluid row-gap-big row-gap-top">
+			<div class="row pt-50 pb-50">
+				<div class="container-fluid">
                     <div class="content">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="container text-center">
-                                <h1 class="row-gap-small">We Provide Real-Time Training for IT Professionals &#x0026; Freshers</h1>
-                                <p class="para-desc mb-20">Pro-eLearning focuses on filling the niche in the labour market through personnel training and development. It is one of the most trusted and the largest provider of hands-on online training, classroom training, on-demand trainings and multi-course training events. The qualified trainers with market expertise and the enclosed IT Security Training Roadmap aid trainees in successful career planning.</p>
-                                <a href="aboutus" class="btn-custom-inverse btn-custom-lg transition" role="button">Read More</a>
+                                <h1 class="row-gap-small">Real-Time Training for IT Professionals &#x0026; Freshers</h1>
+                                <p class="para-desc mb-20">Pro-elearning focuses on filling the niche in the labour market through personnel training and development. It is one of the most trusted and the largest provider of hands-on online training, classroom training, on-demand trainings and multi-course training events. The qualified trainers with market expertise and the enclosed IT Security Training Roadmap aid trainees in successful career planning.</p>
+                                <a href="aboutus" class="btn-custom btn-custom-lg transition" role="button">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
             </div>
             
             <!-- Overview of Training -->
-            <div class="row mt-50 mb-50">
+            <div class="row training-overview pt-50 pb-50">
                 <div class="container">
                     <h1 class="text-center">Choose your right choice</h1>
                 </div>
@@ -65,7 +65,7 @@
                         </div>
                         <div class="overview-content text-center">
                             <h3 class="overview-title">Online Training</h3>
-                            <p>We offer online live interactive training programs to the consultants and students across the globe. We maintain all the quality principles and make use of latest technologies to teach in clear and descriptive manner.</p>
+                            <p>Offering online live interactive training programs to the professionals and freshers across the globe.</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="overview-content text-center">
                             <h3 class="overview-title">On-site Training</h3>
-                            <p>Your employees are most important asset. Equip them with the best training, mentoring and coaching they need to move your business forward. We design and develop training programs suitable to your requirements.</p>
+                            <p>Building proficient teams for multi national companies with corporate trainings.</p>
                         </div>
                     </div>
                 </div>
@@ -86,8 +86,8 @@
                             <img class="img-responsive center-block" src="./images/content-images/ondemand-training.png">
                         </div>
                         <div class="overview-content text-center">
-                            <h3 class="overview-title">On Demand Training</h3>
-                            <p>On-demand training is an online training solution that gives flexibility to take training program at your convenient time. We offer training programs to individuals or small groups and we design, develop training programs suitable to your needs.</p>
+                            <h3 class="overview-title">On-Demand Training</h3>
+                            <p>Select your flexible timings at your convenience that suits your needs.</p>
                         </div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
             <!-- //Overview of Training -->
 			
             <!-- Course Cards List -->
-			<div class="row row-gap-big">
+			<div class="row pt-50 pb-50">
                 <div class="home-courses container-fluid" ng-controller="CourseCardsController">
                     <div class="text-center space-bottom-20">
                         <h1>We provide courses on different domains</h1>
@@ -274,7 +274,8 @@
                     
                 </div>
 			</div>
-			
+            
+            <!-- Statistics -->
             <div class="row text-center r-stats pt-50 pb-50">
                 <div class="container stats">
                     <h1 class="mt-0 mb-30">So Far Sooo Good</h1>
@@ -283,32 +284,31 @@
                             <h4 class="stats-title">Website Hits</h4>
                             <div class="stats-num">
                                 <span animate-numbers>
-<!-- Website Hits Counter -->
-<?php
-// Not to display php errors in browser
-error_reporting(0);
-session_start();
-
-// Read the Value in txt file
-$fp1 = fopen('visited.txt', "r");
-$fsize = filesize('visited.txt');
-$value = fread($fp1, $fsize);
-
-// Increment the value 
-if(!isset($_SESSION['hasVisited'])) {
-	$_SESSION['hasVisited'] = "yes";
-	$v = $value + 1;
-	$fp2 = fopen('visited.txt', "w");
-	fwrite($fp2, $v);
-}
-// Display the Value
-$fp = fopen("./visited.txt","r");
-$fsize=filesize("./visited.txt");
-$str = fread($fp,$fsize);
-echo "$str";
-?>
-<!-- //Website Hits Counter -->
-
+                                    <!-- Website Hits Counter -->
+                                    <?php
+                                    // Not to display php errors in browser
+                                    error_reporting(0);
+                                    session_start();
+                                    
+                                    // Read the Value in txt file
+                                    $fp1 = fopen('visited.txt', "r");
+                                    $fsize = filesize('visited.txt');
+                                    $value = fread($fp1, $fsize);
+                                    
+                                    // Increment the value 
+                                    if(!isset($_SESSION['hasVisited'])) {
+                                    	$_SESSION['hasVisited'] = "yes";
+                                    	$v = $value + 1;
+                                    	$fp2 = fopen('visited.txt', "w");
+                                    	fwrite($fp2, $v);
+                                    }
+                                    // Display the Value
+                                    $fp = fopen("./visited.txt","r");
+                                    $fsize=filesize("./visited.txt");
+                                    $str = fread($fp,$fsize);
+                                    echo "$str";
+                                    ?>
+                                    <!-- //Website Hits Counter -->
                                 </span>+
                             </div>
                         </div>
@@ -321,14 +321,6 @@ echo "$str";
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                        <div class="stats-studs-trained">
-                            <h4 class="stats-title">Batches Trained</h4>
-                            <div class="stats-num">
-                                <span animate-numbers>86</span>+
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">No.of Courses</h4>
@@ -347,6 +339,7 @@ echo "$str";
                     </div>
                 </div>
             </div>
+            <!-- //Statistics -->
             
 			<div class="row">
                 <div id="home_st_tr_bg" class="home-reg bgStyles">
@@ -371,16 +364,16 @@ echo "$str";
             
             
             <!-- Testimonials Slider -->
-            <div class="row">
+            <div class="row testimonials pt-50 pb-50">
                 <div ng-controller="TestimonialsController" id="testimonials-slider" class="carousel slide" data-ride="carousel">
-                    <div class="testimonials-title">
-                        <h1>Our Testimonials</h1>
-                        <h4>Take a look at what people are saying about us</h4>
-                    </div>
                     <div class="container">
+                        <div class="testimonials-title">
+                            <h1 class="mt-0">Testimonials</h1>
+                            <p class="para-desc">Take a look at what people are saying about us</p>
+                        </div>
 			    		<!-- Indicators -->
 		    			<ol class="carousel-indicators">
-	    				    <li ng-click="slideTo($index)" data-slide-to="$index" ng-class="{active:!$index}" ng-repeat="item in testimonials"></li>
+                            <li ng-click="slideTo($index)" data-slide-to="$index" ng-class="{active:!$index}" ng-repeat="item in testimonials"></li>
     					</ol>
                         
                         <!-- Wrapper for slides -->
@@ -408,7 +401,7 @@ echo "$str";
                             <img class="paper-pl-fly img-responsive hidden-xs hidden-sm" src="./images/content-images/arrow-flying-400.png">
                         </div>
                         <div class="contact-link-btn  col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <a href="contact" class="btn-custom-inverse btn-custom-lg transition" role="button">Line Up</a>
+                            <a href="contact" class="btn-custom btn-custom-lg transition" role="button">Line Up</a>
                         </div>
                     </div>
                 </div>

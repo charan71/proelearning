@@ -12,10 +12,10 @@ angular.module('ProELearning.controllers', [])
         $('#carousel-main-generic').carousel(targ);
     };
     $scope.mainCarouselSlides = [
-        {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Learn a new skill online, on your free time.", c_h4:"Many flavour of courses in Technology, Business and Communication Skills taught by real-time experts.", c_para:"Never miss the chance."},
-        {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build skills. Work smarter.", c_h4:"Take your skills to the next level with courses on the most popular programming languages, developer tools, software practices and application development platforms. Measure your skills to know where you stand, and gain a deep understanding of how to build, deploy, secure and scale everything from web apps to mobile apps using Java, Angular, JavaScript and more.", c_para:""},
-        {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare yourself for a never ending race.", c_h4:"You are the mentor, the instructor and the path seeker of your career. Never rely on something.", c_para:""},
-        {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Make Your Home as Your E-Class Room.", c_h4:"", c_para:"You can learn anything in your convenienc staying right at your home"},
+        {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings . Choice of Learning", c_h4:"Never miss the chance", c_para:""},
+        {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build skills . Work smarter", c_h4:"Take your skills to the next level", c_para:""},
+        {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare yourself for a never ending race", c_h4:"You are the mentor, the instructor and the path seeker of your career", c_para:""},
+        {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Online . On-site . On-demand", c_h4:"Learn At Your Convenience", c_para:""},
     ];
 
 }])

@@ -619,7 +619,7 @@ footer hr {
 	background: #8bc34a none repeat scroll 0 0;
 	right: 30px;
 	bottom: 30px;
-	display: none;
+    transform: scale(0,0);
 	font-size: 28px;
 	padding: 0px 12px 2px 12px;
 	border-radius: 50%;
@@ -691,6 +691,9 @@ footer hr {
 }
 
 /*-- Overview Section - Home --*/
+.training-overview {
+    background-color: #fff;
+}
 .tree-container {
     width: 66.6%;
     margin-left: auto;
@@ -993,6 +996,14 @@ a[role="tab"]:hover {
 .nav-tabs {
     margin-bottom: 40px !important;
 }
+.reg-benefits {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 20px;
+}
+.reg-benefits .reg-benefits-title h3 {
+    margin-top: 0;
+}
 
 /* Contact Page */
 input.ng-valid, textarea.ng-valid, select.ng-valid {
@@ -1059,14 +1070,6 @@ span.validation_styles {
 }
 
 /* Form Elements */
-/*
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-    background-color: rgb(0, 255, 0) !important;
-    background-image: none;
-    color: rgb(0, 0, 0);
-}
-*/
-
 .login_form_msg {
     color: red;
     font-style: italic;
@@ -1089,8 +1092,8 @@ textarea {
 }
 
 /* Contact Addresses */
-#contactForm input, #contactForm select, #contactForm textarea {
-    box-shadow: none;
+input, select, textarea {
+    box-shadow: none !important;
 }
 .contact-form div p {
     font-size: 18px;
@@ -1102,54 +1105,24 @@ textarea {
     box-shadow: 0px 0px 20px 0px #8bc34a;
 }
 
-/* Form Buttons */
-.btn-custom-color {
-    padding: 8px 40px;
-    border-radius: 40px;
-    border: none;
-    color: white;
-    box-shadow: 0 5px 5px lightgrey;
-}
-.btn-custom-color[disabled] {
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-.btn-custom-color[disabled]:hover, .btn-custom-color[disabled]:focus, .btn-custom-color[disabled]:active {
-    background: linear-gradient(90deg, #008000, #00c300);
-}
-.btn-custom-blue {
-    background: linear-gradient(90deg, #2121ab, #4e4eef);
-}
-.btn-custom-blue:hover, .btn-custom-blue:focus, .btn-custom-blue:active {
-    background: linear-gradient(90deg, #4e4eef, #2121ab);
-}
-.btn-custom-green {
-    background: linear-gradient(90deg, #008000, #00c300);
-}
-.btn-custom-green:hover, .btn-custom-green:focus, .btn-custom-green:active {
-    background: linear-gradient(90deg, #00c300, #008000);
-}
-
 /* Testimonials Slider */
-#testimonials-slider {
+.testimonials {
     background-color: #eee;    /* Fallback color */
     background-image: url("../images/bg-images/memphis-colorful.png");
     background-repeat: repeat;
+}
+#testimonials-slider {
     padding: 0 10px 30px 10px;
     text-align:center;
-    min-height: 480px;
+    min-height: 400px;
     /*color: white;*/
-}
-
-#testimonials-slider .testimonials-title {
-    padding: 30px 0 20px 0;
 }
 
 #testimonials-slider .carousel-inner .item img {
     width: 80px;
     height: auto;
     margin: 20px 0;
-    border-radius: 80px;
+    border-radius: 50%;
     background-color: white;
 }
 
@@ -1350,25 +1323,8 @@ textarea {
     list-style-type: none;
 }
 
+/*-- Custom Buttons --*/
 .btn-custom {
-    background-color: #fff;
-    color: #81a312;
-    display: inline-block;
-    border: 1px solid #81a312;
-    border-radius: 4px;
-}
-.btn-custom-md {
-    padding: 6px 12px;
-}
-.btn-custom-lg {
-    padding: 10px 20px;
-}
-.btn-custom:hover, .btn-custom:focus, .btn-custom:active {
-    background-color: #81a312;
-    color: #fff;
-    text-decoration: none;
-}
-.btn-custom-inverse {
     background-color: #8bc44a;
     color: #fff;
     font-weight: 500;
@@ -1376,11 +1332,41 @@ textarea {
     border: 1px solid #8bc44a;
     border-radius: 4px;
 }
-.btn-custom-inverse:hover, .btn-custom-inverse:focus, .btn-custom-inverse:active {
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active {
     background-color: #689F38;
     color: #fff;
     text-decoration: none;
     border: 1px solid #689F38;
+    cursor: pointer;
+}
+.btn-custom-inverse {
+    background-color: transparent;
+    color: #8bc34a;
+    font-weight: 500;
+    display: inline-block;
+    border: 1px solid #8bc34a;
+    border-radius: 4px;
+}
+.btn-custom-inverse:hover, .btn-custom-inverse:focus, .btn-custom-inverse:active {
+    background-color: #8bc34a;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-custom-md {
+    padding: 6px 12px;
+}
+.btn-custom-lg {
+    padding: 10px 20px;
+}
+.btn-custom[disabled] {
+    background-color: #8bc44a;
+    color: #fff;
+    border: 1px solid #8bc44a;
+    opacity: .65;
+}
+.btn-custom[disabled]:hover {
+    cursor: not-allowed;
 }
 
 /*-- Responsive Designs --*/

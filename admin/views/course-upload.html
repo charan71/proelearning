@@ -52,8 +52,8 @@
 	                            <input type="number" id="price" class="form-control" name="coursePrice" ng-model="coursePrice" min="1" placeholder="Price" ng-required="true">
 	                            <span class="validation_styles" ng-show="courseUploadForm.coursePrice.$error.required && courseUploadForm.coursePrice.$touched">* Course price is required<br></span>
 	                        </div>
-	                        <button type="submit" class="btn btn-custom-inverse transition" ng-disabled="courseUploadForm.$invalid" ng-click="fn_uploadCourse()">Submit</button>
-	                        <button type="reset" class="btn btn-default transition" ng-click="fn_reset()">Cancel</button>
+	                        <button type="submit" class="btn-custom btn-custom-md transition" ng-disabled="courseUploadForm.$invalid" ng-click="fn_uploadCourse()">Submit</button>
+	                        <button type="reset" class="btn-custom-inverse btn-custom-md transition" ng-click="fn_reset()">Cancel</button>
 	                    </form>
 	                </div>
 	            </div>

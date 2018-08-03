@@ -133,9 +133,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10 text-center">
-                                    <button type="submit" class="btn-custom-color btn-custom-green" id="submit" name="insertStudent" ng-disabled="studRegForm.$invalid" ng-click="fn_insertStudent()">Register</button>
-                                    <button type="reset" class="btn-custom-color btn-custom-blue" ng-click="fn_reset()">Cancel</button>
+                                <div class="col-sm-offset-3 col-sm-9 text-center">
+                                    <button type="submit" class="btn-custom btn-custom-md transition pull-left" id="submit" name="insertStudent" ng-disabled="studRegForm.$invalid" ng-click="fn_insertStudent()">Register</button>
+                                    <button type="reset" class="btn-custom-inverse btn-custom-md transition pull-right" ng-click="fn_reset()">Cancel</button>
                                 </div>
                             </div>
                         </form>
@@ -231,7 +231,7 @@
                             <div class="form-group">
                                 <label for="techExp" class="col-sm-3 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Technology Experience</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="techExp" ng-model="techExp" ng-pattern="/^[a-zA-Z0-9- ]{1,100}$/" class="form-control" id="techExp" placeholder="Technology Experience (eg. Java - 2yrs)" ng-required="true">
+                                    <input type="text" name="techExp" ng-model="techExp" ng-pattern="/^[a-zA-Z0-9- ]{1,100}$/" class="form-control" id="techExp" placeholder="Technology Experience (ex. Java - 2yrs)" ng-required="true">
                                     <span class="validation_styles" ng-show="trainerRegForm.techExp.$error.required && trainerRegForm.techExp.$touched">* Technology experience required</span>
                                     <span class="validation_styles" ng-show="trainerRegForm.techExp.$error.pattern && trainerRegForm.techExp.$touched">* Enter a valid value</span>
                                 </div>
@@ -252,9 +252,9 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10 text-center">
-                                    <button type="submit" class="btn-custom-color btn-custom-green" id="submit" name="insertTrainer" ng-disabled="trainerRegForm.$invalid" ng-click="fn_insertTrainer()">Register</button>
-                                    <button type="reset" class="btn-custom-color btn-custom-blue" ng-click="fn_reset()">Cancel</button>
+                                <div class="col-sm-offset-3 col-sm-9 text-center">
+                                    <button type="submit" class="btn-custom btn-custom-md transition pull-left" id="submit" name="insertTrainer" ng-disabled="trainerRegForm.$invalid" ng-click="fn_insertTrainer()">Register</button>
+                                    <button type="reset" class="btn-custom-inverse btn-custom-md transition pull-right" ng-click="fn_reset()">Cancel</button>
                                 </div>
                             </div>
                         </form>

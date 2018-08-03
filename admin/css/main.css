@@ -256,32 +256,50 @@ span.validation_styles {
     border: 1px solid #8bc34a;
     box-shadow: none;
 }
+/*-- Custom Buttons --*/
 .btn-custom {
-    background-color: #fff;
-    color: #8bc34a;
-    padding: 6px 8px;
-    border: 1px solid #8bc34a;
-    box-shadow: none;
-}
-.btn-custom:hover, .btn-custom:focus {
-    background-color: #8bc34a;
+    background-color: #8bc44a;
     color: #fff;
+    font-weight: 500;
+    display: inline-block;
+    border: 1px solid #8bc44a;
+    border-radius: 4px;
+}
+.btn-custom:hover, .btn-custom:focus, .btn-custom:active {
+    background-color: #689F38;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #689F38;
+    cursor: pointer;
 }
 .btn-custom-inverse {
-    background-color: #8bc34a;
-    color: #fff;
-    padding: 6px 8px;
-    border: 1px solid #8bc34a;
-    box-shadow: none;
-}
-.btn-custom-inverse:hover, .btn-custom-inverse:focus {
-    background-color: #fff;
+    background-color: transparent;
     color: #8bc34a;
+    font-weight: 500;
+    display: inline-block;
+    border: 1px solid #8bc34a;
+    border-radius: 4px;
 }
-.btn-custom-inverse[disabled]:hover {
+.btn-custom-inverse:hover, .btn-custom-inverse:focus, .btn-custom-inverse:active {
     background-color: #8bc34a;
     color: #fff;
-    border: 1px solid #8bc34a;
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn-custom-md {
+    padding: 6px 12px;
+}
+.btn-custom-lg {
+    padding: 10px 20px;
+}
+.btn-custom[disabled] {
+    background-color: #8bc44a;
+    color: #fff;
+    border: 1px solid #8bc44a;
+    opacity: .65;
+}
+.btn-custom[disabled]:hover {
+    cursor: not-allowed;
 }
 .btn-login {
     padding-right: 20px;
