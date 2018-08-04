@@ -44,6 +44,13 @@ jQuery(document).ready(function () {
 		} else {
 			$(".bottom-to-top").css("transform", "scale(0,0)");
 		}
+
+		/* Brochure Display on Scroll */
+		if ($(document).scrollTop() > 300) {
+			$(".brochure").css("transform", "scale(1,1)");
+		} else {
+			$(".brochure").css("transform", "scale(0,0)");
+		}
 	});
 	
 	/* Dynamic Breadcrumbs 

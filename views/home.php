@@ -87,7 +87,7 @@
                         </div>
                         <div class="overview-content text-center">
                             <h3 class="overview-title">On-Demand Training</h3>
-                            <p>Select your flexible timings at your convenience that suits your needs.</p>
+                            <p>Select your flexible timings at your convenience that suit your needs.</p>
                         </div>
                     </div>
                 </div>
@@ -354,7 +354,7 @@
 				        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 grid2">
                             <div class="home-reg-panel-content">
                                 <h2>Be a Trainer</h2>
-                                <p>Teach what you love. Pro-eLearning gives you an opportunity to spread your knowledge.</p>
+                                <p>Teach what you love. Pro-elearning gives you an opportunity to spread your knowledge.</p>
                                 <a ng-href="registration" class="btn btn-empty btn-lg" role="button">Start Teaching</a>
                             </div>
                         </div>
@@ -368,7 +368,7 @@
                 <div ng-controller="TestimonialsController" id="testimonials-slider" class="carousel slide" data-ride="carousel">
                     <div class="container">
                         <div class="testimonials-title">
-                            <h1 class="mt-0">Testimonials</h1>
+                            <h1 class="mt-0">Listen to our customers</h1>
                             <p class="para-desc">Take a look at what people are saying about us</p>
                         </div>
 			    		<!-- Indicators -->
@@ -397,7 +397,7 @@
                     <div class="contact-link">
                         <div class="contact-link-text col-xs-9 col-sm-9 col-md-9 col-lg-9">
                             <h1>Need to request a demo?</h1>
-                            <p class="para-desc">Then hit the button</p>
+                            <p>Then hit the button</p>
                             <img class="paper-pl-fly img-responsive hidden-xs hidden-sm" src="./images/content-images/arrow-flying-400.png">
                         </div>
                         <div class="contact-link-btn  col-xs-3 col-sm-3 col-md-3 col-lg-3">

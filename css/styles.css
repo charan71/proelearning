@@ -467,7 +467,7 @@ nav, a, .navbar-brand, li, a i
 	left: 50%;
 	right: 50%;
 	bottom: 0;
-	background: #81a312;
+	background: #8bc34a;
 	height: 2px;
 	-webkit-transition-property: left, right;
 	transition-property: left, right;
@@ -612,6 +612,32 @@ footer hr {
     color: #439CD6;
 }
 /* Footer Styles End */
+
+/* Brochure */
+.brochure {
+    right: 10px;
+    top: 50%;
+    position: fixed;
+    z-index: 9999999;
+    transform: scale(0,0);
+}
+.brochure > a {
+    display: inline-block;
+}
+.img-brochure {
+    width: 80px;
+    height: auto;
+    border: 5px solid #e0e0e0;
+    border-radius: 50%;
+}
+.popover {
+    box-shadow: none;
+    border: 5px solid #e0e0e0;
+}
+.arrow {
+    border: 5px solid #e0e0e0;
+}
+/* /Brochure */
 
 /* Bottom To Top Button Start */
 .bottom-to-top
@@ -903,6 +929,7 @@ footer hr {
 .contact-link-text p {
     margin: 0;
     font-size: 20px;
+    color: dimgrey;
 }
 .contact-link-text .paper-pl-fly {
     width: 400px;
@@ -1101,6 +1128,7 @@ input, select, textarea {
 .address {
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 20px 0px #8bc34a;
 }
@@ -1479,3 +1507,9 @@ input, select, textarea {
     display: inline-block;
 }
 /*-- //Courses Pages --*/
+
+/*-- About us Page --*/
+.about p {
+    text-align: justify;
+}
+/*-- //About us Page --*/
