@@ -10,7 +10,9 @@
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" ng-model="password" ng-required>
             </div>
-            <button class="center-block btn-custom-inverse transition btn-login" type="submit" ng-click="trainerLogin()">Login</button>
+            <button class="center-block btn-custom btn-custom-md transition btn-login pull-left" type="submit" ng-click="trainerLogin()">Login</button>
+            <button class="center-block btn-custom-inverse btn-custom-md transition btn-login pull-right" type="reset">Cancel</button>
+            <div class="clearfix"></div>
             <div class="error" ng-bind="errorMessage"></div>
         </form>
     </div>

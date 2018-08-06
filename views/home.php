@@ -102,8 +102,35 @@
                         <p class="para-desc">Now learn your favourite course from our real-time experts</p>
                     </div>
                     
-                    <!-- Information Technology -->
+                    <!-- Trending Courses -->
                     <div class="space-bottom-20 course-category">
+                        <div class="row space-bottom-10 course-title">
+                            <h3 class="text-center">Trending Courses</h3>
+                        </div>
+                        <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
+                            <div class="owl-item slide" ng-repeat="course in ccTrendingCourses">
+                                <a ng-href="{{course.ccTrendingCoursesURL}}">
+                                    <div class="course-thumbnail">
+                                        <img class="center-block" ng-src="./images/course-thumbnails/{{course.ccTrendingCoursesImage}}" alt="{{course.ccTrendingCoursesAlt}}">
+                                        <div class="course-caption">
+                                            <h4>{{course.ccTrendingCoursesTitle}}</h4>
+                                            <p clamp="2">{{course.ccTrendingCoursesDesc}}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </data-owl-carousel>
+                        
+                        <div class="clearfix"></div>
+                        <!--
+                        <div class="row course-readmore">
+                            <a href="">Click here for more courses on Information Technology &#x003E;&#x003E;</a>
+                        </div>
+                        -->
+                    </div>
+                    
+                    <!-- Information Technology -->
+                    <!-- <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
                             <h3 class="text-center">Trending Courses in &#x201C;Information Technology&#x201D;</h3>
                         </div>
@@ -122,15 +149,15 @@
                         </data-owl-carousel>
                         
                         <div class="clearfix"></div>
-                        <!--
+                        
                         <div class="row course-readmore">
                             <a href="">Click here for more courses on Information Technology &#x003E;&#x003E;</a>
                         </div>
-                        -->
-                    </div>
+                       
+                    </div> -->
                     
                     <!-- Cloud Technologies -->
-                    <div class="space-bottom-20 course-category">
+                    <!-- <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
                             <h3 class="text-center">Trending Courses in &#x201C;Cloud Technologies&#x201D;</h3>
                         </div>
@@ -149,15 +176,15 @@
                         </data-owl-carousel>
                         
                         <div class="clearfix"></div>
-                        <!--
+                        
                         <div class="row course-readmore">
                             <a href="">Click here for more courses on Information Technology &#x003E;&#x003E;</a>
                         </div>
-                        -->
-                    </div>
+                       
+                    </div> -->
                     
                     <!-- ERP -->
-                    <div class="space-bottom-20 course-category">
+                    <!-- <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
                             <h3 class="text-center">Trending Courses in &#x201C;ERP&#x201D;</h3>
                         </div>
@@ -176,15 +203,15 @@
                         </data-owl-carousel>
                         
                         <div class="clearfix"></div>
-                        <!--
+                        
                         <div class="row course-readmore">
                             <a href="">Click here for more courses on ERP &#x003E;&#x003E;</a>
                         </div>
-                        -->
-                    </div>
+                       
+                    </div> -->
                     
                     <!-- Business Management -->
-                    <div class="space-bottom-20 course-category">
+                    <!-- <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
                             <h3 class="text-center">Trending Courses in &#x201C;Business Management&#x201D;</h3>
                         </div>
@@ -203,15 +230,15 @@
                         </data-owl-carousel>
                         
                         <div class="clearfix"></div>
-                        <!--
+                        
                         <div class="row course-readmore">
                             <a href="">Click here for more courses on Business Management &#x003E;&#x003E;</a>
                         </div>
-                        -->
-                    </div>
+                       
+                    </div> -->
                     
                     <!-- Oracle -->
-                    <div class="space-bottom-20 course-category">
+                    <!-- <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
                             <h3 class="text-center">Trending Courses in &#x201C;Oracle&#x201D;</h3>
                         </div>
@@ -230,17 +257,17 @@
                         </data-owl-carousel>
                         
                         <div class="clearfix"></div>
-                        <!--
+                        
                         <div class="row course-readmore">
                             <a href="">Click here for more courses on Business Intelligence &#x003E;&#x003E;</a>
                         </div>
-                        -->
-                    </div>
+                       
+                    </div> -->
                     
                     <!-- More Categories -->
                     <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
-                            <h4 class="text-center">For more courses click on &#x201C;Categories&#x201D;</h4>
+                            <h4 class="text-center">For more courses click on &#x201C;Categories&#x201D; on top</h4>
                         </div>
                     </div>
                     

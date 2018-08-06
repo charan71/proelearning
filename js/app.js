@@ -322,15 +322,15 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                     templateUrl: "views/devops.html",
                     controller: ""
                 })
-                    .when("/data-management",
+                    .when("/big-data",
                           {
-                    title: "Data Management Courses Online Training in Hyderabad | Pro-elearning",
+                    title: "Big Data Courses Online Training in Hyderabad | Pro-elearning",
                     description: "Best Data Management courses online training in Hyderabad is provided @ Pro-elearning. Courses offered: ?Hadoop ?Hadoop Admin ?HP Vertica ?Talend ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Data Management training in Hyderabad, Hadoop Online training in Hyderabad, Hadoop training institutes in Hyderabad, HP vertica Training institute in Hyderabad, HP vertica online Training institute in Hyderabad, talend training in Hyderabad, Talend etl tool training in Hyderabad, Talend training in Madhapur",
-                    templateUrl: "views/data-management.html",
+                    templateUrl: "views/big-data.html",
                     controller: ""
                 })
-                    .when("/data-management/hadoop",
+                    .when("/big-data/hadoop",
                           {
                     title: "Hadoop Training in Hyderabad | Pro-elearning",
                     description: "Hadoop Course Pro-elearning is a brand and providing quality Online, Classroom, Corporate, Weekends and Fast track training on demand to the students in worldwide on Hadoop Training in Hyderabad.",
@@ -338,7 +338,31 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                     templateUrl: "views/hadoop.html",
                     controller: ""
                 })
-                    .when("/data-management/hadoop-administrator",
+                    .when("/big-data/kafka",
+                          {
+                    title: "Apache Kafka Training in Hyderabad | Kafka Online Training | Pro-elearning",
+                    description: "Pro-elearning offers the best Apache Kafka training in Hyderabad with expert trainers and job oriented coaching. ✓100% Job Assistance ✓FREE DEMO ☎ +91-8340905336.",
+                    keywords: "Hadoop training in Hyderabad, Big data training in Hyderabad, Kafka Online training, Apache Kafka training, Apache Kafka Online training in Hyderabad, best institute for Kafka in Hyderabad, Institute for Kafka in Hyderabad, Kafka institutes in Hyderabad",
+                    templateUrl: "views/kafka.html",
+                    controller: ""
+                })
+                    .when("/big-data/scala",
+                          {
+                    title: "Apache Spark Training in Hyderabad | Big Data Hadoop Training | Pro-elearning",
+                    description: "Job oriented Apache Spark training in Hyderabad with 100% placement assistance and from industry experts. Enroll now for ✓FREE DEMO ☎ +91-8340905336.",
+                    keywords: "Apache Spark online training, Spark and Scala training in Hyderabad, Spark Institute Hyderabad, Hadoop training in Hyderabad, Big data training in Hyderabad, best training institute for spark in Hyderabad, Institute for Spark  in Hyderabad, Spark  institutes in Hyderabad",
+                    templateUrl: "views/scala.html",
+                    controller: ""
+                })
+                    .when("/big-data/spark",
+                          {
+                    title: "Best Scala Training in Hyderabad | Big Data Hadoop Training | Pro-elearning	",
+                    description: "Learn the best Scala and Spark Training in Hyderabad @ Pro-elearning with expert trainers and 100% job assistance. Enroll now for ✓FREE DEMO ☎ +91-8340905336.",
+                    keywords: "Spark and Scala training in Hyderabad, Hadoop training in Hyderabad, Big data training in Hyderabad, Scala Institute Hyderabad, best training institute for Scala in Hyderabad, Institute for Scala  in Hyderabad",
+                    templateUrl: "views/spark.html",
+                    controller: ""
+                })
+                    .when("/big-data/hadoop-administrator",
                           {
                     title: "Hadoop Admin Training in Hyderabad | Pro-elearning",
                     description: "Enroll in Hadoop Administration training course in Hyderabad to master configurations of Hadoop with an instructor-led training.",
@@ -346,15 +370,15 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                     templateUrl: "views/hadoop-administrator.html",
                     controller: ""
                 })
-                    .when("/data-management/hp-vertica",
+                    .when("/big-data/hp-vertica",
                           {
-                    title: "Hp vertica training in Hyderabad | Pro-elearning",
+                    title: "HP Vertica Training in Hyderabad | Pro-elearning",
                     description: "Enroll today with Pro-elearning for Hp vertica training in Hyderabad and get trained by experts. Best Hp vertica course in Hyderabad.",
-                    keywords: "Hp vertica Training institute in Hyderabad, Hp vertica online Training institute in Hyderabad, Hp vertica Classroom Training institute in Hyderabad, Hp vertica course in Hyderabad, Hp vertica Training in Hyderabad, Hp vertica online Training in Hyderabad, Hp vertica classroom Training in Hyderabad",
+                    keywords: "HP vertica training institute in Hyderabad, Hp vertica online Training institute in Hyderabad, Hp vertica Classroom Training institute in Hyderabad, Hp vertica course in Hyderabad, Hp vertica Training in Hyderabad, Hp vertica online Training in Hyderabad, Hp vertica classroom Training in Hyderabad",
                     templateUrl: "views/hp-vertica.html",
                     controller: ""
                 })
-                    .when("/data-management/talend",
+                    .when("/big-data/talend",
                           {
                     title: "Talend Online-Classroom Training in Hyderabad | Pro-elearning",
                     description: "Pro-elearning provide Talend Online and classroom Training with best practices, tuning tips, enterprise edition training, certification training, code review topics for leads and managers.",
@@ -372,7 +396,7 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'Pr
                 })
                     .when("/business-intelligence/msbi",
                           {
-                    title: "Best MSBI Training institute in Hyderabad | Pro-elearning",
+                    title: "Best MSBI Training Institute in Hyderabad | Pro-elearning",
                     description: "Pro-elearning, being one of the Best MSBI Training institutes in Hyderabad provides a first-rate training that can serve the needful. Enroll Today!",
                     keywords: "Business intelligence training institute in Hyderabad, Business intelligence training institutes in Hyderabad, Business intelligence training in Hyderabad, Business intelligence institutes in Hyderabad, Business intelligence training centres in Hyderabad, best Business intelligence training centres in Hyderabad, best Business intelligence training institutes in Hyderabad, Business intelligence courses in Hyderabad",
                     templateUrl: "views/msbi.html",

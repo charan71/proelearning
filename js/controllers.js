@@ -12,7 +12,7 @@ angular.module('ProELearning.controllers', [])
         $('#carousel-main-generic').carousel(targ);
     };
     $scope.mainCarouselSlides = [
-        {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings . Choice of Learning", c_h4:"Never miss the chance", c_para:""},
+        {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings . Choice of Learning . 24x7 Support", c_h4:"Never miss the chance", c_para:""},
         {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build skills . Work smarter", c_h4:"Take your skills to the next level", c_para:""},
         {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare yourself for a never ending race", c_h4:"You are the mentor, the instructor and the path seeker of your career", c_para:""},
         {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Online . On-site . On-demand", c_h4:"Learn At Your Convenience", c_para:""},
@@ -273,6 +273,18 @@ angular.module('ProELearning.controllers', [])
 
 /* OwlCarousel Controller */
 .controller("CourseCardsController", ['$scope', function($scope) {
+    $scope.ccTrendingCourses = [
+        {ccTrendingCoursesURL:"big-data/scala", ccTrendingCoursesImage:"scala-thumbnail.jpg", ccTrendingCoursesAlt:"Scala-Training-Pro-elearning", ccTrendingCoursesTitle:"Scala", ccTrendingCoursesDesc:"Scala is a pure object-oriented language, in which conceptually every value is an object and every operation is a method-call."},
+        {ccTrendingCoursesURL:"cloud-technologies/aws", ccTrendingCoursesImage:"aws.jpg", ccTrendingCoursesAlt:"Scala-Training-Pro-elearning", ccTrendingCoursesTitle:"AWS", ccTrendingCoursesDesc:"Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis."},
+        {ccTrendingCoursesURL:"big-data/spark", ccTrendingCoursesImage:"spark-thumbnail.jpg", ccTrendingCoursesAlt:"Spark-Training-Pro-elearning", ccTrendingCoursesTitle:"Spark", ccTrendingCoursesDesc:"Apache Spark is a general-purpose & lightning fast cluster computing system. It provides high-level API."},
+        {ccTrendingCoursesURL:"information-technology/python", ccTrendingCoursesImage:"python.jpg", ccTrendingCoursesAlt:"Python-Training-Pro-elearning", ccTrendingCoursesTitle:"Python", ccTrendingCoursesDesc:"Python is an interpreted high-level programming language for general-purpose programming."},
+        {ccTrendingCoursesURL:"web-development/angular4", ccTrendingCoursesImage:"angular-4.jpg", ccTrendingCoursesAlt:"Angular-4-Training-Pro-elearning", ccTrendingCoursesTitle:"Angular", ccTrendingCoursesDesc:"Most popular client-side framework for website development from Google."},
+        {ccTrendingCoursesURL:"big-data/kafka", ccTrendingCoursesImage:"kafka-thumbnail.jpg", ccTrendingCoursesAlt:"Kafka-Training-Pro-elearning", ccTrendingCoursesTitle:"Kafka", ccTrendingCoursesDesc:"Apache Kafka is a fast, scalable, durable, and fault-tolerant publish-subscribe messaging system."},
+        {ccTrendingCoursesURL:"big-data/hadoop", ccTrendingCoursesImage:"hadoop.jpg", ccTrendingCoursesAlt:"Hadoop-Training-Pro-elearning", ccTrendingCoursesTitle:"Hadoop", ccTrendingCoursesDesc:"Hadoop is an open-source software framework provides massive storage for any kind of data."},
+        {ccTrendingCoursesURL:"web-development/ui-development", ccTrendingCoursesImage:"ui-development.jpg", ccTrendingCoursesAlt:"UI-Technologies-Training-Pro-elearning", ccTrendingCoursesTitle:"UI Development", ccTrendingCoursesDesc:"UI Development is the future of the web development with vast number of frameworks."},
+        {ccTrendingCoursesURL:"big-data/hadoop-administrator", ccTrendingCoursesImage:"hadoop-admin.jpg", ccTrendingCoursesAlt:"Hadoop-Training-Pro-elearning", ccTrendingCoursesTitle:"Hadoop Administrator", ccTrendingCoursesDesc:"The role of a Hadoop Admin is mainly associated with tasks that involve installing and monitoring hadoop clusters."},
+    ];
+    
     $scope.cc_info_tech = [
         {cc_info_tech_imageLink:"information-technology/java", cc_info_tech_image:"java.jpg", cc_info_tech_title:"Java", cc_info_tech_desc:"Java is a programming language and computing platform first released by Sun Microsystems.", cc_info_tech_readMoreLink:"information-technology/java", cc_info_tech_price:"25000"},
         {cc_info_tech_imageLink:"information-technology/dotnet", cc_info_tech_image:"dotnet.jpg", cc_info_tech_title:".Net", cc_info_tech_desc:"A developer platform for building all your apps. Build for web, mobile, gaming, IoT, desktop, cloud and microservices.", cc_info_tech_readMoreLink:"information-technology/dotnet", cc_info_tech_price:"25000"},

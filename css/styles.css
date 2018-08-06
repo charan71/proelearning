@@ -85,19 +85,19 @@ p, li {
     margin-left: 0;
 }
 .ml-10 {
-    margin-bottom: 10px;
+    margin-left: 10px;
 }
 .ml-20 {
-    margin-bottom: 20px;
+    margin-left: 20px;
 }
 .ml-30 {
-    margin-bottom: 30px;
+    margin-left: 30px;
 }
 .ml-40 {
-    margin-bottom: 40px;
+    margin-left: 40px;
 }
 .ml-50 {
-    margin-bottom: 50px;
+    margin-left: 50px;
 }
 /*-- Paddings --*/
 .pt-0 {
@@ -158,19 +158,19 @@ p, li {
     padding-left: 0;
 }
 .pl-10 {
-    padding-bottom: 10px;
+    padding-left: 10px;
 }
 .pl-20 {
-    padding-bottom: 20px;
+    padding-left: 20px;
 }
 .pl-30 {
-    padding-bottom: 30px;
+    padding-left: 30px;
 }
 .pl-40 {
-    padding-bottom: 40px;
+    padding-left: 40px;
 }
 .pl-50 {
-    padding-bottom: 50px;
+    padding-left: 50px;
 }
 
 .row-gap-top {
@@ -643,7 +643,7 @@ footer hr {
 .bottom-to-top
 {
 	background: #8bc34a none repeat scroll 0 0;
-	right: 30px;
+	left: 30px;
 	bottom: 30px;
     transform: scale(0,0);
 	font-size: 28px;
@@ -1512,4 +1512,45 @@ input, select, textarea {
 .about p {
     text-align: justify;
 }
+.brochure-abt a {
+    background-color: #8bc34a;
+    color: #fff;
+    padding: 20px 40px;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.brochure-abt a:hover, .brochure-abt a:focus {
+    background-color: #689f38;
+}
+.brochure-abt a:active {
+    box-shadow: inset 0 0 20px 0px #666;
+}
+.brochure-abt a .fa.fa-download {
+    /* color: #689f38; */
+    font-size: 20px;
+}
 /*-- //About us Page --*/
+
+
+
+
+
+
+
+/*-- Category Designs --*/
+.course-strip {
+    padding: 0 20px;
+    border: 1px solid grey;
+}
+.course-dtls-list {
+    padding-left: 0;
+    display: inline-block;
+}
+.course-dtls-list li {
+    padding: 0 20px 0 0;
+    float: left;
+    list-style-type: none;
+}
+/*-- //Category Designs --*/

@@ -67,11 +67,35 @@
 								<a href="#" class="dropdown-toggle hvr-underline-from-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th" aria-hidden="true"></i> Categories <i class="fa fa-angle-down fa-fw chevron1" aria-hidden="true"></i></a>
 								<ul class="dropdown-menu">
 									<li class="dropdown">
+										<a ng-href="big-data" class="hvr-underline-from-center">Big Data <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="big-data/kafka" class="hvr-underline-from-center">Kafka</a></li>
+											<li><a ng-href="big-data/scala" class="hvr-underline-from-center">Scala</a></li>
+											<li><a ng-href="big-data/spark" class="hvr-underline-from-center">Spark</a></li>
+											<li><a ng-href="big-data/hadoop" class="hvr-underline-from-center">Hadoop</a></li>
+											<li><a ng-href="big-data/hadoop-administrator" class="hvr-underline-from-center">Hadoop Administrator</a></li>
+											<li><a ng-href="big-data/hp-vertica" class="hvr-underline-from-center">HP Vertica</a></li>
+											<li><a ng-href="big-data/talend" class="hvr-underline-from-center">Talend</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a ng-href="cloud-technologies" class="hvr-underline-from-center">Cloud Technologies <i class="fa fa-angle-right"></i></a>
+										<ul class="dropdown-menu">
+											<li><a ng-href="cloud-technologies/aws" class="hvr-underline-from-center">AWS</a></li>
+											<li><a ng-href="cloud-technologies/salesforce-developer" class="hvr-underline-from-center">Salesforce Developer</a></li>
+											<li><a ng-href="cloud-technologies/salesforce-administrator" class="hvr-underline-from-center">Salesforce Administrator</a></li>
+											<li><a ng-href="cloud-technologies/azure" class="hvr-underline-from-center">Azure</a></li>
+											<li><a ng-href="cloud-technologies/cloudera" class="hvr-underline-from-center">Cloudera</a></li>
+											<li><a ng-href="cloud-technologies/servicenow " class="hvr-underline-from-center">ServiceNow</a></li>
+											<li><a ng-href="cloud-technologies/openstack" class="hvr-underline-from-center">OpenStack</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
 										<a href="information-technology" class="hvr-underline-from-center">Information Technology <i class="fa fa-angle-right"></i></a>
 										<ul class="dropdown-menu">
+											<li><a ng-href="information-technology/python" class="hvr-underline-from-center">Python</a></li>
 											<li><a ng-href="information-technology/java" class="hvr-underline-from-center">Java</a></li>
 											<li><a ng-href="information-technology/dotnet" class="hvr-underline-from-center">.Net</a></li>
-											<li><a ng-href="information-technology/python" class="hvr-underline-from-center">Python</a></li>
 											<li><a ng-href="information-technology/embedded-systems" class="hvr-underline-from-center">Embedded Systems</a></li>
 											<li><a ng-href="information-technology/unix" class="hvr-underline-from-center">UNIX</a></li>
 											<li><a ng-href="information-technology/linux" class="hvr-underline-from-center">Linux</a></li>
@@ -97,18 +121,6 @@
 										</ul>
 									</li>
 									<li class="dropdown">
-										<a ng-href="cloud-technologies" class="hvr-underline-from-center">Cloud Technologies <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-href="cloud-technologies/salesforce-developer" class="hvr-underline-from-center">Salesforce Developer</a></li>
-											<li><a ng-href="cloud-technologies/salesforce-administrator" class="hvr-underline-from-center">Salesforce Administrator</a></li>
-											<li><a ng-href="cloud-technologies/azure" class="hvr-underline-from-center">Azure</a></li>
-											<li><a ng-href="cloud-technologies/aws" class="hvr-underline-from-center">AWS</a></li>
-											<li><a ng-href="cloud-technologies/cloudera" class="hvr-underline-from-center">Cloudera</a></li>
-											<li><a ng-href="cloud-technologies/servicenow " class="hvr-underline-from-center">ServiceNow</a></li>
-											<li><a ng-href="cloud-technologies/openstack" class="hvr-underline-from-center">OpenStack</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
 										<a ng-href="mobile-apps" class="hvr-underline-from-center">Mobile Applications <i class="fa fa-angle-right"></i></a>
 										<ul class="dropdown-menu">
 											<li><a ng-href="mobile-apps/android" class="hvr-underline-from-center">Android</a></li>
@@ -126,15 +138,6 @@
 										<a ng-href="application-support" class="hvr-underline-from-center">Application Support <i class="fa fa-angle-right"></i></a>
 										<ul class="dropdown-menu">
 											<li><a ng-href="application-support/devops" class="hvr-underline-from-center">DevOps</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-href="data-management" class="hvr-underline-from-center">Data Management <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-href="data-management/hadoop" class="hvr-underline-from-center">Hadoop</a></li>
-											<li><a ng-href="data-management/hadoop-administrator" class="hvr-underline-from-center">Hadoop Administrator</a></li>
-											<li><a ng-href="data-management/hp-vertica" class="hvr-underline-from-center">HP Vertica</a></li>
-											<li><a ng-href="data-management/talend" class="hvr-underline-from-center">Talend</a></li>
 										</ul>
 									</li>
 									<li class="dropdown">
@@ -309,7 +312,7 @@
 		<!-- //Modals -->
 
 		<!-- Footer Starts -->
-		<footer class="footer-main">
+		<footer class="footer-main mt-50">
 			<div class="container">
             
                 <!-- Footer Contact -->
@@ -417,7 +420,7 @@
 		
 		<!-- Brochure -->
 		<div class="brochure transition">
-			<a href="#" target="_blank" data-container="body" data-toggle="popover" data-placement="left" data-content="Download Brochure" data-trigger="hover">
+			<a href="./documents/Corporate Training Broucher - Pro-elearning.pdf" target="_blank" data-container="body" data-toggle="popover" data-placement="left" data-content="Download Brochure" data-trigger="hover">
 				<img class="img-brochure animated infinite pulse" src="./images/icons/brochure.svg">
 			</a>
 		</div>
