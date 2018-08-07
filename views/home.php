@@ -105,7 +105,7 @@
                     <!-- Trending Courses -->
                     <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
-                            <h3 class="text-center">Trending Technologies</h3>
+                            <h3 class="text-center">Trending Courses</h3>
                         </div>
                         <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
                             <div class="owl-item slide" ng-repeat="course in ccTrendingCourses">

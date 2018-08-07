@@ -1,9 +1,10 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="row-gap-big">
+    <div class="row mb-50">
+        <div class="">
             <img class="img-responsive" src="./images/parallax-images/big-data.jpg" alt="Big-Data-Pro-eLearning">
         </div>
     </div>
+</div>
     
 <!--
     <div class="row" ng-controller="CourseCardsController">
@@ -19,97 +20,187 @@
         </div>
     </div>
 -->
-    <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="big-data/kafka">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/kafka-thumbnail.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Kafka</h4>
-                        <p clamp="2">Kafka is used to handle large amount of data.</p>
-                        <a ng-href="big-data/kafka" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
+
+<div class="container">
+    <div class="row mb-50">
+        <div class="page-title">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="text-center mt-0 mb-0">Big Data</h1>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="big-data/scala">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/scala-thumbnail.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Scala</h4>
-                        <p clamp="2">Scala is used to handle large amount of data.</p>
-                        <a ng-href="big-data/scala" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="big-data/spark">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/spark-thumbnail.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Spark</h4>
-                        <p clamp="2">Spark is used to handle large amount of data.</p>
-                        <a ng-href="big-data/spark" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="big-data/hadoop">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/hadoop.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Hadoop</h4>
-                        <p clamp="2">Hadoop is used to handle large amount of data.</p>
-                        <a ng-href="big-data/hadoop" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="big-data/hadoop-administrator">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/hadoop-admin.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Hadoop Administrator</h4>
-                        <p clamp="2">The role of a Hadoop Admin is mainly associated with tasks that involve installing and monitoring hadoop clusters.</p>
-                        <a ng-href="big-data/hadoop-administrator" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="big-data/hp-vertica">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/hp-vertica.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>HP Vertica</h4>
-                        <p clamp="2">HP Vertica is a Big Data software.</p>
-                        <a ng-href="big-data/hp-vertica" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="big-data/talend">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/talend.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Talend</h4>
-                        <p clamp="2">Talend is a data integration tool.</p>
-                        <a ng-href="big-data/talend" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-3 col-sm-hidden col-xs-hidden">
-            <h4 class="text-center">New Demos</h4>
         </div>
     </div>
-        
+
+    <!-- Courses List Display -->
+    <div class="row">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <div class="course-strip">
+                <a ng-href="big-data/kafka">
+                    <div class="course-strip-inner">
+                        <div class="course-img pull-left">
+                            <img class="img-responsive" src="./images/course-thumbnails/kafka-thumbnail.jpg">
+                        </div>
+                        <div class="course-info ml-20">
+                            <h3 class="mt-10">Kafka</h3>
+                            <p>Apache Kafka is a fast, scalable, durable, and fault-tolerant publish-subscribe messaging system.</p>
+                            <div class="course-dtls">
+                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                </ul>
+                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="course-strip">
+                <a ng-href="big-data/scala">
+                    <div class="course-strip-inner">
+                        <div class="course-img pull-left">
+                            <img class="img-responsive" src="./images/course-thumbnails/scala-thumbnail.jpg">
+                        </div>
+                        <div class="course-info">
+                            <h3 class="mt-10">Scala</h3>
+                            <p>Scala is a pure object-oriented language, in which conceptually every value is an object and every operation is a method-call. Scala is a pure object-oriented language, in which conceptually every value is an object and every operation is a method-call.</p>
+                            <div class="course-dtls">
+                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                </ul>
+                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="course-strip">
+                <a ng-href="big-data/spark">
+                    <div class="course-strip-inner">
+                        <div class="course-img pull-left">
+                            <img class="img-responsive" src="./images/course-thumbnails/spark-thumbnail.jpg">
+                        </div>
+                        <div class="course-info ml-20">
+                            <h3 class="mt-10">Spark</h3>
+                            <p>Apache Spark is a general-purpose & lightning fast cluster computing system. It provides high-level API.</p>
+                            <div class="course-dtls">
+                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                </ul>
+                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="course-strip">
+                <a ng-href="big-data/hadoop">
+                    <div class="course-strip-inner">
+                        <div class="course-img pull-left">
+                            <img class="img-responsive" src="./images/course-thumbnails/hadoop.jpg">
+                        </div>
+                        <div class="course-info ml-20">
+                            <h3 class="mt-10">Hadoop</h3>
+                            <p>Hadoop is an open-source software framework provides massive storage for any kind of data.</p>
+                            <div class="course-dtls">
+                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                </ul>
+                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="course-strip">
+                <a ng-href="big-data/hadoop-administrator">
+                    <div class="course-strip-inner">
+                        <div class="course-img pull-left">
+                            <img class="img-responsive" src="./images/course-thumbnails/hadoop-admin.jpg">
+                        </div>
+                        <div class="course-info ml-20">
+                            <h3 class="mt-10">Hadoop Administrator</h3>
+                            <p>The role of a Hadoop Admin is mainly associated with tasks that involve installing and monitoring hadoop clusters.</p>
+                            <div class="course-dtls">
+                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                </ul>
+                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="course-strip">
+                <a ng-href="big-data/hp-vertica">
+                    <div class="course-strip-inner">
+                        <div class="course-img pull-left">
+                            <img class="img-responsive" src="./images/course-thumbnails/hp-vertica.jpg">
+                        </div>
+                        <div class="course-info ml-20">
+                            <h3 class="mt-10">HP Vertica</h3>
+                            <p>HP Vertica is a Big Data software.</p>
+                            <div class="course-dtls">
+                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                </ul>
+                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="course-strip">
+                <a ng-href="big-data/talend">
+                    <div class="course-strip-inner">
+                        <div class="course-img pull-left">
+                            <img class="img-responsive" src="./images/course-thumbnails/talend.jpg">
+                        </div>
+                        <div class="course-info ml-20">
+                            <h3 class="mt-10">Talend</h3>
+                            <p>Talend is a data integration tool.</p>
+                            <div class="course-dtls">
+                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                </ul>
+                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+        </div>
+    </div>
 </div>
