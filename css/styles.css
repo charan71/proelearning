@@ -1541,16 +1541,38 @@ input, select, textarea {
 
 /*-- Category Designs --*/
 .course-strip {
-    padding: 0 20px;
-    border: 1px solid grey;
+    color: #444;
 }
-.course-dtls-list {
+.course-strip h3, .course-strip ul {
+    color: #444;
+}
+.course-strip p {
+    color: #999;
+}
+.course-strip-inner {
+    padding: 20px 20px;
+    /* box-shadow: 0px 0px 20px 0px #ccc; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.course-strip-inner:hover {
+    box-shadow: 0px 0px 20px 2px #ccc;
+}
+.course-info {
+    display: inline-block;
+}
+.c-d-l  {
     padding-left: 0;
     display: inline-block;
 }
-.course-dtls-list li {
-    padding: 0 20px 0 0;
-    float: left;
+.c-d-l li  {
+    display: inline-block;
     list-style-type: none;
+}
+.course-dtls-list-left li {
+    padding: 0 20px 0 0;
+}
+.course-dtls-list-right li {
+    font-size: 20px;
 }
 /*-- //Category Designs --*/
