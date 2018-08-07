@@ -1561,9 +1561,9 @@ input, select, textarea {
 }
 .course-info p {
     color: #999;
-    white-space: nowrap;
+    /* white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
 }
 .c-d-l  {
     padding-left: 0;
