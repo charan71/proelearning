@@ -1553,6 +1553,7 @@ input, select, textarea {
     border-radius: 4px;
 }
 .course-strip-inner:hover {
+    background-color: #fff;
     box-shadow: 0px 0px 20px 2px #ccc;
 }
 .course-info {
