@@ -618,7 +618,7 @@ footer hr {
     right: 10px;
     top: 50%;
     position: fixed;
-    z-index: 9999999;
+    z-index: 999;
     transform: scale(0,0);
 }
 .brochure > a {
@@ -652,7 +652,7 @@ footer hr {
     border-style: none;
     outline: none;
 	position: fixed;
-	z-index: 9999999;
+	z-index: 999;
 	/* box-shadow: 0 6px 6px -5px #777777; */
 }
 .bottom-to-top i
@@ -932,7 +932,7 @@ footer hr {
     color: dimgrey;
 }
 .contact-link-text .paper-pl-fly {
-    width: 400px;
+    width: 300px;
     height: auto;
     position: absolute;
     right: 0;
@@ -1034,10 +1034,10 @@ a[role="tab"]:hover {
 
 /* Contact Page */
 input.ng-valid, textarea.ng-valid, select.ng-valid {
-    border: 1px solid green !important;
+    border-bottom: 1px solid #8bc44a !important;
 }
 input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
-    border: 1px solid red !important;
+    border-bottom: 1px solid red !important;
 }
 span.validation_styles {
     color: red;
@@ -1597,3 +1597,82 @@ input, select, textarea {
     text-decoration: none;
 }
 /*-- //Accordion Designs --*/
+
+/*-- Modal Designs --*/
+.sugg-modal {
+    background: -webkit-linear-gradient(top,#8bc34a 0%,#689f38 100%);
+    background: -o-linear-gradient(top,#8bc34a 0%,#689f38 100%);
+    background: -ms-linear-gradient(top,#8bc34a 0%,#689f38 100%);
+    background: -moz-linear-gradient(top,#8bc34a 0%,#689f38 100%);
+    background: linear-gradient(to bottom,#8bc34a 0%,#689f38 100%);
+    width: 730px;
+    position: relative;
+    height: auto;
+    display: inline-block;
+    border: 0;
+    border-radius: 0;
+}
+.sugg-modal-close {
+    padding: 10px !important;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.sugg-modal-left {
+    width: 310px;
+    float: left;
+}
+.sugg-modal-txt {
+    color: #fff;
+    padding: 40px;
+}
+.sugg-modal-txt > div {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+.sugg-modal-txt > div > span {
+    color: rebeccapurple;
+}
+.sugg-modal-right {
+    background-color: #fff;
+    width: 418px;
+    padding: 30px;
+    float: right;
+}
+.sugg-modal-right .form-group {
+    margin-bottom: 20px;
+}
+.suggestion-form input, .suggestion-form select, .suggestion-form textarea {
+    border: 0;
+    border-bottom: 1px solid #757575;
+}
+.btn-m:hover {
+    box-shadow: 0px 0px 5px 5px #eee;
+}
+.btn-modal {
+    background-color: #8bc44a;
+    color: #fff;
+    padding: 5px 20px;
+    width: 49%;
+    border: 1px solid #8bc44a;
+    border-radius: 30px;
+}
+.btn-modal[disabled] {
+    opacity: .65;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+.btn-modal-inverse {
+    background-color: #fff;
+    color: #8bc44a;
+    padding: 5px 20px;
+    width: 49%;
+    border: 1px solid #8bc44a;
+    border-radius: 30px;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        width: 730px;
+    }
+}
+/*-- //Modal Designs --*/

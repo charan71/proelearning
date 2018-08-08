@@ -272,43 +272,83 @@
         </div>
 		
 		<!-- Modals -->
-		<!-- Request Demo Modal -->
-<!--
-		<modal id="adminLogin" class="modal fade" tabindex="-1" role="dialog" ng-controller="adminLoginCtrl">
+		<!-- Course Suggestion Modal -->
+		<modal id="courseSuggestion" class="modal fade" tabindex="-1" role="dialog" ng-controller="contactController">
 		    <div class="modal-dialog" role="document">
-		        <div class="modal-content">
-		            <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		                <h4 class="modal-title">Admin Login</h4>
-		            </div>
-		            <div class="modal-body">
-		                <div class="row">
-                            <form id="loginForm" method="POST">
-                                <div class="form-group">
-                                    <label for="username">Username</label>
-                                    <input type="text" ng-model="username" class="form-control" id="username" placeholder="Username" autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <input type="password" ng-model="password" class="form-control" id="password" placeholder="Password">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox"> Remember me
-                                    </label>
-                                </div>
-                                <button type="submit" class="btn btn-default" ng-click="adminLogin()">Submit</button>
-                            </form>
-		                </div>
-		            </div>
-		            <div class="modal-footer">
-		                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		            </div>
+				<div class="modal-content sugg-modal">
+						<button type="button" class="close sugg-modal-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times" aria-hidden="true"></i></span></button>
+						<div class="sugg-modal-left hidden-xs hidden-sm">
+							<div class="sugg-modal-txt">
+								<div class="">
+									No worries if you do not <span>find your course</span>
+								</div>
+								<div class="">
+									<span>Place a request</span> and we will provide the <span>best trainer</span> in the industry
+								</div>
+							</div>
+						</div>
+						<div class="sugg-modal-right">
+						<div class="col-xs-12 col-sm-12">
+							<h4 class="modal-title text-center mb-20">Suggest a New Course</h4>
+							<form novalidate name="contactForm" method="POST" enctype="multipart/form-data" id="contactForm" class="form form-horizontal suggestion-form" autocomplete="on">
+								<fieldset>
+									<div class="form-group">
+										<!-- <label for="name" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Full Name</label> -->
+										<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" placeholder="* Full Name" />
+											<br>
+											<span class="validation_styles" ng-show="contactForm.name.$error.required && contactForm.name.$touched">* Full Name is required<br></span>
+											<span class="validation_styles" ng-show="contactForm.name.$error.pattern && contactForm.name.$invalid">* Full Name should contain only alphabets, dots and spaces.<br></span>
+											<span class="validation_styles" ng-show="contactForm.name.$error.minlength && contactForm.name.$touched">* Full Name should be minimum of 3 characters<br></span>
+											<span class="validation_styles" ng-show="contactForm.name.$error.maxlength && contactForm.name.$touched">* Full Name should be maximum of 40 characters</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<!-- <label for="email" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label> -->
+										<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="* Email ID" required />
+											<span class="validation_styles" ng-show="contactForm.email.$error.required && contactForm.email.$touched">* Email is required</span>
+											<span class="validation_styles" ng-show="contactForm.email.$error.pattern && contactForm.email.$touched">* Please enter a valid email</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<!-- <label for="phone" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Phone</label> -->
+										<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" placeholder="* Phone" />
+											<span class="validation_styles" ng-show="contactForm.phone.$error.required && contactForm.phone.$touched">* Phone number required<br></span>
+											<span class="validation_styles" ng-show="contactForm.phone.$error.pattern && contactForm.phone.$touched">* Please enter a valid phone number</span>
+										</div>
+									</div>
+									<div class="form-group">
+	                    		        <!-- <label for="category" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Category</label> -->
+	                    		        <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	                    		            <select id="category" name="category" class="form-control" ng-model="category" ng-required="true">
+	                    	                    <option value="">* Select Your Category</option>
+	                    	                    <option value="Student">Need a Course</option>
+	                		                    <option value="Trainer">Want to become a Trainer</option>
+	                		                </select>
+											<span class="validation_styles" ng-show="contactForm.category.$error.required && contactForm.category.$touched">* Category is required</span>
+	                		            </div>
+	                		        </div>
+	                    		    <div class="form-group">
+										<!-- <label for="message" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label">Message</label> -->
+	                    	            <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<textarea ng-model="message" ng-required="true" ng-minlength="10" class="form-control" rows="6" name="message" id="message" placeholder="* Your Message..."></textarea>
+											<span class="validation_styles" ng-show="contactForm.message.$error.required && contactForm.message.$touched">* Message is required<br></span>
+											<span class="validation_styles" ng-show="contactForm.message.$error.minlength && contactForm.message.$touched">* Message should be minium of 10 characters</span>
+	                		            </div>
+	                		        </div>
+									<button type="submit" class="btn-m btn-modal transition" id="submit" form="contactForm" name="insertContact" ng-disabled="contactForm.$invalid" ng-click="fn_insertContact()">Submit</button>
+									<button type="reset" class="btn-m btn-modal-inverse transition" form="contactForm" ng-click="fn_reset()">Cancel</button>
+	                		    </fieldset>
+	                    	</form>
+						</div>
+						</div>
 		        </div>
 		    </div>
 		</modal>
--->
-		<!-- //Admin Login Modal -->
+
+		<!-- //Course Suggestion Modal -->
 		<!-- //Modals -->
 
 		<!-- Footer Starts -->

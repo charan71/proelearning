@@ -423,12 +423,13 @@
                 <div class="container">
                     <div class="contact-link">
                         <div class="contact-link-text col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                            <h1>Need to request a demo?</h1>
-                            <p>Then hit the button</p>
+                            <h1>Course Not Found?</h1>
+                            <p>Don't worry ... Suggest your preferred one here</p>
                             <img class="paper-pl-fly img-responsive hidden-xs hidden-sm" src="./images/content-images/arrow-flying-400.png">
                         </div>
                         <div class="contact-link-btn  col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                            <a href="contact" class="btn-custom btn-custom-lg transition" role="button">Line Up</a>
+                            <!-- <a href="contact" class="btn-custom btn-custom-lg transition" role="button">Line Up</a> -->
+                            <button type="button" class="btn-custom btn-custom-lg transition" data-toggle="modal" data-target="#courseSuggestion">Suggest Now</button>
                         </div>
                     </div>
                 </div>
