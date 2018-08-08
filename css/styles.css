@@ -1581,3 +1581,19 @@ input, select, textarea {
     font-size: 20px;
 }
 /*-- //Category Designs --*/
+
+/*-- Accordion Designs --*/
+.panel-group .panel+.panel {
+    margin-top: 10px;
+}
+.panel-heading {
+    padding: 0;
+}
+.panel-title>a {
+    padding: 15px;
+    display: block;
+}
+.panel-title>a:hover {
+    text-decoration: none;
+}
+/*-- //Accordion Designs --*/
