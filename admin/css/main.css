@@ -206,7 +206,7 @@ span.validation_styles {
     color: #616161;
     display: block;
     padding: 8px 20px;
-    font-size: 12px;
+    font-size: 14px;
 }
 .side-nav ul li a:hover, .side-nav ul li a:focus, .side-nav ul li a:active {
     text-decoration: none;

@@ -87,7 +87,7 @@
                         </div>
                         <div class="overview-content text-center">
                             <h3 class="overview-title">On-Demand Training</h3>
-                            <p>Select your flexible timings at your convenience that suit your needs.</p>
+                            <p>Select your flexible timings at your convenience for one-to-one training.</p>
                         </div>
                     </div>
                 </div>
@@ -305,7 +305,6 @@
             <!-- Statistics -->
             <div class="row text-center r-stats pt-50 pb-50">
                 <div class="container stats">
-                    <h1 class="mt-0 mb-30">So Far Sooo Good</h1>
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Website Hits</h4>

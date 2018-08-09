@@ -134,6 +134,21 @@ angular.module('controllers', ['ngRoute'])
     })
 }])
 
+.controller("courseSuggestionList", ['$scope', '$http', function($scope, $http) {
+    $scope.suggestedCourses = [];
+    $http({
+        url: "./php/course-suggestion-list.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.suggestedCourses = response.data;
+    })
+}])
+
 .controller("courseUploadCtrl", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
     var orig_courseName = $scope.courseName;
     var orig_courseDesc = $scope.courseDesc;

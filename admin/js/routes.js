@@ -85,6 +85,18 @@ angular.module("routes", ['ngRoute', 'chart.js'])
         templateUrl: "views/contacts-us-list.html",
         controller: "contactsList"
     })
+    .when("/course-suggestion-list", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/admin-login');
+				}
+			},
+		},
+        title: "Course Suggestion List - Pro-elearning",
+        templateUrl: "views/course-suggestion-list.html",
+        controller: "courseSuggestionList"
+    })
     .when("/course-upload", {
 		resolve: {
 			check: function($location, user) {

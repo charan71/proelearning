@@ -1,5 +1,31 @@
 angular.module('ProELearning.controllers', [])
 
+/* Get Geo Location */
+.controller('getGeoIPCtrl', ['$scope', '$http', function($scope, $http) {
+    $scope.country = "";
+    
+    $http.get("http://ipinfo.io/json")
+        .then(function(response) {
+            // $scope.location = response;
+            // $scope.ip = response.data.ip;
+            $scope.country = response.data.country;
+        }, function(error) {
+            $scope.price = "Error occurred while fetching the Geo Location";
+        });
+}])
+
+/* Price Controller */
+.controller('priceCtrl', ['$scope', '$http', '$controller', function($scope, $http, $controller) {
+    $controller('getGeoIPCtrl', {$scope:$scope})
+
+    $scope.country;
+    if($scope.country == "IN") {
+        $scope.price = "Indian Rupees";
+    } else {
+        $scope.price = "US Dollars";
+    }
+}])
+
 /* Creating Controller for Main Carousel */
 .controller('mainCarouselController', ['$scope', function($scope) {
     $(".carousel").carousel({
@@ -224,7 +250,7 @@ angular.module('ProELearning.controllers', [])
 }])
 
 /* Contact Form Controller */
-.controller("contactController", ['$scope', '$http', function($scope, $http) {
+.controller("contactController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 	var orig_name = $scope.name;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;
@@ -350,13 +376,40 @@ angular.module('ProELearning.controllers', [])
     
 }])
 
-/* Trainer Login Controller */
-.controller('trainerLoginController',['$scope', 'trainerLoginService', function($scope, trainerLoginService) {
-    $scope.trainer_uname = "";
-    $scope.trainer_pwd = "";
-    $scope.message = "";
-    $scope.fn_getCredentials = function() {
-      $scope.message = trainerLoginService.isValidUser($scope.trainer_uname, $scope.trainer_pwd);
+/* Course Suggestion Form Controller */
+.controller("courseSuggestionController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+	var orig_name = $scope.name;
+    var orig_email = $scope.email;
+    var orig_phone = $scope.phone;
+    var orig_courseName = $scope.courseName;
+    var orig_message = $scope.message;
+    $scope.dt = Date();
+    $scope.fn_courseSuggestion = function() {
+        $http.post(
+            "./php/course-suggestion.php",
+                {'full_name': $scope.name, 'email': $scope.email, 'phone': $scope.phone, 'course_name': $scope.courseName, 'message': $scope.message, 'date_time': $scope.dt}
+            ).then(function(data) {
+                $scope.name = angular.copy(orig_name);
+                $scope.email = angular.copy(orig_email);
+                $scope.phone = angular.copy(orig_phone);
+                $scope.courseName = angular.copy(orig_courseName);
+                $scope.message = angular.copy(orig_message);
+                $scope.contactForm.$setUntouched();
+                $scope.successMessage = "Hoila! Your request for a new course is successfully registered with us. Your team will contact you within 24 hours. Have a nice day!!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
+            }, function(error) {
+                $scope.errorMessage = "An error occurred. Please try again!";
+        });
+    };
+    $scope.fn_reset = function() {
+        $scope.name = angular.copy(orig_name);
+        $scope.email = angular.copy(orig_email);
+        $scope.phone = angular.copy(orig_phone);
+        $scope.courseName = angular.copy(orig_courseName);
+        $scope.message = angular.copy(orig_message);
+        $scope.contactForm.$setUntouched();
     };
 }])
 

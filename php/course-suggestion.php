@@ -12,12 +12,18 @@
         $name = mysqli_real_escape_string($conn, $data->full_name);
         $email = mysqli_real_escape_string($conn, $data->email);
         $phone = mysqli_real_escape_string($conn, $data->phone);
-        $category = mysqli_real_escape_string($conn, $data->category);
+        $courseName = mysqli_real_escape_string($conn, $data->course_name);
         $message = mysqli_real_escape_string($conn, $data->message);
         $dt = mysqli_real_escape_string($conn, $data->date_time);
         
-        $query = "INSERT INTO `contacts_list` (`full_name`, `email`, `phone`, `category`, `message`, `date_time`) VALUES ('$name', '$email', '$phone', '$category', '$message', '$dt')";
+        $query = "INSERT INTO `course_suggestions` (`full_name`, `email`, `phone`, `course_name`, `message`, `date_time`) VALUES ('$name', '$email', '$phone', '$courseName', '$message', '$dt')";
         
+        if(mysqli_query($conn, $query)) {
+            echo "Data Inserted...";
+        } else {
+            echo "Error";
+        }
+
         // Email from User to Admin
         $to = "trainings@pro-elearning.com";
         $from = "trainings@pro-elearning.com";
@@ -42,8 +48,8 @@
                             <td>$phone</td>
                         </tr>
                         <tr>
-                            <th><b>Category</b></th>
-                            <td>$category</td>
+                            <th><b>Suggested Course Name</b></th>
+                            <td>$course_name</td>
                         </tr>
                         <tr>
                             <th><b>Message</b></th>
@@ -70,14 +76,9 @@
             session_start();
             $_SESSION['email'] = $email;
             $_SESSION['name'] = $name;
-            header('location:contact-form-email.php');
+            header('location:course-suggestion-email.php');
         }
 
-        if(mysqli_query($conn, $query)) {
-            echo "Data Inserted...";
-        } else {
-            echo "Error";
-        }
     }
 	
 	$conn->close();

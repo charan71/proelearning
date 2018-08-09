@@ -498,11 +498,12 @@ nav, a, .navbar-brand, li, a i
 
 /* Footer Styles Start */
 footer {
-    background-color: #313137;
+    background-color: #2e3a47; /* Fallback Color */
+    background: #2e3a47 url(../images/bg-images/footer-bg.png) center;
     box-shadow: 0 -4px 8px -6px #777777;
 }
 footer hr {
-    border-top: 1px solid #424242;
+    border-top: 0;
 }
 .footer-main .contactus div i {
     font-size: 38px;
@@ -1600,11 +1601,11 @@ input, select, textarea {
 
 /*-- Modal Designs --*/
 .sugg-modal {
-    background: -webkit-linear-gradient(top,#8bc34a 0%,#689f38 100%);
-    background: -o-linear-gradient(top,#8bc34a 0%,#689f38 100%);
-    background: -ms-linear-gradient(top,#8bc34a 0%,#689f38 100%);
-    background: -moz-linear-gradient(top,#8bc34a 0%,#689f38 100%);
-    background: linear-gradient(to bottom,#8bc34a 0%,#689f38 100%);
+    background: -webkit-linear-gradient(top,#9ddc53 0%,#689f38 100%);
+    background: -o-linear-gradient(top,#9ddc53 0%,#689f38 100%);
+    background: -ms-linear-gradient(top,#9ddc53 0%,#689f38 100%);
+    background: -moz-linear-gradient(top,#9ddc53 0%,#689f38 100%);
+    background: linear-gradient(to bottom,#9ddc53 0%,#689f38 100%);
     width: 730px;
     position: relative;
     height: auto;
