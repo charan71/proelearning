@@ -1,7 +1,7 @@
 body
 {
     font-family: 'Raleway', sans-serif;
-    background-color: #FAFAFA;
+    /* background-color: #FAFAFA; */
 }
 ::selection, ::-moz-selection {
 	background-color: #b9e3fe;
@@ -542,7 +542,7 @@ footer hr {
 }
 .footer-menu li a {
 	text-decoration: none;
-	color: #999;
+	color: #ccc;
     font-size: 14px;
     border-radius: 0;
     margin: 0 15px;
@@ -550,7 +550,7 @@ footer hr {
 }
 .footer-menu li a:hover, .footer-menu li a:focus, .footer-menu li a:active, .copyright h5 a:hover, .copyright h5 a:focus, .copyright h5 a:active {
     background-color: transparent;
-    color: #BDBDBD;
+    color: #fff;
 }
 .we-hire {
 	position: absolute;
@@ -561,14 +561,14 @@ footer hr {
 	margin-bottom: 20px;
 }
 .copyright {
-    color: #999;
-	padding-left: 15px;
+    padding-left: 15px;
 }
 .copyright h5 {
-    font-size: 12px;
+    color: #ccc;
+    font-size: 14px;
 }
 .copyright h5 a {
-    color: #999;
+    color: #ccc;
 	text-decoration: none;
 }
 .social-list {
@@ -585,22 +585,24 @@ footer hr {
     margin-bottom: 8px;
     font-size: 18px;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .social-list {
         float: left;
     }
     
 }
-@media (min-width: 993px) {
+@media (min-width: 768px) {
     .social-list {
         float: right;
     }
-    
 }
-.fa-facebook, .fa-linkedin, .fa-google-plus, .fa-twitter {
-    color: #999;
+.social-list .fa {
+    color: #ccc;
 }
-.fa-facebook:hover {
+.social-list .fa:hover {
+    color: #fff;
+}
+/* .fa-facebook:hover {
     color: #3C5A99;
 }
 .fa-linkedin:hover {
@@ -611,7 +613,7 @@ footer hr {
 }
 .fa-twitter:hover {
     color: #439CD6;
-}
+} */
 /* Footer Styles End */
 
 /* Brochure */
@@ -929,7 +931,7 @@ footer hr {
 }
 .contact-link-text p {
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
     color: dimgrey;
 }
 .contact-link-text .paper-pl-fly {

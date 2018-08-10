@@ -305,7 +305,7 @@
             <!-- Statistics -->
             <div class="row text-center r-stats pt-50 pb-50">
                 <div class="container stats">
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Website Hits</h4>
                             <div class="stats-num">
@@ -339,7 +339,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Students Trained</h4>
                             <div class="stats-num">
@@ -347,7 +347,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">No.of Courses</h4>
                             <div class="stats-num">
@@ -355,7 +355,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Students Placed</h4>
                             <div class="stats-num">
