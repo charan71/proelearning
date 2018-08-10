@@ -14,7 +14,7 @@
 						<div class="item" ng-class="{active:!$index}" ng-repeat="item in mainCarouselSlides">
 							<img ng-src="images/carousel-images/{{item.c_image}}" alt="{{item.c_imgAlt}}">
 							<div class="carousel-caption">
-								<h1>{{item.c_h1}}</h1>
+								<h1 ng-bind-html="item.c_h1"></h1>
 								<h4 class="hidden-xs">{{item.c_h4}}</h4>
                                 <p class="hidden-xs">{{item.c_para}}</p>
 							</div>
@@ -23,11 +23,11 @@
 					
 					<!-- Carousel Controls Starts Here -->
                     <a class="left carousel-control" ng-click="slide('prev')" role="button" data-slide="prev">
-    					<i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						<span class="sr-only">Previous</span>
                     </a>
                     <a class="right carousel-control" ng-click="slide('next')" role="button" data-slide="next">
-    					<i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
                     </a>
 				</div>

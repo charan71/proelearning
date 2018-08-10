@@ -32,9 +32,11 @@
                                     <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
                                     <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
+                                <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li>{{ course.cc_info_tech_fees | currency: "&#x20B9;" : 0 }}</li>
+                                    <li>{{ shortCountryCode }}</li>
+                                    <li>{{ feesArray.country }}</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="clearfix"></div>

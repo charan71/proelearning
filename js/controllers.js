@@ -1,29 +1,25 @@
+(function() {
+"use strict";
+
 angular.module('ProELearning.controllers', [])
 
 /* Get Geo Location */
 .controller('getGeoIPCtrl', ['$scope', '$http', function($scope, $http) {
-    $scope.country = "";
-    
+    $scope.shortCountryCode = "";
+
     $http.get("http://ipinfo.io/json")
         .then(function(response) {
-            // $scope.location = response;
-            // $scope.ip = response.data.ip;
-            $scope.country = response.data.country;
+            $scope.shortCountryCode = response.data.country;
+
+            if($scope.shortCountryCode == "IN") {
+                $scope.fees = "₹25000";
+            } else {
+                $scope.fees = "$400";
+            }
+            
         }, function(error) {
-            $scope.price = "Error occurred while fetching the Geo Location";
+            $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
         });
-}])
-
-/* Price Controller */
-.controller('priceCtrl', ['$scope', '$http', '$controller', function($scope, $http, $controller) {
-    $controller('getGeoIPCtrl', {$scope:$scope})
-
-    $scope.country;
-    if($scope.country == "IN") {
-        $scope.price = "Indian Rupees";
-    } else {
-        $scope.price = "US Dollars";
-    }
 }])
 
 /* Creating Controller for Main Carousel */
@@ -38,10 +34,10 @@ angular.module('ProELearning.controllers', [])
         $('#carousel-main-generic').carousel(targ);
     };
     $scope.mainCarouselSlides = [
-        {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings . Choice of Learning . 24x7 Support", c_h4:"Never miss the chance", c_para:""},
-        {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build skills . Work smarter", c_h4:"Take your skills to the next level", c_para:""},
+        {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings &middot; Choice of Learning &middot; 24x7 Support", c_h4:"Never miss the chance", c_para:""},
+        {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build skills &middot; Work smarter", c_h4:"Take your skills to the next level", c_para:""},
         {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare yourself for a never ending race", c_h4:"You are the mentor, the instructor and the path seeker of your career", c_para:""},
-        {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Online . On-site . On-demand", c_h4:"Learn At Your Convenience", c_para:""},
+        {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Online &middot; On-site &middot; On-demand", c_h4:"Learn At Your Convenience", c_para:""},
     ];
 
 }])
@@ -297,8 +293,8 @@ angular.module('ProELearning.controllers', [])
     ];
 })
 
-/* OwlCarousel Controller */
-.controller("CourseCardsController", ['$scope', function($scope) {
+/* Course Gallery Controller */
+.controller("CourseCardsController", ['$scope', '$http', function($scope, $http) {
     $scope.ccTrendingCourses = [
         {ccTrendingCoursesURL:"big-data/scala", ccTrendingCoursesImage:"scala-thumbnail.jpg", ccTrendingCoursesAlt:"Scala-Training-Pro-elearning", ccTrendingCoursesTitle:"Scala", ccTrendingCoursesDesc:"Scala is a pure object-oriented language, in which conceptually every value is an object and every operation is a method-call."},
         {ccTrendingCoursesURL:"cloud-technologies/aws", ccTrendingCoursesImage:"aws.jpg", ccTrendingCoursesAlt:"Scala-Training-Pro-elearning", ccTrendingCoursesTitle:"AWS", ccTrendingCoursesDesc:"Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis."},
@@ -312,17 +308,17 @@ angular.module('ProELearning.controllers', [])
     ];
     
     $scope.cc_info_tech = [
-        {cc_info_tech_imageLink:"information-technology/java", cc_info_tech_image:"java.jpg", cc_info_tech_title:"Java", cc_info_tech_desc:"Java is a programming language and computing platform first released by Sun Microsystems.", cc_info_tech_readMoreLink:"information-technology/java", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/dotnet", cc_info_tech_image:"dotnet.jpg", cc_info_tech_title:".Net", cc_info_tech_desc:"A developer platform for building all your apps. Build for web, mobile, gaming, IoT, desktop, cloud and microservices.", cc_info_tech_readMoreLink:"information-technology/dotnet", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/python", cc_info_tech_image:"python.jpg", cc_info_tech_title:"Python", cc_info_tech_desc:"Python is an interpreted high-level programming language for general-purpose programming.", cc_info_tech_readMoreLink:"information-technology/python", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/embedded-systems", cc_info_tech_image:"embedded-systems.jpg", cc_info_tech_title:"Embedded Systems", cc_info_tech_desc:"An embedded system is a computer system with a dedicated function within a larger mechanical or electrical system, often with real-time computing constraints.", cc_info_tech_readMoreLink:"information-technology/embedded-systems", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/unix", cc_info_tech_image:"unix.jpg", cc_info_tech_title:"Unix", cc_info_tech_desc:"Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix.", cc_info_tech_readMoreLink:"information-technology/unix", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/linux", cc_info_tech_image:"linux.jpg", cc_info_tech_title:"Linux", cc_info_tech_desc:"Linux is a family of free and open-source software operating systems built around the Linux kernel.", cc_info_tech_readMoreLink:"information-technology/linux", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/build-and-deployment-engineer", cc_info_tech_image:"build-and-deployment-engineer.jpg", cc_info_tech_title:"Build and Deployment Engineer", cc_info_tech_desc:"Build and Deployment Engineer is responsible for owning the creation and implementation of a technology framework and lead the design, development, testing, and deployment of software projects.", cc_info_tech_readMoreLink:"information-technology/build-and-deployment-engineer", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/build-release-engineer", cc_info_tech_image:"build-release-engineer.jpg", cc_info_tech_title:"Build & Release Engineer", cc_info_tech_desc:"Release engineering, frequently abbreviated as RE or as the clipped compound Releng, is a sub-discipline in software engineering concerned with the compilation, assembly, and delivery of source code into finished products or other software components.", cc_info_tech_readMoreLink:"information-technology/build-release-engineer", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/ruby", cc_info_tech_image:"ruby.jpg", cc_info_tech_title:"Ruby", cc_info_tech_desc:"Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language.", cc_info_tech_readMoreLink:"information-technology/ruby", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/sharepoint", cc_info_tech_image:"sharepoint.jpg", cc_info_tech_title:"SharePoint", cc_info_tech_desc:"SharePoint is a web-based collaborative platform that integrates with Microsoft Office.", cc_info_tech_readMoreLink:"information-technology/sharepoint", cc_info_tech_price:"25000"},
-        {cc_info_tech_imageLink:"information-technology/itil-v3-foundation", cc_info_tech_image:"itil-v3-foundation.jpg", cc_info_tech_title:"ITIL V3 Foundation", cc_info_tech_desc:"ITIL Foundation is an entry-level ITIL certification for IT professionals.", cc_info_tech_readMoreLink:"information-technology/itil-v3-foundation", cc_info_tech_price:"25000"},
+        {cc_info_tech_imageLink:"information-technology/java", cc_info_tech_image:"java.jpg", cc_info_tech_title:"Java", cc_info_tech_desc:"Java is a programming language and computing platform first released by Sun Microsystems.", cc_info_tech_readMoreLink:"information-technology/java", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/dotnet", cc_info_tech_image:"dotnet.jpg", cc_info_tech_title:".Net", cc_info_tech_desc:"A developer platform for building all your apps. Build for web, mobile, gaming, IoT, desktop, cloud and microservices.", cc_info_tech_readMoreLink:"information-technology/dotnet", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/python", cc_info_tech_image:"python.jpg", cc_info_tech_title:"Python", cc_info_tech_desc:"Python is an interpreted high-level programming language for general-purpose programming.", cc_info_tech_readMoreLink:"information-technology/python", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/embedded-systems", cc_info_tech_image:"embedded-systems.jpg", cc_info_tech_title:"Embedded Systems", cc_info_tech_desc:"An embedded system is a computer system with a dedicated function within a larger mechanical or electrical system, often with real-time computing constraints.", cc_info_tech_readMoreLink:"information-technology/embedded-systems", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/unix", cc_info_tech_image:"unix.jpg", cc_info_tech_title:"Unix", cc_info_tech_desc:"Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix.", cc_info_tech_readMoreLink:"information-technology/unix", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/linux", cc_info_tech_image:"linux.jpg", cc_info_tech_title:"Linux", cc_info_tech_desc:"Linux is a family of free and open-source software operating systems built around the Linux kernel.", cc_info_tech_readMoreLink:"information-technology/linux", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/build-and-deployment-engineer", cc_info_tech_image:"build-and-deployment-engineer.jpg", cc_info_tech_title:"Build and Deployment Engineer", cc_info_tech_desc:"Build and Deployment Engineer is responsible for owning the creation and implementation of a technology framework and lead the design, development, testing, and deployment of software projects.", cc_info_tech_readMoreLink:"information-technology/build-and-deployment-engineer", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/build-release-engineer", cc_info_tech_image:"build-release-engineer.jpg", cc_info_tech_title:"Build & Release Engineer", cc_info_tech_desc:"Release engineering, frequently abbreviated as RE or as the clipped compound Releng, is a sub-discipline in software engineering concerned with the compilation, assembly, and delivery of source code into finished products or other software components.", cc_info_tech_readMoreLink:"information-technology/build-release-engineer", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/ruby", cc_info_tech_image:"ruby.jpg", cc_info_tech_title:"Ruby", cc_info_tech_desc:"Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language.", cc_info_tech_readMoreLink:"information-technology/ruby", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/sharepoint", cc_info_tech_image:"sharepoint.jpg", cc_info_tech_title:"SharePoint", cc_info_tech_desc:"SharePoint is a web-based collaborative platform that integrates with Microsoft Office.", cc_info_tech_readMoreLink:"information-technology/sharepoint", cc_info_tech_fees:"25000"},
+        {cc_info_tech_imageLink:"information-technology/itil-v3-foundation", cc_info_tech_image:"itil-v3-foundation.jpg", cc_info_tech_title:"ITIL V3 Foundation", cc_info_tech_desc:"ITIL Foundation is an entry-level ITIL certification for IT professionals.", cc_info_tech_readMoreLink:"information-technology/itil-v3-foundation", cc_info_tech_fees:"25000"},
     ];
     
     $scope.cc_cloud_tech = [
@@ -454,3 +450,4 @@ angular.module('ProELearning.controllers', [])
 // }])
 
 ;
+}(angular));

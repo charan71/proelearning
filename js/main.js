@@ -27,17 +27,6 @@ jQuery(document).ready(function () {
 	
 	
 	$(window).on("scroll", function () {
-		/* Navbar Resize On Scroll */
-		if ($(document).scrollTop() > 0) {
-			$("header").addClass("small-nav");
-			$(".dummy").removeClass("dummy-lg");
-			$(".dummy").addClass("dummy-sm");
-		} else {
-			$("header").removeClass("small-nav");
-			$(".dummy").removeClass("dummy-sm");
-			$(".dummy").addClass("dummy-lg");
-		}
-		
 		/* Bottom to Top Button Display On Scroll */
 		if ($(document).scrollTop() > 400) {
 			$(".bottom-to-top").css("transform", "scale(1,1)");
