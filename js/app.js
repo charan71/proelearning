@@ -2,11 +2,22 @@
     "use strict";
 
 /* Creating Module */
-var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ngSanitize', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ProELearning.filters', 'ng-clamp', 'chart.js', 'ngCountryStateSelect'])
+var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ngSanitize', 'ngStorage', 'ngCookies', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ProELearning.filters', 'ng-clamp', 'chart.js', 'ngCountryStateSelect'])
 
 /* Resolve Views Scroll Point Issue */
-.run(['$rootScope', '$document', function($rootScope, $document) {
+.run(['$rootScope', '$document', '$http', '$localStorage', '$window',
+
+function($rootScope, $document, $http, $localStorage, $window) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+
+        $http.get("http://ipinfo.io/json")
+        .then(function(response) {
+            $rootScope.shortCountryCode = response.data.country;
+            $window.sessionStorage.setItem('shortCountryCode',response.data.country);
+        }, function(error) {
+            $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
+        });
+
 //        AOS.init();
         $rootScope.title = current.$$route.title;
         $rootScope.description = current.$$route.description;
@@ -56,7 +67,7 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning, the best IT training institute in Hyderabad providing real-time training for Java, Python,.Net, UNIX, LINUX, RUBY, Sharepoint and ITL foundation. ?100% placement assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "python training institutes in Hyderabad, best computer courses in Hyderabad, best it training institute in Hyderabad, Ruby Training institute in Hyderabad, Microsoft SharePoint Training institute in Hyderabad, ITIL V3 Training institute in Hyderabad, Build and Release Engineer Training institute in Hyderabad, Linux Training institute in Hyderabad, Linux online Training institute in Hyderabad, UNIX Training institute in Hyderabad, DotNet Training institute in Hyderabad, Java Training institute in Hyderabad, Java online Training institute in Hyderabad",
                     templateUrl: "views/information-technology.html",
-                    controller: ""
+                    controller: "CourseCardsController"
                 })
                     .when("/information-technology/java",
                           {
