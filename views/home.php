@@ -5,7 +5,7 @@
 				<div ng-controller="mainCarouselController" id="carousel-main-generic" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators hidden-xs">
-					    <li ng-click="slideTo($index)" data-slide-to="$index" ng-class="{active:!$index}" ng-repeat="item in mainCarouselSlides"></li>
+					    <li ng-click="slideTo($index)" data-slide-to="$index" ng-class="{active:!$index}" ng-repeat="item in mainCarouselSlides" class="transition"></li>
 					</ol>
 					
 					<!-- Wrapper for slides -->
@@ -399,7 +399,7 @@
                         </div>
 			    		<!-- Indicators -->
 		    			<ol class="carousel-indicators">
-                            <li ng-click="slideTo($index)" data-slide-to="$index" ng-class="{active:!$index}" ng-repeat="item in testimonials"></li>
+                            <li ng-click="slideTo($index)" data-slide-to="$index" ng-class="{active:!$index}" ng-repeat="item in testimonials" class="transition"></li>
     					</ol>
                         
                         <!-- Wrapper for slides -->

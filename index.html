@@ -384,61 +384,15 @@
 		<!-- Footer Ends -->
 		
 		<!-- Bottom Fixed Navbar -->
-		<nav class="navbar navbar-inverse navbar-fixed-bottom navbar-bottom" id="navbar-main">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pel-main-navbar-collapse" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar icon-bar-top"></span>
-						<span class="icon-bar icon-bar-middle"></span>
-						<span class="icon-bar icon-bar-bottom"></span>
-					</button>
-				</div>
-			
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="pel-main-navbar-collapse" data-hover="dropdown" data-animations="zoomIn zoomIn zoomIn zoomIn">
-					<ul class="nav navbar-nav navbar-left">
-						<!--<li class="active"><a class="hvr-underline-from-center" ng-href="/">Home</a></li>-->
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle hvr-underline-from-center" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-th" aria-hidden="true"></i> Categories <i class="fa fa-angle-down fa-fw chevron1" aria-hidden="true"></i></a>
-							<ul class="dropdown-menu">
-								<li class="dropdown">
-									<a ng-href="big-data" class="hvr-underline-from-center">Big Data <i class="fa fa-angle-right"></i></a>
-									<ul class="dropdown-menu">
-										<li><a ng-href="big-data/kafka" class="hvr-underline-from-center">Kafka</a></li>
-										<li><a ng-href="big-data/scala" class="hvr-underline-from-center">Scala</a></li>
-										<li><a ng-href="big-data/spark" class="hvr-underline-from-center">Spark</a></li>
-										<li><a ng-href="big-data/hadoop" class="hvr-underline-from-center">Hadoop</a></li>
-										<li><a ng-href="big-data/hadoop-administrator" class="hvr-underline-from-center">Hadoop Administrator</a></li>
-										<li><a ng-href="big-data/hp-vertica" class="hvr-underline-from-center">HP Vertica</a></li>
-										<li><a ng-href="big-data/talend" class="hvr-underline-from-center">Talend</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a ng-href="registration" class="hvr-underline-from-center">Register</a></li>
-						<li><a ng-href="contact" class="hvr-underline-from-center">Contact</a></li>
-					</ul>
-
-					<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
-						<li><a ng-href="tel:+91-8340905336"><i class="fa fa-phone" aria-hidden="true"></i> +91-8340905336</a></li>
-					</ul>
-					
-					<!-- <div ng-controller="searchCoursesController">
-						<form class="navbar-form navbar-right transition" role="search">
-							<div class="form-group">
-								<input type="text" ng-model="keyword" class="form-control transition" placeholder="Search Categories...">
-							</div>
-							<button type="submit" class="btn btn-search" ng-click="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
-						</form>
-						<p ng-repeat="result in results track by $index">{{result.full_name}}</p>
-						<p>{{errMsg}}</p>
-					</div> -->
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
-
+		<div class="bottom-bar">
+			<div class="pull-left">
+				<ul class="nav">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
 		<!-- //Bottom Fixed Navbar -->
 
 		<!-- Brochure -->
