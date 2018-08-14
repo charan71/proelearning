@@ -8,7 +8,11 @@ angular.module('ProELearning.directives', [])
     link: function (scope, element) {
       var defaultOptions = {
           loop: false,
+          autoplay: true,
+          autoplayHoverPause: true,
+          autoplayTimeout: 2000,
           nav: true,
+          rewind: true,
           margin: 10,
           pagination: false,
           navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
@@ -48,9 +52,9 @@ angular.module('ProELearning.directives', [])
         for(var key in customOptions) {
           defaultOptions[key] = customOptions[key];
         }
-         init carousel
-         jQuery(element).owlCarousel(defaultOptions);
 */
+        //  init carousel
+         jQuery(element).owlCarousel(defaultOptions);
       };
       // scope.$on('owlCarouselLoaded', function() {
         $timeout(function(){
@@ -62,7 +66,6 @@ angular.module('ProELearning.directives', [])
   };
 }])
 
-/*
 .directive('owlCarouselItem', [function() {
   return {
     restrict: 'A',
@@ -75,7 +78,6 @@ angular.module('ProELearning.directives', [])
     }
   };
 }])
-*/
 /*-- //OwlCarousel Directives --*/
 
 /*-- Bootstrap Tabs Directive --*/

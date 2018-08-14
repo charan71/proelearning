@@ -28,7 +28,7 @@ angular.module('ProELearning.controllers', [])
         {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings &middot; Choice of Learning &middot; 24x7 Support", c_h4:"Never miss the chance", c_para:""},
         {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build skills &middot; Work smarter", c_h4:"Take your skills to the next level", c_para:""},
         {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare yourself for a never ending race", c_h4:"You are the mentor, the instructor and the path seeker of your career", c_para:""},
-        {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Online &middot; On-site &middot; On-demand", c_h4:"Learn At Your Convenience", c_para:""},
+        {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Online &middot; On-Site &middot; On-Demand", c_h4:"Learn At Your Convenience", c_para:""},
     ];
 
 }])
@@ -293,37 +293,12 @@ angular.module('ProELearning.controllers', [])
         {ccTrendingCoursesURL:"information-technology/python", ccTrendingCoursesImage:"python.jpg", ccTrendingCoursesAlt:"Python-Training-Pro-elearning", ccTrendingCoursesTitle:"Python", ccTrendingCoursesDesc:"Python is an interpreted high-level programming language for general-purpose programming."},
         {ccTrendingCoursesURL:"big-data/kafka", ccTrendingCoursesImage:"kafka-thumbnail.jpg", ccTrendingCoursesAlt:"Kafka-Training-Pro-elearning", ccTrendingCoursesTitle:"Kafka", ccTrendingCoursesDesc:"Apache Kafka is a fast, scalable, durable, and fault-tolerant publish-subscribe messaging system."},
         {ccTrendingCoursesURL:"big-data/hadoop", ccTrendingCoursesImage:"hadoop.jpg", ccTrendingCoursesAlt:"Hadoop-Training-Pro-elearning", ccTrendingCoursesTitle:"Hadoop", ccTrendingCoursesDesc:"Hadoop is an open-source software framework provides massive storage for any kind of data."},
+        {ccTrendingCoursesURL:"cloud-technologies/servicenow", ccTrendingCoursesImage:"servicenow.jpg", ccTrendingCoursesAlt: "ServiceNow-Pro-elearning", ccTrendingCoursesTitle:"ServiceNow", ccTrendingCoursesDesc:"ServiceNow's cloud platform streamlines how work gets done."},
         {ccTrendingCoursesURL:"big-data/hadoop-administrator", ccTrendingCoursesImage:"hadoop-admin.jpg", ccTrendingCoursesAlt:"Hadoop-Training-Pro-elearning", ccTrendingCoursesTitle:"Hadoop Administrator", ccTrendingCoursesDesc:"The role of a Hadoop Admin is mainly associated with tasks that involve installing and monitoring hadoop clusters."},
         {ccTrendingCoursesURL:"web-development/angular4", ccTrendingCoursesImage:"angular-4.jpg", ccTrendingCoursesAlt:"Angular-4-Training-Pro-elearning", ccTrendingCoursesTitle:"Angular", ccTrendingCoursesDesc:"Most popular client-side framework for website development from Google."},
         {ccTrendingCoursesURL:"web-development/ui-development", ccTrendingCoursesImage:"ui-development.jpg", ccTrendingCoursesAlt:"UI-Technologies-Training-Pro-elearning", ccTrendingCoursesTitle:"UI Development", ccTrendingCoursesDesc:"UI Development is the future of the web development with vast number of frameworks."},
     ];
     
-    // var price = 0;
-    // if($window.sessionStorage.getItem('shortCountryCode') == undefined) {
-    //     $http.get("http://ipinfo.io/json")
-    //     .then(function(response) {
-    //         $rootScope.shortCountryCode = response.data.country;
-    //         // console.log("shortCountryCode " + response.data.country);
-    //         if($rootScope.shortCountryCode == "IN") {
-    //             price = "₹25000";
-            
-    //         } else {
-    //             price = "$400";
-    //         }
-        
-    //     }, function(error) {
-    //         $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
-    //     });
-    // } else {
-    //     if($window.sessionStorage.getItem('shortCountryCode') == "IN") {
-    //         price = "₹25000";
-        
-    //     } else {
-    //         price = "$400";
-    //     }
-    
-    // }
-
     var coursePricesList = [
         {course:"java",IN:25000, others:400},
         {course:"python",IN:20000, others:350},

@@ -75,7 +75,7 @@
                             <img class="img-responsive center-block" src="./images/content-images/classroom-training.png">
                         </div>
                         <div class="overview-content text-center">
-                            <h3 class="overview-title">On-site Training</h3>
+                            <h3 class="overview-title">On-Site Training</h3>
                             <p>Building proficient teams for multi national companies with corporate trainings.</p>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                             <h3 class="text-center">Trending Courses</h3>
                         </div>
                         <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
-                            <div class="owl-item slide" ng-repeat="course in ccTrendingCourses">
+                            <div class="item slide" ng-repeat="course in ccTrendingCourses">
                                 <a ng-href="{{course.ccTrendingCoursesURL}}">
                                     <div class="course-thumbnail">
                                         <img class="center-block" ng-src="./images/course-thumbnails/{{course.ccTrendingCoursesImage}}" alt="{{course.ccTrendingCoursesAlt}}">
@@ -267,7 +267,7 @@
                     <!-- More Categories -->
                     <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
-                            <h4 class="text-center">For more courses click on &#x201C;Categories&#x201D; on top</h4>
+                            <h4 class="text-center">For more courses click <b>Categories</b> on top</h4>
                         </div>
                     </div>
                     
@@ -421,12 +421,12 @@
             <div class="row">
                 <div class="container">
                     <div class="contact-link">
-                        <div class="contact-link-text col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                        <div class="contact-link-text col-xs-12 col-sm-12 col-md-9 col-lg-9">
                             <h1>Course Not Found?</h1>
-                            <p>Don't worry ... Suggest your preferred one here</p>
+                            <p>Don't worry ... Let us know and we will get back to you</p>
                             <img class="paper-pl-fly img-responsive hidden-xs hidden-sm" src="./images/content-images/arrow-flying-400.png">
                         </div>
-                        <div class="contact-link-btn  col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <div class="contact-link-btn  col-xs-12 col-sm-12 col-md-3 col-lg-3">
                             <!-- <a href="contact" class="btn-custom btn-custom-lg transition" role="button">Line Up</a> -->
                             <button type="button" class="btn-custom btn-custom-lg transition" data-toggle="modal" data-target="#courseSuggestion">Suggest Now</button>
                         </div>

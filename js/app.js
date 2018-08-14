@@ -5,9 +5,9 @@
 var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ngSanitize', 'ngStorage', 'ngCookies', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ProELearning.filters', 'ng-clamp', 'chart.js', 'ngCountryStateSelect'])
 
 /* Resolve Views Scroll Point Issue */
-.run(['$rootScope', '$document', '$http', '$localStorage', '$window',
+.run(['$rootScope', '$document', '$http', '$window',
 
-function($rootScope, $document, $http, $localStorage, $window) {
+function($rootScope, $document, $http, $window) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
 
         $http.get("http://ipinfo.io/json")

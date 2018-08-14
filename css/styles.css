@@ -2,7 +2,7 @@ body
 {
     font-family: 'Raleway', sans-serif;
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 41px;
     /* background-color: #FAFAFA; */
 }
 ::selection, ::-moz-selection {
@@ -310,7 +310,21 @@ p {
 	font-size: 13px;
     border-radius: 0 !important;
 }
-
+.btn-free-demo {
+    background-color: #0cb0a0;
+    color: #fff !important;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-radius: 40px;
+    border: 1px solid #0cb0a0;
+    animation-duration: 3s;
+}
+.btn-free-demo:hover, .btn-free-demo:active, .btn-free-demo:focus {
+    background-color: #fff !important;
+    color: #0cb0a0 !important;
+}
 /* Collapse Button icon-bar 'X' Animation */
 .navbar-toggle .icon-bar
 {
@@ -623,7 +637,7 @@ footer hr {
 /*-- //Overview Section - Home --*/
 
 /* Home Courses */
-.owl-item > a {
+.owl-carousel .item > a {
     color: transparent;
     display: inline-block;
     text-decoration: none;
@@ -696,7 +710,7 @@ footer hr {
     padding-top: 1px;
     height: 234px;
 }
-.owl-item .course-thumbnail:hover {
+.owl-carousel .item .course-thumbnail:hover {
     box-shadow: 1px 1px 2px #555;
 }
 
@@ -717,6 +731,14 @@ footer hr {
     transition: .3s all;
     width: 44px;
     height: 44px;
+}
+.owl-prev .fa.fa-angle-left {
+    position: relative;
+    left: -1px;
+}
+.owl-next .fa.fa-angle-right {
+    position: relative;
+    right: -1px;
 }
 .owl-nav .owl-prev:hover, .owl-nav .owl-next:hover {
     box-shadow: 0.6px 1px 8px #999;
@@ -1071,7 +1093,7 @@ input, select, textarea {
 
 /* active indicator */
 .carousel-indicators .active {
-    background: #81a312;
+    background: #8bc34a;
     margin: 0 3px;
 }
 
@@ -1079,7 +1101,7 @@ input, select, textarea {
     width: 25px;
     height: 6px;
     margin: 0 3px;
-    border: 1px solid #81a312;
+    border: 1px solid #8bc34a;
     vertical-align: -webkit-baseline-middle;
     vertical-align: middle;
 }
@@ -1195,19 +1217,40 @@ input, select, textarea {
     margin-bottom: 20px;
     line-height: 1.8em;
 }
+/*-- Discounts --*/
 .offer-scroll {
-    background-color: #dff0d8;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    background-color: #fff;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0px 0px 34px 10px #f1f1f1;
 }
-.offer-scroll marquee {
-    margin-left: 30px;
-    margin-right: 30px;
+.d-percent {
+    background-color: #E91E63;
+    color: #fff;
+    font-size: 50px;
+    left: 30%;
+    width: 120px;
+    height: 120px;
+    top: -60px;
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
 }
-.offer-scroll marquee h1 {
-    color: #ad4c48;
-    font-weight: 600;
+.d-number {
+    padding: 20px 0;
 }
+.d-text {
+    text-align: center;
+    color: darkgray;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+/*-- //Discounts --*/
+
 .timing-schedule {
     background-color: #fbfbfb;
     padding: 30px;
@@ -1481,7 +1524,7 @@ input, select, textarea {
 /*-- //Accordion Designs --*/
 
 /*-- Modal Designs --*/
-.sugg-modal {
+.custom-modal {
     background: -webkit-linear-gradient(top,#9ddc53 0%,#689f38 100%);
     background: -o-linear-gradient(top,#9ddc53 0%,#689f38 100%);
     background: -ms-linear-gradient(top,#9ddc53 0%,#689f38 100%);
@@ -1494,34 +1537,34 @@ input, select, textarea {
     border: 0;
     border-radius: 0;
 }
-.sugg-modal-close {
+.modal-close {
     padding: 10px !important;
     position: absolute;
     right: 0;
     z-index: 1;
 }
-.sugg-modal-left {
+.custom-modal-left {
     width: 310px;
     float: left;
 }
-.sugg-modal-txt {
+.custom-modal-txt {
     color: #fff;
     padding: 40px;
 }
-.sugg-modal-txt > div {
+.custom-modal-txt > div {
     margin-bottom: 30px;
     font-size: 24px;
 }
-.sugg-modal-txt > div > span {
+.custom-modal-txt > div > span {
     color: rebeccapurple;
 }
-.sugg-modal-right {
+.custom-modal-right {
     background-color: #fff;
     width: 418px;
     padding: 30px;
     float: right;
 }
-.sugg-modal-right .form-group {
+.custom-modal-right .form-group {
     margin-bottom: 20px;
 }
 .btn-m:hover {
@@ -1556,12 +1599,13 @@ input, select, textarea {
 /*-- //Modal Designs --*/
 
 .bottom-bar {
-    position: fixed;
-    bottom: 0;
-    z-index: 1030;
     background-color: #333;
     color: #fff;
     width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid #111;
+    z-index: 1030;
 }
 .bottom-bar .nav li {
     float: left;
@@ -1571,7 +1615,13 @@ input, select, textarea {
     padding: 0;
     margin: 10px;
 }
+.bottom-bar .nav li a .fa {
+    margin-right: 5px;
+}
 .bottom-bar .nav li a:focus, .bottom-bar .nav li a:hover {
     text-decoration: underline;
     background-color: #333333;
+}
+.divider-v {
+    margin: 10px 0;
 }

@@ -31,7 +31,7 @@
                             <div class="form-group">
                                 <label for="name" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Full Name</label>
                                 <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" placeholder="Full Name" />
+                                    <input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" placeholder="Full Name" autofocus />
                                     <br>
                                     <span class="validation_styles" ng-show="contactForm.name.$error.required && contactForm.name.$touched">* Full Name is required<br></span>
                                     <span class="validation_styles" ng-show="contactForm.name.$error.pattern && contactForm.name.$invalid">* Full Name should contain only alphabets, dots and spaces.<br></span>
@@ -59,9 +59,10 @@
                                 <label for="category" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Category</label>
                                 <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <select id="category" name="category" class="form-control" ng-model="category" ng-required="true">
-                                        <option value="">-- Select Your Category --</option>
-                                        <option value="Student">Need a Course</option>
-                                        <option value="Trainer">Want to become a Trainer</option>
+                                        <option value="">-- Select Your Purpose --</option>
+                                        <option value="Need a Course">Need a Course</option>
+                                        <option value="Want to become a Trainer">Want to become a Trainer</option>
+                                        <option value="For Business">For Business</option>
                                     </select>
 									<span class="validation_styles" ng-show="contactForm.category.$error.required && contactForm.category.$touched">* Category is required</span>
                                 </div>

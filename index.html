@@ -43,8 +43,6 @@
 		
 	</head>
 	<body ng-controller="getGeoIPCtrl">
-		<!-- Your price: {{ shortCountryCode }} -->
-
         <!-- Navbar Starts Here -->
 		<header>
 			<nav class="navbar navbar-custom navbar-fixed-top" id="navbar-main">
@@ -242,6 +240,7 @@
 							</li>
 							<li><a ng-href="registration" class="hvr-underline-from-center">Register</a></li>
 							<li><a ng-href="contact" class="hvr-underline-from-center">Contact</a></li>
+							<li><a role="button" class="btn-free-demo animated flash infinite" data-toggle="modal" data-target="#freeDemo">Free Demo</a></li>
 						</ul>
 
 						<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
@@ -385,12 +384,21 @@
 		
 		<!-- Bottom Fixed Navbar -->
 		<div class="bottom-bar">
-			<div class="pull-left">
-				<ul class="nav">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Contact</a></li>
-					<li><a href="#">About</a></li>
-				</ul>
+			<div class="container">
+				<div class="pull-left">
+					<ul class="nav">
+						<li><a href="#">Terms &#x0026; Conditions</a></li>
+						<li class="divider-v">|</li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="pull-right">
+					<ul class="nav">
+						<li><a ng-href="tel:+91-8340905336"><i class="fa fa-phone" aria-hidden="true"></i> +91-8340905336</a></li>
+						<li class="divider-v">|</li>
+						<li><a ng-href="mailto:training@proelearning.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>  trainings@pro-elearning.com</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- //Bottom Fixed Navbar -->
