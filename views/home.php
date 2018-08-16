@@ -367,6 +367,32 @@
             </div>
             <!-- //Statistics -->
             
+            <!-- Subscribe -->
+            <div class="row pt-50 pb-50">
+                <div class="container">
+                    <div class="subscribe-wrapper">
+                        <div class="subscribe-title col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <h2 class="text-center mt-10">Subscribe</h2>
+                        </div>
+                        <div class="subscribe-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <form novalidate name="subscribe" method="POST" enctype="application/x-www-form-urlencoded" id="subscribe" class="form form-horizontal" autocomplete="on">
+                                <fieldset>
+                                    <!-- <div class="col-lg-6"> -->
+                                        <div class="input-group">
+                                            <input type="email" class="" placeholder="Enter your email to receive our newsletter...">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Subscribe</button>
+                                            </span>
+                                        </div>
+                                    <!-- </div> -->
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Register Grid -->
 			<div class="row">
                 <div id="home_st_tr_bg" class="home-reg bgStyles">
                     <div class="text-center home-reg-panel">

@@ -384,7 +384,7 @@ angular.module('ProELearning.controllers', [])
     
 }])
 
-/* Course Suggestion Form Controller */
+/* Course Suggestion Controller */
 .controller("courseSuggestionController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 	var orig_name = $scope.name;
     var orig_email = $scope.email;
@@ -402,7 +402,7 @@ angular.module('ProELearning.controllers', [])
                 $scope.phone = angular.copy(orig_phone);
                 $scope.courseName = angular.copy(orig_courseName);
                 $scope.message = angular.copy(orig_message);
-                $scope.contactForm.$setUntouched();
+                $scope.courseSuggestionForm.$setUntouched();
                 $scope.successMessage = "Hoila! Your request for a new course is successfully registered with us. Your team will contact you within 24 hours. Have a nice day!!";
                 $timeout(function() {
                     $scope.successMessage = false;
@@ -417,7 +417,44 @@ angular.module('ProELearning.controllers', [])
         $scope.phone = angular.copy(orig_phone);
         $scope.courseName = angular.copy(orig_courseName);
         $scope.message = angular.copy(orig_message);
-        $scope.contactForm.$setUntouched();
+        $scope.courseSuggestionForm.$setUntouched();
+    };
+}])
+
+/* Free Demo Controller */
+.controller("freeDemoController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+	var orig_name = $scope.name;
+    var orig_email = $scope.email;
+    var orig_phone = $scope.phone;
+    var orig_courseName = $scope.courseName;
+    var orig_message = $scope.message;
+    $scope.dt = Date();
+    $scope.fn_freeDemo = function() {
+        $http.post(
+            "./php/free-demo.php",
+                {'full_name': $scope.name, 'email': $scope.email, 'phone': $scope.phone, 'course_name': $scope.courseName, 'message': $scope.message, 'date_time': $scope.dt}
+            ).then(function(data) {
+                $scope.name = angular.copy(orig_name);
+                $scope.email = angular.copy(orig_email);
+                $scope.phone = angular.copy(orig_phone);
+                $scope.courseName = angular.copy(orig_courseName);
+                $scope.message = angular.copy(orig_message);
+                $scope.freeDemoForm.$setUntouched();
+                $scope.successMessage = "Hoila! Your request for a free demo is successfully registered with us. Your team will contact you within 24 hours. Have a nice day!!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
+            }, function(error) {
+                $scope.errorMessage = "An error occurred. Please try again!";
+        });
+    };
+    $scope.fn_reset = function() {
+        $scope.name = angular.copy(orig_name);
+        $scope.email = angular.copy(orig_email);
+        $scope.phone = angular.copy(orig_phone);
+        $scope.courseName = angular.copy(orig_courseName);
+        $scope.message = angular.copy(orig_message);
+        $scope.freeDemoForm.$setUntouched();
     };
 }])
 

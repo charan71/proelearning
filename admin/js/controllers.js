@@ -1,5 +1,6 @@
 angular.module('controllers', ['ngRoute'])
 
+// Admin Login
 .controller('adminLoginCtrl', function($scope, $http, $location, user) {
 	$scope.adminLogin = function() {
 		var username = $scope.username;
@@ -23,6 +24,7 @@ angular.module('controllers', ['ngRoute'])
 	};
 })
 
+// Admin User Profile
 .controller('profileCtrl', function($scope, $http, $timeout, user) {
 	$scope.data = user.getData();
 	$scope.newPass = function() {
@@ -53,10 +55,12 @@ angular.module('controllers', ['ngRoute'])
 	};
 })
 
+// Left Side Navigation
 .controller('sideNavCtrl', ['$scope', function($scope) {
 	
 }])
 
+// Dashboard
 .controller('adminDashboardCtrl', function($scope, $http, $timeout, user) {
     $scope.data = user.getData();
 
@@ -85,10 +89,12 @@ angular.module('controllers', ['ngRoute'])
     // }, 3000);
 })
 
+// Header/Navbar
 .controller('headerCtrl', function($scope, $http, user) {
 	$scope.data = user.getData();
 })
 
+// Registered Students List
 .controller("regStudents", ['$scope', '$http', function($scope, $http) {
     $scope.students = [];
     $http({
@@ -104,6 +110,7 @@ angular.module('controllers', ['ngRoute'])
     })
 }])
 
+// Registered Trainers List
 .controller("regTrainers", ['$scope', '$http', function($scope, $http) {
     $scope.trainers = [];
     $http({
@@ -119,6 +126,7 @@ angular.module('controllers', ['ngRoute'])
     })
 }])
 
+// Contacts List
 .controller("contactsList", ['$scope', '$http', function($scope, $http) {
     $scope.contacts = [];
     $http({
@@ -134,6 +142,7 @@ angular.module('controllers', ['ngRoute'])
     })
 }])
 
+// Course Suggestions List
 .controller("courseSuggestionList", ['$scope', '$http', function($scope, $http) {
     $scope.suggestedCourses = [];
     $http({
@@ -149,6 +158,23 @@ angular.module('controllers', ['ngRoute'])
     })
 }])
 
+// Free Demos List
+.controller("freeDemosList", ['$scope', '$http', function($scope, $http) {
+    $scope.freeDemoCourses = [];
+    $http({
+        url: "./php/free-demos-list.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.freeDemoCourses = response.data;
+    })
+}])
+
+// Course Upload List
 .controller("courseUploadCtrl", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
     var orig_courseName = $scope.courseName;
     var orig_courseDesc = $scope.courseDesc;

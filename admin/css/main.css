@@ -11,7 +11,7 @@ input:-webkit-autofill {
     height: 50px;
 }
 .main-container {
-/*    margin-top: 50px;*/
+    /*    margin-top: 50px;*/
     height: 100%;
 }
 
@@ -189,7 +189,7 @@ span.validation_styles {
 
 /*-- side nav --*/
 .side-nav {
-    width: 200px;
+    width: 240px;
     height: 100%;
     position: fixed;
     padding-top: 20px;
@@ -212,6 +212,9 @@ span.validation_styles {
     text-decoration: none;
     background-color: #eee;
 }
+.side-nav-items .fa, .navbar-nav .fa {
+    margin-right: 10px;
+}
 .nav-cat-txt {
     color: #8bc34a;
     padding: 5px 20px;
@@ -229,7 +232,7 @@ span.validation_styles {
 
 /*-- Main Content --*/
 .main-content-wrapper {
-    margin-left: 200px;
+    margin-left: 240px;
     min-height: 100%;
 }
 .view {
@@ -366,7 +369,7 @@ span.validation_styles {
 footer {
     background-color: #212121;
     color: #fff;
-    margin-left: 200px;
+    margin-left: 240px;
     padding: 0 20px;
 }
 footer p {
