@@ -65,8 +65,8 @@
 									<span class="validation_styles" ng-show="courseSuggestionForm.message.$error.maxlength && courseSuggestionForm.message.$touched">* Message should be maximum of 250 characters</span>
                		            </div>
                		        </div>
-							<button type="submit" class="btn-m btn-modal transition" id="submit" form="courseSuggestionForm" name="insertContact" ng-disabled="courseSuggestionForm.$invalid" ng-click="fn_courseSuggestion()">Submit</button>
-							<button type="reset" class="btn-m btn-modal-inverse transition" form="courseSuggestionForm" ng-click="fn_reset()">Cancel</button>
+							<button type="submit" class="btn-m btn-modal transition" id="submit" name="insertContact" ng-disabled="courseSuggestionForm.$invalid" ng-click="fn_courseSuggestion()">Submit</button>
+							<button type="reset" class="btn-m btn-modal-inverse transition" ng-click="fn_reset()">Cancel</button>
                		    </fieldset>
                    	</form>
 				</div>
@@ -151,8 +151,8 @@
 									<span class="validation_styles" ng-show="freeDemoForm.message.$error.maxlength && freeDemoForm.message.$touched">* Message should be maximum of 250 characters</span>
                		            </div>
                		        </div>
-							<button type="submit" class="btn-m btn-modal transition" id="submit" form="freeDemoForm" name="insertContact" ng-disabled="freeDemoForm.$invalid" ng-click="fn_freeDemo()">Submit</button>
-							<button type="reset" class="btn-m btn-modal-inverse transition" form="freeDemoForm" ng-click="fn_reset()">Cancel</button>
+							<button type="submit" class="btn-m btn-modal transition" id="submit" name="insertContact" ng-disabled="freeDemoForm.$invalid" ng-click="fn_freeDemo()">Submit</button>
+							<button type="reset" class="btn-m btn-modal-inverse transition" ng-click="fn_reset()">Cancel</button>
                		    </fieldset>
                    	</form>
 				</div>
@@ -169,3 +169,63 @@
     </div>
 </modal>
 <!-- //Free Demos Modal -->
+
+<!-- Subscribe Modal -->
+<modal id="subscribeModal" class="modal fade" tabindex="-1" role="dialog" ng-controller="subscribeCtrl">
+    <div class="modal-dialog" role="document">
+		<div class="modal-content custom-modal">
+			<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">✖</button>
+			<div class="custom-modal-left hidden-xs hidden-sm">
+				<div class="custom-modal-txt">
+					<img src="./images/content-images/mail-box.png" class="img-responsive center-block">
+				</div>
+			</div>
+			<div class="custom-modal-right">
+				<div class="col-xs-12 col-sm-12 mt-20 mb-20">
+					<h4 class="modal-title text-center mb-20">Subscribe!</h4>
+					<p>Send your email to receive our weekly updates and we will send an email with our Corporate Training brochure.</p>
+					<form novalidate name="subscribeForm" method="POST" enctype="application/x-www-form-urlencoded" id="subscribeForm" class="form form-horizontal" autocomplete="on">
+						<fieldset>
+							<div class="form-group">
+								<!-- <label for="email" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label> -->
+								<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="* Email" required />
+									<span class="validation_styles" ng-show="subscribeForm.email.$error.required && subscribeForm.email.$touched">* Email address is required</span>
+									<span class="validation_styles" ng-show="subscribeForm.email.$error.pattern && subscribeForm.email.$touched">* Please enter a valid email address</span>
+								</div>
+							</div>
+							<button type="submit" class="btn-m btn-modal transition" id="submit" form="subscribeForm" name="insertContact" ng-disabled="subscribeForm.$invalid" ng-click="fn_subscribe()">Submit</button>
+							<button type="reset" class="btn-m btn-modal-inverse transition" form="subscribeForm" ng-click="fn_reset()">Cancel</button>
+               		    </fieldset>
+                   	</form>
+				</div>
+			</div>
+        </div>
+    </div>
+    <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
+        <i class="fa fa-check" aria-labelled="true"></i> <span ng-bind="successMessage"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+        <i class="fa fa-times" aria-labelled="true"></i> <span ng-bind="errorMessage"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+</modal>
+<!-- //Subscribe Modal -->
+
+<!-- Error Message Modal -->
+<modal id="errorMessageModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content error-modal">
+			<div class="message-icon">
+				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+			</div>
+			<div class="message">
+				<h4 class="modal-title text-center mb-20">Error!</h4>
+				<p>An error occurred while performing some actions.</p>
+				<button type="button" class="btn-msg btn-err-msg transition" data-dismiss="modal">Close</button>
+			</div>
+        </div>
+    </div>
+</modal>
+<!-- //Error Message Modal -->

@@ -4,8 +4,7 @@
 angular.module('ProELearning.controllers', [])
 
 /* Get Geo Location */
-.controller('getGeoIPCtrl', ['$scope', '$http', '$rootScope',
- function($scope, $http, $rootScope) {
+.controller('getGeoIPCtrl', ['$scope', '$http', '$rootScope', function($scope, $http, $rootScope) {
     if($rootScope.shortCountryCode == "IN") {
         $scope.fees = "₹25000";
     } else {
@@ -286,25 +285,13 @@ angular.module('ProELearning.controllers', [])
 
 /* Course Gallery Controller */
 .controller("CourseCardsController", ['$scope', '$http', '$rootScope', '$window', '$timeout', function($scope, $http, $rootScope, $window, $timeout) {
-    $scope.ccTrendingCourses = [
-        {ccTrendingCoursesURL:"big-data/scala", ccTrendingCoursesImage:"scala-thumbnail.jpg", ccTrendingCoursesAlt:"Scala-Training-Pro-elearning", ccTrendingCoursesTitle:"Scala", ccTrendingCoursesDesc:"Scala is a pure object-oriented language, in which conceptually every value is an object and every operation is a method-call."},
-        {ccTrendingCoursesURL:"cloud-technologies/aws", ccTrendingCoursesImage:"aws.jpg", ccTrendingCoursesAlt:"Scala-Training-Pro-elearning", ccTrendingCoursesTitle:"AWS", ccTrendingCoursesDesc:"Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis."},
-        {ccTrendingCoursesURL:"big-data/spark", ccTrendingCoursesImage:"spark-thumbnail.jpg", ccTrendingCoursesAlt:"Spark-Training-Pro-elearning", ccTrendingCoursesTitle:"Spark", ccTrendingCoursesDesc:"Apache Spark is a general-purpose & lightning fast cluster computing system. It provides high-level API."},
-        {ccTrendingCoursesURL:"information-technology/python", ccTrendingCoursesImage:"python.jpg", ccTrendingCoursesAlt:"Python-Training-Pro-elearning", ccTrendingCoursesTitle:"Python", ccTrendingCoursesDesc:"Python is an interpreted high-level programming language for general-purpose programming."},
-        {ccTrendingCoursesURL:"big-data/kafka", ccTrendingCoursesImage:"kafka-thumbnail.jpg", ccTrendingCoursesAlt:"Kafka-Training-Pro-elearning", ccTrendingCoursesTitle:"Kafka", ccTrendingCoursesDesc:"Apache Kafka is a fast, scalable, durable, and fault-tolerant publish-subscribe messaging system."},
-        {ccTrendingCoursesURL:"big-data/hadoop", ccTrendingCoursesImage:"hadoop.jpg", ccTrendingCoursesAlt:"Hadoop-Training-Pro-elearning", ccTrendingCoursesTitle:"Hadoop", ccTrendingCoursesDesc:"Hadoop is an open-source software framework provides massive storage for any kind of data."},
-        {ccTrendingCoursesURL:"cloud-technologies/servicenow", ccTrendingCoursesImage:"servicenow.jpg", ccTrendingCoursesAlt: "ServiceNow-Pro-elearning", ccTrendingCoursesTitle:"ServiceNow", ccTrendingCoursesDesc:"ServiceNow's cloud platform streamlines how work gets done."},
-        {ccTrendingCoursesURL:"big-data/hadoop-administrator", ccTrendingCoursesImage:"hadoop-admin.jpg", ccTrendingCoursesAlt:"Hadoop-Training-Pro-elearning", ccTrendingCoursesTitle:"Hadoop Administrator", ccTrendingCoursesDesc:"The role of a Hadoop Admin is mainly associated with tasks that involve installing and monitoring hadoop clusters."},
-        {ccTrendingCoursesURL:"web-development/angular4", ccTrendingCoursesImage:"angular-4.jpg", ccTrendingCoursesAlt:"Angular-4-Training-Pro-elearning", ccTrendingCoursesTitle:"Angular", ccTrendingCoursesDesc:"Most popular client-side framework for website development from Google."},
-        {ccTrendingCoursesURL:"web-development/ui-development", ccTrendingCoursesImage:"ui-development.jpg", ccTrendingCoursesAlt:"UI-Technologies-Training-Pro-elearning", ccTrendingCoursesTitle:"UI Development", ccTrendingCoursesDesc:"UI Development is the future of the web development with vast number of frameworks."},
+    // Display Course Fees based on the Geo Location
+    var coursePricesList = [
+        {course:"java", IN:25000, others:400},
+        {course:"python", IN:20000000, others:350},
+        {course:"dotnet", IN:15000, others:300}
     ];
     
-    var coursePricesList = [
-        {course:"java",IN:25000, others:400},
-        {course:"python",IN:20000, others:350},
-        {course:"dotnet",IN:15000, others:300}
-    ];
-
     function getPrice(courseName) {
         var returnVal = 0;
         coursePricesList.forEach(obj => {
@@ -319,10 +306,31 @@ angular.module('ProELearning.controllers', [])
         return returnVal;
     };
 
+    // Dynamic Currency Symbol
+    $scope.currencySymbol;
+    if($window.sessionStorage.getItem('shortCountryCode') == "IN") {
+        $scope.currencySymbol = "₹";
+    } else {
+        $scope.currencySymbol = "$";
+    }
+
+    $scope.ccTrendingCourses = [
+        {ccTrendingCoursesURL:"big-data/scala", ccTrendingCoursesImage:"scala-thumbnail.jpg", ccTrendingCoursesAlt:"Scala-Training-Pro-elearning", ccTrendingCoursesTitle:"Scala", ccTrendingCoursesDesc:"Scala is a pure object-oriented language, in which conceptually every value is an object and every operation is a method-call.", cctrendingCoursePrice: "25000"},
+        {ccTrendingCoursesURL:"cloud-technologies/aws", ccTrendingCoursesImage:"aws.jpg", ccTrendingCoursesAlt:"Scala-Training-Pro-elearning", ccTrendingCoursesTitle:"AWS", ccTrendingCoursesDesc:"Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis."},
+        {ccTrendingCoursesURL:"big-data/spark", ccTrendingCoursesImage:"spark-thumbnail.jpg", ccTrendingCoursesAlt:"Spark-Training-Pro-elearning", ccTrendingCoursesTitle:"Spark", ccTrendingCoursesDesc:"Apache Spark is a general-purpose & lightning fast cluster computing system. It provides high-level API."},
+        {ccTrendingCoursesURL:"information-technology/python", ccTrendingCoursesImage:"python.jpg", ccTrendingCoursesAlt:"Python-Training-Pro-elearning", ccTrendingCoursesTitle:"Python", ccTrendingCoursesDesc:"Python is an interpreted high-level programming language for general-purpose programming.", cctrendingCoursePrice: getPrice("python")},
+        {ccTrendingCoursesURL:"big-data/kafka", ccTrendingCoursesImage:"kafka-thumbnail.jpg", ccTrendingCoursesAlt:"Kafka-Training-Pro-elearning", ccTrendingCoursesTitle:"Kafka", ccTrendingCoursesDesc:"Apache Kafka is a fast, scalable, durable, and fault-tolerant publish-subscribe messaging system."},
+        {ccTrendingCoursesURL:"big-data/hadoop", ccTrendingCoursesImage:"hadoop.jpg", ccTrendingCoursesAlt:"Hadoop-Training-Pro-elearning", ccTrendingCoursesTitle:"Hadoop", ccTrendingCoursesDesc:"Hadoop is an open-source software framework provides massive storage for any kind of data."},
+        {ccTrendingCoursesURL:"cloud-technologies/servicenow", ccTrendingCoursesImage:"servicenow.jpg", ccTrendingCoursesAlt: "ServiceNow-Pro-elearning", ccTrendingCoursesTitle:"ServiceNow", ccTrendingCoursesDesc:"ServiceNow's cloud platform streamlines how work gets done."},
+        {ccTrendingCoursesURL:"big-data/hadoop-administrator", ccTrendingCoursesImage:"hadoop-admin.jpg", ccTrendingCoursesAlt:"Hadoop-Training-Pro-elearning", ccTrendingCoursesTitle:"Hadoop Administrator", ccTrendingCoursesDesc:"The role of a Hadoop Admin is mainly associated with tasks that involve installing and monitoring hadoop clusters."},
+        {ccTrendingCoursesURL:"web-development/angular4", ccTrendingCoursesImage:"angular-4.jpg", ccTrendingCoursesAlt:"Angular-4-Training-Pro-elearning", ccTrendingCoursesTitle:"Angular", ccTrendingCoursesDesc:"Most popular client-side framework for website development from Google."},
+        {ccTrendingCoursesURL:"web-development/ui-development", ccTrendingCoursesImage:"ui-development.jpg", ccTrendingCoursesAlt:"UI-Technologies-Training-Pro-elearning", ccTrendingCoursesTitle:"UI Development", ccTrendingCoursesDesc:"UI Development is the future of the web development with vast number of frameworks."},
+    ];
+    
     $scope.cc_info_tech = [
-        {cc_info_tech_imageLink:"information-technology/java", cc_info_tech_image:"java.jpg", cc_info_tech_title:"Java", cc_info_tech_desc:"Java is a programming language and computing platform first released by Sun Microsystems.", cc_info_tech_readMoreLink:"information-technology/java", cc_info_tech_fees:getPrice("java")},
-        {cc_info_tech_imageLink:"information-technology/dotnet", cc_info_tech_image:"dotnet.jpg", cc_info_tech_title:".Net", cc_info_tech_desc:"A developer platform for building all your apps. Build for web, mobile, gaming, IoT, desktop, cloud and microservices.", cc_info_tech_readMoreLink:"information-technology/dotnet", cc_info_tech_fees:getPrice("dotnet")},
-        {cc_info_tech_imageLink:"information-technology/python", cc_info_tech_image:"python.jpg", cc_info_tech_title:"Python", cc_info_tech_desc:"Python is an interpreted high-level programming language for general-purpose programming.", cc_info_tech_readMoreLink:"information-technology/python", cc_info_tech_fees:getPrice("python")},
+        {cc_info_tech_imageLink:"information-technology/java", cc_info_tech_image:"java.jpg", cc_info_tech_title:"Java", cc_info_tech_desc:"Java is a programming language and computing platform first released by Sun Microsystems.", cc_info_tech_readMoreLink:"information-technology/java", cc_info_tech_fees: getPrice("java")},
+        {cc_info_tech_imageLink:"information-technology/dotnet", cc_info_tech_image:"dotnet.jpg", cc_info_tech_title:".Net", cc_info_tech_desc:"A developer platform for building all your apps. Build for web, mobile, gaming, IoT, desktop, cloud and microservices.", cc_info_tech_readMoreLink:"information-technology/dotnet", cc_info_tech_fees: getPrice("dotnet")},
+        {cc_info_tech_imageLink:"information-technology/python", cc_info_tech_image:"python.jpg", cc_info_tech_title:"Python", cc_info_tech_desc:"Python is an interpreted high-level programming language for general-purpose programming.", cc_info_tech_readMoreLink:"information-technology/python", cc_info_tech_fees: getPrice("python")},
         {cc_info_tech_imageLink:"information-technology/embedded-systems", cc_info_tech_image:"embedded-systems.jpg", cc_info_tech_title:"Embedded Systems", cc_info_tech_desc:"An embedded system is a computer system with a dedicated function within a larger mechanical or electrical system, often with real-time computing constraints.", cc_info_tech_readMoreLink:"information-technology/embedded-systems", cc_info_tech_fees:"25000"},
         {cc_info_tech_imageLink:"information-technology/unix", cc_info_tech_image:"unix.jpg", cc_info_tech_title:"Unix", cc_info_tech_desc:"Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix.", cc_info_tech_readMoreLink:"information-technology/unix", cc_info_tech_fees:"25000"},
         {cc_info_tech_imageLink:"information-technology/linux", cc_info_tech_image:"linux.jpg", cc_info_tech_title:"Linux", cc_info_tech_desc:"Linux is a family of free and open-source software operating systems built around the Linux kernel.", cc_info_tech_readMoreLink:"information-technology/linux", cc_info_tech_fees:"25000"},
@@ -455,6 +463,36 @@ angular.module('ProELearning.controllers', [])
         $scope.courseName = angular.copy(orig_courseName);
         $scope.message = angular.copy(orig_message);
         $scope.freeDemoForm.$setUntouched();
+    };
+}])
+
+/* Subscribe Controller */
+.controller("subscribeCtrl", ['$scope', '$http', '$timeout', '$location', function($scope, $http, $timeout, $location) {
+    // Trigger Modal only on home page
+    if($location.path() == "/") {
+        $("#subscribeModal").modal("show");
+    }
+
+    var orig_email = $scope.email;
+    $scope.dt = Date();
+    $scope.fn_subscribe = function() {
+        $http.post(
+            "./php/subscribe.php",
+                {'email': $scope.email, 'date_time': $scope.dt}
+            ).then(function(data) {
+                $scope.email = angular.copy(orig_email);
+                $scope.subscribeForm.$setUntouched();
+                $scope.successMessage = "Thanks for subscribing with us! We have sent our Corporate Training Brochure to your email. Have a nice day!!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
+            }, function(error) {
+                $scope.errorMessage = "An error occurred. Please try again!";
+        });
+    };
+    $scope.fn_reset = function() {
+        $scope.email = angular.copy(orig_email);
+        $scope.subscribeForm.$setUntouched();
     };
 }])
 

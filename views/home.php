@@ -27,7 +27,7 @@
 						<span class="sr-only">Previous</span>
                     </a>
                     <a class="right carousel-control" ng-click="slide('next')" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 						<span class="sr-only">Next</span>
                     </a>
 				</div>
@@ -114,7 +114,9 @@
                                         <img class="center-block" ng-src="./images/course-thumbnails/{{course.ccTrendingCoursesImage}}" alt="{{course.ccTrendingCoursesAlt}}">
                                         <div class="course-caption">
                                             <h4>{{course.ccTrendingCoursesTitle}}</h4>
-                                            <p clamp="2">{{course.ccTrendingCoursesDesc}}</p>
+                                            <p clamp="2">{{ course.ccTrendingCoursesDesc }}</p>
+                                            <p class="price-slider">{{ course.cctrendingCoursePrice | currency : currencySymbol : 0 }}</p>
+                                            <div class="clearfix"></div>
                                         </div>
                                     </div>
                                 </a>
@@ -370,24 +372,35 @@
             <!-- Subscribe -->
             <div class="row pt-50 pb-50">
                 <div class="container">
-                    <div class="subscribe-wrapper">
+                    <div class="subscribe-wrapper" ng-controller="subscribeCtrl">
                         <div class="subscribe-title col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <h2 class="text-center mt-10">Subscribe</h2>
                         </div>
                         <div class="subscribe-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <form novalidate name="subscribe" method="POST" enctype="application/x-www-form-urlencoded" id="subscribe" class="form form-horizontal" autocomplete="on">
+                            <form novalidate name="subscribeForm" method="POST" enctype="application/x-www-form-urlencoded" id="subscribe" class="form form-horizontal" autocomplete="on">
                                 <fieldset>
                                     <!-- <div class="col-lg-6"> -->
                                         <div class="input-group">
-                                            <input type="email" class="" placeholder="Enter your email to receive our newsletter...">
+                                            <input type="email" name="email" ng-model="email" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" placeholder="Enter your email here..." ng-required="true" />
+	        								<!-- <span class="validation_styles" ng-show="subscribeForm.email.$error.required && subscribeForm.email.$touched">* Email is required</span>
+    		    							<span class="validation_styles" ng-show="subscribeForm.email.$error.pattern && subscribeForm.email.$touched">* Please enter a valid email</span> -->
                                             <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button">Subscribe</button>
+                                                <button class="btn btn-subscribe transition" type="button" ng-disabled="subscribeForm.$invalid" ng-click="fn_subscribe()">Subscribe</button>
                                             </span>
                                         </div>
                                     <!-- </div> -->
                                 </fieldset>
                             </form>
                         </div>
+                        <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
+        <i class="fa fa-check" aria-labelled="true"></i> <span ng-bind="successMessage"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+        <i class="fa fa-times" aria-labelled="true"></i> <span ng-bind="errorMessage"></span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    </div>
+
                     </div>
                 </div>
             </div>

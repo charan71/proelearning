@@ -33,8 +33,7 @@
                                     <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
                                 </ul>
                                 <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li>{{ course.cc_info_tech_fees }}</li>
-                                    <!-- <li>{{ course.cc_info_tech_fees | currency: "&#x20B9;" : 0 }}</li> -->
+                                    <li>{{ course.cc_info_tech_fees | currency : currencySymbol : 0 }}</li>
                                 </ul>
                             </div>
                         </div>

@@ -8,7 +8,7 @@ angular.module('ProELearning.directives', [])
     link: function (scope, element) {
       var defaultOptions = {
           loop: false,
-          autoplay: true,
+        //   autoplay: true,
           autoplayHoverPause: true,
           autoplayTimeout: 2000,
           nav: true,

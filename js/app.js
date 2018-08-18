@@ -2,18 +2,17 @@
     "use strict";
 
 /* Creating Module */
-var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ngSanitize', 'ngStorage', 'ngCookies', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ProELearning.filters', 'ng-clamp', 'chart.js', 'ngCountryStateSelect'])
+var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ngSanitize', 'ngStorage', 'ngCookies', 'ngLocale', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ProELearning.filters', 'ng-clamp', 'chart.js', 'ngCountryStateSelect'])
 
 /* Resolve Views Scroll Point Issue */
 .run(['$rootScope', '$document', '$http', '$window',
-
-function($rootScope, $document, $http, $window) {
-    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+    function($rootScope, $document, $http, $window) {
+        $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
 
         $http.get("http://ipinfo.io/json")
         .then(function(response) {
             $rootScope.shortCountryCode = response.data.country;
-            $window.sessionStorage.setItem('shortCountryCode',response.data.country);
+            $window.sessionStorage.setItem('shortCountryCode', response.data.country);
         }, function(error) {
             $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
         });

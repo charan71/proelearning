@@ -42,7 +42,7 @@
                             <div class="form-group">
                                 <label for="email" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label>
                                 <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="Email ID" required />
+                                    <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="Email ID" />
 									<span class="validation_styles" ng-show="contactForm.email.$error.required && contactForm.email.$touched">* Email is required</span>
 									<span class="validation_styles" ng-show="contactForm.email.$error.pattern && contactForm.email.$touched">* Please enter a valid email</span>
                                 </div>

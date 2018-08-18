@@ -648,7 +648,7 @@ footer hr {
 .course-category div .course-thumbnail {
     background-color: #fff;
     width: 216px;
-    height: 230px;
+    height: 265px;
     border: none;
     box-shadow: 0 0 8px 0px #ddd;
 }
@@ -670,6 +670,12 @@ footer hr {
 }
 .course-caption p {
     color: dimgrey;
+}
+.price-slider {
+    color: #111 !important;
+    float: right;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 /* OwlCarousel CSS */
@@ -708,7 +714,7 @@ footer hr {
 }
 .owl-stage {
     padding-top: 1px;
-    height: 240px;
+    height: 275px;
 }
 .owl-carousel .item .course-thumbnail:hover {
     box-shadow: 0px 0px 10px 2px #ddd;
@@ -1537,6 +1543,54 @@ input, select, textarea {
     border: 0;
     border-radius: 0;
 }
+.error-modal {
+    width: 360px;
+    position: relative;
+    height: auto;
+    display: inline-block;
+    border: 0;
+    border-radius: 0;
+    border-radius: 20px;
+}
+.message-icon {
+    background-color: #f65656;
+    border-radius: 20px 20px 0 0;
+}
+.message-icon .fa {
+    display: block;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 50px;
+}
+.message {
+    color: #3b445f;
+    padding: 20px 40px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+}
+.message .modal-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+.message .btn-msg {
+    padding: 2px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: none;
+}
+.message .btn-err-msg {
+    background-color: #f65656;
+    color: #fff;
+    border: 1px solid #f65656;
+}
+.message .btn-err-msg:hover, .message .btn-err-msg:focus, .message .btn-err-msg:active {
+    background-color: #fff;
+    color: #f65656;
+    border: 1px solid #f65656;
+}
 .modal-close {
     padding: 10px !important;
     position: absolute;
@@ -1567,6 +1621,19 @@ input, select, textarea {
 .custom-modal-right .form-group {
     margin-bottom: 20px;
 }
+#subscribeModal .modal-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+#subscribeModal p {
+    margin-bottom: 30px;
+}
+#subscribeModal input {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 24px !important;
+    border-radius: 50px !important;
+}
 .btn-m:hover {
     box-shadow: 0px 0px 5px 5px #eee;
 }
@@ -1594,6 +1661,9 @@ input, select, textarea {
 @media (min-width: 768px) {
     .modal-dialog {
         width: 730px;
+    }
+    .modal-dialog.modal-sm {
+        width: 360px;
     }
 }
 /*-- //Modal Designs --*/
@@ -1628,7 +1698,16 @@ input, select, textarea {
 }
 /*-- //Bottom Bar --*/
 
-/*-- Subscribe --*/
+/*-- Subscribe Home Page --*/
+@media(min-width: 992px) {
+    .subscribe-wrapper {
+        background-image: url("../images/content-images/mail-box-small.png");
+        background-position: left;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+}
 .subscribe-form input {
     padding: 12px 10px;
     width: 100%;
@@ -1636,10 +1715,21 @@ input, select, textarea {
     border: 1px dashed #ccc;
     border-right: 0;
 }
-.subscribe-form button {
+.subscribe-form .btn-subscribe {
     background-color: #8bc34a;
     color: #fff;
-    padding: 14px;
+    padding: 14px 20px;
     border-color: #8bc34a;
 }
-/*-- //Subscribe --*/
+.subscribe-form .btn-subscribe:hover[disabled] {
+    background-color: #8bc34a;
+    color: #fff;
+}
+.subscribe-form .btn-subscribe:hover, .subscribe-form .btn-subscribe:focus, .subscribe-form .btn-subscribe:active {
+    background-color: #fff;
+    color: #8bc34a;
+    padding: 14px 20px;
+    border-color: #8bc34a;
+    box-shadow: none;
+}
+/*-- //Subscribe Home Page --*/
