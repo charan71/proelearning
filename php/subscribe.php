@@ -49,7 +49,7 @@
         if(mail($to, $subject, $message, $headers)) {
             session_start();
             $_SESSION['email'] = $email;
-            header('location:contact-form-email.php');
+            header('location:subscribe-email.php');
         }
 
         if(mysqli_query($conn, $query)) {

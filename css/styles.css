@@ -506,37 +506,11 @@ footer hr {
 }
 /* Footer Styles End */
 
-/* Brochure */
-.brochure {
-    right: 10px;
-    top: 50%;
-    position: fixed;
-    z-index: 999;
-    transform: scale(0,0);
-}
-.brochure > a {
-    display: inline-block;
-}
-.img-brochure {
-    width: 80px;
-    height: auto;
-    border: 5px solid #e0e0e0;
-    border-radius: 50%;
-}
-.popover {
-    box-shadow: none;
-    border: 5px solid #e0e0e0;
-}
-.arrow {
-    border: 5px solid #e0e0e0;
-}
-/* /Brochure */
-
 /* Bottom To Top Button Start */
 .bottom-to-top
 {
 	background: #8bc34a none repeat scroll 0 0;
-	right: 30px;
+	left: 30px;
 	bottom: 80px;
     transform: scale(0,0);
 	font-size: 28px;
@@ -587,6 +561,36 @@ footer hr {
     background-color: #f2f2f2;
 }
 
+/* Carousel */
+.carousel-control .fa.fa-angle-left, .carousel-control .icon-prev {
+    left: 50%;
+    margin-left: -10px;
+}
+.carousel-control .fa.fa-angle-right, .carousel-control .icon-next {
+    right: 50%;
+    margin-right: -10px;
+}
+.carousel-control .fa.fa-angle-left, .carousel-control .fa.fa-angle-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+@media screen and (min-width: 768px) {
+    .carousel-control .fa.fa-angle-left, .carousel-control .fa.fa-angle-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+        width: 30px;
+        height: 30px;
+        margin-top: -10px;
+        font-size: 30px;
+    }
+    .carousel-control .fa.fa-angle-left, .carousel-control .icon-prev {
+        margin-left: -10px;
+    }
+    .carousel-control .fa.fa-angle-right, .carousel-control .icon-next {
+        margin-right: -10px;
+    }
+}
 .carousel-control.left, .carousel-control.right {
     background-image: none;
 }
@@ -674,7 +678,7 @@ footer hr {
 .price-slider {
     color: #111 !important;
     float: right;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -1543,7 +1547,8 @@ input, select, textarea {
     border: 0;
     border-radius: 0;
 }
-.error-modal {
+/* Message Modal */
+.msg-modal {
     width: 360px;
     position: relative;
     height: auto;
@@ -1552,8 +1557,12 @@ input, select, textarea {
     border-radius: 0;
     border-radius: 20px;
 }
-.message-icon {
+.error-modal .message-icon {
     background-color: #f65656;
+    border-radius: 20px 20px 0 0;
+}
+.success-modal .message-icon {
+    background-color: #66BB6A;
     border-radius: 20px 20px 0 0;
 }
 .message-icon .fa {
@@ -1581,16 +1590,27 @@ input, select, textarea {
     border-radius: 30px;
     box-shadow: none;
 }
-.message .btn-err-msg {
+.error-modal .message .btn-err-msg {
     background-color: #f65656;
     color: #fff;
     border: 1px solid #f65656;
 }
-.message .btn-err-msg:hover, .message .btn-err-msg:focus, .message .btn-err-msg:active {
+.error-modal .message .btn-err-msg:hover, .error-modal .message .btn-err-msg:focus, .error-modal .message .btn-err-msg:active {
     background-color: #fff;
     color: #f65656;
     border: 1px solid #f65656;
 }
+.success-modal .message .btn-success-msg {
+    background-color: #66BB6A;
+    color: #fff;
+    border: 1px solid #66BB6A;
+}
+.success-modal .message .btn-success-msg:hover, .success-modal .message .btn-success-msg:focus, .success-modal .message .btn-success-msg:active {
+    background-color: #fff;
+    color: #66BB6A;
+    border: 1px solid #66BB6A;
+}
+/* Message Modal */
 .modal-close {
     padding: 10px !important;
     position: absolute;
@@ -1674,7 +1694,7 @@ input, select, textarea {
     color: #fff;
     width: 100%;
     position: fixed;
-    bottom: 0;
+    bottom: -41px;
     border-top: 1px solid #111;
     z-index: 1030;
 }
@@ -1733,3 +1753,18 @@ input, select, textarea {
     box-shadow: none;
 }
 /*-- //Subscribe Home Page --*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

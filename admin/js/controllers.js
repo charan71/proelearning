@@ -174,6 +174,22 @@ angular.module('controllers', ['ngRoute'])
     })
 }])
 
+// Subscribers List
+.controller("subscribersList", ['$scope', '$http', function($scope, $http) {
+    $scope.subscribers = [];
+    $http({
+        url: "./php/subscribers-list.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.subscribers = response.data;
+    })
+}])
+
 // Course Upload List
 .controller("courseUploadCtrl", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
     var orig_courseName = $scope.courseName;

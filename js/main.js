@@ -1,83 +1,29 @@
-/* Initialize AOS */
+(function() {
+	"use strict";
+	/* Initialize AOS */
 
 jQuery(document).ready(function () {
-	/* Navbar Auto-Collapse In Responsive Mode */
+	/*-- Navbar Auto-Collapse In Responsive Mode --*/
 	$(".navbar-nav li a").click(function(event) {
 		$(".navbar-collapse").collapse("hide");
 	});
 	
-    /* Registration Tabs 
-    $("#register-tabs a").click(function (e) {
-        e.preventDefault()
-        $(this).tab("show")
-    });*/
-	
-	/* Testimonials Slider Customized Options */
-	
-    
-	/* Dropdown Hover 
-	$(".dropdown").mouseenter(function()
-	{
-		$(this).addClass("open");
-	});
-	$(".dropdown").mouseleave(function()
-	{
-		$(this).removeClass("open");
-	});*/
-	
-	
 	$(window).on("scroll", function () {
-		/* Bottom to Top Button Display On Scroll */
+		/*-- Bottom to Top Button Display On Scroll --*/
 		if ($(document).scrollTop() > 400) {
 			$(".bottom-to-top").css("transform", "scale(1,1)");
 		} else {
 			$(".bottom-to-top").css("transform", "scale(0,0)");
 		}
 
-		/* Brochure Display on Scroll */
-		if ($(document).scrollTop() > 300) {
-			$(".brochure").css("transform", "scale(1,1)");
+		/*-- Bottom Bar Show/Hide on Scroll --*/
+		if ($(document).scrollTop() > 50) {
+			$(".bottom-bar").css("bottom","0");
 		} else {
-			$(".brochure").css("transform", "scale(0,0)");
+			$(".bottom-bar").css("bottom","-41px");
 		}
-	});
-	
-	/* Dynamic Breadcrumbs 
-	$(".items a").on("click",function(){
-		var $this = $(this),
-			$bc = $("<div class='item'></div>");
-		
-		$this.parents("li").each(function(n, li){
-			var $a = $(li).children("a").clone();
-			$bc.prepend(" / ",$a);
-		});
-		$(".breadcrumb").html($bc.prepend("<a href='#!home'>Home</a>"));
-		return false;
-	});
-	*/
-    
+	});    
     
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}(jQuery));

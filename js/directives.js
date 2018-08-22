@@ -8,7 +8,7 @@ angular.module('ProELearning.directives', [])
     link: function (scope, element) {
       var defaultOptions = {
           loop: false,
-        //   autoplay: true,
+          autoplay: true,
           autoplayHoverPause: true,
           autoplayTimeout: 2000,
           nav: true,
@@ -219,5 +219,18 @@ angular.module('ProELearning.directives', [])
     }
 })
 /*-- //Tooltips --*/
+
+/*-- Disable Cut, Copy, Paste --*/
+.directive("disableContextmenuCutCopyPaste", function() {
+    return {
+        restrict: 'A',
+        scope: {},
+        link: function(scope, element) {
+            element.on('cut copy paste contextmenu', function(event) {
+                event.preventDefault();
+            });
+        }
+    };
+})
 
 ;

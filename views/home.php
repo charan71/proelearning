@@ -23,11 +23,11 @@
 					
 					<!-- Carousel Controls Starts Here -->
                     <a class="left carousel-control" ng-click="slide('prev')" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <i class="fa fa-angle-left" aria-labelled="true"></i>
 						<span class="sr-only">Previous</span>
                     </a>
                     <a class="right carousel-control" ng-click="slide('next')" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i class="fa fa-angle-right" aria-labelled="true"></i>
 						<span class="sr-only">Next</span>
                     </a>
 				</div>
@@ -53,7 +53,7 @@
                 <div class="container">
                     <h1 class="text-center">Choose your right choice</h1>
                 </div>
-                <div class="tree-container">
+                <div class="tree-container hidden-xs hidden-sm">
                     <div class="overview-tree-1"></div>
                     <div class="overview-tree-2"></div>
                 </div>
@@ -115,7 +115,7 @@
                                         <div class="course-caption">
                                             <h4>{{course.ccTrendingCoursesTitle}}</h4>
                                             <p clamp="2">{{ course.ccTrendingCoursesDesc }}</p>
-                                            <p class="price-slider">{{ course.cctrendingCoursePrice | currency : currencySymbol : 0 }}</p>
+                                            <p class="price-slider">{{ course.ccTrendingCoursePrice | currency : currencySymbol : 0 }}</p>
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -353,7 +353,7 @@
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">No.of Courses</h4>
                             <div class="stats-num">
-                                <span animate-numbers>80</span>+
+                                <span animate-numbers>90</span>+
                             </div>
                         </div>
                     </div>
@@ -379,7 +379,6 @@
                         <div class="subscribe-form col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <form novalidate name="subscribeForm" method="POST" enctype="application/x-www-form-urlencoded" id="subscribe" class="form form-horizontal" autocomplete="on">
                                 <fieldset>
-                                    <!-- <div class="col-lg-6"> -->
                                         <div class="input-group">
                                             <input type="email" name="email" ng-model="email" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" placeholder="Enter your email here..." ng-required="true" />
 	        								<!-- <span class="validation_styles" ng-show="subscribeForm.email.$error.required && subscribeForm.email.$touched">* Email is required</span>
@@ -388,19 +387,17 @@
                                                 <button class="btn btn-subscribe transition" type="button" ng-disabled="subscribeForm.$invalid" ng-click="fn_subscribe()">Subscribe</button>
                                             </span>
                                         </div>
-                                    <!-- </div> -->
                                 </fieldset>
                             </form>
                         </div>
                         <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
-        <i class="fa fa-check" aria-labelled="true"></i> <span ng-bind="successMessage"></span>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    </div>
-    <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
-        <i class="fa fa-times" aria-labelled="true"></i> <span ng-bind="errorMessage"></span>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    </div>
-
+                            <i class="fa fa-check" aria-labelled="true"></i> <span ng-bind="successMessage"></span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+                            <i class="fa fa-times" aria-labelled="true"></i> <span ng-bind="errorMessage"></span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -447,7 +444,7 @@
                                 <div class="row">
                                     <img ng-src="./images/testimonials-person/{{item.t_image}}">
                                     <p class="testimonial-quote">{{item.t_desc}}</p>
-                                    <p class="testimonial-person">&#x2015; <span class="testimonial-name">{{item.t_name}}</span>, <span class="testimonial-company">{{item.t_company}}</span></p>
+                                    <p class="testimonial-person">&#x2015; <span class="testimonial-name">{{item.t_name}}</span>, <span class="testimonial-company">{{item.t_company}}</span>, <span class="testimonial-company">{{item.t_role}}</span></p>
                                 </div>
                             </div>
                         </div>
