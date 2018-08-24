@@ -16,94 +16,25 @@
     </div>
 
     <!-- Courses List Display -->
-    <div class="row">
+    <div class="row" ng-controller="CourseCardsController">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <div class="course-strip mb-20">
-                <a ng-href="hyperion/hpcm">
+            <div class="course-strip mb-20" ng-repeat="course in ccHyperion">
+                <a ng-href="{{ course.ccHyperionURL }}">
                     <div class="course-strip-inner transition">
                         <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/hpcm.jpg">
+                            <img class="img-responsive" src="./images/course-thumbnails/{{ course.ccHyperionImage }}" alt="{{ course.ccHyperionAlt }}">
                         </div>
                         <div class="course-info">
-                            <h3 class="mt-10">HPCM</h3>
-                            <p clamp="1">HPCM is a Profitability and Cost Management software.</p>
+                            <h3 class="mt-10">{{ course.ccHyperionTitle }}</h3>
+                            <p clamp="1">{{ course.ccHyperionDesc }}</p>
                             <div class="course-dtls">
                                 <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: {{ course.ccHyperionDuration }}h</li>
                                     <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="hyperion/hyperion-epm">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/hyperion-epm.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">Hyperion EPM</h3>
-                            <p clamp="1">Hyperion EPM is a Enterprise Performance Management software.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li>{{ course.ccHyperionPrice | currency : currencySymbol : 0 }}</li>
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="hyperion/hyperion-essbase">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/hyperion-essbase.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">Hyperion Essbase</h3>
-                            <p clamp="1">Hyperion Essbase is a multi-dimensional database management system which provides a multi-dimensional database platform upon which to build analytic applications.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
-                                </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="hyperion/hyperion-financial-management">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/hyperion-financial-management.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">Hyperion Financial Management</h3>
-                            <p clamp="1">Hyperion Financial Management is a comprehensive, Web-based application that delivers global financial consolidation, reporting and analysis in a single, highly scalable software solution.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
-                                </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -113,61 +44,3 @@
         </div>
     </div>
 </div>
-
-    <!-- <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="hyperion/hpcm">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/hpcm.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>HPCM</h4>
-                        <p clamp="2">HPCM is a Profitability and Cost Management software.</p>
-                        <a ng-href="hyperion/hpcm" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="hyperion/hyperion-epm">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/hyperion-epm.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Hyperion EPM</h4>
-                        <p clamp="2">Hyperion EPM is a Enterprise Performance Management software.</p>
-                        <a ng-href="hyperion/hyperion-epm" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="hyperion/hyperion-essbase">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/hyperion-essbase.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Hyperion Essbase</h4>
-                        <p clamp="2">Hyperion Essbase is a multi-dimensional database management system which provides a multi-dimensional database platform upon which to build analytic applications.</p>
-                        <a ng-href="hyperion/hyperion-essbase" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="hyperion/hyperion-financial-management">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/hyperion-financial-management.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Hyperion Financial Management</h4>
-                        <p clamp="2">Hyperion Financial Management is a comprehensive, Web-based application that delivers global financial consolidation, reporting and analysis in a single, highly scalable software solution.</p>
-                        <a ng-href="hyperion/hyperion-financial-management" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-3 col-sm-hidden col-xs-hidden">
-            <h4 class="text-center">New Demos</h4>
-        </div>
-    </div> -->
-        

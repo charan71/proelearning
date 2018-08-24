@@ -16,48 +16,25 @@
     </div>
 
     <!-- Courses List Display -->
-    <div class="row">
+    <div class="row" ng-controller="CourseCardsController">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <div class="course-strip mb-20">
-                <a ng-href="mobile-apps/android">
+            <div class="course-strip mb-20" ng-repeat="course in ccMobileApps">
+                <a ng-href="{{ course.ccMobileAppsURL }}">
                     <div class="course-strip-inner transition">
                         <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/android.jpg">
+                            <img class="img-responsive" src="./images/course-thumbnails/{{ course.ccMobileAppsImage }}">
                         </div>
                         <div class="course-info">
-                            <h3 class="mt-10">Android</h3>
-                            <p clamp="1">Android is a software package and linux based operating system for mobile devices such as tablet computers and smartphones.</p>
+                            <h3 class="mt-10">{{ course.ccMobileAppsTitle }}</h3>
+                            <p clamp="1">{{ course.ccMobileAppsDesc }}</p>
                             <div class="course-dtls">
                                 <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: {{ course.ccMobileAppsDuration }}h</li>
                                     <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="mobile-apps/ios">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/ios.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">iOS</h3>
-                            <p clamp="1">iOS is designed to be simple and easy to use, it does not include several features found in a traditional operating system.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li>{{ course.ccMobileAppsPrice | currency : currencySymbol : 0 }}</li>
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -67,37 +44,3 @@
         </div>
     </div>
 </div>
-
-    <!-- <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="mobile-apps/android">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/android.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Android</h4>
-                        <p clamp="2">No. 1 mobile application development.</p>
-                        <a ng-href="mobile-apps/android" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="mobile-apps/ios">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/ios.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>iOS</h4>
-                        <p clamp="2">World's No. 1 mobile application development.</p>
-                        <a ng-href="mobile-apps/ios" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-3 col-sm-hidden col-xs-hidden">
-            <h4 class="text-center">New Demos</h4>
-        </div>
-    </div> -->
-        

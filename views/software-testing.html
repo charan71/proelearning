@@ -16,117 +16,25 @@
     </div>
 
     <!-- Courses List Display -->
-    <div class="row">
+    <div class="row" ng-controller="CourseCardsController">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <div class="course-strip mb-20">
-                <a ng-href="software-testing/perfecto">
+            <div class="course-strip mb-20" ng-repeat="course in ccSoftTesting">
+                <a ng-href="{{ course.ccSoftTestingURL }}">
                     <div class="course-strip-inner transition">
                         <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/perfecto.jpg">
+                            <img class="img-responsive" src="./images/course-thumbnails/{{ course.ccSoftTestingImage }}" alt="{{ course.ccSoftTestingAlt }}">
                         </div>
                         <div class="course-info">
-                            <h3 class="mt-10">Perfecto</h3>
-                            <p clamp="1">Perfecto is used as a mobile testing tool.</p>
+                            <h3 class="mt-10">{{ course.ccSoftTestingTitle }}</h3>
+                            <p clamp="1">{{ course.ccSoftTestingDesc }}</p>
                             <div class="course-dtls">
                                 <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: {{ course.ccSoftTestingDuration }}h</li>
                                     <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="software-testing/loadrunner">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/loadrunner.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">LoadRunner</h3>
-                            <p clamp="1">LoadRunner is a performance testing tool which is leading in the market.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li>{{ course.ccSoftTestingPrice | currency : currencySymbol : 0 }}</li>
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="software-testing/selenium">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/selenium.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">Selenium</h3>
-                            <p clamp="1">Selenium is a functional testing framework which is a free-ware licensed by Apache.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
-                                </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="software-testing/etl-testing">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/etl-testing.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">ETL Testing</h3>
-                            <p clamp="1">ETL Testing is a process of how data is loaded from the source system to the data warehouse.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
-                                </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="software-testing/web-app-penetration-testing">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/web-app-penetration-testing.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">Web Application Penetration Testing</h3>
-                            <p clamp="1">Checking for vulnerabilities when accessing the websites using Web Application Penetration Testing.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
-                                </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -136,73 +44,3 @@
         </div>
     </div>
 </div>
-
-    <!-- <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="software-testing/perfecto">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/perfecto.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Perfecto</h4>
-                        <p clamp="2">Perfecto is used as a mobile testing tool.</p>
-                        <a ng-href="software-testing/perfecto" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="software-testing/loadrunner">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/loadrunner.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>LoadRunner</h4>
-                        <p clamp="2">LoadRunner is a performance testing tool which is leading in the market.</p>
-                        <a ng-href="software-testing/loadrunner" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="software-testing/selenium">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/selenium.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Selenium</h4>
-                        <p clamp="2">Selenium is a functional testing framework which is a free-ware licensed by Apache.</p>
-                        <a ng-href="software-testing/selenium" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="software-testing/etl-testing">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/etl-testing.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>ETL Testing</h4>
-                        <p clamp="2">ETL Testing is a process of how data is loaded from the source system to the data warehouse.</p>
-                        <a ng-href="software-testing/etl-testing" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="software-testing/web-app-penetration-testing">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/web-app-penetration-testing.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>Web Application Penetration Testing</h4>
-                        <p clamp="2">Checking for vulnerabilities when accessing the websites using Web Application Penetration Testing.</p>
-                        <a ng-href="software-testing/web-app-penetration-testing" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-3 col-sm-hidden col-xs-hidden">
-            <h4 class="text-center">New Demos</h4>
-        </div>
-    </div> -->
-        

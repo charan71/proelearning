@@ -29,7 +29,7 @@
     {"course":"itilv3", "IN":"25000", "others":"550"},
 
     {"course":"ui-development", "IN":"25000", "others":"550"},
-    {"course":"angular", "IN":"25000", "others":"600"},
+    {"course":"angular4", "IN":"25000", "others":"600"},
     {"course":"php", "IN":"25000", "others":"560"},
 
     {"course":"blueprism", "IN":"25000", "others":"600"},
@@ -63,7 +63,7 @@
     {"course":"informatica", "IN":"25000", "others":"600"},
     {"course":"informatica-mdm", "IN":"25000", "others":"600"},
 
-    {"course":"jbpl", "IN":"25000", "others":"580"},
+    {"course":"jbpm", "IN":"25000", "others":"580"},
     {"course":"pega6", "IN":"25000", "others":"600"},
     {"course":"pega7", "IN":"25000", "others":"600"},
     {"course":"business-analyst", "IN":"25000", "others":"550"},
@@ -84,7 +84,7 @@
     {"course":"etl-testing", "IN":"25000", "others":"560"},
     {"course":"wapt", "IN":"25000", "others":"560"},
 
-    {"course":"hpsm", "IN":"25000", "others":"560"},
+    {"course":"hpcm", "IN":"25000", "others":"560"},
     {"course":"hepm", "IN":"25000", "others":"560"},
     {"course":"h-essbase", "IN":"25000", "others":"560"},
     {"course":"hfm", "IN":"25000", "others":"560"},
@@ -95,7 +95,7 @@
 
     {"course":"oracle-adf", "IN":"25000", "others":"560"},
     {"course":"oracle-dba", "IN":"25000", "others":"560"},
-    {"course":"oracle-developer", "IN":"25000", "others":"560"},
+    {"course":"oracle-developer", "IN":"25000", "others":"600"},
     {"course":"oracle-ebs", "IN":"25000", "others":"560"},
     {"course":"oracle-golden-gate", "IN":"25000", "others":"560"},
     {"course":"oracle-soa", "IN":"25000", "others":"560"},
