@@ -45,7 +45,7 @@
                                 <td>{{ student.qualification }}</td>
                                 <td>{{ student.occupation }}</td>
                                 <td>{{ student.course }}</td>
-                                <td>{{ student.message }}</td>
+                                <td>{{ student.message | defaultValueFilter }}</td>
                                 <td>{{ student.date_time }}</td>
                             </tr>
                         </tbody>

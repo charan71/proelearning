@@ -14,56 +14,49 @@
 				</div>
 			</div>
 			<div class="custom-modal-right">
-				<div class="col-xs-12 col-sm-12">
+				<div class="col-xs-12 col-sm-12 form-lg-wrap">
 					<h4 class="modal-title text-center mb-20">Suggest a New Course</h4>
 					<form novalidate name="courseSuggestionForm" method="POST" enctype="application/x-www-form-urlencoded" id="courseSuggestionForm" class="form form-horizontal" autocomplete="on">
 						<fieldset>
-							<div class="form-group">
-								<!-- <label for="name" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Full Name</label> -->
-								<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" placeholder="* Full Name" />
-									<br>
-									<span class="validation_styles" ng-show="courseSuggestionForm.name.$error.required && courseSuggestionForm.name.$touched">* Full Name is required<br></span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.name.$error.pattern && courseSuggestionForm.name.$invalid">* Full Name should contain only alphabets, dots and spaces.<br></span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.name.$error.minlength && courseSuggestionForm.name.$touched">* Full Name should be minimum of 3 characters<br></span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.name.$error.maxlength && courseSuggestionForm.name.$touched">* Full Name should be maximum of 40 characters</span>
-								</div>
+							<div class="placeholder-wrap form-control-wrapper">
+								<input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" />
+                                <div class="floating-label">Full Name *</div>
+                                <div class="floating-label-border"></div>
+								<span class="validation_styles" ng-show="courseSuggestionForm.name.$error.required && courseSuggestionForm.name.$touched">Full Name is required *<br></span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.name.$error.pattern && courseSuggestionForm.name.$invalid">Full Name should contain only alphabets, dots and spaces *<br></span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.name.$error.minlength && courseSuggestionForm.name.$touched">Full Name should be minimum of 3 characters *<br></span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.name.$error.maxlength && courseSuggestionForm.name.$touched">Full Name should be maximum of 40 characters *</span>
 							</div>
-							<div class="form-group">
-								<!-- <label for="email" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label> -->
-								<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="* Email" required />
-									<span class="validation_styles" ng-show="courseSuggestionForm.email.$error.required && courseSuggestionForm.email.$touched">* Email address is required</span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.email.$error.pattern && courseSuggestionForm.email.$touched">* Please enter a valid email address</span>
-								</div>
+							<div class="placeholder-wrap form-control-wrapper">
+								<input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" />
+                                <div class="floating-label">Email *</div>
+                                <div class="floating-label-border"></div>
+								<span class="validation_styles" ng-show="courseSuggestionForm.email.$error.required && courseSuggestionForm.email.$touched">Email address is required *</span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.email.$error.pattern && courseSuggestionForm.email.$touched">Please enter a valid email address *</span>
 							</div>
-							<div class="form-group">
-								<!-- <label for="phone" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Phone</label> -->
-								<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" placeholder="* Phone" />
-									<span class="validation_styles" ng-show="courseSuggestionForm.phone.$error.required && courseSuggestionForm.phone.$touched">* Phone number required<br></span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.phone.$error.pattern && courseSuggestionForm.phone.$touched">* Please enter a valid phone number</span>
-								</div>
+							<div class="placeholder-wrap form-control-wrapper">
+								<input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" />
+                                <div class="floating-label">Phone *</div>
+                                <div class="floating-label-border"></div>
+								<span class="validation_styles" ng-show="courseSuggestionForm.phone.$error.required && courseSuggestionForm.phone.$touched">Phone number required *<br></span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.phone.$error.pattern && courseSuggestionForm.phone.$touched">Please enter a valid phone number *</span>
 							</div>
-							<div class="form-group">
-								<!-- <label for="course-name" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Course Name</label> -->
-								<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<input type="text" name="courseName" ng-model="courseName" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9. ]{1,40}$/" class="form-control" id="course-name" placeholder="* Course Name" />
-									<br>
-									<span class="validation_styles" ng-show="courseSuggestionForm.courseName.$error.required && courseSuggestionForm.courseName.$touched">* Course Name is required<br></span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.courseName.$error.pattern && courseSuggestionForm.courseName.$invalid">* Course Name should contain only alphabets, numbers, dots and spaces.<br></span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.courseName.$error.minlength && courseSuggestionForm.courseName.$touched">* Course Name should be minimum of 3 characters<br></span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.courseName.$error.maxlength && courseSuggestionForm.courseName.$touched">* Course Name should be maximum of 40 characters</span>
-								</div>
+							<div class="placeholder-wrap form-control-wrapper">
+								<input type="text" name="courseName" ng-model="courseName" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z0-9. ]{1,40}$/" class="form-control" id="course-name" />
+                                <div class="floating-label">Course Name *</div>
+                                <div class="floating-label-border"></div>
+								<span class="validation_styles" ng-show="courseSuggestionForm.courseName.$error.required && courseSuggestionForm.courseName.$touched">Course Name is required *<br></span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.courseName.$error.pattern && courseSuggestionForm.courseName.$invalid">Course Name should contain only alphabets, numbers, dots and spaces *<br></span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.courseName.$error.minlength && courseSuggestionForm.courseName.$touched">Course Name should be minimum of 3 characters *<br></span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.courseName.$error.maxlength && courseSuggestionForm.courseName.$touched">Course Name should be maximum of 40 characters *</span>
 							</div>
-                   		    <div class="form-group">
-								<!-- <label for="message" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label">Message</label> -->
-                   	            <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<textarea ng-model="message" ng-required="true" ng-minlength="10" ng-maxlength="250" class="form-control" rows="5" name="message" id="message" placeholder="* Message..."></textarea>
-									<span class="validation_styles" ng-show="courseSuggestionForm.message.$error.required && courseSuggestionForm.message.$touched">* Message is required<br></span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.message.$error.minlength && courseSuggestionForm.message.$touched">* Message should be minium of 10 characters</span>
-									<span class="validation_styles" ng-show="courseSuggestionForm.message.$error.maxlength && courseSuggestionForm.message.$touched">* Message should be maximum of 250 characters</span>
-               		            </div>
+							<div class="placeholder-wrap form-control-wrapper">
+								<textarea ng-model="message" ng-required="true" ng-minlength="10" ng-maxlength="250" class="form-control" rows="5" name="message" id="message"></textarea>
+								<div class="floating-label">Message *</div>
+								<div class="floating-label-border"></div>
+								<span class="validation_styles" ng-show="courseSuggestionForm.message.$error.required && courseSuggestionForm.message.$touched">Message is required *<br></span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.message.$error.minlength && courseSuggestionForm.message.$touched">Message should be minium of 10 characters *</span>
+								<span class="validation_styles" ng-show="courseSuggestionForm.message.$error.maxlength && courseSuggestionForm.message.$touched">Message should be maximum of 250 characters *</span>
                		        </div>
 							<button type="submit" class="btn-m btn-modal transition" id="submit" name="insertContact" ng-disabled="courseSuggestionForm.$invalid" ng-click="fn_courseSuggestion()">Submit</button>
 							<button type="reset" class="btn-m btn-modal-inverse transition" ng-click="fn_reset()">Cancel</button>
@@ -176,26 +169,28 @@
 		<div class="modal-content custom-modal">
 			<button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">✖</button>
 			<div class="custom-modal-left hidden-xs hidden-sm">
-				<div class="custom-modal-txt">
+				<div class="custom-modal-img">
 					<img src="./images/content-images/mail-box.png" class="img-responsive center-block">
 				</div>
 			</div>
 			<div class="custom-modal-right">
 				<div class="col-xs-12 col-sm-12 mt-20 mb-20">
 					<h4 class="modal-title text-center mb-20">Subscribe!</h4>
-					<p>Send your email to receive our weekly updates and we will send an email with our Corporate Training brochure.</p>
+					<p>Send your email to receive our weekly updates and our Corporate Training brochure.</p>
 					<form novalidate name="subscribeForm" method="POST" enctype="application/x-www-form-urlencoded" id="subscribeForm" class="form form-horizontal" autocomplete="on">
 						<fieldset>
-							<div class="form-group">
-								<!-- <label for="email" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label> -->
+							<div class="">
 								<div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-									<input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="* Email" required />
-									<span class="validation_styles" ng-show="subscribeForm.email.$error.required && subscribeForm.email.$touched">* Email address is required</span>
-									<span class="validation_styles" ng-show="subscribeForm.email.$error.pattern && subscribeForm.email.$touched">* Please enter a valid email address</span>
+									<input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="Email *" required />
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="submit" id="submit" name="insertContact" ng-disabled="subscribeForm.$invalid" ng-click="fn_subscribe()">
+											<i class="fa fa-paper-plane" aria-hidden="true"></i>
+										</button>
+									</span>
 								</div>
+								<span class="validation_styles" ng-show="subscribeForm.email.$error.required && subscribeForm.email.$touched">Please provide your email address *</span>
+								<span class="validation_styles" ng-show="subscribeForm.email.$error.pattern && subscribeForm.email.$touched">Please enter a valid email address *</span>
 							</div>
-							<button type="submit" class="btn-m btn-modal transition" id="submit" form="subscribeForm" name="insertContact" ng-disabled="subscribeForm.$invalid" ng-click="fn_subscribe()">Submit</button>
-							<button type="reset" class="btn-m btn-modal-inverse transition" form="subscribeForm" ng-click="fn_reset()">Cancel</button>
                		    </fieldset>
                    	</form>
 				</div>
@@ -212,37 +207,3 @@
     </div>
 </modal>
 <!-- //Subscribe Modal -->
-
-<!-- Error Message Modal -->
-<modal id="errorMessageModal" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm" role="document">
-		<div class="modal-content msg-modal error-modal">
-			<div class="message-icon">
-				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-			</div>
-			<div class="message">
-				<h4 class="modal-title text-center mb-20">Error!</h4>
-				<p>An error occurred while performing some actions.</p>
-				<button type="button" class="btn-msg btn-err-msg transition" data-dismiss="modal">Close</button>
-			</div>
-        </div>
-    </div>
-</modal>
-<!-- //Error Message Modal -->
-
-<!-- Success Message Modal -->
-<modal id="successMessageModal" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-sm" role="document">
-		<div class="modal-content msg-modal success-modal">
-			<div class="message-icon">
-				<i class="fa fa-check-circle" aria-hidden="true"></i>
-			</div>
-			<div class="message">
-				<h4 class="modal-title text-center mb-20">Success!</h4>
-				<p>Thanks for subscribing with Pro-elearning! Our technical team will reach you shortly. We have sent to a mail with our Corporate Training Brochure.</p>
-				<button type="button" class="btn-msg btn-success-msg transition" data-dismiss="modal">Close</button>
-			</div>
-        </div>
-    </div>
-</modal>
-<!-- //Success Message Modal -->

@@ -14,7 +14,6 @@ angular.module('ProELearning.directives', [])
           nav: true,
           rewind: true,
           margin: 10,
-          pagination: false,
           navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
           dots: false,
           navSpeed: 300,
@@ -42,6 +41,47 @@ angular.module('ProELearning.directives', [])
                   items: 6
               }
         }
+      };
+      scope.initCarousel = function(element) {
+/*
+         provide any default options you want
+
+        var customOptions = scope.$eval(jQuery(element).attr('data-options'));
+         combine the two options objects
+        for(var key in customOptions) {
+          defaultOptions[key] = customOptions[key];
+        }
+*/
+        //  init carousel
+         jQuery(element).owlCarousel(defaultOptions);
+      };
+      // scope.$on('owlCarouselLoaded', function() {
+        $timeout(function(){
+          jQuery(element).owlCarousel(defaultOptions)
+          scope.initCarousel();
+        }, 0, false);
+      // });
+    }
+  };
+}])
+
+.directive('owlCarouselTestimonials', [ '$timeout', function($timeout) {
+  return {
+    restrict: 'E',
+    transclude: false,
+    link: function (scope, element) {
+      var defaultOptions = {
+          loop: false,
+          autoplay: true,
+          autoplayHoverPause: true,
+          autoplayTimeout: 2000,
+          nav: false,
+          rewind: true,
+          margin: 0,
+        //   dots: true,
+        //   dotsContainer: true,
+          navSpeed: 300,
+          items: 1,
       };
       scope.initCarousel = function(element) {
 /*
@@ -231,6 +271,52 @@ angular.module('ProELearning.directives', [])
             });
         }
     };
+})
+
+/*-- Slidable Content --*/
+.directive('slideable', function () {
+    return {
+        restrict:'C',
+        compile: function (element, attr) {
+            // wrap tag
+            var contents = element.html();
+            element.html('<div class="slideable_content" style="margin:0 !important; padding:0 !important" >' + contents + '</div>');
+
+            return function postLink(scope, element, attrs) {
+                // default properties
+                attrs.duration = (!attrs.duration) ? '1s' : attrs.duration;
+                attrs.easing = (!attrs.easing) ? 'ease-in-out' : attrs.easing;
+                element.css({
+                    'overflow': 'hidden',
+                    'height': '150px',
+                    'transitionProperty': 'height',
+                    'transitionDuration': attrs.duration,
+                    'transitionTimingFunction': attrs.easing
+                });
+            };
+        }
+    };
+})
+.directive('slideToggle', function() {
+    return {
+        restrict: 'A',
+        link: function(scope, element, attrs) {
+            var target = document.querySelector(attrs.slideToggle);
+            attrs.expanded = false;
+            element.bind('click', function() {
+                var content = target.querySelector('.slideable_content');
+                if(!attrs.expanded) {
+                    content.style.border = '1px solid rgba(0,0,0,0)';
+                    var y = content.clientHeight + 40;
+                    content.style.border = 0;
+                    target.style.height = y + 'px';
+                } else {
+                    target.style.height = '150px';
+                }
+                attrs.expanded = !attrs.expanded;
+            });
+        }
+    }
 })
 
 ;

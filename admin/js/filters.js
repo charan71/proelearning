@@ -10,11 +10,26 @@ angular.module("filters", [])
 		} else if (input == "O") {
 			output = "Others";
 		} else {
-			output = "-NA-";
+			output = "-- NA --";
 		}
 		return output;
 	};
 	return genderFilter;
+})
+
+.filter("defaultValueFilter", function() {
+	var defaultValueFilter = function(input) {
+		var output = "";
+		if(input == "") {
+			output = "-- NA --";
+		} else if (input == "undefined") {
+			output = "-- NA --";
+		} else {
+			output = input;
+		}
+		return output;
+	};
+	return defaultValueFilter;
 })
 
 ;

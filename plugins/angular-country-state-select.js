@@ -290,7 +290,7 @@ angular.module('ngCountryStateSelect', [])
                 'class="form-control" ',
                 'ng-options="fam for fam in cc.country" ',
                 'ng-required="true"> ',
-                '<option value="">-- Select Your Country --</option> ',
+                '<option value=""></option> ',
                 '</select>'
             ].join(''),
             link: function(scope, element, attrs, ctrl) {
@@ -343,7 +343,7 @@ angular.module('ngCountryStateSelect', [])
                 'ng-disabled="!country" ',
                 'ng-options="fam for fam in sc.state" ',
                 'ng-required="true"> ',
-                '<option value="">-- Select Your State --</option> ',
+                '<option value=""></option> ',
                 '</select>'
             ].join(''),
             link: function(scope, element, attrs, ctrl) {

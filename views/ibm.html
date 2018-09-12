@@ -16,71 +16,25 @@
     </div>
 
     <!-- Courses List Display -->
-    <div class="row">
+    <div class="row" ng-controller="CourseCardsController">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <div class="course-strip mb-20">
-                <a ng-href="ibm/webfocus">
+            <div class="course-strip mb-20" ng-repeat="course in ccIbm">
+                <a ng-href="{{ course.ccIbmURL }}">
                     <div class="course-strip-inner transition">
                         <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/webfocus.jpg">
+                            <img class="img-responsive" src="./images/course-thumbnails/{{ course.ccIbmImage }}" alt="{{ course.ccIbmAlt }}">
                         </div>
                         <div class="course-info">
-                            <h3 class="mt-10">WebFocus</h3>
-                            <p clamp="1">The WebFocus business intelligence (BI) and analytics platform helps companies use data more strategically across and beyond the enterprise.</p>
+                            <h3 class="mt-10">{{ course.ccIbmTitle }}</h3>
+                            <p clamp="1">{{ course.ccIbmDesc }}</p>
                             <div class="course-dtls">
                                 <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: {{ course.ccIbmDuration }}h</li>
                                     <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="ibm/websphere-admin">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/websphere-admin.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">WebSphere Admin</h3>
-                            <p clamp="1">WebSphere Admin is an IBM Data Integration Tool.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li>{{ course.ccIbmPrice | currency : currencySymbol : 0 }}</li>
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-            <div class="course-strip mb-20">
-                <a ng-href="ibm/websphere-message-broker">
-                    <div class="course-strip-inner transition">
-                        <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/websphere-message-broker.jpg">
-                        </div>
-                        <div class="course-info">
-                            <h3 class="mt-10">WebSphere Message Broker</h3>
-                            <p clamp="1">WebSphere Message Broker is an enterprise service bus (ESB) providing connectivity and universal data transformation for service-oriented architecture (SOA) and non-SOA environments.</p>
-                            <div class="course-dtls">
-                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
-                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
-                                </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
                             </div>
                         </div>
                         <div class="clearfix"></div>
@@ -90,49 +44,3 @@
         </div>
     </div>
 </div>
-
-    <!-- <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="ibm/webfocus">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/webfocus.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>WebFocus</h4>
-                        <p clamp="2">The WebFocus business intelligence (BI) and analytics platform helps companies use data more strategically across and beyond the enterprise.</p>
-                        <a ng-href="ibm/webfocus" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="ibm/websphere-admin">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/websphere-admin.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>WebSphere Admin</h4>
-                        <p clamp="2">WebSphere Admin is an IBM Data Integration Tool.</p>
-                        <a ng-href="ibm/websphere-admin" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="thumbnail">
-                    <a ng-href="ibm/websphere-message-broker">
-                        <img class="img-responsive center-block" src="./images/course-thumbnails/websphere-message-broker.jpg">
-                    </a>
-                    <div class="course-caption">
-                        <h4>WebSphere Message Broker</h4>
-                        <p clamp="2">WebSphere Message Broker is an enterprise service bus (ESB) providing connectivity and universal data transformation for service-oriented architecture (SOA) and non-SOA environments.</p>
-                        <a ng-href="ibm/websphere-message-broker" class="btn btn-primary" role="button">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-3 col-md-3 col-sm-hidden col-xs-hidden">
-            <h4 class="text-center">New Demos</h4>
-        </div>
-    </div> -->
-        

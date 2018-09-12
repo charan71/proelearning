@@ -1,0 +1,5 @@
+.ratings * { margin-right: 5px; float: left; }
+.rating-star { color: lightgrey; cursor: pointer; font-size: 2rem; }
+.rating-star.fa.fa-star { color: #FDD05B; }
+.rating-star-hover-gold { color: #FDD05B; }
+.rating-star-fractional {  position: absolute; overflow: hidden; z-index: 2; }

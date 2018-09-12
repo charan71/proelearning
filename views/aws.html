@@ -4,203 +4,471 @@
             <img class="img-responsive" src="./images/parallax-images/aws.jpg" alt="AWS-Training-Pro-eLearning">
         </div>
     </div>
+    
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/dotnet.png" alt="AWS Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">AWS Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>AWS Course Content</h1>
-                        <hr>
-                        <h4>AWS Overview</h4>
-                        <ul>
-                            <li>Description of AWS</li>
-                            <li>History and Evolution of AWS</li>
-                            <li>Overview of AWS Products and Services</li>
-                        </ul>
-                        <h4>Designing highly available, cost-efficient, fault-tolerant, scalable systems</h4>
-                        <ul>
-                            <li>How to Design Cloud Services</li>
-                            <li>Planning and Designing</li>
-                            <li>Monitoring and Logging</li>
-                            <li>Hybrid IT Architectures</li>
-                            <li>Practice Assignment: Designing Hybrid Storage</li>
-                        </ul>
-                        <h4>Identity and Access Management (IAM)</h4>
-                        <ul>
-                            <li>IAM Overview</li>
-                            <li>IAM Polices</li>
-                            <li>IAM Users</li>
-                            <li>IAM Groups</li>
-                            <li>IAM Roles</li>
-                            <li>IAM best practices</li>
-                            <li>Practice Assignment: Configuring IAM Access</li>
-                            <li>Demos Included</li>
-                            <li>Creating an IAM Policy</li>
-                            <li>Creating an IAM User</li>
-                            <li>Creating an IAM Group</li>
-                            <li>Creating an IAM Role</li>
-                        </ul>
-                        <h4>Amazon Virtual Private Cloud (VPC)</h4>
-                        <ul>
-                            <li>Amazon VPC Overview</li>
-                            <li>Amazon VPC</li>
-                            <li>IP Addresses</li>
-                            <li>Subnets</li>
-                            <li>Internet Gateway</li>
-                            <li>Route Tables</li>
-                            <li>NAT Devices</li>
-                            <li>Security Groups</li>
-                            <li>Network ACL's</li>
-                            <li>VPC Best Practices</li>
-                            <li>Practice Assignment: Designing a Custom VPC</li>
-                            <li>Demos Included:</li>
-                            <li>Creating a custom VPC</li>
-                            <li>Creating an Elastic IP Address</li>
-                            <li>Creating Subnets</li>
-                            <li>Creating Internet Gateways</li>
-                            <li>Creating Route Tables</li>
-                            <li>Creating a NAT Gateway</li>
-                            <li>Creating a Security Group</li>
-                            <li>Creating ACL Overview</li>
-                        </ul>
-                        <h4>Elastic Cloud Compute - EC2</h4>
-                        <ul>
-                            <li>Amazon EC2 Overview</li>
-                            <li>Amazon Machine Images (AMI)</li>
-                            <li>EC2 Instance Types</li>
-                            <li>Amazon Elastic Block Store (EBS)</li>
-                            <li>EBS Snapshots</li>
-                            <li>EC2 Instance Pricing</li>
-                            <li>Placement Groups</li>
-                            <li>Elastic Load Balancing (ELB)</li>
-                            <li>Auto Scaling</li>
-                            <li>AWS Lambda</li>
-                            <li>AWS Elastic Beanstalk</li>
-                            <li>AWS Command Line Interface</li>
-                            <li>EC2 Best Practices</li>
-                            <li>AWS EC2 Costs</li>
-                            <li>Practice Assignment: Configure ELB not started</li>
-                            <li>Demos Included:</li>
-                            <li>Launch and connect to an EC2 Linux Instance</li>
-                            <li>Launch and connect to an EC2 Windows Instance</li>
-                            <li>Create an AMI</li>
-                            <li>EC2 Instance Types</li>
-                            <li>Attaching EBS Volumes</li>
-                            <li>EBS and Raid 0</li>
-                            <li>EBS Snapshots</li>
-                            <li>EC2 Spot Pricing</li>
-                            <li>Elastic Load Balancing</li>
-                            <li>Auto Scaling</li>
-                            <li>AWS CLI</li>
-                        </ul>
-                        <h4>Amazon Simple Storage Service (S3)</h4>
-                        <ul>
-                            <li>Amazon S3 Overview</li>
-                            <li>S3 Buckets</li>
-                            <li>Version Control</li>
-                            <li>Amazon S3 Lifecycle Management</li>
-                            <li>CloudFront and CDN's</li>
-                            <li>Security and Encryption</li>
-                            <li>Import/Export & Snowball</li>
-                            <li>Amazon S3 Best Practices</li>
-                            <li>Amazon S3 Costs</li>
-                            <li>Practice Assignment: Create an Amazon S3 bucket</li>
-                            <li>Demos</li>
-                            <li>Create and access an Amazon S3 Bucket</li>
-                            <li>Amazon S3 Version Control</li>
-                            <li>Amazon S3 Lifecycle Management</li>
-                            <li>Amazon CloudFront</li>
-                            <li>Security and Encryption</li>
-                        </ul>
-                        <h4>Route53</h4>
-                        <ul>
-                            <li>Amazon Route 53 Overview</li>
-                            <li>Amazon Route 53 and DNS</li>
-                            <li>Route 53 Routing Policies</li>
-                            <li>Route 53 best practices</li>
-                            <li>Route 53 costs and prices</li>
-                            <li>Practice Assignment: Amazon Route53 Hosted Zone</li>
-                            <li>Demo Included:</li>
-                            <li>Route 53 Hosted Zones Demo</li>
-                        </ul>
-                        <h4>Databases</h4>
-                        <ul>
-                            <li>Databases Overview</li>
-                            <li>Amazon Relation Database Service (RDS)</li>
-                            <li>AMI Databases</li>
-                            <li>Amazon DynamoDB</li>
-                            <li>Amazon Redshift</li>
-                            <li>Amazon ElastiCache</li>
-                            <li>Amazon Aurora</li>
-                            <li>AWS Database Migration Services (DMS)</li>
-                            <li>Databases best practices</li>
-                            <li>Databases cost</li>
-                            <li>Practice Assignment: Amazon RDS</li>
-                            <li>Demos Included:</li>
-                            <li>Amazon RDS</li>
-                            <li>Launching databases from and AMI</li>
-                            <li>Amazon DynamoDB</li>
-                        </ul>
-                        <h4>Application Services</h4>
-                        <ul>
-                            <li>Simple Queue Service - SQS</li>
-                            <li>Simple Workflow Service - SWF</li>
-                            <li>Simple Notification Service - SNS</li>
-                            <li>Elastic Transcoder</li>
-                            <li>Application Services best practices</li>
-                            <li>Application Services costs</li>
-                            <li>Practice Assignment: Amazon SNS</li>
-                            <li>Demos Included</li>
-                            <li>Amazon SNS</li>
-                        </ul>
-                        <h4>Security Practices for Optimum Cloud Deployment</h4>
-                        <ul>
-                            <li>AWS shared responsibility model</li>
-                            <li>AWS platform compliance</li>
-                            <li>AWS security attributes</li>
-                            <li>AWS CloudTrail</li>
-                            <li>AWS CloudWatch</li>
-                            <li>Trusted Advisor</li>
-                            <li>Incorporating common conventional security products</li>
-                            <li>AWS CloudFormation and Design Patterns</li>
-                            <li>Practice Assignment: AWS CloudWatch</li>
-                            <li>Demos Included:</li>
-                            <li>Amazon CloudWatch</li>
-                            <li>Trusted Advisor</li>
-                            <li>AWS CloudFormation</li>
-                        </ul>
-                        <h4>Disaster Recovery</h4>
-                        <ul>
-                            <li>Overview of Disaster Recovery</li>
-                            <li>Using AWS products for Disaster Recovery</li>
-                            <li>Practice Assignment: Disaster Recovery</li>
-                        </ul>
-                        <h4>Troubleshooting</h4>
-                        <ul>
-                            <li>AWS Support</li>
-                            <li>Typical AWS Problems</li>
-                        </ul>
-                        <h4>AWS Exam Overview</h4>
-                        <ul>
-                            <li>Overview of AWS Solutions Architect & Sysops Exam</li>
-                            <li>Study Tips</li>
-                            <li>Review Topics</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <h1 class="text-center">Space<br>For<br>ADS</h1>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>You will need to set up an AWS Account, Windows, Linux or Mac PC/Laptop.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>AWS Solution Architect - Professional Level training imparts the knowledge and technical skills for designing distributed applications and systems on AWS platform.</p>
+                    <p>Participants will gain practical exposure about the designing and deploying of scalable and highly flexible server setup on AWS.</p>
+                    <p>Fault tolerance, multi-tier applications, and migrating complex data set all will be discussed during the training.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. AWS Overview <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Description of AWS</li>
+                                    <li>History and Evolution of AWS</li>
+                                    <li>Overview of AWS Products and Services</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Designing highly available, cost-efficient, fault-tolerant, scalable systems <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>How to Design Cloud Services</li>
+                                    <li>Planning and Designing</li>
+                                    <li>Monitoring and Logging</li>
+                                    <li>Hybrid IT Architectures</li>
+                                    <li>Practice Assignment: Designing Hybrid Storage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Identity and Access Management (IAM) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>IAM Overview</li>
+                                    <li>IAM Polices</li>
+                                    <li>IAM Users</li>
+                                    <li>IAM Groups</li>
+                                    <li>IAM Roles</li>
+                                    <li>IAM best practices</li>
+                                    <li>Practice Assignment: Configuring IAM Access</li>
+                                    <li>Demos Included</li>
+                                    <li>Creating an IAM Policy</li>
+                                    <li>Creating an IAM User</li>
+                                    <li>Creating an IAM Group</li>
+                                    <li>Creating an IAM Role</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Amazon Virtual Private Cloud (VPC) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Amazon VPC Overview</li>
+                                    <li>Amazon VPC</li>
+                                    <li>IP Addresses</li>
+                                    <li>Subnets</li>
+                                    <li>Internet Gateway</li>
+                                    <li>Route Tables</li>
+                                    <li>NAT Devices</li>
+                                    <li>Security Groups</li>
+                                    <li>Network ACL's</li>
+                                    <li>VPC Best Practices</li>
+                                    <li>Practice Assignment: Designing a Custom VPC</li>
+                                    <li>Demos Included:</li>
+                                    <li>Creating a custom VPC</li>
+                                    <li>Creating an Elastic IP Address</li>
+                                    <li>Creating Subnets</li>
+                                    <li>Creating Internet Gateways</li>
+                                    <li>Creating Route Tables</li>
+                                    <li>Creating a NAT Gateway</li>
+                                    <li>Creating a Security Group</li>
+                                    <li>Creating ACL Overview</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Elastic Cloud Compute - EC2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Amazon EC2 Overview</li>
+                                    <li>Amazon Machine Images (AMI)</li>
+                                    <li>EC2 Instance Types</li>
+                                    <li>Amazon Elastic Block Store (EBS)</li>
+                                    <li>EBS Snapshots</li>
+                                    <li>EC2 Instance Pricing</li>
+                                    <li>Placement Groups</li>
+                                    <li>Elastic Load Balancing (ELB)</li>
+                                    <li>Auto Scaling</li>
+                                    <li>AWS Lambda</li>
+                                    <li>AWS Elastic Beanstalk</li>
+                                    <li>AWS Command Line Interface</li>
+                                    <li>EC2 Best Practices</li>
+                                    <li>AWS EC2 Costs</li>
+                                    <li>Practice Assignment: Configure ELB not started</li>
+                                    <li>Demos Included:</li>
+                                    <li>Launch and connect to an EC2 Linux Instance</li>
+                                    <li>Launch and connect to an EC2 Windows Instance</li>
+                                    <li>Create an AMI</li>
+                                    <li>EC2 Instance Types</li>
+                                    <li>Attaching EBS Volumes</li>
+                                    <li>EBS and Raid 0</li>
+                                    <li>EBS Snapshots</li>
+                                    <li>EC2 Spot Pricing</li>
+                                    <li>Elastic Load Balancing</li>
+                                    <li>Auto Scaling</li>
+                                    <li>AWS CLI</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Amazon Simple Storage Service (S3) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Amazon S3 Overview</li>
+                                    <li>S3 Buckets</li>
+                                    <li>Version Control</li>
+                                    <li>Amazon S3 Lifecycle Management</li>
+                                    <li>CloudFront and CDN's</li>
+                                    <li>Security and Encryption</li>
+                                    <li>Import/Export & Snowball</li>
+                                    <li>Amazon S3 Best Practices</li>
+                                    <li>Amazon S3 Costs</li>
+                                    <li>Practice Assignment: Create an Amazon S3 bucket</li>
+                                    <li>Demos</li>
+                                    <li>Create and access an Amazon S3 Bucket</li>
+                                    <li>Amazon S3 Version Control</li>
+                                    <li>Amazon S3 Lifecycle Management</li>
+                                    <li>Amazon CloudFront</li>
+                                    <li>Security and Encryption</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. Route53 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Amazon Route 53 Overview</li>
+                                    <li>Amazon Route 53 and DNS</li>
+                                    <li>Route 53 Routing Policies</li>
+                                    <li>Route 53 best practices</li>
+                                    <li>Route 53 costs and prices</li>
+                                    <li>Practice Assignment: Amazon Route53 Hosted Zone</li>
+                                    <li>Demo Included:</li>
+                                    <li>Route 53 Hosted Zones Demo</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Databases <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Databases Overview</li>
+                                    <li>Amazon Relation Database Service (RDS)</li>
+                                    <li>AMI Databases</li>
+                                    <li>Amazon DynamoDB</li>
+                                    <li>Amazon Redshift</li>
+                                    <li>Amazon ElastiCache</li>
+                                    <li>Amazon Aurora</li>
+                                    <li>AWS Database Migration Services (DMS)</li>
+                                    <li>Databases best practices</li>
+                                    <li>Databases cost</li>
+                                    <li>Practice Assignment: Amazon RDS</li>
+                                    <li>Demos Included:</li>
+                                    <li>Amazon RDS</li>
+                                    <li>Launching databases from and AMI</li>
+                                    <li>Amazon DynamoDB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Application Services <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Simple Queue Service - SQS</li>
+                                    <li>Simple Workflow Service - SWF</li>
+                                    <li>Simple Notification Service - SNS</li>
+                                    <li>Elastic Transcoder</li>
+                                    <li>Application Services best practices</li>
+                                    <li>Application Services costs</li>
+                                    <li>Practice Assignment: Amazon SNS</li>
+                                    <li>Demos Included</li>
+                                    <li>Amazon SNS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. Security Practices for Optimum Cloud Deployment <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>AWS shared responsibility model</li>
+                                    <li>AWS platform compliance</li>
+                                    <li>AWS security attributes</li>
+                                    <li>AWS CloudTrail</li>
+                                    <li>AWS CloudWatch</li>
+                                    <li>Trusted Advisor</li>
+                                    <li>Incorporating common conventional security products</li>
+                                    <li>AWS CloudFormation and Design Patterns</li>
+                                    <li>Practice Assignment: AWS CloudWatch</li>
+                                    <li>Demos Included:</li>
+                                    <li>Amazon CloudWatch</li>
+                                    <li>Trusted Advisor</li>
+                                    <li>AWS CloudFormation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Disaster Recovery <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Overview of Disaster Recovery</li>
+                                    <li>Using AWS products for Disaster Recovery</li>
+                                    <li>Practice Assignment: Disaster Recovery</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. Troubleshooting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>AWS Support</li>
+                                    <li>Typical AWS Problems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#apps" aria-expanded="false" aria-controls="collapseNine">13. AWS Exam Overview <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="apps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Overview of AWS Solutions Architect & Sysops Exam</li>
+                                    <li>Study Tips</li>
+                                    <li>Review Topics</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    	</div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
     </div>
 </div>

@@ -107,11 +107,11 @@
                         <div class="row space-bottom-10 course-title">
                             <h3 class="text-center">Trending Courses</h3>
                         </div>
-                        <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
+                        <data-owl-carousel id="latestTechnologies" class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
                             <div class="item slide" ng-repeat="course in ccTrendingCourses">
                                 <a ng-href="{{course.ccTrendingCoursesURL}}">
                                     <div class="course-thumbnail">
-                                        <img class="center-block" ng-src="./images/course-thumbnails/{{course.ccTrendingCoursesImage}}" alt="{{course.ccTrendingCoursesAlt}}">
+                                        <img class="center-block img-responsive" ng-src="./images/course-thumbnails/{{course.ccTrendingCoursesImage}}" alt="{{course.ccTrendingCoursesAlt}}">
                                         <div class="course-caption">
                                             <h4>{{course.ccTrendingCoursesTitle}}</h4>
                                             <p clamp="2">{{ course.ccTrendingCoursesDesc }}</p>
@@ -122,149 +122,8 @@
                                 </a>
                             </div>
                         </data-owl-carousel>
-                        
                         <div class="clearfix"></div>
-                        <!--
-                        <div class="row course-readmore">
-                            <a href="">Click here for more courses on Information Technology &#x003E;&#x003E;</a>
-                        </div>
-                        -->
                     </div>
-                    
-                    <!-- Information Technology -->
-                    <!-- <div class="space-bottom-20 course-category">
-                        <div class="row space-bottom-10 course-title">
-                            <h3 class="text-center">Trending Courses in &#x201C;Information Technology&#x201D;</h3>
-                        </div>
-                        <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
-                            <div class="owl-item slide" ng-repeat="items in cc_info_tech">
-                                <a ng-href="{{items.cc_info_tech_imageLink}}">
-                                    <div class="course-thumbnail">
-                                        <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_info_tech_image}}" alt="228x116">
-                                        <div class="course-caption">
-                                            <h4>{{items.cc_info_tech_title}}</h4>
-                                            <p clamp="2">{{items.cc_info_tech_desc}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </data-owl-carousel>
-                        
-                        <div class="clearfix"></div>
-                        
-                        <div class="row course-readmore">
-                            <a href="">Click here for more courses on Information Technology &#x003E;&#x003E;</a>
-                        </div>
-                       
-                    </div> -->
-                    
-                    <!-- Cloud Technologies -->
-                    <!-- <div class="space-bottom-20 course-category">
-                        <div class="row space-bottom-10 course-title">
-                            <h3 class="text-center">Trending Courses in &#x201C;Cloud Technologies&#x201D;</h3>
-                        </div>
-                        <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
-                            <div class="owl-item slide" ng-repeat="items in cc_cloud_tech">
-                                <a ng-href="{{items.cc_cloud_tech_imageLink}}">
-                                    <div class="course-thumbnail">
-                                        <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_cloud_tech_image}}" alt="228x116">
-                                        <div class="course-caption">
-                                            <h4>{{items.cc_cloud_tech_title}}</h4>
-                                            <p clamp="2">{{items.cc_cloud_tech_desc}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </data-owl-carousel>
-                        
-                        <div class="clearfix"></div>
-                        
-                        <div class="row course-readmore">
-                            <a href="">Click here for more courses on Information Technology &#x003E;&#x003E;</a>
-                        </div>
-                       
-                    </div> -->
-                    
-                    <!-- ERP -->
-                    <!-- <div class="space-bottom-20 course-category">
-                        <div class="row space-bottom-10 course-title">
-                            <h3 class="text-center">Trending Courses in &#x201C;ERP&#x201D;</h3>
-                        </div>
-                        <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
-                            <div class="owl-item" ng-repeat="items in cc_erp">
-                                <a href="{{items.cc_erp_imageLink}}">
-                                    <div class="course-thumbnail">
-                                        <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_erp_image}}" alt="228x116">
-                                        <div class="course-caption">
-                                            <h4>{{items.cc_erp_title}}</h4>
-                                            <p clamp="2">{{items.cc_erp_desc}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </data-owl-carousel>
-                        
-                        <div class="clearfix"></div>
-                        
-                        <div class="row course-readmore">
-                            <a href="">Click here for more courses on ERP &#x003E;&#x003E;</a>
-                        </div>
-                       
-                    </div> -->
-                    
-                    <!-- Business Management -->
-                    <!-- <div class="space-bottom-20 course-category">
-                        <div class="row space-bottom-10 course-title">
-                            <h3 class="text-center">Trending Courses in &#x201C;Business Management&#x201D;</h3>
-                        </div>
-                        <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
-                            <div class="owl-item" ng-repeat="items in cc_buss_mgmt">
-                                <a href="{{items.cc_buss_mgmt_imageLink}}">
-                                    <div class="course-thumbnail">
-                                        <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_buss_mgmt_image}}" alt="228x116">
-                                        <div class="course-caption">
-                                            <h4>{{items.cc_buss_mgmt_title}}</h4>
-                                            <p clamp="2">{{items.cc_buss_mgmt_desc}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </data-owl-carousel>
-                        
-                        <div class="clearfix"></div>
-                        
-                        <div class="row course-readmore">
-                            <a href="">Click here for more courses on Business Management &#x003E;&#x003E;</a>
-                        </div>
-                       
-                    </div> -->
-                    
-                    <!-- Oracle -->
-                    <!-- <div class="space-bottom-20 course-category">
-                        <div class="row space-bottom-10 course-title">
-                            <h3 class="text-center">Trending Courses in &#x201C;Oracle&#x201D;</h3>
-                        </div>
-                        <data-owl-carousel class="owl-carousel owl-theme" style="margin-left: auto; margin-right: auto;">
-                            <div class="owl-item" ng-repeat="items in cc_oracle">
-                                <a href="{{items.cc_oracle_imageLink}}">
-                                    <div class="course-thumbnail">
-                                        <img class="center-block" ng-src="./images/course-thumbnails/{{items.cc_oracle_image}}" alt="228x116">
-                                        <div class="course-caption">
-                                            <h4>{{items.cc_oracle_title}}</h4>
-                                            <p clamp="2">{{items.cc_oracle_desc}}</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </data-owl-carousel>
-                        
-                        <div class="clearfix"></div>
-                        
-                        <div class="row course-readmore">
-                            <a href="">Click here for more courses on Business Intelligence &#x003E;&#x003E;</a>
-                        </div>
-                       
-                    </div> -->
                     
                     <!-- More Categories -->
                     <div class="space-bottom-20 course-category">
@@ -273,33 +132,34 @@
                         </div>
                     </div>
                     
-                    <!-- New Demos Section -->
+                    <!-- Schedules, Demos, Discounts Section -->
                     <div class="container">
                         <div class="row">
                             <div class="col-md-4 mt-40 mb-40">
-                                <div class="text-center demos" id="demos1">
+                                <div class="text-center demos transition">
                                     <a ng-href="course-schedules">
-                                        <h4>Course Schedules</h4>
+                                        <h4><i class="fa fa-calendar" aria-labelled="true"></i> Course Schedules</h4>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-40 mb-40">
+                                <div class="text-center demos transition">
+                                    <a href="#">
+                                        <h4><i class="fa fa-laptop" aria-labelled="true"></i> Upcoming Demos</h4>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-4 mt-40 mb-40">
-                                <div class="text-center demos" id="demos2">
+                                <div class="text-center demos transition">
                                     <a href="#">
-                                        <h4>New Demos</h4>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mt-40 mb-40">
-                                <div class="text-center demos" id="demos3">
-                                    <a href="#">
-                                        <h4>Special Discounts</h4>
+                                        <h4><i class="fa fa-percent" aria-labelled="true"></i> Special Discounts</h4>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- //New Demos Section -->
+                    <!-- //Schedules, Demos, Discounts Section -->
                     
                 </div>
 			</div>
@@ -454,7 +314,7 @@
             <!-- //Testimonials Slider -->
             
             <!-- Home Contact Link -->
-            <div class="row">
+            <div class="row suggestion">
                 <div class="container">
                     <div class="contact-link">
                         <div class="contact-link-text col-xs-12 col-sm-12 col-md-9 col-lg-9">

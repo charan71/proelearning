@@ -18,23 +18,23 @@
     <!-- Courses List Display -->
     <div class="row">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <div class="course-strip mb-20" ng-repeat="course in cc_cloud_tech">
-                <a ng-href="{{course.cc_cloud_tech_imageLink}}">
+            <div class="course-strip mb-20" ng-repeat="course in ccCloudTech">
+                <a ng-href="{{ course.ccCloudTechURL }}">
                     <div class="course-strip-inner transition">
                         <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/{{course.cc_cloud_tech_image}}">
+                            <img class="img-responsive" src="./images/course-thumbnails/{{ course.ccCloudTechImage }}" alt="{{ course.ccCloudTechAlt }}">
                         </div>
                         <div class="course-info">
-                            <h3 class="mt-10">{{course.cc_cloud_tech_title}}</h3>
-                            <p clamp="1">{{course.cc_cloud_tech_desc}}</p>
+                            <h3 class="mt-10">{{ course.ccCloudTechTitle }}</h3>
+                            <p clamp="1">{{ course.ccCloudTechDesc }}</p>
                             <div class="course-dtls">
                                 <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: {{ course.ccCloudTechDuration }}h</li>
                                     <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
                                 </ul>
-                                <!-- <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li><i class="fa fa-usd" aria-hidden="true"></i> 400</li>
-                                </ul> -->
+                                <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li>{{ course.ccCloudTechPrice | currency : currencySymbol : 0 }}</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="clearfix"></div>

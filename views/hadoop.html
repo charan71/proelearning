@@ -6,196 +6,488 @@
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="Hadoop Course Details - Pro E-Learning">
-                    </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>Hadoop Course Content</h1>
-                        <hr>
-                        <h4>Introduction to Hadoop & Big Data</h4>
-                        <ul>
-                            <li>What is Big Data</li>
-                            <li>What is Hadoop</li>
-                            <li>Hadoop Architecture Concepts</li>
-                            <li>Why Hadoop</li>
-                            <li>Where is Hadoop used/use cases</li>
-                            <li>How to setup Hadoop</li>
-                            <li>Advantages/Disadvantages of Hadoop</li>
-                        </ul>
-                        <h4>Basics Hadoop Components</h4>
-                        <ul>
-                            <li>HDFS</li>
-                            <li>Map Reduce</li>
-                            <li>YARN</li>
-                            <li>Hadoop 1.x and 2.x differences</li>
-                        </ul>
-                        <h4>HDFS Architeture Concepts</h4>
-                        <ul>
-                            <li>HDFS and its components</li>
-                            <li>What are HDFS Daemons</li>
-                            <li>What is NameNode</li>
-                            <li>NameNode features & functionality</li>
-                            <li>What is DataNode</li>
-                            <li>DataNode features & functionality</li>
-                            <li>What is JobTracker</li>
-                            <li>How JobTracker works</li>
-                            <li>What is TaskTracker</li>
-                            <li>How TaskTracker works</li>
-                            <li>Linux basic commands</li>
-                            <li>Reading files from HDFS</li>
-                            <li>Writing files to HDFS</li>
-                            <li>Rack Aware concepts</li>
-                        </ul>
-                        <h4>MapReduce Architeture & DesignConcepts</h4>
-                        <ul>
-                            <li>What is a Client</li>
-                            <li>Lab: How it works</li>
-                            <li>What is a Job</li>
-                            <li>Lab: How it works</li>
-                            <li>What is MapReduce</li>
-                            <li>Lab: How it works</li>
-                            <li>Simple MapReduce Algorithm Sample</li>
-                            <li>Lab: How it works</li>
-                            <li>Complex MapReduce Algorithm Sample</li>
-                            <li>Lab: How it works</li>
-                            <li>MapReduce using Eclipse Integration</li>
-                            <li>Lab: How it works</li>
-                            <li>Deploy MapReduce on Hadoop</li>
-                            <li>Setup Hadoop</li>
-                            <li>How to Debug MapReduce</li>
-                            <li>What is Map Chaining</li>
-                            <li>Lab: How it works</li>
-                            <li>Testing Fundamentals</li>
-                            <li>Input/OutputFormatters & RecordReaders</li>
-                            <li>What is Job Scheduling</li>
-                            <li>How to configure</li>
-                            <li>Explore Apache MapReduce WebUI</li>
-                            <li>MapReduce Combiners & Partitioners</li>
-                            <li>Sorting & Searching in HDFS</li>
-                            <li>MapReduce DistributedCache</li>
-                            <li>What are Counters</li>
-                            <li>Lab: How it works</li>
-                        </ul>
-                        <h4>Hadoop Administration Concepts</h4>
-                        <ul>
-                            <li>Lab: HDFS user commands</li>
-                            <li>Lab: HDFS admin commands</li>
-                            <li>Administrative procedures</li>
-                            <li>Lab: Understanding dfsadmin & mradmin</li>
-                            <li>Lab: Understanding Healthcheck & safemode</li>
-                            <li>Lab: Configuring Schedulers</li>
-                            <li>Lab: Configuring Queues</li>
-                        </ul>
-                        <h4>Hive & it concepts</h4>
-                        <ul>
-                            <li>SQL introduction</li>
-                            <li>SQL DDL</li>
-                            <li>SQL DML</li>
-                            <li>SQL Where clause, order by, sort by, arithmetic functions</li>
-                            <li>SQL Joins</li>
-                            <li>Hive Fundamentals</li>
-                            <li>Hive Architecture</li>
-                            <li>Hive Installation & setup</li>
-                            <li>HQL concepts</li>
-                            <li>Hive Partitioning</li>
-                            <li>Hive Bucketing</li>
-                            <li>Hive Aggregate functions</li>
-                            <li>Hive String functions</li>
-                            <li>HQL Joins</li>
-                            <li>Lab: HQL</li>
-                            <li>Integration with Hadoop</li>
-                            <li>CLI & Thrift modes</li>
-                            <li>Lab: How it works</li>
-                            <li>What is UDF</li>
-                            <li>Integration of UDF in Hive</li>
-                            <li>Real time scenarios with examples</li>
-                            <li>Lab: How it works</li>
-                            <li>Assignments</li>
-                        </ul>
-                        <h4>Pig & its concepts</h4>
-                        <ul>
-                            <li>Pig Fundamentals</li>
-                            <li>Pig Architecture</li>
-                            <li>Pig Installation & setup</li>
-                            <li>Lab: How it works</li>
-                            <li>PigLatin introduction</li>
-                            <li>PigLatin Commands: Load, Dump, Store, Filter, Order by, Distinct, Limit, Sort by</li>
-                            <li>Creating and executing External Pig script file</li>
-                            <li>Joins in Pig</li>
-                            <li>What is Pig UDF</li>
-                            <li>Lab: How it works</li>
-                        </ul>
-                        <h4>Hbase</h4>
-                        <ul>
-                            <li>Introduction to Hbase</li>
-                            <li>Hbase Basics</li>
-                            <li>Column Families</li>
-                            <li>Scans</li>
-                            <li>Hbase Architecture</li>
-                            <li>Hbase Rest Client</li>
-                            <li>Hbase Thrift Client</li>
-                            <li>Hbase Web UI</li>
-                            <li>Hbase Admin</li>
-                            <li>Hbase Schema Definition</li>
-                            <li>Hbase CRUD Ops</li>
-                        </ul>
-                        <h4>Flume</h4>
-                        <ul>
-                            <li>What is Flume</li>
-                            <li>Installation & Setup</li>
-                            <li>Lab: How it works</li>
-                        </ul>
-                        <h4>Oozie</h4>
-                        <h4>Zookeeper</h4>
-                        <h4>SQOOP</h4>
-                        <ul>
-                            <li>Introduction to SQOOP</li>
-                        </ul>
-                        <h4>Mongo DB introduction</h4>
-                        <h4>Cloud ear CHD introduction and configuration</h4>
-                        <div class="course-highlights mt-30">
-                            <h4>Highlights</h4>
-                            <ul>
-                                <li>Ubuntu image file will be given to students for practicing all hadoop concepts</li>
-                                <li>Complete practical session will be conducted for each and every concept</li>
-                                <li>Assignments will be given on each and every concpt</li>
-                                <li>Profile building based on student requirements</li>
-                                <li>Real time use cases on all Hadoop concepts as a separate 3hrs session</li>
-                                <li>Interview questions sharing and discussion</li>
-                                <li>Mock interview for each student</li>
-                            </ul>
+            <div class="course-overview-title">
+                <h1 class="mt-50">Hadoop Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
                         </div>
-                        <div class="trainer-details mt-30">
-                            <h4>Trainer Details</h4>
-                            <ul>
-                                <li>Total 11yrs of IT industry experience</li>
-                                <li>7yrs of experience in Java</li>
-                                <li>4yrs of experience in Hadoop</li>
-                                <li><b>Java certified trainer</b></li>
-                                <li><b>Cloudera certified trainer</b></li>
-                            </ul>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic understanding of core java, working system with 10 gb ram or above.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>Hadoop is an open source distributed processing framework that manages data processing and storage for big data applications running in clustered systems. It is at the center of a growing ecosystem of big data technologies that are primarily used to support advanced analytics initiatives, including predictive analytics, data mining and machine learning applications.</p>
+                    <p>Hadoop can handle various forms of structured and unstructured data, giving users more flexibility for collecting, processing and analyzing data than relational databases and data warehouses provide.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Introduction to Hadoop & Big Data <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>What is Big Data</li>
+                                    <li>What is Hadoop</li>
+                                    <li>Hadoop Architecture Concepts</li>
+                                    <li>Why Hadoop</li>
+                                    <li>Where is Hadoop used/use cases</li>
+                                    <li>How to setup Hadoop</li>
+                                    <li>Advantages/Disadvantages of Hadoop</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Basics Hadoop Components <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>HDFS</li>
+                                    <li>Map Reduce</li>
+                                    <li>YARN</li>
+                                    <li>Hadoop 1.x and 2.x differences</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. HDFS Architeture Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>HDFS and its components</li>
+                                    <li>What are HDFS Daemons</li>
+                                    <li>What is NameNode</li>
+                                    <li>NameNode features & functionality</li>
+                                    <li>What is DataNode</li>
+                                    <li>DataNode features & functionality</li>
+                                    <li>What is JobTracker</li>
+                                    <li>How JobTracker works</li>
+                                    <li>What is TaskTracker</li>
+                                    <li>How TaskTracker works</li>
+                                    <li>Linux basic commands</li>
+                                    <li>Reading files from HDFS</li>
+                                    <li>Writing files to HDFS</li>
+                                    <li>Rack Aware concepts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. MapReduce Architeture & DesignConcepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>What is a Client</li>
+                                    <li>Lab: How it works</li>
+                                    <li>What is a Job</li>
+                                    <li>Lab: How it works</li>
+                                    <li>What is MapReduce</li>
+                                    <li>Lab: How it works</li>
+                                    <li>Simple MapReduce Algorithm Sample</li>
+                                    <li>Lab: How it works</li>
+                                    <li>Complex MapReduce Algorithm Sample</li>
+                                    <li>Lab: How it works</li>
+                                    <li>MapReduce using Eclipse Integration</li>
+                                    <li>Lab: How it works</li>
+                                    <li>Deploy MapReduce on Hadoop</li>
+                                    <li>Setup Hadoop</li>
+                                    <li>How to Debug MapReduce</li>
+                                    <li>What is Map Chaining</li>
+                                    <li>Lab: How it works</li>
+                                    <li>Testing Fundamentals</li>
+                                    <li>Input/OutputFormatters & RecordReaders</li>
+                                    <li>What is Job Scheduling</li>
+                                    <li>How to configure</li>
+                                    <li>Explore Apache MapReduce WebUI</li>
+                                    <li>MapReduce Combiners & Partitioners</li>
+                                    <li>Sorting & Searching in HDFS</li>
+                                    <li>MapReduce DistributedCache</li>
+                                    <li>What are Counters</li>
+                                    <li>Lab: How it works</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Hadoop Administration Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Lab: HDFS user commands</li>
+                                    <li>Lab: HDFS admin commands</li>
+                                    <li>Administrative procedures</li>
+                                    <li>Lab: Understanding dfsadmin & mradmin</li>
+                                    <li>Lab: Understanding Healthcheck & safemode</li>
+                                    <li>Lab: Configuring Schedulers</li>
+                                    <li>Lab: Configuring Queues</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Hive & it concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>SQL introduction</li>
+                                    <li>SQL DDL</li>
+                                    <li>SQL DML</li>
+                                    <li>SQL Where clause, order by, sort by, arithmetic functions</li>
+                                    <li>SQL Joins</li>
+                                    <li>Hive Fundamentals</li>
+                                    <li>Hive Architecture</li>
+                                    <li>Hive Installation & setup</li>
+                                    <li>HQL concepts</li>
+                                    <li>Hive Partitioning</li>
+                                    <li>Hive Bucketing</li>
+                                    <li>Hive Aggregate functions</li>
+                                    <li>Hive String functions</li>
+                                    <li>HQL Joins</li>
+                                    <li>Lab: HQL</li>
+                                    <li>Integration with Hadoop</li>
+                                    <li>CLI & Thrift modes</li>
+                                    <li>Lab: How it works</li>
+                                    <li>What is UDF</li>
+                                    <li>Integration of UDF in Hive</li>
+                                    <li>Real time scenarios with examples</li>
+                                    <li>Lab: How it works</li>
+                                    <li>Assignments</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. Pig & its concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Pig Fundamentals</li>
+                                    <li>Pig Architecture</li>
+                                    <li>Pig Installation & setup</li>
+                                    <li>Lab: How it works</li>
+                                    <li>PigLatin introduction</li>
+                                    <li>PigLatin Commands: Load, Dump, Store, Filter, Order by, Distinct, Limit, Sort by</li>
+                                    <li>Creating and executing External Pig script file</li>
+                                    <li>Joins in Pig</li>
+                                    <li>What is Pig UDF</li>
+                                    <li>Lab: How it works</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Hbase <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Hbase</li>
+                                    <li>Hbase Basics</li>
+                                    <li>Column Families</li>
+                                    <li>Scans</li>
+                                    <li>Hbase Architecture</li>
+                                    <li>Hbase Rest Client</li>
+                                    <li>Hbase Thrift Client</li>
+                                    <li>Hbase Web UI</li>
+                                    <li>Hbase Admin</li>
+                                    <li>Hbase Schema Definition</li>
+                                    <li>Hbase CRUD Ops</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Flume <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>What is Flume</li>
+                                    <li>Installation & Setup</li>
+                                    <li>Lab: How it works</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. Oozie <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Oozie</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Zookeeper <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Zookeeper</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. SQOOP <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to SQOOP</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#apps" aria-expanded="false" aria-controls="collapseNine">13. Mongo DB <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="apps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Mongo DB</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#cloudEarCHD" aria-expanded="false" aria-controls="collapseNine">14. Cloud ear CHD <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="cloudEarCHD" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Cloud ear CHD and Configuration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFifteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#highlights" aria-expanded="false" aria-controls="collapseNine">15. Highlights <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="highlights" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Ubuntu image file will be given to students for practicing all hadoop concepts</li>
+                                    <li>Complete practical session will be conducted for each and every concept</li>
+                                    <li>Assignments will be given on each and every concpt</li>
+                                    <li>Profile building based on student requirements</li>
+                                    <li>Real time use cases on all Hadoop concepts as a separate 3hrs session</li>
+                                    <li>Interview questions sharing and discussion</li>
+                                    <li>Mock interview for each student</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
-                    </div>
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Trainer Info -->
+                <div class="call-grid">
+                    <h4 class="testimonials-heading text-center">Trainer Info</h4>
+                    <ul>
+                        <li>Total 11yrs of IT industry experience</li>
+                        <li>7yrs of experience in Java</li>
+                        <li>4yrs of experience in Hadoop</li>
+                        <li><b>Java certified trainer</b></li>
+                        <li><b>Cloudera certified trainer</b></li>
+                    </ul>
                 </div>
-    	    </div>
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

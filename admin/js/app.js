@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    angular.module('admin', ['ngRoute', 'ngAnimate', 'routes', 'controllers', 'services', 'filters', 'directives'])
+    angular.module('admin', ['ngRoute', 'ngAnimate', 'routes', 'controllers', 'services', 'filters', 'directives', 'ds.clock'])
 
     /* Resolve Views Scroll Point Issue, Title */
     .run(['$rootScope', '$document', function($rootScope, $document) {

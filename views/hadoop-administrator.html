@@ -6,103 +6,336 @@
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="Hadoop Administrator Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Hadoop Administrator Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>Hadoop Administrator Course Content</h1>
-                        <hr>
-                        <h3>Introduction</h3>
-                        <h4>The Case for Apache Hadoop</h4>
-                        <ul>
-                        	<li>A Brief History of Hadoop</li>
-                        	<li>Core Hadoop Components</li>
-                        	<li>Fundamental Concepts</li>
-                        </ul>
-                        <h4>The Hadoop Distributed File System</h4>
-                        <ul>
-                        	<li>HDFS Features</li>
-                        	<li>HDFS Design Assumptions</li>
-                        	<li>Overview of HDFS Architecture</li>
-                        	<li>Writing and Reading Files</li>
-                        	<li>NameNode Considerations</li>
-                        	<li>An Overview of HDFS Security</li>
-                        	<li>Hands-On Exercise</li>
-                        </ul>
-                        <h4>MapReduce</h4>
-                        <ul>
-                        	<li>What Is MapReduce?</li>
-                        	<li>Features of MapReduce</li>
-                        	<li>Basic MapReduce Concepts</li>
-                        	<li>Architectural Overview</li>
-                        	<li>MapReduce Version 2</li>
-                        	<li>Failure Recovery</li>
-                        	<li>Hands-On Exercise</li>
-                        </ul>
-                        <h4>An Overview of the Hadoop Ecosystem</h4>
-                        <ul>
-                        	<li>What is the Hadoop Ecosystem?</li>
-                        	<li>Integration Tools</li>
-                        	<li>Analysis Tools</li>
-                        	<li>Data Storage and Retrieval Tools</li>
-                        </ul>
-                        <h4>Planning your Hadoop Cluster</h4>
-                        <ul>
-                        	<li>General Planning Considerations</li>
-                        	<li>Choosing the Right Hardware</li>
-                        	<li>Network Considerations</li>
-                        	<li>Configuring Nodes</li>
-                        </ul>
-                        <h4>Hadoop Installation</h4>
-                        <ul>
-                        	<li>Deployment Types</li>
-                        	<li>Installing Hadoop</li>
-                        	<li>Basic Configuration Parameters</li>
-                        	<li>Hands-On Exercise</li>
-                        </ul>
-                        <h4>Hadoop Security</h4>
-                        <ul>
-                        	<li>Why Hadoop Security Is Important</li>
-                        	<li>Hadoop's Security System Concepts</li>
-                        	<li>What Kerberos Is and How it Works</li>
-                        </ul>
-                        <h4>Managing and Scheduling Jobs</h4>
-                        <ul>
-                        	<li>Managing Running Jobs</li>
-                        	<li>The FIFO Scheduler</li>
-                        	<li>The FairScheduler</li>
-                        	<li>Configuring the FairScheduler</li>
-                        	<li>Hands-On Exercise</li>
-                        </ul>
-                        <h4>Cluster Monitoring and Troubleshooting </h4>
-                        <ul>
-                        	<li>General System Monitoring</li>
-                        	<li>Managing Hadoop's Log Files</li>
-                        	<li>Using the NameNode and JobTracker Web UIs</li>
-                        	<li>Hands-On Exercise</li>
-                        	<li>Cluster Monitoring with Ganglia</li>
-                        	<li>Common Troubleshooting Issues</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basics of Hadoop, basics of Big Data, Knowledge of Hadoop cluster, working system with 10gb ram or above.</p>
                     </div>
                 </div>
-    	    </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>This course on Hadoop Administration will make you expert in working with Hadoop clusters and deploy that knowledge on real world projects.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Hadoop Administrator</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. The Case for Apache Hadoop <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>A Brief History of Hadoop</li>
+                        	        <li>Core Hadoop Components</li>
+                        	        <li>Fundamental Concepts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. The Hadoop Distributed File System <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>HDFS Features</li>
+                        	        <li>HDFS Design Assumptions</li>
+                        	        <li>Overview of HDFS Architecture</li>
+                        	        <li>Writing and Reading Files</li>
+                        	        <li>NameNode Considerations</li>
+                        	        <li>An Overview of HDFS Security</li>
+                        	        <li>Hands-On Exercise</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. MapReduce <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>What Is MapReduce?</li>
+                        	        <li>Features of MapReduce</li>
+                        	        <li>Basic MapReduce Concepts</li>
+                        	        <li>Architectural Overview</li>
+                        	        <li>MapReduce Version 2</li>
+                        	        <li>Failure Recovery</li>
+                        	        <li>Hands-On Exercise</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. An Overview of the Hadoop Ecosystem <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>What is the Hadoop Ecosystem?</li>
+                        	        <li>Integration Tools</li>
+                        	        <li>Analysis Tools</li>
+                        	        <li>Data Storage and Retrieval Tools</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Planning your Hadoop Cluster <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>General Planning Considerations</li>
+                        	        <li>Choosing the Right Hardware</li>
+                        	        <li>Network Considerations</li>
+                        	        <li>Configuring Nodes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. Hadoop Installation <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Deployment Types</li>
+                        	        <li>Installing Hadoop</li>
+                        	        <li>Basic Configuration Parameters</li>
+                        	        <li>Hands-On Exercise</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Hadoop Security <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Why Hadoop Security Is Important</li>
+                        	        <li>Hadoop's Security System Concepts</li>
+                        	        <li>What Kerberos Is and How it Works</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Managing and Scheduling Jobs <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Managing Running Jobs</li>
+                        	        <li>The FIFO Scheduler</li>
+                        	        <li>The FairScheduler</li>
+                        	        <li>Configuring the FairScheduler</li>
+                        	        <li>Hands-On Exercise</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. Cluster Monitoring and Troubleshooting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>General System Monitoring</li>
+                        	        <li>Managing Hadoop's Log Files</li>
+                        	        <li>Using the NameNode and JobTracker Web UIs</li>
+                        	        <li>Hands-On Exercise</li>
+                        	        <li>Cluster Monitoring with Ganglia</li>
+                        	        <li>Common Troubleshooting Issues</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

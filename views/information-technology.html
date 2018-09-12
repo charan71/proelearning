@@ -18,22 +18,22 @@
     <!-- Courses List Display -->
     <div class="row" ng-controller="CourseCardsController">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <div class="course-strip mb-20" ng-repeat="course in cc_info_tech">
-                <a ng-href="{{course.cc_info_tech_imageLink}}">
+            <div class="course-strip mb-20" ng-repeat="course in ccInfoTech">
+                <a ng-href="{{ course.ccInfoTechURL }}">
                     <div class="course-strip-inner transition">
                         <div class="course-img pull-left">
-                            <img class="img-responsive" src="./images/course-thumbnails/{{course.cc_info_tech_image}}">
+                            <img class="img-responsive" src="./images/course-thumbnails/{{ course.ccInfoTechImage }}" alt="{{ course.ccInfoTechAlt }}">
                         </div>
                         <div class="course-info">
-                            <h3 class="mt-10">{{course.cc_info_tech_title}}</h3>
-                            <p clamp="1">{{course.cc_info_tech_desc}}</p>
+                            <h3 class="mt-10">{{ course.ccInfoTechTitle }}</h3>
+                            <p clamp="1">{{ course.ccInfoTechDesc }}</p>
                             <div class="course-dtls">
                                 <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
-                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 45h</li>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: {{ course.ccInfoTechDuration }}h</li>
                                     <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
                                 </ul>
                                 <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
-                                    <li>{{ course.cc_info_tech_fees | currency : currencySymbol : 0 }}</li>
+                                    <li>{{ course.ccInfoTechPrice | currency : currencySymbol : 0 }}</li>
                                 </ul>
                             </div>
                         </div>

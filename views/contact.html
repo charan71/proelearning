@@ -5,83 +5,105 @@
         </div>
     </div>
 
-    <div class="row pt-50 pb-50">
-        <div class="container">
-            <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
-                <i class="fa fa-check" aria-labelled="true"></i> <span ng-bind="successMessage"></span>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
-                <i class="fa fa-times" aria-labelled="true"></i> <span ng-bind="errorMessage"></span>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-        </div>
+    <div class="container">
+        <div class="row">
+            <!-- Success Message Modal -->
+            <modal id="successMessageModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content msg-modal success-modal">
+                        <div class="message-icon">
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="message">
+                            <h4 class="modal-title text-center mb-20">Success!</h4>
+                            <p ng-bind-html="successMessage"></p>
+                            <button type="button" class="btn-msg btn-success-msg transition" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </modal>
+            <!-- //Success Message Modal -->
 
-        <div class="contact-form">
-            <!-- Map -->
-            <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 col-lg-offset-1 contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15226.501704753035!2d78.4497441!3d17.4297546!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc775334f6c007e63!2sProdesign+Technologies+India+PVT.LTD.!5e0!3m2!1sen!2sin!4v1510738921015" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-            
-            <!-- Contact Form -->
-            <div class="col-lg-5 col-md-6 col-sm-10 col-xs-10 col-lg-offset-0 col-md-offset-0 col-sm-offset-1 col-xs-offset-1">
-                <div id="contact-form">
-                    <form novalidate name="contactForm" method="POST" enctype="multipart/form-data" id="contactForm" class="form form-horizontal contact-form" autocomplete="on">
-                        <fieldset>
-                            <div class="form-group">
-                                <label for="name" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Full Name</label>
-                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" placeholder="Full Name" autofocus />
-                                    <br>
+            <!-- Error Message Modal -->
+            <modal id="errorMessageModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+            		<div class="modal-content msg-modal error-modal">
+            			<div class="message-icon">
+            				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            			</div>
+            			<div class="message">
+            				<h4 class="modal-title text-center mb-20">Error!</h4>
+            				<p ng-bind-html="errorMessage"></p>
+            				<button type="button" class="btn-msg btn-err-msg transition" data-dismiss="modal">Close</button>
+            			</div>
+                    </div>
+                </div>
+            </modal>
+            <!-- //Error Message Modal -->
+
+            <div class="contact-form">
+                <!-- Contact Form -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h3>Drop a line</h3>
+                    <div id="contact-form" class="form-lg-wrap">
+                        <form novalidate name="contactForm" method="POST" enctype="multipart/form-data" id="contactForm" class="form form-horizontal contact-form" autocomplete="on">
+                            <fieldset>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" autofocus />
+                                    <div class="floating-label">Full Name *</div>
+                                    <div class="floating-label-border"></div>
                                     <span class="validation_styles" ng-show="contactForm.name.$error.required && contactForm.name.$touched">* Full Name is required<br></span>
                                     <span class="validation_styles" ng-show="contactForm.name.$error.pattern && contactForm.name.$invalid">* Full Name should contain only alphabets, dots and spaces.<br></span>
                                     <span class="validation_styles" ng-show="contactForm.name.$error.minlength && contactForm.name.$touched">* Full Name should be minimum of 3 characters<br></span>
                                     <span class="validation_styles" ng-show="contactForm.name.$error.maxlength && contactForm.name.$touched">* Full Name should be maximum of 40 characters</span>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Email ID</label>
-                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" placeholder="Email ID" />
-									<span class="validation_styles" ng-show="contactForm.email.$error.required && contactForm.email.$touched">* Email is required</span>
-									<span class="validation_styles" ng-show="contactForm.email.$error.pattern && contactForm.email.$touched">* Please enter a valid email</span>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" />
+                                    <div class="floating-label">Email *</div>
+                                    <div class="floating-label-border"></div>
+		    						<span class="validation_styles" ng-show="contactForm.email.$error.required && contactForm.email.$touched">* Email is required</span>
+		    						<span class="validation_styles" ng-show="contactForm.email.$error.pattern && contactForm.email.$touched">* Please enter a valid email</span>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Phone</label>
-                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" placeholder="Phone" />
-									<span class="validation_styles" ng-show="contactForm.phone.$error.required && contactForm.phone.$touched">* Phone number required<br></span>
-									<span class="validation_styles" ng-show="contactForm.phone.$error.pattern && contactForm.phone.$touched">* Please enter a valid phone number</span>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" />
+                                    <div class="floating-label">Phone *</div>
+                                    <div class="floating-label-border"></div>
+		    						<span class="validation_styles" ng-show="contactForm.phone.$error.required && contactForm.phone.$touched">* Phone number is required<br></span>
+		    						<span class="validation_styles" ng-show="contactForm.phone.$error.pattern && contactForm.phone.$touched">* Please enter a valid phone number</span>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="category" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label"><sup><i class="fa fa-asterisk" aria-hidden="true"></i></sup> Category</label>
-                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="placeholder-wrap form-control-wrapper">
                                     <select id="category" name="category" class="form-control" ng-model="category" ng-required="true">
-                                        <option value="">-- Select Your Purpose --</option>
+                                        <option value=""></option>
                                         <option value="Need a Course">Need a Course</option>
                                         <option value="Want to become a Trainer">Want to become a Trainer</option>
                                         <option value="For Business">For Business</option>
                                     </select>
-									<span class="validation_styles" ng-show="contactForm.category.$error.required && contactForm.category.$touched">* Category is required</span>
+                                    <div class="floating-label">Purpose *</div>
+                                    <div class="floating-label-border"></div>
+                                    <span class="validation_styles" ng-show="contactForm.category.$error.required && contactForm.category.$touched">Purpose is required *</span>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="sr-only col-lg-3 col-md-3 col-sm-12 col-xs-12 control-label">Message</label>
-                                <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <textarea ng-model="message" ng-required="true" ng-minlength="10" class="form-control" rows="6" name="message" id="message" placeholder="Your Message..."></textarea>
-									<span class="validation_styles" ng-show="contactForm.message.$error.required && contactForm.message.$touched">* Message is required<br></span>
-									<span class="validation_styles" ng-show="contactForm.message.$error.minlength && contactForm.message.$touched">* Message should be minium of 10 characters</span>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <textarea ng-required="true" ng-minlength="10" class="form-control" rows="3" name="message" id="message" ng-model="message"></textarea>
+                                    <div class="floating-label">Message *</div>
+                                    <div class="floating-label-border"></div>
+		    						<span class="validation_styles" ng-show="contactForm.message.$error.required && contactForm.message.$touched">* Message is required<br></span>
+		    						<span class="validation_styles" ng-show="contactForm.message.$error.minlength && contactForm.message.$touched">* Message should be minium of 10 characters</span>
                                 </div>
-                            </div>
-                            <div class="form-group">
                                 <button type="submit" class="btn-custom btn-custom-md transition pull-left" id="submit" name="insertContact" ng-disabled="contactForm.$invalid" ng-click="fn_insertContact()">Submit</button>
                                 <button type="reset" class="btn-custom-inverse btn-custom-md transition pull-right" ng-click="fn_reset()">Cancel</button>
-                            </div>
-                        </fieldset>
-                    </form>
-                    <h5><sup><i class="fa fa-asterisk" aria-hidden="true" style="color: red;"></i></sup> Please note that all the above fields are mandatory.</h5>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                 <div class="social-contact col-lg-5 col-md-5 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                    <h3>Follow us on</h3>
+                    <ul class="social-contact-list">
+                        <li><a class="transition" href="https://www.facebook.com/Pro-elearning-138039733727866" target="_blank"><i class="fa fa-facebook transition" aria-hidden="true"></i></a></li>
+                        <li><a class="transition" href="https://www.linkedin.com/in/pro-e-learning-6a20b6166" target="_blank"><i class="fa fa-linkedin transition" aria-hidden="true"></i></a></li>
+                        <li><a class="transition" href="https://plus.google.com/u/2/114009020735948039165" target="_blank"><i class="fa fa-google-plus transition" aria-hidden="true"></i></a></li>
+                        <li><a class="transition" href="https://twitter.com/pro_elearning" target="_blank"><i class="fa fa-twitter transition" aria-hidden="true"></i></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -126,5 +148,13 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Map -->
+    <div class="row" ng-controller="mapCtrl">
+        <div id="class" ng-repeat="marker in markers">
+            <a href="#" class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center country-title" ng-click="openInfoWindow($event, marker)">{{ marker.title }}</a>
+        </div>
+        <div id="map"></div>
     </div>
 </div>

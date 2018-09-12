@@ -49,7 +49,7 @@
                                 <td>
                                     <a class="btn-download transition" href="../upload/{{ trainer.resume }}" title="{{ trainer.resume }}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a>
                                 </td>
-                                <td>{{ trainer.message }}</td>
+                                <td>{{ trainer.message | defaultValueFilter }}</td>
                                 <td>{{ trainer.date_time }}</td>
                             </tr>
                         </tbody>

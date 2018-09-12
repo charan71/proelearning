@@ -1,0 +1,38 @@
+<div class="contact-form-grid">
+    <h4 class="contact-form-heading text-center">Submit a query</h4>
+    <div class="form-lg-wrap">
+        <form name="contactForm" method="POST" enctype="multipart/form-data" id="queryForm" class="form form-horizontal query-form" autocomplete="on" novalidate>
+            <div class="placeholder-wrap form-control-wrapper">
+                <input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" />
+                <div class="floating-label">Full Name *</div>
+                <div class="floating-label-border"></div>
+                <span class="validation_styles" ng-show="contactForm.name.$error.required && contactForm.name.$touched">Full Name is required *<br></span>
+                <span class="validation_styles" ng-show="contactForm.name.$error.pattern && contactForm.name.$invalid">Full Name should contain only alphabets, dots and spaces *<br></span>
+                <span class="validation_styles" ng-show="contactForm.name.$error.minlength && contactForm.name.$touched">Full Name should be minimum of 3 characters *<br></span>
+                <span class="validation_styles" ng-show="contactForm.name.$error.maxlength && contactForm.name.$touched">Full Name should be maximum of 40 characters *</span>
+            </div>
+            <div class="placeholder-wrap form-control-wrapper">
+                <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" />
+                <div class="floating-label">Email *</div>
+                <div class="floating-label-border"></div>
+                <span class="validation_styles" ng-show="contactForm.email.$error.required && contactForm.email.$touched">Email is required *</span>
+                <span class="validation_styles" ng-show="contactForm.email.$error.pattern && contactForm.email.$touched">Please enter a valid email *</span>
+            </div>
+            <div class="placeholder-wrap form-control-wrapper">
+                <input type="tel" name="phone" ng-model="phone" ng-required="true" ng-pattern="/^\d{10}$/" class="form-control" id="phone" />
+                <div class="floating-label">Phone *</div>
+                <div class="floating-label-border"></div>
+                <span class="validation_styles" ng-show="contactForm.phone.$error.required && contactForm.phone.$touched">Phone number is required *<br></span>
+                <span class="validation_styles" ng-show="contactForm.phone.$error.pattern && contactForm.phone.$touched">Please enter a valid phone number *</span>
+            </div>
+            <div class="placeholder-wrap form-control-wrapper">
+                <textarea ng-model="message" ng-required="true" ng-minlength="10" class="form-control" rows="2" name="message" id="message"></textarea>
+                <div class="floating-label">Your Message *</div>
+                <div class="floating-label-border"></div>
+                <span class="validation_styles" ng-show="contactForm.message.$error.required && contactForm.message.$touched">Message is required *<br></span>
+                <span class="validation_styles" ng-show="contactForm.message.$error.minlength && contactForm.message.$touched">Message should be minium of 10 characters *</span>
+            </div>
+            <button class="btn-custom-form btn-plain btn-round btn-sm transition">Submit Query</button>
+        </form>
+    </div>
+</div>

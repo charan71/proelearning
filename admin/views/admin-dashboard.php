@@ -13,7 +13,7 @@
 	<div class="main-content-wrapper">
 		<div class="dummy"></div>
 		<div class="main-content">
-			<div ng-controller="adminDashboardCtrl">
+			<div class="dashboard" ng-controller="adminDashboardCtrl">
 				<h3>Dashboard</h3>
 				
 				<?php
@@ -34,7 +34,11 @@
 
                 <div style="width:300px;height:300;">
                     <canvas class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-click="onClick" chart-colors="colors"></canvas>
-                </div>
+				</div>
+				
+				<div class="ngClock">
+					<ds-widget-clock digital-format="'hh:mm:ss a'" theme="blue-light"></ds-widget-clock>
+				</div>
 
 			</div>
 		</div>

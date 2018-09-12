@@ -4,12 +4,12 @@
 
 jQuery(document).ready(function () {
 	/*-- Navbar Auto-Collapse In Responsive Mode --*/
-	$(".navbar-nav li a").click(function(event) {
-		$(".navbar-collapse").collapse("hide");
-	});
+	// $(".navbar-nav li a").click(function(event) {
+	// 	$(".navbar-collapse").collapse("hide");
+	// });
 	
 	$(window).on("scroll", function () {
-		/*-- Bottom to Top Button Display On Scroll --*/
+		/*-- Bottom to Top Button Show/Hide On Scroll --*/
 		if ($(document).scrollTop() > 400) {
 			$(".bottom-to-top").css("transform", "scale(1,1)");
 		} else {
