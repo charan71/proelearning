@@ -329,6 +329,10 @@ angular.module('ProELearning.controllers', [])
             {ccCloudTechURL:"cloud-technologies/salesforce-administrator", ccCloudTechImage:"salesforce-administrator.jpg", ccCloudTechAlt:"Salesforce-Administrator-Training-Pro-elearning", ccCloudTechTitle:"Salesforce Administrator", ccCloudTechDesc:"A Salesforce Administrator is a business leader, deeply knowledgeable about how their company operates, intertwined in making all departments successful through process automations, and thus, integral to running a smooth & lean business.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
             {ccCloudTechURL:"cloud-technologies/azure", ccCloudTechImage:"azure.jpg", ccCloudTechAlt:"Azure-Training-Pro-elearning", ccCloudTechTitle:"Azure", ccCloudTechDesc:"Microsoft Azure is an open, flexible, enterprise-grade cloud computing platform.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
             {ccCloudTechURL:"cloud-technologies/aws", ccCloudTechImage:"aws.jpg", ccCloudTechAlt:"AWS-Training-Pro-elearning", ccCloudTechTitle:"AWS", ccCloudTechDesc:"Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
+<<<<<<< HEAD
+=======
+            {ccCloudTechURL:"cloud-technologies/cloudera", ccCloudTechImage:"cloudera.jpg", ccCloudTechAlt:"Cloudera-Training-Pro-elearning", ccCloudTechTitle:"Cloudera", ccCloudTechDesc:"Cloudera offers all the required softwares in one package(CDH) for Apache Hadoop software which is used for big data analysis.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
+>>>>>>> 9c7c2fee0b0cad3074045e560fd327a8986b80a9
             {ccCloudTechURL:"cloud-technologies/servicenow", ccCloudTechImage:"servicenow.jpg", ccCloudTechAlt:"ServiceNow-Training-Pro-elearning", ccCloudTechTitle:"ServiceNow", ccCloudTechDesc:"ServiceNow's cloud platform streamlines how work gets done.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
             {ccCloudTechURL:"cloud-technologies/openstack", ccCloudTechImage:"openstack.jpg", ccCloudTechAlt:"OpenStack-Training-Pro-elearning", ccCloudTechTitle:"OpenStack", ccCloudTechDesc:"OpenStack is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service, whereby virtual servers and other resources are made available to customers.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
         ];
@@ -351,16 +355,22 @@ angular.module('ProELearning.controllers', [])
             {ccWebDevURL:"web-development/ui-development", ccWebDevImage:"ui-development.jpg", ccWebDevAlt: "UI-Development-Training-Pro-elearning", ccWebDevTitle:"UI Development", ccWebDevDesc:"UI Development is the future of the web development with vast number of frameworks.", ccWebDevDuration: "45", ccWebDevPrice: getPrice("ui-development")},
             {ccWebDevURL:"web-development/angular4", ccWebDevImage:"angular-4.jpg", ccWebDevAlt: "Angular-4-Training-Pro-elearning", ccWebDevTitle:"Angular 4", ccWebDevDesc:"Most popular client-side framework for website development from Google.", ccWebDevDuration: "45", ccWebDevPrice: getPrice("angular4")},
             {ccWebDevURL:"web-development/php", ccWebDevImage:"php.jpg", ccWebDevAlt: "PHP-Training-Pro-elearning", ccWebDevTitle:"PHP", ccWebDevDesc:"PHP is a light weight backend language.", ccWebDevDuration: "45", ccWebDevPrice: getPrice("php")},
+<<<<<<< HEAD
             {ccWebDevURL:"web-development/mysql", ccWebDevImage:"mysql-dba.jpg", ccWebDevAlt: "MySQL-Training-Pro-elearning", ccWebDevTitle:"MySQL", ccWebDevDesc:"MySQL is the most popular Open Source Relational SQL Database Management System. MySQL is one of the best RDBMS being used for developing various web-based software applications.", ccWebDevDuration: "45", ccWebDevPrice: getPrice("mysql")},
+=======
+>>>>>>> 9c7c2fee0b0cad3074045e560fd327a8986b80a9
         ];
         
         $scope.ccRpa = [
             {ccRpaURL:"rpa/blueprism", ccRpaImage:"blueprism.jpg", ccRpaAlt: "Blue-Prism-Training-Pro-elearning", ccRpaTitle:"Blue Prism", ccRpaDesc:"Blue Prism Doing more with software is the essence of digital transformation. An important part of this transformation is automating business processes.", ccRpaDuration: "45", ccRpaPrice: getPrice("blueprism")},
+<<<<<<< HEAD
             {ccRpaURL:"rpa/artificial-intelligence", ccRpaImage:"artificial-intelligence.jpg", ccRpaAlt: "Artificial-Intelligence-Training-Pro-elearning", ccRpaTitle:"Artificial Intelligence", ccRpaDesc:"Artificial intelligence (AI) is an area of computer science that emphasizes the creation of intelligentmachines that work and react like humans. Some of the activities computers with artificial intelligenceare designed for include: Speech recognition. Learning.", ccRpaDuration: "45", ccRpaPrice: getPrice("ai")},
             {ccRpaURL:"rpa/automation-anywhere", ccRpaImage:"automation-anywhere.jpg", ccRpaAlt: "Automation-Anywhere-Training-Pro-elearning", ccRpaTitle:"Automation Anywhere", ccRpaDesc:"Automation Anywhere Enterprise is robotic process automation software designed to automate any process end-to-end with cognitive software robots.", ccRpaDuration: "45", ccRpaPrice: getPrice("aa")},
             {ccRpaURL:"rpa/iot", ccRpaImage:"iot.jpg", ccRpaAlt: "IoT-Training-Pro-elearning", ccRpaTitle:"IoT", ccRpaDesc:"The internet of things, or IoT, is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.", ccRpaDuration: "45", ccRpaPrice: getPrice("iot")},
             {ccRpaURL:"rpa/machine-learning", ccRpaImage:"machine-learning.jpg", ccRpaAlt: "Machine-Learning-Training-Pro-elearning", ccRpaTitle:"Machine Learning", ccRpaDesc:"Machine learning is a field of computer science that uses statistical techniques to give computer systems the ability to 'learn' with data, without being explicitly programmed.", ccRpaDuration: "45", ccRpaPrice: getPrice("machine-learning")},
             {ccRpaURL:"rpa/uipath", ccRpaImage:"uipath.jpg", ccRpaAlt: "UiPath-Training-Pro-elearning", ccRpaTitle:"UiPath", ccRpaDesc:"UiPath is an Enterprise Robotic Process Automation (RPA) Software designed to empower companies to automate repetitive, manual, rules-based business processes.", ccRpaDuration: "45", ccRpaPrice: getPrice("uipath")},
+=======
+>>>>>>> 9c7c2fee0b0cad3074045e560fd327a8986b80a9
         ];
         
         $scope.ccMobileApps = [
