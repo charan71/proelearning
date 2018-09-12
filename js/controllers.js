@@ -631,16 +631,16 @@ angular.module('ProELearning.controllers', [])
 .controller('mapCtrl', ['$scope', function ($scope) {
     var cities = [
         {
-            city : 'Texas',
-            desc : '20731 Norwich Gulch Ln,<br>Richmond, TX 77407,<br><i class="fa fa-phone" aria-hidden="true"></i> +1 (713) 623-1945',
-            lat : 29.6870396,
-            long : -95.7423876
-        },
-        {
             city : 'Pennsylvania',
             desc : '<b>Astral Technologies Inc.</b><br>1704 St. John\'s court,<br>Bensalem, PA 19020<br><i class="fa fa-phone" aria-hidden="true"></i> +1 (267) 436-7840',
             lat : 40.092983,
             long : -74.932957
+        },
+        {
+            city : 'Texas',
+            desc : '20731 Norwich Gulch Ln,<br>Richmond, TX 77407,<br><i class="fa fa-phone" aria-hidden="true"></i> +1 (713) 623-1945',
+            lat : 29.6870396,
+            long : -95.7423876
         },
         {
             city : 'Australia',
