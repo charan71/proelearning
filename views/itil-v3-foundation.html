@@ -1,279 +1,493 @@
-<div class="container-fluid" ng-controller="oracleController">
+<div class="container-fluid">
     <div class="row">
         <div class="row-gap-big">
             <img class="img-responsive" src="./images/parallax-images/itil-v3-foundation.jpg" alt="ITIL-V3-Foundation-Training-Pro-eLearning">
         </div>
     </div>
+    
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/oracle.png" alt="ITIL V3 Foundation Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">ITIL V3 Foundation  Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>20 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>ITIL V3 Foundation Course Content</h1>
-                        <p class="course-duration"><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 20h</p>
-                        <hr>
-                        <h4>Service management as a practice (comprehension)</h4>
-                        <p>To help the candidate to define the concept of a service, and to comprehend and explain the concept of service management as a practice.</p>
-                        <ul>
-                        	<li>Understand the concept of best practices in the public domain.</li>
-                        	<li>Describe and explain why ITIL is successful.</li>
-                        	<li>Define and explain the concept of a service.</li>
-                        	<li>Define and explain the concept of internal and external customers.</li>
-                        	<li>Define and explain the concept of internal and external services.</li>
-                        	<li>Define and explain the concept of service management.</li>
-                        	<li>Define and explain the concept of IT service management.</li>
-                        	<li>Define and explain the concept of stakeholders in service management.</li>
-                        	<li>Define processes and functions.</li>
-                        	<li>Explain the process model and the characteristics of processes.</li>
-                        </ul>
-                        <h4>The ITIL service lifecycle (comprehension)</h4>
-                        <p>To help the candidate to understand the value of the ITIL service lifecycle, how the processes integrate with each other, throughout the lifecycle and explain the objectives, scope and business value for each phase in the lifecycle.</p>
-                        <ul>
-                        	<li>Describe the structure of the ITIL service lifecycle.</li>
-                        	<li>Account for the purpose, objectives and scope of service strategy.</li>
-                        	<li>Briefly explain what value service strategy provides to the business.</li>
-                        	<li>Account for the purpose, objectives and scope of service design.</li>
-                        	<li>Briefly explain what value service design provides to the business.</li>
-                        	<li>Account for the purpose, objectives and scope of service transition.</li>
-                        	<li>Briefly explain what value service transition provides to the business.</li>
-                        	<li>Account for the purpose, objectives and scope of service operation.</li>
-                        	<li>Briefly explain what value service operation provides to the business.</li>
-                        	<li>Account for the main purpose, objectives and scope of continual service improvement.</li>
-                        	<li>Briefly explain what value continual service improvement provides to the business.</li>
-                        </ul>
-                        <h4>Generic concepts and definitions (awareness)</h4>
-                        <p>To help the candidate to define some of the key terminology and explain the key concepts of service management.</p>
-                        <ul>
-                        	<li>Utility and warranty.</li>
-                        	<li>Assets, resources and capabilities.</li>
-                        	<li>Service portfolio.</li>
-                        	<li>Service catalogue (both two-view and three-view types).</li>
-                        	<li>Governance.</li>
-                        	<li>Business case.</li>
-                        	<li>Risk management.</li>
-                        	<li>Service provider.</li>
-                        	<li>Supplier.</li>
-                        	<li>Service level agreement.</li>
-                        	<li>Operational level agreement (OLA).</li>
-                        	<li>Underpinning contract.</li>
-                        	<li>Service design package.</li>
-                        	<li>Availability.</li>
-                        	<li>Service knowledge management system (SKMS).</li>
-                        	<li>Configuration item (CI).</li>
-                        	<li>Configuration management system.</li>
-                        	<li>Definitive media library (DML).</li>
-                        	<li>Change.</li>
-                        	<li>Change types (standard, emergency and normal).</li>
-                        	<li>Event.</li>
-                        	<li>Alert.</li>
-                        	<li>Incident.</li>
-                        	<li>Impact, urgency and priority.</li>
-                        	<li>Service request.</li>
-                        	<li>Problem.</li>
-                        	<li>Workaround.</li>
-                        	<li>Known error.</li>
-                        	<li>Known error database (KEDB).</li>
-                        	<li>The role of communication in service operation.</li>
-                        	<li>Release policy.</li>
-                        	<li>Types of services.</li>
-                        	<li>Change proposals.</li>
-                        	<li>CSI register.</li>
-                        	<li>Outcomes.</li>
-                        	<li>Patterns of business activity.</li>
-                        	<li>Customers and users.</li>
-                        	<li>The Deming Cycle (plan, do, check, act).</li>
-                        </ul>
-                        <h4>Key principles and models (comprehension)</h4>
-                        <p>To help the candidate to comprehend and account for the key principles and models of service management and to balance some of the opposing forces within service management through all the states from Strategy to Continuoul Service Improvement.</p>
-                        <h5><b>Service strategy</b></h5>
-                        <ul>
-                        	<li>Describe value creation through services.</li>
-                        </ul>
-                        <h5><b>Service design</b></h5>
-                        <ul>
-                        	<li>Understand the importance of people, processes, products and partners for service management.</li>
-                        	<li>Understand the five major aspects of service design.
-                                <ul>
-                        	        <li>Service solutions for new or changed services.</li>
-                        	        <li>Management information systems and tools.</li>
-                        	        <li>Technology architectures and management architectures.</li>
-                        	        <li>The processes required.</li>
-                        	        <li>Measurement methods and metrics.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                            <h5><b>Continual service improvement</b></h5>
-                        <ul>
-                        	<li>Explain the continual service improvement approach.</li>
-                        	<li>Understand the role of measurement for continual service improvement and explain the following key elements:
-                                <ul>
-                        	        <li>Relationship between critical success factors (CSF) and key performance indicators (KPI).</li>
-                        	        <li>Baselines.</li>
-                        	        <li>Types of metrics (technology metrics, process metrics, service metrics).</li>
-                                </ul>
-                        	</li>
-                        </ul>
-                        <h4>Selected processes (awareness)</h4>
-                        <p>To help the candidate understand how the service management processes contribute to the ITIL service lifecycle, to explain the purpose, objectives, scope, basic concepts, activities and interfaces for four of the core processes, and to state the purpose, objectives and scope for eighteen of the remaining processes.</p>
-                        <h5><b>Service strategy</b></h5>
-                        <p>State the purpose, objectives and scope for.</p>
-                        <ul>
-                        	<li>Service portfolio management
-                            	<ul>
-                                	<li>The service portfolio</li>
-                            	</ul>
-                            </li>
-                        	<li>Financial management for IT services
-                            	<ul>
-                        	        <li>Business case</li>
-                                </ul>
-                        	</li>
-                        	<li>Business relationship management</li>
-                        </ul>
-                        <h5><b>Service design</b></h5>
-                        <p>Explain the purpose, objectives, scope, basic concepts, process activities and interfaces for:</p>
-                        <ul>
-                           	<li>Service level management (SLM) following list must be covered:</li>
-                           	<li>Service-based SLA.</li>
-                           	<li>Multi-level SLAs.</li>
-                           	<li>Service level requirements (SLRs).</li>
-                           	<li>SLA monitoring (SLAM) chart.</li>
-                           	<li>Service review.</li>
-                           	<li>Service improvement plan (SIP).</li>
-                           	<li>The relationship between SLM and BRM.</li>
-                        </ul>
-                        <p>State the purpose, objectives and scope for:</p>
-                        	<ul>
-                        	    <li>Service catalogue management.</li>
-                        	    <li>Availability management
-                                    <ul>
-                                        <li>Service availability</li>
-                                        <li>Component availability</li>
-                                        <li>Reliability</li>
-                                        <li>Maintainability</li>
-                                        <li>Serviceability</li>
-                                        <li>Vital business functions (VBF)</li>
-                                    </ul>
-                                </li>
-                        	    <li>Information security management (ISM)
-                                    <ul>
-                                        <li>Information security policy</li>
-                                    </ul>
-                                </li>
-                        	    <li>Supplier management
-                                    <ul>
-                                        <li>Supplier categories</li>
-                                    </ul>
-                                </li>
-                        	    <li>Capacity management
-                                    <ul>
-                                        <li>Capacity plan</li>
-                                        <li>Business capacity management</li>
-                                        <li>Service capacity management</li>
-                                        <li>Component capacity management</li>
-                                    </ul>
-                                </li>
-                        	    <li>IT service continuity management
-                                    <ul>
-                                        <li>Purpose of business impact analysis (BIA)</li>
-                                        <li>Risk assessment</li>
-                                    </ul>
-                                </li>
-                        	    <li>Design coordination.</li>
-                        	</ul>
-                            <h5><b>Service transition</b></h5>
-                        	<p>Explain the purpose, objectives, scope, basic concepts, process activities and interfaces for:</p>
-                        	<ul>
-                        	    <li>Change management
-                                    <ul>
-                        	            <li>Types of change request.</li>
-                        	            <li>Change models.</li>
-                        	            <li>Remediation planning.</li>
-                        	            <li>Change advisory board / emergency change advisory board.</li>
-                        	            <li>Lifecycle of a normal change.</li>
-                                    </ul>
-                                </li>
-                        	</ul>
-                            <p>State the purpose, objectives and scope for:</p>
-                            <ul>
-                        	    <li>Release and deployment management
-                        	        <ul>
-                        	            <li>Four phases of release and deployment.</li>
-                        	            <li>Knowledge management
-                                            <ul>
-                                                <li>Data-to-Information-to-Knowledge-to-Wisdom (DIKW) & SKMS</li>
-                                            </ul>
-                                        </li>
-                                        <li>Service asset and configuration management (SACM).</li>
-                        	            <li>Transition planning and support.</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        <h5><b>Service operation</b></h5>
-                        <p>Explain the purpose, objectives, scope, basic concepts, process activities and interfaces for:</p>
-                        <ul>
-                        	<li>Incident management.</li>
-                        	<li>Problem management.</li>
-                        </ul>
-                        <p>State the purpose, objectives and scope for:</p>
-                        <ul>
-                        	<li>Event management.</li>
-                        	<li>Request fulfillment.</li>
-                        	<li>Access management.</li>
-                        </ul>
-                        <h5><b>Continual service improvement</b></h5>
-                        <ul>
-                        	<li>State the purpose, objectives and scope for
-                                <ul>
-                        	        <li>The seven-step improvement process.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <h4>Selected functions (awareness)</h4>
-                        <p>To help the candidate to explain the role, objectives and organizational structures of the service desk function, and to state the role, objectives and overlap of three other functions.</p>
-                        <p>Explain the role, objectives and organizational structures for</p>
-                        <ul>
-                        	<li>The service desk function.</li>
-                        </ul>
-                        <p>State the role and objectives of:</p>
-                        <ul>
-                        	<li>The technical management function.</li>
-                        	<li>The application management function.</li>
-                        	<li>The IT operations management function (IT operations control and facilities management).</li>
-                        </ul>
-                        <h4>Selected roles (awareness)</h4>
-                        <p>To help the candidate to account for and to be aware of the responsibilities of some of the key roles in service management.</p>
-                        <p>Account for the role and the responsibilities of the</p>
-                        <ul>
-                        	<li>Process owner.</li>
-                        	<li>Process manager.</li>
-                        	<li>Process practitioner.</li>
-                        	<li>Service Owner.</li>
-                        </ul>
-                        <p>Recognize the responsible, accountable, consulted, informed (RACI) responsibility model and explain its role in determining organizational structure.</p>
-                        <h4>Technology and architecture (awareness)</h4>
-                        <p>To understand how service automation assists with expediting service management processes.</p>
-                    	<p>Understand how service automation assists with expediting service management processes.</p>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <!-- Modes of Training -->
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>ITIL Awareness required.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>The Foundation exam is the entry level certification and offers you a general awareness of the key elements, concepts and terminology used in the ITIL service lifecycle, including the links between lifecycle stages, the processes used and their contribution to service management practices.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Service management as a practice (comprehension) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>To help the candidate to define the concept of a service, and to comprehend and explain the concept of service management as a practice.</p>
+                                <ul>
+                        	        <li>Understand the concept of best practices in the public domain.</li>
+                        	        <li>Describe and explain why ITIL is successful.</li>
+                        	        <li>Define and explain the concept of a service.</li>
+                        	        <li>Define and explain the concept of internal and external customers.</li>
+                        	        <li>Define and explain the concept of internal and external services.</li>
+                        	        <li>Define and explain the concept of service management.</li>
+                        	        <li>Define and explain the concept of IT service management.</li>
+                        	        <li>Define and explain the concept of stakeholders in service management.</li>
+                        	        <li>Define processes and functions.</li>
+                        	        <li>Explain the process model and the characteristics of processes.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. The ITIL service lifecycle (comprehension) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>To help the candidate to understand the value of the ITIL service lifecycle, how the processes integrate with each other, throughout the lifecycle and explain the objectives, scope and business value for each phase in the lifecycle.</p>
+                                <ul>
+                        	        <li>Describe the structure of the ITIL service lifecycle.</li>
+                        	        <li>Account for the purpose, objectives and scope of service strategy.</li>
+                        	        <li>Briefly explain what value service strategy provides to the business.</li>
+                        	        <li>Account for the purpose, objectives and scope of service design.</li>
+                        	        <li>Briefly explain what value service design provides to the business.</li>
+                        	        <li>Account for the purpose, objectives and scope of service transition.</li>
+                        	        <li>Briefly explain what value service transition provides to the business.</li>
+                        	        <li>Account for the purpose, objectives and scope of service operation.</li>
+                        	        <li>Briefly explain what value service operation provides to the business.</li>
+                        	        <li>Account for the main purpose, objectives and scope of continual service improvement.</li>
+                        	        <li>Briefly explain what value continual service improvement provides to the business.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Generic concepts and definitions (awareness) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>To help the candidate to define some of the key terminology and explain the key concepts of service management.</p>
+                                <ul>
+                        	        <li>Utility and warranty.</li>
+                        	        <li>Assets, resources and capabilities.</li>
+                        	        <li>Service portfolio.</li>
+                        	        <li>Service catalogue (both two-view and three-view types).</li>
+                        	        <li>Governance.</li>
+                        	        <li>Business case.</li>
+                        	        <li>Risk management.</li>
+                        	        <li>Service provider.</li>
+                        	        <li>Supplier.</li>
+                        	        <li>Service level agreement.</li>
+                        	        <li>Operational level agreement (OLA).</li>
+                        	        <li>Underpinning contract.</li>
+                        	        <li>Service design package.</li>
+                        	        <li>Availability.</li>
+                        	        <li>Service knowledge management system (SKMS).</li>
+                        	        <li>Configuration item (CI).</li>
+                        	        <li>Configuration management system.</li>
+                        	        <li>Definitive media library (DML).</li>
+                        	        <li>Change.</li>
+                        	        <li>Change types (standard, emergency and normal).</li>
+                        	        <li>Event.</li>
+                        	        <li>Alert.</li>
+                        	        <li>Incident.</li>
+                        	        <li>Impact, urgency and priority.</li>
+                        	        <li>Service request.</li>
+                        	        <li>Problem.</li>
+                        	        <li>Workaround.</li>
+                        	        <li>Known error.</li>
+                        	        <li>Known error database (KEDB).</li>
+                        	        <li>The role of communication in service operation.</li>
+                        	        <li>Release policy.</li>
+                        	        <li>Types of services.</li>
+                        	        <li>Change proposals.</li>
+                        	        <li>CSI register.</li>
+                        	        <li>Outcomes.</li>
+                        	        <li>Patterns of business activity.</li>
+                        	        <li>Customers and users.</li>
+                        	        <li>The Deming Cycle (plan, do, check, act).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Key principles and models (comprehension) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <p>To help the candidate to comprehend and account for the key principles and models of service management and to balance some of the opposing forces within service management through all the states from Strategy to Continuoul Service Improvement.</p>
+                                <h5><b>Service strategy</b></h5>
+                                <ul>
+                                    <li>Describe value creation through services.</li>
+                                </ul>
+                                <h5><b>Service design</b></h5>
+                                <ul>
+                                    <li>Understand the importance of people, processes, products and partners for service management.</li>
+                                    <li>Understand the five major aspects of service design.
+                                        <ul>
+                                            <li>Service solutions for new or changed services.</li>
+                                            <li>Management information systems and tools.</li>
+                                            <li>Technology architectures and management architectures.</li>
+                                            <li>The processes required.</li>
+                                            <li>Measurement methods and metrics.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h5><b>Continual service improvement</b></h5>
+                                <ul>
+                                    <li>Explain the continual service improvement approach.</li>
+                                    <li>Understand the role of measurement for continual service improvement and explain the following key elements:
+                                        <ul>
+                                            <li>Relationship between critical success factors (CSF) and key performance indicators (KPI).</li>
+                                            <li>Baselines.</li>
+                                            <li>Types of metrics (technology metrics, process metrics, service metrics).</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Selected processes (awareness) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <p>To help the candidate understand how the service management processes contribute to the ITIL service lifecycle, to explain the purpose, objectives, scope, basic concepts, activities and interfaces for four of the core processes, and to state the purpose, objectives and scope for eighteen of the remaining processes.</p>
+                                <h5><b>Service strategy</b></h5>
+                                <p>State the purpose, objectives and scope for.</p>
+                                <ul>
+                                    <li>Service portfolio management
+                                        <ul>
+                                            <li>The service portfolio</li>
+                                        </ul>
+                                    </li>
+                                    <li>Financial management for IT services
+                                        <ul>
+                                            <li>Business case</li>
+                                        </ul>
+                                    </li>
+                                    <li>Business relationship management</li>
+                                </ul>
+                                <h5><b>Service design</b></h5>
+                                <p>Explain the purpose, objectives, scope, basic concepts, process activities and interfaces for:</p>
+                                <ul>
+                                       <li>Service level management (SLM) following list must be covered:</li>
+                                       <li>Service-based SLA.</li>
+                                       <li>Multi-level SLAs.</li>
+                                       <li>Service level requirements (SLRs).</li>
+                                       <li>SLA monitoring (SLAM) chart.</li>
+                                       <li>Service review.</li>
+                                       <li>Service improvement plan (SIP).</li>
+                                       <li>The relationship between SLM and BRM.</li>
+                                </ul>
+                                <p>State the purpose, objectives and scope for:</p>
+                                <ul>
+                                    <li>Service catalogue management.</li>
+                                    <li>Availability management
+                                        <ul>
+                                            <li>Service availability</li>
+                                            <li>Component availability</li>
+                                            <li>Reliability</li>
+                                            <li>Maintainability</li>
+                                            <li>Serviceability</li>
+                                            <li>Vital business functions (VBF)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Information security management (ISM)
+                                        <ul>
+                                            <li>Information security policy</li>
+                                        </ul>
+                                    </li>
+                                    <li>Supplier management
+                                        <ul>
+                                            <li>Supplier categories</li>
+                                        </ul>
+                                    </li>
+                                    <li>Capacity management
+                                        <ul>
+                                            <li>Capacity plan</li>
+                                            <li>Business capacity management</li>
+                                            <li>Service capacity management</li>
+                                            <li>Component capacity management</li>
+                                        </ul>
+                                    </li>
+                                    <li>IT service continuity management
+                                        <ul>
+                                            <li>Purpose of business impact analysis (BIA)</li>
+                                            <li>Risk assessment</li>
+                                        </ul>
+                                    </li>
+                                    <li>Design coordination.</li>
+                                </ul>
+                                <h5><b>Service transition</b></h5>
+                                <p>Explain the purpose, objectives, scope, basic concepts, process activities and interfaces for:</p>
+                                <ul>
+                                    <li>Change management
+                                        <ul>
+                                            <li>Types of change request.</li>
+                                            <li>Change models.</li>
+                                            <li>Remediation planning.</li>
+                                            <li>Change advisory board / emergency change advisory board.</li>
+                                            <li>Lifecycle of a normal change.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p>State the purpose, objectives and scope for:</p>
+                                <ul>
+                                    <li>Release and deployment management
+                                        <ul>
+                                            <li>Four phases of release and deployment.</li>
+                                            <li>Knowledge management
+                                                <ul>
+                                                    <li>Data-to-Information-to-Knowledge-to-Wisdom (DIKW) & SKMS</li>
+                                                </ul>
+                                            </li>
+                                            <li>Service asset and configuration management (SACM).</li>
+                                            <li>Transition planning and support.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h5><b>Service operation</b></h5>
+                                <p>Explain the purpose, objectives, scope, basic concepts, process activities and interfaces for:</p>
+                                <ul>
+                                    <li>Incident management.</li>
+                                    <li>Problem management.</li>
+                                </ul>
+                                <p>State the purpose, objectives and scope for:</p>
+                                <ul>
+                                    <li>Event management.</li>
+                                    <li>Request fulfillment.</li>
+                                    <li>Access management.</li>
+                                </ul>
+                                <h5><b>Continual service improvement</b></h5>
+                                <ul>
+                                    <li>State the purpose, objectives and scope for
+                                        <ul>
+                                            <li>The seven-step improvement process.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Selected functions (awareness) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <p>To help the candidate to explain the role, objectives and organizational structures of the service desk function, and to state the role, objectives and overlap of three other functions.</p>
+                                <p>Explain the role, objectives and organizational structures for</p>
+                                <ul>
+                                    <li>The service desk function.</li>
+                                </ul>
+                                <p>State the role and objectives of:</p>
+                                <ul>
+                                    <li>The technical management function.</li>
+                                    <li>The application management function.</li>
+                                    <li>The IT operations management function (IT operations control and facilities management).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. Selected roles (awareness) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <p>To help the candidate to account for and to be aware of the responsibilities of some of the key roles in service management.</p>
+                                <p>Account for the role and the responsibilities of the</p>
+                                <ul>
+                                    <li>Process owner.</li>
+                                    <li>Process manager.</li>
+                                    <li>Process practitioner.</li>
+                                    <li>Service Owner.</li>
+                                </ul>
+                                <p>Recognize the responsible, accountable, consulted, informed (RACI) responsibility model and explain its role in determining organizational structure.</p>
+                                <h4>Technology and architecture (awareness)</h4>
+                                <p>To understand how service automation assists with expediting service management processes.</p>
+                                <p>Understand how service automation assists with expediting service management processes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tna" aria-expanded="false" aria-controls="collapseSeven">8. Technology and architecture (awareness) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tna" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <p>To understand how service automation assists with expediting service management processes.</p>
+                                <p>Understand how service automation assists with expediting service management processes.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    	</div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
     </div>
 </div>

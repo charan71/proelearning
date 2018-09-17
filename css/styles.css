@@ -206,8 +206,8 @@ p {
     background-color: #fff;
     height: 50px;
     min-width: 100%;
-    width: 220%;
-    left: -150px;
+    width: 275%;
+    left: -230px;
     top: 0;
     position: absolute;
     transform: skew(-30deg);
@@ -1262,9 +1262,6 @@ input, select, textarea {
 .contents-heading {
     font-size: 20px;
     font-weight: 400;
-}
-.list-la {
-    list-style-type: lower-alpha;
 }
 .list-none {
     list-style-type: none;

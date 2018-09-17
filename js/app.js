@@ -69,7 +69,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning, the best IT training institute in Hyderabad providing real-time training for Java, Python,.Net, UNIX, LINUX, RUBY, Sharepoint and ITL foundation. ?100% placement assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "python training institutes in Hyderabad, best computer courses in Hyderabad, best it training institute in Hyderabad, Ruby Training institute in Hyderabad, Microsoft SharePoint Training institute in Hyderabad, ITIL V3 Training institute in Hyderabad, Build and Release Engineer Training institute in Hyderabad, Linux Training institute in Hyderabad, Linux online Training institute in Hyderabad, UNIX Training institute in Hyderabad, DotNet Training institute in Hyderabad, Java Training institute in Hyderabad, Java online Training institute in Hyderabad",
                     templateUrl: "views/information-technology.html",
-                    controller: "CourseCardsController"
+                    controller: "CourseCardsController",
+                    label: "Information Technology"
                 })
                     .when("/information-technology/java",
                           {
@@ -86,7 +87,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides the Best and Real-time Dot.net Training in Hyderabad from Basic to Advanced Level. Enroll Today to Get Trained by IT industry Experts.",
                     keywords: "DotNet Training institute in Hyderabad, DotNet online Training institute in Hyderabad, DotNet Classroom Training institute in Hyderabad, DotNet course in Hyderabad, DotNet Training in Hyderabad, DotNet online Training in Hyderabad, DotNet classroom Training in Hyderabad",
                     templateUrl: "views/dotnet.html",
-                    controller: "dotnetController"
+                    controller: "",
+                    label: ".Net"
                 })
                     .when("/information-technology/python",
                           {
@@ -102,7 +104,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is one of the Leading Embedded systems Training institutes in Hyderabad. We provide Quality Education in Embedded Systems. Join Today!",
                     keywords: "Embedded systems Training institute in Hyderabad, Embedded systems online Training institute in Hyderabad, Embedded systems Classroom Training institute in Hyderabad, Embedded systems course in Hyderabad, Embedded systems Training in Hyderabad, Embedded systems online Training in Hyderabad, Embedded systems classroom Training in Hyderabad",
                     templateUrl: "views/embedded-systems.html",
-                    controller: "embeddedSystemsCtrl"
+                    controller: "",
+                    label: "Embedded Systems"
                 })
                     .when("/information-technology/unix",
                           {
@@ -110,7 +113,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get UNIX Shell Scripting Training in Hyderabad by IT industry Experts. Pro-elearning offers the Best in industry Training on UNIX. Enrol Today!",
                     keywords: "UNIX Training institute in Hyderabad, UNIX online Training institute in Hyderabad, UNIX Classroom Training institute in Hyderabad, UNIX course in Hyderabad, UNIX Training in Hyderabad, UNIX online Training in Hyderabad, UNIX classroom Training in Hyderabad",
                     templateUrl: "views/unix.html",
-                    controller: ""
+                    controller: "",
+                    label: "Unix"
                 })
                     .when("/information-technology/linux",
                           {
@@ -118,7 +122,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enrol Today and Become an Expert in Linux Trained by IT Experts in Hyderabad. Pro-elearning Provides Best Online and Offline Linux training to Job Seekers and IT employees.",
                     keywords: "Linux Training institute in Hyderabad, Linux online Training institute in Hyderabad, Linux Classroom Training institute in Hyderabad, Linux course in Hyderabad, Linux Training in Hyderabad, Linux online Training in Hyderabad, Linux classroom Training in Hyderabad",
                     templateUrl: "views/linux.html",
-                    controller: ""
+                    controller: "",
+                    label: "Linux"
                 })
                     .when("/information-technology/build-and-deployment-engineer",
                           {
@@ -126,7 +131,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get Build and Deployment Engineer Training online/Classroom by experts in IT industry. Enrol Today get Hands-on Training with Quality course Sessions from Pro-elearning.",
                     keywords: "Build and Deployment Engineer Training institute in Hyderabad, Build and Deployment Engineer online Training institute in Hyderabad, Build and Deployment Engineer Classroom Training institute in Hyderabad, Build and Deployment Engineer course in Hyderabad, Build and Deployment Engineer Training in Hyderabad, Build and Deployment Engineer online Training in Hyderabad, Build and Deployment Engineer classroom Training in Hyderabad",
                     templateUrl: "views/build-deploy-eng.html",
-                    controller: ""
+                    controller: "",
+                    label: "Build and Deployment Engineer"
                 })
                     .when("/information-technology/build-release-engineer",
                           {
@@ -134,7 +140,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Learn Build and Release Engineer Training in Hyderabad by real time experts, Software Build and Release Engineer from the Best institute Pro-elearning. Join Us Today and get online/classroom training.",
                     keywords: "Build and Release Engineer Training institute in Hyderabad, Build and Release Engineer online Training institute in Hyderabad, Build and Release Engineer Classroom Training institute in Hyderabad, Build and Release Engineer course in Hyderabad, Build and Release Engineer Training in Hyderabad, Build and Release Engineer online Training in Hyderabad, Build and Release Engineer classroom Training in Hyderabad",
                     templateUrl: "views/build-release.html",
-                    controller: ""
+                    controller: "",
+                    label: "Build & Release Engineer"
                 })
                     .when("/information-technology/ruby",
                           {
@@ -142,7 +149,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enrol Today and Learn Ruby on Rails course with basic fundamentals to advanced concepts from experts with hands-on practical exposure from best institute Pro-elearning.",
                     keywords: "Ruby Training institute in Hyderabad, Ruby online Training institute in Hyderabad, Ruby Classroom Training institute in Hyderabad, Ruby course in Hyderabad, Ruby Training in Hyderabad, Ruby online Training in Hyderabad, Ruby classroom Training in Hyderabad",
                     templateUrl: "views/ruby.html",
-                    controller: ""
+                    controller: "",
+                    label: "Ruby"
                 })
                     .when("/information-technology/sharepoint",
                           {
@@ -150,7 +158,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for SharePoint Training - Get SharePoint certification Assistance Training in Hyderabad from Pro-elearning training institute, learn SharePoint course by industry Experts.",
                     keywords: "Microsoft SharePoint Training institute in Hyderabad, Microsoft SharePoint online Training institute in Hyderabad, Microsoft SharePoint Classroom Training institute in Hyderabad, Microsoft SharePoint course in Hyderabad, Microsoft SharePoint Training in Hyderabad, Microsoft SharePoint online Training in Hyderabad, Microsoft SharePoint classroom Training in Hyderabad",
                     templateUrl: "views/sharepoint.html",
-                    controller: ""
+                    controller: "",
+                    label: "SharePoint"
                 })
                     .when("/information-technology/itil-v3-foundation",
                           {
@@ -158,7 +167,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides the best ITIL V3 Foundation Training in Hyderabad. Attend ITIL Foundation certification training conducted by industry Experts.",
                     keywords: "ITIL V3 Training institute in Hyderabad, ITIL V3 online Training institute in Hyderabad, ITIL V3 Classroom Training institute in Hyderabad, ITIL V3 course in Hyderabad, ITIL V3 Training in Hyderabad, ITIL V3 online Training in Hyderabad, ITIL V3 classroom Training in Hyderabad",
                     templateUrl: "views/itil-v3-foundation.html",
-                    controller: ""
+                    controller: "",
+                    label: "ITIL V3 Foundation"
                 })
                     .when("/web-development",
                           {
@@ -166,7 +176,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers the best Web Development training in Hyderabad with placement oriented training & expert trainers. ?100% placement assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "UI developer course in Hyderabad, UI development training in Hyderabad, php training in Hyderabad, Angular 4 Training institute in Hyderabad, PHP online Training institute in Hyderabad, Angular 4 online Training institute in Hyderabad",
                     templateUrl: "views/web-development.html",
-                    controller: ""
+                    controller: "",
+                    label: "Web Development"
                 })
                     .when("/web-development/ui-development",
                           {
@@ -174,7 +185,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "To Become Professional UI Developer Learn Ui-Development Training in Hyderabad. Now Pro-elearning offers Best UI-Development Classes in Online and Class Room also covering all the updated Frameworks.",
                     keywords: "UI Development Training institute in Hyderabad, UI Development online Training institute in Hyderabad, UI Development Classroom Training institute in Hyderabad, UI Development course in Hyderabad, UI Development Training in Hyderabad, UI Development online Training in Hyderabad, UI Development classroom Training in Hyderabad",
                     templateUrl: "views/ui-development.html",
-                    controller: "uiController"
+                    controller: "",
+                    label: "UI Development"
                 })
                     .when("/web-development/angular4",
                           {

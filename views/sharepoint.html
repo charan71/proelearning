@@ -6,130 +6,392 @@
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="SharePoint Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">SharePoint 2010 Administration Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>SharePoint Course Content</h1>
-                        <p class="course-duration"><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: -- <span class="v-divider">|</span> <i class="fa fa-code-fork" aria-hidden="true"></i> Version: 2010</p>
-                        <hr>
-                        <h3>SharePoint 2010 Administration Training Outline</h3>
-                        <h4>Getting started with SharePoint 2010</h4>
-                        <ul>
-                        	<li>SharePoint Foundation Architecture and Terminology</li>
-                        	<li>SharePoint 2010 Enhancements Targeting Administrators</li>
-                        	<li>SharePoint Server 2010 Editions</li>
-                        	<li>Hardware and Software Requirements</li>
-                        	<li>Virtualization Considerations</li>
-                        </ul>
-                        <h4>Installing SharePoint Server 2010</h4>
-                        <ul>
-                        	<li>Understanding Farm Topologies</li>
-                        	<li>Service Application Architecture</li>
-                        	<li>Creating Dedicated Service Accounts in Active Directory</li>
-                        	<li>Installing SharePoint Server 2010</li>
-                        	<li>Creating the Farm and the Configuration Database</li>
-                        </ul>
-                        <h4>Configuring SharePoint Server 2010</h4>
-                        <ul>
-                        	<li>Getting Around in Central Administration</li>
-                        	<li>Managed Service Accounts</li>
-                        	<li>Managing Timer Jobs</li>
-                        	<li>Using the Farm Configuration Wizard</li>
-                        	<li>Configuring Service Applications by Hand</li>
-                        </ul>
-                        <h4>Configuring and Administrating Security in SharePoint 2010</h4>
-                        <ul>
-                        	<li>Windows Authentication</li>
-                        	<li>Claims-based Authentication</li>
-                        	<li>Forms-based Authentication</li>
-                        	<li>Intranet Extranet Considerations</li>
-                        	<li>Configuring Certificates and SSL</li>
-                        </ul>
-                        <h4>Creating and Configuring Web Applications</h4>
-                        <ul>
-                        	<li>Configuring DNS and Host Headers</li>
-                        	<li>Creating New Web Applications</li>
-                        	<li>Configuring Alternate Access Mappings</li>
-                        	<li>List Throttling and Quotas</li>
-                        	<li>Configuring Anonymous Access</li>
-                        </ul>
-                        <h4>Writing Administrative Scripts using Windows PowerShell</h4>
-                        <ul>
-                        	<li>Introduction to Windows PowerShell</li>
-                        	<li>Windows PowerShell Console Window</li>
-                        	<li>Writing Windows PowerShell Scripts</li>
-                        	<li>Loading the SharePoint PowerShell Snap-in</li>
-                        	<li>Writing Administrative Scripts for SharePoint 2010</li>
-                        </ul>
-                        <h4>Managing Site Collection Growth using a Governance Plan</h4>
-                        <ul>
-                        	<li>Sites and Site Collections</li>
-                        	<li>Site Templates in SharePoint 2010</li>
-                        	<li>Customizing Sites using the Browser</li>
-                        	<li>Customizing Sites with SharePoint Designer</li>
-                        	<li>Enforcing Governance in Production Environments</li>
-                        </ul>
-                        <h4>Upgrading Farms from SharePoint 2007 to SharePoint 2010</h4>
-                        <ul>
-                        	<li>Preparing a SharePoint 2007 Farm</li>
-                        	<li>In-Place Upgrade</li>
-                        	<li>Database Attach Upgrade</li>
-                        	<li>Using a Hybrid Upgrade Approach</li>
-                        	<li>Understanding Visual Upgrade</li>
-                        </ul>
-                        <h4>Configuring Search in SharePoint Server 2010</h4>
-                        <ul>
-                        	<li>Overview of Search in SharePoint 2010</li>
-                        	<li>SharePoint Search Architecture versus FAST Search</li>
-                        	<li>Configuring the Search Service Application</li>
-                        	<li>Creating Search Pages using the Search Web Parts</li>
-                        	<li>Using Custom Ranking Models</li>
-                        </ul>
-                        <h4>Configuring SharePoint Server 2010 Service Applications</h4>
-                        <ul>
-                        	<li>Creating Term Sets and Taxonomies with the Managed Metadata Service</li>
-                        	<li>Creating External Connections using the Business Data Connectivity Service</li>
-                        	<li>Creating Secure Application with the Secure Store Service</li>
-                        	<li>Configuring the User Profile Service</li>
-                        </ul>
-                        <h4>Planning for Backup, Restore and Disaster Recovery</h4>
-                        <ul>
-                        	<li>Versioning and Restoring Documents</li>
-                        	<li>Configuring Recycle Bin Behavior</li>
-                        	<li>Site-Level Backup and Restore</li>
-                        	<li>Preparing for Disaster Recovery</li>
-                        	<li>Recovering the Farm After Server Failure</li>
-                        </ul>
-                        <h4>Health Monitoring and Optimization</h4>
-                        <ul>
-                        	<li>The Developer Dashboard</li>
-                        	<li>Understanding ULS Logs</li>
-                        	<li>The Logging Database</li>
-                        	<li>Health Analyzer and Usage Reporting</li>
-                        	<li>Timer Jobs ad Server Affinity</li>
-                        </ul>
-                        <h4>Conclusion</h4>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <!-- Modes of Training -->
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>This course is intended for new and existing users of SharePoint. This course is for information workers.</p>
                     </div>
                 </div>
-    	    </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>This SharePoint 2010 End User class is for end users working in a SharePoint 2010 environment. The course teaches SharePoint basics such as working with lists and libraries as well as basic page customizations.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Getting started with SharePoint 2010 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>SharePoint Foundation Architecture and Terminology</li>
+                        	        <li>SharePoint 2010 Enhancements Targeting Administrators</li>
+                        	        <li>SharePoint Server 2010 Editions</li>
+                        	        <li>Hardware and Software Requirements</li>
+                        	        <li>Virtualization Considerations</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Installing SharePoint Server 2010 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Understanding Farm Topologies</li>
+                        	        <li>Service Application Architecture</li>
+                        	        <li>Creating Dedicated Service Accounts in Active Directory</li>
+                        	        <li>Installing SharePoint Server 2010</li>
+                        	        <li>Creating the Farm and the Configuration Database</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Configuring SharePoint Server 2010 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Getting Around in Central Administration</li>
+                        	        <li>Managed Service Accounts</li>
+                        	        <li>Managing Timer Jobs</li>
+                        	        <li>Using the Farm Configuration Wizard</li>
+                        	        <li>Configuring Service Applications by Hand</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Configuring and Administrating Security in SharePoint 2010 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Windows Authentication</li>
+                        	        <li>Claims-based Authentication</li>
+                        	        <li>Forms-based Authentication</li>
+                        	        <li>Intranet Extranet Considerations</li>
+                        	        <li>Configuring Certificates and SSL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Creating and Configuring Web Applications <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Configuring DNS and Host Headers</li>
+                        	        <li>Creating New Web Applications</li>
+                        	        <li>Configuring Alternate Access Mappings</li>
+                        	        <li>List Throttling and Quotas</li>
+                        	        <li>Configuring Anonymous Access</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Writing Administrative Scripts using Windows PowerShell <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Introduction to Windows PowerShell</li>
+                        	        <li>Windows PowerShell Console Window</li>
+                        	        <li>Writing Windows PowerShell Scripts</li>
+                        	        <li>Loading the SharePoint PowerShell Snap-in</li>
+                        	        <li>Writing Administrative Scripts for SharePoint 2010</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. Managing Site Collection Growth using a Governance Plan <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Sites and Site Collections</li>
+                        	        <li>Site Templates in SharePoint 2010</li>
+                        	        <li>Customizing Sites using the Browser</li>
+                        	        <li>Customizing Sites with SharePoint Designer</li>
+                        	        <li>Enforcing Governance in Production Environments</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Upgrading Farms from SharePoint 2007 to SharePoint 2010 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Preparing a SharePoint 2007 Farm</li>
+                        	        <li>In-Place Upgrade</li>
+                        	        <li>Database Attach Upgrade</li>
+                        	        <li>Using a Hybrid Upgrade Approach</li>
+                        	        <li>Understanding Visual Upgrade</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Configuring Search in SharePoint Server 2010 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Overview of Search in SharePoint 2010</li>
+                        	        <li>SharePoint Search Architecture versus FAST Search</li>
+                        	        <li>Configuring the Search Service Application</li>
+                        	        <li>Creating Search Pages using the Search Web Parts</li>
+                        	        <li>Using Custom Ranking Models</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. Configuring SharePoint Server 2010 Service Applications <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Creating Term Sets and Taxonomies with the Managed Metadata Service</li>
+                        	        <li>Creating External Connections using the Business Data Connectivity Service</li>
+                        	        <li>Creating Secure Application with the Secure Store Service</li>
+                        	        <li>Configuring the User Profile Service</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Planning for Backup, Restore and Disaster Recovery <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>Versioning and Restoring Documents</li>
+                        	        <li>Configuring Recycle Bin Behavior</li>
+                        	        <li>Site-Level Backup and Restore</li>
+                        	        <li>Preparing for Disaster Recovery</li>
+                        	        <li>Recovering the Farm After Server Failure</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. Health Monitoring and Optimization <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                        	        <li>The Developer Dashboard</li>
+                        	        <li>Understanding ULS Logs</li>
+                        	        <li>The Logging Database</li>
+                        	        <li>Health Analyzer and Usage Reporting</li>
+                        	        <li>Timer Jobs ad Server Affinity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#apps" aria-expanded="false" aria-controls="collapseNine">13. Conclusion <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="apps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Conclusion</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>
