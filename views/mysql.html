@@ -4,175 +4,320 @@
             <img class="img-responsive" src="./images/parallax-images/mysql-dba.jpg" alt="MySQL-Training-Pro-eLearning">
         </div>
     </div>
+    
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="course-desc">
-                    <h1>MySQL Training</h1>
+            <div class="course-overview-title">
+                <h1 class="mt-50">MySQL Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
                     <div class="clearfix"></div>
-                    <div class="course-overview">
-                        <h2 class="text-center mt-50">Machine Learning with Python Course Overview</h2>
-                        <div class="panel-group col-xs-12 col-sm-12 col-md-12 col-lg-12" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. MySQL Introduction</a>
-                                    </h4>
-                                </div>
-                                <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>MySQL Introduction</li>
-                                            <li>MySQL Architecture ( Physical + Logical )</li>
-                                            <li>Study material: EBook</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <!-- Modes of Training -->
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic knowledge of Database, SQL commands.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>UI Developer Training makes you an expert in concepts like HTML, HTML5, CSS, CSS3, CSS3 3D Transforms, JavaScript, jQuery, Bootstrap3, AngularJS, Angular Architecture, etc. You will also get an exposure to industry based real-time projects in various business verticals.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. MySQL Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>MySQL Introduction</li>
+                                    <li>MySQL Architecture ( Physical + Logical )</li>
+                                    <li>Study material: EBook</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#installation" aria-expanded="false" aria-controls="collapseTwo">2. MySQL Installation and Basics</a>
-                                    </h4>
-                                </div>
-                                <div id="installation" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Licensing and features [ Community vs Enterprise ]</li>
-                                            <li>Install a MySQL</li>
-                                            <li>Configure settings for a MySQL Server</li>
-                                            <li>Access MySQL databases with MySQL Workbench</li>
-                                            <li>Other clients for access</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#installation" aria-expanded="false" aria-controls="collapseTwo">2. MySQL Installation and Basics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="installation" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Licensing and features [ Community vs Enterprise ]</li>
+                                    <li>Install a MySQL</li>
+                                    <li>Configure settings for a MySQL Server</li>
+                                    <li>Access MySQL databases with MySQL Workbench</li>
+                                    <li>Other clients for access</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#dbDesign" aria-expanded="false" aria-controls="collapseThree">3. Database Design</a>
-                                    </h4>
-                                </div>
-                                <div id="dbDesign" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Datatypes in a MySQL database</li>
-                                            <li>Create databases and tables</li>
-                                            <li>Create basic SQL queries</li>
-                                            <li>Maintain Databases, Tables, and Columns</li>
-                                            <li>Configure Indexes and Constraints</li>
-                                            <li>Join Tables</li>
-                                            <li>Partition MySQL Tables</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#dbDesign" aria-expanded="false" aria-controls="collapseThree">3. Database Design <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="dbDesign" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Datatypes in a MySQL database</li>
+                                    <li>Create databases and tables</li>
+                                    <li>Create basic SQL queries</li>
+                                    <li>Maintain Databases, Tables, and Columns</li>
+                                    <li>Configure Indexes and Constraints</li>
+                                    <li>Join Tables</li>
+                                    <li>Partition MySQL Tables</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingFour">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#productionReady" aria-expanded="false" aria-controls="collapseFour">4. Production ready MySQL</a>
-                                    </h4>
-                                </div>
-                                <div id="productionReady" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>MySQL Setup and Configuration options</li>
-                                            <li>MySQL Security</li>
-                                            <li>Practical Hands-on</li>
-                                            <li>MySQL Enterprise Features Audit, Encryption, authentication plugins etc.</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#productionReady" aria-expanded="false" aria-controls="collapseFour">4. Production ready MySQL <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="productionReady" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>MySQL Setup and Configuration options</li>
+                                    <li>MySQL Security</li>
+                                    <li>Practical Hands-on</li>
+                                    <li>MySQL Enterprise Features Audit, Encryption, authentication plugins etc.</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingFive">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#backup" aria-expanded="false" aria-controls="collapseFive">5. Backup and Monitoring</a>
-                                    </h4>
-                                </div>
-                                <div id="backup" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>mysqldump – logical backup</li>
-                                            <li>mysqlbackup – physical enterprise backup tool</li>
-                                            <li>Percona Xtrabackup</li>
-                                            <li>MySQL and Percona utilities for monitoring</li>
-                                            <li>Backup and monitoring Automation</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#backup" aria-expanded="false" aria-controls="collapseFive">5. Backup and Monitoring <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="backup" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>mysqldump – logical backup</li>
+                                    <li>mysqlbackup – physical enterprise backup tool</li>
+                                    <li>Percona Xtrabackup</li>
+                                    <li>MySQL and Percona utilities for monitoring</li>
+                                    <li>Backup and monitoring Automation</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingSix">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#replication" aria-expanded="false" aria-controls="collapseSix">6. MySQL High Availability and Replication</a>
-                                    </h4>
-                                </div>
-                                <div id="replication" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>MySQL High Availability solutions</li>
-                                            <li>MySQL Replication</li>
-                                            <li>Set up MySQL Replication using global transaction identifiers (GTID's) and binlog</li>
-                                            <li>MySQL Cluster overview</li>
-                                            <li>Replication utilities</li>
-                                            <li>Deploy High Availability and Scalability features</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#replication" aria-expanded="false" aria-controls="collapseSix">6. MySQL High Availability and Replication <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="replication" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>MySQL High Availability solutions</li>
+                                    <li>MySQL Replication</li>
+                                    <li>Set up MySQL Replication using global transaction identifiers (GTID's) and binlog</li>
+                                    <li>MySQL Cluster overview</li>
+                                    <li>Replication utilities</li>
+                                    <li>Deploy High Availability and Scalability features</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingSeven">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#troubleshooting" aria-expanded="false" aria-controls="collapseSeven">7. Troubleshooting</a>
-                                    </h4>
-                                </div>
-                                <div id="troubleshooting" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>MySQL setup and configuration issues</li>
-                                            <li>MySQL performance related issues</li>
-                                            <li>MySQL Replication related issues troubleshooting</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#troubleshooting" aria-expanded="false" aria-controls="collapseSeven">7. Troubleshooting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="troubleshooting" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>MySQL setup and configuration issues</li>
+                                    <li>MySQL performance related issues</li>
+                                    <li>MySQL Replication related issues troubleshooting</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingEight">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#new" aria-expanded="false" aria-controls="collapseSeven">8. What’s New?</a>
-                                    </h4>
-                                </div>
-                                <div id="new" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>MySQL industry use cases</li>
-                                            <li>MySQL Cloud</li>
-                                            <li>MySQL 8.0 and features</li>
-                                            <li>About Percona and MariaDB</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#new" aria-expanded="false" aria-controls="collapseSeven">8. What’s New? <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="new" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>MySQL industry use cases</li>
+                                    <li>MySQL Cloud</li>
+                                    <li>MySQL 8.0 and features</li>
+                                    <li>About Percona and MariaDB</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingNine">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#practicals" aria-expanded="false" aria-controls="collapseSeven">9. Practicals</a>
-                                    </h4>
-                                </div>
-                                <div id="practicals" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>All Topics Include Practicals</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#practicals" aria-expanded="false" aria-controls="collapseSeven">9. Practicals <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="practicals" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>All Topics Include Practicals</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-    	</div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
     </div>
 </div>

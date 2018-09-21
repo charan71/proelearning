@@ -1,188 +1,408 @@
-<div class="container-fluid" ng-controller="oracleController">
+<div class="container-fluid">
     <div class="row">
         <div class="row-gap-big">
             <img class="img-responsive" src="./images/parallax-images/siebel-open-ui.jpg" alt="Siebel-Open-UI-Training-Pro-eLearning">
         </div>
     </div>
+    
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/oracle.png" alt="Siebel Open UI Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Siebel Open UIs Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>Siebel Open UI Course Content</h1>
-                        <p class="course-duration"><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: --</p>
-                        <hr>
-                        <p>This is our second tutorial on Open UI training series, where we will discuss about Open UI Architecture and it's building blocks, architectural difference between Siebel HI client and Open UI client.</p>
-                        <h4>Siebel Open UI key components:</h4>
-                        <p>It includes all elements of traditional Siebel client, plus few Open UI specific components.</p>
-                        <ol>
-                            <li>Application Object Manager(AOM)</li>
-                            <li>Siebel Web Template(SWT) files</li>
-                            <li>JavaScript(JS) files</li>
-                            <li>Cascading Style Sheet (CSS) files</li>
-                            <li>Open UI client
-                                <ol class="list-la">
-                                    <li>Proxy</li>
-                                    <li>Presentation Model</li>
-                                    <li>Physical Renderer</li>
-                                </ol>
-                            </li>
-                            <li>Manifest files</li>
-                        </ol>
-                        <p>We will discuss all these one by one.</p>
-                        <h4>1) Application Object Manager (AOM)</h4>
-                        <p>- This is one of the most important server component in Siebel. In Open UI, it behaves exactly the same way, like our traditional Siebel client. AOM processes user requests with the help of other components like data Manager, Siebel Web Engine.</p>
-                        <p>- To work with Open UI, set the below parameters under Object Manager component</p>
-                        <ul>
-                            <li>EnableOpenUI = TRUE</li>
-                            <li>HighInteractivity = TRUE</li>
-                        </ul>
-                        <p><span class="section">Note:</span> Add these two parameters under OM component for webclient but for dedicated client, add these two in [InfraUIFramework] section of client cfg file. It is best to create a new object manager for Open UI so that you can work on HI also as necessary. To create a new object manager for open ui, just copy any HI object manager and add two open ui specific parameters. Also do not forget to create new virtual directories on Siebel Web Server to support Open UI object manager.</p>
-                        <h4>2) Siebel Web Template(SWT) files</h4>
-                        <p>- Siebel web template files provide empty placeholders for views, applets, controls and other objects of Siebel. Each and every object, displayed in UI, is mapped to an empty placeholder in the template. For example, Suppose a list applet has 10 columns, then associate an applet web template file and map each list column to a placeholder in the applet. These swt files are nothing but HTML file with Siebel tags. But Open UI uses newer version of SWT files which no longer contain any explicit layout information.</p>
-                        <p>Original SWT files has explicit tags like tables, boundaries where Open UI swt files has ‘div’ tag, which allows css files to control the layout.</p>
-                        <p>- SWT files are on siebel server under \siebsrvr\WEBTEMPL</p>
-                        <ul>
-                            <li>WEBTEMPL folder contains original swt files</li>
-                            <li>OUIWEBTEMPL folder, under WEBTEMPL contains open ui SWT files</li>
-                            <li>CUSTOM folder, under OUIWEBTEMPL contains all custom SWT files</li>
-                        </ul>
-                        <p>- For siebel developer web client, path is client\WEBTEMPL.</p>
-                        <h4>3) Cascading Style Sheet (CSS) files</h4>
-                        <p>- CSS is a style language that defines the layout of web pages, example like font, color, height, width and many more.</p>
-                        <p>- Benefits of CSS file:</p>
-                        <ul>
-                            <li>Reusable, one CSS file could be used for multiple web pages</li>
-                            <li>Modify style definition in one place and change will be reflected in all web pages</li>
-                            <li>Different layout for different media types like print, mobile, desktop</li>
-                            <li>Easy to build, notepad is sufficient to write css file</li>
-                        </ul>
-                        <p>- Open UI uses CSS to build layout of HTML files</p>
-                        <p>- CSS file path: CSS files are on the web server under \webmaster\files\&lt;lang&gt; and \eappweb\PUBLIC\&lt;lang&gt;\FILES.</p>
-                        <p>- For Siebel developer client, path is client\PUBLIC\&lt;lang&gt;\files</p>
-                        <h4>4) Java Script (JS) files:</h4>
-                        <p>- JavaScript files enhance the interactivity features of web pages by allowing to perform calculations, data validation, web page behavior and more</p>
-                        <p>- In Siebel, JS files contain client side business logic as well - Extensively used in Open UI to render the application in web browser</p>
-                        <p>- There are oracle provided JS files to deliver Open UI functionalities, customers can also add their own JS file to leverage the functionalities</p>
-                        <p>- With Javascript, JQuery also can be used</p>
-                        <p>- JS files are on siebel server under \siebsrvr\public\&lt;lang&gt;\&lt;build&gt;\SCRIPTS</p>
-                        <ul>
-                            <li>SCRIPTS folder contains original (High Interactivity) JS files</li>
-                            <li>siebel folder, under SCRIPTS contains open ui related vanilla JS files</li>
-                            <li>custom folder, under \SCRIPTS\siebel contains all custom js files</li>
-                            <li>3rd party folder, under scripts contains all 3rd party provided js files</li>
-                        </ul>
-                        <p>- For siebel developer web client, path is client\&lt;lang&gt;\&lt;build&gt;\SCRIPTS</p>
-                        <p><span class="section">Note:</span> Traditional browser scripts are separate from JS files that are part of Open UI framework. These traditional browser scripts could run side by side with Open UI, though it is not recommended by Oracle.</p>
-                        <h4>5) Open UI client:</h4>
-                        <p>- Open UI client is an engine which runs within the browser on the client to provide better and enhanced user interface</p>
-                        <ul>
-                            <li>Binds data to the presentation layout</li>
-                            <li>Caches data locally</li>
-                            <li>Applies client side business logic</li>
-                        </ul>
-                        <p>- It consists of 3 elements</p>
-                        <ul>
-                            <li>Client Proxy</li>
-                            <li>Presentation Model (PM)</li>
-                            <li>Physical Renderer (PR)</li>
-                        </ul>
-                        <h4>5.1) Client Proxy</h4>
-                        <p>- Provides the interface to the back end Siebel data</p>
-                        <p>- Gets runtime data and metadata from Siebel server whenever required</p>
-                        <ul>
-                            <li>Runtime data is the actual data from Siebel database that users see in views/applets</li>
-                            <li>Metadata specifies the column name and other details like required, readonly and so on</li>
-                        </ul>
-                        <p>- Provides data back to the Siebel server</p>
-                        <p>- It is provided by oracle and must not be modified by users</p>
-                        <h4>5.2) Presentation Model</h4>
-                        <p>- It is a JavaScript file which decides how to handle metadata and runtime data, coming from Siebel server and displays those in list or form applet in the client.</p>
-                        <p>- Determine what logic should be applied</p>
-                        <ul>
-                            <li>Client side scripting without requiring the need of Siebel server</li>
-                        </ul>
-                        <p>- Capture client interaction</p>
-                        <ul>
-                            <li>Did the user leave a control?</li>
-                            <li>Did the user click a link?</li>
-                        </ul>
-                        <p>- Collection of</p>
-                        <ul>
-                            <li><b>Properties:</b> Contains information about current state of each user interaction. for example, Siebel Open UI currently shows or hides a field</li>
-                            <li><b>Method:</b> Implement characteristic that modifies the state of an object. For example, if user chooses a field value, then apply method to hide another field</li>
-                        </ul>
-                        <p>- Supports different logic for different platform</p>
-                        <h4>5.3) Physical Renderer</h4>
-                        <p>- It is a JavaScript file that Open UI uses to build the enhanced user interface</p>
-                        <p>- Can display the same set of records in different ways</p>
-                        <ul>
-                            <li>List Applet</li>
-                            <li>Carousal</li>
-                            <li>Calendar</li>
-                            <li>Mind Map</li>
-                        </ul>
-                        <p>- Supports different behavior for Desktop versus Mobile device</p>
-                        <h4>6) Manifest file</h4>
-                        <p>- Uses an unique key to determine which JavaScript file/s to download to the client</p>
-                        <p>- Earlier version Open UI innovation pack 2013 (8.1.1.11) has three manifest files under \seibsrvr\OBJECTS</p>
-                        <ul>
-                            <li>Core_manifest.xml: As delivered listing of JS files and should not be modified by customers</li>
-                            <li>Custom_manifest.xml: Specifies key name and javascript file mappings</li>
-                            <li>Manifest_extensions.map: Place to register Applet/key combination</li>
-                        </ul>
-                        <p>But from Open UI innovation pack 2013, instead of modifying manifest file, we will configure it in Open UI client, under Administration-Application||Manifest Administration. We will discuss these in details in subsequent module.</p>
-                        <p>So, this is the graphical presentation of <strong>Siebel ActiveX UI Architecture Vs Open UI Architecture</strong>, provided by Oracle.</p>
-                        <p><b>Example:</b> Navigating to the My Opportunities view</p>
-                        <p>Suppose an user clicks on ‘My Opportunities’ to navigate to the My Opportunities View.</p>
-                        <ul class="list-none">
-                            <li>Step 1: Presentation model passes the request to the client proxy</li>
-                            <li>Step 2: Proxy send the request to Siebel server</li>
-                            <li>Step 3: Siebel server process the request and send results back to proxy</li>
-                            <li>Step 4: proxy reads the manifest and download all required files</li>
-                            <li>Step 5: Presentation model applies the business logic on result set and send to physical renderer</li>
-                            <li>Step 6: Physical Renderer prepares the final HTML file with the reference of CSS files</li>
-                            <li>Step 7: Result is presented to the user</li>
-                        </ul>
-                        <h5><b>Step 1: Presentation model passes the request to the client proxy</b></h5>
-                        <p>- Presentation model captures the event (here, on mouse click) and sends the request to client proxy</p>
-                        <h5><b>Step 2: Proxy sends the request to Siebel server</b></h5>
-                        <p>- Proxy checks the client cache memory for the necessary data to fulfill client request</p>
-                        <p>- If it finds data, directly go to Step 4, otherwise sends the request to Application Object manager on Siebel Server to get the record set</p>
-                        <h5><b>Step 3: Siebel server processes the request and sends results back to proxy</b></h5>
-                        <p>Application object manager component processes the request and sends back record set to proxy</p>
-                        <p>- Metadata: object definitions for Columns, Applets, Views and all</p>
-                        <p>- Runtime data: Comes from Siebel database which is actual user data</p>
-                        <h5><b>Step 4: Proxy reads the manifest and downloads all required files</b></h5>
-                        <p>Proxy checks manifest files and downloads all JS and corresponding CSS files to display opportunity records.</p>
-                        <h5><b>Step 5: Presentation model applies the business logic on result set and sends to Physical Renderer</b></h5>
-                        <p>- Once all data is received and files are downloaded, Proxy sends notification to Presentation Model</p>
-                        <p>- Presentation model applies business logic on received data, based upon JS files</p>
-                        <h5><b>Step 6: Physical Renderer prepares the final HTML file with the reference of CSS files</b></h5>
-                        <p>- Once business logics are applied on all data, Presentation model sends the notification to Physical Renderer to generate the HTML files with the reference of CSS files</p>
-                        <h5><b>Step 7: Result is presented to the user</b></h5>
-                        <p>The final HTML web page, embedded with JavaScript, CSS and Data is displayed in the browser</p>
-                        <p>If you want to upgrade your Siebel HI environment to Siebel Open UI, read 'How to apply Open UI patch on Siebel Sample/Local database'.</p>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>In this tutorial, Siebel Open UI, we will discuss about Open UI Architecture and it's building blocks, architectural difference between Siebel HI client and Open UI client.</p>
+                    <p>Siebel Open UI is a browser client for Siebel desktop and mobile application. To open prior version of Siebel Open UI application, you must have Internet Explorer installed in your system. But as per latest browser trends (Nov 2014-Nov 2015) done by StatCounter, Google Chrome has the largest market share (almost 50%) followed by IE and Firefox. So to give browser flexibility to users, Oracle introduces Siebel Open UI. Siebel Open UI is browser and device independent Siebel client. It does not use ActiveX control. Also it has highly optimized and smart UI for mobile devices.</p> 
+                    <p>Traditional Siebel user interface is driven by web template files (SWT) and Cascading Style Sheets (CSS). Except SWT and CSS, Open UI supprots Javascript as well as JQuery. In Siebel Open UI, redesigned user interface has modern look and feel, new controls (such as MVG, Picklist, Calendar, Calculator), better tab navigation. Open UI supports internet browser functions also like Print, Zoom, Find, Bookmarking.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="true" aria-controls="collapseTwo">1. Application Object Manager (AOM) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<p>- This is one of the most important server component in Siebel. In Open UI, it behaves exactly the same way, like our traditional Siebel client. AOM processes user requests with the help of other components like data Manager, Siebel Web Engine.</p>
+									<p>- To work with Open UI, set the below parameters under Object Manager component</p>
+									<ul>
+										<li>EnableOpenUI = TRUE</li>
+										<li>HighInteractivity = TRUE</li>
+									</ul>
+									<p><span class="section">Note:</span> Add these two parameters under OM component for webclient but for dedicated client, add these two in [InfraUIFramework] section of client cfg file. It is best to create a new object manager for Open UI so that you can work on HI also as necessary. To create a new object manager for open ui, just copy any HI object manager and add two open ui specific parameters. Also do not forget to create new virtual directories on Siebel Web Server to support Open UI object manager.</p>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">2. Siebel Web Template(SWT) files <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<p>- Siebel web template files provide empty placeholders for views, applets, controls and other objects of Siebel. Each and every object, displayed in UI, is mapped to an empty placeholder in the template. For example, Suppose a list applet has 10 columns, then associate an applet web template file and map each list column to a placeholder in the applet. These swt files are nothing but HTML file with Siebel tags. But Open UI uses newer version of SWT files which no longer contain any explicit layout information.</p>
+									<p>Original SWT files has explicit tags like tables, boundaries where Open UI swt files has ‘div’ tag, which allows css files to control the layout.</p>
+									<p>- SWT files are on siebel server under \siebsrvr\WEBTEMPL</p>
+									<ul>
+										<li>WEBTEMPL folder contains original swt files</li>
+										<li>OUIWEBTEMPL folder, under WEBTEMPL contains open ui SWT files</li>
+										<li>CUSTOM folder, under OUIWEBTEMPL contains all custom SWT files</li>
+									</ul>
+									<p>- For siebel developer web client, path is client\WEBTEMPL.</p>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">3. Cascading Style Sheet (CSS) files <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<p>- CSS is a style language that defines the layout of web pages, example like font, color, height, width and many more.</p>
+									<p>- Benefits of CSS file:</p>
+									<ul>
+										<li>Reusable, one CSS file could be used for multiple web pages</li>
+										<li>Modify style definition in one place and change will be reflected in all web pages</li>
+										<li>Different layout for different media types like print, mobile, desktop</li>
+										<li>Easy to build, notepad is sufficient to write css file</li>
+									</ul>
+									<p>- Open UI uses CSS to build layout of HTML files</p>
+									<p>- CSS file path: CSS files are on the web server under \webmaster\files\&lt;lang&gt; and \eappweb\PUBLIC\&lt;lang&gt;\FILES.</p>
+									<p>- For Siebel developer client, path is client\PUBLIC\&lt;lang&gt;\files</p>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">4. Java Script (JS) files <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<p>- JavaScript files enhance the interactivity features of web pages by allowing to perform calculations, data validation, web page behavior and more</p>
+									<p>- In Siebel, JS files contain client side business logic as well - Extensively used in Open UI to render the application in web browser</p>
+									<p>- There are oracle provided JS files to deliver Open UI functionalities, customers can also add their own JS file to leverage the functionalities</p>
+									<p>- With Javascript, JQuery also can be used</p>
+									<p>- JS files are on siebel server under \siebsrvr\public\&lt;lang&gt;\&lt;build&gt;\SCRIPTS</p>
+									<ul>
+										<li>SCRIPTS folder contains original (High Interactivity) JS files</li>
+										<li>siebel folder, under SCRIPTS contains open ui related vanilla JS files</li>
+										<li>custom folder, under \SCRIPTS\siebel contains all custom js files</li>
+										<li>3rd party folder, under scripts contains all 3rd party provided js files</li>
+									</ul>
+									<p>- For siebel developer web client, path is client\&lt;lang&gt;\&lt;build&gt;\SCRIPTS</p>
+							         <p><span class="section">Note:</span> Traditional browser scripts are separate from JS files that are part of Open UI framework. These traditional browser scripts could run side by side with Open UI, though it is not recommended by Oracle.</p>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">5. Open UI client <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<p>- Open UI client is an engine which runs within the browser on the client to provide better and enhanced user interface</p>
+									<ul>
+										<li>Binds data to the presentation layout</li>
+										<li>Caches data locally</li>
+										<li>Applies client side business logic</li>
+									</ul>
+									<p>- It consists of 3 elements</p>
+									<ul>
+										<li>Client Proxy</li>
+										<li>Presentation Model (PM)</li>
+										<li>Physical Renderer (PR)</li>
+									</ul>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">6. Client Proxy <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<p>- Provides the interface to the back end Siebel data</p>
+									<p>- Gets runtime data and metadata from Siebel server whenever required</p>
+									<ul>
+										<li>Runtime data is the actual data from Siebel database that users see in views/applets</li>
+										<li>Metadata specifies the column name and other details like required, readonly and so on</li>
+									</ul>
+									<p>- Provides data back to the Siebel server</p>
+									<p>- It is provided by oracle and must not be modified by users</p>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">7. Presentation Model <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<p>- It is a JavaScript file which decides how to handle metadata and runtime data, coming from Siebel server and displays those in list or form applet in the client.</p>
+									<p>- Determine what logic should be applied</p>
+									<ul>
+										<li>Client side scripting without requiring the need of Siebel server</li>
+									</ul>
+									<p>- Capture client interaction</p>
+									<ul>
+										<li>Did the user leave a control?</li>
+										<li>Did the user click a link?</li>
+									</ul>
+									<p>- Collection of</p>
+									<ul>
+										<li><b>Properties:</b> Contains information about current state of each user interaction. for example, Siebel Open UI currently shows or hides a field</li>
+										<li><b>Method:</b> Implement characteristic that modifies the state of an object. For example, if user chooses a field value, then apply method to hide another field</li>
+									</ul>
+									<p>- Supports different logic for different platform</p>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">8. Physical Renderer <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<p>- It is a JavaScript file that Open UI uses to build the enhanced user interface</p>
+									<p>- Can display the same set of records in different ways</p>
+									<ul>
+										<li>List Applet</li>
+										<li>Carousal</li>
+										<li>Calendar</li>
+										<li>Mind Map</li>
+									</ul>
+									<p>- Supports different behavior for Desktop versus Mobile device</p>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">9. Manifest file <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<p>- Uses an unique key to determine which JavaScript file/s to download to the client</p>
+									<p>- Earlier version Open UI innovation pack 2013 (8.1.1.11) has three manifest files under \seibsrvr\OBJECTS</p>
+									<ul>
+										<li>Core_manifest.xml: As delivered listing of JS files and should not be modified by customers</li>
+										<li>Custom_manifest.xml: Specifies key name and javascript file mappings</li>
+										<li>Manifest_extensions.map: Place to register Applet/key combination</li>
+									</ul>
+									<p>But from Open UI innovation pack 2013, instead of modifying manifest file, we will configure it in Open UI client, under Administration-Application||Manifest Administration. We will discuss these in details in subsequent module.</p>
+									<p>So, this is the graphical presentation of <strong>Siebel ActiveX UI Architecture Vs Open UI Architecture</strong>, provided by Oracle.</p>
+									<p><b>Example:</b> Navigating to the My Opportunities view</p>
+									<p>Suppose an user clicks on ‘My Opportunities’ to navigate to the My Opportunities View.</p>
+									<ul class="list-none">
+										<li>Step 1: Presentation model passes the request to the client proxy</li>
+										<li>Step 2: Proxy send the request to Siebel server</li>
+										<li>Step 3: Siebel server process the request and send results back to proxy</li>
+										<li>Step 4: proxy reads the manifest and download all required files</li>
+										<li>Step 5: Presentation model applies the business logic on result set and send to physical renderer</li>
+										<li>Step 6: Physical Renderer prepares the final HTML file with the reference of CSS files</li>
+										<li>Step 7: Result is presented to the user</li>
+									</ul>
+									<h5><b>Step 1: Presentation model passes the request to the client proxy</b></h5>
+									<p>- Presentation model captures the event (here, on mouse click) and sends the request to client proxy</p>
+									<h5><b>Step 2: Proxy sends the request to Siebel server</b></h5>
+									<p>- Proxy checks the client cache memory for the necessary data to fulfill client request</p>
+									<p>- If it finds data, directly go to Step 4, otherwise sends the request to Application Object manager on Siebel Server to get the record set</p>
+									<h5><b>Step 3: Siebel server processes the request and sends results back to proxy</b></h5>
+									<p>Application object manager component processes the request and sends back record set to proxy</p>
+									<p>- Metadata: object definitions for Columns, Applets, Views and all</p>
+									<p>- Runtime data: Comes from Siebel database which is actual user data</p>
+									<h5><b>Step 4: Proxy reads the manifest and downloads all required files</b></h5>
+									<p>Proxy checks manifest files and downloads all JS and corresponding CSS files to display opportunity records.</p>
+									<h5><b>Step 5: Presentation model applies the business logic on result set and sends to Physical Renderer</b></h5>
+									<p>- Once all data is received and files are downloaded, Proxy sends notification to Presentation Model</p>
+									<p>- Presentation model applies business logic on received data, based upon JS files</p>
+									<h5><b>Step 6: Physical Renderer prepares the final HTML file with the reference of CSS files</b></h5>
+									<p>- Once business logics are applied on all data, Presentation model sends the notification to Physical Renderer to generate the HTML files with the reference of CSS files</p>
+									<h5><b>Step 7: Result is presented to the user</b></h5>
+									<p>The final HTML web page, embedded with JavaScript, CSS and Data is displayed in the browser</p>
+									<p>If you want to upgrade your Siebel HI environment to Siebel Open UI, read 'How to apply Open UI patch on Siebel Sample/Local database'.</p>
+							   </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    	</div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Charan</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
     </div>
 </div>

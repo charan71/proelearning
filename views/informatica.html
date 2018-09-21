@@ -6,190 +6,451 @@
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="Informatica Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Informatica Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>Informatica Course Content</h1>
-                        <hr>
-                        <h4>INFORMATICA</h4>
-                        <h4>DATAWAREHOUSING CONCEPTS:</h4>
-                        <h4>INTRODUCTION TO DATAWAREHOUSING</h4>
-                        <ul>
-                        	<li>What is Data warehouse?</li>
-                        	<li>Components of Data warehouse</li>
-                        	<li>Decision support systems</li>
-                        	<li>OLTP Systems</li>
-                        	<li>OLTP vs DATAWAREHOUSE</li>
-                        	<li>ODS(Operational Data Store)</li>
-                        	<li>Difference between ODS and</li>
-                        </ul>
-                        <h4>DATAWAREHOUSE</h4>
-                        <ul>
-                        	<li>Data Mart</li>
-                        	<li>Difference between Data warehouse and Data Mart</li>
-                        	<li>Difference between Data warehouse and ODS,OLTP</li>
-                        	<li>Data warehousing for OLTP systems</li>
-                        	<li>Data cleansing</li>
-                        	<li>Independent Data warehouse</li>
-                        	<li>Dependent Data warehouse</li>
-                        	<li>Meta data and Data Mining</li>
-                        	<li>OLAP,ROLAP,MOLA </li>
-                        </ul>
-                        <h4>DATABASE DESIGN AND DATA MODELING</h4>
-                        <ul>
-                        	<li>ER Model for transactional processing</li>
-                        	<li>Introduction to Data Modeling</li>
-                        	<li>Entities and Attributes</li>
-                        	<li>What is the use of data modeling in Data warehousing?</li>
-                        	<li>Schema</li>
-                        	<li>Star Schema</li>
-                        	<li>Snowflake Schema</li>
-                        	<li>Snowflake Schema (hybrid schema or galaxy schema)</li>
-                        	<li>Fact Table</li>
-                        	<li>Dimension Tables</li>
-                        	<li>Multi dimension Tables</li>
-                        	<li>Grain warehousing Tools consideration</li>
-                        	<li>Granularity for the Data warehousing</li>
-                        </ul>
-                        <h4>TOOLS CONSIDERATION: ERWIN (Data Modeling Tool)</h4>
-                        <ul>
-                        	<li>Introduction to Erwin</li>
-                        	<li>Usage of Erwin</li>
-                        	<li>Physical and Logical Model</li>
-                        	<li>Creation of Table</li>
-                        	<li>Forward Engineering</li>
-                        	<li>Reverse Engineering</li>
-                        	<li>Complete compare</li>
-                        	<li>Domains</li>
-                        	<li>Subject areas</li>
-                        	<li>Relationships</li>
-                        	<li>Demoralization</li>
-                        	<li>Data Modeling report generation</li>
-                        	<li>HTML report</li>
-                        	<li>RTF report</li>
-                        	<li>Text report</li>
-                        	<li>Creating user defined data types</li>
-                        	<li>Integrating Tables from different users</li>
-                        </ul>
-                        <h4>INFORMATICA 8.6</h4>
-                        <ul>
-                        	<li>Introduction of Informatica power center</li>
-                        	<li>ETL Architecture</li>
-                        	<li>Data source</li>
-                        	<li>Data targets</li>
-                        	<li>Repository</li>
-                        	<li>Meta data</li>
-                        	<li>Server components</li>
-                        	<li>Client components</li>
-                        </ul>
-                        <h4>INFORMATICA INSTALLATION</h4>
-                        <ul>
-                        	<li>SYSTEM REQUIREMENT</li>
-                        	<li>CREATING DOMAIN</li>
-                        	<li>CREATING NODE</li>
-                        	<li>CONFIGURING DOMAIN WITH WEBSERVER</li>
-                        	<li>ASSIGNING INFORMATICA SERVICES WITH ACCOUNT</li>
-                        </ul>
-                        <h4>INFORMATICA POWER CENTER WEB ADMINISTRATOR CONSOLE</h4>
-                        <ul>
-                        	<li>Creating Informatica Repository Services</li>
-                        	<li>Creating integrated services</li>
-                        </ul>
-                        <h4>INFORMATICA REPOSITORY MANAGER</h4>
-                        <ul>
-                        	<li>Creating the workspace(folder)</li>
-                        	<li>Creating the users</li>
-                        	<li>Changing the user passwords</li>
-                        	<li>Creating users groups</li>
-                        	<li>Giving privileges to the users, user groups and folder</li>
-                        </ul>
-                        <h4>INFORMATICA DESIGNER</h4>
-                        <ul>
-                        	<li>Connecting to the designer</li>
-                        	<li>Components of the designer</li>
-                        	<li>Creating DSN(data source name)</li>
-                        	<li>Source, Database</li>
-                        	<li>Accessing the source, definitions to the designer</li>
-                        	<li>Warehouse Designer</li>
-                        	<li>Creating the target Tables using warehouse designer</li>
-                        	<li>Generating target Table to database</li>
-                        	<li>Mapping Designer</li>
-                        	<li>Mapping between the source and target Tables</li>
-                        	<li>Transformations between source and target Tables</li>
-                        </ul>
-                        <h4>TYPES OF TRANSFORMATIONS:</h4>
-                        <ul>
-                        	<li>Source qualifier</li>
-                        	<li>Aggregator</li>
-                        	<li>Filter</li>
-                        	<li>Expression</li>
-                        	<li>Stored Procedure</li>
-                        	<li>Lookup</li>
-                        	<li>Sorter</li>
-                        	<li>Joiner</li>
-                        	<li>Router</li>
-                        	<li>Xml source qualifier</li>
-                        	<li>Update strategy</li>
-                        	<li>Normalizer</li>
-                        	<li>Ranking</li>
-                        	<li>Sequencer Generator</li>
-                        	<li>Transaction control</li>
-                        	<li>Union</li>
-                        	<li>Custom</li>
-                        	<li>Cubes and Dimensions(creating star schema)</li>
-                        	<li>Slowly Changing Dimensions(SCD) Mapplets</li>
-                        	<li>Reusable transformations Debugger</li>
-                        	<li>Working with mapping using </li>
-                        	<li>Data Profiling</li>
-                        	<li>Variable and Parameters</li>
-                        	<li>New Features in power centre 7.1</li>
-                        </ul>
-                        <h4>WORKFLOW MANAGER</h4>
-                        <ul>
-                        	<li>Components of workflow manager</li>
-                        </ul>
-                        <h4>Types of tasks</h4>
-                        <ul>
-                        	<li>Session</li>
-                        	<li>E-mail</li>
-                        	<li>Command</li>
-                        	<li>Creating workflow</li>
-                        	<li>Scheduling the workflow</li>
-                        	<li>Creating connections</li>
-                        	<li>Assigning connection values to the sessions</li>
-                        	<li>Assigning server to workflow</li>
-                        	<li>Workflow monitor</li>
-                        	<li>Session logs</li>
-                        	<li>Workflow logs</li>
-                        </ul>
-                        <h4>Conclusion:</h4>
-                        <ul>
-                        	<li>Resume Preparation</li>
-                        	<li>Real Time Scenarios</li>
-                        	<li>Documents</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>Informatica is a Software development company, which offers data integration products. ... Informatica Power center ETL/Data Integration tool is a most widely used tool and in the common term when we say Informatica, it refers to the Informatica Power Center tool for ETL. Informatica Power center is used for Data integration</p>
+                    <p>Informatica Power Center is a widely used extraction, transformation and loading (ETL) tool used in building enterprise data warehouses. The components within Informatica Power Center aid in extracting data from its source, transforming it as per business requirements and loading it into a target data warehouse.</p>
+                    <p>Intellipa at is the pioneer of online training in Business Intelligence in India. Informatica is clearly a market leader in the fields of data integration and data quality services. The Informatica Power Center is a powerful tool to integrate, manage and migrate enterprise data.</p>
+                    <p>Informatica has several products focused on data integration. ... Informatica is a data integration tool based on ETL architecture. It provides data integration software and services for various businesses, industries and government organizations including telecommunication, health care, financial and insurance services.</p>
+                    <p>The Informatica repository is a relational database that stores information, or metadata, used by the Informatica Server and Client tools. ... The repository also stores administrative information such as usernames and passwords, permissions and privileges, and product version</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Introduction to Data Warehousing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>What is Data Warehouse?</li>
+									<li>Components of Data Warehouse</li>
+									<li>Decision support systems</li>
+									<li>OLTP Systems</li>
+									<li>OLTP vs Data Warehouse</li>
+									<li>ODS (Operational Data Store)</li>
+									<li>Difference between ODS and OLTP</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Data Warehousing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Data Mart</li>
+									<li>Difference between Data warehouse and Data Mart</li>
+									<li>Difference between Data warehouse and ODS, OLTP</li>
+									<li>Data warehousing for OLTP systems</li>
+									<li>Data cleansing</li>
+									<li>Independent Data warehouse</li>
+									<li>Dependent Data warehouse</li>
+									<li>Meta data and Data Mining</li>
+									<li>OLAP, ROLAP, MOLA</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Database Design and Data Modeling <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>ER Model for transactional processing</li>
+									<li>Introduction to Data Modeling</li>
+									<li>Entities and Attributes</li>
+									<li>What is the use of data modeling in Data warehousing?</li>
+									<li>Schema</li>
+									<li>Star Schema</li>
+									<li>Snowflake Schema</li>
+									<li>Snowflake Schema (hybrid schema or galaxy schema)</li>
+									<li>Fact Table</li>
+									<li>Dimension Tables</li>
+									<li>Multi dimension Tables</li>
+									<li>Grain warehousing Tools consideration</li>
+									<li>Granularity for the Data warehousing</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Tools Consideration: Erwin (Data Modeling Tool) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to Erwin</li>
+									<li>Usage of Erwin</li>
+									<li>Physical and Logical Model</li>
+									<li>Creation of Table</li>
+									<li>Forward Engineering</li>
+									<li>Reverse Engineering</li>
+									<li>Complete compare</li>
+									<li>Domains</li>
+									<li>Subject areas</li>
+									<li>Relationships</li>
+									<li>Demoralization</li>
+									<li>Data Modeling report generation</li>
+									<li>HTML report</li>
+									<li>RTF report</li>
+									<li>Text report</li>
+									<li>Creating user defined data types</li>
+									<li>Integrating Tables from different users</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Informatica 8.6 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction of Informatica power center</li>
+									<li>ETL Architecture</li>
+									<li>Data source</li>
+									<li>Data targets</li>
+									<li>Repository</li>
+									<li>Meta data</li>
+									<li>Server components</li>
+									<li>Client components</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Informatica Installation <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>System Requirement</li>
+									<li>Creating Domain</li>
+									<li>Creating Node</li>
+									<li>Configuring Domain with Webserver</li>
+									<li>Assigning Informatica Services with Account</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Informatica Power Center Web Administrator Console <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating Informatica Repository Services</li>
+									<li>Creating integrated services</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Informatica Repository Manager <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating the workspace(folder)</li>
+									<li>Creating the users</li>
+									<li>Changing the user passwords</li>
+									<li>Creating users groups</li>
+									<li>Giving privileges to the users, user groups and folder</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. Informatica Designer <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Connecting to the designer</li>
+									<li>Components of the designer</li>
+									<li>Creating DSN(data source name)</li>
+									<li>Source, Database</li>
+									<li>Accessing the source, definitions to the designer</li>
+									<li>Warehouse Designer</li>
+									<li>Creating the target Tables using warehouse designer</li>
+									<li>Generating target Table to database</li>
+									<li>Mapping Designer</li>
+									<li>Mapping between the source and target Tables</li>
+									<li>Transformations between source and target Tables</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. Types of Transformations <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Source qualifier</li>
+									<li>Aggregator</li>
+									<li>Filter</li>
+									<li>Expression</li>
+									<li>Stored Procedure</li>
+									<li>Lookup</li>
+									<li>Sorter</li>
+									<li>Joiner</li>
+									<li>Router</li>
+									<li>Xml source qualifier</li>
+									<li>Update strategy</li>
+									<li>Normalizer</li>
+									<li>Ranking</li>
+									<li>Sequencer Generator</li>
+									<li>Transaction control</li>
+									<li>Union</li>
+									<li>Custom</li>
+									<li>Cubes and Dimensions(creating star schema)</li>
+									<li>Slowly Changing Dimensions(SCD) Mapplets</li>
+									<li>Reusable transformations Debugger</li>
+									<li>Working with mapping using </li>
+									<li>Data Profiling</li>
+									<li>Variable and Parameters</li>
+									<li>New Features in power centre 7.1</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eleven" aria-expanded="false" aria-controls="collapseNine">11. Workflow Manager <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Components of workflow manager</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#twelve" aria-expanded="false" aria-controls="collapseNine">12. Types of tasks <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="twelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+									<li>Session</li>
+									<li>E-mail</li>
+									<li>Command</li>
+									<li>Creating workflow</li>
+									<li>Scheduling the workflow</li>
+									<li>Creating connections</li>
+									<li>Assigning connection values to the sessions</li>
+									<li>Assigning server to workflow</li>
+									<li>Workflow monitor</li>
+									<li>Session logs</li>
+									<li>Workflow logs</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#thirteen" aria-expanded="false" aria-controls="collapseNine">13. Conclusion <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="thirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Resume Preparation</li>
+									<li>Real Time Scenarios</li>
+									<li>Documents</li>
+							    </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
-                    </div>
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                 </div>
-    	    </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

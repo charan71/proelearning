@@ -1,137 +1,370 @@
 <div class="container-fluid">
     <div class="row">
         <div class="row-gap-big">
-            <img class="img-responsive" src="./images/parallax-images/ba-healthcare.jpg" alt="BA-Healthcare-Training-Pro-eLearning">
+            <img class="img-responsive" src="./images/parallax-images/ba-healthcare.jpg" alt="BA-Health-Care-Pro-eLearning">
         </div>
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="BA - Health Care Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">BA - Health Care Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>BA - Health Care Course Content</h1>
-                        <hr>
-                        <h4>Session 1</h4>
-                        <ul>
-                            <li>Role of a Business Analyst ("BA")</li>
-                            <li>Structure of Development Team (Business/IT)</li>
-                            <li>System Development Life Cycle (SDLC)</li>
-                            <li>Requirement Gathering</li>
-                            <li>Analysis and Design</li>
-                            <li>Waterfall Method</li>
-                            <li>Rational Unified Process (RUP)</li>
-                            <li>Agile / SCRUM</li>
-                            <li>Comparison between Waterfall & RUP & Agile</li>
-                        </ul>
-                        <h4>Session 2</h4>
-                        <ul>
-                            <li>Importance of Requirement gathering.</li>
-                            <li>Requirement Gathering Techniques</li>
-                            <li>JAD Session ("Joint Application Development")</li>
-                            <li>Role of a BA in JAD Session</li>
-                            <li>How to conduct JAD session?</li>
-                            <li>Different Types of Requirements</li>
-                            <li>Project Charter</li>
-                            <li>Vision/Scope Document</li>
-                            <li>Understanding the concept of Business Modeling / Process Flows / Work Flows</li>
-                            <li>Creating Business Requirement Document (BRD) / Functional Requirement Document (FRS)</li>
-                            <li>Understanding Use Cases</li>
-                            <li>Creating Use cases</li>
-                            <li>Creating Use Case Narratives / Scenarios</li>
-                            <li>Requirements Analysis / Use Case Realizations</li>
-                        </ul>
-                        <h4>Session 3</h4>
-                        <ul>
-                            <li>UML (Unified Modeling Language) Methodology</li>
-                            <li>Use Case Diagrams</li>
-                            <li>Basis Flow and Multiple Alternate Flows</li>
-                            <li>Activity and Sequence Diagrams</li>
-                            <li>Collaboration Diagrams</li>
-                            <li>State Chart Diagrams</li>
-                            <li>Class and Component Diagrams</li>
-                            <li>Object Diagrams</li>
-                        </ul>
-                        <h4>Session 4</h4>
-                        <ul>
-                            <li>Requirement Gathering Tools</li>
-                            <li>Sample Tool examples</li>
-                            <li>Enterprise Architect (UML Modeling/ Requirements Management)</li>
-                            <li>Business Modeling, Requirement Analysis & Designing Tools</li>
-                            <li>UML, Process Flows, Any kind of general flow carts, data flows</li>
-                            <li>Introduction to QA Methodology</li>
-                            <li>Role of BA in Testing</li>
-                            <li>Creating Test Cases</li>
-                            <li>Creating Test Scripts</li>
-                            <li>Creating Test Plans</li>
-                        </ul>
-                        <h4>Session 5</h4>
-                        <ul>
-                            <li>Different Testing Methods</li>
-                            <li>System/Functional and Regression testing</li>
-                            <li>Positive and Negative Testing</li>
-                            <li>GUI and Unit Testing</li>
-                            <li>User Acceptance Testing</li>
-                        </ul>
-                        <h4>Session 6</h4>
-                        <ul>
-                            <li>Review Session (Mock Interview Sessions)</li>
-                        </ul>
-                        <h4>Session 7 &#x2014; Healthcare Domain Concepts:</h4>
-                        <ul>
-                            <li>Intro to HIPPA, EDI</li>
-                            <li>Healthcare terminology</li>
-                            <li>Intro to EDI</li>
-                            <li>Transactions</li>
-                            <li>270/271</li>
-                            <li>276/277</li>
-                            <li>278</li>
-                            <li>834</li>
-                            <li>820</li>
-                            <li>837/835</li>
-                        </ul>
-                        <h4>Session 8</h4>
-                        <ul>
-                            <li>Intro Medicare and Medicaid</li>
-                            <li>Part A, B, C and D</li>
-                            <li>ICD 9- ICD 10</li>
-                            <li>Claim types - host / home</li>
-                            <li>HAS / HRA Concepts</li>
-                            <li>Co pay</li>
-                            <li>Deductible etc</li>
-                            <li>Co Insurance</li>
-                        </ul>
-                        <h4>Session 9</h4>
-                        <ul>
-                            <li>Process flow on Healthcare systems [Payer / Provide]</li>
-                        </ul>
-                        <h4>Session 10</h4>
-                        <ul>
-                            <li>Additional Live project sample templates and documents</li>
-                            <li>Guidence on Resume preperation</li>
-                            <li>Daily first 15 minutes discussion on open questions (If any)</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>A Bachelors in Healthcare Administration degree is intended for individuals wanting to pursue careers dealing with the business operations of medical facilities. ... Students receive instruction on the fundamentals of business and the theories and practices applied to healthcare organizations.</p>
+                    <p>Thanks to our know-how in automated mobile bases, BA HEALTHCARE designs, products and develops with your teams, mobile non-invasive medical and paramedic devices that meet the needs of patients and therapists.</p>
+					<ul>
+						<li>You are an industrial company or a start-up seeking a partner, BA Healthcare makes you benefit of our know-how, expertise and ability to conceive and industrialize your innovative mobile medical devices.More information about our offer</li>
+						<li>Thanks to our privileged relationships with clinical and scientific partners, BA Healthcare is able to identify and analyze the needs of the healthcare players. Our deep knowledge of medical standards allows us to integrate regulatory requirements from the preliminary study and then implement our proven expertise in mechatronics and software engineering design.More about our know-how</li>
+						<li>The experience of our engineering team dedicated to the medical industry has been recognized by GE HEALTHCARE on the Discovery IGS 730 project. Thanks to this first success, other products have been developed such as ROBO-K for functional rehabilitation in partnership with Rennes University Hospital and with the functional rehabilitation and recovery center of Kerpape.More products on our realizations</li>
+					</ul>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Session 1 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Role of a Business Analyst ("BA")</li>
+									<li>Structure of Development Team (Business/IT)</li>
+									<li>System Development Life Cycle (SDLC)</li>
+									<li>Requirement Gathering</li>
+									<li>Analysis and Design</li>
+									<li>Waterfall Method</li>
+									<li>Rational Unified Process (RUP)</li>
+									<li>Agile / SCRUM</li>
+									<li>Comparison between Waterfall & RUP & Agile</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Session 2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Importance of Requirement gathering.</li>
+									<li>Requirement Gathering Techniques</li>
+									<li>JAD Session ("Joint Application Development")</li>
+									<li>Role of a BA in JAD Session</li>
+									<li>How to conduct JAD session?</li>
+									<li>Different Types of Requirements</li>
+									<li>Project Charter</li>
+									<li>Vision/Scope Document</li>
+									<li>Understanding the concept of Business Modeling / Process Flows / Work Flows</li>
+									<li>Creating Business Requirement Document (BRD) / Functional Requirement Document (FRS)</li>
+									<li>Understanding Use Cases</li>
+									<li>Creating Use cases</li>
+									<li>Creating Use Case Narratives / Scenarios</li>
+									<li>Requirements Analysis / Use Case Realizations</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Session 3 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>UML (Unified Modeling Language) Methodology</li>
+									<li>Use Case Diagrams</li>
+									<li>Basis Flow and Multiple Alternate Flows</li>
+									<li>Activity and Sequence Diagrams</li>
+									<li>Collaboration Diagrams</li>
+									<li>State Chart Diagrams</li>
+									<li>Class and Component Diagrams</li>
+									<li>Object Diagrams</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Session 4 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Requirement Gathering Tools</li>
+									<li>Sample Tool examples</li>
+									<li>Enterprise Architect (UML Modeling/ Requirements Management)</li>
+									<li>Business Modeling, Requirement Analysis & Designing Tools</li>
+									<li>UML, Process Flows, Any kind of general flow carts, data flows</li>
+									<li>Introduction to QA Methodology</li>
+									<li>Role of BA in Testing</li>
+									<li>Creating Test Cases</li>
+									<li>Creating Test Scripts</li>
+									<li>Creating Test Plans</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Session 5 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Different Testing Methods</li>
+									<li>System/Functional and Regression testing</li>
+									<li>Positive and Negative Testing</li>
+									<li>GUI and Unit Testing</li>
+									<li>User Acceptance Testing</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Session 6 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Review Session (Mock Interview Sessions)</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Session 7 &#x2014; Health Care Domain Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Intro to HIPPA, EDI</li>
+									<li>Healthcare terminology</li>
+									<li>Intro to EDI</li>
+									<li>Transactions</li>
+									<li>270/271</li>
+									<li>276/277</li>
+									<li>278</li>
+									<li>834</li>
+									<li>820</li>
+									<li>837/835</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Session 8 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Intro Medicare and Medicaid</li>
+									<li>Part A, B, C and D</li>
+									<li>ICD 9- ICD 10</li>
+									<li>Claim types - host / home</li>
+									<li>HAS / HRA Concepts</li>
+									<li>Co pay</li>
+									<li>Deductible etc</li>
+									<li>Co Insurance</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. Session 9 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Process flow on Healthcare systems [Payer / Provide]</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. Session 10 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Additional Live project sample templates and documents</li>
+									<li>Guidence on Resume preperation</li>
+									<li>Daily first 15 minutes discussion on open questions (If any)</li>
+							   </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
-                    </div>
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                 </div>
-    	    </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Charan</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

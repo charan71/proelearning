@@ -1,191 +1,470 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="row-gap-big">
+        <div class="row-gap-big">							<!-- change banner image name Here below-->
             <img class="img-responsive" src="./images/parallax-images/jbpm.jpg" alt="JBPM-Training-Pro-eLearning">
         </div>
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="jBPM Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">jBPM Training</h1><!-- change course name here -->
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>jBPM Course Content</h1>
-                        <hr>
-                        <h3>A. Introduction</h3>
-                        <h4>1. Overview</h4>
-                        <ul>
-                            <li>What is jBPM?</li>
-                            <li>Overview</li>
-                            <li>Core Engine</li>
-                            <li>Process Designer</li>
-                            <li>Data Modeler</li>
-                            <li>Form Modeler</li>
-                            <li>Process Instance and Task Management</li>
-                            <li>Business Activity Monitoring</li>
-                            <li>Workbench</li>
-                            <li>Eclipse Developer Tools</li>
-                        </ul>
-                        <h4>2. jBPM Installer</h4>
-                        <ul>
-                            <li>Prerequisites</li>
-                            <li>Downloading the Installer</li>
-                            <li>Demo Setup</li>
-                            <li>Tutorial using the Workbench</li>
-                            <li>Tutorial using Eclipse</li>
-                            <li>Configuration</li>
-                            <li>Playgrounds</li>
-                            <li>Workbench Authentication
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid"><!-- change prerequisites here -->
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc"><!-- change Course content here -->
+                    <p>JBPM stands for Java Business Process Management (workflow management system) Suggest new definition.</p>
+                    <p>jBPM is an open-source workflow engine written in Java that can execute business processes described in BPMN 2.0. jBPM is a toolkit for building business applications to help automate business processes and decisions.</p>
+                    <p>jBPM is a flexible Business Process Management (BPM) Suite. ... The core of jBPM is a light-weight, extensible workflow engine written in pure Java that allows you to execute business processes using the latest BPMN 2.0 specification. It can run in any Java environment, embedded in your application or as a service.</p>
+                    <p>By definition, a business process is a sequence of tasks that takes place in a repeatable order, executed by humans and/or systems to achieve a business goal. It describes the order (using a flowchart) in which a series of steps needs to be executed. A business process can significantly improve the visibility and agility of a business logic.</p>
+                    <p>Let us take an example. The following screenshot depicts a workflow/flowchart that most IT professionals can relate to. It is a common process that is followed in most organizations to appraise the employees based on their performance.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3><!-- change course contents here-->
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
                                 <ul>
-                                    <li>Using your own database</li>
-                                    <li>jBPM data base schema scripts (DDL scripts)</li>
+                                    <li>What is jBPM?</li>
+									<li>Overview</li>
+									<li>Core Engine</li>
+									<li>Process Designer</li>
+									<li>Data Modeler</li>
+									<li>Form Modeler</li>
+									<li>Process Instance and Task Management</li>
+									<li>Business Activity Monitoring</li>
+									<li>Workbench</li>
+									<li>Eclipse Developer Tools</li>
                                 </ul>
-                            </li>
-                            <li>jBPM installer script</li>
-                        </ul>
-                        <h4>3. Practice Some Example</h4>
-                        <h3>B. jBPM Core</h3>
-                        <h4>4. Core Engine API</h4>
-                        <ul>
-                            <li>Overview</li>
-                            <li>KieBase</li>
-                            <li>KieSession</li>
-                            <li>ProcessRuntime</li>
-                            <li>Event Listeners</li>
-                            <li>Correlation Keys</li>
-                            <li>Configuration</li>
-                        </ul>
-                        <h4>5. Testing</h4>
-                        <ul>
-                            <li>Unit testing</li>
-                        </ul>
-                        <h4>6. Persistence and Transactions</h4>
-                        <ul>
-                            <li>Process Instance State</li>
-                            <li>Runtime State</li>
-                            <li>Audit Log</li>
-                            <li>The jBPM Audit data model</li>
-                            <li>Storing Process Events in a Database</li>
-                            <li>Storing Process Events in a JMS queue for further processing</li>
-                            <li>Transactions</li>
-                            <li>Container managed transaction</li>
-                            <li>Configuration</li>
-                            <li>Adding dependencies</li>
-                            <li>Manually configuring the engine to use persistence</li>
-                            <li>Configuring the engine to use persistence using JBPMHelper - for tests only</li>
-                        </ul>
-                        <h3>C. Workbench</h3>
-                        <h4>7. Workbench</h4>
-                        <ul>
-                            <li>Installation</li>
-                            <li>War installation</li>
-                            <li>Workbench data</li>
-                            <li>System properties</li>
-                            <li>Quick Start</li>
-                            <li>Add repository</li>
-                            <li>Add project</li>
-                            <li>Define Data Model</li>
-                            <li>Define Rule</li>
-                            <li>Build and Deploy</li>
-                            <li>Configuration</li>
-                            <li>User management</li>
-                            <li>Roles</li>
-                            <li>Command line config tool</li>
-                            <li>Administration</li>
-                            <li>Administration overview</li>
-                            <li>Organizational unit</li>
-                            <li>VFS repository</li>
-                            <li>Introduction</li>
-                            <li>Log in and log out</li>
-                            <li>Home screen</li>
-                            <li>Workbench concepts</li>
-                            <li>Initial layout</li>
-                            <li>Changing the layout</li>
-                            <li>Resizing</li>
-                            <li>Repositioning</li>
-                            <li>Authoring</li>
-                            <li>Artifact Repository</li>
-                            <li>Data Modeller</li>
-                            <li>Categories Editor</li>
-                        </ul>
-                        <h4>8. Workbench Integration</h4>
-                        <h4>8.1. REST</h4>
-                        <h4>8.1.1. Job calls</h4>
-                        <h4>8.1.2. Repository calls</h4>
-                        <h4>8.1.3. Organizational unit calls</h4>
-                        <h4>8.1.4. Maven calls</h4>
-                        <h4>9. Runtime Management</h4>
-                        <h4>9.1. Deployments</h4>
-                        <h4>9.1.1. Deployment Units List</h4>
-                        <h4>9.2. Jobs</h4>
-                        <h3>D. Eclipse</h3>
-                        <h4>10. jBPM Eclipse Plugin</h4>
-                        <h4>10.1. jBPM Eclipse Plugin</h4>
-                        <h4>10.1.1. Installation</h4>
-                        <h4>10.1.2. jBPM Project Wizard</h4>
-                        <h4>10.1.3. New BPMN2 Process Wizard</h4>
-                        <h4>10.1.4. jBPM Runtime</h4>
-                        <h4>10.1.5. jBPM Maven Project Wizard</h4>
-                        <h4>10.1.6. Drools Eclipse plugin</h4>
-                        <h4>10.2. Debugging</h4>
-                        <h4>10.2.1. The Process Instances View</h4>
-                        <h4>10.2.2. The Audit View</h4>
-                        <h4>10.3. Synchronizing with Workbench Repositories</h4>
-                        <h4>10.3.1. Importing a workbench repository</h4>
-                        <h4>10.3.2. Committing changes to the workbench</h4>
-                        <h4>10.3.3. Updating from to the workbench</h4>
-                        <h4>10.3.4. Working on individual projects</h4>
-                        <h3>V. Integration</h3>
-                        <h4>11. Integration</h4>
-                        <h4>11.1. Maven</h4>
-                        <h4>11.1.1. Maven artifacts as deployment units</h4>
-                        <h4>11.1.2. Use maven for dependency management</h4>
-                        <h3>Advanced Topics </h3>
-                        <h4>12.1. New and Noteworthy in KIE API 6.0.0</h4>
-                        <h4>12.1.1. New KIE name</h4>
-                        <h4>12.1.2. Maven aligned projects and modules and Maven Deployment</h4>
-                        <h4>12.1.3. Configuration and convention based projects</h4>
-                        <h4>12.1.4. KieBase Inclusion</h4>
-                        <h4>12.1.5. KieModules, KieContainer and KIE-CI</h4>
-                        <h4>12.1.6. KieScanner</h4>
-                        <h4>12.1.7. Hierarchical ClassLoader</h4>
-                        <h4>12.1.8. Legacy API Adapter</h4>
-                        <h4>12.1.9. KIE Documentation</h4>
-                        <h4>12.2. New and Noteworthy in jBPM 6.0.0</h4>
-                        <h4>12.2.1. KIE api</h4>
-                        <h4>12.2.2. jBPM Core Engine</h4>
-                        <h4>12.2.3. jBPM Designer</h4>
-                        <h4>12.2.4. jBPM Data Modeler</h4>
-                        <h4>12.2.5. Form Modeler</h4>
-                        <h4>12.2.6. jBPM Console</h4>
-                        <h4>12.2.7. BAM / Reporting</h4>
-                        <h4>12.2.8. Workbench</h4>
-                        <h4>12.2.9. Remote API</h4>
-                        <h4>12.3. New and Noteworthy in KIE Workbench 6.0.0</h4>
-                        <h4>12.4. New and Noteworthy in Integration 6.0.0</h4>
-                        <h4>12.4.1. CDI</h4>
-                        <h4>12.4.2. Spring</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. jBPM Installer <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Prerequisites</li>
+									<li>Downloading the Installer</li>
+									<li>Demo Setup</li>
+									<li>Tutorial using the Workbench</li>
+									<li>Tutorial using Eclipse</li>
+									<li>Configuration</li>
+									<li>Playgrounds</li>
+									<li>Workbench Authentication
+										<ul>
+											<li>Using your own database</li>
+											<li>jBPM data base schema scripts (DDL scripts)</li>
+										</ul>
+									</li>
+									<li>jBPM installer script</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Examples <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Practice Some Examples</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. jBPM Core Engine API <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Overview</li>
+									<li>KieBase</li>
+									<li>KieSession</li>
+									<li>ProcessRuntime</li>
+									<li>Event Listeners</li>
+									<li>Correlation Keys</li>
+									<li>Configuration</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Testing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Unit testing</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Persistence and Transactions <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Process Instance State</li>
+									<li>Runtime State</li>
+									<li>Audit Log</li>
+									<li>The jBPM Audit data model</li>
+									<li>Storing Process Events in a Database</li>
+									<li>Storing Process Events in a JMS queue for further processing</li>
+									<li>Transactions</li>
+									<li>Container managed transaction</li>
+									<li>Configuration</li>
+									<li>Adding dependencies</li>
+									<li>Manually configuring the engine to use persistence</li>
+									<li>Configuring the engine to use persistence using JBPMHelper - for tests only</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Workbench <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Installation</li>
+									<li>War installation</li>
+									<li>Workbench data</li>
+									<li>System properties</li>
+									<li>Quick Start</li>
+									<li>Add repository</li>
+									<li>Add project</li>
+									<li>Define Data Model</li>
+									<li>Define Rule</li>
+									<li>Build and Deploy</li>
+									<li>Configuration</li>
+									<li>User management</li>
+									<li>Roles</li>
+									<li>Command line config tool</li>
+									<li>Administration</li>
+									<li>Administration overview</li>
+									<li>Organizational unit</li>
+									<li>VFS repository</li>
+									<li>Introduction</li>
+									<li>Log in and log out</li>
+									<li>Home screen</li>
+									<li>Workbench concepts</li>
+									<li>Initial layout</li>
+									<li>Changing the layout</li>
+									<li>Resizing</li>
+									<li>Repositioning</li>
+									<li>Authoring</li>
+									<li>Artifact Repository</li>
+									<li>Data Modeller</li>
+									<li>Categories Editor</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Workbench Integration <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>REST
+										<ul>
+											<li>Job calls</li>
+											<li>Repository calls</li>
+											<li>Organizational unit calls</li>
+											<li>Maven calls</li>
+										</ul>
+									</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. Runtime Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Deployments
+                                        <ul>
+                                            <li>Deployment Units List</li>
+                                        </ul>
+                                    </li>
+									<li>Jobs</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. jBPM Eclipse Plugin <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<li>jBPM Eclipse Plugin
+										<ul>
+											<li>Installation</li>
+											<li>jBPM Project Wizard</li>
+											<li>New BPMN2 Process Wizard</li>
+											<li>jBPM Runtime</li>
+											<li>jBPM Maven Project Wizard</li>
+											<li>Drools Eclipse plugin</li>
+                                        </ul>
+                                    </li>
+                                    <li>Debugging
+                                        <ul>
+                                            <li>The Process Instances View</li>
+                                            <li>The Audit View</li>
+                                        </ul>
+                                    </li>
+                                    <li>Synchronizing with Workbench Repositories
+                                        <ul>
+                                            <li>Importing a workbench repository</li>
+                                            <li>Committing changes to the workbench</li>
+                                            <li>Updating from to the workbench</li>
+                                            <li>Working on individual projects</li>
+                                        </ul>
+                                    </li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eleven" aria-expanded="false" aria-controls="collapseNine">11. Integration <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Maven
+                                        <ul>
+                                            <li>Maven artifacts as deployment units</li>
+                                            <li>Use maven for dependency management</li>
+                                        </ul>
+                                    </li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#twelve" aria-expanded="false" aria-controls="collapseNine">12. Advanced Topics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="twelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+									<li>New and Noteworthy in KIE API 6.0.0</li>
+									<li>New KIE name</li>
+									<li>Maven aligned projects and modules and Maven Deployment</li>
+									<li>Configuration and convention based projects</li>
+									<li>KieBase Inclusion</li>
+									<li>KieModules, KieContainer and KIE-CI</li>
+									<li>KieScanner</li>
+									<li>Hierarchical ClassLoader</li>
+									<li>Legacy API Adapter</li>
+									<li>KIE Documentation</li>
+									<li>New and Noteworthy in jBPM 6.0.0</li>
+									<li>KIE api</li>
+									<li>jBPM Core Engine</li>
+									<li>jBPM Designer</li>
+									<li>jBPM Data Modeler</li>
+									<li>Form Modeler</li>
+									<li>jBPM Console</li>
+									<li>BAM / Reporting</li>
+									<li>Workbench</li>
+									<li>Remote API</li>
+									<li>New and Noteworthy in KIE Workbench 6.0.0</li>
+									<li>New and Noteworthy in Integration 6.0.0</li>
+									<li>CDI</li>
+									<li>Spring</li>
+							    </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
-                    </div>
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
                 </div>
-    	    </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

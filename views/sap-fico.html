@@ -6,249 +6,662 @@
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="SAP FICO Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">SAP FICO Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>SAP FICO Course Content</h1>
-                        <p class="course-duration"><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: --</p>
-                        <hr>
-                        <h4>1.0 Introduction</h4>
-                        <ul>
-                        	<li>ERP Concepts</li>
-                        	<li>Role of SAP Consultant</li>
-                        	<li>Why SAP is in demand?</li>
-                        	<li>Finance Overview: Transaction, Accounts and Accounting.</li>
-                        </ul>
-                        <h4>2.1 General Settings</h4>
-                        <ul>
-                        	<li>Define Company, Company Code, Credit Control Area, Business Area, Chart of Accounts and Fiscal Year. Assign Company Code to Company, Chart of Accounts and Fiscal Year, Create Tax Procedure and Attach to the Country</li>
-                        </ul>
-                        <h4>2.2 Posting Period</h4>
-                        <ul>
-                        	<li>Define Posting Period Variant</li>
-                        	<li>Assign Posting Period Variant to company code</li>
-                        	<li>Define Open and Close Posting periods</li>
-                        </ul>
-                        <h4>2.3 Document</h4>
-                        <ul>
-                        	<li>Define Document Types and Number Ranges</li>
-                        </ul>
-                        <h4>2.4 Account Group and Retained Earning Account</h4>
-                        <ul>
-                        	<li>Define Account Group and Retained Earning Account</li>
-                        </ul>
-                        <h4>2.5 Field Status Variant:</h4>
-                        <ul>
-                        	<li>Maintain Field Status Variant</li>
-                        	<li>Assign Field Status Variant to Company Code</li>
-                        </ul>
-                        <h4>2.6 Tolerance Group</h4>
-                        <ul>
-                        	<li>Tolerance Group for GL Accounts
-                                <ul>
-                        	        <li>Tolerance Group for Employees</li>
-                        	        <li>Assigning Users to Tolerance Groups</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <h4>2.7 Other Basic Steps</h4>
-                        <ul>
-                        	<li>Enable Fiscal Year Default</li>
-                        	<li>Enable Default Value Date</li>
-                        	<li>Check Company Code settings in Global parameters</li>
-                        </ul>
-                        <h4>2.8 Other topics in GL</h4>
-                        <ul>
-                        	<li>GL Master Creation</li>
-                        	<li>Journal Entry Posting</li>
-                        </ul>
-                        <h4>Blocking of an GL Account</h4>
-                        <ul>
-                        	<li>Unblocking of an GL Account</li>
-                        	<li>Changing of GL Master</li>
-                        	<li>Display Changes/What Changes/how it was done</li>
-                        	<li>Parking of an account</li>
-                        	<li>Releasing the parking document by changing the amount.</li>
-                        	<li>Releasing the parking document by deleting the document</li>
-                        	<li>Difference between Park and Hold documents</li>
-                        	<li>How to see an Account Balance</li>
-                        </ul>
-                        <h4>2.9 Reference Documents</h4>
-                        <ul>
-                        	<li>Sample document</li>
-                        	<li>Account Assignment Model</li>
-                        	<li>Recurring Entries</li>
-                        </ul>
-                        <h4>2.10 Reversal of Document</h4>
-                        <ul>
-                        	<li>Normal Reversal/Individual Reversal</li>
-                        	<li>Mass Reversal</li>
-                        	<li>Reversal of the Reversal</li>
-                        </ul>
-                        <h4>2.11 Open Item Management</h4>
-                        <ul>
-                        	<li>Full Clearing</li>
-                        	<li>Partial Clearing</li>
-                        	<li>Residual Clearing</li>
-                        </ul>
-                        <h4>3.0 Accounts Receivable(AR)</h4>
-                        <ul>
-                        	<li>Accounts Receivable(AR)</li>
-                        </ul>
-                        <h4>3.1 Settings in AR</h4>
-                        <ul>
-                        	<li>Account Group Creation</li>
-                        	<li>Field Status</li>
-                        	<li>No. Range Group and No. Ranges</li>
-                        	<li>Assigning No. Range Group to Account Group</li>
-                        	<li>Tolerance Group for Customers</li>
-                        	<li>GL Accounts and Customer Master Creations</li>
-                        	<li>Document Types and No. Ranges</li>
-                        	<li>Posting Keys
-                                <ul>
-                        	        <li>Invoice Posting</li>
-                        	        <li>Incoming Payment</li>
-                        	        <li>Clearing Open Items</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <h4>3.2 Down Payment</h4>
-                        <ul>
-                        	<li>Down Payment</li>
-                        	<li>Establishment between Recon a/c and Alternative Recon a/c</li>
-                        	<li>Down Payment in Short-Cut Method</li>
-                        </ul>
-                        <h4>Customer Credit Memo</h4>
-                        <ul>
-                        	<li>Correspondence</li>
-                        </ul>
-                        <h4>4.0 Accounts Payable(AP)</h4>
-                        <ul>
-                        	<li>Accounts Payable(AP)</li>
-                        </ul>
-                        <h4>4.1 Settings in AP</h4>
-                        <ul>
-                        	<li>Account Group Creation</li>
-                        	<li>Field Status</li>
-                        	<li>No. Range Group and No. Ranges</li>
-                        	<li>Assigning No. Range Group to Account Group</li>
-                        	<li>Tolerance Group for Vendors</li>
-                        	<li>GL Accounts and Vendor Master Creations(Bank Accounts)</li>
-                        	<li>Document Types and No. Ranges</li>
-                        	<li>Posting Keys</li>
-                        	<li>Invoice Posting</li>
-                        	<li>Outgoing Payment</li>
-                        	<li>Clearing Open Items</li>
-                        </ul>
-                        <h4>4.2 Down Payment</h4>
-                        <ul>
-                        	<li>Down Payment</li>
-                        	<li>Establishment between Recon a/c and Alternative Recon a/c</li>
-                        	<li>Down Payment in Short-Cut Method</li>
-                        </ul>
-                        <h4>Vendor Credit Memo</h4>
-                        <ul>
-                        	<li>Correspondence</li>
-                        </ul>
-                        <h4>5.0 Special and Important Topics</h4>
-                        <ul>
-                        	<li>Sales Tax</li>
-                        	<li>Clearing Outstanding between Customer and Vendor</li>
-                        	<li>Cash Discount</li>
-                        	<li>Integration between FI and MM</li>
-                        	<li>Integration between FI and SD</li>
-                        	<li>Financial Statement Version</li>
-                        </ul>
-                        <h4>6.0 Asset Accounting(AA)</h4>
-                        <ul>
-                        	<li>Chart of Depreciation</li>
-                        	<li>Account Determination</li>
-                        	<li>Screen Layout</li>
-                        	<li>Asset Master Creation</li>
-                        	<li>Asset Class</li>
-                        	<li>Depreciation Keys etc.</li>
-                        	<li>Acquisition of Asset</li>
-                        	<li>Asset Sale</li>
-                        	<li>Scrapping of an Asset</li>
-                        	<li>Transfer of Asset</li>
-                        </ul>
-                        <h4>7.0 Reports and Management Information System</h4>
-                        <ul>
-                        	<li>GL Reports</li>
-                        	<li>AR Reports</li>
-                        	<li>AP Reports</li>
-                        	<li>AA Reports</li>
-                        	<li>MIS</li>
-                        </ul>
-                        <h4>CONTROLLING</h4>
-                        <ul>
-                        	<li>Controlling Basic Settings
-                                <ul>
-                        	        <li>Defining Controlling Area</li>
-                        	        <li>Assigning Controlling Area to Company Codes</li>
-                        	        <li>Defining Number Ranges for Controlling Documents</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <h4>8.0 Cost Element Accounting</h4>
-                        <ul>
-                        	<li>Creating Cost Element Groups</li>
-                        	<li>Manual Creation of Primary and Secondary Cost Elements</li>
-                        	<li>Automatic Creation of Primary and Secondary Cost Elements</li>
-                        </ul>
-                        <h4>9.0 Cost Center Accounting</h4>
-                        <ul>
-                        	<li>Creating Cost Center Hierarchy Key</li>
-                        	<li>Creating Cost Center Groups</li>
-                        	<li>Creating Cost Centers</li>
-                        	<li>Manual Repost Line Items</li>
-                        	<li>Automatic Reposting Line Items</li>
-                        	<li>Periodic Reposting</li>
-                        	<li>Creating Distribution Cycle</li>
-                        </ul>
-                        <h4>10.0 Internal Orders</h4>
-                        <ul>
-                        	<li>Creating Order Types</li>
-                        	<li>Creating Number Ranges</li>
-                        	<li>Creating Internal Orders</li>
-                        </ul>
-                        <h4>11.0 Profit Center Accounting</h4>
-                        <ul>
-                        	<li>Creating Profit Center Hierarchy</li>
-                        	<li>Creating Profit Center Groups</li>
-                        	<li>Creating Profit Centers</li>
-                        	<li>Creating Dummy Profit Center</li>
-                        	<li>Automatic Assignment of Balance Sheet A/c and P&L A/c to profit centers</li>
-                        </ul>
-                        <h4>12.0 Overview of Product Costing</h4>
-                        <ul>
-                        	<li>Overview of Product Costing</li>
-                        </ul>
-                        <h4>13.0 Overview of Profitability Analysis</h4>
-                        <ul>
-                        	<li>Overview of Profitability Analysis</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
                     </div>
                 </div>
-    	    </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>SAP FICO Stands for FI (Financial Accounting) and CO (Controlling). SAP FICO is the important module of ERP and both FI and CO modules stores the financial transactions data.</p>
+                    <p>SAP FICO is the Finance and Cost controlling module in SAP ERP where FI stands for Financial Accounting and CO stands for Controlling. SAP FICO module is very robust and covers almost all business process encountered in various industries. It is one of the very important and widely implemented modules in SAP</p>
+                    <p>Job Description of an SAP FICO consultant. ... Consultants play a more important role than end/power users in the company because they are responsible for the implementation and system configuration based on business requirements, GAAP analysis, improving processes, and looking for new opportunities/products.</p>
+                    <p>FICO. FICO, also called Finance and Controlling, helps integrate the accounting side of a business. All the financial sections like Accounts Receivable, Accounts Payable, General Ledger, Tax, etc are incorporated into SAP. ... Thus, CO is a management tool which helps them analyze on how well the company is doing</p>
+                    <p>It's been used in nearly 44 % of the world's ERP software using companies. SAP Software offers business a platform in the Form of Enterprise Resource Planning (ERP) software to manage their separate database so that run the company. SAP is the acronym for Systems, Applications and Products.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>ERP Concepts</li>
+									<li>Role of SAP Consultant</li>
+									<li>Why SAP is in demand?</li>
+									<li>Finance Overview: Transaction, Accounts and Accounting.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. General Settings <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Define Company, Company Code, Credit Control Area, Business Area, Chart of Accounts and Fiscal Year.</li>
+                                    <li>Assign Company Code to Company, Chart of Accounts and Fiscal Year, Create Tax Procedure and Attach to the Country</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Posting Period <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Define Posting Period Variant</li>
+									<li>Assign Posting Period Variant to company code</li>
+									<li>Define Open and Close Posting periods</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Document <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Define Document Types and Number Ranges</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Account Group and Retained Earning Account <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Define Account Group and Retained Earning Account</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Field Status Variant <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Maintain Field Status Variant</li>
+									<li>Assign Field Status Variant to Company Code</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Tolerance Group <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Tolerance Group for GL Accounts
+										<ul>
+											<li>Tolerance Group for Employees</li>
+											<li>Assigning Users to Tolerance Groups</li>
+										</ul>
+									</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Other Basic Steps <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Enable Fiscal Year Default</li>
+									<li>Enable Default Value Date</li>
+									<li>Check Company Code settings in Global parameters</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. Other topics in GL <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>GL Master Creation</li>
+									<li>Journal Entry Posting</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. Blocking of an GL Account <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Unblocking of an GL Account</li>
+									<li>Changing of GL Master</li>
+									<li>Display Changes/What Changes/how it was done</li>
+									<li>Parking of an account</li>
+									<li>Releasing the parking document by changing the amount.</li>
+									<li>Releasing the parking document by deleting the document</li>
+									<li>Difference between Park and Hold documents</li>
+									<li>How to see an Account Balance</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eleven" aria-expanded="false" aria-controls="collapseNine">11. Reference Documents <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Sample document</li>
+									<li>Account Assignment Model</li>
+									<li>Recurring Entries</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#twelve" aria-expanded="false" aria-controls="collapseNine">12. Reversal of Document <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="twelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+									<li>Normal Reversal/Individual Reversal</li>
+									<li>Mass Reversal</li>
+									<li>Reversal of the Reversal</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#thirteen" aria-expanded="false" aria-controls="collapseNine">13. Open Item Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="thirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Full Clearing</li>
+									<li>Partial Clearing</li>
+									<li>Residual Clearing</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourrteen">
+                            <h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#fourteen" aria-expanded="false" aria-controls="collapseNine">14. Accounts Receivable(AR) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="fourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourrteen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Accounts Receivable(AR)</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFivteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#fivteen" aria-expanded="false" aria-controls="collapseNine">15. Settings in AR <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="fivteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFivteen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Account Group Creation</li>
+									<li>Field Status</li>
+									<li>No. Range Group and No. Ranges</li>
+									<li>Assigning No. Range Group to Account Group</li>
+									<li>Tolerance Group for Customers</li>
+									<li>GL Accounts and Customer Master Creations</li>
+									<li>Document Types and No. Ranges</li>
+									<li>Posting Keys
+										<ul>
+											<li>Invoice Posting</li>
+											<li>Incoming Payment</li>
+											<li>Clearing Open Items</li>
+										</ul>
+									</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSixteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#sixteen" aria-expanded="false" aria-controls="collapseNine">16. Down Payment <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="sixteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Down Payment</li>
+									<li>Establishment between Recon a/c and Alternative Recon a/c</li>
+									<li>Down Payment in Short-Cut Method</li>
+                                </ul>
+                                <p>Customer Credit Memo
+                                    <ul>
+                                        <li>Correspondence</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeventeen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seventeen" aria-expanded="false" aria-controls="collapseNine">17. Accounts Payable(AP) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seventeen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeventeen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Accounts Payable(AP)</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEighteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eighteen" aria-expanded="false" aria-controls="collapseNine">18. Settings in AP <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eighteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEighteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Account Group Creation</li>
+									<li>Field Status</li>
+									<li>No. Range Group and No. Ranges</li>
+									<li>Assigning No. Range Group to Account Group</li>
+									<li>Tolerance Group for Vendors</li>
+									<li>GL Accounts and Vendor Master Creations(Bank Accounts)</li>
+									<li>Document Types and No. Ranges</li>
+									<li>Posting Keys</li>
+									<li>Invoice Posting</li>
+									<li>Outgoing Payment</li>
+									<li>Clearing Open Items</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNighnteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nighnteen" aria-expanded="false" aria-controls="collapseNine">19. Down Payment <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nighnteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNighnteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Down Payment</li>
+									<li>Establishment between Recon a/c and Alternative Recon a/c</li>
+									<li>Down Payment in Short-Cut Method</li>
+								</ul>
+                                <p>Vendor Credit Memo
+                                    <ul>
+                                        <li>Correspondence</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyOne">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#twentyone" aria-expanded="false" aria-controls="collapseNine">20. Special and Important Topics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="twentyone" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyOne">
+                            <div class="panel-body">
+                                <ul>
+									<li>Sales Tax</li>
+									<li>Clearing Outstanding between Customer and Vendor</li>
+									<li>Cash Discount</li>
+									<li>Integration between FI and MM</li>
+									<li>Integration between FI and SD</li>
+									<li>Financial Statement Version</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#TwentyTwo" aria-expanded="false" aria-controls="collapseNine">21. Asset Accounting(AA) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="TwentyTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Chart of Depreciation</li>
+									<li>Account Determination</li>
+									<li>Screen Layout</li>
+									<li>Asset Master Creation</li>
+									<li>Asset Class</li>
+									<li>Depreciation Keys etc.</li>
+									<li>Acquisition of Asset</li>
+									<li>Asset Sale</li>
+									<li>Scrapping of an Asset</li>
+									<li>Transfer of Asset</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#TwentyThree" aria-expanded="false" aria-controls="collapseNine">22. Reports and Management Information System <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="TwentyThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>GL Reports</li>
+									<li>AR Reports</li>
+									<li>AP Reports</li>
+									<li>AA Reports</li>
+									<li>MIS</li>
+                                </ul>
+                                <p>Controlling
+                                    <ul>
+								    	<li>Controlling Basic Settings
+								    		<ul>
+								    			<li>Defining Controlling Area</li>
+								    			<li>Assigning Controlling Area to Company Codes</li>
+								    			<li>Defining Number Ranges for Controlling Documents</li>
+								    		</ul>
+								    	</li>
+								    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#TwentyFive" aria-expanded="false" aria-controls="collapseNine">23. Cost Element Accounting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="TwentyFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating Cost Element Groups</li>
+									<li>Manual Creation of Primary and Secondary Cost Elements</li>
+									<li>Automatic Creation of Primary and Secondary Cost Elements</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentySix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#TwentySix" aria-expanded="false" aria-controls="collapseNine">24. Cost Center Accounting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="TwentySix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentySix">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating Cost Center Hierarchy Key</li>
+									<li>Creating Cost Center Groups</li>
+									<li>Creating Cost Centers</li>
+									<li>Manual Repost Line Items</li>
+									<li>Automatic Reposting Line Items</li>
+									<li>Periodic Reposting</li>
+									<li>Creating Distribution Cycle</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentySeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#TwentySeven" aria-expanded="false" aria-controls="collapseNine">25. Internal Orders <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="TwentySeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentySeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating Order Types</li>
+									<li>Creating Number Ranges</li>
+									<li>Creating Internal Orders</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#TwentyEight" aria-expanded="false" aria-controls="collapseNine">26. Profit Center Accounting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="TwentyEight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating Profit Center Hierarchy</li>
+									<li>Creating Profit Center Groups</li>
+									<li>Creating Profit Centers</li>
+									<li>Creating Dummy Profit Center</li>
+									<li>Automatic Assignment of Balance Sheet A/c and P&L A/c to profit centers</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#TwentyNine" aria-expanded="false" aria-controls="collapseNine">27. Overview of Product Costing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="TwentyNine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Overview of Product Costing</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirty">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#Thirty" aria-expanded="false" aria-controls="collapseNine">28. Overview of Profitability Analysis <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="Thirty" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirty">
+                            <div class="panel-body">
+                                <ul>
+									<li>Overview of Profitability Analysis</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Charan</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

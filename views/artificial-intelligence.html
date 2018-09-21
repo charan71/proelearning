@@ -4,239 +4,377 @@
             <img class="img-responsive" src="./images/parallax-images/artificial-intelligence.jpg" alt="Artificial-Intelligence-Training-Pro-eLearning">
         </div>
     </div>
+    
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="course-desc">
-                    <h1>Artificial Intelligence Training</h1>
-                    <p>Pro-elearning offers best in market trainings on Robotic Process Automation (Artificial Intelligence). Course is designed in a way that the candidate would be able to understand and perform developer job activities such as analyzing the business applications, creating business objects and processes using sequential steps.</p>
-                    <p>We are committed to facilitate professionally experienced faculties who help students in exploring their technical knowledge and be the part of competetive industry.</p>
-                    <div class="detail-cards mt-50">
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="detail-cards-desc">
-                                <h3>What is RPA?</h3>
-                                <p>Robotic Process Automation is a platform to reduce human efforts by deploying a Robot or Software to perfrom specific task which is repeatedly performed. RPA tools will interact with business applications as a human user would do.</p>
-                            </div>
+            <div class="course-overview-title">
+                <h1 class="mt-50">Artificial Intelligence Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="detail-cards-desc">
-                                <h3>Why should you learn Artificial Intelligence?</h3>
-                                <p>Robotic Process Automation field is considered to be very effective for career development. Keeping in mind of the future scope in this filed, one can expect numerous opportunities. Skilled resources would be offered very effective packages.</p>
-                            </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="detail-cards-desc">
-                                <h3>Who should learn Artificial Intelligence?</h3>
-                                <p>The one who wants to learn and excel their career in RPA should have to be Analytical and Logical. You have to be a good problem solver and has an ability to understand complex business processes and develop the programs.</p>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
                             </div>
                         </div>
                     </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
                     <div class="clearfix"></div>
-                    <div class="course-overview">
-                        <h2 class="text-center mt-50">Artificial Intelligence Course Overview</h2>
-                        <div class="panel-group col-xs-12 col-sm-12 col-md-12 col-lg-12" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                        <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Introduction to AI</a>
-                                    </h4>
-                                </div>
-                                <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Definitions</li>
-                                            <li>Goals of AI</li>
-                                            <li>AI Approaches</li>
-                                            <li>AI Techniques</li>
-                                            <li>Branches of AI</li>
-                                            <li>Applications of AI</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <!-- Modes of Training -->
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>You need to the understand the basic concept of Automation and how it is related to Computer Science.</p>
+                        <p>Basic Programming Languages like C, C++ and Java as they give a basic knowledge of writing and executing codes.</p>
+                        <p>Concepts like:
+                            <ul>
+                                <li>Various level of math, including probability, statistics, algebra, calculus, logic and algorithms.</li>
+                                <li>Bayesian networking or graphical modeling, including neural nets.</li>
+                                <li>Physics, engineering and robotics.</li>
+                                <li>Computer science, programming languages and coding.</li>
+                                <li>Cognitive science theory</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <h4>What is RPA?</h4>
+                    <p>Robotic Process Automation is a platform to reduce human efforts by deploying a Robot or Software to perfrom specific task which is repeatedly performed. RPA tools will interact with business applications as a human user would do.</p>
+                    <h4>Why should you learn Artificial Intelligence?</h4>
+                    <p>Robotic Process Automation field is considered to be very effective for career development. Keeping in mind of the future scope in this filed, one can expect numerous opportunities. Skilled resources would be offered very effective packages.</p>
+                    <h4>Who should learn Artificial Intelligence?</h4>
+                    <p>The one who wants to learn and excel their career in RPA should have to be Analytical and Logical. You have to be a good problem solver and has an ability to understand complex business processes and develop the programs.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Introduction to AI <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Definitions</li>
+                                    <li>Goals of AI</li>
+                                    <li>AI Approaches</li>
+                                    <li>AI Techniques</li>
+                                    <li>Branches of AI</li>
+                                    <li>Applications of AI</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingTwo">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#problemSolving" aria-expanded="false" aria-controls="collapseTwo">2. Problem Solving, Search and Control Strategies</a>
-                                    </h4>
-                                </div>
-                                <div id="problemSolving" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>General problem solving</li>
-                                            <li>Search and control strategies</li>
-                                            <li>Exhaustive searches</li>
-                                            <li>Heuristic search techniques</li>
-                                            <li>Constraint satisfaction problems (CSPs), models</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#problemSolving" aria-expanded="false" aria-controls="collapseTwo">2. Problem Solving, Search and Control Strategies <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="problemSolving" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>General problem solving</li>
+                                    <li>Search and control strategies</li>
+                                    <li>Exhaustive searches</li>
+                                    <li>Heuristic search techniques</li>
+                                    <li>Constraint satisfaction problems (CSPs), models</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingThree">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#knowledgeRepresentation" aria-expanded="false" aria-controls="collapseThree">3. Knowledge Representation, Predicate Logic, Rules</a>
-                                    </h4>
-                                </div>
-                                <div id="knowledgeRepresentation" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Knowledge representation</li>
-                                            <li>KR using predicate logic</li>
-                                            <li>KR using rules</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#knowledgeRepresentation" aria-expanded="false" aria-controls="collapseThree">3. Knowledge Representation, Predicate Logic, Rules <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="knowledgeRepresentation" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Knowledge representation</li>
+                                    <li>KR using predicate logic</li>
+                                    <li>KR using rules</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingFour">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reasoning" aria-expanded="false" aria-controls="collapseFour">4. Reasoning System - Symbolic, Statistical</a>
-                                    </h4>
-                                </div>
-                                <div id="reasoning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Reasoning</li>
-                                            <li>Symbolic reasoning</li>
-                                            <li>Statistical reasoning</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reasoning" aria-expanded="false" aria-controls="collapseFour">4. Reasoning System - Symbolic, Statistical <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reasoning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Reasoning</li>
+                                    <li>Symbolic reasoning</li>
+                                    <li>Statistical reasoning</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingFive">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#gamePlaying" aria-expanded="false" aria-controls="collapseFive">5. Game Playing</a>
-                                    </h4>
-                                </div>
-                                <div id="gamePlaying" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Overview</li>
-                                            <li>Mini-Max search procedure</li>
-                                            <li>Game playing with Mini-Max</li>
-                                            <li>Alpha-Beta  pruning</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#gamePlaying" aria-expanded="false" aria-controls="collapseFive">5. Game Playing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="gamePlaying" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Overview</li>
+                                    <li>Mini-Max search procedure</li>
+                                    <li>Game playing with Mini-Max</li>
+                                    <li>Alpha-Beta  pruning</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingSix">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#learning" aria-expanded="false" aria-controls="collapseSix">6. Learning</a>
-                                    </h4>
-                                </div>
-                                <div id="learning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>What is learning</li>
-                                            <li>Rote learning</li>
-                                            <li>Learning from example : Induction, Explanation Based Learning (EBL)</li>
-                                            <li>Discovery</li>
-                                            <li>Clustering</li>
-                                            <li>Analogy</li>
-                                            <li>Neural net and genetic learning</li>
-                                            <li>Reinforcement learning</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#learning" aria-expanded="false" aria-controls="collapseSix">6. Learning <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="learning" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>What is learning</li>
+                                    <li>Rote learning</li>
+                                    <li>Learning from example : Induction, Explanation Based Learning (EBL)</li>
+                                    <li>Discovery</li>
+                                    <li>Clustering</li>
+                                    <li>Analogy</li>
+                                    <li>Neural net and genetic learning</li>
+                                    <li>Reinforcement learning</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingSeven">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#expertSystem" aria-expanded="false" aria-controls="collapseSeven">7. Expert System</a>
-                                    </h4>
-                                </div>
-                                <div id="expertSystem" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Introduction</li>
-                                            <li>Knowledge acquisition</li>
-                                            <li>Knowledge base</li>
-                                            <li>Working memory</li>
-                                            <li>Inference engine</li>
-                                            <li>Expert system shells
-                                            <li>Explanation</li>
-                                            <li>Application of expert systems</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#expertSystem" aria-expanded="false" aria-controls="collapseSeven">7. Expert System <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="expertSystem" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction</li>
+                                    <li>Knowledge acquisition</li>
+                                    <li>Knowledge base</li>
+                                    <li>Working memory</li>
+                                    <li>Inference engine</li>
+                                    <li>Expert system shells
+                                    <li>Explanation</li>
+                                    <li>Application of expert systems</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingEight">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#neuralNetworks" aria-expanded="false" aria-controls="collapseEight">8. Fundamentals of Neural Networks</a>
-                                    </h4>
-                                </div>
-                                <div id="neuralNetworks" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Introduction and research history</li>
-                                            <li>Model of artificial neuron</li>
-                                            <li>Neural Network Characteristics</li>
-                                            <li>Learning methods</li>
-                                            <li>Single-layer network system</li>
-                                            <li>Applications</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#neuralNetworks" aria-expanded="false" aria-controls="collapseEight">8. Fundamentals of Neural Networks <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="neuralNetworks" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction and research history</li>
+                                    <li>Model of artificial neuron</li>
+                                    <li>Neural Network Characteristics</li>
+                                    <li>Learning methods</li>
+                                    <li>Single-layer network system</li>
+                                    <li>Applications</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingNine">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#geneticAlgorithms" aria-expanded="false" aria-controls="collapseNine">9. Fundamentals of  Genetic Algorithms</a>
-                                    </h4>
-                                </div>
-                                <div id="geneticAlgorithms" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Introduction</li>
-                                            <li>Encoding</li>
-                                            <li>Operators of genetic algorithm</li>
-                                            <li>Basic genetic algorithm</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#geneticAlgorithms" aria-expanded="false" aria-controls="collapseNine">9. Fundamentals of  Genetic Algorithms <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="geneticAlgorithms" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction</li>
+                                    <li>Encoding</li>
+                                    <li>Operators of genetic algorithm</li>
+                                    <li>Basic genetic algorithm</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingTen">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#naturalLangProcessing" aria-expanded="false" aria-controls="collapseNine">10. Natural Language Processing</a>
-                                    </h4>
-                                </div>
-                                <div id="naturalLangProcessing" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Introduction</li>
-                                            <li>Syntactic processing</li>
-                                            <li>Semantic and pragmatic analysis</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#naturalLangProcessing" aria-expanded="false" aria-controls="collapseNine">10. Natural Language Processing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="naturalLangProcessing" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction</li>
+                                    <li>Syntactic processing</li>
+                                    <li>Semantic and pragmatic analysis</li>
+                                </ul>
                             </div>
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingNine">
-                                    <h4 class="panel-title">
-                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#commonSense" aria-expanded="false" aria-controls="collapseNine">11. Common Sense</a>
-                                    </h4>
-                                </div>
-                                <div id="commonSense" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
-                                    <div class="panel-body">
-                                        <ul>
-                                            <li>Introduction</li>
-                                            <li>Physical world</li>
-                                            <li>Common sense ontologies</li>
-                                            <li>Memory organization</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#commonSense" aria-expanded="false" aria-controls="collapseNine">11. Common Sense <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="commonSense" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction</li>
+                                    <li>Physical world</li>
+                                    <li>Common sense ontologies</li>
+                                    <li>Memory organization</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-    	</div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
     </div>
 </div>

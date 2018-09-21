@@ -5,9 +5,9 @@ body
     /* background-color: #FAFAFA; */
 }
 @media (min-width: 992px) {
-    body {
+    /* body {
         padding-bottom: 37px;
-    }
+    } */
 }
 ::selection, ::-moz-selection {
 	background-color: #b9e3fe;
@@ -1641,6 +1641,10 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
 .btn-custom-form:hover, .btn-custom-form:focus, .btn-custom-form:active {
     background-color: transparent;
     color: #0077ff;
+}
+#accfaq .panel-title .fa.fa-bolt {
+    margin-right: 20px;
+    color: coral;
 }
 /***** Course Pages *****/
 

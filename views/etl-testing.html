@@ -1,108 +1,276 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="row-gap-big">
+        <div class="row-gap-big">							<!-- change banner image name Here below-->
             <img class="img-responsive" src="./images/parallax-images/etl-testing.jpg" alt="ETL-Testing-Training-Pro-eLearning">
         </div>
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="ETL Testing Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">ETL Testing Training</h1><!-- change course name here -->
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>ETL Testing Course Content</h1>
-                        <p class="course-duration"><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: 15h</p>
-                        <hr>
-                        <h3>Description</h3>
-                        <p>ETL basically stands for Extract Transform Load - which simply implies the process where you extract data from Source Tables, transform them in to the desired format based on certain rules and finally load them onto Target tables. There are numerous tools that help you with ETL process - Informatica, Control-M being a few notable ones.</p>
-                        <p>So ETL Testing implies - Testing this entire process using a tool or at table level with the help of test cases and Rules Mapping document.</p>
-                        <h4>In ETL Testing, the following are validated:</h4>
-                        <ul>
-                            <li>Data File loads from Source system on to Source Tables.</li>
-                            <li>The ETL Job that is designed to extract data from Source tables and then move them to staging tables. (Transform process)</li>
-                            <li>Data validation within the Staging tables to check all Mapping Rules / Transformation Rules are followed.</li>
-                            <li>Data Validation within Target tables to ensure data is present in required format and there is no data loss from Source to Target tables.</li>
-                        </ul>
-                        <hr>
-                        <h3>ETL Testing Training Contents</h3>
-                        <h4>Module 1</h4>
-                        <ul>
-                            <ul>Data warehouse and ETL Concepts</ul>
-                            <ul>Database Concepts and SQL </ul>
-                            <ul>Queries: Joins, Simple, Complex and Co-related queries</ul>
-                            <ul>What is Data warehouse?</ul>
-                            <ul>Characteristics of the Data warehouse</ul>
-                            <ul>OLTP VS OLAP</ul>
-                            <ul>Dimension Table VS Fact Table</ul>
-                            <ul>Types of Source Files</ul>
-                            <ul>Advantages of Data warehouse</ul>
-                            <ul>Meta Data</ul>
-                            <ul>Data warehouse VS Data Mart</ul>
-                            <ul>Data Extraction</ul>
-                            <ul>Data Transformation (Different Transformation rules)</ul>
-                            <ul>Data Loading</ul>
-                            <ul>Database Designs (Star Schema, Snowflake Schema etc.)</ul>
-                        </ul>
-                        <h4>Module 2</h4>
-                        <ul>
-                            <li>Data-warehouse (ETL) Testing Process</li>
-                            <li>Data Ware House (ETL) Test or Work Flow Process</li>
-                            <li>What is use of testing?</li>
-                            <li>What is quality & standards?</li>
-                            <li>Responsibilities of an ETL Tester</li>
-                            <li>Risks and Challenges of ETL Testing</li>
-                        </ul>
-                        <h4>Module 3</h4>
-                        <ul>
-                            <li>Data warehouse (ETL) Test Preparation</li>
-                            <li>Understanding of Source files and Target </li>
-                            <li>ETL Testing methodologies and Test Techniques </li>
-                            <li>ETL Test approach</li>
-                            <li>Types of Testing</li>
-                            <li>How to Prepare ETL Test Plan</li>
-                            <li>DW (ETL) Test Environment Setup</li>
-                        </ul>
-                        <h4>Module 4</h4>
-                        <ul>
-                            <li>Data warehouse (ETL) Test Execution and Results and Report</li>
-                            <li>How to perform DW (ETL) Testing</li>
-                            <li>Testing the Requirements and Functional Design </li>
-                            <li>Different phases in DW (ETL) Testing </li>
-                            <li>Data validation in Source and Target </li>
-                            <li>How to apply Transformation rules in ETL Test execution </li>
-                            <li>How to reporting the Bugs in ETL Testing  </li>
-                            <li>How to detect the bugs through database queries</li>
-                            <li>Equivalence Partition</li>
-                            <li>Automation for ETL Test Execution</li>
-                            <li>How to Report DW (ETL) Test Execution Status: Daily Vs Weekly</li>
-                        </ul>
-                        <div class="trainer-details mt-30">
-                            <h4>Trainer Profile</h4>
-                            <ul>
-                                <li>Total <b>8 years</b> of experience in IT working <b>NTT Data</b>.</li>
-                                <li>Previously worked for Tech Mahindra in Bangalore Expert in <b>ETL Testing, BI Testing</b>.</li>
-                            </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
                         </div>
                     </div>
                 </div>
             </div>
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>We assume the readers of this tutorial have hands-on experience of handling a database using SQL queries. In addition, it is going to help if the readers have an elementary knowledge of data warehousing concepts.</p>
                     </div>
                 </div>
-    	    </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <ul>
+                        <li><b>ETL basically stands for Extract Transform Load -</b> which simply implies the process where you extract data from Source Tables, transform them in to the desired format based on certain rules and finally load them onto Target tables. There are numerous tools that help you with ETL process - Informatica, Control-M being a few notable ones.</li>
+                        <li><b>So ETL Testing implies -</b> Testing this entire process using a tool or at table level with the help of test cases and Rules Mapping document.</li>
+                    </ul>
+                    <p>In ETL Testing, the following are validated:
+                        <ul>
+							<li>Data File loads from Source system on to Source Tables.</li>
+							<li>The ETL Job that is designed to extract data from Source tables and then move them to staging tables. (Transform process)</li>
+							<li>Data validation within the Staging tables to check all Mapping Rules / Transformation Rules are followed.</li>
+							<li>Data Validation within Target tables to ensure data is present in required format and there is no data loss from Source to Target tables.</li>
+						</ul>
+                    </p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3><!-- change course contents here-->
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">1. Module 1 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Data warehouse and ETL Concepts</li>
+									<li>Database Concepts and SQL </li>
+									<li>Queries: Joins, Simple, Complex and Co-related queries</li>
+									<li>What is Data warehouse?</li>
+									<li>OLTP vs OLAP</li>
+									<li>Characteristics of the Data warehouse</li>
+									<li>Dimension Table VS Fact Table</li>
+									<li>Types of Source Files</li>
+									<li>Advantages of Data warehouse</li>
+									<li>Meta Data</li>
+									<li>Data warehouse VS Data Mart</li>
+									<li>Data Extraction</li>
+									<li>Data Transformation (Different Transformation rules)</li>
+									<li>Data Loading</li>
+									<li>Database Designs (Star Schema, Snowflake Schema etc.)</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">2. Module 2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Data-warehouse (ETL) Testing Process</li>
+									<li>Data Ware House (ETL) Test or Work Flow Process</li>
+									<li>What is use of testing?</li>
+									<li>What is quality & standards?</li>
+									<li>Responsibilities of an ETL Tester</li>
+									<li>Risks and Challenges of ETL Testing</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">3. Module 3 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Data warehouse (ETL) Test Preparation</li>
+									<li>Understanding of Source files and Target </li>
+									<li>ETL Testing methodologies and Test Techniques </li>
+									<li>ETL Test approach</li>
+									<li>Types of Testing</li>
+									<li>How to Prepare ETL Test Plan</li>
+									<li>DW (ETL) Test Environment Setup</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">4. Module 4 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Data warehouse (ETL) Test Execution and Results and Report</li>
+									<li>How to perform DW (ETL) Testing</li>
+									<li>Testing the Requirements and Functional Design </li>
+									<li>Different phases in DW (ETL) Testing </li>
+									<li>Data validation in Source and Target </li>
+									<li>How to apply Transformation rules in ETL Test execution </li>
+									<li>How to reporting the Bugs in ETL Testing  </li>
+									<li>How to detect the bugs through database queries</li>
+									<li>Equivalence Partition</li>
+									<li>Automation for ETL Test Execution</li>
+									<li>How to Report DW (ETL) Test Execution Status: Daily Vs Weekly</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Trainer Info -->
+                <div class="call-grid">
+                    <h4 class="testimonials-heading text-center">Trainer Info</h4>
+                    <ul>
+                        <li>Total <b>8 years</b> of experience in IT working <b>NTT Data</b></li>
+                        <li>Previously worked for Tech Mahindra in Bangalore Expert in <b>ETL Testing</b>, <b>BI Testing</b></li>
+                    </ul>
+                </div>
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Charan</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

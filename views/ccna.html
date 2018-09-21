@@ -4,109 +4,288 @@
             <img class="img-responsive" src="./images/parallax-images/ccna.jpg" alt="CCNA-Training-Pro-eLearning">
         </div>
     </div>
+    
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/dotnet.png" alt="CCNA Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">CCNA Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>CCNA Course Content</h1>
-                        <hr>
-                        <ul>
-                            <li><span class="section">Section 1</span> - Introduction to Networking</li>
-                            <li><span class="section">Section 2</span> - OSI Reference Model</li>
-                            <li><span class="section">Section 3</span> - Ethernet Technologies</li>
-                            <li><span class="section">Section 4</span> - Hubs vs. Switches vs. Routers</li>
-                            <li><span class="section">Section 5</span> - STP</li>
-                            <li><span class="section">Section 6</span> - IPv4 Addressing and Subnetting</li>
-                            <li><span class="section">Section 7</span> - TCP and UDP</li>
-                            <li><span class="section">Section 8</span> - IPv6 Addressing</li>
-                            <li><span class="section">Section 9</span> - Introduction to 802.11 Wireless Part II – The Cisco IOS</li>
-                            <li><span class="section">Section 10</span> - Router Components</li>
-                            <li><span class="section">Section 11</span> - Introduction to the Cisco IOS</li>
-                            <li><span class="section">Section 12</span> - Advanced IOS Functions Part III - Routing</li>
-                            <li><span class="section">Section 13</span> - The Routing Table</li>
-                            <li><span class="section">Section 14</span> - Static vs. Dynamic Routing</li>
-                            <li><span class="section">Section 15</span> - Classful vs. Classless Routing</li>
-                            <li><span class="section">Section 16</span> - Configuring Static Routes</li>
-                            <li><span class="section">Section 17</span> - RIPv1 & RIPv2</li>
-                            <li><span class="section">Section 18</span> - IGRP</li>
-                            <li><span class="section">Section 19</span> - EIGRP</li>
-                            <li><span class="section">Section 20</span> - OSPF Part IV – VLANs, Access-Lists, and Services</li>
-                            <li><span class="section">Section 21</span> - VLANs and VTP</li>
-                            <li><span class="section">Section 22</span> - Access-Lists</li>
-                            <li><span class="section">Section 23</span> - DNS and DHCP Part V - WANs</li>
-                            <li><span class="section">Section 24</span> - Basic WAN Concepts</li>
-                            <li><span class="section">Section 25</span> - PPP</li>
-                            <li><span class="section">Section 26</span> - Frame-Relay</li>
-                            <li><span class="section">Section 27</span> - NAT</li>
-                        </ul>
-                        <h4>Networking Fundamentals</h4>
-                        <ul>
-                            <li>Exploring the Network Layers</li>
-                            <li>Ethernet Physical and Data Link Layers</li>
-                            <li>Physical Layer</li>
-                            <li>Ethernet Mechanical Properties—The Media</li>
-                            <li>Ethernet Electrical Properties—The Signaling</li>
-                            <li>Data Link Layer</li>
-                            <li>Internet Protocol</li>
-                            <li>Address Resolution Protocol</li>
-                            <li>Internet Control Message Protocol</li>
-                            <li>Layer 3 Connectivity Determination</li>
-                            <li>Unavailable Port Errors</li>
-                            <li>Announcement of New Default Routers</li>
-                            <li>Internet Group Management Protocol and Protocol Independent Multicast</li>
-                        </ul>
-                        <h4>Transport Layer</h4>
-                        <ul>
-                            <li>Transmission Control Protocol</li>
-                            <li>TCP Three-Way Handshake</li>
-                            <li>TCP Sliding Window</li>
-                            <li>TCP Slow Start</li>
-                            <li>TCP Congestion Avoidance</li>
-                            <li>TCP Fast Retransmit</li>
-                            <li>TCP Fast Recovery</li>
-                            <li>TCP Maximum Segment Size</li>
-                            <li>TCP over Satellite</li>
-                            <li>TCP Variable Summary</li>
-                            <li>User Datagram Protocol</li>
-                        </ul>
-                        <h4>Introducing Switching, Routing, and Address Translation</h4>
-                        <ul>
-                            <li>Exploring Ethernet Frame Switching </li>
-                            <li>Configuring Virtual LANs </li>
-                            <li>Configuring VLAN Trunking </li>
-                            <li>Exploring MAC Learning with Multiple VLANs </li>
-                            <li>VLAN Trunking Protocol </li>
-                            <li>Understanding IP Routing </li>
-                            <li>Configuring Static Routing</li>
-                            <li>Understanding Dynamic Routing</li>
-                            <li>Packet Switching </li>
-                            <li>Process Switching Path</li>
-                            <li>Fast Switching Path </li>
-                            <li>Cisco Express Forwarding </li>
-                            <li>Transparent Bridging</li>
-                            <li>Exploring Network Address Translation </li>
-                            <li>Source Network Address Translation </li>
-                            <li>Static Network Address Translation </li>
-                            <li>Dynamic NAT </li>
-                            <li>Port Address Translation (PAT)</li>
-                            <li>Destination Translation</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <!-- Modes of Training -->
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <h1 class="text-center">Space<br>For<br>ADS</h1>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic understanding of computer Networks, understanding of OSI model, basic networking commands.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>CCNA Routing and Switching Training is an Associate level training that enables the learner for performing network related routed and switched tasks such as installation, operations and troubleshooting.</p>
+                    <p>The training imparts the skills to protect the integrity of the networks. This training makes the candidates proficient to take the job roles of Network Administrators, Network Specialists, and Network Support Engineers.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Networking</li>
+                                    <li>OSI Reference Model</li>
+                                    <li>Ethernet Technologies</li>
+                                    <li>Hubs vs. Switches vs. Routers</li>
+                                    <li>STP</li>
+                                    <li>IPv4 Addressing and Subnetting</li>
+                                    <li>TCP and UDP</li>
+                                    <li>IPv6 Addressing</li>
+                                    <li>Introduction to 802.11 Wireless Part II – The Cisco IOS</li>
+                                    <li>Router Components</li>
+                                    <li>Introduction to the Cisco IOS</li>
+                                    <li>Advanced IOS Functions Part III - Routing</li>
+                                    <li>The Routing Table</li>
+                                    <li>Static vs. Dynamic Routing</li>
+                                    <li>Classful vs. Classless Routing</li>
+                                    <li>Configuring Static Routes</li>
+                                    <li>RIPv1 & RIPv2</li>
+                                    <li>IGRP</li>
+                                    <li>EIGRP</li>
+                                    <li>OSPF Part IV – VLANs, Access-Lists, and Services</li>
+                                    <li>VLANs and VTP</li>
+                                    <li>Access-Lists</li>
+                                    <li>DNS and DHCP Part V - WANs</li>
+                                    <li>Basic WAN Concepts</li>
+                                    <li>PPP</li>
+                                    <li>Frame-Relay</li>
+                                    <li>NAT</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Networking Fundamentals <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Exploring the Network Layers</li>
+                                    <li>Ethernet Physical and Data Link Layers</li>
+                                    <li>Physical Layer</li>
+                                    <li>Ethernet Mechanical Properties—The Media</li>
+                                    <li>Ethernet Electrical Properties—The Signaling</li>
+                                    <li>Data Link Layer</li>
+                                    <li>Internet Protocol</li>
+                                    <li>Address Resolution Protocol</li>
+                                    <li>Internet Control Message Protocol</li>
+                                    <li>Layer 3 Connectivity Determination</li>
+                                    <li>Unavailable Port Errors</li>
+                                    <li>Announcement of New Default Routers</li>
+                                    <li>Internet Group Management Protocol and Protocol Independent Multicast</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Transport Layer <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Transmission Control Protocol</li>
+                                    <li>TCP Three-Way Handshake</li>
+                                    <li>TCP Sliding Window</li>
+                                    <li>TCP Slow Start</li>
+                                    <li>TCP Congestion Avoidance</li>
+                                    <li>TCP Fast Retransmit</li>
+                                    <li>TCP Fast Recovery</li>
+                                    <li>TCP Maximum Segment Size</li>
+                                    <li>TCP over Satellite</li>
+                                    <li>TCP Variable Summary</li>
+                                    <li>User Datagram Protocol</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Introducing Switching, Routing, and Address Translation <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Exploring Ethernet Frame Switching </li>
+                                    <li>Configuring Virtual LANs </li>
+                                    <li>Configuring VLAN Trunking </li>
+                                    <li>Exploring MAC Learning with Multiple VLANs </li>
+                                    <li>VLAN Trunking Protocol </li>
+                                    <li>Understanding IP Routing </li>
+                                    <li>Configuring Static Routing</li>
+                                    <li>Understanding Dynamic Routing</li>
+                                    <li>Packet Switching </li>
+                                    <li>Process Switching Path</li>
+                                    <li>Fast Switching Path </li>
+                                    <li>Cisco Express Forwarding </li>
+                                    <li>Transparent Bridging</li>
+                                    <li>Exploring Network Address Translation </li>
+                                    <li>Source Network Address Translation </li>
+                                    <li>Static Network Address Translation </li>
+                                    <li>Dynamic NAT </li>
+                                    <li>Port Address Translation (PAT)</li>
+                                    <li>Destination Translation</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    	</div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
     </div>
 </div>

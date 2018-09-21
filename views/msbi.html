@@ -4,291 +4,755 @@
             <img class="img-responsive" src="./images/parallax-images/msbi.jpg" alt="MSBI-Training-Pro-eLearning">
         </div>
     </div>
+    
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/dotnet.png" alt="MSBI Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">MSBI Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>MSBI Course Content</h1>
-                        <p class="course-duration"><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: --</p>
-                        <hr>
-                        <h3>SSAS (SQL Server Analysis Services Course Content)</h3>
-                        <h4>What Is Microsoft BI?</h4>
-                        <ul>
-                        	<li>Core concept &#x2013; BI is the cube or UDM</li>
-                        	<li>Example cube as seen using Excel pivot table</li>
-                        	<li>MS BI is comprehensive &#x2013; more than Analysis Services on SQL Server</li>
-                        	<li>Demonstration of SQL Reporting Services with cube as data source</li>
-                        </ul>
-                        <h4>Using SSAS in BIDS</h4>
-                        <ul>
-                        	<li>Understanding the development environment</li>
-                        	<li>Creating Data Sources and Data Source Views</li>
-                        	<li>Creating cubes &#x2013; using the UDM and the Cube Build Wizard</li>
-                        	<li>Refining Dimensions and Measures in BIDS</li>
-                        </ul>
-                        <h4>Intermediate SSAS</h4>
-                        <ul>
-                        	<li>KPIs</li>
-                        	<li>Perspectives</li>
-                        	<li>Translations &#x2013; cube metadata and currency localization</li>
-                        	<li>Actions &#x2013; regular, drill-through and reporting</li>
-                        </ul>
-                        <h4>Advanced SSAS</h4>
-                        <ul>
-                        	<li>Using multiple fact tables</li>
-                        	<li>Modeling intermediate fact tables</li>
-                        	<li>Modeling M:M dimensions, Fact (degenerate) dimensions, Role-playing dimensions, writeback dimensions</li>
-                        	<li>Modeling changing dimensions &#x2013; Dimension Intelligence w/ Wizard</li>
-                        	<li>Using the Add Business Intelligence Wizards &#x2013; write-back, semi-additive measures, time intelligence, account intelligence</li>
-                        </ul>
-                        <h4>Cube Storage and Aggregation</h4>
-                        <ul>
-                        	<li>Storage topics &#x2013; basic aggregations, MOLAP</li>
-                        	<li>Advanced Storage Design &#x2013; MOLAP, ROLAP, HOLAP</li>
-                        	<li>Partitions &#x2013; relational and Analysis Services partitions</li>
-                        	<li>Customizing Aggregation Design &#x2013; Processing Design</li>
-                        	<li>Rapidly changing dimensions / ROLAP dimensions</li>
-                        	<li>Welcome to the Real Time &#x2013; Proactive Caching</li>
-                        	<li>Cube processing options</li>
-                        </ul>
-                        <h4>MDX</h4>
-                        <ul>
-                        	<li>Basic syntax</li>
-                        	<li>Using the MDX query editor in SQL Server Management Studio</li>
-                        	<li>Adding calculated members</li>
-                        	<li>Adding scripts</li>
-                        	<li>Adding named sets</li>
-                        </ul>
-                        <h4>SSAS Administration</h4>
-                        <ul>
-                        	<li>Best practices &#x2013; health monitoring</li>
-                        	<li>XMLA scripting (SQL Mgmt Studio)</li>
-                        	<li>Security &#x2013; roles and permissions</li>
-                        	<li>Disaster Recovery &#x2013; backup / restore</li>
-                        </ul>
-                        <h4>Introduction to Reporting Clients</h4>
-                        <ul>
-                        	<li>Excel 2007/  Power pivot  </li>
-                        	<li>SQL RS & Report Builder</li>
-                        	<li>Sharepoint Performance Point Services 2010</li>
-                        </ul>
-                        <hr>
-                        <h3>SSIS (SQL Server Integration Services Course Content)</h3>
-                        <h4>Introduction to SQL Server Integration Services</h4>
-                        <ul>
-                        	<li>Product History </li>
-                        	<li>SSIS Package Architecture Overview </li>
-                        	<li>Development and Management Tools </li>
-                        	<li>Deploying and Managing SSIS Packages </li>
-                        	<li>Source Control for SSIS Packages</li>
-                        </ul>
-                        <h4>SSIS for DBAs: Using SQL Server Management Studio</h4>
-                        <ul>
-                        	<li>The Import and Export Wizard </li>
-                        	<li>Importing and Exporting Data </li>
-                        	<li>Working with Packages </li>
-                        	<li>Database Maintenance Plans </li>
-                        	<li>Creating Database Maintenance Plans using SSMS </li>
-                        	<li>Scheduling and Executing Plans · Examining Database Maintenance Plan Packages</li>
-                        </ul>
-                        <h4>Business Intelligence Development Studio</h4>
-                        <ul>
-                        	<li>Launching BIDS </li>
-                        	<li>Project templates </li>
-                        	<li>The package designer </li>
-                        	<li>The Toolbox </li>
-                        	<li>Solution Explorer </li>
-                        	<li>The Properties window </li>
-                        	<li>The Variables window · The SSIS menu</li>
-                        </ul>
-                        <h4>Introduction to Control Flow</h4>
-                        <ul>
-                        	<li>Control Flow Overview </li>
-                        	<li>Precedence Constraints </li>
-                        	<li>The Execute SQL Task </li>
-                        	<li>The Bulk Insert Task </li>
-                        	<li>The File System Task </li>
-                        	<li>The FTP Task </li>
-                        	<li>The Send Mail Task</li>
-                        </ul>
-                        <h4>Advanced Control Flow</h4>
-                        <ul>
-                        	<li>Containers &#x2013; grouping and looping </li>
-                        	<li>The Web Service Task </li>
-                        	<li>The WMI tasks </li>
-                        	<li>The Analysis Services tasks </li>
-                        	<li>The Execute Process Task · The Execute Package Task</li>
-                        </ul>
-                        <h4>Introduction to Data Flow</h4>
-                        <ul>
-                        	<li>Data Flow Overview </li>
-                        	<li>Data Sources </li>
-                        	<li>Data Destinations </li>
-                        	<li>Data Transformations </li>
-                        	<li>The Copy Column Transformation </li>
-                        	<li>The Derived Column Transformation </li>
-                        	<li>The Data Conversion Transformation </li>
-                        	<li>The Conditional Split Transformation </li>
-                        	<li>The Aggregate Transformation </li>
-                        	<li>The Sort Transformation </li>
-                        	<li>Data Viewers</li>
-                        </ul>
-                        <h4>Variables and Configurations</h4>
-                        <ul>
-                        	<li>Variables Overview </li>
-                        	<li>Variable scope </li>
-                        	<li>SSIS system variables </li>
-                        	<li>Using variables in control flow </li>
-                        	<li>Using variables in data flow </li>
-                        	<li>Using variables to pass information between packages </li>
-                        	<li>Property expressions </li>
-                        	<li>Configuration Overview</li>
-                        	<li>Configuration options</li>
-                        </ul>
-                        <h4>Debugging, Error Handling and Logging</h4>
-                        <ul>
-                        	<li>SSIS debugging overview </li>
-                        	<li>Breakpoints in SSIS </li>
-                        	<li>SSIS debugging windows </li>
-                        	<li>Control Flow: The on Error event handler </li>
-                        	<li>Data Flow: Error data flow </li>
-                        	<li>Configuring Package Logging · Built-in log providers</li>
-                        </ul>
-                        <h4>Advanced Data Flow</h4>
-                        <ul>
-                        	<li>Revisiting data sources and destinations </li>
-                        	<li>The Lookup Transformation </li>
-                        	<li>Getting Fuzzy: The Fuzzy Lookup and Fuzzy Grouping Transformations </li>
-                        	<li>The Multicast Transformation </li>
-                        	<li>The Merge and Merge Join Transformations </li>
-                        	<li>The Data Mining Query Transformation </li>
-                        	<li>The Data Mining Model Training Destination</li>
-                        	<li>The Slowly Changing Dimension Transformation</li>
-                        </ul>
-                        <h4>Extending SSIS through Custom Code</h4>
-                        <ul>
-                        	<li>Introduction to SSIS scripting </li>
-                        	<li>The SSIS script editor </li>
-                        	<li>The SSIS object model </li>
-                        	<li>Script in Control flow: The Script Task </li>
-                        	<li>Script in Data flow: The Script Component</li>
-                        	<li>Introduction to SSIS component development</li>
-                        </ul>
-                        <h4>SSIS Package Deployment</h4>
-                        <ul>
-                        	<li>Configurations and deployment </li>
-                        	<li>The deployment utility </li>
-                        	<li>Deployment options </li>
-                        	<li>Deployment security</li>
-                        	<li>Executing packages &#x2013; DTExec and DTExecUI</li>
-                        </ul>
-                        <h4>SSIS Package Management</h4>
-                        <ul>
-                        	<li>The SSIS Service </li>
-                        	<li>Managing packages with DTUtil </li>
-                        	<li>Managing packages with SQL Server Management Studio</li>
-                        	<li>Scheduling packages with SQL Server Agent</li>
-                        </ul>
-                        <h4>SSIS 2012 new features</h4>
-                        <ul>
-                        	<li>CDC (Change data capture) control Flow & Dataflow task </li>
-                        	<li>SSIS Catalog Reports (Dashboard)</li>
-                        	<li>Package upgrades from legacy to SSIS 2012</li>
-                        </ul>
-                        <hr>
-                        <h3>SSRS (SQL Server Reporting Services Course Content)</h3>
-                        <h4>Introducing SQL Server Reporting Services</h4>
-                        <ul>
-                        	<li>Tour of Features </li>
-                        	<li>Reporting Services Architecture </li>
-                        	<li>Reporting Services Terminology</li>
-                        	<li>Reporting Services Editions</li>
-                        </ul>
-                        <h4>Creating Reports</h4>
-                        <ul>
-                        	<li>Deconstructing Reporting Services </li>
-                        	<li>Shared Data Sources</li>
-                        	<li>Creating Reports from Scratch</li>
-                        </ul>
-                        <h4>Calculations and Formatting</h4>
-                        <ul>
-                        	<li>Creating Expressions </li>
-                        	<li>Using the Global Collections </li>
-                        	<li>Formatting Items ·  Conditional Formatting</li>
-                        </ul>
-                        <h4>Grouping and Sorting</h4>
-                        <ul>
-                        	<li>Creating Groups </li>
-                        	<li>Calculating Totals and Percentages </li>
-                        	<li>Interactive Sorting</li>
-                        	<li>Creating Drill-Down Reports</li>
-                        </ul>
-                        <h4>Report Parameters</h4>
-                        <ul>
-                        	<li>Creating Report Parameters </li>
-                        	<li>Creating Drop-Down Parameters </li>
-                        	<li>Multi-Valued Parameters</li>
-                        	<li>Debugging Parameter Issues</li>
-                        </ul>
-                        <h4>Creating Matrix Reports and Charts</h4>
-                        <ul>
-                        	<li>Creating a Basic Matrix Report </li>
-                        	<li>Matrix Subtotals </li>
-                        	<li>Creating a Basic Chart </li>
-                        	<li>Exploring the Charting Possibilities</li>
-                        </ul>
-                        <h4>Managing Reporting Services</h4>
-                        <ul>
-                        	<li>Deploying Reports and Data Sources </li>
-                        	<li>Exporting Reports and Printing</li>
-                        	<li>Using the Web-Based Report Manager</li>
-                        </ul>
-                        <h4>Reporting Services Security</h4>
-                        <ul>
-                        	<li>Two Parts to Reporting Services Security </li>
-                        	<li>Securing Access to Reports </li>
-                        	<li>Data Source Security</li>
-                        </ul>
-                        <h4>Programming Reporting Services</h4>
-                        <ul>
-                        	<li>The Many Reporting Services APIs </li>
-                        	<li>Integrating Reporting Services into Applications using URL Access </li>
-                        	<li>Using the Report Viewer Controls</li>
-                        </ul>
-                        <h4>Advanced Reporting Services Programming</h4>
-                        <ul>
-                        	<li>Using the Reporting Services Web Service </li>
-                        	<li>Working with Custom Assemblies </li>
-                        </ul>
-                        <h4>Snapshots and Subscriptions</h4>
-                        <ul>
-                        	<li>Caching and Snapshots </li>
-                        	<li>Creating Standard Subscriptions </li>
-                        	<li>Creating Data-Driven Subscriptions</li>
-                        	<li>Managing Subscriptions</li>
-                        </ul>
-                        <h4>Ad-Hoc Reporting with Report Builder</h4>
-                        <ul>
-                        	<li>The Report Builder Architecture </li>
-                        	<li>Creating Report Model Projects </li>
-                        	<li>Running Report Builder</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <!-- Modes of Training -->
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <h1 class="text-center">Space<br>For<br>ADS</h1>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Required good command on SQL Quries, DBMS, RDMS.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+					<p>MSBI Training makes your expert in creating real world integration, Analytical and Reporting applications with MSBI.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+					<h2>SSAS (SQL Server Analysis Services Course Content)</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. What Is Microsoft BI? <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Core concept &#x2013; BI is the cube or UDM</li>
+                        			<li>Example cube as seen using Excel pivot table</li>
+                        			<li>MS BI is comprehensive &#x2013; more than Analysis Services on SQL Server</li>
+                        			<li>Demonstration of SQL Reporting Services with cube as data source</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Using SSAS in BIDS <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Understanding the development environment</li>
+                        			<li>Creating Data Sources and Data Source Views</li>
+                        			<li>Creating cubes &#x2013; using the UDM and the Cube Build Wizard</li>
+                        			<li>Refining Dimensions and Measures in BIDS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Intermediate SSAS <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>KPIs</li>
+                        			<li>Perspectives</li>
+                        			<li>Translations &#x2013; cube metadata and currency localization</li>
+                        			<li>Actions &#x2013; regular, drill-through and reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Advanced SSAS <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Using multiple fact tables</li>
+                        			<li>Modeling intermediate fact tables</li>
+                        			<li>Modeling M:M dimensions, Fact (degenerate) dimensions, Role-playing dimensions, writeback dimensions</li>
+                        			<li>Modeling changing dimensions &#x2013; Dimension Intelligence w/ Wizard</li>
+                        			<li>Using the Add Business Intelligence Wizards &#x2013; write-back, semi-additive measures, time intelligence, account intelligence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Cube Storage and Aggregation <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Storage topics &#x2013; basic aggregations, MOLAP</li>
+                        			<li>Advanced Storage Design &#x2013; MOLAP, ROLAP, HOLAP</li>
+                        			<li>Partitions &#x2013; relational and Analysis Services partitions</li>
+                        			<li>Customizing Aggregation Design &#x2013; Processing Design</li>
+                        			<li>Rapidly changing dimensions / ROLAP dimensions</li>
+                        			<li>Welcome to the Real Time &#x2013; Proactive Caching</li>
+                        			<li>Cube processing options</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. MDX <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Basic syntax</li>
+                        			<li>Using the MDX query editor in SQL Server Management Studio</li>
+                        			<li>Adding calculated members</li>
+                        			<li>Adding scripts</li>
+                        			<li>Adding named sets</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. SSAS Administration <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Best practices &#x2013; health monitoring</li>
+                        			<li>XMLA scripting (SQL Mgmt Studio)</li>
+                        			<li>Security &#x2013; roles and permissions</li>
+                        			<li>Disaster Recovery &#x2013; backup / restore</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Introduction to Reporting Clients <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Excel 2007/  Power pivot  </li>
+                        			<li>SQL RS & Report Builder</li>
+                        			<li>Sharepoint Performance Point Services 2010</li>
+                                </ul>
+                            </div>
+                        </div>
+					</div>
+					<h2>SSIS (SQL Server Integration Services Course Content)</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Introduction to SQL Server Integration Services <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Product History </li>
+                        			<li>SSIS Package Architecture Overview </li>
+                        			<li>Development and Management Tools </li>
+                        			<li>Deploying and Managing SSIS Packages </li>
+                        			<li>Source Control for SSIS Packages</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. SSIS for DBAs: Using SQL Server Management Studio <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>The Import and Export Wizard </li>
+                        			<li>Importing and Exporting Data </li>
+                        			<li>Working with Packages </li>
+                        			<li>Database Maintenance Plans </li>
+                        			<li>Creating Database Maintenance Plans using SSMS </li>
+                        			<li>Scheduling and Executing Plans · Examining Database Maintenance Plan Packages</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Business Intelligence Development Studio <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Launching BIDS </li>
+                        			<li>Project templates </li>
+                        			<li>The package designer </li>
+                        			<li>The Toolbox </li>
+                        			<li>Solution Explorer </li>
+                        			<li>The Properties window </li>
+                        			<li>The Variables window · The SSIS menu</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. Introduction to Control Flow <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Control Flow Overview</li>
+                        			<li>Precedence Constraints</li>
+                        			<li>The Execute SQL Task</li>
+                        			<li>The Bulk Insert Task</li>
+                        			<li>The File System Task</li>
+                        			<li>The FTP Task</li>
+                        			<li>The Send Mail Task</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#apps" aria-expanded="false" aria-controls="collapseNine">13. Advanced Control Flow <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="apps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Containers &#x2013; grouping and looping </li>
+                        			<li>The Web Service Task </li>
+                        			<li>The WMI tasks </li>
+                        			<li>The Analysis Services tasks </li>
+                        			<li>The Execute Process Task · The Execute Package Task</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#dc" aria-expanded="false" aria-controls="collapseNine">14. Introduction to Data Flow <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="dc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Data Flow Overview </li>
+                        			<li>Data Sources </li>
+                        			<li>Data Destinations </li>
+                        			<li>Data Transformations </li>
+                        			<li>The Copy Column Transformation </li>
+                        			<li>The Derived Column Transformation </li>
+                        			<li>The Data Conversion Transformation </li>
+                        			<li>The Conditional Split Transformation </li>
+                        			<li>The Aggregate Transformation </li>
+                        			<li>The Sort Transformation </li>
+                        			<li>Data Viewers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFifteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#df" aria-expanded="false" aria-controls="collapseNine">15. Variables and Configurations <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="df" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Variables Overview </li>
+                        			<li>Variable scope </li>
+                        			<li>SSIS system variables </li>
+                        			<li>Using variables in control flow </li>
+                        			<li>Using variables in data flow </li>
+                        			<li>Using variables to pass information between packages </li>
+                        			<li>Property expressions </li>
+                        			<li>Configuration Overview</li>
+                        			<li>Configuration options</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSixteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#cv" aria-expanded="false" aria-controls="collapseNine">16. Debugging, Error Handling and Logging <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="cv" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>SSIS debugging overview </li>
+                        			<li>Breakpoints in SSIS </li>
+                        			<li>SSIS debugging windows </li>
+                        			<li>Control Flow: The on Error event handler </li>
+                        			<li>Data Flow: Error data flow </li>
+                        			<li>Configuring Package Logging · Built-in log providers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeventeen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#giot" aria-expanded="false" aria-controls="collapseNine">17. Advanced Data Flow <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="giot" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeventeen">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Revisiting data sources and destinations </li>
+                        			<li>The Lookup Transformation </li>
+                        			<li>Getting Fuzzy: The Fuzzy Lookup and Fuzzy Grouping Transformations </li>
+                        			<li>The Multicast Transformation </li>
+                        			<li>The Merge and Merge Join Transformations </li>
+                        			<li>The Data Mining Query Transformation </li>
+                        			<li>The Data Mining Model Training Destination</li>
+                        			<li>The Slowly Changing Dimension Transformation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEighteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#trigger" aria-expanded="false" aria-controls="collapseNine">18. Extending SSIS through Custom Code <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="trigger" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEighteen">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Introduction to SSIS scripting </li>
+                        			<li>The SSIS script editor </li>
+                        			<li>The SSIS object model </li>
+                        			<li>Script in Control flow: The Script Task </li>
+                        			<li>Script in Data flow: The Script Component</li>
+                        			<li>Introduction to SSIS component development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNineteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#fm" aria-expanded="false" aria-controls="collapseNine">19. SSIS Package Deployment <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="fm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNineteen">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Configurations and deployment </li>
+                        			<li>The deployment utility </li>
+                        			<li>Deployment options </li>
+                        			<li>Deployment security</li>
+                        			<li>Executing packages &#x2013; DTExec and DTExecUI</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwenty">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ctwh" aria-expanded="false" aria-controls="collapseNine">20. SSIS Package Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ctwh" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwenty">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>The SSIS Service </li>
+                        			<li>Managing packages with DTUtil </li>
+                        			<li>Managing packages with SQL Server Management Studio</li>
+                        			<li>Scheduling packages with SQL Server Agent</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyone">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tp" aria-expanded="false" aria-controls="collapseNine">21. SSIS 2012 new features <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyone">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>CDC (Change data capture) control Flow & Dataflow task </li>
+                        			<li>SSIS Catalog Reports (Dashboard)</li>
+                        			<li>Package upgrades from legacy to SSIS 2012</li>
+                                </ul>
+                            </div>
+                        </div>
+					</div>
+					<h2>SSRS (SQL Server Reporting Services Course Content)</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentytwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nip" aria-expanded="false" aria-controls="collapseNine">22. Introducing SQL Server Reporting Services <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nip" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentytwo">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Tour of Features </li>
+                        			<li>Reporting Services Architecture </li>
+                        			<li>Reporting Services Terminology</li>
+                        			<li>Reporting Services Editions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentythree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#pdc" aria-expanded="false" aria-controls="collapseNine">23. Creating Reports <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="pdc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentythree">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Deconstructing Reporting Services </li>
+                        			<li>Shared Data Sources</li>
+                        			<li>Creating Reports from Scratch</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#cnf" aria-expanded="false" aria-controls="collapseNine">24. Calculations and Formatting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="cnf" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyFour">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Creating Expressions </li>
+                        			<li>Using the Global Collections </li>
+                        			<li>Formatting Items · Conditional Formatting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#gns" aria-expanded="false" aria-controls="collapseNine">25. Grouping and Sorting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="gns" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyFive">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Creating Groups </li>
+                        			<li>Calculating Totals and Percentages </li>
+                        			<li>Interactive Sorting</li>
+                        			<li>Creating Drill-Down Reports</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentySix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rp" aria-expanded="false" aria-controls="collapseNine">26. Report Parameters <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentySix">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Creating Report Parameters </li>
+                        			<li>Creating Drop-Down Parameters </li>
+                        			<li>Multi-Valued Parameters</li>
+                        			<li>Debugging Parameter Issues</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentySeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#cmrnc" aria-expanded="false" aria-controls="collapseNine">27. Creating Matrix Reports and Charts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="cmrnc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentySeven">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Creating a Basic Matrix Report </li>
+                        			<li>Matrix Subtotals </li>
+                        			<li>Creating a Basic Chart </li>
+                        			<li>Exploring the Charting Possibilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#mrs" aria-expanded="false" aria-controls="collapseNine">28. Managing Reporting Services <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="mrs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyEight">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Deploying Reports and Data Sources </li>
+                        			<li>Exporting Reports and Printing</li>
+                        			<li>Using the Web-Based Report Manager</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rss" aria-expanded="false" aria-controls="collapseNine">29. Reporting Services Security <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rss" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyNine">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Two Parts to Reporting Services Security </li>
+                        			<li>Securing Access to Reports </li>
+                        			<li>Data Source Security</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirty">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#prs" aria-expanded="false" aria-controls="collapseNine">30. Programming Reporting Services <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="prs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirty">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>The Many Reporting Services APIs </li>
+                        			<li>Integrating Reporting Services into Applications using URL Access </li>
+                        			<li>Using the Report Viewer Controls</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirtyOne">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#arsp" aria-expanded="false" aria-controls="collapseNine">31. Advanced Reporting Services Programming <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="arsp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirtyOne">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Using the Reporting Services Web Service </li>
+                        			<li>Working with Custom Assemblies </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirtyTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#sns" aria-expanded="false" aria-controls="collapseNine">32. Snapshots and Subscriptions <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="sns" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirtyTwo">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>Caching and Snapshots </li>
+                        			<li>Creating Standard Subscriptions </li>
+                        			<li>Creating Data-Driven Subscriptions</li>
+                        			<li>Managing Subscriptions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirtyThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ahrwrb" aria-expanded="false" aria-controls="collapseNine">33. Ad-Hoc Reporting with Report Builder <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ahrwrb" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirtyThree">
+                            <div class="panel-body">
+                                <ul>
+                        			<li>The Report Builder Architecture</li>
+                        			<li>Creating Report Model Projects</li>
+                        			<li>Running Report Builder</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-    	</div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
     </div>
 </div>

@@ -6,99 +6,277 @@
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="SAS Clinical Research Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">SAS Clinical Research Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>SAS Clinical Research Course Content</h1>
-                        <p class="course-duration"><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: --</p>
-                        <hr>
-                        <h4>Introduction to SAS and Clinical research</h4>
-                        <ul>
-                        	<li>SAS role in Clinical Research</li>
-                        	<li>Project Management in Clinical Research</li>
-                        	<li>What is Clinical Research</li>
-                        	<li>What is Protocol and role of Protocol in Clinical Research?</li>
-                        	<li>What is randomization and non randomization?</li>
-                        	<li>Which is playing main role in Clinical Research?</li>
-                        	<li>What is SOP (Standard Operating Procedure)</li>
-                        	<li>Role of DBMS team in Clinical Research</li>
-                        	<li>What is CDM (Clinical Data Management)?</li>
-                        	<li>Importance of CDM systems for data loading</li>
-                        	<li>What is SAP (Statistical Analysis Plan)?</li>
-                        	<li>Role of SAP in Clinical Research</li>
-                        	<li>SAS Work Flow in Clinical Research</li>
-                        	<li>Relation between SAS and DBMS</li>
-                        	<li>Interaction between SAS with CDMs for data access</li>
-                        	<li>Various report generation in Clinical Research</li>
-                        </ul>
-                        <h4>Programming 1:</h4>
-                        <ul>
-                        	<li> Introduction</li>
-                        	<li> Getting Started with the SAS System</li>
-                        	<li> Getting Familiar with SAS Data Sets</li>
-                        	<li> Producing List Reports</li>
-                        	<li> Enhancing Output</li>
-                        	<li> Creating SAS Data Sets</li>
-                        	<li> DATA Step Programming</li>
-                        	<li> Combining SAS Data Sets</li>
-                        	<li> Producing Summary Reports</li>
-                        	<li> Introduction to Graphics</li>
-                        </ul>
-                        <h4>Programming 2:</h4>
-                        <ul>
-                        	<li> Introduction</li>
-                        	<li> Controlling Input and Output</li>
-                        	<li> Summarizing Data</li>
-                        	<li> Reading and Writing Different Types of Data</li>
-                        	<li> Data Transformations</li>
-                        	<li> Debugging Techniques (Self Study)</li>
-                        	<li> Processing Data Iteratively</li>
-                        	<li> Combining SAS Data Sets</li>
-                        </ul>
-                        <h4>SAS SQL:</h4>
-                        <ul>
-                        	<li> Introduction</li>
-                        	<li> Basic queries</li>
-                        	<li> Combining tables</li>
-                        	<li> Creating And Modifying tables</li>
-                        	<li> Additional sql features</li>
-                        	<li> Overview of tables and column Names</li>
-                        </ul>
-                        <h4>SAS Macros:</h4>
-                        <ul>
-                        	<li> Introduction to the Macro Facility</li>
-                        	<li> SAS Programs and Macro Processing</li>
-                        	<li> Macro Variables</li>
-                        	<li> Macro Processing</li>
-                        	<li> Scopes of Macro Variables</li>
-                        	<li> Macro Expressions</li>
-                        	<li> Macro Quoting</li>
-                        	<li> Interfaces with the Macro Facility</li>
-                        	<li> Storing and Reusing Macros</li>
-                        	<li> Macro Facility Error Messages and Debugging</li>
-                        	<li> Data Cleaning Techniques</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
                     </div>
                 </div>
-    	    </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>SAS Application in Clinical Trials. ... Once the data is clean, a clinical study report should be written for submitting to regulatory authorities for product approval. Statistical Analysis Software (SAS) is a bio statistical tool used to manage and generate tables, listings and graphs for clinical study reports etc</p>
+                    <p>SAS Clinical Data Integration provides a foundation for defining analysis data sets and supporting strategic analyses, such as cross-study and advanced safety analysis, while automating repeatable clinical trial data integration tasks</p>
+                    <p>SAS Clinicals is a Statistical Analysis Software developed for business intelligence and data management. It brings automation to the data integration process. SAS Clinicals is used to organize, standardize and manage clinical research data and Meta data for data integration.</p>
+                    <p>The job of a SAS Programmer can be a challenging and rewarding position providing opportunities for technically minded people that would like to work within Drug Development. Here is an interview that CK Clinical conducted with one SAS Programmer working within the Pharmaceutical industry.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Introduction to SAS and Clinical research <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>SAS role in Clinical Research</li>
+									<li>Project Management in Clinical Research</li>
+									<li>What is Clinical Research</li>
+									<li>What is Protocol and role of Protocol in Clinical Research?</li>
+									<li>What is randomization and non randomization?</li>
+									<li>Which is playing main role in Clinical Research?</li>
+									<li>What is SOP (Standard Operating Procedure)</li>
+									<li>Role of DBMS team in Clinical Research</li>
+									<li>What is CDM (Clinical Data Management)?</li>
+									<li>Importance of CDM systems for data loading</li>
+									<li>What is SAP (Statistical Analysis Plan)?</li>
+									<li>Role of SAP in Clinical Research</li>
+									<li>SAS Work Flow in Clinical Research</li>
+									<li>Relation between SAS and DBMS</li>
+									<li>Interaction between SAS with CDMs for data access</li>
+									<li>Various report generation in Clinical Research</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Programming 1 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li> Introduction</li>
+									<li> Getting Started with the SAS System</li>
+									<li> Getting Familiar with SAS Data Sets</li>
+									<li> Producing List Reports</li>
+									<li> Enhancing Output</li>
+									<li> Creating SAS Data Sets</li>
+									<li> DATA Step Programming</li>
+									<li> Combining SAS Data Sets</li>
+									<li> Producing Summary Reports</li>
+									<li> Introduction to Graphics</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Programming 2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li> Introduction</li>
+									<li> Controlling Input and Output</li>
+									<li> Summarizing Data</li>
+									<li> Reading and Writing Different Types of Data</li>
+									<li> Data Transformations</li>
+									<li> Debugging Techniques (Self Study)</li>
+									<li> Processing Data Iteratively</li>
+									<li> Combining SAS Data Sets</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. SAS SQL <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li> Introduction</li>
+									<li> Basic queries</li>
+									<li> Combining tables</li>
+									<li> Creating And Modifying tables</li>
+									<li> Additional sql features</li>
+									<li> Overview of tables and column Names</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. SAS Macros <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li> Introduction to the Macro Facility</li>
+									<li> SAS Programs and Macro Processing</li>
+									<li> Macro Variables</li>
+									<li> Macro Processing</li>
+									<li> Scopes of Macro Variables</li>
+									<li> Macro Expressions</li>
+									<li> Macro Quoting</li>
+									<li> Interfaces with the Macro Facility</li>
+									<li> Storing and Reusing Macros</li>
+									<li> Macro Facility Error Messages and Debugging</li>
+									<li> Data Cleaning Techniques</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Charan</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

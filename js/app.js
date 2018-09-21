@@ -43,7 +43,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                           {
                     title: "Search Results - Pro-elearning",
                     templateUrl: "views/search-results.html",
-                    controller: "searchCoursesController"
+                    controller: "searchCoursesController",
+                    label: "Search Results"
                 })
                     .when("/course-schedules",
                         {
@@ -61,7 +62,7 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     keywords: "",
                     templateUrl: "views/about.html",
                     controller: "",
-                    label: "About"
+                    label: "About Us"
                 })
                     .when("/information-technology",
                           {
@@ -96,7 +97,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll Today and Get Hands-on Real-time training on Python by industrial Experts. Pro-elearning offers you one of the Best Python Training in Hyderabad.",
                     keywords: "Python Training institute in Hyderabad, Python online Training institute in Hyderabad, Python Classroom Training institute in Hyderabad, Python course in Hyderabad, Python Training in Hyderabad, Python online Training in Hyderabad, Python classroom Training in Hyderabad",
                     templateUrl: "views/python.html",
-                    controller: ""
+                    controller: "",
+                    label: "Python"
                 })
                     .when("/information-technology/embedded-systems",
                           {
@@ -132,7 +134,7 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     keywords: "Build and Deployment Engineer Training institute in Hyderabad, Build and Deployment Engineer online Training institute in Hyderabad, Build and Deployment Engineer Classroom Training institute in Hyderabad, Build and Deployment Engineer course in Hyderabad, Build and Deployment Engineer Training in Hyderabad, Build and Deployment Engineer online Training in Hyderabad, Build and Deployment Engineer classroom Training in Hyderabad",
                     templateUrl: "views/build-deploy-eng.html",
                     controller: "",
-                    label: "Build and Deployment Engineer"
+                    label: "Build & Deployment Engineer"
                 })
                     .when("/information-technology/build-release-engineer",
                           {
@@ -194,7 +196,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Master front-end web development with our Angular 4 Course in Hyderabad & learn Typescript, Bootstrap etc. Enrol in Angular 4 Training.",
                     keywords: "Angular 4 Training institute in Hyderabad, Angular 4 online Training institute in Hyderabad, Angular 4 Classroom Training institute in Hyderabad, Angular 4 course in Hyderabad, Angular 4 Training in Hyderabad, Angular 4 online Training in Hyderabad, Angular 4 classroom Training in Hyderabad",
                     templateUrl: "views/angular4.html",
-                    controller: ""
+                    controller: "",
+                    label: "Angular 4"
                 })
                     .when("/web-development/php",
                           {
@@ -202,7 +205,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enrol today with Pro-elearning for PHP with MySQL training in Hyderabad and get trained by experts. Best PHP course in Hyderabad.",
                     keywords: "PHP Training institute in Hyderabad, PHP online Training institute in Hyderabad, PHP Classroom Training institute in Hyderabad, PHP course in Hyderabad, PHP Training in Hyderabad, PHP online Training in Hyderabad, PHP classroom Training in Hyderabad",
                     templateUrl: "views/php.html",
-                    controller: ""
+                    controller: "",
+                    label: "PHP"
                 })
                     .when("/web-development/mysql",
                           {
@@ -210,7 +214,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers the Best MySQL DBA training in Hyderabad with real-time projects and expert trainers. ✓Job Assistance ✓Live Projects and Material ✓Certification ✓Free Demo ☎ +91-8340905336",
                     keywords: "MySQL DBA institutes in Hyderabad, MySQL course in Hyderabad, MySQL DBA course in Hyderabad, Institutes for MySQL DBA in Hyderabad, MySQL DBA online training in Hyderabad",
                     templateUrl: "views/mysql.html",
-                    controller: ""
+                    controller: "",
+                    label: "MySQL"
                 })
                     .when("/rpa",
                           {
@@ -218,7 +223,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for the best Robotic Process Automation (RPA) Training in Hyderabad with expert trainers & job oriented coaching in Blue Prism. ?100% job assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Blue Prism training in Hyderabad, Robotic Process automation training in Hyderabad, RPA training in Hyderabad, Robotics training in Hyderabad",
                     templateUrl: "views/rpa.html",
-                    controller: ""
+                    controller: "",
+                    label: "RPA"
                 })
                     .when("/rpa/blueprism",
                           {
@@ -226,7 +232,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get expert level certified RPA Blueprism Training with Real-Time scenarios And Live Projects Through Instructor-led Sessions In Hyderabad, India. Enroll Today, Join Course And Avail Discounts!",
                     keywords: "Blueprism training in hyderabad, blueprism rpa training, rpa blueprism training in hyderabad, rpa blueprism training, blueprism training in hyderabad, best blueprism training in hyderabad, top blueprism training in hyderabad, rpa blue prism certification, blue prism rpa certification in hyderabad, expert level blue prism training, blue prism online training, blue prism online certification, blue prism online course, blue prism training institute in ameerpet,blue prism training institute in Hyderabad,blue prism training institute in India",
                     templateUrl: "views/blueprism.html",
-                    controller: ""
+                    controller: "",
+                    label: "Blue Prism"
                 })
                     .when("/rpa/artificial-intelligence",
                           {
@@ -234,7 +241,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enrich your career by learning in the Best Artificial Intelligence training institute in Hyderabad. ✓Job Assistance ✓Live Projects and Material ✓Certification ✓Free Demo ☎ +91-8340905336",
                     keywords: "AI Training in Hyderabad, Artificial Intelligence training Institutes in Hyderabad, Artificial Course in Hyderabad, Artificial Intelligence Online Training in Hyderabad, Best Institute for Artificial Intelligence in Hyderabad, Artificial Intelligence institutes in Hyderabad",
                     templateUrl: "views/artificial-intelligence.html",
-                    controller: ""
+                    controller: "",
+                    label: "Artificial Intelligence"
                 })
                     .when("/rpa/automation-anywhere",
                           {
@@ -242,7 +250,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides best RPA Automation Anywhere Training in Hyderabad with expert trainers. ✓Job Assistance ✓Live Projects and Material ✓Certification ✓Free Demo ☎ +91-8340905336",
                     keywords: "RPA Training in Hyderabad, Robotic Process Automation Training in Hyderabad, AA training in Hyderabad, Automation Anywhere Online Training in Hyderabad, RPA Blue Prism Training in Hyderabad, Automation Anywhere training institutes in Hyderabad, Best Institutes for Automation Anywhere in Hyderabad, Best Institutes for AA in Hyderabad, Best Institutes for RPA in Hyderabad",
                     templateUrl: "views/automation-anywhere.html",
-                    controller: ""
+                    controller: "",
+                    label: "Automation Anywhere"
                 })
                     .when("/rpa/iot",
                           {
@@ -250,7 +259,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll with the Best IoT Training Institute in Hyderabad and get trained with industry experts. ✓Job Assistance ✓Live Projects and Material ✓Certification ✓Free Demo ☎ +91-8340905336",
                     keywords: "IoT certification in Hyderabad, IoT courses in Hyderabad, IoT Online training in Hyderabad, IoT institutes in Hyderabad, Best Institute for IoT training in Hyderabad, IoT training Institutes in Hyderabad, Internet of Things training in Hyderabad, Internet of Things training Institutes  in Hyderabad, Best Internet of Things institutes in Hyderabad, Internet of Things institutes in Hyderabad",
                     templateUrl: "views/iot.html",
-                    controller: ""
+                    controller: "",
+                    label: "IoT"
                 })
                     .when("/rpa/machine-learning",
                           {
@@ -258,7 +268,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for Machine Learning training in Hyderabad and get trained with expert trainers. ✓Job Assistance ✓Live Projects and Material ✓Certification ✓Free Demo ☎ +91-8340905336",
                     keywords: "Machine Learning training, Machine Learning Course, Machine Learning Course in Hyderabad, Machine Learning Institutes in Hyderabad, Machine Learning Online Training, Machine Learning Online Training in Hyderabad",
                     templateUrl: "views/machine-learning.html",
-                    controller: ""
+                    controller: "",
+                    label: "Machine Learning"
                 })
                     .when("/rpa/uipath",
                           {
@@ -266,23 +277,26 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers the Best RPA UiPath Training in Hyderabad with real-time training and advanced concepts. ✓Job Assistance ✓Live Projects and Material ✓Certification ✓Free Demo ☎ +91-8340905336",
                     keywords: "UiPath training, UiPath Online Training, RPA UiPath Online Training in Hyderabad, RPA UiPath  course in Hyderabad, UiPath institutes in Hyderabad, RPA UiPath institutes in Hyderabad",
                     templateUrl: "views/uipath.html",
-                    controller: ""
+                    controller: "",
+                    label: "UiPath"
                 })
                     .when("/cloud-technologies",
                           {
-                    title: "Cloud Computing Training in Hyderabad | Cloud Technologies | Pro-elearning",
-                    description: "Learn Cloud Computing in Hyderabad @ Pro-elearning with expert trainers providing real-time coaching. ✓Salesforce ✓Azure ✓AWS ✓ServiceNow. 100% job assistance ✓FREE DEMO! +91-8340905336.",
-                    keywords: "Cloud Computing courses in Hyderabad, Cloud Computing institutes in Hyderabad, Salesforce Developer Training institute in Hyderabad, Salesforce Administrator Training institute in Hyderabad, Microsoft Windows Azure Training institute in Hyderabad, Amazon Web Services Training institute in Hyderabad, Service Now Training institute in Hyderabad, OpenStack Training institute in Hyderabad",
+                    title: "Cloud Technologies Training in Hyderabad | Cloud Technologies | Pro-elearning",
+                    description: "Learn Cloud Technologies in Hyderabad @ Pro-elearning with expert trainers providing real-time coaching. ✓Salesforce ✓Azure ✓AWS ✓ServiceNow. 100% job assistance ✓FREE DEMO! +91-8340905336.",
+                    keywords: "Cloud Technologies courses in Hyderabad, Cloud Computing institutes in Hyderabad, Salesforce Developer Training institute in Hyderabad, Salesforce Administrator Training institute in Hyderabad, Microsoft Windows Azure Training institute in Hyderabad, Amazon Web Services Training institute in Hyderabad, Service Now Training institute in Hyderabad, OpenStack Training institute in Hyderabad",
                     templateUrl: "views/cloud-technologies.html",
-                    controller: ""
+                    controller: "",
+                    label: "Cloud Technologies"
                 })
                     .when("/cloud-technologies/salesforce-developer",
                           {
-                    title: "Sales force Developer Training in Hyderabad | Pro-elearning",
+                    title: "Salesforce Developer Training in Hyderabad | Pro-elearning",
                     description: "Salesforce Developer training in Hyderabad provided by Pro-elearning experts and real-time working professional years of Experience in various projects.",
                     keywords: "Salesforce Developer Training institute in Hyderabad, Salesforce Developer online Training institute in Hyderabad, Salesforce Developer Classroom Training institute in Hyderabad, Salesforce Developer course in Hyderabad, Salesforce Developer Training in Hyderabad, Salesforce Developer online Training in Hyderabad, Salesforce Developer classroom Training in Hyderabad",
                     templateUrl: "views/salesforce-developer.html",
-                    controller: ""
+                    controller: "",
+                    label: "Salesforce Developer"
                 })
                     .when("/cloud-technologies/salesforce-administrator",
                           {
@@ -290,7 +304,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Join our salesforce Administrator training program in Hyderabad to get the best salesforce training through online or offline classes. Enroll Today!",
                     keywords: "Salesforce Administrator Training institute in Hyderabad, Salesforce Administrator online Training institute in Hyderabad, Salesforce Administrator Classroom Training institute in Hyderabad, Salesforce Administrator course in Hyderabad, Salesforce Administrator Training in Hyderabad, Salesforce Administrator online Training in Hyderabad, Salesforce Administrator classroom Training in Hyderabad",
                     templateUrl: "views/salesforce-administrator.html",
-                    controller: ""
+                    controller: "",
+                    label: "Salesforce Administrator"
                 })
                     .when("/cloud-technologies/azure",
                           {
@@ -298,7 +313,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning Offers Microsoft Windows Azure online and Classroom Training in Hyderabad with Economical cost. Microsoft Azure Training will develop your skills that are required for your job and career.",
                     keywords: "Microsoft Windows Azure Training institute in Hyderabad, Microsoft Windows Azure online Training institute in Hyderabad, Microsoft Windows Azure Classroom Training institute in Hyderabad, Microsoft Windows Azure course in Hyderabad, Microsoft Windows Azure Training in Hyderabad, Microsoft Windows Azure online Training in Hyderabad, Microsoft Windows Azure classroom Training in Hyderabad",
                     templateUrl: "views/azure.html",
-                    controller: ""
+                    controller: "",
+                    label: "Azure"
                 })
                     .when("/cloud-technologies/aws",
                           {
@@ -306,7 +322,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides Best Amazon Web Services (AWS) Training in Hyderabad to desired aspirants with Real Time Scenarios as per current industry. Enroll Today!",
                     keywords: "Amazon Web Services Training institute in Hyderabad, Amazon Web Services online Training institute in Hyderabad, Amazon Web Services Classroom Training institute in Hyderabad, Amazon Web Services course in Hyderabad, Amazon Web Services Training in Hyderabad, Amazon Web Services online Training in Hyderabad, Amazon Web Services classroom Training in Hyderabad",
                     templateUrl: "views/aws.html",
-                    controller: ""
+                    controller: "",
+                    label: "AWS"
                 })
                     .when("/cloud-technologies/servicenow",
                           {
@@ -314,7 +331,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Experience real-time implementation of ServiceNow platform by exploring Content and Configuration Management, User Licenses, cloud computing and exporting the data from ServiceNow. Enroll Today!",
                     keywords: "Service Now Training institute in Hyderabad, Service Now online Training institute in Hyderabad, Service Now Classroom Training institute in Hyderabad, Service Now course in Hyderabad, Service Now Training in Hyderabad, Service Now online Training in Hyderabad, Service Now classroom Training in Hyderabad",
                     templateUrl: "views/servicenow.html",
-                    controller: ""
+                    controller: "",
+                    label: "Service Now"
                 })
                     .when("/cloud-technologies/openstack",
                           {
@@ -322,7 +340,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Register for OpenStack training in Hyderabad, led by experts of Pro-elearning. OpenStack course in Hyderabad from expert professionals in IT industry.",
                     keywords: "OpenStack Training institute in Hyderabad, OpenStack online Training institute in Hyderabad, OpenStack Classroom Training institute in Hyderabad, OpenStack course in Hyderabad, OpenStack Training in Hyderabad, OpenStack online Training in Hyderabad, OpenStack classroom Training in Hyderabad",
                     templateUrl: "views/openstack.html",
-                    controller: ""
+                    controller: "",
+                    label: "OpenStack"
                 })
                     .when("/mobile-apps",
                           {
@@ -330,7 +349,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for Mobile Application Development training in Hyderabad with expert trainers. ?IOS ? Android. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Mobile Application Institutes in Hyderabad, Android application development training, Android training in Hyderabad, IOS training institutes in Hyderabad, Android coaching in Hyderabad, IOS Coaching in Hyderabad, IOS Coaching centers in Hyderabad",
                     templateUrl: "views/mobile-applications.html",
-                    controller: ""
+                    controller: "",
+                    label: "Mobile Application Development"
                 })
                     .when("/mobile-apps/android",
                           {
@@ -338,7 +358,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is one of the leading Android Training institute in Hyderabad. Having trainers with excellence and commitment, we provide high quality training. Enroll Today!",
                     keywords: "Android application development training, best android training, android online training, android development training, android training institute, Android OS & apps Development training institutes Hyderabad, android app development training in Hyderabad, best android training in Hyderabad, best Android training centre in Hyderabad, Android certification training in Hyderabad",
                     templateUrl: "views/android.html",
-                    controller: ""
+                    controller: "",
+                    label: "Android"
                 })
                     .when("/mobile-apps/ios",
                           {
@@ -346,7 +367,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides excellent Classroom/Online training for Iphone IOS development classes. Iphone Apps Development Training by Real-time Experts. Join Today.",
                     keywords: "Iphone online training, IOS Online training in Hyderabad, online Iphone training in India, best Iphone development centre in Hyderabad, Iphone training institute in Hyderabad, iOS development training, iOS development training in Hyderabad, iOS classes, android and Ios training in Hyderabad, best iOS training institutes in Hyderabad, iOS application development training in Hyderabad, Iphone application development training in Hyderabad, iOS training online, iOS training India",
                     templateUrl: "views/ios.html",
-                    controller: ""
+                    controller: "",
+                    label: "IOS"
                 })
                     .when("/network-security",
                           {
@@ -354,7 +376,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Learn the best Network and Security Training in Hyderabad @ Pro-elearning with our certified experts. ?CCNA ?CNS (Cyber Network Security). ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Cyber Security training in Hyderabad, Cyber Security Course in Hyderabad, CCNA course in Hyderabad, Cyber security training institutes in Hyderabad, CCNA  course with placement in Hyderabad, CNS training in Hyderabad, Cyber Network Security training in Hyderabad",
                     templateUrl: "views/network-security.html",
-                    controller: ""
+                    controller: "",
+                    label: "Network & Security"
                 })
                     .when("/network-security/ccna",
                           {
@@ -362,7 +385,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best CCNA Training institute in Hyderabad. Enrol now to get trained in networking courses and get placement assistance.",
                     keywords: "CCNA Training in Hyderabad, CCNA Course in Hyderabad, online ccna training, best ccna training in Hyderabad, best CCNA training centre in Hyderabad, ccna networking training Hyderabad, Cisco CCNA training and placement in Hyderabad",
                     templateUrl: "views/ccna.html",
-                    controller: ""
+                    controller: "",
+                    label: "CCNA"
                 })
                     .when("/network-security/cyber-network-security",
                           {
@@ -370,15 +394,17 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is one of the leading IT training institutes, offers Cyber Security training course in Hyderabad, India to help IT professionals get certified and step forward in their career. Enroll Now!",
                     keywords: "Cyber Network Security Training institute in Hyderabad, Cyber Security online Training institute in Hyderabad, Cyber Network Security Classroom Training institute in Hyderabad, Cyber Security course in Hyderabad, Cyber Security Training in Hyderabad, Cyber Network Security online Training in Hyderabad, Cyber Security classroom Training in Hyderabad",
                     templateUrl: "views/cyber-network-security.html",
-                    controller: ""
+                    controller: "",
+                    label: "Cyber Network Security"
                 })
                     .when("/application-support",
                           {
                     title: "Application Support Training in Hyderabad | Application Support Courses | Pro-elearning",
-                    description: "Enroll for Application Support Training in Hyderabad with certified trainers and 100% job assistance.  ?DevOps ?FREE DEMO! ? +91-8340905336.",
+                    description: "Enroll for Application Support Training in Hyderabad with certified trainers and 100% job assistance. ?DevOps ?FREE DEMO! ? +91-8340905336.",
                     keywords: "DevOps training institutes in Hyderabad, DevOps Online training in Hyderabad, Application support courses in Hydrabad, best DevOps training in Hyderabad, DevOps institutes in Hyderabad, DevOps best institute in Hyderabad",
                     templateUrl: "views/application-support.html",
-                    controller: ""
+                    controller: "",
+                    label: "Application Support"
                 })
                     .when("/application-support/devops",
                           {
@@ -386,7 +412,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides DevOps online training in Hyderabad. It is trusted institute for DevOps Online and Class Room training with Real-Time trainers.",
                     keywords: "DevOps Training institute in Hyderabad, DevOps online Training institute in Hyderabad, DevOps Classroom Training institute in Hyderabad, DevOps course in Hyderabad, DevOps Training in Hyderabad, DevOps online Training in Hyderabad, DevOps classroom Training in Hyderabad",
                     templateUrl: "views/devops.html",
-                    controller: ""
+                    controller: "",
+                    label: "DevOps"
                 })
                     .when("/big-data",
                           {
@@ -394,7 +421,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Best Data Management courses online training in Hyderabad is provided @ Pro-elearning. Courses offered: ✓Hadoop ✓Hadoop Admin ✓HP Vertica ✓Talend ✓Cloudera ✓FREE DEMO! ✓+91-8340905336.",
                     keywords: "Data Management training in Hyderabad, Hadoop Online training in Hyderabad, Hadoop training institutes in Hyderabad, HP vertica Training institute in Hyderabad, HP vertica online Training institute in Hyderabad, talend training in Hyderabad, Cloudera Administrator Training institute in Hyderabad, Talend etl tool training in Hyderabad, Talend training in Madhapur",
                     templateUrl: "views/big-data.html",
-                    controller: ""
+                    controller: "",
+                    label: "Big Data"
                 })
                     .when("/big-data/hadoop",
                           {
@@ -402,7 +430,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Hadoop Course Pro-elearning is a brand and providing quality Online, Classroom, Corporate, Weekends and Fast track training on demand to the students in worldwide on Hadoop Training in Hyderabad.",
                     keywords: "Best Hadoop Training institutes in Hyderabad, Big Data Hadoop training in Hyderabad, Hadoop institutes in Hyderabad, Hadoop Training, Hadoop Course, Hadoop training in Madhapur, Hadoop developer training, Hadoop live project in Hyderabad, Hadoop developer training in Hyderabad",
                     templateUrl: "views/hadoop.html",
-                    controller: ""
+                    controller: "",
+                    label: "Hadoop"
                 })
                     .when("/big-data/kafka",
                           {
@@ -415,19 +444,21 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                 })
                     .when("/big-data/scala",
                           {
-                    title: "Apache Spark Training in Hyderabad | Big Data Hadoop Training | Pro-elearning",
-                    description: "Job oriented Apache Spark training in Hyderabad with 100% placement assistance and from industry experts. Enroll now for ✓FREE DEMO ☎ +91-8340905336.",
+                    title: "Best Scala Training in Hyderabad | Big Data Hadoop Training | Pro-elearning",
+                    description: "Learn the best Scala and Spark Training in Hyderabad @ Pro-elearning with expert trainers and 100% job assistance. Enroll now for ✓FREE DEMO ☎ +91-8340905336.",
                     keywords: "Apache Spark online training, Spark and Scala training in Hyderabad, Spark Institute Hyderabad, Hadoop training in Hyderabad, Big data training in Hyderabad, best training institute for spark in Hyderabad, Institute for Spark  in Hyderabad, Spark  institutes in Hyderabad",
                     templateUrl: "views/scala.html",
-                    controller: ""
+                    controller: "",
+                    label: "Scala"
                 })
-                    .when("/big-data/spark",
-                          {
-                    title: "Best Scala Training in Hyderabad | Big Data Hadoop Training | Pro-elearning	",
-                    description: "Learn the best Scala and Spark Training in Hyderabad @ Pro-elearning with expert trainers and 100% job assistance. Enroll now for ✓FREE DEMO ☎ +91-8340905336.",
+                .when("/big-data/spark",
+                {
+                    title: "Apache Spark Training in Hyderabad | Big Data Hadoop Training | Pro-elearning",
+                    description: "Job oriented Apache Spark training in Hyderabad with 100% placement assistance and from industry experts. Enroll now for ✓FREE DEMO ☎ +91-8340905336.",
                     keywords: "Spark and Scala training in Hyderabad, Hadoop training in Hyderabad, Big data training in Hyderabad, Scala Institute Hyderabad, best training institute for Scala in Hyderabad, Institute for Scala  in Hyderabad",
                     templateUrl: "views/spark.html",
-                    controller: ""
+                    controller: "",
+                    label: "Spark"
                 })
                     .when("/big-data/hadoop-administrator",
                           {
@@ -435,7 +466,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll in Hadoop Administration training course in Hyderabad to master configurations of Hadoop with an instructor-led training.",
                     keywords: "Best Hadoop Admin Training institutes in Hyderabad, Big Data Hadoop Admin training in Hyderabad, Hadoop Admin institutes in Hyderabad, Hadoop Training, Hadoop Course, Hadoop training in Madhapur, Hadoop Admin developer training, Hadoop Admin developer training in Hyderabad",
                     templateUrl: "views/hadoop-administrator.html",
-                    controller: ""
+                    controller: "",
+                    label: "Hadoop Admin"
                 })
                     .when("/big-data/hp-vertica",
                           {
@@ -443,7 +475,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll today with Pro-elearning for Hp vertica training in Hyderabad and get trained by experts. Best Hp vertica course in Hyderabad.",
                     keywords: "HP vertica training institute in Hyderabad, Hp vertica online Training institute in Hyderabad, Hp vertica Classroom Training institute in Hyderabad, Hp vertica course in Hyderabad, Hp vertica Training in Hyderabad, Hp vertica online Training in Hyderabad, Hp vertica classroom Training in Hyderabad",
                     templateUrl: "views/hp-vertica.html",
-                    controller: ""
+                    controller: "",
+                    label: "HP Vertica"
                 })
                     .when("/big-data/talend",
                           {
@@ -451,7 +484,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provide Talend Online and classroom Training with best practices, tuning tips, enterprise edition training, certification training, code review topics for leads and managers.",
                     keywords: "talend training, talend online training, talend training in Hyderabad, talend online training in Hyderabad, talend etl tool training, talend etl tool training in Hyderabad, talend training in Madhapur, talend etl tool online training, talend data integration training in Hyderabad, best online training centre in Hyderabad",
                     templateUrl: "views/talend.html",
-                    controller: ""
+                    controller: "",
+                    label: "Talend"
                 })
                     .when("/big-data/cloudera",
                           {
@@ -459,7 +493,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll in Hadoop Administration training course in Hyderabad to master configurations of Hadoop with an instructor-led training. Get Hadoop Admin certified now!",
                     keywords: "Cloudera Administrator Training institute in Hyderabad, Cloudera Administrator online Training institute in Hyderabad, Cloudera Administrator Classroom Training institute in Hyderabad, Cloudera Administrator course in Hyderabad, Cloudera Administrator Training in Hyderabad, Cloudera Administrator online Training in Hyderabad, Cloudera Administrator classroom Training in Hyderabad",
                     templateUrl: "views/cloudera.html",
-                    controller: ""
+                    controller: "",
+                    label: "Cloudera"
                 })
                     .when("/business-intelligence",
                           {
@@ -467,7 +502,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers best Business Intelligence courses in Hyderabad such as MSBI, OBIEE, and Power BI with expert faculty. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Business Intelligence course in Hyderabad, Business Intelligence training institutes in Hyderabad, MSBI Institutes in Hyderabad, MSBI Online training Hyderabad, MSBI Training institutes in Hyderabad, OBIEE online training in Hyderabad, OBIEE 11g training in Hyderabad, OBIEE course in Hyderabad, Power BI training institutes in Hyderabad, Power BI institutes in Hyderabad",
                     templateUrl: "views/business-intelligence.html",
-                    controller: ""
+                    controller: "",
+                    label: "Business Intelligence"
                 })
                     .when("/business-intelligence/msbi",
                           {
@@ -475,7 +511,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning, being one of the Best MSBI Training institutes in Hyderabad provides a first-rate training that can serve the needful. Enroll Today!",
                     keywords: "Business intelligence training institute in Hyderabad, Business intelligence training institutes in Hyderabad, Business intelligence training in Hyderabad, Business intelligence institutes in Hyderabad, Business intelligence training centres in Hyderabad, best Business intelligence training centres in Hyderabad, best Business intelligence training institutes in Hyderabad, Business intelligence courses in Hyderabad",
                     templateUrl: "views/msbi.html",
-                    controller: ""
+                    controller: "",
+                    label: "MSBI"
                 })
                     .when("/business-intelligence/obiee",
                           {
@@ -483,7 +520,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides real-time and placement focused OBIEE training in Hyderabad. Our oracle business intelligence (OBIEE) course includes basic to advanced level.",
                     keywords: "obiee training in Hyderabad, oracle business intelligence (OBIEE) training institutes Hyderabad, best OBIEE training centre in Hyderabad, Oracle BI certification training Hyderabad, obiee training and placement in Hyderabad",
                     templateUrl: "views/obiee.html",
-                    controller: ""
+                    controller: "",
+                    label: "OBIEE"
                 })
                     .when("/business-intelligence/power-bi",
                           {
@@ -491,7 +529,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for Power BI course in Hyderabad with job oriented training and expert trainers in the industry. ?100% job assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Power BI institutes in Hyderabad, Power BI Course in Hyderabad, Power BI training institutes in Hyderabad, Power BI Training in Hyderabad, Best Power BI training institutes in Hyderabad, Power BI Online training in Hyderabad",
                     templateUrl: "views/power-bi.html",
-                    controller: ""
+                    controller: "",
+                    label: "Power BI"
                 })
                     .when("/erp",
                           {
@@ -499,7 +538,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best Oracle and SAP ERP training in institute in Hyderabad with industry expert coaching. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle HRMS training in Hyderabad, Oracle HRMS functional training in Hyderabad, PeopleSoft HRMS training institutes in Hyderabad, Best salesforce CRM training institutes in Hyderabad, Salesforce CRM institutes in Hyderabad, Oracle Apps training institutes in Hyderabad, SAP  BI training in Hyderabad, Best SAP BI training institutes in Hyderabad, SAS BI training institutes in Hyderabad",
                     templateUrl: "views/erp.html",
-                    controller: ""
+                    controller: "",
+                    label: "ERP"
                 })
                     .when("/erp/people-soft-hrms",
                           {
@@ -507,7 +547,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best PeopleSoft HRMS Functional Training institute in Hyderabad and providing IT End-to-End training with real-time hands-on exposure through the IT Experts.",
                     keywords: "People Soft HRMS training institutes in Hyderabad, best HRMS functional training in Hyderabad, HRMS training institutes in Hyderabad, PeopleSoft HRMS institutes in Hyderabad, People Soft HRMS online training Hyderabad",
                     templateUrl: "views/people-soft-hrms.html",
-                    controller: ""
+                    controller: "",
+                    label: "PeopleSoft HRMS"
                 })
                     .when("/erp/salesforce-crm",
                           {
@@ -515,7 +556,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers Best Salesforce CRM Training in Hyderabad with certified trainers providing both Online and Class room training. Call us to attend a FREE DEMO! ? +91-8340905336.",
                     keywords: "Salesforce CRM Training in Hyderabad, Salesforce CRM online training, CRM training in Hyderabad, SAP CRM training in Hyderabad, Best institute for sap CRM in Hyderabad, SAP CRM technical training in Hyderabad, Salesforce CRM  institutes in Hyderabad, Salesforce CRM training institutes in Hyderabad, Best salesforce CRM training institutes in Hyderabad, SAP CRM online training in Hyderabad",
                     templateUrl: "views/salesforce-crm.html",
-                    controller: ""
+                    controller: "",
+                    label: "Salesforce CRM"
                 })
                     .when("/erp/oracle-apps",
                           {
@@ -523,15 +565,17 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning, One of the Best Institutes for Oracle Apps in Hyderabad providing Real-time training with trainers having 8+ years of Experience. Attend FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle Apps training in Hyderabad, Oracle Apps institutes in Hyderabad, Oracle Apps real time training in Hyderabad, Oracle Apps training institutes in Hyderabad, Oracle Apps online training in Hyderabad, Oracle apps best institute in Hyderabad, Best Oracle apps training in Hyderabad, Oracle Apps training placement institutes Hyderabad",
                     templateUrl: "views/oracle-apps.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle Apps"
                 })
                     .when("/erp/sap-bi",
                           {
-                    title: "SAP  BI training in Hyderabad | Best SAP BI Institute | Pro-elearning",
+                    title: "SAP BI training in Hyderabad | Best SAP BI Institute | Pro-elearning",
                     description: "Best SAP BI training in Hyderabad with expert trainers and 100% job assistance. Offers classroom and online training as well. ?FREE DEMO! ? +91-8340905336.",
-                    keywords: "SAP  BI training in Hyderabad, Best SAP BI training institutes in Hyderabad, SAP BI best institutes in Hyderabad, best SAP BI institutes in Hyderabad, SAP BI best training institute Hyderabad, SAP BI coaching Hyderabad, SAP BI training institutes in Hyderabad, best training institute for SAP BI in Hyderabad, best institute for SAP BI in Hyderabad",
+                    keywords: "SAP BI training in Hyderabad, Best SAP BI training institutes in Hyderabad, SAP BI best institutes in Hyderabad, best SAP BI institutes in Hyderabad, SAP BI best training institute Hyderabad, SAP BI coaching Hyderabad, SAP BI training institutes in Hyderabad, best training institute for SAP BI in Hyderabad, best institute for SAP BI in Hyderabad",
                     templateUrl: "views/sap-bi.html",
-                    controller: ""
+                    controller: "",
+                    label: "SAP BI"
                 })
                     .when("/erp/sap-bo",
                           {
@@ -539,7 +583,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get trained in Hyderabad’s Best SAP BO training Institute and excel your career. Pro-elearning provides real-time coaching for SAP Business Objects. ?FREE DEMO ?100% job assistance. ? +91-8340905336.",
                     keywords: "SAP BO training in Hyderabad, SAP BO online training in Hyderabad, best SAP BO institutes in Hyderabad, SAP BO training institutes in Hyderabad, best SAP BO training institute in Hyderabad, SAP BO institutes in Hyderabad, best institute for SAP BO in Hyderabad, SAP BO best institutes in Hyderabad, SAP BI BO training in Hyderabad, SAP BI BO institutes Hyderabad",
                     templateUrl: "views/sap-bo.html",
-                    controller: ""
+                    controller: "",
+                    label: "SAP BO"
                 })
                     .when("/erp/sap-crm",
                           {
@@ -547,7 +592,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides best SAP CRM functional/Technical Training in Hyderabad. Enroll now to get expert coaching with 100% job assistance. ?FREE DEMO ? +91-8340905336.",
                     keywords: "SAP CRM Training in Hyderabad, SAP CRM technical institutes Hyderabad, SAP CRM coaching centers in Hyderabad, SAP CRM functional training institutes in Hyderabad, SAP CRM training institutes in Hyderabad, SAP CRM technical training institutes in Hyderabad, best SAP CRM training institutes in Hyderabad",
                     templateUrl: "views/sap-crm.html",
-                    controller: ""
+                    controller: "",
+                    label: "SAP CRM"
                 })
                     .when("/erp/sap-fico",
                           {
@@ -555,7 +601,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the Best Institute for SAP FICO in Hyderabad with expert industry professionals. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Best Institute for SAP FICO in Hyderabad, SAP FICO course in Hyderabad, SAP FICO online training in Hyderabad, best SAP FICO training institutes in Hyderabad, SAP FICO institutes in Hyderabad with placement, SAP FICO institutes in Hyderabad, SAP FICO training institutes in Hyderabad, SAP FICO coaching centers in Hyderabad",
                     templateUrl: "views/sap-fico.html",
-                    controller: ""
+                    controller: "",
+                    label: "SAP FICO"
                 })
                     .when("/erp/sap-hana",
                           {
@@ -563,7 +610,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the Best Institute for SAP HANA in Hyderabad providing outstanding training with certified trainers and 100% job assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "SAP HANA institutes in Hyderabad, HANA training in Hyderabad, SAP HANA training and placement in Hyderabad, SAP HANA training institutes in Hyderabad, SAP HANA course in Hyderabad, best SAP HANA training institutes in Hyderabad, SAP HANA coaching centers in Hyderabad, SAP HANA training institute Hyderabad",
                     templateUrl: "views/sap-hana.html",
-                    controller: ""
+                    controller: "",
+                    label: "SAP HANA"
                 })
                     .when("/erp/sap-mm",
                           {
@@ -571,7 +619,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get the best SAP MM training in Hyderabad with Certified trainers of 8+ years of experience and assured placement support. ?FREE DEMO ? +91-8340905336.",
                     keywords: "SAP MM institutes in Hyderabad, SAP MM online training in Hyderabad, SAP MM coaching centers in Hyderabad, best SAP MM training institutes in Hyderabad ,SAP MM training institutes in Hyderabad, best institute for SAP MM in Hyderabad, SAP MM best institute in Hyderabad",
                     templateUrl: "views/sap-mm.html",
-                    controller: ""
+                    controller: "",
+                    label: "SAP MM"
                 })
                     .when("/erp/sas",
                           {
@@ -579,7 +628,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning will assist you to master SAS Course with expert trainers in the industry. It’s the best SAS training institute in Hyderabad with 100% job assistance and real-time projects. ?FREE DEMO ? +91-8340905336.",
                     keywords: "SAS institute in Hyderabad, SAS course in Hyderabad, institutes offering SAS course in Hyderabad, SAS best institute in Hyderabad, SAS training courses in Hyderabad, SAS certification institutes in Hyderabad, SAS training and placement in Hyderabad, SAS institutes in hyd",
                     templateUrl: "views/sas.html",
-                    controller: ""
+                    controller: "",
+                    label: "SAS"
                 })
                     .when("/erp/sas-clinical-research",
                           {
@@ -587,7 +637,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the leading institute for Clinical SAS Training in Hyderabad. We provide real-time training with 100% placement support. Enrol now to attend FREE DEMO ? +91-8340905336.",
                     keywords: "clinical SAS training in Hyderabad, clinical SAS training institutes in Hyderabad, clinical SAS training Hyderabad, best clinical SAS training institutes in Hyderabad, clinical SAS training and placement in Hyderabad, clinical SAS institutes in Hyderabad, clinical SAS course in Hyderabad",
                     templateUrl: "views/sas-clinical-research.html",
-                    controller: ""
+                    controller: "",
+                    label: "Clinical SAS"
                 })
                     .when("/erp/sas-bi",
                           {
@@ -595,7 +646,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning, best institute for SAS BI training in Hyderabad provides both online & classroom training with 100% job assistance. Enrol now to attend FREE DEMO! ? +91-8340905336.",
                     keywords: "BI institutes in Hyderabad, SAS BI online training Hyderabad, SAS BI training institutes in Hyderabad",
                     templateUrl: "views/sas-bi.html",
-                    controller: ""
+                    controller: "",
+                    label: "SAS BI"
                 })
                     .when("/etl",
                           {
@@ -603,15 +655,17 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for the best ETL tools training in Hyderabad @ Pro-elearning with real-time coaching and 100% job assistance. ?DataStage ?Informatica ?FREE DEMO! ? +91-8340905336.",
                     keywords: "ETL tools training in Hyderabad, DataStage online training in Hyderabad, Informatica training institutes in Hyderabad, Informatica MDM training in Hyderabad, Informatica MDM training institutes in Hyderabad",
                     templateUrl: "views/etl.html",
-                    controller: ""
+                    controller: "",
+                    label: "ETL"
                 })
                     .when("/etl/datastage",
                           {
-                    title: "Datastage Training in Hyderabad | Datastage Course | Pro-elearning",
-                    description: "Pro-elearning provides best Datastage Training in Hyderabad with expert trainers in the industry. We provide 100% job assistance. Enrol now to attend FREE DEMO! ? +91-8340905336.",
-                    keywords: "Datastage online training in Hyderabad, Datastage training institutes in Hyderabad, Datastage course in Hyderabad, best Datastage training institute in Hyderabad, best training institute for Datastage in Hyderabad, best institute for Datastage in Hyderabad",
+                    title: "DataStage Training in Hyderabad | DataStage Course | Pro-elearning",
+                    description: "Pro-elearning provides best DataStage Training in Hyderabad with expert trainers in the industry. We provide 100% job assistance. Enrol now to attend FREE DEMO! ? +91-8340905336.",
+                    keywords: "DataStage online training in Hyderabad, DataStage training institutes in Hyderabad, DataStage course in Hyderabad, best DataStage training institute in Hyderabad, best training institute for DataStage in Hyderabad, best institute for DataStage in Hyderabad",
                     templateUrl: "views/datastage.html",
-                    controller: ""
+                    controller: "",
+                    label: "DataStage"
                 })
                     .when("/etl/informatica",
                           {
@@ -619,7 +673,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning, a specialized institute for Informatica Training in Hyderabad provides real-time placement focused coaching. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Informatica online training in Hyderabad, Informatica training institutes in Hyderabad, best institute for Informatica in Hyderabad, Informatica training and placement institutes in Hyderabad, best Informatica training institute in Hyderabad, Informatica coaching centers in Hyderabad, best training centre for Informatica in Hyderabad, best Informatica training in Hyderabad",
                     templateUrl: "views/informatica.html",
-                    controller: ""
+                    controller: "",
+                    label: "Informatica"
                 })
                     .when("/etl/informatica-mdm",
                           {
@@ -627,7 +682,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get the best Informatica MDM training in Hyderabad @ Pro-elearning with expert trainers both online and in classroom. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Informatica MDM training in Hyderabad, Informatica MDM training institutes in Hyderabad, Informatica MDM classroom training in Hyderabad, Informatica MDM online training in Hyderabad",
                     templateUrl: "views/informatica-mdm.html",
-                    controller: ""
+                    controller: "",
+                    label: "Informatica MDM"
                 })
                     .when("/business-management",
                           {
@@ -635,7 +691,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for the best Business management courses in Hyderabad with expert trainers and 100% job assistance. ?JBPM ?Pega 6.2 & 7 ?Business Analyst ?FREE DEMO! ? +91-8340905336.",
                     keywords: "JBPM training institute in Hyderabad, Pega training in Hyderabad, Pega training institutes in Hyderabad, Business analyst course in Hyderabad, Business analyst online training in Hyderabad, Business analyst training and placement in Hyderabad, BA-BFSI Training in Hyderabad, best institute for BA-BFSI in Hyderabad, Business Analyst healthcare Hyderabad, BA Healthcare Training Institute in Hyderabad, Institute for BA healthcare in Hyderabad, BA FINANCE Training in Hyderabad, Business Analyst Finance training in Hyderabad, QuickBooks Training in Hyderabad, QuickBooks Training institutes in Hyderabad, Technical Manager Training in Hyderabad, best institute for Technical Manager Training in Hyderabad",
                     templateUrl: "views/business-mgmt.html",
-                    controller: ""
+                    controller: "",
+                    label: "Business Management"
                 })
                     .when("/business-management/jbpm",
                           {
@@ -643,7 +700,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning, top rated institution for JBPM Training in Hyderabad provides Both Online and classroom with expert trainers. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "JBPM training institute in Hyderabad, best institute for JBPM in Hyderabad, JBPM Coaching centre in Hyderabad, JBPM course in Hyderabad",
                     templateUrl: "views/jbpm.html",
-                    controller: ""
+                    controller: "",
+                    label: "JBPM"
                 })
                     .when("/business-management/pega-6.2",
                           {
@@ -651,7 +709,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best institute for PEGA 6.2 version training in Hyderabad with real-time coaching and industry expert trainers. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Pega training in Hyderabad, Pega training institutes in Hyderabad, pega institutes in Hyderabad, Pega coaching in Hyderabad, best Pega training institute in Hyderabad, best Pega training in Hyderabad, Pega real time training in Hyderabad, best institute for Pega in Hyderabad",
                     templateUrl: "views/pega-6.2.html",
-                    controller: ""
+                    controller: "",
+                    label: "PEGA 6.2"
                 })
                     .when("/business-management/pega-7",
                           {
@@ -659,7 +718,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers best PEGA prpc 7 version training in Hyderabad with most experienced trainers in the industry. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Pega training in Hyderabad, Pega training institutes in Hyderabad, pega institutes in Hyderabad, Pega coaching in Hyderabad, best Pega training institute in Hyderabad, best Pega training in Hyderabad, Pega real time training in Hyderabad, best institute for Pega in Hyderabad",
                     templateUrl: "views/pega-7.html",
-                    controller: ""
+                    controller: "",
+                    label: "PEGA 7"
                 })
                     .when("/business-management/business-analyst",
                           {
@@ -667,7 +727,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the leading Business Analyst Training Institute in Hyderabad with top expert trainers in the industry. We provide 100% Placement support. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Business analyst course in Hyderabad, Business analyst online training in Hyderabad, Business analyst training and placement in Hyderabad, Business analyst course in Hyderabad with placement, best Business analyst training in Hyderabad, Business analyst institute in Hyderabad, Business analyst training institutes in Hyderabad",
                     templateUrl: "views/business-analyst.html",
-                    controller: ""
+                    controller: "",
+                    label: "Business Analyst"
                 })
                     .when("/business-management/ba-bfsi",
                           {
@@ -675,7 +736,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides the best BA-BFSI Training in Hyderabad both online and classroom with industry expert trainers. Provides 100% job support. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "BA-BFSI Training in Hyderabad, best institute for BA-BFSI in Hyderabad, training institute for BA-BFSI in Hyderabad",
                     templateUrl: "views/ba-bfsi.html",
-                    controller: ""
+                    controller: "",
+                    label: "BA-BFSI"
                 })
                     .when("/business-management/ba-health-care",
                           {
@@ -683,15 +745,17 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get Business Analyst with Healthcare training in Hyderabad@ Pro-elearning with real-time coaching by industry expert trainers. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Business Analyst healthcare Hyderabad, BA Healthcare Training Institute in Hyderabad, Institute for BA healthcare in Hyderabad, best institute for BA Healthcare on Hyderabad",
                     templateUrl: "views/ba-health-care.html",
-                    controller: ""
+                    controller: "",
+                    label: "BA Healthcare"
                 })
                     .when("/business-management/ba-finance",
                           {
-                    title: "BA-FINANCE Training in Hyderabad | Business Analyst Finance | Pro-elearning",
+                    title: "BA-Finance Training in Hyderabad | Business Analyst Finance | Pro-elearning",
                     description: "Pro-elearning is the best institute to provide Business Analyst with finance domain training in Hyderabad with expert trainers and 100% job assistance. ?FREE DEMO! ? +91-8340905336.",
-                    keywords: "BA FINANCE Training in Hyderabad, Business Analyst Finance training in Hyderabad, Institute for Business Analyst Finance in Hyerabad",
+                    keywords: "BA Finance Training in Hyderabad, Business Analyst Finance training in Hyderabad, Institute for Business Analyst Finance in Hyerabad",
                     templateUrl: "views/ba-finance.html",
-                    controller: ""
+                    controller: "",
+                    label: "BA Finance"
                 })
                     .when("/business-management/quickbooks",
                           {
@@ -699,7 +763,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Learn QuickBooks Training in Hyderabad by expert trainers in the industry with 100% job assistance at Pro-elearning. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "QuickBooks Training in Hyderabad, QuickBooks Training institutes in Hyderabad, QuickBooks coaching Hyderabad, QuickBooks institute Hyderabad, QuickBooks training centers in Hyderabad",
                     templateUrl: "views/quickbooks.html",
-                    controller: ""
+                    controller: "",
+                    label: "QuickBooks"
                 })
                     .when("/business-management/technical-manager",
                           {
@@ -707,7 +772,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best institute for Technical Manager Training in Hyderabad. We provide real-time coaching by industry expert trainers. ?100% Job Assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Technical Manager Training in Hyderabad, best institute for Technical Manager Training in Hyderabad, Technical Manager institutes in Hyderabad, Technical Manager coaching centres in Hyderabad",
                     templateUrl: "views/technical-manager.html",
-                    controller: ""
+                    controller: "",
+                    label: "Technical Manager"
                 })
                     .when("/analytical-tools",
                           {
@@ -715,7 +781,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best Analytics Training Institute in Hyderabad with 100% job assistance and real-time coaching. ?Tableau ?Remedy Ticketing Tool ?Qlikview ?TIBCO Spotfire. FREE DEMO! ? +91-8340905336.",
                     keywords: "Tableau online training in Hyderabad, Tableau course in Hyderabad, Tableau institutes in Hyderabad, Remedy Ticketing Tool Training in Hyderabad, BMC Remedy Training in Hyderabad, best BMC Remedy Training in Hyderabad, Qlikview training in Hyderabad, Qlikview online training in Hyderabad, Qlikview training institutes in Hyderabad, Tibco training in Hyderabad, Tibco Spotfire training institutes in Hyderabad, Tibco online training in Hyderabad",
                     templateUrl: "views/analytical-tools.html",
-                    controller: ""
+                    controller: "",
+                    label: "Analytical Tools"
                 })
                     .when("/analytical-tools/tableau",
                           {
@@ -723,7 +790,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Learn advanced Tableau Online & Classroom course by 8+ years experienced expert trainers with 100% job assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Tableau online training in Hyderabad, Tableau course in Hyderabad, Tableau institutes in Hyderabad, Tableau training institutes in Hyderabad, best institute for Tableau in Hyderabad, Tableau training and placement in Hyderabad, Tableau coaching in Hyderabad, best Tableau training institute in Hyderabad, Tableau coaching centers in Hyderabad",
                     templateUrl: "views/tableau.html",
-                    controller: ""
+                    controller: "",
+                    label: "Tableau"
                 })
                     .when("/analytical-tools/remedy-ticketing-tool",
                           {
@@ -731,7 +799,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get intense Remedy Ticketing Tool Training in Hyderabad at Pro-elearning institute with industry expert trainers. ?100% job assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Remedy Ticketing Tool Training in Hyderabad, BMC Remedy Training in Hyderabad, best BMC Remedy Training in Hyderabad, Institute for BMC Remedy in Hyderabad, Remedy training in Hyderabad",
                     templateUrl: "views/remedy-ticketing-tool.html",
-                    controller: ""
+                    controller: "",
+                    label: "Remedy Ticketing Tool"
                 })
                     .when("/analytical-tools/qlikview",
                           {
@@ -739,7 +808,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best Qlikview Training Institute in Hyderabad with 100% placement record and job oriented training by expert trainers. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Qlikview training in Hyderabad, Qlikview online training in Hyderabad, Qlikview training institutes in Hyderabad, Qlikview institutes in Hyderabad, Qlikview training and placement in Hyderabad, best Qlikview training institutes in Hyderabad, Qlikview coaching in Hyderabad, best Qlikview training in Hyderabad",
                     templateUrl: "views/qlikview.html",
-                    controller: ""
+                    controller: "",
+                    label: "Qlikview"
                 })
                     .when("/analytical-tools/tibco-spotfire",
                           {
@@ -747,7 +817,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers best Tibco Spotfire Training in Hyderabad with real-time and placement oriented training by certified experts. ?100% job assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Tibco training in Hyderabad, Tibco Spotfire training institutes in Hyderabad, Tibco online training in Hyderabad, Tibco training institutes in Hyderabad, Tibco institutes in Hyderabad, Tibco coaching in Hyderabad",
                     templateUrl: "views/tibco-spotfire.html",
-                    controller: ""
+                    controller: "",
+                    label: "Tibco Spotfire"
                 })
                     .when("/software-testing",
                           {
@@ -755,7 +826,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers the best Software testing course in Hyderabad with certified trainers and 100% job assistance. ?Perfecto ?Load Runner ?Selenium ?ETL Testing ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Testing tools training in Hyderabad, testing institutes in Hyderabad, Perfecto Training in Hyderabad, Mobile apps testing in Hyderabad, mobile apps testing institute in Hyderabad, best institute for LoadRunner in Hyderabad, best LoadRunner training in Hyderabad, selenium online training in Hyderabad, selenium training institutes in Hyderabad, ETL testing institutes in Hyderabad, ETL testing training institutes in Hyderabad, Penetration testing training in Hyderabad, Penetration testing Hyderabad",
                     templateUrl: "views/software-testing.html",
-                    controller: ""
+                    controller: "",
+                    label: "Software Testing"
                 })
                     .when("/software-testing/perfecto",
                           {
@@ -763,7 +835,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best institute for Perfecto (Mobile Application Testing) Training in Hyderabad. Get trained with expert trainers. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Perfecto Training in Hyderabad, Mobile Application testing in Hyderabad, Mobile apps testing in Hyderabad, mobile apps testing institute in Hyderabad, Mobile application testing institute in Hyderabad",
                     templateUrl: "views/perfecto.html",
-                    controller: ""
+                    controller: "",
+                    label: "Perfecto"
                 })
                     .when("/software-testing/loadrunner",
                           {
@@ -771,7 +844,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Best LoadRunner training institute in Hyderabad with 100% placement record and real-time expert training. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "best institute for LoadRunner in Hyderabad, best LoadRunner training in Hyderabad, LoadRunner online training in Hyderabad, LoadRunner training institutes in Hyderabad",
                     templateUrl: "views/loadrunner.html",
-                    controller: ""
+                    controller: "",
+                    label: "Load Runner"
                 })
                     .when("/software-testing/selenium",
                           {
@@ -779,7 +853,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll today at Pro-elearning for the best Selenium Training in Hyderabad with placement oriented coaching and 10% job assistance. Call us to attend a FREE DEMO! ? +91-8340905336.",
                     keywords: "best institute for selenium in Hyderabad, selenium online training in Hyderabad, selenium training institutes in Hyderabad, best selenium training in Hyderabad, selenium course in Hyderabad, selenium institutes in Hyderabad, selenium coaching in Hyderabad",
                     templateUrl: "views/selenium.html",
-                    controller: ""
+                    controller: "",
+                    label: "Selenium"
                 })
                     .when("/software-testing/etl-testing",
                           {
@@ -787,7 +862,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Join the best ETL Testing Training institute in Hyderabad with expert trainers of 8+ years experience and placement oriented coaching. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "ETL testing institutes in Hyderabad, ETL testing training institutes in Hyderabad, ETL testing course in Hyderabad, ETL testing Hyderabad, best institute ETL testing Hyderabad, best ETL testing institutes in Hyderabad, best ETL testing training institutes in Hyderabad, best institute for ETL testing in Hyderabad, ETL testing online training in Hyderabad",
                     templateUrl: "views/etl-testing.html",
-                    controller: ""
+                    controller: "",
+                    label: "ETL Testing"
                 })
                     .when("/software-testing/web-app-penetration-testing",
                           {
@@ -795,7 +871,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for the best Web Application Testing Training in Hyderabad with expert trainers in Web Application Security field. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Penetration testing training in Hyderabad, Penetration testing Hyderabad, Penetration testing training institutes in Hyderabad, Penetration testing institutes in Hyderabad",
                     templateUrl: "views/web-app-pen-testing.html",
-                    controller: ""
+                    controller: "",
+                    label: "Web Application Penetration Testing"
                 })
                     .when("/hyperion",
                           {
@@ -803,7 +880,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for Oracle Hyperion training in Hyderabad with expert trainers and 100% job assistance. ?HPCM ?EPM ?ESSBASE ?Financial Management. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Hyperion training institutes in Hyderabad, Hyperion HPCM course in Hyderabad, Oracle Hyperion HPCM training in Hyderabad, Hyperion epm training in Hyderabad, Hyperion essbase training institute in Hyderabad, Oracle Hyperion Essbase institutes in Hyderabad, Oracle Hyperion training in Hyderabad, HFM training in Hyderabad, HFM institutes in Hyderabad, HFM training institutes in Hyderabad",
                     templateUrl: "views/hyperion.html",
-                    controller: ""
+                    controller: "",
+                    label: "Hyperion"
                 })
                     .when("/hyperion/hpcm",
                           {
@@ -811,7 +889,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Get the best Oracle Hyperion Profitability and Cost Management (HPCM) training in Hyderabad @ Pro-elearning with industry experts. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Hyperion HPCM course in Hyderabad, Oracle Hyperion HPCM training in Hyderabad, Hyperion hpcm training institute in Hyderabad, Hyperion essbase training in Hyderabad, Hyperion institutes in Hyderabad, Hyperion training institutes in Hyderabad",
                     templateUrl: "views/hpcm.html",
-                    controller: ""
+                    controller: "",
+                    label: "Hyperion HPCM"
                 })
                     .when("/hyperion/hyperion-epm",
                           {
@@ -819,7 +898,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers the best Oracle Hyperion Enterprise Performance Management (EPM) training in Hyderabad with real-time coaching and expert trainers. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Hyperion training in Hyderabad, best institute for Hyperion in Hyderabad, Hyperion epm training in Hyderabad, Oracle Hyperion training in Hyderabad, Oracle Hyperion course in Hyderabad",
                     templateUrl: "views/hyperion-epm.html",
-                    controller: ""
+                    controller: "",
+                    label: "Hyperion EPM"
                 })
                     .when("/hyperion/hyperion-essbase",
                           {
@@ -827,7 +907,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers finest Oracle Hyperion Essbase training in Hyderabad with certified industry experts. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Hyperion essbase training institute in Hyderabad, Oracle Hyperion Essbase institutes in Hyderabad, Oracle Hyperion training in Hyderabad, Hyperion institutes in Hyderabad, Hyperion Course in Hyderabad, essbase training institute in Hyderabad",
                     templateUrl: "views/hyperion-essbase.html",
-                    controller: ""
+                    controller: "",
+                    label: "Hyperion Essbase"
                 })
                     .when("/hyperion/hyperion-financial-management",
                           {
@@ -835,7 +916,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for Oracle HFM training in Hyderabad and get trained with expert trainers. We Provide 100% Job Assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "HFM training in Hyderabad, HFM institutes in Hyderabad, HFM training institutes in Hyderabad, Hyperion HFM training in Hyderabad, HFM course in Hyderabad",
                     templateUrl: "views/hyperion-financial-management.html",
-                    controller: ""
+                    controller: "",
+                    label: "Hyperion Financial Management"
                 })
                     .when("/ibm",
                           {
@@ -843,7 +925,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for IBM Certification Courses in Hyderabad with real-time coaching and 100% job assistance. ?WebFocus ?Websphere admin ?Websphere Message Broker. FREE DEMO! ? +91-8340905336.",
                     keywords: "Webfocus course in Hyderabad, Institutes for IBM Webfocus training in Hyderabad, best websphere training institute in Hyderabad, IBM websphere admin institutes in Hyderabad, websphere admin training institutes in Hyderabad, Message broker training Hyderabad, IBM message broker training in Hyderabad",
                     templateUrl: "views/ibm.html",
-                    controller: ""
+                    controller: "",
+                    label: "IBM"
                 })
                     .when("/ibm/webfocus",
                           {
@@ -851,7 +934,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides the best IBM WebFocus training in Hyderabad with hands-on practical classes with certified professionals. ?Placement assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Webfocus course in Hyderabad, Institutes for IBM Webfocus training in Hyderabad, best institute for webfocus in Hyderabad, IBM Webfocus training institute in Hyderabad",
                     templateUrl: "views/webfocus.html",
-                    controller: ""
+                    controller: "",
+                    label: "Webfocus"
                 })
                     .when("/ibm/websphere-admin",
                           {
@@ -859,7 +943,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning is the best institute for advanced  IBM Websphere admin training in Hyderabad providing quality and hands-on experience classes. ?100% job support ?FREE DEMO! ? +91-8340905336.",
                     keywords: "best  websphere training institute in Hyderabad,  IBM websphere admin institutes in Hyderabad,  WebSphere course in Hyderabad, websphere admin training institutes in Hyderabad, IBM websphere institutes in Hyderabad",
                     templateUrl: "views/websphere-admin.html",
-                    controller: ""
+                    controller: "",
+                    label: "WebSphere Admin"
                 })
                     .when("/ibm/websphere-message-broker",
                           {
@@ -867,7 +952,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for the best IBM WebSphere message broker training in Hyderabad with expert coaching in Integration Bus version 9.0 and get hands-on experience on real time projects. ?100% job support ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Message broker training Hyderabad, IBM message broker training in Hyderabad, IBM Integration Bus training in Hyderabad",
                     templateUrl: "views/wmb.html",
-                    controller: ""
+                    controller: "",
+                    label: "WebSphere Message Broker"
                 })
                     .when("/oracle",
                           {
@@ -875,7 +961,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides best oracle certification training in Hyderabad with 100% job assistance. ?DBA ?ADF ?Developer ?Weblogic ?SOA ?Goldengate ?EBS ?12c. FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle ADF online training in Hyderabad, Best institute for Oracle ADF in Hyderabad, Oracle DBA online training in Hyderabad, Oracle apps DBA training in Hyderabad, Oracle DBA course in Hyderabad, best Oracle DBA training institutes in Hyderabad, best institute for Oracle DBA in Hyderabad, best institute for Oracle developer in Hyderabad, Oracle EBS r12 training in Hyderabad, Oracle EBS r12 institutes in Hyderabad, Oracle SOA training in Hyderabad, Oracle SOA 11g institutes in Hyderabad, Oracle 12c training in Hyderabad, ODI 12c institutes in Hyderabad, Oracle Data Integrator training in Hyderabad, best institute for WebLogic administration in Hyderabad, WebLogic training institutes in Hyderabad, WebLogic administration training in Hyderabad, WebLogic online training in Hyderabad",
                     templateUrl: "views/oracle.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle"
                 })
                     .when("/oracle/oracle-adf",
                           {
@@ -883,7 +970,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning provides classroom and online Oracle ADF (Application Development Framework)  training in Hyderabad with real-time projects by certified trainers. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle ADF online training in Hyderabad, Best institute for Oracle ADF in Hyderabad, Oracle ADF training institutes in Hyderabad, Oracle ADF institutes in Hyderabad",
                     templateUrl: "views/oracle-adf.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle ADF"
                 })
                     .when("/oracle/oracle-dba",
                           {
@@ -891,7 +979,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Our certified experts provide the best Oracle DBA(9i,10g,11g) training in Hyderabad. Enroll now for hands-on practical classes and real-time coaching. ?100% job assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle DBA online training in Hyderabad, Oracle apps DBA training in Hyderabad, Oracle DBA course in Hyderabad, best Oracle DBA training institutes in Hyderabad, best institute for Oracle DBA in Hyderabad, Oracle DBA institutes in Hyderabad, Oracle DBA training institutes in Hyderabad, the best institute for Oracle DBA in Hyderabad",
                     templateUrl: "views/oracle-dba.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle DBA"
                 })
                     .when("/oracle/oracle-developer",
                           {
@@ -899,7 +988,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for Oracle Developer training in Hyderabad @ Pro-elearning. We provide job oriented coaching by industry experts with ?100% job assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle Course in Hyderabad, best institute for Oracle developer in Hyderabad, Oracle Developer training institute in Hyderabad, Oracle Developer institutes in Hyderabad",
                     templateUrl: "views/oracle-developer.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle Developer"
                 })
                     .when("/oracle/oracle-ebs",
                           {
@@ -907,7 +997,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning offers the best Oracle EBS (E-Business suite) R12.1 Training in Hyderabad with expert trainers. We provide ?100% placement assistance. ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle EBS r12 training in Hyderabad, Oracle EBS online training in Hyderabad, Oracle EBS r12 institutes in Hyderabad, best Oracle EBS training institutes in Hyderabad, best institute for Oracle EBS in Hyderabad, Oracle EBS R12 course in Hyderabad",
                     templateUrl: "views/oracle-ebs.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle EBS"
                 })
                     .when("/oracle/oracle-golden-gate",
                           {
@@ -915,7 +1006,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Enroll for Oracle GoldenGate training in Hyderabad and get trained with experts having 8+ years of experience providing real-time coaching. ?100% placement assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle GoldenGate training in Hyderabad, best Oracle goldengate institute in Hyderabad, GoldenGate course in Hyderabad, GoldenGate institutes in Hyderabad, Oracle GoldenGate training institutes in Hyderabad",
                     templateUrl: "views/oracle-golden-gate.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle GoldenGate"
                 })
                     .when("/oracle/oracle-soa",
                           {
@@ -923,7 +1015,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Best Oracle SOA suite 11g Training in Hyderabad is provided by Pro-elearning expert trainers with placement oriented approach. Enroll today to get trained to excel. ?100% placement assistance ?FREE DEMO! ? +91-8340905336.",
                     keywords: "Oracle SOA training in Hyderabad, Oracle SOA 11g institutes in Hyderabad, best institute for SOA training in Hyderabad, Oracle SOA course in Hyderabad, Oracle SOA 11g coaching centres in Hyderabad, oracle soa suite 11g online training in Hyderabad",
                     templateUrl: "views/oracle-soa.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle SOA"
                 })
                     .when("/oracle/weblogic",
                           {
@@ -931,7 +1024,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Best Real-time WebLogic 11g/12c training in Hyderabad @ Pro-elearning with 100% job assistance & best trainers in the industry. Enroll for a FREE DEMO now! ? +91-8340905336.",
                     keywords: "best institute for WebLogic administration in Hyderabad, WebLogic training institutes in Hyderabad, WebLogic administration training in Hyderabad, WebLogic online training in Hyderabad, WebLogic institutes in Hyderabad, WebLogic course in Hyderabad, WebLogic admin training in Hyderabad, WebLogic server training institutes in Hyderabad, WebLogic server administration training in Hyderabad, WebLogic administration training institutes in Hyderabad, WebLogic administration course Hyderabad",
                     templateUrl: "views/weblogic.html",
-                    controller: ""
+                    controller: "",
+                    label: "WebLogic"
                 })
                     .when("/oracle/siebel-open-ui",
                           {
@@ -939,7 +1033,8 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Best institute for Siebel Open UI training in Hyderabad with expert trainers & 100% Job Assistance. Book for a FREE DEMO now! ? +91-8340905336.",
                     keywords: "Siebel Open UI Online Training in Hyderabad, Best Siebel Open UI Training in Hyderabad, Siebel Open UI training in Hyderabad, Siebel Open UI institutes in Hyderabad, Siebel Open UI training institutes in Hyderabad",
                     templateUrl: "views/siebel-open-ui.html",
-                    controller: ""
+                    controller: "",
+                    label: "Siebel Open UI"
                 })
                     .when("/oracle/odi-12c",
                           {
@@ -947,25 +1042,29 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     description: "Pro-elearning, the best institute for Oracle Data Integrator(ODI) 11g/12c course Training in Hyderabad providing 100% Job assistance. Book for a FREE DEMO now! ? +91-8340905336.",
                     keywords: "Oracle 12c training in Hyderabad, ODI 12c institutes in Hyderabad, Oracle Data Integrator training in Hyderabad, Oracle Data Integrator institutes in Hyderabad, Oracle 12c training institutes in Hyderabad",
                     templateUrl: "views/odi-12c.html",
-                    controller: ""
+                    controller: "",
+                    label: "Oracle 12c"
                 })
                     .when("/registration",
                           {
                     title: "Registration - Pro-elearning",
                     templateUrl: "views/registration.html",
-                    controller: ""
+                    controller: "",
+                    label: "Registration"
                 })
                     .when("/contact",
                           {
                     title: "Contact Us - Pro-elearning",
                     templateUrl: "views/contact.html",
-                    controller: "contactController"
+                    controller: "contactController",
+                    label: "Contact Us"
                 })
                     .when("/sitemap",
                           {
                     title: "Sitemap - Pro-elearning",
                     templateUrl: "views/sitemap.html",
-                    controller: ""
+                    controller: "",
+                    label: "Sitemap"
                 })
                     /* Default Path To Load */
                     .otherwise(

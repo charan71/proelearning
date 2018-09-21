@@ -1,80 +1,253 @@
 <div class="container-fluid">
     <div class="row">
         <div class="row-gap-big">
-            <img class="img-responsive" src="./images/parallax-images/qlikview.jpg" alt="QlikView-Training-Pro-eLearning">
+            <img class="img-responsive" src="./images/parallax-images/qlikview.jpg" alt="Qlikview-Training-Pro-eLearning">
         </div>
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="QlikView Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">QlikView Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>QlikView Course Content</h1>
-                        <hr>
-                        <p>It is one of the Data Ware house Tool. It is mostly used in BI. The QlikView Business Discovery platform delivers true self-service business intelligence that empowers business users and drives innovative decision making.</p>
-                        <ul>
-                        	<li>Layout and best application design practices. What should you think about when designing an application?</li>
-                        	<li>How to use QlikView Desktop.</li>
-                        	<li>What is a sheet, sheet object, list box and a table box?</li>
-                        	<li>How do we create the QlikView objects mentioned above, how do we use them, including examples such as sorting data, entering data, exporting data.</li>
-                        	<li>You will learn about charts objects, how to create them and the many functionalities, how to edit the format and layout.</li>
-                        	<li>How to load data into QlikView.</li>
-                        </ul>
-                        <h4>Overview of QlikView Desktop.</h4>
-                        <ul>
-                        	<li>Introduction to multi dimensional objects such as pivot tables, straight tables with multiple expressions.</li>
-                        	<li>Advanced usage of the many QlikView charts and objects, such as tree views in list boxes and mini charts.</li>
-                        	<li>Advanced calculations using set analysis and AGGR function.</li>
-                        	<li>Gauges, buttons, actions - what are they and how do you develop them.</li>
-                        	<li>Introduction to some other useful objects such as slider/calendar objects.</li>
-                        	<li>QlikView reports and how do you create and manage them.</li>
-                        	<li>Business case workshop.</li>
-                        </ul>
-                        <h4>The QlikView environment.</h4>
-                        <ul>
-                        	<li>Overview of QlikView development methodology, SAFE.</li>
-                        	<li>How to deploy QlikView, standalone, Server and Publisher.</li>
-                        	<li>Introduction to data and scripting, relational databases and other data structures.</li>
-                        	<li>Connecting to ODBC and also OLEDB data sources.</li>
-                        	<li>Introduction to the underlying scripting language and best practices in how to use this, including the use of time functions and creating variables.</li>
-                        	<li>Overview of data preparation required before starting to develop a QlikView application.</li>
-                        	<li>Basic data model overview and understanding of QlikView table viewer.</li>
-                        	<li>How to resolve abnormalities in the data structure, such as synthetic keys.</li>
-                        	<li>QlikView QVD file and how to create them and use them.</li>
-                        </ul>
-                        <h4>Learn about the debugger and troubleshooting.</h4>
-                        <ul>
-                        	<li>How to add text data and how to generate data in the QlikView script.</li>
-                        	<li>Mapping tables and cleaning up a data structure.</li>
-                        	<li>How to load budget data.</li>
-                        	<li>Script language and how to aggregate data, joining tables, concatenation, functions, interval match and other scripting features.</li>
-                        	<li>Analyze data over time using Set analysis and Aggr Function.</li>
-                        	<li>Data model optimization and performance tuning and how to create incremental loads.</li>
-                        	<li>Overview of QlikView security and various access settings and levels.</li>
-                        	<li>Advanced database connectivity.</li>
-                        	<li>To finish it off a case study - each student gets to develop a QlikView application, which includes: loading in data, resolving data issues and building the UI with the help of business KPI.</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic understanding of TSQL and data modeling concepts are required. With that when you start learning Qlikview and the Qlikview script, you will find it easy learning them and understanding them.</p>
                     </div>
                 </div>
-    	    </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>QlikView is a Business Intelligence (BI) data discovery product for creating guided analytics applications and dashboards tailor-made for business challenges. Thesoftware enables user to uncover data insights and relationships across various sources with QlikView's Associative Data Indexing Engine.</p>
+                    <p>QlikView and Qlik Sense are two different products with difference purposes.QlikView is for guided analytics; Qlik Sense is for self-service visualizations. Since they have different purposes, one is not intended to replace the other. Qlik intends to continue to invest in both platforms</p>
+                    <p>Certificate in Data Science Industry Overview. Qlik Technologies Inc is a provider of user-driven Business Intelligence (BI) solutions that enables its customers to make informed business decisions. It is engaged in the development, commercialization and implementation of software products and related services segment.</p>
+                    <p>QlikView is a business discovery platform that provides self-service BI for all business users in organizations. With QlikView you can analyze data and use your data discoveries to support decision making. QlikView lets you ask and answer your own questions and follow your own paths to insight.</p>
+                    <p>QlikView is the most flexible Business Intelligence platform for turning data into knowledge. More than 24,000 organisations worldwide have enabled their users to easily consolidate, search, and visually analyse all their data for unprecedented business insight using QlikView's simplicity.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p></p>
+                                <ul>
+									<li>Layout and best application design practices. What should you think about when designing an application?</li>
+									<li>How to use QlikView Desktop.</li>
+									<li>What is a sheet, sheet object, list box and a table box?</li>
+									<li>How do we create the QlikView objects mentioned above, how do we use them, including examples such as sorting data, entering data, exporting data.</li>
+									<li>You will learn about charts objects, how to create them and the many functionalities, how to edit the format and layout.</li>
+									<li>How to load data into QlikView.</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Overview of QlikView Desktop <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to multi dimensional objects such as pivot tables, straight tables with multiple expressions.</li>
+									<li>Advanced usage of the many QlikView charts and objects, such as tree views in list boxes and mini charts.</li>
+									<li>Advanced calculations using set analysis and AGGR function.</li>
+									<li>Gauges, buttons, actions - what are they and how do you develop them.</li>
+									<li>Introduction to some other useful objects such as slider/calendar objects.</li>
+									<li>QlikView reports and how do you create and manage them.</li>
+									<li>Business case workshop.</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. The QlikView environment <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Overview of QlikView development methodology, SAFE.</li>
+									<li>How to deploy QlikView, standalone, Server and Publisher.</li>
+									<li>Introduction to data and scripting, relational databases and other data structures.</li>
+									<li>Connecting to ODBC and also OLEDB data sources.</li>
+									<li>Introduction to the underlying scripting language and best practices in how to use this, including the use of time functions and creating variables.</li>
+									<li>Overview of data preparation required before starting to develop a QlikView application.</li>
+									<li>Basic data model overview and understanding of QlikView table viewer.</li>
+									<li>How to resolve abnormalities in the data structure, such as synthetic keys.</li>
+									<li>QlikView QVD file and how to create them and use them.</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Learn about the debugger and troubleshooting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>How to add text data and how to generate data in the QlikView script.</li>
+									<li>Mapping tables and cleaning up a data structure.</li>
+									<li>How to load budget data.</li>
+									<li>Script language and how to aggregate data, joining tables, concatenation, functions, interval match and other scripting features.</li>
+									<li>Analyze data over time using Set analysis and Aggr Function.</li>
+									<li>Data model optimization and performance tuning and how to create incremental loads.</li>
+									<li>Overview of QlikView security and various access settings and levels.</li>
+									<li>Advanced database connectivity.</li>
+									<li>To finish it off a case study - each student gets to develop a QlikView application, which includes: loading in data, resolving data issues and building the UI with the help of business KPI.</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Charan</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

@@ -9,7 +9,573 @@
 
 <url>
   <loc>http://pro-elearning.com/</loc>
-  <lastmod>2018-05-11T11:09:05+00:00</lastmod>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/aboutus</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data/kafka</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data/scala</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data/spark</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data/hadoop</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data/hadoop-administrator</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data/hp-vertica</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data/talend</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/big-data/cloudera</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/cloud-technologies</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/cloud-technologies/salesforce-developer</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/cloud-technologies/salesforce-administrator</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/cloud-technologies/azure</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/cloud-technologies/aws</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/cloud-technologies/servicenow</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/cloud-technologies/openstack</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/java</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/dotnet</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/python</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/embedded-systems</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/unix</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/linux</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/build-and-deployment-engineer</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/build-release-engineer</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/ruby</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/sharepoint</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/information-technology/itil-v3-foundation</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/web-development</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/web-development/ui-development</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/web-development/angular4</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/web-development/php</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/web-development/mysql</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/rpa</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/rpa/blueprism</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/rpa/artificial-intelligence</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/rpa/automation-anywhere</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/rpa/iot</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/rpa/machine-learning</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/rpa/uipath</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/mobile-apps</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/mobile-apps/android</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/mobile-apps/ios</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/network-security</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/network-security/ccna</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/network-security/cyber-network-security</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/application-support</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/application-support/devops</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-intelligence</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-intelligence/msbi</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-intelligence/obiee</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-intelligence/power-bi</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/people-soft-hrms</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/salesforce-crm</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/oracle-apps</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sap-bi</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sap-bo</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sap-crm</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sap-fico</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sap-hana</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sap-mm</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sas</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sas-clinical-research</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/erp/sas-bi</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/etl</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/etl/datastage</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/etl/informatica</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/etl/informatica-mdm</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/jbpm</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/pega-6.2</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/pega-7</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/business-analyst</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/ba-bfsi</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/ba-health-care</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/ba-finance</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/quickbooks</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-management/technical-manager</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/analytical-tools</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/analytical-tools/tableau</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/analytical-tools/remedy-ticketing-tool</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/analytical-tools/qlikview</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/analytical-tools/tibco-spotfire</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/software-testing</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/software-testing/perfecto</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/software-testing/loadrunner</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/software-testing/selenium</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/software-testing/etl-testing</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/analytical-tools/remedy-ticketing-tool</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/hyperion</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/hyperion/hpcm</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/hyperion/hyperion-epm</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/hyperion/hyperion-essbase</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/hyperion/hyperion-financial-management</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/ibm</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/ibm/webfocus</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/ibm/websphere-admin</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/hyperion/hyperion-financial-management</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/oracle-adf</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/oracle-dba</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/oracle-developer</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/oracle-ebs</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/oracle-golden-gate</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/oracle-soa</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/weblogic</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/siebel-open-ui</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/oracle/odi-12c</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/course-schedules</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/registration</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/contact</loc>
+  <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 
 

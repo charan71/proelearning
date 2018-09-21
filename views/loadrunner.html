@@ -1,122 +1,318 @@
 <div class="container-fluid">
     <div class="row">
         <div class="row-gap-big">
-            <img class="img-responsive" src="./images/parallax-images/loadrunner.jpg" alt="LoadRunner-Training-Pro-eLearning">
+            <img class="img-responsive" src="./images/parallax-images/loadrunner.jpg" alt="Loadrunner-Training-Pro-eLearning">
         </div>
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="LoadRunner Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">HP LoadRunner Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>HP LoadRunner Course Content</h1>
-                        <hr>
-                        <h4>PERFORMANCE TESTING</h4>
-                        <ul>
-                        	<li>Overview of Performance testing</li>
-                        	<li>Performance testing types</li>
-                        	<li>Performance testing Process</li>
-                        	<li>Performance test Requirements   gathering</li>
-                        	<li>Performance Test Planning</li>
-                        	<li>Performance Scenario's</li>
-                        	<li>Performance Analysis and Reporting</li>
-                        	<li>Test Plan Creation</li>
-                        </ul>
-                        <h4>OVERVIEW OF LOADRUNNER</h4>
-                        <ul>
-                        	<li>Overview of Load runner</li>
-                        	<li>Components of Load runner</li>
-                        	<li>Load runner Installation</li>
-                        	<li>Virtual User Generator (Vugen)</li>
-                        	<li>LR Controller</li>
-                        	<li>LR Analysis</li>
-                        	<li>Load runner Agent process</li>
-                        </ul>
-                        <h4>OVERVIEW OF VUGEN & RECORDING</h4>
-                        <ul>
-                        	<li>Scripting - Recording for Various protocols (covers web (http/html) also explains ajax true client with Mozilla)</li>
-                        	<li>Scripting - Modeling</li>
-                        	<li>LR Recording Modes</li>
-                        	<li>Script Enhancements</li>
-                        	<li>Multiple Actions</li>
-                        	<li>Importance of think time</li>
-                        	<li>Debugging Replay problems.</li>
-                        	<li>Verification Checks</li>
-                        	<li>Parameterization</li>
-                        	<li>Manual Correlation</li>
-                        	<li>Auto Correlation</li>
-                        	<li>Run Time Settings</li>
-                        	<li>Run logic</li>
-                        	<li>Pacing</li>
-                        	<li>Multi threading</li>
-                        	<li>LR & C FUNCTIONS</li>
-                        </ul>
-                        <h4>CONTROLLER & HP Performance Center</h4>
-                        <ul>
-                        	<li>Creating Manual Scenario</li>
-                        	<li>Creating Goal Oriented scenario</li>
-                        	<li>Schedule by group</li>
-                        	<li>Schedule by scenario Distributed scenario's</li>
-                        	<li>Vuser groups</li>
-                        	<li>Various options in Scenario Creation</li>
-                        	<li>Schedule builder</li>
-                        	<li>Vuser states</li>
-                        	<li>Adding Load Generator</li>
-                        	<li>Running Scenario</li>
-                        	<li>Commonly used LR monitors</li>
-                        	<li>Test Scenario  Creation</li>
-                        	<li>Test Execution</li>
-                        	<li>Concurrent Users</li>
-                        	<li>Simultaneous Users</li>
-                        	<li>Ramp up</li>
-                        	<li>Ramp Down</li>
-                        	<li>Steady state</li>
-                        	<li>Performance center part will cover through screen shots</li>
-                        </ul>
-                        <h4>Analysis</h4>
-                        <ul>
-                        	<li>Understanding Analysis</li>
-                        	<li>Working with Analysis Graphs</li>
-                        	<li>Cross Result and Merged Graphs</li>
-                        	<li>Importing External Data</li>
-                        	<li>Analysis Graphs</li>
-                        	<li>Vuser Graphs</li>
-                        	<li>Error Graphs</li>
-                        	<li>Transaction Graphs</li>
-                        	<li>Web Resource Graphs</li>
-                        	<li>Granularity</li>
-                        	<li>CLIENT SIDE METRICS</li>
-                        	<li>Web page Diagnostics graphs</li>
-                        </ul>
-                        <h4>Web Services Scripting</h4>
-                        <ul>
-                        	<li>Creating script through WSDL</li>
-                            <li>Creating script through WSDL <abbr title="Uniform Resource Locatior">URL</abbr></li>
-                        	<li>Creating script through input XML file</li>
-                        	<li>Correlation in web services</li>
-                        	<li>Parameterization in web services</li>
-                        </ul>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Like Server architecture, DB server. If these are important please let me know what else falls in the load runner learning curve and use of it.</p>
                     </div>
                 </div>
-    	    </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>Loadrunner from Micro Focus is the most widely used Load Testing tool. Performance Test Results produced by Loadrunner are used as a benchmark against other tools. This online course is geared to make you a Loadrunner pro!</p>
+                    <p>LoadRunner is a software testing tool from Micro Focus. It is used to test applications, measuring system behaviour and performance under load. LoadRunner can simulate thousands of users concurrently using application software, recording and later analyzing the performance of key components of the application.</p>
+                    <p>LoadRunner simulates user activity by generating messages between application components or by simulating interactions with the user interface such as keypresses or mouse movements. The messages and interactions to be generated are stored in scripts. LoadRunner can generate the scripts by recording them, such as logging HTTP requests between a client web browser and an application's web server. </p>
+                    <p>Hewlett Packard Enterprise acquired LoadRunner as part of its acquisition of Mercury Interactive in November 2006. In Sept 2016, Hewlett Packard Enterprise announced it is selling its software business, including Mercury products, to Micro Focus. As of 01-Sept-2017, the acquisition was complete.</p>
+                    <p>LoadRunner is a Performance Testing tool which was pioneered by Mercury in 1999. LoadRunner was later acquired by HPE in 2006. In 2016, Loadrunner was acquired by MicroFocus</p>
+                    <p>LoadRunner supports various development tools, technologies and communication protocols. In fact, this is the only tool in market which supports such large number of protocols to conduct Performance Testing</p>
+                    <p><b>Why LoadRunner ?</b>LoadRunner is not only pioneer tool in Performance Testing, but it is still a market leader in the Performance Testing paradigm. In a recent assessment, LoadRunner has about 85% market share in Performance Testing industry.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Performance Testing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Overview of Performance testing</li>
+									<li>Performance testing types</li>
+									<li>Performance testing Process</li>
+									<li>Performance test Requirements   gathering</li>
+									<li>Performance Test Planning</li>
+									<li>Performance Scenario's</li>
+									<li>Performance Analysis and Reporting</li>
+									<li>Test Plan Creation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Overview of Loadrunner <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Overview of Load runner</li>
+									<li>Components of Load runner</li>
+									<li>Load runner Installation</li>
+									<li>Virtual User Generator (Vugen)</li>
+									<li>LR Controller</li>
+									<li>LR Analysis</li>
+									<li>Load runner Agent process</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Overview of Vugen & Recording <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Scripting - Recording for Various protocols (covers web (http/html) also explains ajax true client with Mozilla)</li>
+									<li>Scripting - Modeling</li>
+									<li>LR Recording Modes</li>
+									<li>Script Enhancements</li>
+									<li>Multiple Actions</li>
+									<li>Importance of think time</li>
+									<li>Debugging Replay problems.</li>
+									<li>Verification Checks</li>
+									<li>Parameterization</li>
+									<li>Manual Correlation</li>
+									<li>Auto Correlation</li>
+									<li>Run Time Settings</li>
+									<li>Run logic</li>
+									<li>Pacing</li>
+									<li>Multi threading</li>
+									<li>LR & C Functions</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Controller & HP Performance Center <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating Manual Scenario</li>
+									<li>Creating Goal Oriented scenario</li>
+									<li>Schedule by group</li>
+									<li>Schedule by scenario Distributed scenario's</li>
+									<li>Vuser groups</li>
+									<li>Various options in Scenario Creation</li>
+									<li>Schedule builder</li>
+									<li>Vuser states</li>
+									<li>Adding Load Generator</li>
+									<li>Running Scenario</li>
+									<li>Commonly used LR monitors</li>
+									<li>Test Scenario  Creation</li>
+									<li>Test Execution</li>
+									<li>Concurrent Users</li>
+									<li>Simultaneous Users</li>
+									<li>Ramp up</li>
+									<li>Ramp Down</li>
+									<li>Steady state</li>
+									<li>Performance center part will cover through screen shots</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Analysis <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Understanding Analysis</li>
+									<li>Working with Analysis Graphs</li>
+									<li>Cross Result and Merged Graphs</li>
+									<li>Importing External Data</li>
+									<li>Analysis Graphs</li>
+									<li>Vuser Graphs</li>
+									<li>Error Graphs</li>
+									<li>Transaction Graphs</li>
+									<li>Web Resource Graphs</li>
+									<li>Granularity</li>
+									<li>Client Side Metrics</li>
+									<li>Web page Diagnostics graphs</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Web Services Scripting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Creating script through WSDL</li>
+									<li>Creating script through WSDL <abbr title="Uniform Resource Locator">URL</abbr></li>
+									<li>Creating script through input XML file</li>
+									<li>Correlation in web services</li>
+									<li>Parameterization in web services</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really have the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>Hi, this is Akash, sharing some happy moments with you all about my training on Kafka with pro-elearning. They have well-experienced trainers who really have the capacity to make the students professional.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

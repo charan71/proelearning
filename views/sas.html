@@ -6,216 +6,483 @@
     </div>
     
     <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" disable-contextmenu-cut-copy-paste>
-                <div class="course-desc">
-                    <div class="course-desc-icon">
-                        <img src="./images/course-images/devops.png" alt="SAS Course Details - Pro E-Learning">
+            <div class="course-overview-title">
+                <h1 class="mt-50">SAS Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
                     </div>
-                    
-                    <div class="c-syllabus">
-                        <h1>SAS Course Content</h1>
-                        <p class="course-duration"><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: --</p>
-                        <hr>
-                        <h4>SAS BASE/SAS MACROS</h4>
-                        <ul>
-                            <li>what is a  SAS data step</li>
-                            <li>SAS PROC STEP</li>
-                            <li>SAS ENGINES</li>
-                            <li>SAS ODS</li>
-                            <li>SAS PROGRAMMING BASICS</li>
-                            <li>SAS FORMATS</li>
-                            <li>SAS INFORMATS</li>
-                            <li>SAS OPTIONS</li>
-                            <li>SAS FUNCTIONS</li>
-                            <li>SAS CALL ROUTINES</li>
-                            <li>SAS DATE AND TIME</li>
-                            <li>Handling missing data values in sas</li>
-                            <li>Charcter varialbes in SAS</li>
-                            <li>programming logic in data step</li>
-                            <li>arrays in SAS</li>
-                            <li>SAS CODE OPTIMIZATION TIPS</li>
-                            <li>data manipulation reading raw data</li>
-                            <li>combining sas data sets using Append,Merge,Update,Modify</li>
-                            <li>creating multiple data sets </li>
-                            <li>sas Functions</li>
-                            <li>accessing previous records in a SAS Data set</li>
-                            <li>sas procedures covered</li>
-                            <li>Proc print</li>
-                            <li>proc sort </li>
-                            <li>proc datasets</li>
-                            <li>proc freq</li>
-                            <li>proc format</li>
-                            <li>proc compare</li>
-                            <li>proc Means</li>
-                            <li>proc report</li>
-                        </ul>
-                        <h4>SAS MACROS</h4>
-                        <ul>
-                            <li>macro variables</li>
-                            <li>How the macro facility works</li>
-                            <li>referecing macro variables</li>
-                            <li>concatenating macro variables</li>
-                            <li>dipalying marco variables in log</li>
-                            <li>%DO, %STR, %put statements</li>
-                            <li>LOCAL AND GLOBAL MACRO VARIABLES</li>
-                            <li>%SCAN MACRO FUNCTION</li>
-                            <li>%EVAL FUNCTION</li>
-                            <li>debugging marco variables</li>
-                        </ul>
-                        <h4>Introduction to DWH / BI Concepts</h4>
-                        <ul>
-                            <li>Data Warehousing Concepts</li>
-                            <li>What is Data Warehousing</li>
-                            <li>Why Use a Data Warehouse ?</li>
-                            <li>Architectural Concepts</li>
-                            <li>Primary Components</li>
-                            <li>What is ETL ?</li>
-                            <li>Current Data & Historical</li>
-                            <li>Complete History</li>
-                            <li>Limited/Unlimited Number of Histories</li>
-                            <li>Load Types</li>
-                            <li>First Time Load ( Initial Extraction )</li>
-                            <li>Delta Load</li>
-                            <li>Full Load</li>
-                            <li>Incremental Loads</li>
-                            <li>Schema Types</li>
-                            <li>Star Schema</li>
-                            <li>Snowflake Schema</li>
-                            <li>Integrated Star Schema</li>
-                            <li>Advantages of Each Schema</li>
-                            <li>Dimensional Modeling Techniques</li>
-                            <li>Conceptual Modeling</li>
-                            <li>Logical Modeling</li>
-                            <li>Physical Modeling</li>
-                            <li>Data marts</li>
-                            <li>Concept</li>
-                            <li>Kimball Methodology</li>
-                            <li>Facts</li>
-                            <li>Measures</li>
-                            <li>Dimension Table Types</li>
-                            <li>Slowly changing Dimensions</li>
-                            <li>Type 1/2/3 Dimensions</li>
-                        </ul>
-                        <h4>BI CONCEPTS</h4>
-                        <ul>
-                            <li>Why is BI (Business Intelligence) Required ?</li>
-                            <li>OLTP</li>
-                            <li>OLAP</li>
-                            <li>Types of OLAP</li>
-                            <li>ROLAP</li>
-                            <li>MOLAP</li>
-                            <li>HOLAP</li>
-                            <li>Reporting Architecture</li>
-                            <li>Database Layer</li>
-                            <li>Interface Layer</li>
-                            <li>Server Layer</li>
-                            <li>Presentation layer</li>
-                            <li>BI Server Systems</li>
-                            <li>BI Client Systems and Functionalities</li>
-                            <li>Hieracheis</li>
-                            <li>Need of Hierarchies in Reporting</li>
-                            <li>Need for ODS in Data Warehousing</li>
-                        </ul>
-                        <h4>SAS Data Integration Studio 4.2</h4>
-                        <ul>
-                            <li>Introduction to DI STUDIO</li>
-                            <li>SET UP FOR DI STUDIO</li>
-                            <li>SECURITY FOR DI STUDIO</li>
-                            <li>STARTING SAS DI STUDIO</li>
-                            <li>CONNECTING TO METADATA SERVER</li>
-                            <li>WORKING WITH FOLDER TREES</li>
-                            <li>WORKING UNDER CHANGE MANAGEMENT</li>
-                            <li>BUIDLING A DATAMART</li>
-                            <li>BUIDLING AN OLAP CUBE</li>
-                            <li>CREATING THE REPORTS</li>
-                            <li>TRANSFORMATIONS FOR SLOWLY  CHANGING DIAMENSIONS</li>
-                            <li>CREATING JOBS AND SCHEDULING IN DI STUDIO</li>
-                        </ul>
-                        <h4>SAS EG 4.2</h4>
-                        <ul>
-                            <li>Introduction on SAS EG Application.</li>
-                            <li>Customizing SAS Enterprise Guide options</li>
-                            <li>Setting up and managing profiles</li>
-                            <li>Importing files from sources other than SAS</li>
-                            <li>Accessing data via SAS libraries</li>
-                            <li>Grouping and summarizing data</li>
-                            <li>Introduction to querying data</li>
-                            <li>Filtering and sorting data</li>
-                            <li>Creating new columns with an expression</li>
-                            <li>Working on different STATASTICAL Procedures</li>
-                            <li>Joining tables</li>
-                            <li>Grouping and summarizing data in a query (self-study)</li>
-                            <li>Creating new columns by recoding values (self-study)</li>
-                            <li>Creating a frequency report</li>
-                            <li>Generating HTML, PDF, and RTF output</li>
-                            <li>Creating a listing report</li>
-                            <li>Creating a graph</li>
-                            <li>Creating Stored Process from SAS EG.</li>
-                            <li>Creating OLAP cubes from SAS EG.</li>
-                        </ul>
-                        <h4>SAS Web Report Studio 4.2</h4>
-                        <ul>
-                            <li>Introduction on SAS Web Report Studio</li>
-                            <li>Calling Information Maps into WRS.</li>
-                            <li>Creating filters at WRS</li>
-                            <li>Creating Layouts for Reports.</li>
-                            <li>Creating Prompts.</li>
-                            <li>Customizable roles to authorize capabilities(From SMC)</li>
-                            <li>Working on Report Creation and Templates.</li>
-                        </ul>
-                        <h4>SAS Management Console 9.2</h4>
-                        <ul>
-                            <li>User Creation and Permissions</li>
-                            <li>Creating Libraries</li>
-                            <li>Creating connections with Data Bases and SAS Applications</li>
-                            <li>Creating Repository and creating Folders levels at Repository</li>
-                            <li>Checking (TEST) connections for Different SAS Servers.</li>
-                            <li>Creating Flows For Scheduling ,Creating Jobs with dependencies and without Dependencies.</li>
-                            <li>Migration from Test Servers to Production servers.</li>
-                            <li>What is Metadata Tree and its Uses.</li>
-                            <li>Configuring Different Servers @SAS Management Console.</li>
-                            <li>START and STOP Servers, Take Backups....</li>
-                        </ul>
-                        <h4>SAS OLAP Cube Studio 4.2</h4>
-                        <ul>
-                            <li>Introduction to Online Analytical Processing </li>
-                            <li>Overview of SAS OLAP Cube Studio</li>
-                            <li>Registering metadata</li>
-                            <li>Working with SAS OLAP Cubes Derived from Detail Tables</li>
-                            <li>Creating a SAS OLAP Cube from a detail table </li>
-                            <li>Generating aggregations using cross- dimensional tuning</li>
-                            <li>Setting permissions using SAS Management Console</li>
-                            <li>Viewing a SAS OLAP cube with SAS Enterprise Guide</li>
-                            <li>Working with SAS OLAP Cubes Derived from Star Sachems</li>
-                            <li>Creating a SAS OLAP cube from a star schema</li>
-                        </ul>
-                        <h4>SAS Information Map Studio</h4>
-                        <ul>
-                            <li>INTRODUCTION TO SAS INFORMATION MAP STUDIO</li>
-                            <li>CREATING A SAS INFORMATION MAP</li>
-                            <li>CREATING FILTER IN SAS INFORMATION MAP</li>
-                            <li>CREATING DATA ITEMS IN SAS INFO MAP</li>
-                        </ul>
-                        <h4>LFS</h4>
-                        <h4>SAS Add-In for Ms Office 4.2</h4>
-                        <h4>Course Notes (Case Studies/ Exercises)</h4>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-                        
-            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                <div class="readmore">
-                    <div class="list-group">
-                        <ul>
-                            <li>Spring Framework Foundations</li>
-                            <li>Using the Hibernate ORM</li>
-                            <li>Hibernate Internals and Configuration</li>
-                            <li>Introduction to Web Services</li>
-                        </ul>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
                     </div>
                 </div>
-    	    </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>SAS (previously "Statistical Analysis System") is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics. SAS was developed at North Carolina State University from 1966 until 1976, when SAS Institute was incorporated.</p>
+                    <p>SAS is an integrated software suite for advanced analytics, business intelligence, data management, and predictive analytics. You can use SAS software through both a graphical interface and the SAS programming language, or Base SAS. ... manage and manipulate your existing data to get the data that you need.</p>
+                    <p>The free offering, which is called SAS Analytics U, is free for download for teaching, learning and research. This is what SAS says on its overview page: Our new software for teaching, learning and research in higher education is now available to download for free.</p>
+                    <p>The SAS language is a computer programming language used for statistical analysis, created by Anthony James Barr at North Carolina State University. It can read in data from common spreadsheets and databases and output the results of statistical analyses in tables, graphs, and as RTF, HTML and PDF documents</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. SAS BASE/SAS MACROS <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>What is a SAS data step?</li>
+									<li>SAS PROC STEP</li>
+									<li>SAS Engines</li>
+									<li>SAS ODS</li>
+									<li>SAS Programming Basics</li>
+									<li>SAS Formats</li>
+									<li>SAS Informats</li>
+									<li>SAS Options</li>
+									<li>SAS Functions</li>
+									<li>SAS Call Routines</li>
+									<li>SAS DATE and TIME</li>
+									<li>Handling missing data values in sas</li>
+									<li>Charcter varialbes in SAS</li>
+									<li>Programming logic in data step</li>
+									<li>Arrays in SAS</li>
+									<li>SAS Code Optimization Tips</li>
+									<li>Data manipulation reading raw data</li>
+									<li>Combining sas data sets using Append, Merge, Update, Modify</li>
+									<li>Creating multiple data sets</li>
+									<li>SAS Functions</li>
+									<li>Accessing previous records in a SAS Data set</li>
+									<li>SAS procedures covered</li>
+									<li>Proc print</li>
+									<li>Proc sort</li>
+									<li>Proc datasets</li>
+									<li>Proc freq</li>
+									<li>Proc format</li>
+									<li>Proc compare</li>
+									<li>Proc Means</li>
+									<li>Proc report</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. SAS Macros <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Macro variables</li>
+									<li>How the macro facility works</li>
+									<li>Referecing macro variables</li>
+									<li>Concatenating macro variables</li>
+									<li>Dipalying marco variables in log</li>
+									<li>%DO, %STR, %put statements</li>
+									<li>Local and Global Macro Variables</li>
+									<li>%SCAN Macro Function</li>
+									<li>%EVAL Function</li>
+									<li>Debugging marco variables</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Introduction to DWH / BI Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Data Warehousing Concepts</li>
+									<li>What is Data Warehousing</li>
+									<li>Why Use a Data Warehouse ?</li>
+									<li>Architectural Concepts</li>
+									<li>Primary Components</li>
+									<li>What is ETL?</li>
+									<li>Current Data & Historical</li>
+									<li>Complete History</li>
+									<li>Limited/Unlimited Number of Histories</li>
+									<li>Load Types</li>
+									<li>First Time Load ( Initial Extraction )</li>
+									<li>Delta Load</li>
+									<li>Full Load</li>
+									<li>Incremental Loads</li>
+									<li>Schema Types</li>
+									<li>Star Schema</li>
+									<li>Snowflake Schema</li>
+									<li>Integrated Star Schema</li>
+									<li>Advantages of Each Schema</li>
+									<li>Dimensional Modeling Techniques</li>
+									<li>Conceptual Modeling</li>
+									<li>Logical Modeling</li>
+									<li>Physical Modeling</li>
+									<li>Data marts</li>
+									<li>Concept</li>
+									<li>Kimball Methodology</li>
+									<li>Facts</li>
+									<li>Measures</li>
+									<li>Dimension Table Types</li>
+									<li>Slowly changing Dimensions</li>
+									<li>Type 1/2/3 Dimensions</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. BI Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Why is BI (Business Intelligence) Required ?</li>
+									<li>OLTP</li>
+									<li>OLAP</li>
+									<li>Types of OLAP</li>
+									<li>ROLAP</li>
+									<li>MOLAP</li>
+									<li>HOLAP</li>
+									<li>Reporting Architecture</li>
+									<li>Database Layer</li>
+									<li>Interface Layer</li>
+									<li>Server Layer</li>
+									<li>Presentation layer</li>
+									<li>BI Server Systems</li>
+									<li>BI Client Systems and Functionalities</li>
+									<li>Hieracheis</li>
+									<li>Need of Hierarchies in Reporting</li>
+									<li>Need for ODS in Data Warehousing</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. SAS Data Integration Studio 4.2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to DI Studio</li>
+									<li>Set Up for DI Studio</li>
+									<li>Security for DI Studio</li>
+									<li>Starting SAS DI Studio</li>
+									<li>Connecting to Metadata Server</li>
+									<li>Working with Folder Trees</li>
+									<li>Working Under Change Management</li>
+									<li>Buidling a Datamart</li>
+									<li>Buidling an OLAP CUBE</li>
+									<li>Creating the Reports</li>
+									<li>Transformations for Slowly Changing Dimensions</li>
+									<li>Creating Jobs and Scheduling in DI STUDIO</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. SAS EG 4.2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Introduction on SAS EG Application</li>
+									<li>Customizing SAS Enterprise Guide options</li>
+									<li>Setting up and managing profiles</li>
+									<li>Importing files from sources other than SAS</li>
+									<li>Accessing data via SAS libraries</li>
+									<li>Grouping and summarizing data</li>
+									<li>Introduction to querying data</li>
+									<li>Filtering and sorting data</li>
+									<li>Creating new columns with an expression</li>
+									<li>Working on different STATASTICAL Procedures</li>
+									<li>Joining tables</li>
+									<li>Grouping and summarizing data in a query (self-study)</li>
+									<li>Creating new columns by recoding values (self-study)</li>
+									<li>Creating a frequency report</li>
+									<li>Generating HTML, PDF, and RTF output</li>
+									<li>Creating a listing report</li>
+									<li>Creating a graph</li>
+									<li>Creating Stored Process from SAS EG.</li>
+									<li>Creating OLAP cubes from SAS EG.</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. SAS Web Report Studio 4.2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction on SAS Web Report Studio</li>
+									<li>Calling Information Maps into WRS.</li>
+									<li>Creating filters at WRS</li>
+									<li>Creating Layouts for Reports.</li>
+									<li>Creating Prompts.</li>
+									<li>Customizable roles to authorize capabilities(From SMC)</li>
+									<li>Working on Report Creation and Templates.</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. SAS Management Console 9.2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>User Creation and Permissions</li>
+									<li>Creating Libraries</li>
+									<li>Creating connections with Data Bases and SAS Applications</li>
+									<li>Creating Repository and creating Folders levels at Repository</li>
+									<li>Checking (TEST) connections for Different SAS Servers.</li>
+									<li>Creating Flows For Scheduling ,Creating Jobs with dependencies and without Dependencies.</li>
+									<li>Migration from Test Servers to Production servers.</li>
+									<li>What is Metadata Tree and its Uses.</li>
+									<li>Configuring Different Servers @SAS Management Console.</li>
+									<li>START and STOP Servers, Take Backups....</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. SAS OLAP Cube Studio 4.2 <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to Online Analytical Processing </li>
+									<li>Overview of SAS OLAP Cube Studio</li>
+									<li>Registering metadata</li>
+									<li>Working with SAS OLAP Cubes Derived from Detail Tables</li>
+									<li>Creating a SAS OLAP Cube from a detail table </li>
+									<li>Generating aggregations using cross- dimensional tuning</li>
+									<li>Setting permissions using SAS Management Console</li>
+									<li>Viewing a SAS OLAP cube with SAS Enterprise Guide</li>
+									<li>Working with SAS OLAP Cubes Derived from Star Sachems</li>
+									<li>Creating a SAS OLAP cube from a star schema</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. SAS Information Map Studio <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Introduction to SAS Information Map Studio</li>
+									<li>Creating a SAS Information Map</li>
+									<li>Creating Filter in SAS Information Map</li>
+									<li>Creating Data Items in SAS Info Map</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eleven" aria-expanded="false" aria-controls="collapseNine">11. LFS <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>LFS</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#twelve" aria-expanded="false" aria-controls="collapseNine">12. SAS Add-In <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="twelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>SAS Add-In for Ms Office 4.2</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#thirteen" aria-expanded="false" aria-controls="collapseNine">13. Course Notes <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="thirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Course Notes (Case Studies/Exercises)</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very happy to share my experience with all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This is Charan sharing some happy moments with you all about my training on Kafka with Pro-elearning. They have well-experienced trainers who really the capacity of students and train them accordingly.</p>
+                            <h4 class="pull-right">&#x2015; Charan</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
         </div>
+
     </div>
 </div>

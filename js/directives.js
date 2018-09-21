@@ -78,8 +78,6 @@ angular.module('ProELearning.directives', [])
           nav: false,
           rewind: true,
           margin: 0,
-        //   dots: true,
-        //   dotsContainer: true,
           navSpeed: 300,
           items: 1,
       };
