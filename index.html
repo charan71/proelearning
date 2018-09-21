@@ -47,7 +47,7 @@
 	<body ng-controller="mainCtrl">
         <!-- Navbar Starts Here -->
 		<header>
-			<nav class="navbar navbar-custom navbar-fixed-top" id="navbar-main">
+			<nav class="navbar navbar-custom navbar-fixed-top" id="navbar-main" ng-controller="navController">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
@@ -70,9 +70,9 @@
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <i class="fa fa-angle-down fa-fw chevron1" aria-hidden="true"></i></a>
 								<ul class="dropdown-menu">
 									<li class="dropdown">
-										<a ng-href="big-data">Big Data <i class="fa fa-angle-right"></i></a>
+										<a ng-class="{active: isActive('/big-data')}" ng-href="big-data">Big Data <i class="fa fa-angle-right"></i></a>
 										<ul class="dropdown-menu">
-											<li><a ng-href="big-data/kafka">Kafka</a></li>
+											<li><a ng-class="{active: isActive('big-data/kafka')}" ng-href="big-data/kafka">Kafka</a></li>
 											<li><a ng-href="big-data/scala">Scala</a></li>
 											<li><a ng-href="big-data/spark">Spark</a></li>
 											<li><a ng-href="big-data/hadoop">Hadoop</a></li>

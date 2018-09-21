@@ -742,5 +742,12 @@ angular.module('ProELearning.controllers', [])
     };
 }])
 
+// Navbar Controller
+.controller("navController", ['$scope', '$location', function($scope, $location) {
+    $scope.isActive = function(destination) {
+        return destination === $location.path();
+    };
+}])
+
 ;
 }(angular));
