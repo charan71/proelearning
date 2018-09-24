@@ -749,5 +749,16 @@ angular.module('ProELearning.controllers', [])
     };
 }])
 
+.controller("courseSchedules", ['$scope', function($scope) {
+    $scope.asc = "courseName";
+    $scope.desc = false;
+    $scope.searchCourse = { courseName:"", batchType: "", tainingType: "", trainerName: "" };
+    $scope.courseSchedules = [
+        { courseName: "IOS", date: "10 July 2018", time: "9:30 PM", batchType: "Regular", tainingType: "Online", duration: "30", trainerName: "Praveen" },
+        { courseName: "FullStack", date: "26 July 2018", time: "9:30 PM", batchType: "Regular", tainingType: "Online", duration: "45", trainerName: "Vasu" },
+        { courseName: "WebFocus", date: "28 July 2018", time: "7:30 AM", batchType: "Regular", tainingType: "Online", duration: "45", trainerName: "Praneeth" },
+    ];
+}])
+
 ;
 }(angular));

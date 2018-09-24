@@ -2,7 +2,7 @@
     "use strict";
 
 /* Creating Module */
-var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ngSanitize', 'ngStorage', 'ngCookies', 'ngLocale', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ProELearning.filters', 'ng-clamp', 'chart.js', 'ngCountryStateSelect', 'ng-breadcrumbs', 'awesome-rating'])
+var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ngSanitize', 'ngStorage', 'ngCookies', 'ngLocale', 'ProELearning.controllers', 'ProELearning.services', 'ProELearning.directives', 'ProELearning.filters', 'ng-clamp', 'chart.js', 'ngCountryStateSelect', 'ng-breadcrumbs', 'awesome-rating', 'angularUtils.directives.dirPagination'])
 
 /* Resolve Views Scroll Point Issue */
 .run(['$rootScope', '$document', '$http', '$window',

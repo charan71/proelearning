@@ -1,8 +1,13 @@
 <div class="container-fluid" ng-controller="contactController">
-    <div class="row mb-50">
-        <div class="">
-            <img class="img-responsive" src="./images/parallax-images/contact.jpg" alt="Contact-Us-Pro-eLearning">
-        </div>
+    <div class="row">
+        <img class="img-responsive" src="./images/parallax-images/contact.jpg" alt="Contact-Us-Pro-eLearning">
+    </div>
+</div>
+
+<div class="container">
+    <!-- Breadcrumbs -->
+    <div class="row hidden-xs">
+        <div ng-include="'views/breadcrumbs.html'"></div>
     </div>
 
     <div class="container">
@@ -149,7 +154,9 @@
             </div>
         </div>
     </div>
+</div>
 
+<div class="container-fluid">
     <!-- Map -->
     <div class="row" ng-controller="mapCtrl">
         <div id="class" ng-repeat="marker in markers">
