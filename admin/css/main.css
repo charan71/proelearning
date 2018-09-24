@@ -7,11 +7,8 @@ body, html {
 input:-webkit-autofill {
     box-shadow: 0 0 0px 100px white inset !important;
 }
-.dummy {
-    height: 50px;
-}
 .main-container {
-    /*    margin-top: 50px;*/
+    margin-top: 50px;
     height: 100%;
 }
 
@@ -453,3 +450,52 @@ footer p {
 /*-- //Clock --*/
 
 /*-- //Dashboard --*/
+
+/*-- Students Registered --*/
+.table thead {
+    background-color: #4077fe;
+    color: #fff;
+}
+.table>thead>tr>th {
+    border: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+.table th {
+    position: relative;
+    padding: 8px 5px;
+    color: #fff;
+}
+.table th i.fa {
+    position: absolute;
+    right: 10px;
+    opacity: 0.4;
+}
+.table th:hover i.fa {
+    opacity: 0.65;
+}
+.table th i.fa.fa-sort-asc {
+    top: 10px;
+}
+.table th i.fa.fa-sort-desc {
+    bottom: 10px;
+}
+.table th[ng-click] {
+    cursor: pointer;
+}
+.th-title-wrap {
+    display: block;
+    margin-right: 20px;
+}
+.searchFilterBox {
+    /* width: 100%; */
+    border: 1px solid transparent;
+}
+.filterRow th {
+    color: #444;
+}
+.filterRow th select {
+    padding: 2px;
+    width: 100%;
+    border: 1px solid transparent;
+}
+

@@ -19,7 +19,7 @@
     </div>
 
     <div class="row">
-        <div class="course-schedules-wrapper" ng-controller="courseSchedules">
+        <div class="table-wrapper" ng-controller="courseSchedules">
             <div class="table-responsive">
                 <table class="table table-striped" id="course-schedules">
                     <thead>
@@ -50,24 +50,24 @@
                         <tr>
                             <th>#</th>
                             <th ng-click="asc='courseName'; desc=!desc">
-                                Course Name
+                                <span class="th-title-wrap">Course Name</span>
                                 <i class="fa fa-sort-asc" aria-hidden="true"></i>
                                 <i class="fa fa-sort-desc" aria-hidden="true"></i>
                             </th>
                             <th ng-click="asc='date'; desc=!desc">
-                                Start Date
+                                <span class="th-title-wrap">Start Date</span>
                                 <i class="fa fa-sort-asc" aria-hidden="true"></i>
                                 <i class="fa fa-sort-desc" aria-hidden="true"></i>
                             </th>
                             <th ng-click="asc='time'; desc=!desc">
-                                Time
+                                <span class="th-title-wrap">Time</span>
                                 <i class="fa fa-sort-asc" aria-hidden="true"></i>
                                 <i class="fa fa-sort-desc" aria-hidden="true"></i>
                             </th>
                             <th>Batch Type</th>
                             <th>Training Type</th>
                             <th ng-click="asc='pname'; desc=!desc">
-                                Duration
+                                <span class="th-title-wrap">Duration</span>
                                 <i class="fa fa-sort-asc" aria-hidden="true"></i>
                                 <i class="fa fa-sort-desc" aria-hidden="true"></i>
                             </th>

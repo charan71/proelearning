@@ -11,45 +11,97 @@
     
     <!-- Partial Views -->
     <div class="main-content-wrapper">
-        <div class="dummy"></div>
         <div class="main-content">
             <div ng-controller="regStudents">
                 <h3>Registered Students List</h3>
-                <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-condensed">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Gender</th>
-                                <th>Country</th>
-                                <th>State</th>
-                                <th>Qualification</th>
-                                <th>Occupation</th>
-                                <th>Course</th>
-                                <th>Message</th>
-                                <th>Date &#x0026; Time</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="student in students track by $index">
-                                <td>{{ $index + 1 }}.</td>
-                                <td>{{ student.full_name }}</td>
-                                <td>{{ student.email }}</td>
-                                <td>{{ student.phone }}</td>
-                                <td>{{ student.gender | genderFilter }}</td>
-                                <td>{{ student.country }}</td>
-                                <td>{{ student.state }}</td>
-                                <td>{{ student.qualification }}</td>
-                                <td>{{ student.occupation }}</td>
-                                <td>{{ student.course }}</td>
-                                <td>{{ student.message | defaultValueFilter }}</td>
-                                <td>{{ student.date_time }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="table-wrapper">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr class="filterRow">
+                                    <th></th>
+                                    <th>
+                                        <input class="searchFilterBox" type="text" ng-model="searchStudent.full_name" size="12" placeholder="Search by Name">
+                                    </th>
+                                    <th>
+                                        <input class="searchFilterBox" type="text" ng-model="searchStudent.email" placeholder="Search by Email">
+                                    </th>
+                                    <th>
+                                        <input class="searchFilterBox" type="tel" ng-model="searchStudent.phone" size="12" placeholder="Search by Phone">
+                                    </th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>
+                                        <input class="searchFilterBox" type="text" ng-model="searchStudent.course" placeholder="Search by Course">
+                                    </th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>#</th>
+                                    <th ng-click="asc='full_name'; desc=!desc">
+                                        <span class="th-title-wrap">Name</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                    </th>
+                                    <th>Email</th>
+                                    <th ng-click="asc='phone'; desc=!desc">
+                                        <span class="th-title-wrap">Phone</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                    </th>
+                                    <th>Gender</th>
+                                    <th ng-click="asc='country'; desc=!desc">
+                                        <span class="th-title-wrap">Country</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                    </th>
+                                    <th ng-click="asc='state'; desc=!desc">
+                                        <span class="th-title-wrap">State</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                    </th>
+                                    <th>Qualification</th>
+                                    <th>Profession</th>
+                                    <th ng-click="asc='course'; desc=!desc">
+                                        <span class="th-title-wrap">Course</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                    </th>
+                                    <th>Message</th>
+                                    <th nowrap>Date &#x0026; Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr dir-paginate="student in students | orderBy:asc:desc | filter:searchStudent | itemsPerPage:20">
+                                    <td>{{ $index + 1 }}.</td>
+                                    <td nowrap>{{ student.full_name }}</td>
+                                    <td nowrap>{{ student.email }}</td>
+                                    <td nowrap>{{ student.phone }}</td>
+                                    <td nowrap>{{ student.gender | genderFilter }}</td>
+                                    <td nowrap>{{ student.country }}</td>
+                                    <td nowrap>{{ student.state }}</td>
+                                    <td nowrap>{{ student.qualification }}</td>
+                                    <td nowrap>{{ student.profession }}</td>
+                                    <td nowrap>{{ student.course }}</td>
+                                    <td>{{ student.message | defaultValueFilter }}</td>
+                                    <td nowrap>{{ student.date_time }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div class="text-center">
+                       <dir-pagination-controls
+                            max-size="5"
+                            direction-links="true"
+                            boundary-links="true" >
+                       </dir-pagination-controls>
+                    </div>
                 </div>
             </div>
         </div>

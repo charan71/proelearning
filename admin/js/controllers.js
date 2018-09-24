@@ -96,6 +96,9 @@ angular.module('controllers', ['ngRoute'])
 
 // Registered Students List
 .controller("regStudents", ['$scope', '$http', function($scope, $http) {
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchStudent = { full_name:"", email:"", phone:"", course:"" };
     $scope.students = [];
     $http({
         url: "./php/reg-students.php",
@@ -112,6 +115,9 @@ angular.module('controllers', ['ngRoute'])
 
 // Registered Trainers List
 .controller("regTrainers", ['$scope', '$http', function($scope, $http) {
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchTrainer = { full_name:"", email:"", phone:"", current_company:"" };
     $scope.trainers = [];
     $http({
         url: "./php/reg-trainers.php",
@@ -128,6 +134,9 @@ angular.module('controllers', ['ngRoute'])
 
 // Contacts List
 .controller("contactsList", ['$scope', '$http', function($scope, $http) {
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchContact = { full_name:"", email:"", phone:"", category:"" };
     $scope.contacts = [];
     $http({
         url: "./php/contacts-list.php",
@@ -144,6 +153,9 @@ angular.module('controllers', ['ngRoute'])
 
 // Course Suggestions List
 .controller("courseSuggestionList", ['$scope', '$http', function($scope, $http) {
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchSuggestedCourses = { full_name:"", email:"", phone:"", course_name:"" };
     $scope.suggestedCourses = [];
     $http({
         url: "./php/course-suggestion-list.php",

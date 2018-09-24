@@ -81,6 +81,7 @@ angular.module('ProELearning.controllers', [])
 /* Student Registration Controller */
 .controller("studentController", ['$scope', '$http', '$controller', '$timeout', function($scope, $http, $controller, $timeout) {
     $controller('QualificationListController', {$scope:$scope})
+    $controller('professionListController', {$scope:$scope})
 
     var orig_name = $scope.sname;
     var orig_email = $scope.email;
@@ -89,7 +90,7 @@ angular.module('ProELearning.controllers', [])
     var orig_country = $scope.country;
     var orig_state = $scope.state;
     var orig_qualification = $scope.qualification;
-    var orig_occupation = $scope.occupation;
+    var orig_profession = $scope.profession;
     var orig_course = $scope.course;
     var orig_message = $scope.message;
     $scope.dt = Date();
@@ -97,7 +98,7 @@ angular.module('ProELearning.controllers', [])
     $scope.fn_insertStudent = function() {
         $http.post(
             "./php/student_reg.php",
-            {'full_name': $scope.sname, 'email': $scope.email, 'phone': $scope.phone, 'gender': $scope.gender, 'country': $scope.country, 'state': $scope.state, 'qualification': $scope.qualification, 'occupation': $scope.occupation, 'course': $scope.course, 'message': $scope.message, 'date_time': $scope.dt}
+            {'full_name': $scope.sname, 'email': $scope.email, 'phone': $scope.phone, 'gender': $scope.gender, 'country': $scope.country, 'state': $scope.state, 'qualification': $scope.qualification, 'profession': $scope.profession, 'course': $scope.course, 'message': $scope.message, 'date_time': $scope.dt}
         ).then(function(data){
                 $scope.sname = angular.copy(orig_name);
                 $scope.email = angular.copy(orig_email);
@@ -106,7 +107,7 @@ angular.module('ProELearning.controllers', [])
                 $scope.country = angular.copy(orig_country);
                 $scope.state = angular.copy(orig_state);
                 $scope.qualification = angular.copy(orig_qualification);
-                $scope.occupation = angular.copy(orig_occupation);
+                $scope.profession = angular.copy(orig_profession);
                 $scope.course = angular.copy(orig_course);
                 $scope.message = angular.copy(orig_message);
                 $scope.studRegForm.$setUntouched();
@@ -130,7 +131,7 @@ angular.module('ProELearning.controllers', [])
         $scope.country = angular.copy(orig_country);
         $scope.state = angular.copy(orig_state);
         $scope.qualification = angular.copy(orig_qualification);
-        $scope.occupation = angular.copy(orig_occupation);
+        $scope.profession = angular.copy(orig_profession);
         $scope.course = angular.copy(orig_course);
         $scope.message = angular.copy(orig_message);
         $scope.studRegForm.$setUntouched();
@@ -146,6 +147,7 @@ angular.module('ProELearning.controllers', [])
     var orig_gender = $scope.gender;
     var orig_country = $scope.country;
     var orig_state = $scope.state;
+    var orig_currentCompany = $scope.currentCompany;
     var orig_workExp = $scope.workExp;
     var orig_trainingExp = $scope.trainingExp;
     var orig_techExp = $scope.techExp;
@@ -181,6 +183,7 @@ angular.module('ProELearning.controllers', [])
         formData.append('gender',$scope.gender);
         formData.append('country',$scope.country);
         formData.append('state',$scope.state);
+        formData.append('current_company',$scope.currentCompany);
         formData.append('work_exp',$scope.workExp);
         formData.append('training_exp',$scope.trainingExp);
         formData.append('technology_exp',$scope.techExp);
@@ -203,6 +206,7 @@ angular.module('ProELearning.controllers', [])
             $scope.gender = angular.copy(orig_gender);
             $scope.country = angular.copy(orig_country);
             $scope.state = angular.copy(orig_state);
+            $scope.currentCompany = angular.copy(orig_currentCompany);
             $scope.workExp = angular.copy(orig_workExp);
             $scope.trainingExp = angular.copy(orig_trainingExp);
             $scope.techExp = angular.copy(orig_techExp);
@@ -228,6 +232,7 @@ angular.module('ProELearning.controllers', [])
         $scope.gender = angular.copy(orig_gender);
         $scope.country = angular.copy(orig_country);
         $scope.state = angular.copy(orig_state);
+        $scope.currentCompany = angular.copy(orig_currentCompany);
         $scope.workExp = angular.copy(orig_workExp);
         $scope.trainingExp = angular.copy(orig_trainingExp);
         $scope.techExp = angular.copy(orig_techExp);
@@ -280,11 +285,60 @@ angular.module('ProELearning.controllers', [])
 /* Creating QualificationListController */
 .controller("QualificationListController", function($scope) {
     $scope.qualifications = [
-        {qualif:"BE"},
-        {qualif:"B.Technology"},
-        {qualif:"MCA"},
-        {qualif:"M.Tech"},
-        {qualif:"MS"}
+        {qualification: "B.A"},
+        {qualification: "B.Arch"},
+        {qualification: "BCA"},
+        {qualification: "B.B.A /  B.M.S"},
+        {qualification: "B.Com"},
+        {qualification: "B.Ed"},
+        {qualification: "BDS"},
+        {qualification: "BHM"},
+        {qualification: "B.Pharma"},
+        {qualification: "B.Sc"},
+        {qualification: "B.Tech / B.E."},
+        {qualification: "LLB"},
+        {qualification: "MBBS"},
+        {qualification: "Diploma"},
+        {qualification: "BVSC"},
+        {qualification: "BAMS"},
+        {qualification: "BHMS"},
+        {qualification: "B.El.Ed"},
+        {qualification: "B.P.Ed"},
+        {qualification: "B.Des."},
+        {qualification: "BFA"},
+        {qualification: "B.U.M.S"},
+        {qualification: "CA"},
+        {qualification: "CS"},
+        {qualification: "ICWA (CMA)"},
+        {qualification: "Integrated PG"},
+        {qualification: "LLM"},
+        {qualification: "M.A"},
+        {qualification: "M.Arch"},
+        {qualification: "M.Com"},
+        {qualification: "M.Ed"},
+        {qualification: "M.Pharma"},
+        {qualification: "MS / M.Sc(Science)"},
+        {qualification: "M.Tech"},
+        {qualification: "MBA / PGDM"},
+        {qualification: "MCA"},
+        {qualification: "Medical-MS / MD"},
+        {qualification: "PG Diploma"},
+        {qualification: "MVSC"},
+        {qualification: "MCM"},
+        {qualification: "MDS"},
+        {qualification: "MFA"},
+        {qualification: "M.Des."},
+        {qualification: "DM"},
+        {qualification: "M.Ch"},
+        {qualification: "Other"},
+    ];
+})
+
+/* Creating professionListController */
+.controller("professionListController", function($scope) {
+    $scope.professions = [
+        {profession: "Fresher"},
+        {profession: "Working Professional"},
     ];
 })
 
@@ -749,6 +803,7 @@ angular.module('ProELearning.controllers', [])
     };
 }])
 
+// Course Schedules Controller
 .controller("courseSchedules", ['$scope', function($scope) {
     $scope.asc = "courseName";
     $scope.desc = false;

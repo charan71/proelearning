@@ -233,24 +233,24 @@
 										</ul>
 									</li>
 									<li class="dropdown">
-										<a ng-href="oracle">Oracle <i class="fa fa-angle-right"></i></a>
+										<a ng-class="{active: isActive('/oracle')}" ng-href="oracle">Oracle <i class="fa fa-angle-right"></i></a>
 										<ul class="dropdown-menu">
-											<li><a ng-href="oracle/oracle-adf">Oracle ADF</a></li>
-											<li><a ng-href="oracle/oracle-dba">Oracle DBA</a></li>
-											<li><a ng-href="oracle/oracle-developer">Oracle Developer</a></li>
-											<li><a ng-href="oracle/oracle-ebs">Oracle EBS</a></li>
-											<li><a ng-href="oracle/oracle-golden-gate">Oracle Golden Gate</a></li>
-											<li><a ng-href="oracle/oracle-soa">Oracle SOA</a></li>
-											<li><a ng-href="oracle/weblogic">WebLogic</a></li>
-											<li><a ng-href="oracle/siebel-open-ui">Siebel Open UI</a></li>
-											<li><a ng-href="oracle/odi-12c">ODI 12C</a></li>
+											<li><a ng-class="{active: isActive('/oracle/oracle-adf')}" ng-href="oracle/oracle-adf">Oracle ADF</a></li>
+											<li><a ng-class="{active: isActive('/oracle/oracle-dba')}" ng-href="oracle/oracle-dba">Oracle DBA</a></li>
+											<li><a ng-class="{active: isActive('/oracle/oracle-developer')}" ng-href="oracle/oracle-developer">Oracle Developer</a></li>
+											<li><a ng-class="{active: isActive('/oracle/oracle-ebs')}" ng-href="oracle/oracle-ebs">Oracle EBS</a></li>
+											<li><a ng-class="{active: isActive('/oracle/oracle-golden-gate')}" ng-href="oracle/oracle-golden-gate">Oracle Golden Gate</a></li>
+											<li><a ng-class="{active: isActive('/oracle/oracle-soa')}" ng-href="oracle/oracle-soa">Oracle SOA</a></li>
+											<li><a ng-class="{active: isActive('/oracle/weblogic')}" ng-href="oracle/weblogic">WebLogic</a></li>
+											<li><a ng-class="{active: isActive('/oracle/siebel-open-ui')}" ng-href="oracle/siebel-open-ui">Siebel Open UI</a></li>
+											<li><a ng-class="{active: isActive('/oracle/odi-12c')}" ng-href="oracle/odi-12c">ODI 12C</a></li>
 										</ul>
 									</li>
 								</ul>
 							</li>
-							<li><a ng-href="course-schedules">Course Schedules</a></li>
-							<li><a ng-href="registration">Register</a></li>
-							<li><a ng-href="contact">Contact</a></li>
+							<li><a ng-class="{active: isActive('/course-schedules')}" ng-href="course-schedules">Course Schedules</a></li>
+							<li><a ng-class="{active: isActive('/registration')}" ng-href="registration">Register</a></li>
+							<li><a ng-class="{active: isActive('/contact')}" ng-href="contact">Contact</a></li>
 							<li><a role="button" class="btn-free-demo animated flash infinite" data-toggle="modal" data-target="#freeDemo">Free Demo</a></li>
 						</ul>
 

@@ -2053,6 +2053,10 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
 #course-schedules th[ng-click] {
     cursor: pointer;
 }
+.th-title-wrap {
+    display: block;
+    margin-right: 20px;
+}
 
 /*-- Maps --*/
 #map {

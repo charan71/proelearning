@@ -15,13 +15,13 @@
         $country = mysqli_real_escape_string($conn, $data->country);
         $state = mysqli_real_escape_string($conn, $data->state);
         $qualification = mysqli_real_escape_string($conn, $data->qualification);
-        $occupation = mysqli_real_escape_string($conn, $data->occupation);
+        $profession = mysqli_real_escape_string($conn, $data->profession);
         $course = mysqli_real_escape_string($conn, $data->course);
         $message = mysqli_real_escape_string($conn, $data->message);
         $phone = mysqli_real_escape_string($conn, $data->phone);
 		$dt = mysqli_real_escape_string($conn, $data->date_time);
         
-        $query = "INSERT INTO `students_list` (`full_name`, `email`, `gender`, `country`, `state`, `qualification`, `occupation`, `course`, `message`, `phone`, `date_time`) VALUES ('$name', '$email', '$gender', '$country', '$state', '$qualification', '$occupation', '$course', '$message', '$phone', '$dt')";
+        $query = "INSERT INTO `students_list` (`full_name`, `email`, `gender`, `country`, `state`, `qualification`, `profession`, `course`, `message`, `phone`, `date_time`) VALUES ('$name', '$email', '$gender', '$country', '$state', '$qualification', '$profession', '$course', '$message', '$phone', '$dt')";
         
         // Email from Student to Admin
         $to = "trainings@pro-elearning.com";
@@ -59,8 +59,8 @@
                             <td>$qualification</td>
                         </tr>
                         <tr>
-                            <th><b>Occupation</b></th>
-                            <td>$occupation</td>
+                            <th><b>Profession</b></th>
+                            <td>$profession</td>
                         </tr>
                         <tr>
                             <th><b>Mobile Number</b></th>

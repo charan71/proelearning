@@ -11,7 +11,6 @@
 
 	<!-- Partial Views -->
 	<div class="main-content-wrapper">
-		<div class="dummy"></div>
 		<div class="main-content">
 			<div class="dashboard" ng-controller="adminDashboardCtrl">
 				<h3>Dashboard</h3>
