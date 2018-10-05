@@ -76,7 +76,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr dir-paginate="student in students | orderBy:asc:desc | filter:searchStudent | itemsPerPage:20">
+                                <tr class="table-row" dir-paginate="student in students | orderBy:asc:desc | filter:searchStudent | itemsPerPage:20">
                                     <td>{{ $index + 1 }}.</td>
                                     <td nowrap>{{ student.full_name }}</td>
                                     <td nowrap>{{ student.email }}</td>

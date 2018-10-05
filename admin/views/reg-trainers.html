@@ -88,7 +88,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr dir-paginate="trainer in trainers | orderBy:asc:desc | filter:searchTrainer | itemsPerPage:20">
+                                <tr class="table-row" dir-paginate="trainer in trainers | orderBy:asc:desc | filter:searchTrainer | itemsPerPage:20">
                                     <td>{{ $index + 1 }}.</td>
                                     <td nowrap>{{ trainer.full_name }}</td>
                                     <td nowrap>{{ trainer.email }}</td>

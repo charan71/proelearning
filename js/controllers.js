@@ -20,9 +20,9 @@ angular.module('ProELearning.controllers', [])
         $('#carousel-main-generic').carousel(targ);
     };
     $scope.mainCarouselSlides = [
-        {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings &middot; Choice of Learning &middot; 24x7 Support", c_h4:"Never miss the chance", c_para:""},
-        {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build skills &middot; Work smarter", c_h4:"Take your skills to the next level", c_para:""},
-        {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare yourself for a never ending race", c_h4:"You are the mentor, the instructor and the path seeker of your career", c_para:""},
+        {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings &middot; Choice of Learning &middot; 24x7 Support", c_h4:"Never Miss The Chance", c_para:""},
+        {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build Skills &middot; Work Smarter", c_h4:"Take Your Skills To The Next Level", c_para:""},
+        {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare Yourself For A Never Ending Race", c_h4:"You Are The Mentor, The Instructor and The Path Seeker of Your Career", c_para:""},
         {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Online &middot; On-Site &middot; On-Demand", c_h4:"Learn At Your Convenience", c_para:""},
     ];
 
@@ -813,6 +813,25 @@ angular.module('ProELearning.controllers', [])
         { courseName: "FullStack", date: "26 July 2018", time: "9:30 PM", batchType: "Regular", tainingType: "Online", duration: "45", trainerName: "Vasu" },
         { courseName: "WebFocus", date: "28 July 2018", time: "7:30 AM", batchType: "Regular", tainingType: "Online", duration: "45", trainerName: "Praneeth" },
     ];
+}])
+
+// New Course Schedule
+.controller("courseSchedules", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchSchedule = { course_name:"", batch_type:"", training_type:"", trainer_name:"" };
+    $scope.courseSchedules = [];
+    $http({
+        url: "./admin/php/course-schedules-fetch.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.courseSchedules = response.data;
+    });
 }])
 
 ;

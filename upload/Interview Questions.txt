@@ -1,6 +1,0 @@
-Interview Questions
--------------------
-
-1. What is the difference between an interface and an abstract class?
-
-2. 

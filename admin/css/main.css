@@ -306,7 +306,7 @@ span.validation_styles {
     padding-left: 20px;
 }
 .alert {
-    position: absolute;
+    position: fixed;
     top: 70px;
     right: 20px;
 }
@@ -497,5 +497,30 @@ footer p {
     padding: 2px;
     width: 100%;
     border: 1px solid transparent;
+}
+
+/*-- Update & Delete Buttons --*/
+.btn-container {
+    position: relative;
+}
+.updateDelete {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+    position: absolute;
+    right: 0;
+}
+.updateDelete button {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+}
+.updateDelete .fa {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.updateDelete .fa.fa-trash-o {
+    color: #dc3545;
+}
+.updateDelete .fa.fa-pencil-square-o {
+    color: #007bff;
 }
 

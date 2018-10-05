@@ -67,7 +67,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr dir-paginate="contact in contacts | orderBy:asc:desc | filter:searchContact | itemsPerPage:20">
+								<tr class="table-row" dir-paginate="contact in contacts | orderBy:asc:desc | filter:searchContact | itemsPerPage:20">
 									<td>{{ $index + 1 }}.</td>
 									<td nowrap>{{ contact.full_name }}</td>
 									<td nowrap>{{ contact.email }}</td>

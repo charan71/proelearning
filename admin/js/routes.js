@@ -22,7 +22,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Admin Dashboard - Pro-elearning",
+        title: "Admin Dashboard - Pro-elearning Administrator",
 		templateUrl: "views/admin-dashboard.php",
 		controller: "adminDashboardCtrl"
 	})
@@ -34,7 +34,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Admin Dashboard - Pro-elearning",
+        title: "Admin Dashboard - Pro-elearning Administrator",
 		templateUrl: "views/admin-dashboard.php",
 		controller: "adminDashboardCtrl"
 	})
@@ -46,6 +46,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
+		title: "Profile - Pro-elearning Administrator",
 		templateUrl: "views/profile.html",
 		controller: "profileCtrl"
 	})
@@ -57,7 +58,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Registered Students - Pro-elearning",
+        title: "Registered Students - Pro-elearning Administrator",
         templateUrl: "views/reg-students.html",
         controller: "regStudents"
     })
@@ -69,7 +70,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Registered Trainers - Pro-elearning",
+        title: "Registered Trainers - Pro-elearning Administrator",
         templateUrl: "views/reg-trainers.html",
         controller: "regTrainers"
     })
@@ -81,7 +82,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Contacts List - Pro-elearning",
+        title: "Contacts List - Pro-elearning Administrator",
         templateUrl: "views/contacts-us-list.html",
         controller: "contactsList"
     })
@@ -93,7 +94,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Course Suggestion List - Pro-elearning",
+        title: "Course Suggestion List - Pro-elearning Administrator",
         templateUrl: "views/course-suggestion-list.html",
         controller: "courseSuggestionList"
     })
@@ -105,7 +106,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Free Demos List - Pro-elearning",
+        title: "Free Demos List - Pro-elearning Administrator",
         templateUrl: "views/free-demos-list.html",
         controller: "freeDemosList"
     })
@@ -117,7 +118,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Subscribers List - Pro-elearning",
+        title: "Subscribers List - Pro-elearning Administrator",
         templateUrl: "views/subscribers-list.html",
         controller: "subscribersList"
     })
@@ -129,9 +130,21 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				}
 			},
 		},
-        title: "Course Upload - Pro-elearning",
+        title: "Course Upload - Pro-elearning Administrator",
         templateUrl: "views/course-upload.html",
         controller: "courseUploadCtrl"
+    })
+    .when("/new-course-schedule", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/admin-login');
+				}
+			},
+		},
+        title: "New Course Schedule - Pro-elearning Administrator",
+        templateUrl: "views/new-course-schedule.html",
+        controller: "newCourseScheduleCtrl"
     })
     .otherwise({
 		resolve: {

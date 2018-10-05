@@ -13,32 +13,76 @@
 	<div class="main-content-wrapper">
 		<div class="main-content">
 			<div ng-controller="freeDemosList">
-				<h3>Free Demos List</h3>
-				<div class="table-responsive">
-					<table class="table table-striped table-bordered table-condensed">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th>Name</th>
-								<th>Email</th>
-								<th>Phone</th>
-								<th>Free Demos Course</th>
-								<th>Message</th>
-								<th>Date &#x0026; Time</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr ng-repeat="course in freeDemoCourses track by $index">
-								<td>{{ $index + 1 }}.</td>
-								<td>{{ course.full_name }}</td>
-								<td>{{ course.email }}</td>
-								<td>{{ course.phone }}</td>
-								<td>{{ course.course_name }}</td>
-								<td>{{ course.message }}</td>
-								<td>{{ course.date_time }}</td>
-							</tr>
-						</tbody>
-					</table>
+				<h3>Free Demo Requests</h3>
+				<div class="table-wrapper">
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<tr class="filterRow">
+									<th></th>
+									<th>
+										<input class="searchFilterBox" type="text" ng-model="freeDemoCourse.full_name" size="12" placeholder="Search by Name">
+									</th>
+									<th>
+										<input class="searchFilterBox" type="text" ng-model="freeDemoCourse.email" placeholder="Search by Email">
+									</th>
+									<th>
+										<input class="searchFilterBox" type="text" ng-model="freeDemoCourse.phone" size="12" placeholder="Search by Phone">
+									</th>
+									<th>
+										<input class="searchFilterBox" type="text" ng-model="freeDemoCourse.course_name" size="18" placeholder="Search by Course Name">
+									</th>
+									<th></th>
+									<th></th>
+								</tr>
+								<tr>
+									<th>#</th>
+									<th nowrap ng-click="asc='full_name'; desc=!desc">
+										<span class="th-title-wrap">Name</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+									</th>
+									<th nowrap ng-click="asc='email'; desc=!desc">
+										<span class="th-title-wrap">Email</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+									</th>
+									<th nowrap ng-click="asc='phone'; desc=!desc">
+										<span class="th-title-wrap">Phone</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+									</th>
+									<th nowrap ng-click="asc='course_name'; desc=!desc">
+										<span class="th-title-wrap">Free Demos Course</span>
+                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+									</th>
+									<th nowrap>Message</th>
+									<th nowrap>Date &#x0026; Time</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="table-row" dir-paginate="course in freeDemoCourses | orderBy:asc:desc | filter:freeDemoCourse | itemsPerPage:20">
+									<td>{{ $index + 1 }}.</td>
+									<td nowrap>{{ course.full_name }}</td>
+									<td nowrap>{{ course.email }}</td>
+									<td nowrap>{{ course.phone }}</td>
+									<td nowrap>{{ course.course_name }}</td>
+									<td>{{ course.message }}</td>
+									<td nowrap>{{ course.date_time }}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- Pagination -->
+                    <div class="text-center">
+                       <dir-pagination-controls
+                            max-size="5"
+                            direction-links="true"
+                            boundary-links="true" >
+                       </dir-pagination-controls>
+                    </div>
 				</div>
 			</div>
 		</div>

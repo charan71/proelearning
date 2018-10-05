@@ -1019,10 +1019,16 @@ textarea {
     resize: vertical;
 }
 
-.table tr th {
+.table thead {
     background-color: #0077ff;
     color: #fff;
 }
+.table th {
+    position: relative;
+    padding: 8px 5px;
+    color: #fff;
+}
+
 .table tr td {
     font-size: 12px;
 }
@@ -1039,14 +1045,14 @@ textarea {
 .table thead tr th, .table tbody tr td {
     vertical-align: middle !important;
 }
-#filterRow th {
-    color: #333;
+.filterRow th {
+    color: #333 !important;
 }
 .searchFilterBox {
     width: 100%;
     border: 1px solid transparent;
 }
-#filterRow th select {
+.filterRow th select {
     padding: 2px;
     width: 100%;
     border: 1px solid transparent;
@@ -1361,6 +1367,9 @@ input, select, textarea {
 /***** Course Pages *****/
 .breadcrumb>li {
     font-size: 12px;
+}
+.breadcrumb>li+li:before {
+    content: "\279c";
 }
 .courseDetailsStrip {
     background: #f5f5f5;
@@ -2036,21 +2045,21 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
     position: relative;
     border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
-#course-schedules th i.fa {
+.table th i.fa {
     position: absolute;
     right: 10px;
     opacity: 0.4;
 }
-#course-schedules th:hover i.fa {
+.table th:hover i.fa {
     opacity: 0.65;
 }
-#course-schedules th i.fa.fa-sort-asc {
+.table th i.fa.fa-sort-asc {
     top: 10px;
 }
-#course-schedules th i.fa.fa-sort-desc {
+.table th i.fa.fa-sort-desc {
     bottom: 10px;
 }
-#course-schedules th[ng-click] {
+.table th[ng-click] {
     cursor: pointer;
 }
 .th-title-wrap {

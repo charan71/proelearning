@@ -21,15 +21,17 @@
     <div class="row">
         <div class="table-wrapper" ng-controller="courseSchedules">
             <div class="table-responsive">
-                <table class="table table-striped" id="course-schedules">
+                <table class="table table-striped" id="courses-schedules">
                     <thead>
-                        <tr id="filterRow">
+                        <tr class="filterRow">
                             <th></th>
-                            <th colspan="3">
-                                <input class="searchFilterBox" type="text" ng-model="searchCourse.courseName" placeholder="Search a Course">
-                            </th>
                             <th>
-                                <select ng-model="searchCourse.batchType">
+                                <input class="searchFilterBox" type="text" ng-model="searchSchedule.course_name" placeholder="Search a Course">
+                            </th>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <select ng-model="searchSchedule.batch_type">
                                     <option value="">All Batch Types</option>
                                     <option>Regular</option>
                                     <option>Weekend</option>
@@ -37,7 +39,7 @@
                                 </select>
                             </th>
                             <th>
-                                <select ng-model="searchCourse.tainingType">
+                                <select ng-model="searchSchedule.training_type">
                                     <option value="">All Training Types</option>
                                     <option>Online</option>
                                     <option>On-site</option>
@@ -49,41 +51,29 @@
                         </tr>
                         <tr>
                             <th>#</th>
-                            <th ng-click="asc='courseName'; desc=!desc">
+                            <th nowrap ng-click="asc='courseName'; desc=!desc">
                                 <span class="th-title-wrap">Course Name</span>
                                 <i class="fa fa-sort-asc" aria-hidden="true"></i>
                                 <i class="fa fa-sort-desc" aria-hidden="true"></i>
                             </th>
-                            <th ng-click="asc='date'; desc=!desc">
-                                <span class="th-title-wrap">Start Date</span>
-                                <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                            </th>
-                            <th ng-click="asc='time'; desc=!desc">
-                                <span class="th-title-wrap">Time</span>
-                                <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                            </th>
-                            <th>Batch Type</th>
-                            <th>Training Type</th>
-                            <th ng-click="asc='pname'; desc=!desc">
-                                <span class="th-title-wrap">Duration</span>
-                                <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                            </th>
-                            <th>Trainer Name</th>
+                            <th nowrap>Start Date</th>
+                            <th>Time</th>
+                            <th nowrap>Batch Type</th>
+                            <th nowrap>Training Type</th>
+                            <th>Duration</th>
+                            <th nowrap>Trainer Name</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr dir-paginate="schedule in courseSchedules | orderBy:asc:desc | filter:searchCourse | itemsPerPage:10">
+                        <tr class="table-row" dir-paginate="schedule in courseSchedules | orderBy:asc:desc | filter:searchSchedule | itemsPerPage:10">
                             <td>{{ $index + 1 }}.</td>
-                            <td>{{ schedule.courseName }}</td>
-                            <td>{{ schedule.date }}</td>
-                            <td>{{ schedule.time }}</td>
-                            <td>{{ schedule.batchType }}</td>
-                            <td>{{ schedule.tainingType }}</td>
-                            <td>{{ schedule.duration }} hrs</td>
-                            <td>Mr. {{ schedule.trainerName }}</td>
+                            <td nowrap>{{ schedule.course_name }}</td>
+                            <td nowrap>{{ schedule.start_date | date:'dd MMM yyyy' }}</td>
+                            <td nowrap>{{ schedule.start_date | date:'hh:mm a' }}</td>
+                            <td nowrap>{{ schedule.batch_type }}</td>
+                            <td nowrap>{{ schedule.training_type }}</td>
+                            <td nowrap>{{ schedule.duration }} hrs</td>
+                            <td nowrap>Mr. {{ schedule.trainer_name }}</td>
                         </tr>
                     </tbody>
                 </table>

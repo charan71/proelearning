@@ -9,6 +9,10 @@
             $rootScope.title = current.$$route.title;
             $document[0].body.scrollTop = $document[0].documentElement.scrollTop = 0;
         });
+
+        $rootScope.typeOf = function(value) {
+            return typeof value;
+        };
     }])
 
     ;
