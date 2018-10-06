@@ -1059,6 +1059,13 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     controller: "contactController",
                     label: "Contact Us"
                 })
+                    .when("/careers",
+                          {
+                    title: "Careers - Pro-elearning",
+                    templateUrl: "views/careers.html",
+                    controller: "careersController",
+                    label: "Careers"
+                })
                     .when("/sitemap",
                           {
                     title: "Sitemap - Pro-elearning",

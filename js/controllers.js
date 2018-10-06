@@ -834,5 +834,24 @@ angular.module('ProELearning.controllers', [])
     });
 }])
 
+// Careers
+.controller("careersController", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchSchedule = { course_name:"", batch_type:"", training_type:"", trainer_name:"" };
+    $scope.courseSchedules = [];
+    $http({
+        url: "./admin/php/course-schedules-fetch.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.courseSchedules = response.data;
+    });
+}])
+
 ;
 }(angular));

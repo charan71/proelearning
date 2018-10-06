@@ -1656,7 +1656,6 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
     box-shadow: inset 0 0 20px 0px #666;
 }
 .brochure-abt a .fa.fa-download {
-    /* color: #689f38; */
     font-size: 20px;
 }
 /*-- //About us Page --*/
@@ -1670,7 +1669,6 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
 }
 .course-strip-inner {
     padding: 20px 20px;
-    /* box-shadow: 0px 0px 20px 0px #ccc; */
     border: 1px solid #ddd;
     border-radius: 4px;
 }
@@ -1678,15 +1676,14 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
     background-color: #fff;
     box-shadow: 0px 0px 20px 2px #ccc;
 }
-.course-info {
-    margin-left: 250px;
-    display: block;
+@media (min-width: 768px) {
+    .course-info {
+        margin-left: 250px;
+        display: block;
+    }
 }
 .course-info p {
     color: #999;
-    /* white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
 }
 .c-d-l  {
     padding-left: 0;
@@ -2096,4 +2093,50 @@ h2 {
     border: 0;
     border-top: 1px solid #8bc34a;
     text-decoration: none;
+}
+
+/* Careers */
+.job-post-wrapper {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: block;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Dummy Slide */
+.main-slide {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    background: linear-gradient(145deg, #fff, #0077ff);
+}
+.main-slide .slide-wrapper .slide-txt {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-slide .slide-wrapper .slide-img img {
+    width: 400px;
+    height: auto;
+    left: 16%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-slide .slide-wrapper .slide-txt * {
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
 }
