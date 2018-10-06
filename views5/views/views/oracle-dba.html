@@ -1,0 +1,463 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/oracle-dba.jpg" alt="Oracle-DBA-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Oracle DBA Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>This course is suitable for any student or working professional who wants to set the career as Database administrator. Basic knowledge of Linux is required before starting with this course.</p>
+                    </div>
+                </div>
+
+                <!-- Versions -->
+                <div class="courseVersions">
+                    <h3>Versions</h3>
+                    <ul>
+                        <li>Oracle 9i, 10g & 11g</li>
+                    </ul>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>The Oracle grid architecture pools large numbers of servers, storage, and networks into a flexible, on-demand computing resource for enterprise computing needs. The grid computing infrastructure continually analyzes demand for resources and adjusts supply accordingly.</p>
+                    <p>For example, you could run different applications on a grid of several linked database servers. When reports are due at the end of the month, the database administrator could automatically provision more servers to that application to handle the increased demand.</p>
+                    <p>DBAs aren't dead, however, they do need to adopt new methods and embrace technology that allows them to expand. I read a comment from a Sr. DBA that said nothing has changed in this space for the last 10yrs. That's a sad commentary. You have to keep your skills relevant to the technology as it changes, or it will leave you behind.</p>
+                    <p>Learning Oracle DBA is not easy, you have to spend a lot of time on practice and explore morr and more. Simulate yiur own scenarios, troubleshoot it and find various ways to improve it.</p>
+                    <p>Be curious in getting knowledge in Oracle.</p>
+                    <p>Learn until you see Oracle Architecture in dreams.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Basics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Database management systems and Database</li>
+									<li>Introduction to DBA and Tasks of an Oracle DBA</li>
+									<li>Basic UNIX and UNIX for Oracle DBA</li> 
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Database Architecture <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Database Architecture</li>
+									<li>Control Files, Redo Log Files</li>
+									<li>Tablespaces and Datafiles, Segments, Extents, and Blocks</li>
+									<li>Oracle Instance Management and Oracle Memory Structures, Oracle Processes</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Oracle Database Structure and Storage <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Storage Structures</li>
+									<li>Tablespace Management (Permanent, Temporary, UNDO)</li>
+									<li>Data Files, Redo Log files, Archived log files, Temp files, spfile, pfile</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. User and Object Management, Security <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating a Database User, Database User Accounts</li>
+									<li>Creating Profiles and Users, Authenticating Users</li>
+									<li>Privileges: System and Object</li>
+									<li>Assigning Quota to Users, Assigning Roles to Users</li>
+									<li>Managing Schema Objects (Tables, Indexes, Partitioned Tables and Indexes, Views, Sequences and Synonyms)</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Installation <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Optimal Flexible Architecture (OFA)</li>
+									<li>Oracle Universal Installer</li>
+									<li>Prerequisite Checks</li>
+									<li>Installation of Oracle Database Software</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Creating Oracle Database  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Database Configuration Assistant (DBCA) Overview</li>
+									<li>Creating a Database (Manual and DBCA)</li>
+									<li>Passwords and Storage</li>
+									<li>File Locations and Backup Recovery</li>
+									<li>Content and Initialization Parameters</li>
+									<li>Other Actions with DBCA</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Database Management  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Starting and Stopping Database </li>
+									<li>Initialization Parameter Files</li>
+									<li>Viewing the Alert Log</li>
+									<li>Net Services</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Backup and Recovery <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Backup and Recovery Concepts, Backup and Recovery Issues</li>
+									<li>Physical and Logical Backups</li>
+									<li>Types of Physical Backups (HOT and COLD) --Manual and RMAN Backups</li>
+									<li>Recovery Scenarios using RMAN and Manual backups</li>
+									<li>Database Instance Cloning</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. Monitoring Oracle <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Dictionary and v$views</li>
+									<li>Table and Index monitoring</li>
+									<li>Instance or Database monitoring</li>
+									<li>Oracle Environment and work load monitoring</li>
+									<li>Space Management</li>
+									<li>Monitoring alert log, common database errors and resolution</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. Performance Monitoring and Tuning <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Database Statistics, Explain plan, indexing</li>
+									<li>AWR reports, ADDM reports, ASH reports and analyzing the reports</li>
+									<li>SQL Tracing and TKPROF</li>
+									<li>Memory Advisors, Segment Advisors</li>
+									<li>SQL Tuning and Access Advisors</li>
+									<li>Wait Events in Oracle, Locking, Parallelism</li>
+									<li>Monitoring performance on the Server - UNIX</li>
+									<li>How to monitor and react to performance issues</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eleven" aria-expanded="false" aria-controls="collapseNine">11. Oracle DBA Utilities  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Export/Import, Datapump</li>
+									<li>SQL *Loader</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#twelve" aria-expanded="false" aria-controls="collapseNine">12. Database Maintenance <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="twelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+									<li>Database Version Upgrade</li>
+									<li>Patching Database</li>
+									<li>Migrating Data and Databases (includes TTS)</li>
+									<li>Re-organizing tables, indexes, Flashback</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>High Availablility (ASM, RAC and DATAGUARD)</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#thirteen" aria-expanded="false" aria-controls="collapseNine">13. ASM (Automatic Storage Management) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="thirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to ASM</li>
+									<li>ASM Instance Architecture</li>
+									<li>Installation and Configuration of ASM</li>
+									<li>Oracle Managed Files (OMF)</li>
+									<li>ASM Administration, Management and Maintenance</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourrteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#fourteen" aria-expanded="false" aria-controls="collapseNine">14. RAC (Real Application Clustering) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="fourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourrteen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Introduction to RAC</li>
+									<li>RAC Architecture</li>
+									<li>Monitoring and Administration of RAC-crsctl, srvctl, oifcfg, etc</li>
+									<li>Maintenance in RAC</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFivteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#fivteen" aria-expanded="false" aria-controls="collapseNine">15. Dataguard (Standby Database or DR) Setup <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="fivteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFivteen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Introduction to Dataguard</li>
+									<li>Setup of Dataguard or Standby database on Single Instance</li>
+									<li>Monitoring and administration of Dataguard</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSixteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#sixteen" aria-expanded="false" aria-controls="collapseNine">16. Other Miscellaneous Topics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="sixteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Comparison of various Oracle Versions</li>
+									<li>Oracle 10g and 11g new features</li>
+									<li>ASSM, AMM, Recycle bin, Flash Back and Flash Recovery Area</li>
+									<li>Opening an Oracle SR</li>
+									<li>Scheduling job in UNIX and Oracle</li>
+									<li>Daily DBA management tasks</li>
+									<li>Database configuration for OLTP and Data warehouse Environments</li>
+									<li>Materialized Views Replication</li>
+									<li>Capacity Planning</li>
+									<li>Any other missing miscellaneous topics</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/W5vILcBNn_8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>This is the nice place to learn Oracle DBA online course to gain knowledge with well faculties and lab Facility.</p>
+                            <h4 class="pull-right">&#x2015; Ahmad Khan</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>I took Oracle DBA Training here. It is the best institute we can gain more knowledge on the subject.</p>
+                            <h4 class="pull-right">&#x2015; Jamarion</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

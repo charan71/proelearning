@@ -1,0 +1,259 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/webfocus.jpg" alt="Webfocus-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">WebFocus Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>WebFOCUS is an information retrieval tool created by Information Builders and used in business intelligence. The foundation of this tool is the WebFocus query and reporting engine, which enables users to gain access to numerous databases and file systems through a Web browser. WebFOCUS is considered to be a business intelligence platform, which provides information to employees, managers, partners, analysts and consumers.</p>
+                    <p>WebFOCUS emerged as an extension to Information Builders' EDA middleware products. This suite provides support for Web uses as well as optional enhancements for report scheduling and distribution.</p>
+                    <p>WebFOCUS delivers interactive information to a wide range of users and customers through solutions including dashboards, ad hoc reporting and portable analytics. The main advantages of WebFOCUS include:</p>
+                    <p>
+						<ul>
+							<li>1. The ability to monitor and track company performance</li>
+							<li>2. Access to analytics and analytical tools</li>
+							<li>3. Data integrity solutions and consistent throughput</li>
+							<li>4. Unifying integration infrastructure that accesses, cleanses, reconciles and prepares data for business intelligence use</li>
+						</ul>
+					</p>
+                    <p>Use this learning roadmap to identify the courses we recommend, based on your WebFOCUS product version currently in use and your user role. Essential courses are identified as “Core”, with suggested courses identified as “Supplemental.” If you need assistance determining the best combination of courses for you, please contact your Education Account Executive</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. WebFOCUS Overview <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>WebFOCUS Enterprise Information Platform</li>
+									<li>What WebFOCUS Can Do For You</li>
+									<li>WebFOCUS Environments</li>
+									<li>WebFOCUS in a Global Marketplace</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. WebFOCUS and the Web <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>How WebFOCUS and the Web Work Together</li>
+									<li>How WebFOCUS Components Work Together</li>
+									<li>Reliable, Scalable WebFOCUS Architecture</li>
+									<li>Distributing Processing Among Platforms</li>
+									<li>WebFOCUS Security and the Web</li>
+									<li>For More Information</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Reporting With WebFOCUS <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Accessing Data for Reporting</li>
+									<li>Sample Reports</li>
+									<li>Parameter-driven Reports</li>
+									<li>Graphical Reports</li>
+									<li>Compound Reports</li>
+									<li>Financial Reports</li>
+									<li>Excel Reports</li>
+									<li>Free-Form Reports</li>
+									<li>Drill-down Reports</li>
+									<li>Resource Layout Painter</li>
+									<li>Deferred Reporting</li>
+									<li>Navigating a Long Report</li>
+									<li>For More Information</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Developing Applications <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Managed Reporting Applications</li>
+									<li>Customizing the Managed Reporting User Interface</li>
+									<li>Enterprise Information Portal Integration</li>
+									<li>Self-Service Applications</li>
+									<li>Designing a Reporting Application</li>
+									<li>Designing a Reporting and Data Update Application</li>
+									<li>Doing More With WebFOCUS Maintain</li>
+									<li>For More Information</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/IONpe0fMH4Y?start=5" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I am very much satisfied with WebFocus training. The price is really affordable. Tutor is with us all the time and making every concept understandable and provided assignments after every topic makes me more comfortable in learning.</p>
+                            <h4 class="pull-right">&#x2015; Vaishnavi</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>Trainer explanation and classes were clear and helped me create different dashboard I needed for my job presentation and everything went almost smoothly.</p>
+                            <h4 class="pull-right">&#x2015; Reyansh</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

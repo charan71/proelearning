@@ -1,0 +1,407 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/weblogic.jpg" alt="Weblogic-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">WebLogic Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>BEA Systems' WebLogic is a server software application that runs on a middle tier, between back-end databases and related applications and browser-based thin clients. WebLogic is a leading e-commerce online transaction processing (OLTP) platform, developed to connect users in a distributed computing environment and to facilitate the integration of mainframeapplications with distributed corporate data and applications.</p>
+                    <p>WebLogic server is based on Java 2 Platform, Enterprise Edition (J2EE), the standard platform used to create Java-based multi-tier enterprise applications. J2EE platform technologies were developed through the efforts of BEA Systems and other vendors in collaboration with the main developer, Sun Microsystems. Because J2EE applications are standardized modules, WebLogic can automate many system-level tasks that would otherwise have demanded programming time.</p>
+                    <p>The main features of WebLogic server include connectors that make it possible for any legacy application on any client to interoperate with server applications, Enterprise JavaBean (EJB) components, resource pooling, and connection sharing that make applications very scalable. An administration console with a user interface makes management tasks more efficient and features such as Secure Sockets Layer (SSL) support for the encryption of data transmissions, as well as authentication and authorization mechanisms, make applications and transactions secure.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Overview of Java/J2EE Technologies <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>J2EE Architecture & Components</li>
+									<li>The Need of Middleware Technologies</li>
+									<li>About Webserver and Application Server</li>
+									<li>Environments - Dev, Testing(SIT, UAT), Pre Prod & Prod</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to Oracle WebLogic Server</li>
+									<li>Importance of WebLogic Server</li>
+									<li>Weblogic Server Terminology (Domains, Admin Server, Machine, Managed Servers)</li>
+									<li>WebLogic 11 g / 12 c Features</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Installation & Configuration <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>WebLogic Server Installation & Configuration on Windows / Linux </li>
+									<li>Modes of Installation</li>
+									<li>Domain creation and configuration</li>
+									<li>Configuration Wizard</li>
+									<li>The Administrative Console</li>
+									<li>Creation Managed Servers</li>
+									<li>Starting & Stopping Admin Server, Managed Servers </li>
+									<li>About NodeManager</li>
+									<li>Starting & Stopping Admin Server, Managed Servers through NodeManager</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Overview of Deployment Process <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Overview of Deployment</li>
+									<li>Deployment Methods</li>
+									<li>Managing Application Server Life Cycle states</li>
+									<li>Deploy WebApplication & Testing</li>
+									<li>Deploy Application to Servers & Clusters</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Clustering <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to cluster</li>
+									<li>Benefits of cluster</li>
+									<li>Basic & Multi-tier Cluster diagrams</li>
+									<li>Unicast & Multi-cast </li>
+									<li>Creation & configuration Cluster</li>
+									<li>Deploy Application to Cluster</li>
+									<li>Session Replication</li>
+									<li>Clustering using WebServer Configuration</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. JDBC & DataSource Configuration <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Introduction to JDBC & DataSource</li>
+									<li>Types of Jdbc Drivers</li>
+									<li>Creating JDBC & DataSource</li>
+									<li>Purpose of Connection Pooling</li>
+									<li>JNDI</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. JMS (Java Messaging Service <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to JMS</li>
+									<li>Messaging Types</li>
+									<li>Creating JMS Servers,modules,Queue & Topic</li>
+									<li>Creating Connection Factory</li>
+									<li>Deploying JMS Application</li>
+									<li>Monitoring Messages in Queue & Topic</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Security <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Security Fundamentals</li>
+									<li>Authentication & Authorization</li>
+									<li>Weblogic Security</li>
+									<li>Security Realms</li>
+									<li>Managing Users & Groups</li>
+									<li>SSL Security</li>
+									<li>SSL Mechanism & Configuration</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. TroubleShooting <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>About WebLogic Server Logs</li>
+									<li>Thread Dumps</li>
+									<li>Heap Dumps</li>
+									<li>Log Message Format</li>
+									<li>Techniques to Troubleshoot and fix the OOM, Memory Leak, ServerHang, Server Crash Problems </li>
+									<li>About Heap Memory</li>
+									<li>GC(Garbage Collrector)</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. Weblogic Performance and Tuning <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Operating System Tuning</li>
+									<li>Java Virtual Machine(JVM) Tuning</li>
+									<li>Monitoring Threads</li>
+									<li>Techniques to reduce Application down time</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eleven" aria-expanded="false" aria-controls="collapseNine">11. WLST (Weblogic Scripting Tool) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Introduction to WLST</li>
+									<li>WLST Commands</li>
+									<li>Running Scripts</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#twelve" aria-expanded="false" aria-controls="collapseNine">12. Real Time Environment <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="twelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+									<li>Weblogic Admin Responsibilities</li>
+									<li>About Ticketing & Monitoring tools</li>
+									<li>ITIL(Information Technology Infrastructure Library) Process</li>
+									<li>Types of Tickets</li>
+									<li>Severity Levels</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#thirteen" aria-expanded="false" aria-controls="collapseNine">13. Monitoring <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="thirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>JVM</li>
+									<li>Cluster</li>
+									<li>Connection Pools</li>
+									<li>JMS</li>
+									<li>Thread pool</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0tgNbfSouUU?start=36" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>WebLogic training is the most practical and easy way to learn covering all topics.</p>
+                            <h4 class="pull-right">&#x2015; Michelle</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>WebLogic trainer has an excellent practical and industrial knowledge which helped us understand the real scenarios.</p>
+                            <h4 class="pull-right">&#x2015; Lavanya</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

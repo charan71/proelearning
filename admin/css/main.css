@@ -187,7 +187,7 @@ span.validation_styles {
 /*-- side nav --*/
 .side-nav {
     width: 240px;
-    height: 100%;
+    height: 92.5vh;
     position: fixed;
     padding-top: 20px;
     background-color: #fafafa;
@@ -245,8 +245,9 @@ span.validation_styles {
 }
 .content-grid {
     background-color: #F5F5F5;
-    display: inline-block;
     padding: 20px;
+    width: 100%;
+    display: inline-block;
 }
 .form-control {
     border-radius: 0;

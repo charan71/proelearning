@@ -1,0 +1,628 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/obiee.jpg" alt="OBIEE-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">OBIEE Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <!-- Modes of Training -->
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Before learning this course you need to have knowledge on Oracle DB.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>OBIEE Training makes you an expert in building the applications by leveraging capabilities of Building Physical Layer Of A Repository, Testing And Validating Repository, Oracle BI Presentation Services, Server Architecture and etc.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Data warehouse Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Data warehouse</li>
+                                    <li>Data mart</li>
+                                    <li>Basics of Data Warehousing</li>
+                                    <li>What is OLTP and OLAP?</li>
+                                    <li>Difference between OLTP and OLAP</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Dimensional Modeling Overview <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Dimensional Modeling</li>
+                                    <li>Dimensional table</li>
+                                    <li>Fact table</li>
+                                    <li>Aggregate table</li>
+                                    <li>Star schema</li>
+                                    <li>Snowflake schema</li>
+                                    <li>Star schema Vs. Snowflake schema</li>
+                                    <li>Fact Vs. Dimension table</li>
+                                    <li>Fact Vs. Aggregate Table</li>
+                                    <li>Types of Facts</li>
+                                    <li>Types of Fact tables</li>
+                                    <li>Types of Dimensions</li>
+                                    <li>Level of Granularity</li>
+                                    <li>Grain of fact</li>
+                                    <li>Slowly Changing Dimensions ( SCD )</li>
+                                    <li>Normalization</li>
+                                    <li>DE normalization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Repository Basics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Oracle BI Server Architecture</li>
+                                    <li>Oracle BI Presentation Service</li>
+                                    <li>Oracle BI Server</li>
+                                    <li>Oracle BI Repository</li>
+                                    <li>Oracle BI Administration Tool</li>
+                                    <li>Physical Layer</li>
+                                    <li>Object in the Physical Layer</li>
+                                    <li>Business Model and Mapping Layer</li>
+                                    <li>Objects in the BMM</li>
+                                    <li>Business Model Mappings</li>
+                                    <li>Measures</li>
+                                    <li>Presentation Layer</li>
+                                    <li>Presentation Layer Mappings</li>
+                                    <li>Repository Modes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Building the Physical Layer of the Repository <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Physical Layer</li>
+                                    <li>Physical Layer Objects</li>
+                                    <li>Database Object (General Propertices, Features)</li>
+                                    <li>Connection Pool</li>
+                                    <li>Schema Folder</li>
+                                    <li>Physical Table and Properties</li>
+                                    <li>Physical Table: Alias</li>
+                                    <li>Joins</li>
+                                    <li>Implementation Steps</li>
+                                    <li>Creating the Alias Tables</li>
+                                    <li>Define Keys and Joins</li>
+                                    <li>Defining Foreign Key joins</li>
+                                    <li>Using the join Manager</li>
+                                    <li>Design Tips for the Physical Layer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Building BMM Layer <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Object in BMM</li>
+                                    <li>Logical Table</li>
+                                    <li>Logical Table Sources</li>
+                                    <li>Logical Table Source: column Mapping</li>
+                                    <li>Logical Columns</li>
+                                    <li>Logical Primary keys</li>
+                                    <li>Logical joins</li>
+                                    <li>Measures</li>
+                                    <li>Implementation Steps
+                                        <ol>
+                                            <li>Create the Logical Business Model</li>
+                                            <li>Create the Logical Tables and Columns</li>
+                                            <li>Define the Logical Joins</li>
+                                            <li>Modify the Logical Tables and Columns</li>
+                                            <li>Define Measuers</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Building Physical Layer <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Subject areas</li>
+                                    <li>Presentation Tables</li>
+                                    <li>Presentation Columns</li>
+                                    <li>Presentation Layer Mappings</li>
+                                    <li>Nesting Presentation Table</li>
+                                    <li>Implementation Steps
+                                        <ol>
+                                            <li>Create new subject area</li>
+                                            <li>Rename tables</li>
+                                            <li>Rename columns</li>
+                                            <li>Delete columns</li>
+                                            <li>Reorder columns</li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. Testing the Validating Repository <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Consistency check</li>
+                                    <li>Consistency check manager</li>
+                                    <li>Query Logging</li>
+                                    <li>Setting log levels</li>
+                                    <li>Log levels</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Managing Logical Table Sources <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Adding the multiple sources to Logical table sources</li>
+                                    <li>Implementation Steps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Adding the Calculations to a Fact <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Creating Calculation Measures by Using Existing Logical Columns</li>
+                                    <li>Creating Calculation Measures by Using Physical Columns</li>
+                                    <li>Add New Measures to the Presentation Layer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. Working with Logical Dimensions <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Logical Dimensions (Types)</li>
+                                    <li>Level-Based Measures</li>
+                                    <li>Creating a Level-Based Logical Dimension</li>
+                                    <li>Parent-Child Logical Dimensions</li>
+                                    <li>Creating a Parent-Child Logical Dimension</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Using Aggregates <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Steps to Implement Aggregate Navigation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. Using Partitions and Fragments <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Partition (by Fact, by Value, by Level)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#apps" aria-expanded="false" aria-controls="collapseNine">13. Using Repository Variables <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="apps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Variable Types</li>
+                                    <li>Repository Variables</li>
+                                    <li>Static Repository Variables</li>
+                                    <li>Dynamic Repository Variables</li>
+                                    <li>Session Variables</li>
+                                    <li>System Session Variables</li>
+                                    <li>Non-System Session Variables</li>
+                                    <li>Initialization Blocks</li>
+                                    <li>Implementation Steps</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#dc" aria-expanded="false" aria-controls="collapseNine">14. Modeling Time Series Data <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="dc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Time Dimensions</li>
+                                    <li>Time Series Functions</li>
+                                    <li>Time Series Grains</li>
+                                    <li>Steps to Model Time Series Data</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFifteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#df" aria-expanded="false" aria-controls="collapseNine">15. Modeling Many-to-Many Relationships <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="df" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Steps to Model a Bridge Table</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSixteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#cv" aria-expanded="false" aria-controls="collapseNine">16. Setting an Implicit Fact Column <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="cv" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Steps to Configure an Implicit Fact Column</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeventeen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#giot" aria-expanded="false" aria-controls="collapseNine">17. Importing Metadata from Multidimensional Data Sources <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="giot" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeventeen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Multidimensional Versus Relational Data Sources</li>
+                                    <li>Creating a Multidimensional Business Model</li>
+                                    <li>Horizontal Federation</li>
+                                    <li>Vertical Federation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEighteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#trigger" aria-expanded="false" aria-controls="collapseNine">18. Security <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="trigger" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEighteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Managing Oracle BI Security</li>
+                                    <li>Oracle BI Default Security Model</li>
+                                    <li>Default Security Realm</li>
+                                    <li>Default Authentication Providers</li>
+                                    <li>Default Users and Groups</li>
+                                    <li>Default Application Roles and Polices</li>
+                                    <li>Default Security Settings in the Repository</li>
+                                    <li>Create Groups</li>
+                                    <li>Create Group Hierarchies</li>
+                                    <li>Create Users</li>
+                                    <li>Assign Users to Groups</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNineteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#fm" aria-expanded="false" aria-controls="collapseNine">19. Cache Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="fm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNineteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Advantages of Caching</li>
+                                    <li>Costs of Caching</li>
+                                    <li>Query Cache: Architecture</li>
+                                    <li>Monitoring and Managing the Cache</li>
+                                    <li>Cache Management Techniques</li>
+                                    <li>Using Fusion Middleware Control to Configure Caching</li>
+                                    <li>Using NQSConfig.ini, </li>
+                                    <li>Setting Caching and Cache Persistence for Tables </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwenty">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ctwh" aria-expanded="false" aria-controls="collapseNine">20. Managing Usage Tracking <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ctwh" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwenty">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Steps to Enable Usage Tracking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyone">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tp" aria-expanded="false" aria-controls="collapseNine">21. Setting Up and Using the Multiuser Development Environment <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyone">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Oracle BI Repository Development Process</li>
+                                    <li>SCM Three-Way Merge Process</li>
+                                    <li>Oracle BI Repository Three-Way Merge Process</li>
+                                    <li>Steps to Set Up an Oracle BI MUDE</li>
+                                    <li>Making Changes in an Oracle BI MUDE</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentytwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nip" aria-expanded="false" aria-controls="collapseNine">22. Configuring Write Back in Analyses <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nip" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentytwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Steps to Configure Write Back</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentythree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#pdc" aria-expanded="false" aria-controls="collapseNine">23. Performing a Patch Merge <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="pdc" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentythree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Patch Merge</li>
+                                    <li>Creating a Patch</li>
+                                    <li>Applying a Patch</li>
+                                    <li>Steps to Perform a Patch Merge</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#uatu" aria-expanded="false" aria-controls="collapseNine">24. Tools <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="uatu" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Using Administration Tool Utilities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Xa66FFXRBIM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I have learnt a lot of new things that I didn't know. I would like to get a printed copy of what has been said in the presentation so that I can refer back to it.</p>
+                            <h4 class="pull-right">&#x2015; Bo</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>It was good course for sure. If someone is really looking for complete exposure of OBIEE (end to end) in order to begin with his career in Oracle technology, I can tell you that you can be definitely in a comfortable zone of after completing this course.</p>
+                            <h4 class="pull-right">&#x2015; Vandana</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

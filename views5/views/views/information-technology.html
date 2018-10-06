@@ -1,0 +1,71 @@
+<div class="container-fluid">
+    <div class="row">
+        <img class="img-responsive" src="./images/parallax-images/information-technology.jpg" alt="Information-Technology-Pro-eLearning">
+    </div>
+</div>
+
+<div class="container">
+    <!-- Breadcrumbs -->
+    <div class="row hidden-xs">
+        <div ng-include="'views/breadcrumbs.html'"></div>
+    </div>
+
+    <div class="row mb-50">
+        <div class="page-title">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="text-center mt-0 mb-0">Information Technology</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Courses List Display -->
+    <div class="row" ng-controller="CourseCardsController">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <div class="course-strip mb-20" ng-repeat="course in ccInfoTech">
+                <a ng-href="{{ course.ccInfoTechURL }}">
+                    <div class="course-strip-inner transition">
+                        <div class="course-img pull-left">
+                            <img class="img-responsive" src="./images/course-thumbnails/{{ course.ccInfoTechImage }}" alt="{{ course.ccInfoTechAlt }}">
+                        </div>
+                        <div class="course-info">
+                            <h3 class="mt-10">{{ course.ccInfoTechTitle }}</h3>
+                            <p clamp="1">{{ course.ccInfoTechDesc }}</p>
+                            <div class="course-dtls">
+                                <ul class="c-d-l course-dtls-list-left mb-0 pull-left">
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i> Duration: {{ course.ccInfoTechDuration }}h</li>
+                                    <!-- <li><i class="fa fa-users" aria-hidden="true"></i> Enrolled: 126</li> -->
+                                </ul>
+                                <ul class="c-d-l course-dtls-list-right mb-0 pull-right">
+                                    <li>{{ course.ccInfoTechPrice | currency : currencySymbol : 0 }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <div class="col-sm-4 col-md-3 col-lg-3" ng-repeat="course in cc_info_tech">
+                <div class="thumbnail">
+                    <a ng-href="{{course.cc_info_tech_imageLink}}">
+                        <img class="img-responsive center-block" src="./images/course-thumbnails/{{course.cc_info_tech_image}}">
+                    </a>
+                    <div class="course-caption">
+                        <h4>{{course.cc_info_tech_title}}</h4>
+                        <p clamp="2">{{course.cc_info_tech_desc}}</p>
+                        <a ng-href="{{course.cc_info_tech_readMoreLink}}" class="btn btn-primary" role="button">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-3 col-sm-hidden col-xs-hidden">
+            <h4 class="text-center">New Demos</h4>
+        </div>
+    </div> -->
+        

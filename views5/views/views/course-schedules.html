@@ -1,0 +1,92 @@
+<div class="container-fluid">
+    <div class="row">
+        <img class="img-responsive" src="./images/parallax-images/courses-schedule.jpg" alt="Course-Schedules-Pro-eLearning">
+    </div>
+</div>
+    
+<div class="container">
+    <!-- Breadcrumbs -->
+    <div class="row hidden-xs">
+        <div ng-include="'views/breadcrumbs.html'"></div>
+    </div>
+    
+    <div class="row mt-10 mb-30">
+        <div class="page-title">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="text-center mt-0 mb-0">Courses Schedule</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="table-wrapper" ng-controller="courseSchedules">
+            <div class="table-responsive">
+                <table class="table table-striped" id="courses-schedules">
+                    <thead>
+                        <tr class="filterRow">
+                            <th></th>
+                            <th>
+                                <input class="searchFilterBox" type="text" ng-model="searchSchedule.course_name" placeholder="Search a Course">
+                            </th>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <select ng-model="searchSchedule.batch_type">
+                                    <option value="">All Batch Types</option>
+                                    <option>Regular</option>
+                                    <option>Weekend</option>
+                                    <option>Fastrack</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select ng-model="searchSchedule.training_type">
+                                    <option value="">All Training Types</option>
+                                    <option>Online</option>
+                                    <option>On-site</option>
+                                    <option>On-demand</option>
+                                </select>
+                            </th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th nowrap ng-click="asc='courseName'; desc=!desc">
+                                <span class="th-title-wrap">Course Name</span>
+                                <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                            </th>
+                            <th nowrap>Start Date</th>
+                            <th>Time</th>
+                            <th nowrap>Batch Type</th>
+                            <th nowrap>Training Type</th>
+                            <th>Duration</th>
+                            <th nowrap>Trainer Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row" dir-paginate="schedule in courseSchedules | orderBy:asc:desc | filter:searchSchedule | itemsPerPage:10">
+                            <td>{{ $index + 1 }}.</td>
+                            <td nowrap>{{ schedule.course_name }}</td>
+                            <td nowrap>{{ schedule.start_date | date:'dd MMM yyyy' }}</td>
+                            <td nowrap>{{ schedule.start_date | date:'hh:mm a' }}</td>
+                            <td nowrap>{{ schedule.batch_type }}</td>
+                            <td nowrap>{{ schedule.training_type }}</td>
+                            <td nowrap>{{ schedule.duration }} hrs</td>
+                            <td nowrap>Mr. {{ schedule.trainer_name }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="text-center">
+               <dir-pagination-controls
+                    max-size="5"
+                    direction-links="true"
+                    boundary-links="true" >
+               </dir-pagination-controls>
+            </div>
+        </div>
+    </div>
+</div>

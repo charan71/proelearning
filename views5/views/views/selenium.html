@@ -1,0 +1,517 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/selenium.jpg" alt="Selenium-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Selenium Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic Knowledge in Software, manual testing and Core Java</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>Selenium is a portable software-testing framework for web applications. Selenium provides a playback (formerly also recording) tool for authoring tests without the need to learn a test scripting language (Selenium IDE). It also provides a test domain-specific language (Selenese) to write tests in a number of popular programming languages, including C#, Groovy, Java, Perl, PHP, Python, Ruby and Scala. The tests can then run against most modern web browsers. Selenium deploys on Windows, Linux, and macOS platforms. It is open-source software, released under the Apache 2.0 license: web developers can download and use it without charge.</p>
+                    <p>Selenium IDE is a complete integrated development environment (IDE) for Selenium tests. It is implemented as a Firefox Add-On and available on Chrome Store recently, and allows recording, editing, and debugging tests. It was previously known as Selenium Recorder. Selenium-IDE was originally created by Shinya Kasatani and donated to the Selenium project in 2006. It is little-maintained and is compatible with Selenium RC, which was deprecated. </p>
+                    <p>Scripts may be automatically recorded and edited manually providing autocompletion support and the ability to move commands around quickly. Scripts are recorded in Selenese, a special test scripting language for Selenium. Selenese provides commands for performing actions in a browser (click a link, select an option), and for retrieving data from the resulting pages.</p>
+                    <p>The 2.x version of the Selenium IDE for Firefox stopped working after the Firefox 55 upgrade and has been replaced by Selenium IDE 3.x. However users can run the older Selenium IDE on some older Firefox versions (pre-Firefox 55) or try other alternative solutions</p>
+                    <p>Selenium WebDriver is the successor to Selenium RC. Selenium WebDriver accepts commands (sent in Selenese, or via a Client API) and sends them to a browser. This is implemented through a browser-specific browser driver, which sends commands to a browser and retrieves results. Most browser drivers actually launch and access a browser application (such as Firefox, Chrome, Internet Explorer, Safari, or Microsoft Edge); there is also an HtmlUnit browser driver, which simulates a browser using the headless browser HtmlUnit.</p>
+                    <p>Unlike in Selenium 1, where the Selenium server was necessary to run tests, Selenium WebDriver does not need a special server to execute tests. Instead, the WebDriver directly starts a browser instance and controls it. However, Selenium Grid can be used with WebDriver to execute tests on remote systems (see below). Where possible, WebDriver uses native operating system level functionality rather than browser-based JavaScript commands to drive the browser. This bypasses problems with subtle differences between native and JavaScript commands, including security restrictions. </p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Software Testing Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Software Testing </li>
+									<li>Project vs. Product </li>
+									<li>Error / Fault / Failure </li>
+									<li>Why Software has defects </li>
+									<li>Seven principles of testing</li>
+									<li>Cost of fixing defects - Most common defects </li>
+									<li>Verification vs. Validation </li>
+									<li>Objectives of Testing - Fundamental Test Process </li>
+									<li>Role of a Tester</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Software Development Life Cycle (SDLC) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Software Development Process</li>
+									<li> SDLC Phases </li>
+									<li> SDLC Models
+										<ul>
+											<li>Waterfall Model </li>
+											<li>RAD Model </li>
+											<li>Prototype Model </li>
+											<li>Spiral Model </li>
+											<li>V Model </li>
+											<li>Agile Model </li>
+										</ul>
+									</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Software Testing Methodologies <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li> Static Testing
+										<ul>
+											<li>Reviews - All details </li>
+											<li>Types of Reviews </li>
+											<li>White Box Testing </li>
+										</ul>
+									</li>
+									<li>Black Box Testing
+										<ul>
+											<li>System Testing </li>
+											<li>UAT
+												<ul>
+													<li>Alpha Testing </li>
+													<li>Beta Testing </li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>Black Box Test Design Techniques
+										<ul>
+											<li>ECP</li>
+											<li>BVA</li>
+										</ul>
+									</li>
+									<li>Grey Box Testing </li>
+									<li>Use Case Testing</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Life Cycle <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Software Testing Life Cycle (STLC)
+										<ol>
+											<li>Requirement Analysis</li>
+											<li>Test Planning(RTM)</li>
+											<li>Test Case Development</li>
+											<li>Test Environment Setup</li>
+											<li>Test Execution</li>
+											<li>Test Cycle Closure - Criteria for Test Closure </li>
+										</ol>
+									</li>
+									<li>STLC Stages & Activities Involved</li>
+									<li>SDLC Vs STLC </li>
+									<li>Who does testing? - Roles & Responsibilities</li>
+									<li>Standard for Software Test Documentation
+										<ol>
+											<li>Test Plan </li>
+											<li>Test Design Specification </li>
+											<li>Test Case Specification </li>
+											<li>Test Procedure Specification</li>
+											<li>Test Item Transmittal </li>
+											<li>Test Log </li>
+											<li>Test Incident Summary </li>
+											<li>Test Summary Report</li>
+										</ol>
+									</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Types of Testing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Functional testing
+										<ul>
+											<li>Unit testing</li>
+											<li>Integration testing</li>
+											<li>Smoke/Sanity testing</li>
+											<li>System testing</li>
+											<li>Regression testing</li>
+											<li>User Acceptance testing</li>
+											<li>Globalization testing</li>
+											<li>Localization testing</li>
+										</ul>
+									</li>
+									<li>Non-Functional testing
+										<ul>
+											<li>Performance testing
+												<ul>
+													<li>Stress testing</li>
+													<li>Volume testing</li>
+													<li>Load testing</li>
+													<li>Endurance testing</li>
+													<li>Scalability testing</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li>Compatibility testing</li>
+									<li>Data Migration testing</li>
+									<li>Data Conversion testing</li>
+									<li>Security/Penetration testing</li>
+									<li>Usability testing</li>
+									<li>Install/Uninstall testing </li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Defect / Bug Life Cycle & Defect Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Introduction</li>
+									<li>Defect Tracking</li>
+									<li>Defect Life Cycle</li>
+									<li>Defect Types</li>
+									<li>Defect Categorization
+										<ul>
+											<li>Guidelines on deciding Severity of a Defect</li>
+											<li>Guidelines on deciding Priority of a Defect </li>
+										</ul>
+									</li>
+									<li>Cost of Quality</li>
+									<li>Defect Management Tools
+										<ul>
+											<li>HP's Quality center</li>
+											<li>Process of raising defect in QC</li>
+											<li>Mozilla's Bugzilla </li>
+										</ul>
+									</li>
+                               </ul>
+                               <p><b>Workshop (3 Days):</b> Provided Sample requirement document to write test cases - Test case template, Requirement Traceability matrix Template, Defect template are provided.</p>
+                               <p>Demo application is given to test, with Mapping to the Requirement Document. Test case execution is performed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Quality Center (ALM) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Objectives</li>
+										<li>Gcase etting Started
+											<ul>
+												<li>New Account Request</li>
+												<li>New Project Request</li>
+											</ul>
+									</li>
+									<li>Installation Process
+									<ul>
+										<li>Pre-requisites: ALM 11.0</li>
+										<li>Installation Steps</li>
+										<li>Logging in and Setting Passwords</li>
+										<li>Changing Password</li>
+									</ul>
+									</li>
+									<li>What has Changed
+										<ul>
+											<li>New Requirements Types and Workflow: Refer to RCoE Training</li>
+											<li>User Interface has changed</li>
+											<li>PMO Projects grouped by Business Domain</li>
+											<li>Releases Functionality: Program/Project Release Folder/Structure</li>
+											<li>Reports Configuration has changed</li>
+											<li>New Features:  Libraries and Baselines</li>
+											<li>Version Control</li>
+											<li>TFS Synchronization</li>
+										</ul>
+									</li>
+									<li>Test Execution
+										<ul>
+											<li>Tester Roles & Responsibilities</li>
+											<li>Test Plan: Creating and Revising Scripts</li>
+											<li>Test Lab: Executing and recording results; linking defects</li>
+										</ul>
+									</li>
+									<li>Defects
+										<ul>
+											<li>Logging and retesting defects</li>
+										</ul>
+									</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Selenium - along with Hands-on</h2>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Java Basics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Installing Java</li>
+									<li>Installing Eclipse</li>
+									<li>Features of Java</li>
+									<li>Why Java for Selenium</li>
+									<li>Data Types</li>
+									<li>Conditional Statement & Loops</li>
+									<li>Functions</li>
+									<li>Variables and types</li>
+									<li>OOPs concepts</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. Selenium IDE Topics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Installing Selenium IDE</li>
+									<li>Recording Script</li>
+									<li>Running, Pausing and debugging Script</li>
+									<li>Running a script line by line</li>
+									<li>Inserting commands in between script</li>
+									<li>XPATHS and installing firebug to get XPATHS</li>
+									<li>Wait Commands</li>
+									<li>Verification and Assertions</li>
+									<li>Should I use verify or assertion</li>
+									<li>Creating Test Suites.</li>
+									<li>Executing Test Suites.</li>
+									<li>Editing Test Suites.</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. Selenium WebDriver Topics Along with JUNIT & TestNG <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Introduction to WebDriver</li>
+									<li>Downloading and configuring webDriver</li>
+									<li>Integration of WebDriver in Eclipse</li>
+									<li>WebDriver Java Doc</li>
+									<li>Implementing Classes of WebDriver</li>
+									<li>Object Recognization</li>
+									<li>WebDriver commands</li>
+									<li>Writing WebDriver scripts.</li>
+									<li>Working with External files.</li>
+									<li>Parameterizing the test scripts.</li>
+									<li>Creating Object Repository.</li>
+									<li>Integrating webDriver scripts with junit framework</li>
+									<li>Integrating WebDriver scripts with testNG framework.</li>
+									<li>Creating Data driven webdrivertestNG framework.</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eleven" aria-expanded="false" aria-controls="collapseNine">11. TestNG  Topics (collaborated with WebDriver while teaching) <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+									<li>What is TestNg</li>
+									<li>Installing TestNg in Eclipse</li>
+									<li>TestNg annotations</li>
+									<li>Understanding usage of annotations</li>
+									<li>Running a Test in TestNg</li>
+									<li>Batch Running of tests in TestNg</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pKmXjKzxlwA?start=20" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I took Selenium course with having an excellent learning and good facilities. I gained good knowledge.</p>
+                            <h4 class="pull-right">&#x2015; Karishma</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>Very good place to learn selenium online training. Faculty explains well clearly clarifies the doubts patiently. I am very thankful to him.</p>
+                            <h4 class="pull-right">&#x2015; Sundeep</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

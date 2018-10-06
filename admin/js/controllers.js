@@ -405,4 +405,109 @@ angular.module('controllers', ['ngRoute'])
     };
 }])
 
+// Job Postings
+.controller("jobPostingsUploadCtrl", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
+    /*-- Fetching all scheduled courses and display in table --*/
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchSchedule = { course_name:"", batch_type:"", training_type:"", trainer_name:"" };
+
+    function displaySchedules() {
+        $scope.courseSchedules = [];
+        $http({
+            url: "./php/course-schedules-fetch.php",
+            method: "POST",
+            data: "",
+            headers: {
+                "Content-Type":"application/x-www-form-urlencoded"
+            }
+        })
+        .then(function(response) {
+            $scope.courseSchedules = response.data;
+        });
+    }
+    displaySchedules();
+
+    /*-- Insert New Course Schedule --*/
+    var orig_courseName = $scope.course_name;
+    var orig_courseScheduleDate = $scope.course_schedule_date;
+    var orig_batchType = $scope.batch_type;
+    var orig_trainingType = $scope.training_type;
+    var orig_duration = $scope.duration;
+    var orig_trainerName = $scope.trainer_name;
+    $scope.dt = Date();
+    $scope.btnName = "Insert";
+
+    $scope.fn_insertNewSchedules = function() {
+        $http.post(
+            "./php/course-schedules.php",
+            {'sno': $scope.sno, 'course_name': $scope.course_name, 'start_date': $scope.course_schedule_date, 'batch_type': $scope.batch_type, 'training_type': $scope.training_type, 'duration': $scope.duration, 'trainer_name': $scope.trainer_name, 'date_time': $scope.dt, 'btnName': $scope.btnName}
+            )
+            .then(function(response) {
+            $scope.course_name = angular.copy(orig_courseName);
+            $scope.course_schedule_date = angular.copy(orig_courseScheduleDate);
+            $scope.batch_type = angular.copy(orig_batchType);
+            $scope.training_type = angular.copy(orig_trainingType);
+            $scope.duration = angular.copy(orig_duration);
+            $scope.trainer_name = angular.copy(orig_trainerName);
+            $scope.courseSchedulesForm.$setUntouched();
+            $scope.successMessage = "Updated successfully!!";
+            $timeout(function() {
+                $scope.successMessage = false;
+            }, 5000);
+            $scope.btnName = "Insert";
+            displaySchedules();
+        }, function(error) {
+            $scope.errorMessage = "Sorry. Please try again!!";
+        });
+    };
+
+    /*-- Reset all form fields and form to its initial state --*/
+    $scope.fn_reset = function() {
+        $scope.course_name = angular.copy(orig_courseName);
+        $scope.course_schedule_date = angular.copy(orig_courseScheduleDate);
+        $scope.batch_type = angular.copy(orig_batchType);
+        $scope.training_type = angular.copy(orig_trainingType);
+        $scope.duration = angular.copy(orig_duration);
+        $scope.trainer_name = angular.copy(orig_trainerName);
+        $scope.courseSchedulesForm.$setUntouched();
+    };
+
+    /*-- Delete selected course schedule --*/
+    $scope.fn_deleteSchedule = function(sno) {
+        $http({
+            url: "./php/delete-schedule.php",
+            method: "POST",
+            data: {'sno': sno}
+        })
+        .then(function() {
+            $("#confirmDialog").modal("hide");
+            $scope.successMessage = "Record deleted successfully!";
+            $timeout(function() {
+                $scope.successMessage = false;
+            }, 5000);
+            displaySchedules();
+        }, function(error) {
+            $scope.errorMessage = "Failed to delete record!";
+        })
+    };
+
+    /*-- Edit selected course schedule --*/
+    $scope.fn_editSchedule = function(sno, course_name, start_date, batch_type, training_type, duration, trainer_name) {
+        $scope.sno = sno;
+        $scope.course_name = course_name;
+        $scope.course_schedule_date = start_date;
+        // Convert milliseconds to DateTime Format
+        $scope.msToDate = $filter('date')($scope.course_schedule_date, 'dd-MMM-yyyy h:mm a');
+        // Converting Date String to Date Object
+        $scope.dtStringToObj = new Date($scope.msToDate);
+        $scope.course_schedule_date = $scope.dtStringToObj;
+        $scope.batch_type = batch_type;
+        $scope.training_type = training_type;
+        $scope.duration = duration;
+        $scope.trainer_name = trainer_name;
+        $scope.btnName = "Update";
+    };
+}])
+
 ;

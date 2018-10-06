@@ -1,0 +1,499 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/oracle-adf.jpg" alt="Oracle-ADF-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Oracle ADF Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic java and j2ee knowledge.Learn about JSF lifecycle would be really good.</p>
+						<p>As you are coming from forms and report. Your pl/sql concepts would be clear</p>
+                    </div>
+                </div>
+
+                <!-- Versions -->
+                <div class="courseVersions">
+                    <h3>Versions</h3>
+                    <ul>
+                        <li>Oracle ADF 10.1.x & ADF 11.1.x</li>
+                        <li>JDeveloper 10g & 11g</li>
+                        <li>JSF 1.2</li>
+                    </ul>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <h4>What is Oracle ADF?</h4>
+                    <p>Built on top of the MVC-based JavaServer Faces framework, Oracle Application Development Framework (ADF) forms the foundation for WebCenter Portals components and services. ADF provides unified access to back-end technologies like databases, web services, XML, CSV, BPEL, and many more. Furthermore, ADF provides data binding to connect UI with back-end data controls. Out of the box, ADF provides more than 100 data aware, JSF view components.</p>
+                    <p>Oracle Application Development Framework (Oracle ADF) is an end-to-end application framework that builds on Java EE standards and open-source technologies to simplify and accelerate implementing enterprise applications. Oracle ADF is suitable for enterprise developers who want to create applications that search, display, create, modify, and validate data using web, mobile, and desktop interfaces.</p>
+                    <h4>How can you use Oracle ADF?</h4>
+                    <p>You can use the whole Oracle ADF framework to create an application, or you can use parts of the framework in combination with other technologies. Throughout this guide, applications that contain any ADF technologies are generally referred to as ADF applications. Web applications that incorporate ADF technologies throughout the business service, model, controller, and view layers are referred to as Fusion web applications.</p>
+                    <h4>How this course helps you?</h4>
+                    <p>Oracle ADF Online Training at SMC will help you understand the complete Oracle ADF Development Life Cycle using ADF Business Components (Model), ADF TaskFlow (Controller) and ADF Faces (UI). Participants will get hands on experience by building a Sample Application using Oracle ADF. Our team of well-qualified and certified trainers would be demonstrating numerous small examples which will help you understand and implement the concepts of Oracle ADF. Participants will also get to understand how Oracle ADF is being used in Oracle Fusion Applications. Our Oracle ADF Training would focus and ensure that the participants are comfortable using ADF for Application Development.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Introduction to Fusion and ADF <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Describing Fusion architecture</li>
+									<li>Describing the ADF technology stack (MVC)</li>
+									<li>More about ADF</li>
+									<li>Getting Started with JDeveloper</li>
+									<li>Listing JDeveloper benefits for application development</li>
+									<li>Using the features of the JDeveloper IDE</li>
+									<li>Defining IDE preferences</li>
+									<li>Creating applications, projects, and connections in JDeveloper</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Modeling the Database Schema <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating a database diagram</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Building a Data Model with ADF Business Components <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Building a Data Model with ADF Business Components</li>
+									<li>Types of ADF Business Components</li>
+									<li>Creating Business Components from tables</li>
+									<li>Testing the data mode</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Querying and Persisting Data <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Using View Objects</li>
+									<li>Using Entity Objects to persist data</li>
+									<li>Synchronizing Entity Objects with database table changes</li>
+									<li>Creating Associations</li>
+									<li>Creating updatable View Objects</li>
+									<li>Creating Master-Detail relationships</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Exposing Data to Clients <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating Application Modules</li>
+									<li>Using Master-Detail View Objects in Application Modules</li>
+									<li>Managing Business Components transactions</li>
+									<li>Abstracting Business Services with ADF Model</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Programatically Customizing Data Services <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Generating Java classes</li>
+									<li>Programmatically modifying the behavior of Entity Objects</li>
+									<li>Programmatically modifying the behavior of View Objects</li>
+									<li>Adding service methods to an Application Module</li>
+									<li>Using Client APIs</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Validating User Input <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Understanding Validation Options: Database, Data Model, or UI</li>
+									<li>Handling validation errors</li>
+									<li>Using Groovy expressions in validation</li>
+									<li>Using programmatic validation</li>
+									<li>Troubleshooting ADF BC Applications</li>
+									<li>Troubleshooting the Business Service</li>
+									<li>Troubleshooting the UI</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Understanding UI Technologies <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Describing the use of Web browsers and HTML</li>
+									<li>Describing the function of Servlets and JSPs</li>
+									<li>Defining JavaServer Faces</li>
+									<li>Explaining the JSF component architecture and JSF component types</li>
+									<li>Explaining the purpose of backing beans and managed beans</li>
+									<li>Describing the JSF life cycle</li>
+									<li>Explaining how ADF Faces augments the JSF life cycle</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. Binding UI Components to Data <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating a JSF page</li>
+									<li>Adding UI Components to a page</li>
+									<li>Describing the ADF Model layer</li>
+									<li>Using Expression Language in Data Bindings</li>
+									<li>Using a Page Definition file</li>
+									<li>Examining Data Binding objects and metadata files</li>
+									<li>Binding Existing components to data</li>
+									<li>Running and testing the page</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. Planning the User Interface <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+								   <li>Describing the Model-View-Controller design pattern</li>
+								   <li>Differentiating between bounded and unbounded task flows</li>
+								   <li>Creating and converting task flows</li>
+								   <li>Defining control flows</li>
+								   <li>Defining global navigation</li>
+								   <li>Creating routers for conditional navigation</li>
+								   <li>Calling methods and other task flows</li>
+								   <li>Implementing validation in the user interface</li>
+								   <li>Adding Functionality to Pages</li>
+								   <li>Internationalizing the user interface</li>
+								   <li>Using component facets</li>
+								   <li>Displaying tabular data in tables</li>
+								   <li>Displaying hierarchical data in trees</li>
+								   <li>Displaying text or media with icons and images</li>
+								   <li>Defining search forms and display results</li>
+								   <li>Displaying data graphically</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eleven" aria-expanded="false" aria-controls="collapseNine">11. Implementing Navigation on Pages <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eleven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Using ADF Faces Navigation Components</li>
+									<li>Using Buttons and Links</li>
+									<li>Using Menus for navigation</li>
+									<li>Using Breadcrumbs</li>
+									<li>Using a Train component</li>
+									<li>Achieving the Required Layout</li>
+									<li>Using complex layout components</li>
+									<li>Explaining how to u se ADF Faces skins</li>
+									<li>Using dynamic page layout</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#twelve" aria-expanded="false" aria-controls="collapseNine">12. Ensuring Reusability <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="twelve" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+									<li>Designing for reuse</li>
+									<li>Using Task Flow templates</li>
+									<li>Creating and Using Page templates</li>
+									<li>Creating and Using Declarative components</li>
+									<li>Creating and Using Page Fragments</li>
+									<li>Deciding which type of reusable component to use</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#thirteen" aria-expanded="false" aria-controls="collapseNine">13. Responding to Application Events <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="thirteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+									<li>Using Managed Beans</li>
+									<li>Coordinating JSF and ADF Lifecycles</li>
+									<li>Using Phase and Event Listeners</li>
+									<li>Using Action listeners and methods</li>
+									<li>Understanding additional AJAX events</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourrteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#fourteen" aria-expanded="false" aria-controls="collapseNine">14. Implementing Transactional Capabilities <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="fourteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourrteen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Handling Transactions with ADF BC</li>
+									<li>Sharing Data Controls</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFivteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#fivteen" aria-expanded="false" aria-controls="collapseNine">15. Implementing Security in ADF BC Applications <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="fivteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFivteen">
+                            <div class="panel-body">
+                               <ul>
+									<li>Understanding ADF Security Framework</li>
+									<li>Deploying ADF BC Applications</li>
+									<li>Creating Deployment Profiles</li>
+									<li>Configuring Deployment Options</li>
+									<li>Deploying an application with JDeveloper</li>
+									<li>Deploying an application with WebLogic Server / OAS Administration Console</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSixteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#sixteen" aria-expanded="false" aria-controls="collapseNine">16. PSQUERY <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="sixteen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Implementing PSQUERY</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+					<div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeventeen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seventeen" aria-expanded="false" aria-controls="collapseNine">17. Reports <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seventeen" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeventeen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Crystal Reports</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3szacPozBOE?start=8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>The Trainer is very experienced, knowledgeable, very patient and helpful. My trainer gives very simple examples to explain Oracle ADF concepts and his way of teaching is interesting.</p>
+                            <h4 class="pull-right">&#x2015; Uday Kumar</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>I started my career as a fresher so I was unable to adjust, due to lack of technical skills. When I join to weekend batches in Pro-elearning. I learned a lot of Technical skills required in industry.</p>
+                            <h4 class="pull-right">&#x2015; Bolanle</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

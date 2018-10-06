@@ -122,6 +122,18 @@ angular.module("routes", ['ngRoute', 'chart.js'])
         templateUrl: "views/subscribers-list.html",
         controller: "subscribersList"
     })
+    .when("/job-postings", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/admin-login');
+				}
+			},
+		},
+        title: "Job Postings - Pro-elearning Administrator",
+        templateUrl: "views/job-postings.html",
+        controller: "jobPostingsUploadCtrl"
+    })
     .when("/course-upload", {
 		resolve: {
 			check: function($location, user) {

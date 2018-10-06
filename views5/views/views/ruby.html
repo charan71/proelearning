@@ -1,0 +1,254 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/ruby.jpg" alt="Ruby-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Ruby Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>15 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="row">
+            <!-- Modes of Training -->
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic knowledge of C/C++, scripting.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <h4>Course Goals</h4>
+                    <p>Many computer science students say, "I wish I had a chance to learn X.", where X is the name of a programming language. If you have ever said this with X=="Ruby", then this is the course for you. If you have never said this, I believe that the next 3-4 weeks will make you think, "Wow!"</p>
+                    <p>This course gives you an opportunity to gain experience using Ruby to write scripts that automate common tasks and to write programs that solve more significant problems. In only 3-4  weeks, you may not become an expert Ruby programmer, but you may be surprised... Ruby is a simple, compact, and powerful language. At the end of the course, you should feel comfortable automating many tasks that you perform regularly and using Ruby to write programs you might otherwise write in a language such as Java or C++. You will also have some exposure to Ruby's killer app, the web development framework Rails.</p>
+                    <h4>Course Activities</h4>
+                    <ul>
+                        <li>Our class sessions will consist of a mixture of demonstation, discussion, in-class exercises, and occasional mini-lectures. Most of this material will go beyond what you read in the textbook, so attendance is strongly encouraged.</li>
+                        <li>You will complete several homework assignments this session. These assignments will ask you to apply techniques learned in class and from the text. Doing homework assignments will be your primary vehicle for learning.</li>
+                        <li>I reserve the right to give one or more quizzes this session, to check on your understanding of assigned tasks.</li>
+                    </ul>
+                    <h4>Course Evaluation</h4>
+                    <p>You will earn your grade based on your performance on homework assignments and, if applicable, quizzes.</p>
+                    <p>There is no curve.</p>
+                    <h4>Course Policies</h4>
+                    <ul>
+                        <li>I try to accommodate student needs whenever possible, but I can only do so if I know about them. If you ever have to make alternate arrangements for a class session, a quiz, or an assignment, please contact me in advance. The safest way to make such an arrangement is to notify me by e-mail or phone of your circumstances and of how you can be reached.</li>
+                        <li>My regularly-scheduled office hours are times when I am committed to provide assistance to you. No matter how busy I may appear when you arrive, the office hours are for you. You are welcome -- andencouraged -- to make use of that time. I am also available by appointment at other times if you cannot make an office hour.</li>
+                        <li>All assignments are due at their assigned date and time. In order to receive partial credit, always submit your best effort at that time. I do not accept late work.</li>
+                        <li>I encourage you to discuss ideas from the course, even those involved in homework assignments, with me and your classmates, as a way to help you understand the problems and possible solutions better. However,any work you submit must be your own. Discuss ideas, but write your own answers, including all code. You should acknowledge any collaboration explicitly in the work you submit. Undocumented or unacceptable collaboration is considered a form of academic dishonesty.</li>
+                    </ul>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <h4>Tentative Schedule</h4>
+                <p>The following schedule gives a rough sketch of the topics we will cover and the distinguished dates this session. The quiz dates a very tentative.</p>
+                <div class="table-responsive mt-30">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Schedules</th>
+                                <th>Topics</th>
+                                <th>Samples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Day 1</td>
+                                <td>Introduction Of Ruby Programming</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 2</td>
+                                <td>Arrays and Hashes</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 3</td>
+                                <td>Classes and Objects</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 4</td>
+                                <td>Containers, Blocks and Iterators</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 5-6</td>
+                                <td>Regular Expessions and Methods</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 7-8</td>
+                                <td>Expessions</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 9-10</td>
+                                <td>Exceptions and Input/Output</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 10-12</td>
+                                <td>Modules, Unit Testing, Debugging</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 12-14</td>
+                                <td>Ruby and the Web (TBD if used)</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 14</td>
+                                <td>Project of your choice</td>
+                                <td>practice</td>
+                            </tr>
+                            <tr>
+                                <td>Day 15</td>
+                                <td>Reflection Paper</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/runN4gPJJzU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>If you are new to Rails or to Programming, like I am, I strongly recommend that you take this course before any other course offered on pro-elearning. Trainer is very thorough. He explains EVERYTHING and it really helped me understand Rails and the logic behind each command. Versus some other courses in which I tried prior to this one the other instructors briefly explained what we were doing and they didn't connect the dots for me.</p>
+                            <h4 class="pull-right">&#x2015; Van de Berg</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>I love this course it very helpful and comprehensive. I enjoyed working in every project. I just want to suggest if possible for the author to integrate the whole process of changing database like from sqlite3 to mysql and or postgresql so users can decide to use whatever their database preference.</p>
+                            <h4 class="pull-right">&#x2015; Arzhang</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,382 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/sap-bo.jpg" alt="SAP-BO-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">SAP BO Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>12345</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+       <div class="row">
+            <div class="training-modes">
+                <h3>Available Modes of Training</h3>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/online-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>Online Training</h4>
+                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/classroom-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-site Training</h4>
+                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-modes-grid">
+                        <div class="training-modes-icon">
+                            <img src="./images/icons/on-demand-training.svg">
+                        </div>
+                        <div class="training-modes-text">
+                            <h4>On-demand Training</h4>
+                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>To learn this course, first you must have a good knowledge in basics of software</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>SAP Business Objects BI (SAP BO, also historically BOBJ) is a reporting and analytics business intelligence (BI) platform aimed at business users. ... SAP BO is a front-end BI platform, so the data is not stored at the application level, but is integrated from the various back-end sources.</p>
+                    <p>Web Intelligence is part of SAP Business Objects product suite and is used for analytical and ad hoc reporting to meet an organization's business requirements. Web Intelligence is a Business Intelligence reporting tool for business users to analyze data in Data Warehouse.</p>
+                    <p>SAP Business Objects Lumira also known as Lumira is a business intelligence software developed and marketed by SAP Business Objects. The software is used to manipulate and visualize data.</p>
+                    <p>SAP Business Objects (BO or BOBJ) is an enterprise software company, specializing in business intelligence (BI). Business Objects was acquired in 2007 by German company SAP AG. The company claimed more than 46,000 customers in its final earnings release prior to being acquired by SAP.</p>
+                    <p>A Business Objects Universe is the semantic layer that resides between an organization's database and the end user but more importantly, it is a business representation of your data warehouse or transactional database.</p>
+                 </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Introduction to SAP BO and Data Warehousing <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>OLTP vs OLAP</li>
+									<li>Types of OLAP</li>
+									<li>Data mart/Data warehouse Life cycle</li>
+									<li>Star/Snow/Extended Star schema design</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Database Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <h5>Joins & Cardinality</h5>
+                                <ul>
+									<li>Views/Materialized Views</li>
+									<li>Date/Time Functions</li>
+									<li>Conversion functions</li>
+									<li>Derived table & Stored Procedure</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3. Architectural Overview <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+									<li>Client tier components</li>
+									<li>Application tier components</li>
+									<li>Intelligence tier</li>
+									<li>Processing tier</li>
+									<li>Data tier</li>
+									<li>Security management</li>
+									<li>Information flow</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Universe Design <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+									<li>Understanding Business Objects Universes</li>
+									<li>Creating the Course Universe</li>
+									<li>Building the Universe Structure</li>
+									<li>Creating Dimension Objects</li>
+									<li>Creating Measure Objects</li>
+									<li>Resolving Loops in a Universe</li>
+									<li>Resolving SQL Traps</li>
+									<li>Using List of Values</li>
+									<li>Applying Restrictions on Objects</li>
+									<li>Using @Functions with Objects</li>
+									<li>Using Hierarchies</li>
+									<li>Deriving Tables & Indexes</li>
+									<li>Working with Aggregate Awareness</li>
+									<li>Designing Advanced Objects</li>
+									<li>Creating Predefined Condition</li>
+									<li>LOVs & Joins</li>
+									<li>Securing Universes</li>
+									<li>Implementing Universe Life Cycle Mgmt</li>
+									<li>Maintaining & Optimizing Universes</li>
+									<li>Creating Universe from Other Data sources</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Web Intelligence <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+									<li>Understand concepts of Web intelligence</li>
+									<li>Create Web Intelligence documents with Queries</li>
+									<li>Restrict data returned by a query</li>
+									<li>Design a report</li>
+									<li>Enhance the presentation of data in reports</li>
+									<li>Format a report</li>
+									<li>Calculate data with formulas and variables</li>
+									<li>Use multiple data sources</li>
+									<li>Analyze data</li>
+									<li>Manage and share Web Intelligence documents</li>
+									<li>Work with Advanced Query techniques</li>
+									<li>Work with calculation contexts</li>
+									<li>Create formulas with character & date string functions</li>
+									<li>Use "If" logic</li>
+									<li>Work with additional reporting techniques</li>
+									<li>Create hyperlinks</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. WEBI-Rich Client <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+									<li>Installing Web Intelligence Rich Client</li>
+									<li>Web Intelligence Rich Client working modes</li>
+									<li>Launching Web Intelligence Rich Client</li>
+									<li>To set user preferences in Web Intelligence Rich Client</li>
+									<li>Working with documents</li>
+									<li>Working with universes in Web Intelligence Rich Client</li>
+									<li>Accessing Web Intelligence from Info View</li>
+									<li>Working with queries in Web Intelligence Rich Client</li>
+									<li>Working with reports</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Xcelcius/Dashboard Builder <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+									<li>Understanding Dashboard Manager</li>
+									<li>Setting Up Dashboard Manager</li>
+									<li>Creating Metrics</li>
+									<li>Automating Dashboards with Rules</li>
+									<li>Creating Analytics</li>
+									<li>Creating Personal Dashboards</li>
+									<li>Creating Corporate Dashboards</li>
+									<li>Guiding Dashboard Navigation</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#eight" aria-expanded="false" aria-controls="collapseEight">8. Administration <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+									<li>Understand the Business Objects</li>
+									<li>Enterprise interface & architecture</li>
+									<li>Manage Business Objects Enterprise content</li>
+									<li>Secure Business Objects Enterprise content</li>
+									<li>Secure application security</li>
+									<li>Schedule content</li>
+									<li>Publish reports</li>
+									<li>Identify Business Objects Enterprise architecture</li>
+									<li>Perform common server management tasks</li>
+									<li>Manage the Business Objects Enterprise servers</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">9. Security Implementation <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+									<li>Creating Secured users & group</li>
+									<li>Creation secured connections</li>
+									<li>Creation of Secured objects</li>
+									<li>Creation of security at Table, Column &row level</li>
+									<li>Creation of secured restriction set and mapping to users or groups</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">10. Interview Questions <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+                                    <li>Interview Questions on SAP-BO</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hSoYane8TSw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>Fast alle Aspekte des WebI werden angesprochen. Vor allem für Anfänger sehr gut geeignet. Einige praktische Tipps für die Praxis sind auch dabei. Akzent ist manchmal etwas schwer verständlich, ist aber noch ok.</p>
+                            <h4 class="pull-right">&#x2015; Eberhard</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>Nice way of explanation and it is good for beginner and intermediate level BI users. It will be good to add some exercises to make session more interactive.</p>
+                            <h4 class="pull-right">&#x2015; Jing Sheng</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

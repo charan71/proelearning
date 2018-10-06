@@ -1,0 +1,167 @@
+<div class="container-fluid" ng-controller="contactController">
+    <div class="row">
+        <img class="img-responsive" src="./images/parallax-images/contact.jpg" alt="Contact-Us-Pro-eLearning">
+    </div>
+</div>
+
+<div class="container">
+    <!-- Breadcrumbs -->
+    <div class="row hidden-xs">
+        <div ng-include="'views/breadcrumbs.html'"></div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <!-- Success Message Modal -->
+            <modal id="successMessageModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content msg-modal success-modal">
+                        <div class="message-icon">
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="message">
+                            <h4 class="modal-title text-center mb-20">Success!</h4>
+                            <p ng-bind-html="successMessage"></p>
+                            <button type="button" class="btn-msg btn-success-msg transition" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </modal>
+            <!-- //Success Message Modal -->
+
+            <!-- Error Message Modal -->
+            <modal id="errorMessageModal" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-sm" role="document">
+            		<div class="modal-content msg-modal error-modal">
+            			<div class="message-icon">
+            				<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+            			</div>
+            			<div class="message">
+            				<h4 class="modal-title text-center mb-20">Error!</h4>
+            				<p ng-bind-html="errorMessage"></p>
+            				<button type="button" class="btn-msg btn-err-msg transition" data-dismiss="modal">Close</button>
+            			</div>
+                    </div>
+                </div>
+            </modal>
+            <!-- //Error Message Modal -->
+
+            <div class="contact-form">
+                <!-- Contact Form -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h3>Drop a line</h3>
+                    <div id="contact-form" class="form-lg-wrap">
+                        <form novalidate name="contactForm" method="POST" enctype="multipart/form-data" id="contactForm" class="form form-horizontal contact-form" autocomplete="on">
+                            <fieldset>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <input type="text" name="name" ng-model="name" ng-required="true" ng-minlength="3" ng-maxlength="40" ng-pattern="/^[a-zA-Z. ]*[a-zA-Z. ]{1,40}$/" class="form-control" id="name" autofocus />
+                                    <div class="floating-label">Full Name *</div>
+                                    <div class="floating-label-border"></div>
+                                    <span class="validation_styles" ng-show="contactForm.name.$error.required && contactForm.name.$touched">* Full Name is required<br></span>
+                                    <span class="validation_styles" ng-show="contactForm.name.$error.pattern && contactForm.name.$invalid">* Full Name should contain only alphabets, dots and spaces.<br></span>
+                                    <span class="validation_styles" ng-show="contactForm.name.$error.minlength && contactForm.name.$touched">* Full Name should be minimum of 3 characters<br></span>
+                                    <span class="validation_styles" ng-show="contactForm.name.$error.maxlength && contactForm.name.$touched">* Full Name should be maximum of 40 characters</span>
+                                </div>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <input type="email" name="email" ng-model="email" ng-required="true" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="email" />
+                                    <div class="floating-label">Email *</div>
+                                    <div class="floating-label-border"></div>
+		    						<span class="validation_styles" ng-show="contactForm.email.$error.required && contactForm.email.$touched">* Email is required</span>
+		    						<span class="validation_styles" ng-show="contactForm.email.$error.pattern && contactForm.email.$touched">* Please enter a valid email</span>
+                                </div>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <input type="tel" name="phone" ng-model="phone" ng-pattern="/^\d{10}$/" ng-required="true" class="form-control" id="phone" />
+                                    <div class="floating-label">Phone *</div>
+                                    <div class="floating-label-border"></div>
+		    						<span class="validation_styles" ng-show="contactForm.phone.$error.required && contactForm.phone.$touched">* Phone number is required<br></span>
+		    						<span class="validation_styles" ng-show="contactForm.phone.$error.pattern && contactForm.phone.$touched">* Please enter a valid phone number</span>
+                                </div>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <select id="category" name="category" class="form-control" ng-model="category" ng-required="true">
+                                        <option value=""></option>
+                                        <option value="Need a Course">Need a Course</option>
+                                        <option value="Want to become a Trainer">Want to be a Trainer</option>
+                                        <option value="For Business">For Business</option>
+                                    </select>
+                                    <div class="floating-label">Purpose *</div>
+                                    <div class="floating-label-border"></div>
+                                    <span class="validation_styles" ng-show="contactForm.category.$error.required && contactForm.category.$touched">Purpose is required *</span>
+                                </div>
+                                <div class="placeholder-wrap form-control-wrapper">
+                                    <textarea ng-required="true" ng-minlength="10" class="form-control" rows="3" name="message" id="message" ng-model="message"></textarea>
+                                    <div class="floating-label">Message *</div>
+                                    <div class="floating-label-border"></div>
+		    						<span class="validation_styles" ng-show="contactForm.message.$error.required && contactForm.message.$touched">* Message is required<br></span>
+		    						<span class="validation_styles" ng-show="contactForm.message.$error.minlength && contactForm.message.$touched">* Message should be minium of 10 characters</span>
+                                </div>
+                                <button type="submit" class="btn-custom btn-custom-md transition pull-left" id="submit" name="insertContact" ng-disabled="contactForm.$invalid" ng-click="fn_insertContact()">Submit</button>
+                                <button type="reset" class="btn-custom-inverse btn-custom-md transition pull-right" ng-click="fn_reset()">Cancel</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+
+                 <div class="social-contact col-lg-5 col-md-5 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1">
+                    <h3>Follow us on</h3>
+                    <ul class="social-contact-list">
+                        <li><a class="transition" href="https://www.facebook.com/Pro-elearning-138039733727866" target="_blank"><i class="fa fa-facebook transition" aria-hidden="true"></i></a></li>
+                        <li><a class="transition" href="https://www.linkedin.com/in/pro-e-learning-6a20b6166" target="_blank"><i class="fa fa-linkedin transition" aria-hidden="true"></i></a></li>
+                        <li><a class="transition" href="https://plus.google.com/u/2/114009020735948039165" target="_blank"><i class="fa fa-google-plus transition" aria-hidden="true"></i></a></li>
+                        <li><a class="transition" href="https://twitter.com/pro_elearning" target="_blank"><i class="fa fa-twitter transition" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row pt-50 pb-50">
+        <div class="container">
+            <div class="addresses">
+                <h1 class="text-center mt-0 mb-30">Our Offices</h1>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                   <div class="address text-center">
+                       <h2>Pennsylvania</h2>
+                       <p>1704 St. John's court,</p>
+                       <p>Bensalem, PA 19020</p>
+                       <p><i class="fa fa-phone" aria-hidden="true"></i> +1 (267) 436-7840</p>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                   <div class="address text-center">
+                       <h2>Texas</h2>
+                       <p>20731 Norwich Gulch Ln,</p>
+                       <p>Richmond, TX 77407</p>
+                       <p><i class="fa fa-phone" aria-hidden="true"></i> +1 (713) 623-1945</p>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                   <div class="address text-center">
+                       <h2>Australia</h2>
+                       <p>Unit 402, 39 Cooper Street,</p>
+                       <p>Strathfield, NSW - 2135</p>
+                       <p><i class="fa fa-phone" aria-hidden="true"></i> +61 404335048</p>
+                   </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                   <div class="address text-center">
+                       <h2>India</h2>
+                       <p>501-A, Sai Rasik Building,</p>
+                       <p>Vittal Rao Nagar, Madhapur,</p>
+                       <p>Hyderabad, TG - 500081.</p>
+                       <p><i class="fa fa-phone" aria-hidden="true"></i> +91-8340905336</p>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <!-- Map -->
+    <div class="row" ng-controller="mapCtrl">
+        <div id="class" ng-repeat="marker in markers">
+            <a href="#" class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center country-title" ng-click="openInfoWindow($event, marker)">{{ marker.title }}</a>
+        </div>
+        <div id="map"></div>
+    </div>
+</div>
