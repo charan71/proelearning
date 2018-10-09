@@ -407,6 +407,35 @@ angular.module('controllers', ['ngRoute'])
 
 // Job Postings
 .controller("jobPostingsUploadCtrl", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
+    var orig_jobId = $scope.job_id;
+    var orig_position = $scope.position;
+    var orig_minExp = $scope.min_experience;
+    var orig_maxExp = $scope.max_experience;
+    var orig_jobPostingDate = $scope.job_posting_date;
+    var orig_jobDesc = $scope.files;
+    $scope.dt = Date();
+    $scope.btnName = "Post New Job";
+
+    /*-- File Upload --*/
+    $scope.uploadedFile = function(element) {
+        $scope.$apply(function($scope) {
+            $scope.files = element.files;
+        });
+    };
+    $scope.imageUpload = function(event){
+	    var files = event.target.files; //FileList object
+	    var file = files[files.length-1];
+	    $scope.file = file;
+	    var reader = new FileReader();
+	    reader.onload = $scope.imageIsLoaded;
+	    reader.readAsDataURL(file);
+	};
+	$scope.imageIsLoaded = function(e){
+	    $scope.$apply(function() {
+	    	$scope.step = e.target.result;
+	    });
+    };
+    
     /*-- Fetching all scheduled courses and display in table --*/
     $scope.asc = "";
     $scope.desc = false;
@@ -429,33 +458,43 @@ angular.module('controllers', ['ngRoute'])
     displaySchedules();
 
     /*-- Insert New Course Schedule --*/
-    var orig_courseName = $scope.course_name;
-    var orig_courseScheduleDate = $scope.course_schedule_date;
-    var orig_batchType = $scope.batch_type;
-    var orig_trainingType = $scope.training_type;
-    var orig_duration = $scope.duration;
-    var orig_trainerName = $scope.trainer_name;
-    $scope.dt = Date();
-    $scope.btnName = "Insert";
+    $scope.fn_insertJobPostings = function() {
+        
+        // Converting Date to Milliseconds
+        var ms = new Date($scope.job_posting_date).getTime();
+    
+        var formData = new FormData();
+        var file = $scope.files[0];
+        formData.append('job_id',$scope.job_id);
+        formData.append('position',$scope.position);
+        formData.append('min_experience',$scope.min_experience);
+        formData.append('max_experience',$scope.max_experience);
+        formData.append('posting_date',ms);
+        formData.append('file',file);
+        formData.append('date_time',$scope.dt);
 
-    $scope.fn_insertNewSchedules = function() {
-        $http.post(
-            "./php/course-schedules.php",
-            {'sno': $scope.sno, 'course_name': $scope.course_name, 'start_date': $scope.course_schedule_date, 'batch_type': $scope.batch_type, 'training_type': $scope.training_type, 'duration': $scope.duration, 'trainer_name': $scope.trainer_name, 'date_time': $scope.dt, 'btnName': $scope.btnName}
-            )
-            .then(function(response) {
-            $scope.course_name = angular.copy(orig_courseName);
-            $scope.course_schedule_date = angular.copy(orig_courseScheduleDate);
-            $scope.batch_type = angular.copy(orig_batchType);
-            $scope.training_type = angular.copy(orig_trainingType);
-            $scope.duration = angular.copy(orig_duration);
-            $scope.trainer_name = angular.copy(orig_trainerName);
-            $scope.courseSchedulesForm.$setUntouched();
+        $http({
+            method: 'POST',
+            url: './php/job-postings.php',
+            data: formData,
+            processData: false,
+            headers: {
+                'Content-Type': undefined
+            }
+        })
+        .then(function(response) {
+            $scope.course_name = angular.copy(orig_jobId);
+            $scope.course_schedule_date = angular.copy(orig_position);
+            $scope.batch_type = angular.copy(orig_minExp);
+            $scope.training_type = angular.copy(orig_maxExp);
+            $scope.duration = angular.copy(orig_jobPostingDate);
+            $scope.trainer_name = angular.copy(orig_jobDesc);
+            $scope.jobPostingsForm.$setUntouched();
             $scope.successMessage = "Updated successfully!!";
             $timeout(function() {
                 $scope.successMessage = false;
             }, 5000);
-            $scope.btnName = "Insert";
+            $scope.btnName = "Post New Job";
             displaySchedules();
         }, function(error) {
             $scope.errorMessage = "Sorry. Please try again!!";
@@ -464,13 +503,13 @@ angular.module('controllers', ['ngRoute'])
 
     /*-- Reset all form fields and form to its initial state --*/
     $scope.fn_reset = function() {
-        $scope.course_name = angular.copy(orig_courseName);
-        $scope.course_schedule_date = angular.copy(orig_courseScheduleDate);
-        $scope.batch_type = angular.copy(orig_batchType);
-        $scope.training_type = angular.copy(orig_trainingType);
-        $scope.duration = angular.copy(orig_duration);
-        $scope.trainer_name = angular.copy(orig_trainerName);
-        $scope.courseSchedulesForm.$setUntouched();
+        $scope.course_name = angular.copy(orig_jobId);
+        $scope.course_schedule_date = angular.copy(orig_position);
+        $scope.batch_type = angular.copy(orig_minExp);
+        $scope.training_type = angular.copy(orig_maxExp);
+        $scope.duration = angular.copy(orig_jobPostingDate);
+        $scope.trainer_name = angular.copy(orig_jobDesc);
+        $scope.jobPostingsForm.$setUntouched();
     };
 
     /*-- Delete selected course schedule --*/

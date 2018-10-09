@@ -155,6 +155,7 @@ angular.module('ProELearning.controllers', [])
     var orig_message = $scope.message;
     $scope.dt = Date();
     
+    /*-- File Upload --*/
     $scope.uploadedFile = function(element) {
         $scope.$apply(function($scope) {
             $scope.files = element.files;

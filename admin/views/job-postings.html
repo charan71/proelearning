@@ -19,18 +19,18 @@
 	                    <form novalidate name="jobPostingsForm" method="POST" enctype="multipart/form-data" id="courseSchedulesForm" autocomplete="on">
 	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
 	                            <label for="job-id">Job ID <span class="important">*</span></label>
-	                            <input type="text" id="job-id" class="form-control" name="jobId" ng-model="job_id" ng-maxlength="12" ng-pattern="/^[a-zA-Z0-9]{12}$/" placeholder="Job ID" ng-required="true">
+	                            <input type="text" id="job-id" class="form-control" name="jobId" ng-model="job_id" ng-maxlength="12" ng-pattern="/^[a-zA-Z0-9.# ]{1,12}$/" placeholder="Job ID" ng-required="true">
 	                            <span class="validation_styles" ng-show="jobPostingsForm.jobId.$error.required && jobPostingsForm.jobId.$touched">* Job ID is required<br></span>
-	                            <span class="validation_styles" ng-show="jobPostingsForm.jobId.$error.pattern && jobPostingsForm.jobId.$invalid">* Job ID should contain only alphabets and numbers<br></span>
+	                            <span class="validation_styles" ng-show="jobPostingsForm.jobId.$error.pattern && jobPostingsForm.jobId.$touched">* Job ID should contain only alphabets and numbers<br></span>
 	                            <span class="validation_styles" ng-show="jobPostingsForm.jobId.$error.maxlength && jobPostingsForm.jobId.$touched">* Job ID should be 12 characters only<br></span>
                             </div>
 	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
 	                            <label for="job-title">Job Title / Position <span class="important">*</span></label>
 	                            <input type="text" id="job-title" class="form-control" name="jobTitle" ng-model="position" ng-minlength="2" ng-maxlength="150" ng-pattern="/^[a-zA-Z0-9.# ]{2,150}$/" placeholder="Job Title / Position" ng-required="true">
-	                            <span class="validation_styles" ng-show="jobPostingsForm.courseName.$error.required && jobPostingsForm.courseName.$touched">* Job Title / Position is required<br></span>
-	                            <span class="validation_styles" ng-show="jobPostingsForm.courseName.$error.pattern && jobPostingsForm.courseName.$invalid">* Job Title / Position should contain only alphabets, numbers, dots, hash and spaces.<br></span>
-	                            <span class="validation_styles" ng-show="jobPostingsForm.courseName.$error.minlength && jobPostingsForm.courseName.$touched">* Job Title / Position should be minimum of 2 characters.<br></span>
-	                            <span class="validation_styles" ng-show="jobPostingsForm.courseName.$error.maxlength && jobPostingsForm.courseName.$touched">* Job Title / Position should be maximum of 250 characters</span>
+	                            <span class="validation_styles" ng-show="jobPostingsForm.jobTitle.$error.required && jobPostingsForm.jobTitle.$touched">* Job Title / Position is required<br></span>
+	                            <span class="validation_styles" ng-show="jobPostingsForm.jobTitle.$error.pattern && jobPostingsForm.jobTitle.$invalid">* Job Title / Position should contain only alphabets, numbers, dots, hash and spaces.<br></span>
+	                            <span class="validation_styles" ng-show="jobPostingsForm.jobTitle.$error.minlength && jobPostingsForm.jobTitle.$touched">* Job Title / Position should be minimum of 2 characters.<br></span>
+	                            <span class="validation_styles" ng-show="jobPostingsForm.jobTitle.$error.maxlength && jobPostingsForm.jobTitle.$touched">* Job Title / Position should be maximum of 250 characters</span>
                             </div>
                             <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
 	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -54,12 +54,12 @@
 	                            <span class="validation_styles" ng-show="jobPostingsForm.jobPostingDate.$error.datetimelocal && jobPostingsForm.jobPostingDate.$touched">* Not a valid date or time!<br></span>
 	                        </div>
                             <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <label for="resume" class="control-label">Job Description File <span class="important">*</span></label>
-                                <input type="file" id="resume" name="resume" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".pdf" ng-required="true">
+                                <label for="job-desc" class="control-label">Job Description File <span class="important">*</span></label>
+                                <input type="file" id="job-desc" name="jobDesc" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".pdf" ng-required="true">
                             </div>
                             <div class="clearfix"></div>
                             <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <button type="submit" class="btn-custom btn-custom-md transition" ng-disabled="jobPostingsForm.$invalid" ng-click="fn_insertNewSchedules()">{{ btnName }}</button>
+                                <button type="submit" class="btn-custom btn-custom-md transition" ng-disabled="jobPostingsForm.$invalid" ng-click="fn_insertJobPostings()">{{ btnName }}</button>
                                 <button type="reset" class="btn-custom-inverse btn-custom-md transition" ng-click="fn_reset()">Cancel</button>
                             </div>
 	                    </form>
