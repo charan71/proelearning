@@ -891,9 +891,9 @@ a[role="tab"]:hover {
     margin-bottom: 40px !important;
 }
 .reg-benefits {
-    border: 1px solid lightgrey;
-    border-radius: 4px;
-    padding: 20px;
+    /* border: 1px solid lightgrey;
+    border-radius: 4px; */
+    padding: 0 50px;
 }
 .reg-benefits .reg-benefits-title h3 {
     margin-top: 0;
@@ -2139,4 +2139,30 @@ h2 {
     color: #fff;
     margin: 0;
     font-weight: 700;
+}
+
+
+
+/* modify */
+/* comment border & border radious on line no. 893 */
+.reg-benefits ul li {
+    line-height: 3;
+    padding: 0px 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.reg-benefits ul li i img{
+    width: 100%;
+}
+
+@media(max-width:786px){
+    .reg-benefits{
+        padding: 0 10px;
+    }
+    .reg-benefits ul li {
+        line-height: 3;
+        padding: 0px 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
 }
