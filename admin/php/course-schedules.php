@@ -47,7 +47,6 @@
             $trainer_name = mysqli_real_escape_string($conn, $data->trainer_name);
             $dt = mysqli_real_escape_string($conn, $data->date_time);
             
-            // $query = "UPDATE `course_schedules` SET `course_name`='$course_name', `start_date`='$convertedDateToMilliSec', `batch_type`='$batch_type', `training_type`='$training_type', `duration`='$duration', `trainer_name`='$trainer_name', `date_time`='$dt' WHERE `sno`=35";
             $query = "UPDATE `course_schedules` SET `course_name`='$course_name', `start_date`='$convertedDateToMilliSec', `batch_type`='$batch_type', `training_type`='$training_type', `duration`='$duration', `trainer_name`='$trainer_name', `date_time`='$dt' WHERE `sno`='$sno'";
             
             if(mysqli_query($conn, $query)) {

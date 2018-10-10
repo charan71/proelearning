@@ -366,6 +366,7 @@ angular.module('controllers', ['ngRoute'])
         $scope.duration = angular.copy(orig_duration);
         $scope.trainer_name = angular.copy(orig_trainerName);
         $scope.courseSchedulesForm.$setUntouched();
+        $scope.btnName = "Insert";
     };
 
     /*-- Delete selected course schedule --*/
@@ -376,7 +377,6 @@ angular.module('controllers', ['ngRoute'])
             data: {'sno': sno}
         })
         .then(function() {
-            $("#confirmDialog").modal("hide");
             $scope.successMessage = "Record deleted successfully!";
             $timeout(function() {
                 $scope.successMessage = false;
@@ -423,7 +423,7 @@ angular.module('controllers', ['ngRoute'])
         });
     };
     $scope.imageUpload = function(event){
-	    var files = event.target.files; //FileList object
+	    var files = event.target.files; // FileList object
 	    var file = files[files.length-1];
 	    $scope.file = file;
 	    var reader = new FileReader();
@@ -439,12 +439,12 @@ angular.module('controllers', ['ngRoute'])
     /*-- Fetching all scheduled courses and display in table --*/
     $scope.asc = "";
     $scope.desc = false;
-    $scope.searchSchedule = { course_name:"", batch_type:"", training_type:"", trainer_name:"" };
+    $scope.searchJobPostings = { job_id:"", position:"", min_experience:"", max_experience:"" };
 
-    function displaySchedules() {
-        $scope.courseSchedules = [];
+    function displayJobPostings() {
+        $scope.jobPostings = [];
         $http({
-            url: "./php/course-schedules-fetch.php",
+            url: "./php/job-postings-fetch.php",
             method: "POST",
             data: "",
             headers: {
@@ -452,10 +452,10 @@ angular.module('controllers', ['ngRoute'])
             }
         })
         .then(function(response) {
-            $scope.courseSchedules = response.data;
+            $scope.jobPostings = response.data;
         });
     }
-    displaySchedules();
+    displayJobPostings();
 
     /*-- Insert New Course Schedule --*/
     $scope.fn_insertJobPostings = function() {
@@ -465,6 +465,7 @@ angular.module('controllers', ['ngRoute'])
     
         var formData = new FormData();
         var file = $scope.files[0];
+        formData.append('sno',$scope.sno);
         formData.append('job_id',$scope.job_id);
         formData.append('position',$scope.position);
         formData.append('min_experience',$scope.min_experience);
@@ -472,6 +473,7 @@ angular.module('controllers', ['ngRoute'])
         formData.append('posting_date',ms);
         formData.append('file',file);
         formData.append('date_time',$scope.dt);
+        formData.append('btnName',$scope.btnName);
 
         $http({
             method: 'POST',
@@ -483,68 +485,69 @@ angular.module('controllers', ['ngRoute'])
             }
         })
         .then(function(response) {
-            $scope.course_name = angular.copy(orig_jobId);
-            $scope.course_schedule_date = angular.copy(orig_position);
-            $scope.batch_type = angular.copy(orig_minExp);
-            $scope.training_type = angular.copy(orig_maxExp);
-            $scope.duration = angular.copy(orig_jobPostingDate);
-            $scope.trainer_name = angular.copy(orig_jobDesc);
+            $scope.job_id = angular.copy(orig_jobId);
+            $scope.position = angular.copy(orig_position);
+            $scope.min_experience = angular.copy(orig_minExp);
+            $scope.max_experience = angular.copy(orig_maxExp);
+            $scope.job_posting_date = angular.copy(orig_jobPostingDate);
+            $scope.files = angular.copy(orig_jobDesc);
             $scope.jobPostingsForm.$setUntouched();
             $scope.successMessage = "Updated successfully!!";
             $timeout(function() {
                 $scope.successMessage = false;
             }, 5000);
             $scope.btnName = "Post New Job";
-            displaySchedules();
+            displayJobPostings();
         }, function(error) {
             $scope.errorMessage = "Sorry. Please try again!!";
         });
     };
 
-    /*-- Reset all form fields and form to its initial state --*/
+    /*-- Reset all form fields and take form to its initial state --*/
     $scope.fn_reset = function() {
-        $scope.course_name = angular.copy(orig_jobId);
-        $scope.course_schedule_date = angular.copy(orig_position);
-        $scope.batch_type = angular.copy(orig_minExp);
-        $scope.training_type = angular.copy(orig_maxExp);
-        $scope.duration = angular.copy(orig_jobPostingDate);
-        $scope.trainer_name = angular.copy(orig_jobDesc);
+        $scope.job_id = angular.copy(orig_jobId);
+        $scope.position = angular.copy(orig_position);
+        $scope.min_experience = angular.copy(orig_minExp);
+        $scope.max_experience = angular.copy(orig_maxExp);
+        $scope.job_posting_date = angular.copy(orig_jobPostingDate);
+        $scope.files = angular.copy(orig_jobDesc);
         $scope.jobPostingsForm.$setUntouched();
+        $scope.btnName = "Post New Job";
     };
 
-    /*-- Delete selected course schedule --*/
-    $scope.fn_deleteSchedule = function(sno) {
+    /*-- Delete selected Job Posting --*/
+    $scope.fn_deleteJobPosting = function(sno, file) {
         $http({
-            url: "./php/delete-schedule.php",
+            url: "./php/delete-job-posting.php",
             method: "POST",
-            data: {'sno': sno}
+            data: {'sno': sno, 'file': file}
         })
         .then(function() {
-            $("#confirmDialog").modal("hide");
             $scope.successMessage = "Record deleted successfully!";
             $timeout(function() {
                 $scope.successMessage = false;
             }, 5000);
-            displaySchedules();
+            displayJobPostings();
         }, function(error) {
             $scope.errorMessage = "Failed to delete record!";
         })
     };
 
-    /*-- Edit selected course schedule --*/
-    $scope.fn_editSchedule = function(sno, course_name, start_date, batch_type, training_type, duration, trainer_name) {
+    /*-- Edit selected Job Posting --*/
+    $scope.fn_editJobPosting = function(sno, job_id, position, min_experience, max_experience, posting_date, file) {
         $scope.sno = sno;
-        $scope.course_name = course_name;
-        $scope.course_schedule_date = start_date;
+        console.log($scope.sno);
+        $scope.job_id = job_id;
+        $scope.position = position;
+        $scope.min_experience = min_experience;
+        $scope.max_experience = max_experience;
+        $scope.job_posting_date = posting_date;
         // Convert milliseconds to DateTime Format
-        $scope.msToDate = $filter('date')($scope.course_schedule_date, 'dd-MMM-yyyy h:mm a');
+        $scope.msToDate = $filter('date')($scope.job_posting_date, 'dd-MMM-yyyy h:mm a');
         // Converting Date String to Date Object
         $scope.dtStringToObj = new Date($scope.msToDate);
-        $scope.course_schedule_date = $scope.dtStringToObj;
-        $scope.batch_type = batch_type;
-        $scope.training_type = training_type;
-        $scope.duration = duration;
-        $scope.trainer_name = trainer_name;
+        $scope.job_posting_date = $scope.dtStringToObj;
+        $scope.files = file;
         $scope.btnName = "Update";
     };
 }])
