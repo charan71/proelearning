@@ -56,8 +56,10 @@ angular.module('controllers', ['ngRoute'])
 })
 
 // Left Side Navigation
-.controller('sideNavCtrl', ['$scope', function($scope) {
-	
+.controller("navController", ['$scope', '$location', function($scope, $location) {
+    $scope.isActive = function(destination) {
+        return destination === $location.path();
+    };
 }])
 
 // Dashboard

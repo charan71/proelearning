@@ -13,110 +13,120 @@
     <div class="main-content-wrapper">
         <div class="main-content">
             <div ng-controller="regTrainers">
-                <h3>Registered Trainers List</h3>
-                <div class="table-wrapper">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr class="filterRow">
-                                    <th></th>
-                                    <th>
-                                        <input class="searchFilterBox" type="text" ng-model="searchTrainer.full_name" size="12" placeholder="Search by Name">
-                                    </th>
-                                    <th>
-                                        <input class="searchFilterBox" type="text" ng-model="searchTrainer.email" placeholder="Search by Email">
-                                    </th>
-                                    <th>
-                                        <input class="searchFilterBox" type="tel" ng-model="searchTrainer.phone" size="12" placeholder="Search by Phone">
-                                    </th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th>
-                                        <input class="searchFilterBox" type="tel" ng-model="searchTrainer.current_company" size="15" placeholder="Search by Current Company">
-                                    </th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>#</th>
-                                    <th nowrap ng-click="asc='full_name'; desc=!desc">
-                                        <span class="th-title-wrap">Name</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                    </th>
-                                    <th nowrap ng-click="asc='email'; desc=!desc">
-                                        <span class="th-title-wrap">Email</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                    </th>
-                                    <th nowrap ng-click="asc='phone'; desc=!desc">
-                                        <span class="th-title-wrap">Phone</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                    </th>
-                                    <th nowrap>Gender</th>
-                                    <th nowrap ng-click="asc='country'; desc=!desc">
-                                        <span class="th-title-wrap">Country</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                    </th>
-                                    <th nowrap ng-click="asc='state'; desc=!desc">
-                                        <span class="th-title-wrap">State</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                    </th>
-                                    <th nowrap ng-click="asc='current_company'; desc=!desc">
-                                        <span class="th-title-wrap">Current Company</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                    </th>
-                                    <th nowrap>Work Exp.</th>
-                                    <th nowrap>Training Exp.</th>
-                                    <th nowrap ng-click="asc='technology_exp'; desc=!desc">
-                                        <span class="th-title-wrap">Technology Exp.</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                    </th>
-                                    <th nowrap>CV</th>
-                                    <th nowrap>Message</th>
-                                    <th nowrap>Date &#x0026; Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-row" dir-paginate="trainer in trainers | orderBy:asc:desc | filter:searchTrainer | itemsPerPage:20">
-                                    <td>{{ $index + 1 }}.</td>
-                                    <td nowrap>{{ trainer.full_name }}</td>
-                                    <td nowrap>{{ trainer.email }}</td>
-                                    <td nowrap>{{ trainer.phone }}</td>
-                                    <td nowrap>{{ trainer.gender | genderFilter }}</td>
-                                    <td nowrap>{{ trainer.country }}</td>
-                                    <td nowrap>{{ trainer.state }}</td>
-                                    <td nowrap>{{ trainer.current_company }}</td>
-                                    <td nowrap>{{ trainer.work_exp }}</td>
-                                    <td nowrap>{{ trainer.training_exp }}</td>
-                                    <td nowrap>{{ trainer.technology_exp }}</td>
-                                    <td>
-                                        <a class="btn-download transition" href="../upload/{{ trainer.resume }}" title="{{ trainer.resume }}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a>
-                                    </td>
-                                    <td>{{ trainer.message | defaultValueFilter }}</td>
-                                    <td nowrap>{{ trainer.date_time }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <!-- Pagination -->
-                    <div class="text-center">
-                       <dir-pagination-controls
-                            max-size="5"
-                            direction-links="true"
-                            boundary-links="true" >
-                       </dir-pagination-controls>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Registered Trainers List</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-wrapper">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr class="filterRow">
+                                                    <th></th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" ng-model="searchTrainer.full_name" size="12" placeholder="Search by Name">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" ng-model="searchTrainer.email" placeholder="Search by Email">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="tel" ng-model="searchTrainer.phone" size="12" placeholder="Search by Phone">
+                                                    </th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="tel" ng-model="searchTrainer.current_company" size="15" placeholder="Search by Current Company">
+                                                    </th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th nowrap ng-click="asc='full_name'; desc=!desc">
+                                                        <span class="th-title-wrap">Name</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='email'; desc=!desc">
+                                                        <span class="th-title-wrap">Email</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='phone'; desc=!desc">
+                                                        <span class="th-title-wrap">Phone</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>Gender</th>
+                                                    <th nowrap ng-click="asc='country'; desc=!desc">
+                                                        <span class="th-title-wrap">Country</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='state'; desc=!desc">
+                                                        <span class="th-title-wrap">State</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='current_company'; desc=!desc">
+                                                        <span class="th-title-wrap">Current Company</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>Work Exp.</th>
+                                                    <th nowrap>Training Exp.</th>
+                                                    <th nowrap ng-click="asc='technology_exp'; desc=!desc">
+                                                        <span class="th-title-wrap">Technology Exp.</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>CV</th>
+                                                    <th nowrap>Message</th>
+                                                    <th nowrap>Date &#x0026; Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-row" dir-paginate="trainer in trainers | orderBy:asc:desc | filter:searchTrainer | itemsPerPage:20">
+                                                    <td>{{ $index + 1 }}.</td>
+                                                    <td nowrap>{{ trainer.full_name }}</td>
+                                                    <td nowrap>{{ trainer.email }}</td>
+                                                    <td nowrap>{{ trainer.phone }}</td>
+                                                    <td nowrap>{{ trainer.gender | genderFilter }}</td>
+                                                    <td nowrap>{{ trainer.country }}</td>
+                                                    <td nowrap>{{ trainer.state }}</td>
+                                                    <td nowrap>{{ trainer.current_company }}</td>
+                                                    <td nowrap>{{ trainer.work_exp }}</td>
+                                                    <td nowrap>{{ trainer.training_exp }}</td>
+                                                    <td nowrap>{{ trainer.technology_exp }}</td>
+                                                    <td>
+                                                        <a class="btn-download transition" href="../upload/{{ trainer.resume }}" title="{{ trainer.resume }}" target="_blank"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                                    </td>
+                                                    <td>{{ trainer.message | defaultValueFilter }}</td>
+                                                    <td nowrap>{{ trainer.date_time }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                    <!-- Pagination -->
+                                    <div class="text-center">
+                                       <dir-pagination-controls
+                                            max-size="5"
+                                            direction-links="true"
+                                            boundary-links="true" >
+                                       </dir-pagination-controls>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

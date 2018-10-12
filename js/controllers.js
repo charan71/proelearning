@@ -840,9 +840,9 @@ angular.module('ProELearning.controllers', [])
     $scope.asc = "";
     $scope.desc = false;
     $scope.searchSchedule = { course_name:"", batch_type:"", training_type:"", trainer_name:"" };
-    $scope.courseSchedules = [];
+    $scope.jobPostings = [];
     $http({
-        url: "./admin/php/course-schedules-fetch.php",
+        url: "./admin/php/job-postings-fetch.php",
         method: "POST",
         data: "",
         headers: {
@@ -850,7 +850,7 @@ angular.module('ProELearning.controllers', [])
         }
     })
     .then(function(response) {
-        $scope.courseSchedules = response.data;
+        $scope.jobPostings = response.data;
     });
 }])
 

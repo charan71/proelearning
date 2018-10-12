@@ -1,26 +1,22 @@
-<div ng-controller="sideNavCtrl">
+<div ng-controller="navController">
 	<div class="side-nav">
-		<div class="logo mb-20">
-			<img class="img-responsive center-block" src="../images/logos/logo-v-admin-login.png">
-		</div>
 		<ul>
-			<li role="separator" class="divider"></li>
 			<li class="nav-cat-txt">General</li>
-			<li class="side-nav-items"><a href="admin-dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
-			<li class="side-nav-items"><a href="registered-students"><i class="fa fa-users" aria-hidden="true"></i> Registered Students</a></li>
-			<li class="side-nav-items"><a href="registered-trainers"><i class="fa fa-users" aria-hidden="true"></i> Registered Trainers</a></li>
-			<li class="side-nav-items"><a href="contact-us-list"><i class="fa fa-address-card-o" aria-hidden="true"></i> Contact Us List</a></li>
-			<li class="side-nav-items"><a href="course-suggestion-list"><i class="fa fa-list-ul" aria-hidden="true"></i> Course Suggestion List</a></li>
-			<li class="side-nav-items"><a href="free-demos-list"><i class="fa fa-desktop" aria-hidden="true"></i> Free Demos List</a></li>
-			<li class="side-nav-items"><a href="subscribers-list"><i class="fa fa-suitcase" aria-hidden="true"></i> Subscribers List</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/admin-dashboard')}" href="admin-dashboard" class="transition"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/registered-students')}" href="registered-students" class="transition"><i class="fa fa-users" aria-hidden="true"></i> Registered Students</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/registered-trainers')}" href="registered-trainers" class="transition"><i class="fa fa-users" aria-hidden="true"></i> Registered Trainers</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/contact-us-list')}" href="contact-us-list" class="transition"><i class="fa fa-address-card-o" aria-hidden="true"></i> Contact Us List</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/course-suggestion-list')}" href="course-suggestion-list" class="transition"><i class="fa fa-list-ul" aria-hidden="true"></i> Course Suggestion List</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/free-demos-list')}" href="free-demos-list" class="transition"><i class="fa fa-desktop" aria-hidden="true"></i> Free Demos List</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/subscribers-list')}" href="subscribers-list" class="transition"><i class="fa fa-suitcase" aria-hidden="true"></i> Subscribers List</a></li>
 			<li role="separator" class="divider"></li>
 			<li class="nav-cat-txt">Forms</li>
-			<li class="side-nav-items"><a href="job-postings"><i class="fa fa-file-text-o" aria-hidden="true"></i> Job Postings</a></li>
-			<li class="side-nav-items"><a href="course-upload"><i class="fa fa-upload" aria-hidden="true"></i> Upload a Course</a></li>
-			<li class="side-nav-items"><a href="new-course-schedule"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New Course Schedule</a></li>
-			<li class="side-nav-items"><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Register New Trainer</a></li>
-			<li class="side-nav-items"><a href="#"><i class="fa fa-sliders" aria-hidden="true"></i> Upload New Slider</a></li>
-			<li class="side-nav-items"><a href="#"><i class="fa fa-commenting-o" aria-hidden="true"></i> Upload New Testmonial</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/job-postings')}" href="job-postings" class="transition"><i class="fa fa-file-text-o" aria-hidden="true"></i> Job Postings</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/course-upload')}" href="course-upload" class="transition"><i class="fa fa-upload" aria-hidden="true"></i> Upload a Course</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/new-course-schedule')}" href="new-course-schedule" class="transition"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New Course Schedule</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" href="#" class="transition"><i class="fa fa-user-plus" aria-hidden="true"></i> Register New Trainer</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" href="#" class="transition"><i class="fa fa-sliders" aria-hidden="true"></i> Upload New Slider</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" href="#" class="transition"><i class="fa fa-commenting-o" aria-hidden="true"></i> Upload New Testmonial</a></li>
 		</ul>
 	</div>
 </div>

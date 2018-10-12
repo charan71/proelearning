@@ -13,73 +13,81 @@
 	<div class="main-content-wrapper">
 	    <div class="main-content">
 	        <div ng-controller="newCourseScheduleCtrl">
-	            <h3>Add A New Course Schedule</h3>
-	            <div class="content-grid">
-	                <div class="clearfix">
-	                    <form novalidate name="courseSchedulesForm" method="POST" enctype="multipart/form-data" id="courseSchedulesForm" autocomplete="on">
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="course-name">Course Name <span class="important">*</span></label>
-	                            <input type="text" id="course-name" class="form-control" name="courseName" ng-model="course_name" ng-minlength="2" ng-maxlength="250" ng-pattern="/^[a-zA-Z0-9.# ]{2,250}$/" placeholder="Course Name" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.courseName.$error.required && courseSchedulesForm.courseName.$touched">* Course name is required<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.courseName.$error.pattern && courseSchedulesForm.courseName.$invalid">* Course name should contain only alphabets, numbers, dots, hash and spaces.<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.courseName.$error.minlength && courseSchedulesForm.courseName.$touched">* Course name should be minimum of 2 characters.<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.courseName.$error.maxlength && courseSchedulesForm.courseName.$touched">* Course name should be maximum of 250 characters</span>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Add a New Course Schedule</div>
                             </div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="course-date-time">Start Date & Time <span class="important">*</span></label>
-	                            <input type="datetime-local" id="course-date-time" class="form-control" name="courseDate" ng-model="course_schedule_date" placeholder="(ex: 29 Sep 2018)" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.courseDate.$error.required && courseSchedulesForm.courseDate.$touched">* Course schedule date is required<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.courseDate.$error.datetimelocal && courseSchedulesForm.courseDate.$touched">* Not a valid date or time!<br></span>
+	                        <div class="content-grid">
+	                            <div class="clearfix">
+	                                <form novalidate name="courseSchedulesForm" method="POST" enctype="multipart/form-data" id="courseSchedulesForm" autocomplete="on">
+	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	                                        <label for="course-name">Course Name <span class="important">*</span></label>
+	                                        <input type="text" id="course-name" class="form-control" name="courseName" ng-model="course_name" ng-minlength="2" ng-maxlength="250" ng-pattern="/^[a-zA-Z0-9.# ]{2,250}$/" placeholder="Course Name" ng-required="true">
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseName.$error.required && courseSchedulesForm.courseName.$touched">* Course name is required<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseName.$error.pattern && courseSchedulesForm.courseName.$invalid">* Course name should contain only alphabets, numbers, dots, hash and spaces.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseName.$error.minlength && courseSchedulesForm.courseName.$touched">* Course name should be minimum of 2 characters.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseName.$error.maxlength && courseSchedulesForm.courseName.$touched">* Course name should be maximum of 250 characters</span>
+                                        </div>
+	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	                                        <label for="course-date-time">Start Date & Time <span class="important">*</span></label>
+	                                        <input type="datetime-local" id="course-date-time" class="form-control" name="courseDate" ng-model="course_schedule_date" placeholder="(ex: 29 Sep 2018)" ng-required="true">
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseDate.$error.required && courseSchedulesForm.courseDate.$touched">* Course schedule date is required<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseDate.$error.datetimelocal && courseSchedulesForm.courseDate.$touched">* Not a valid date or time!<br></span>
+	                                    </div>
+                                        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
+	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                            <label for="batchType">Batch Type <span class="important">*</span></label>
+                                            <select id="batchType" class="form-control" name="batchType" ng-model="batch_type" ng-required="true">
+                                                <option value="">-- Select Batch Type --</option>
+                                                <option value="Regular">Regular</option>
+                                                <option value="Weekend">Weekend</option>
+                                                <option value="Fastrack">Fastrack</option>
+                                            </select>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.required && courseSchedulesForm.batchType.$touched">* Course batch type is required<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.pattern && courseSchedulesForm.batchType.$invalid">* Course url should contain only alphabets, numbers, spaces, ., -, /, :, ?, =, %.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.minlength && courseSchedulesForm.batchType.$touched">* Course url should be minimum of 1 character.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.maxlength && courseSchedulesForm.batchType.$touched">* Course url should be maximum of 65000 characters</span>
+	                                    </div>
+                                        <div class="clearfix hidden-sm"></div>
+	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	                                        <label for="trainingType">Training Type <span class="important">*</span></label>
+                                            <select id="trainingType" name="trainingType" class="form-control" name="trainingType" ng-model="training_type" ng-required="true">
+                                                <option value="">-- Select Training Type --</option>
+                                                <option value="Online">Online</option>
+                                                <option value="On-site">On-site</option>
+                                                <option value="On-demand">On-demand</option>
+                                            </select>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.required && courseSchedulesForm.trainingType.$touched">* Course training type is required<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.pattern && courseSchedulesForm.trainingType.$invalid">* Course url should contain only alphabets, numbers, spaces, ., -, /, :, ?, =, %.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.minlength && courseSchedulesForm.trainingType.$touched">* Course url should be minimum of 1 character.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.maxlength && courseSchedulesForm.trainingType.$touched">* Course url should be maximum of 65000 characters</span>
+	                                    </div>
+                                        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
+	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	                                        <label for="course-name">Duration <span class="important">*</span></label>
+	                                        <input type="number" id="duration" class="form-control" name="duration" string-to-number ng-model="duration" min="1" max="90" placeholder="Duration" ng-required="true">
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.duration.$error.required && courseSchedulesForm.duration.$touched">* Course duration is required<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.duration.$error.min && courseSchedulesForm.duration.$error.max && courseSchedulesForm.duration.$touched">* Course duration should be between 1 and 90.<br></span>
+	                                    </div>
+	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	                                        <label for="trainer-name">Trainer Name <span class="important">*</span></label>
+	                                        <input type="text" id="trainer-name" class="form-control" name="trainerName" ng-model="trainer_name" placeholder="Trainer Name" ng-required="true">
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.required && courseSchedulesForm.trainerName.$touched">* Trainer Name is required<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.pattern && courseSchedulesForm.trainerName.$invalid">* Course name should contain only alphabets, dots, hash and spaces.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.minlength && courseSchedulesForm.trainerName.$touched">* Course name should be minimum of 2 characters.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.maxlength && courseSchedulesForm.trainerName.$touched">* Course name should be maximum of 250 characters</span>
+	                                    </div>
+                                        <div class="clearfix"></div>
+                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <button type="submit" class="btn-custom btn-custom-md transition" ng-disabled="courseSchedulesForm.$invalid" ng-click="fn_insertNewSchedules()">{{ btnName }}</button>
+                                            <button type="reset" class="btn-custom-inverse btn-custom-md transition" ng-click="fn_reset()">Cancel</button>
+                                        </div>
+	                                </form>
+	                            </div>
 	                        </div>
-                            <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                <label for="batchType">Batch Type <span class="important">*</span></label>
-                                <select id="batchType" class="form-control" name="batchType" ng-model="batch_type" ng-required="true">
-                                    <option value="">-- Select Batch Type --</option>
-                                    <option value="Regular">Regular</option>
-                                    <option value="Weekend">Weekend</option>
-                                    <option value="Fastrack">Fastrack</option>
-                                </select>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.required && courseSchedulesForm.batchType.$touched">* Course batch type is required<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.pattern && courseSchedulesForm.batchType.$invalid">* Course url should contain only alphabets, numbers, spaces, ., -, /, :, ?, =, %.<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.minlength && courseSchedulesForm.batchType.$touched">* Course url should be minimum of 1 character.<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.maxlength && courseSchedulesForm.batchType.$touched">* Course url should be maximum of 65000 characters</span>
-	                        </div>
-                            <div class="clearfix hidden-sm"></div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="trainingType">Training Type <span class="important">*</span></label>
-                                <select id="trainingType" name="trainingType" class="form-control" name="trainingType" ng-model="training_type" ng-required="true">
-                                    <option value="">-- Select Training Type --</option>
-                                    <option value="Online">Online</option>
-                                    <option value="On-site">On-site</option>
-                                    <option value="On-demand">On-demand</option>
-                                </select>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.required && courseSchedulesForm.trainingType.$touched">* Course training type is required<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.pattern && courseSchedulesForm.trainingType.$invalid">* Course url should contain only alphabets, numbers, spaces, ., -, /, :, ?, =, %.<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.minlength && courseSchedulesForm.trainingType.$touched">* Course url should be minimum of 1 character.<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.maxlength && courseSchedulesForm.trainingType.$touched">* Course url should be maximum of 65000 characters</span>
-	                        </div>
-                            <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="course-name">Duration <span class="important">*</span></label>
-	                            <input type="number" id="duration" class="form-control" name="duration" string-to-number ng-model="duration" min="1" max="90" placeholder="Duration" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.duration.$error.required && courseSchedulesForm.duration.$touched">* Course duration is required<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.duration.$error.min && courseSchedulesForm.duration.$error.max && courseSchedulesForm.duration.$touched">* Course duration should be between 1 and 90.<br></span>
-	                        </div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="trainer-name">Trainer Name <span class="important">*</span></label>
-	                            <input type="text" id="trainer-name" class="form-control" name="trainerName" ng-model="trainer_name" placeholder="Trainer Name" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.required && courseSchedulesForm.trainerName.$touched">* Trainer Name is required<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.pattern && courseSchedulesForm.trainerName.$invalid">* Course name should contain only alphabets, dots, hash and spaces.<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.minlength && courseSchedulesForm.trainerName.$touched">* Course name should be minimum of 2 characters.<br></span>
-	                            <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.maxlength && courseSchedulesForm.trainerName.$touched">* Course name should be maximum of 250 characters</span>
-	                        </div>
-                            <div class="clearfix"></div>
-                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <button type="submit" class="btn-custom btn-custom-md transition" ng-disabled="courseSchedulesForm.$invalid" ng-click="fn_insertNewSchedules()">{{ btnName }}</button>
-                                <button type="reset" class="btn-custom-inverse btn-custom-md transition" ng-click="fn_reset()">Cancel</button>
-                            </div>
-	                    </form>
+	                    </div>
 	                </div>
 	            </div>
 	            <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
@@ -90,90 +98,100 @@
 	                <i class="fa fa-exclamation" aria-hidden="true"></i> <span ng-bind="errorMessage"></span>
 	                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
-                <hr>
+
                 <!-- Fetch all uploaded courses and display in table -->
-				<h3>Courses Schedule List</h3>
-				<div class="table-wrapper">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr class="filterRow">
-                                    <th></th>
-                                    <th>
-                                        <input class="searchFilterBox" type="text" ng-model="searchSchedule.course_name" placeholder="Search a Course">
-                                    </th>
-                                    <th></th>
-                                    <th></th>
-                                    <th>
-                                        <select ng-model="searchSchedule.batch_type">
-                                            <option value="">All Batch Types</option>
-                                            <option>Regular</option>
-                                            <option>Weekend</option>
-                                            <option>Fastrack</option>
-                                        </select>
-                                    </th>
-                                    <th>
-                                        <select ng-model="searchSchedule.training_type">
-                                            <option value="">All Training Types</option>
-                                            <option>Online</option>
-                                            <option>On-site</option>
-                                            <option>On-demand</option>
-                                        </select>
-                                    </th>
-                                    <th></th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                                <tr>
-                                    <th>#</th>
-                                    <th nowrap ng-click="asc='courseName'; desc=!desc">
-                                        <span class="th-title-wrap">Course Name</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                    </th>
-                                    <th nowrap>Start Date</th>
-                                    <th>Time</th>
-                                    <th nowrap>Batch Type</th>
-                                    <th nowrap>Training Type</th>
-                                    <th>Duration</th>
-                                    <th nowrap>Trainer Name</th>
-                                    <th nowrap>Posted Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-row" dir-paginate="schedule in courseSchedules | orderBy:asc:desc | filter:searchSchedule | itemsPerPage:10">
-                                    <td>{{ $index + 1 }}.</td>
-                                    <td nowrap class="btn-container">
-                                        {{ schedule.course_name }}
-                                        <span class="updateDelete">
-                                            <button type="button" title="Delete" ng-click="fn_deleteSchedule(schedule.sno);">
-                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                            </button>
-                                            <button type="button" title="Edit" ng-click="fn_editSchedule(schedule.sno, schedule.course_name, schedule.start_date, schedule.batch_type, schedule.training_type, schedule.duration, schedule.trainer_name, schedule.btnName);">
-                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                            </button>
-                                        </span>
-                                    </td>
-                                    <td nowrap>{{ schedule.start_date | date:'dd MMM yyyy' }}</td>
-                                    <td nowrap>{{ schedule.start_date | date:'hh:mm a' }}</td>
-                                    <td nowrap>{{ schedule.batch_type }}</td>
-                                    <td nowrap>{{ schedule.training_type }}</td>
-                                    <td nowrap>{{ schedule.duration }} hrs</td>
-                                    <td nowrap>Mr. {{ schedule.trainer_name }}</td>
-                                    <td nowrap>{{ schedule.date_time }}</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Courses Schedule List</div>
+                            </div>
+                            <div class="panel-body">
+				                <div class="table-wrapper">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr class="filterRow">
+                                                    <th></th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" ng-model="searchSchedule.course_name" placeholder="Search a Course">
+                                                    </th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th>
+                                                        <select ng-model="searchSchedule.batch_type">
+                                                            <option value="">All Batch Types</option>
+                                                            <option>Regular</option>
+                                                            <option>Weekend</option>
+                                                            <option>Fastrack</option>
+                                                        </select>
+                                                    </th>
+                                                    <th>
+                                                        <select ng-model="searchSchedule.training_type">
+                                                            <option value="">All Training Types</option>
+                                                            <option>Online</option>
+                                                            <option>On-site</option>
+                                                            <option>On-demand</option>
+                                                        </select>
+                                                    </th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th nowrap ng-click="asc='courseName'; desc=!desc">
+                                                        <span class="th-title-wrap">Course Name</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>Start Date</th>
+                                                    <th>Time</th>
+                                                    <th nowrap>Batch Type</th>
+                                                    <th nowrap>Training Type</th>
+                                                    <th>Duration</th>
+                                                    <th nowrap>Trainer Name</th>
+                                                    <th nowrap>Posted Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-row" dir-paginate="schedule in courseSchedules | orderBy:asc:desc | filter:searchSchedule | itemsPerPage:10">
+                                                    <td>{{ $index + 1 }}.</td>
+                                                    <td nowrap class="btn-container">
+                                                        {{ schedule.course_name }}
+                                                        <span class="updateDelete">
+                                                            <button type="button" title="Delete" ng-click="fn_deleteSchedule(schedule.sno);">
+                                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                            </button>
+                                                            <button type="button" title="Edit" ng-click="fn_editSchedule(schedule.sno, schedule.course_name, schedule.start_date, schedule.batch_type, schedule.training_type, schedule.duration, schedule.trainer_name, schedule.btnName);">
+                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                            </button>
+                                                        </span>
+                                                    </td>
+                                                    <td nowrap>{{ schedule.start_date | date:'dd MMM yyyy' }}</td>
+                                                    <td nowrap>{{ schedule.start_date | date:'hh:mm a' }}</td>
+                                                    <td nowrap>{{ schedule.batch_type }}</td>
+                                                    <td nowrap>{{ schedule.training_type }}</td>
+                                                    <td nowrap>{{ schedule.duration }} hrs</td>
+                                                    <td nowrap>Mr. {{ schedule.trainer_name }}</td>
+                                                    <td nowrap>{{ schedule.date_time }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+				                </div>
+				            </div>
+				        </div>
+                    
+				        <!-- Pagination -->
+                        <div class="text-center">
+                           <dir-pagination-controls
+                                max-size="5"
+                                direction-links="true"
+                                boundary-links="true" >
+                           </dir-pagination-controls>
+                        </div>
                     </div>
-				</div>
-				
-				<!-- Pagination -->
-                <div class="text-center">
-                   <dir-pagination-controls
-                        max-size="5"
-                        direction-links="true"
-                        boundary-links="true" >
-                   </dir-pagination-controls>
                 </div>
 	        </div>
 	    </div>

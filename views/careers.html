@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-controller="careersController">
     <div class="row">
         <img class="img-responsive" src="./images/parallax-images/careers.jpg" alt="Careers-Training-Pro-eLearning">
     </div>
@@ -15,33 +15,35 @@
             </div>
             <hr>
         </div>
+        
         <div class="row">
-            <div class="col-md-6">
-                <div class="job-post-wrapper">
-                    <h4>Business Development Executive (BDE)</h4>
-                    <p><b>Posted Date:</b> 02 Dec 2018</p>
-                    <p><b>Exp:</b> 1.0 - 3.5 yr(s)</p>
+            <!-- Left Side Pane -->
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                <div class="job-post-o-w" ng-repeat="job in jobPostings">
+                    <div class="job-post-w transition">
+                        <div class="job-c-icon">
+                            <img src="./images/logos/company-icon.png">
+                        </div>
+                        <div class="job-content-w">
+                            <h4>{{ job.position }}</h4>
+                            <span class="c-name">Pro-elearning</span>
+                            <p><b>Job ID:</b> {{ job.job_id }}</p>
+                            <p class="posting-date"><b>Posted on:</b> {{ job.posting_date | date:'dd MMM yyyy' }}</p>
+                            <p><b>Exp:</b> {{ job.min_experience }} - {{ job.max_experience }} yr(s)</p>
+                            <div class="careers-btn-wrap">
+                                <a href=""></a>
+                                <a class="btn btn-primary transition" href="./admin/jobPostings/{{ job.file }}" title="{{ job.file }}" target="_blank">View Details</a>
+                                <a class="btn btn-info transition" href="#" role="button">Apply Now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="job-post-wrapper">
-                    <h4>HR Manager</h4>
-                    <p><b>Posted Date:</b> 15 Dec 2018</p>
-                    <p><b>Exp:</b> 3.0 yr(s)</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="job-post-wrapper">
-                    <h4>Business Development Executive (BDE)</h4>
-                    <p><b>Posted Date:</b> 02 Dec 2018</p>
-                    <p><b>Exp:</b> 2.5 yr(s)</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="job-post-wrapper">
-                    <h4>HR Manager</h4>
-                    <p><b>Posted Date:</b> 15 Dec 2018</p>
-                    <p><b>Exp:</b> 3.0 yr(s)</p>
+
+            <!-- Right Side Pane -->
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                <div class="job-post-o-w">
+                    <img class="img-responsive" src="./images/content-images/careers-img.png">
                 </div>
             </div>
         </div>

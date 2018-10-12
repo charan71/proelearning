@@ -13,54 +13,62 @@
 	<div class="main-content-wrapper">
 	    <div class="main-content">
 	        <div ng-controller="courseUploadCtrl">
-	            <h3>Upload a new Course</h3>
-	            <div class="content-grid">
-	                <div class="clearfix">
-	                    <form novalidate name="courseUploadForm" method="POST" enctype="multipart/form-data" id="courseUploadForm" autocomplete="on">
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="course-name">Course Name <span class="important">*</span></label>
-	                            <input type="text" id="course-name" class="form-control" name="courseName" ng-model="courseName" ng-minlength="1" ng-maxlength="100" ng-pattern="/^[a-zA-Z.# ]{1,100}$/" placeholder="Course Name" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseName.$error.required && courseUploadForm.courseName.$touched">* Course name is required<br></span>
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseName.$error.pattern && courseUploadForm.courseName.$invalid">* Course name should contain only alphabets, dots, hash and spaces.<br></span>
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseName.$error.minlength && courseUploadForm.courseName.$touched">* Course name should be minimum of 1 character.<br></span>
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseName.$error.maxlength && courseUploadForm.courseName.$touched">* Course name should be maximum of 100 characters</span>
-	                        </div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="course-desc">Course Description <span class="important">*</span></label>
-	                            <input type="text" id="course-desc" class="form-control" name="courseDesc" ng-model="courseDesc" ng-minlength="40" ng-maxlength="200" placeholder="Course Description" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseDesc.$error.required && courseUploadForm.courseDesc.$touched">* Course description is required<br></span>
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseDesc.$error.minlength && courseUploadForm.courseDesc.$touched">* Course description should be minimum of 40 characters.<br></span>
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseDesc.$error.maxlength && courseUploadForm.courseDesc.$touched">* Course description should be maximum of 200 characters</span>
-	                        </div>
-                            <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="url">URL <span class="important">*</span></label>
-	                            <input type="text" id="url" class="form-control" name="courseUrl" ng-model="courseUrl" ng-minlength="1" ng-maxlength="65000" ng-pattern="/^[a-zA-Z0-9.\-/:?=%]{1,65000}$/" placeholder="URL of Course" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseUrl.$error.required && courseUploadForm.courseUrl.$touched">* Course url is required<br></span>
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseUrl.$error.pattern && courseUploadForm.courseUrl.$invalid">* Course url should contain only alphabets, numbers, spaces, ., -, /, :, ?, =, %.<br></span>
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseUrl.$error.minlength && courseUploadForm.courseUrl.$touched">* Course url should be minimum of 1 character.<br></span>
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseUrl.$error.maxlength && courseUploadForm.courseUrl.$touched">* Course url should be maximum of 65000 characters</span>
-	                        </div>
-                            <div class="clearfix hidden-sm"></div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="image">Image <span class="important">*</span></label>
-	                            <input type="file" id="image" name="courseImage" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".png, .jpg, .jpeg" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseUploadForm.courseImage.$error.required && courseUploadForm.courseImage.$touched && courseUploadForm.courseImage.$touched">* Image required</span>
-	                            <p class="help-block">Upload image with <strong>228x116</strong> resolution only.</p>
-	                        </div>
-	                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                            <label for="price">Price (in Rupees) <span class="important">*</span></label>
-	                            <input type="number" id="price" class="form-control" name="coursePrice" ng-model="coursePrice" min="1" placeholder="Price" ng-required="true">
-	                            <span class="validation_styles" ng-show="courseUploadForm.coursePrice.$error.required && courseUploadForm.coursePrice.$touched">* Course price is required<br></span>
-	                        </div>
-                            <div class="clearfix"></div>
-                            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<button type="submit" class="btn-custom btn-custom-md transition" ng-disabled="courseUploadForm.$invalid" ng-click="fn_uploadCourse()">Submit</button>
-								<button type="reset" class="btn-custom-inverse btn-custom-md transition" ng-click="fn_reset()">Cancel</button>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                		<div class="panel">
+                		    <div class="panel-heading">
+                		        <div class="panel-title">Upload a New Course</div>
+                		    </div>
+	            			<div class="content-grid">
+	            			    <div class="clearfix">
+	            			        <form novalidate name="courseUploadForm" method="POST" enctype="multipart/form-data" id="courseUploadForm" autocomplete="on">
+	            			            <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	            			                <label for="course-name">Course Name <span class="important">*</span></label>
+	            			                <input type="text" id="course-name" class="form-control" name="courseName" ng-model="courseName" ng-minlength="1" ng-maxlength="100" ng-pattern="/^[a-zA-Z.# ]{1,100}$/" placeholder="Course Name" ng-required="true">
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseName.$error.required && courseUploadForm.courseName.$touched">* Course name is required<br></span>
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseName.$error.pattern && courseUploadForm.courseName.$invalid">* Course name should contain only alphabets, dots, hash and spaces.<br></span>
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseName.$error.minlength && courseUploadForm.courseName.$touched">* Course name should be minimum of 1 character.<br></span>
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseName.$error.maxlength && courseUploadForm.courseName.$touched">* Course name should be maximum of 100 characters</span>
+	            			            </div>
+	            			            <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	            			                <label for="course-desc">Course Description <span class="important">*</span></label>
+	            			                <input type="text" id="course-desc" class="form-control" name="courseDesc" ng-model="courseDesc" ng-minlength="40" ng-maxlength="200" placeholder="Course Description" ng-required="true">
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseDesc.$error.required && courseUploadForm.courseDesc.$touched">* Course description is required<br></span>
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseDesc.$error.minlength && courseUploadForm.courseDesc.$touched">* Course description should be minimum of 40 characters.<br></span>
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseDesc.$error.maxlength && courseUploadForm.courseDesc.$touched">* Course description should be maximum of 200 characters</span>
+	            			            </div>
+                			            <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
+	            			            <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	            			                <label for="url">URL <span class="important">*</span></label>
+	            			                <input type="text" id="url" class="form-control" name="courseUrl" ng-model="courseUrl" ng-minlength="1" ng-maxlength="65000" ng-pattern="/^[a-zA-Z0-9.\-/:?=%]{1,65000}$/" placeholder="URL of Course" ng-required="true">
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseUrl.$error.required && courseUploadForm.courseUrl.$touched">* Course url is required<br></span>
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseUrl.$error.pattern && courseUploadForm.courseUrl.$invalid">* Course url should contain only alphabets, numbers, spaces, ., -, /, :, ?, =, %.<br></span>
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseUrl.$error.minlength && courseUploadForm.courseUrl.$touched">* Course url should be minimum of 1 character.<br></span>
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseUrl.$error.maxlength && courseUploadForm.courseUrl.$touched">* Course url should be maximum of 65000 characters</span>
+	            			            </div>
+                			            <div class="clearfix hidden-sm"></div>
+	            			            <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	            			                <label for="image">Image <span class="important">*</span></label>
+	            			                <input type="file" id="image" name="courseImage" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".png, .jpg, .jpeg" ng-required="true">
+	            			                <span class="validation_styles" ng-show="courseUploadForm.courseImage.$error.required && courseUploadForm.courseImage.$touched && courseUploadForm.courseImage.$touched">* Image required</span>
+	            			                <p class="help-block">Upload image with <strong>228x116</strong> resolution only.</p>
+	            			            </div>
+	            			            <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	            			                <label for="price">Price (in Rupees) <span class="important">*</span></label>
+	            			                <input type="number" id="price" class="form-control" name="coursePrice" ng-model="coursePrice" min="1" placeholder="Price" ng-required="true">
+	            			                <span class="validation_styles" ng-show="courseUploadForm.coursePrice.$error.required && courseUploadForm.coursePrice.$touched">* Course price is required<br></span>
+	            			            </div>
+                			            <div class="clearfix"></div>
+                			            <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+											<button type="submit" class="btn-custom btn-custom-md transition" ng-disabled="courseUploadForm.$invalid" ng-click="fn_uploadCourse()">Submit</button>
+											<button type="reset" class="btn-custom-inverse btn-custom-md transition" ng-click="fn_reset()">Cancel</button>
+										</div>
+	            			        </form>
+	            			    </div>
 							</div>
-	                    </form>
-	                </div>
-	            </div>
+                		</div>
+                	</div>
+            	</div>
 	            <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
 	                <i class="fa fa-check" aria-hidden="true"></i> <span ng-bind="successMessage"></span>
 	                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -69,74 +77,84 @@
 	                <i class="fa fa-exclamation" aria-hidden="true"></i> <span ng-bind="errorMessage"></span>
 	                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
-                <hr>
+				
                 <!-- Fetch all uploaded courses and display in table -->
-				<h3>Uploaded Courses List</h3>
-				<div class="table-wrapper">
-					<div class="table-responsive">
-						<table class="table table-striped">
-							<thead>
-								<tr class="filterRow">
-									<th></th>
-									<th>
-										<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_name" placeholder="Search by Name">
-									</th>
-									<th>
-										<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_description" placeholder="Search by Description">
-									</th>
-									<th>
-										<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_url" placeholder="Search by URL">
-									</th>
-									<th>
-										<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_image" placeholder="Search by Image Name">
-									</th>
-									<th>
-										<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_price" placeholder="Search by Price">
-									</th>
-									<th></th>
-								</tr>
-								<tr>
-									<th>#</th>
-									<th nowrap ng-click="asc='course_name'; desc=!desc">
-										<span class="th-title-wrap">Course Name</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-									</th>
-									<th nowrap ng-click="asc='course_description'; desc=!desc">
-										<span class="th-title-wrap">Course Description</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-									</th>
-									<th nowrap ng-click="asc='course_url'; desc=!desc">
-										<span class="th-title-wrap">Course URL</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-									</th>
-									<th nowrap>Course Image</th>
-									<th nowrap ng-click="asc='course_price'; desc=!desc">
-										<span class="th-title-wrap">Course Price</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-									</th>
-									<th nowrap>Date &#x0026; Time</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="table-row" dir-paginate="newCourse in newCourses | orderBy:asc:desc | filter:uploadCourse | itemsPerPage:20">
-									<td>{{ $index + 1 }}.</td>
-									<td nowrap>{{ newCourse.course_name }}</td>
-									<td>{{ newCourse.course_description }}</td>
-									<td nowrap>{{ newCourse.course_url }}</td>
-									<td>
-										<a class="nc-img-preview" href="../images/course-thumbnails/{{ newCourse.course_image }}" target="_blank">
-											<img src="../images/course-thumbnails/{{ newCourse.course_image }}" title="{{ newCourse.course_image }}">
-										</a>
-									</td>
-									<td>{{ newCourse.course_price }}</td>
-									<td nowrap>{{ newCourse.date_time }}</td>
-								</tr>
-							</tbody>
-						</table>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                		<div class="panel">
+                		    <div class="panel-heading">
+                		        <div class="panel-title">Uploaded Courses List</div>
+                		    </div>
+                		    <div class="panel-body">
+								<div class="table-wrapper">
+									<div class="table-responsive">
+										<table class="table table-striped">
+											<thead>
+												<tr class="filterRow">
+													<th></th>
+													<th>
+														<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_name" placeholder="Search by Name">
+													</th>
+													<th>
+														<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_description" placeholder="Search by Description">
+													</th>
+													<th>
+														<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_url" placeholder="Search by URL">
+													</th>
+													<th>
+														<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_image" placeholder="Search by Image Name">
+													</th>
+													<th>
+														<input class="searchFilterBox" type="text" ng-model="uploadCourse.course_price" placeholder="Search by Price">
+													</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>#</th>
+													<th nowrap ng-click="asc='course_name'; desc=!desc">
+														<span class="th-title-wrap">Course Name</span>
+                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+													</th>
+													<th nowrap ng-click="asc='course_description'; desc=!desc">
+														<span class="th-title-wrap">Course Description</span>
+                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+													</th>
+													<th nowrap ng-click="asc='course_url'; desc=!desc">
+														<span class="th-title-wrap">Course URL</span>
+                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+													</th>
+													<th nowrap>Course Image</th>
+													<th nowrap ng-click="asc='course_price'; desc=!desc">
+														<span class="th-title-wrap">Course Price</span>
+                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+													</th>
+													<th nowrap>Date &#x0026; Time</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="table-row" dir-paginate="newCourse in newCourses | orderBy:asc:desc | filter:uploadCourse | itemsPerPage:20">
+													<td>{{ $index + 1 }}.</td>
+													<td nowrap>{{ newCourse.course_name }}</td>
+													<td>{{ newCourse.course_description }}</td>
+													<td nowrap>{{ newCourse.course_url }}</td>
+													<td>
+														<a class="nc-img-preview" href="../images/course-thumbnails/{{ newCourse.course_image }}" target="_blank">
+															<img src="../images/course-thumbnails/{{ newCourse.course_image }}" title="{{ newCourse.course_image }}">
+														</a>
+													</td>
+													<td>{{ newCourse.course_price }}</td>
+													<td nowrap>{{ newCourse.date_time }}</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				

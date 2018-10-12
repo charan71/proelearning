@@ -13,43 +13,61 @@
 	<div class="main-content-wrapper">
 		<div class="main-content">
 			<div ng-controller="profileCtrl">
-				<h3>My Account Details</h3>
-				<div class="content-grid">
-					<div class="table-responsive">
-						<table class="table acc-details-tbl">
-							<tbody>
-								<tr>
-									<td><b>Name</b></td>
-									<td>{{ data.d.username }}</td>
-								</tr>
-								<tr>
-									<td><b>Email</b></td>
-									<td>{{ data.d.email }}</td>
-								</tr>
-								<tr>
-									<td><b>Gender</b></td>
-									<td>{{ data.d.gender }}</td>
-								</tr>
-								<tr>
-									<td><b>Phone</b></td>
-									<td>{{ data.d.phone }}</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-
-				<h3>Manage Your Profile</h3>
-				<div class="content-grid">
-					<p>Set a new password for your current profile <b>{{ data.d.email }}</b></p>
-					<form>
-						<div class="form-group">
-							<input type="password" ng-model="newpassword" class="form-control" placeholder="Enter A New Password" ng-required autofocus>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                		<div class="panel">
+                		    <div class="panel-heading">
+                		        <div class="panel-title">General Information</div>
+                		    </div>
+                		    <div class="panel-body">
+								<div class="content-grid">
+									<div class="table-responsive">
+										<table class="table acc-details-tbl">
+											<tbody>
+												<tr>
+													<td><b>Name</b></td>
+													<td>{{ data.d.username }}</td>
+												</tr>
+												<tr>
+													<td><b>Email</b></td>
+													<td>{{ data.d.email }}</td>
+												</tr>
+												<tr>
+													<td><b>Gender</b></td>
+													<td>{{ data.d.gender }}</td>
+												</tr>
+												<tr>
+													<td><b>Phone</b></td>
+													<td>{{ data.d.phone }}</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<!-- <div class="clearfix"></div> -->
+								</div>
+							</div>
 						</div>
-						<button class="btn-custom-inverse transition" ng-click="newPass()">Update</button>
-					</form>
-					<div class="clearfix"></div>
+					</div>
+
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<div class="panel">
+							<div class="panel-heading">
+								<div class="panel-title">Manage Your Profile</div>
+							</div>
+							<div class="panel-body">
+								<div class="content-grid">
+									<p>Set a new password for your current profile <b>{{ data.d.email }}</b></p>
+									<form>
+										<div class="form-group">
+											<input type="password" ng-model="newpassword" class="form-control" placeholder="New Password" ng-required>
+										</div>
+										<button class="btn-custom-inverse transition" ng-click="newPass()">Update</button>
+									</form>
+									<div class="clearfix"></div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
 					<i class="fa fa-check" aria-hidden="true"></i> <span ng-bind="successMessage"></span>

@@ -1,19 +1,51 @@
 <div class="admin-login-bg" ng-controller="adminLoginCtrl">
-    <div class="admin-login-form">
-        <img class="center-block mb-20" src="./../images/logos/logo-v-admin-login.png">
-        <form>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" id="username" ng-model="username" ng-required autofocus>
+    <div class="admin-login-wrap">
+        <div class="admin-login-middle">
+            <div class="admin-login-form">
+                <!-- Left Content -->
+                <div class="left">
+                    <div class="content">
+                        <div class="header">
+                            <div class="logo center-block"><img src="./../images/logos/logo-h-70.png" alt="Pro-elearning Logo"></div>
+                            <p class="lead">Login to your account</p>
+                        </div>
+                        <form class="login-form-small">
+                            <div class="form-group">
+                                <label for="username" class="sr-only">Username</label>
+                                <input type="text" class="form-control" id="username" ng-model="username" ng-required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="sr-only">Password</label>
+                                <input type="password" class="form-control" id="password" ng-model="password" ng-required>
+                            </div>
+                            <!-- <div class="form-group clearfix">
+                                <label class="fancy-checkbox element-left">
+                                    <input type="checkbox">
+                                    <span>Remember me</span>
+                                </label>
+                            </div> -->
+                            <button class="btn btn-custom btn-lg btn-block transition" type="submit" ng-click="adminLogin()">LOGIN</button>
+                            <!-- <button class="center-block btn-custom-inverse btn-custom-md transition btn-login pull-right" type="reset">Cancel</button> -->
+                            <!-- <div class="bottom">
+                                <span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
+                            </div> -->
+                            <div class="clearfix"></div>
+                            <div class="error" ng-bind="errorMessage"></div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Right Content -->
+                <div class="right">
+					<div class="overlay"></div>
+					<div class="content text">
+						<h1 class="heading">Feel The Power of Analytics</h1>
+						<p>by Pro-elearning</p>
+					</div>
+				</div>
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" ng-model="password" ng-required>
-            </div>
-            <button class="center-block btn-custom btn-custom-md transition btn-login pull-left" type="submit" ng-click="adminLogin()">Login</button>
-            <button class="center-block btn-custom-inverse btn-custom-md transition btn-login pull-right" type="reset">Cancel</button>
-            <div class="clearfix"></div>
-            <div class="error" ng-bind="errorMessage"></div>
-        </form>
+        </div>
+        <div class="right">
+
+        </div>
     </div>
 </div>

@@ -205,13 +205,13 @@
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Students Trained</h4>
                             <div class="stats-num">
-                                <span animate-numbers>1000</span>+
+                                <span animate-numbers>1252</span>+
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="stats-studs-trained">
-                            <h4 class="stats-title">No.of Courses</h4>
+                            <h4 class="stats-title">Courses</h4>
                             <div class="stats-num">
                                 <span animate-numbers>90</span>+
                             </div>

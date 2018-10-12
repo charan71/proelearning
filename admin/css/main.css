@@ -1,11 +1,30 @@
 body, html {
+    color: #676a6d;
     height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 * {
     outline: none !important;
 }
 input:-webkit-autofill {
-    box-shadow: 0 0 0px 100px white inset !important;
+    box-shadow: 0 0 0px 100px white inset, 0px 1px 2px 0 rgba(0, 0, 0, 0.1) !important;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 20px;
+}
+.side-nav::-webkit-scrollbar-thumb {
+    background: rgba(158, 158, 158, 0.65);
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+a {
+    text-decoration: none !important;
 }
 .main-container {
     margin-top: 50px;
@@ -157,32 +176,50 @@ span.validation_styles {
     margin-bottom: 0;
 }
 .navbar-custom {
-    background-color: #8bc34a;
+    background-color: #fff;
     border: none;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
 }
 .navbar-custom .navbar-brand {
-    color: #fff;
+    color: #333;
+    padding: 6px 15px;
+}
+.navbar-custom .navbar-brand img {
+    width: auto;
+    height: 38px;
 }
 .navbar-custom .navbar-nav>li>a {
-    color: #fff;
+    color: #777;
 }
 .nav>li>a:focus, .nav>li>a:hover {
-    background-color: #689F38;
+    background-color: transparent;
+    color: #333;
 }
 .nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
-    background-color: #689F38;
+    background-color: #fafafa;
 }
 .dropdown-menu {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-color: #eaeaea;
+}
+.navbar-nav .dropdown-menu {
     padding: 0;
+    min-width: 200px;
+    border-top: 2px solid #ACB0B5;
 }
 .dropdown-menu>li>a {
+    color: #676a6d;
     padding: 10px 15px;
 }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
-    color: #fff;
-    background-color: #8bc44a;
+    background-color: #fafafa;
 }
 /*-- //nav --*/
+
+/*-- Active Navs --*/
+.nav.navbar-nav li a.active, .side-nav-items a.active {
+    border-left: 5px solid #00AAff;
+}
 
 /*-- side nav --*/
 .side-nav {
@@ -190,30 +227,28 @@ span.validation_styles {
     height: 92.5vh;
     position: fixed;
     padding-top: 20px;
-    background-color: #fafafa;
+    background-color: #2B333E;
     overflow-y: auto;
 }
 .side-nav ul {
     padding-left: 0;
 }
-.active {
-    background-color: #eee;
-}
 .side-nav ul li a {
-    color: #616161;
+    color: #AEB7C2;
     display: block;
-    padding: 8px 20px;
+    padding: 15px 20px;
     font-size: 14px;
 }
-.side-nav ul li a:hover, .side-nav ul li a:focus, .side-nav ul li a:active {
+.side-nav ul li a:hover, .side-nav ul li a:focus, .side-nav ul li a:active, .side-nav ul li a.active {
+    /* background-color: #eee; */
+    color: #fff;
     text-decoration: none;
-    background-color: #eee;
 }
 .side-nav-items .fa, .navbar-nav .fa {
     margin-right: 10px;
 }
 .nav-cat-txt {
-    color: #8bc34a;
+    color: #00AAFF;
     padding: 5px 20px;
     font-size: 11px;
     font-weight: 900;
@@ -229,6 +264,7 @@ span.validation_styles {
 
 /*-- Main Content --*/
 .main-content-wrapper {
+    background-color: #f5f5fa;
     margin-left: 240px;
     min-height: 100%;
 }
@@ -238,73 +274,92 @@ span.validation_styles {
 .main-content {
     min-height: 100%;
     margin-bottom: -47px;
-    padding: 10px 20px 57px 20px;
+    padding: 30px 30px 50px 30px;
 }
 .uname {
     text-transform: capitalize;
 }
 .content-grid {
-    background-color: #F5F5F5;
-    padding: 20px;
     width: 100%;
     display: inline-block;
 }
 .form-control {
-    border-radius: 0;
-    box-shadow: none;
+    -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    border-color: #eaeaea;
+    background-color: #fcfcfc;
 }
 .form-control:focus, .form-control:active {
-    border: 1px solid #8bc34a;
+    border: 1px solid #ddd;
     box-shadow: none;
 }
+.admin-login-form .login-form-small .btn {
+    margin-top: 20px;
+}
+.admin-login-form .login-form-small .element-left {
+    float: left;
+}
+.fancy-checkbox {
+    display: block;
+    font-weight: normal;
+}
+.fancy-checkbox input[type="checkbox"] {
+    display: none;
+}
+.fancy-checkbox input[type="checkbox"] + span {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    cursor: pointer;
+    position: relative;
+    font-size: 13px;
+}
+.fancy-checkbox input[type="checkbox"] + span:before {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    position: relative;
+    bottom: 1px;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    content: "";
+    border: 1px solid #ccc;
+}
+.admin-login-form .login-form-small .bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+.bottom a:hover, .bottom a:focus, .bottom a:active {
+    color: #2b689c;
+}
 /*-- Custom Buttons --*/
+.btn {
+    border-radius: 2px;
+}
+.btn:hover, .btn:focus {
+    background-color: #0093dc;
+    color: #fff;
+}
+.btn:active {
+    background-color: #204d74;
+    color: #fff;
+    border-color: #122b40;
+}
 .btn-custom {
-    background-color: #8bc44a;
+    background-color: #00AAFF;
     color: #fff;
     font-weight: 500;
     display: inline-block;
-    border: 1px solid #8bc44a;
-    border-radius: 4px;
-}
-.btn-custom:hover, .btn-custom:focus, .btn-custom:active {
-    background-color: #689F38;
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #689F38;
-    cursor: pointer;
-}
-.btn-custom-inverse {
-    background-color: transparent;
-    color: #8bc34a;
-    font-weight: 500;
-    display: inline-block;
-    border: 1px solid #8bc34a;
-    border-radius: 4px;
-}
-.btn-custom-inverse:hover, .btn-custom-inverse:focus, .btn-custom-inverse:active {
-    background-color: #8bc34a;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-.btn-custom-md {
-    padding: 6px 12px;
-}
-.btn-custom-lg {
-    padding: 10px 20px;
-}
-.btn-custom[disabled] {
-    background-color: #8bc44a;
-    color: #fff;
-    border: 1px solid #8bc44a;
-    opacity: .65;
-}
-.btn-custom[disabled]:hover {
-    cursor: not-allowed;
-}
-.btn-login {
-    padding-right: 20px;
-    padding-left: 20px;
+    border: 1px solid #00a0f0;
 }
 .alert {
     position: fixed;
@@ -326,22 +381,139 @@ span.validation_styles {
 
 /*-- Admin Login Page --*/
 .admin-login-bg {
+    background-color: #F3F5F8;
     height: 100%;
-    position: relative;
-    background-image: url('../../images/parallax-images/home_st_tr_bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* position: relative; */
+}
+.admin-login-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.admin-login-middle {
+    display: table-cell;
+    vertical-align: middle;
 }
 .admin-login-form {
     background-color: #fff;
-    width: 300px;
-    padding: 40px 30px 25px 30px;
+    width: 70%;
+    height: 450px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 4px;
+    -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    /* -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 70%;
+    height: 450px;
+    margin: 0 auto;
+    background-color: #fff; */
+}
+@media screen and (max-width: 1279px) {
+    .admin-login-form {
+        width: 90%;
+    }
+    .admin-login-form .left {
+        top: 0;
+    }
+}
+@media screen and (max-width: 992px) {
+    .admin-login-form {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 640px) {
+    .admin-login-form {
+        width: 90%;
+    }
+}
+.admin-login-form:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: ' ';
+    vertical-align: middle;
+    height: 100%;
+}
+.admin-login-form .left {
+    float: left;
+    width: 42%;
+    height: 100%;
+    padding: 0 30px;
+    text-align: center;
+}
+@media screen and (max-width: 1023px) {
+    .admin-login-form .left {
+        width: 100%;
+        position: inherit;
+        padding: 30px;
+    }
+    .admin-login-form .right {
+        display: none;
+    }
+}
+.admin-login-form .content {
+    display: inline-block;
+    width: 99%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.admin-login-form .left .content .header .logo img {
+    width: auto;
+    height: 45px;
+    margin-bottom: 20px;
+}
+.admin-login-form .lead {
+    margin-top: 5px;
+    font-size: 18px;
+    text-align: center;
+}
+.admin-login-form .right {
+    float: right;
+    width: 58%;
+    height: 100%;
+    position: relative;
+    background-image: url(../../images/bg-images/login-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.admin-login-form .right .overlay {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(99, 156, 185, 0.92);
+}
+.admin-login-form .right .text {
+    position: relative;
+    padding: 0 30px;
+    color: #fff;
+}
+.admin-login-form .right .heading {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 26px;
+    font-weight: 300;
+}
+.admin-login-form .right p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
 }
 .error {
     color: red;
@@ -365,8 +537,7 @@ span.validation_styles {
 /*-- //Upload Courses --*/
 /*-- Footer --*/
 footer {
-    background-color: #212121;
-    color: #fff;
+    background-color: #f5f5fa;
     margin-left: 240px;
     padding: 0 20px;
 }
@@ -375,8 +546,13 @@ footer p {
     margin: 15px 0;
     display: inline-block;
 }
+@media (min-width: 768px) {
+    footer p {
+        float: right;
+    }
+}
 .copyright {
-    color: #fff;
+    color: #3287B2;
 }
 .copyright:hover, .copyright:focus, .copyright:active {
     color: #8bc44a;
@@ -385,10 +561,44 @@ footer p {
 /*-- //Footer --*/
 
 /*-- Dashboard --*/
-.dashboard > div {
-    float: left;
+.metric {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #DCE6EB;
 }
-/*-- Website Hits --*/
+.metric .icon {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #0081c2;
+    text-align: center;
+}
+.metric .icon i {
+    font-size: 18px;
+    color: #fff;
+}
+.metric p {
+    margin-bottom: 0;
+    line-height: 1.2;
+    text-align: right;
+}
+.metric .number {
+    display: block;
+    font-size: 28px;
+    font-weight: 300;
+}
+.metric .title {
+    font-size: 16px;
+}
+
+/* Website Hits */
 .hits {
     width: 200px;
     border: 1px solid #673AB7;
@@ -453,6 +663,9 @@ footer p {
 /*-- //Dashboard --*/
 
 /*-- Students Registered --*/
+.table-responsive {
+    border-radius: 3px;
+}
 .table thead {
     background-color: #4077fe;
     color: #fff;
@@ -482,6 +695,11 @@ footer p {
 }
 .table th[ng-click] {
     cursor: pointer;
+}
+.table input, .table select {
+    padding: 2px 5px !important;
+    font-weight: 400;
+    border-radius: 2px;
 }
 .th-title-wrap {
     display: block;
@@ -525,3 +743,40 @@ footer p {
     color: #007bff;
 }
 
+/*-- Panels --*/
+.panel {
+    background-color: #fff;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.panel.panel-headline .panel-heading {
+    border-bottom: none;
+}
+.panel.panel-headline .panel-heading .panel-title {
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: normal;
+}
+.panel.panel-headline .panel-heading .panel-subtitle {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #8D99A8;
+}
+.panel .panel-heading, .panel .panel-body, .panel .panel-footer {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.panel .panel-heading {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.panel .panel-heading .panel-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+.panel .panel-body {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}

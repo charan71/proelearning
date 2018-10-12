@@ -13,46 +13,56 @@
 	<div class="main-content-wrapper">
 		<div class="main-content">
 			<div ng-controller="contactsList">
-				<h3>Subscribers List</h3>
-				<div class="table-wrapper">
-					<div class="table-responsive">
-						<table class="table table-striped">
-							<thead>
-								<tr class="filterRow">
-									<th></th>
-									<th>
-										<input class="searchFilterBox" type="text" ng-model="subscriber.email" placeholder="Search by Email">
-									</th>
-									<th></th>
-								</tr>
-								<tr>
-									<th>#</th>
-									<th nowrap ng-click="asc='email'; desc=!desc">
-										<span class="th-title-wrap">Email</span>
-                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-									</th>
-									<th nowrap>Date & Time</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="table-row" dir-paginate="subscriber in subscribers | orderBy:asc:desc | filter:subscriber | itemsPerPage:20">
-									<td>{{ $index + 1 }}.</td>
-									<td nowrap>{{ subscriber.email }}</td>
-									<td nowrap>{{ subscriber.date_time }}</td>
-								</tr>
-							</tbody>
-						</table>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                		<div class="panel">
+                		    <div class="panel-heading">
+                		        <div class="panel-title">Subscribers List</div>
+                		    </div>
+                		    <div class="panel-body">
+								<div class="table-wrapper">
+									<div class="table-responsive">
+										<table class="table table-striped">
+											<thead>
+												<tr class="filterRow">
+													<th></th>
+													<th>
+														<input class="searchFilterBox" type="text" ng-model="subscriber.email" placeholder="Search by Email">
+													</th>
+													<th></th>
+												</tr>
+												<tr>
+													<th>#</th>
+													<th nowrap ng-click="asc='email'; desc=!desc">
+														<span class="th-title-wrap">Email</span>
+                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+													</th>
+													<th nowrap>Date & Time</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="table-row" dir-paginate="subscriber in subscribers | orderBy:asc:desc | filter:subscriber | itemsPerPage:20">
+													<td>{{ $index + 1 }}.</td>
+													<td nowrap>{{ subscriber.email }}</td>
+													<td nowrap>{{ subscriber.date_time }}</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								
+									<!-- Pagination -->
+                				    <div class="text-center">
+                				       <dir-pagination-controls
+                				            max-size="5"
+                				            direction-links="true"
+                				            boundary-links="true" >
+                				       </dir-pagination-controls>
+                				    </div>
+								</div>
+							</div>
+						</div>
 					</div>
-
-					<!-- Pagination -->
-                    <div class="text-center">
-                       <dir-pagination-controls
-                            max-size="5"
-                            direction-links="true"
-                            boundary-links="true" >
-                       </dir-pagination-controls>
-                    </div>
 				</div>
 			</div>
 		</div>

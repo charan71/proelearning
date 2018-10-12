@@ -23,7 +23,7 @@
     }
 
     $query = "DELETE FROM `job_postings` WHERE `sno`=$sno";
-        
+    
     if(mysqli_query($conn, $query)) {
         echo "Data Deleted successfully...";
     } else {
