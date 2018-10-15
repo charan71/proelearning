@@ -128,7 +128,7 @@
                     <!-- More Categories -->
                     <div class="space-bottom-20 course-category">
                         <div class="row space-bottom-10 course-title">
-                            <h4 class="text-center">For more courses click <b>Categories</b> on top</h4>
+                            <h4 class="text-center">For more courses click <b>Courses</b> on top</h4>
                         </div>
                     </div>
                     
