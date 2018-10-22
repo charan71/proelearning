@@ -1,0 +1,30 @@
+.table-row.ng-enter,
+.table-row.ng-leave,
+.table-row.ng-move {
+  transition: 0.5s linear all;
+}
+
+.table-row.ng-enter,
+.table-row.ng-move {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.table-row.ng-enter.ng-enter-active,
+.table-row.ng-move.ng-move-active {
+  height: 37px;
+  opacity: 1;
+}
+
+.table-row.ng-leave {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.table-row.ng-leave.ng-leave-active {
+  height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}

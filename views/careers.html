@@ -27,13 +27,14 @@
                         <div class="job-content-w">
                             <h4>{{ job.position }}</h4>
                             <span class="c-name">Pro-elearning</span>
-                            <p><b>Job ID:</b> {{ job.job_id }}</p>
+                            <!-- <p><b>Job ID:</b> {{ job.job_id }}</p> -->
+                            <p><b>Job ID:</b> PEL{{ job.sno }}</p>
                             <p class="posting-date"><b>Posted on:</b> {{ job.posting_date | date:'dd MMM yyyy' }}</p>
                             <p><b>Exp:</b> {{ job.min_experience }} - {{ job.max_experience }} yr(s)</p>
                             <div class="careers-btn-wrap">
                                 <a href=""></a>
                                 <a class="btn btn-primary transition" href="./admin/jobPostings/{{ job.file }}" title="{{ job.file }}" target="_blank">View Details</a>
-                                <a class="btn btn-info transition" href="#" role="button">Apply Now</a>
+                                <a class="btn btn-info transition" href="./career/" target="_blank" role="button">Apply Now</a>
                             </div>
                         </div>
                     </div>

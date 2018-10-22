@@ -142,7 +142,8 @@
                                                 <tr class="table-row" dir-paginate="post in jobPostings | orderBy:asc:desc | filter:searchJobPostings | itemsPerPage:10">
                                                     <td>{{ $index + 1 }}.</td>
                                                     <td nowrap class="btn-container">
-                                                        {{ post.job_id }}
+                                                        <!-- {{ post.job_id }} -->
+                                                        <span>PEL</span>{{ post.sno }}
                                                         <span class="updateDelete">
                                                             <button type="button" title="Delete" ng-click="fn_deleteJobPosting(post.sno, post.file);">
                                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>

@@ -212,8 +212,8 @@ p {
     background-color: #fff;
     height: 50px;
     min-width: 100%;
-    width: 275%;
-    left: -230px;
+    width: 300%;
+    left: -255px;
     top: 0;
     position: absolute;
     transform: skew(-30deg);
@@ -2140,4 +2140,8 @@ h2 {
     position: absolute;
     bottom: 0;
     right: 10px;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
 }

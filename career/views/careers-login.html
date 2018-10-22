@@ -1,0 +1,52 @@
+<div class="admin-login-bg" ng-controller="careersLoginCtrl">
+    <div class="admin-login-wrap">
+        <div class="admin-login-middle">
+            <div class="admin-login-form">
+                <!-- Left Content -->
+                <div class="left">
+                    <div class="content">
+                        <div class="header">
+                            <div class="logo center-block"><img src="./../images/logos/logo-h-70.png" alt="Pro-elearning Logo"></div>
+                            <p class="lead">Login to your account</p>
+                        </div>
+                        <form class="login-form-small">
+                            <div class="form-group">
+                                <label for="username" class="sr-only">Username</label>
+                                <input type="text" class="form-control" id="username" ng-model="username" placeholder="Email" ng-required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="sr-only">Password</label>
+                                <input type="password" class="form-control" id="password" ng-model="password" placeholder="Password" ng-required>
+                            </div>
+                            <!-- <div class="form-group clearfix">
+                                <label class="fancy-checkbox element-left">
+                                    <input type="checkbox">
+                                    <span>Remember me</span>
+                                </label>
+                            </div> -->
+                            <button class="btn btn-custom btn-lg btn-block transition" type="submit" ng-click="candidateLogin()">LOGIN</button>
+                            <!-- <button class="center-block btn-custom-inverse btn-custom-md transition btn-login pull-right" type="reset">Cancel</button> -->
+                            <div class="bottom">
+                                <!-- <span class="helper-text"><a href="#">Forgot password?</a></span> | -->
+                                <span class="helper-text"><a href="career-registration">Do not have an account? Register Now</a></span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="error" ng-bind="errorMessage"></div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Right Content -->
+                <div class="right">
+					<div class="overlay"></div>
+					<div class="content text">
+						<h1 class="heading">Dreaming To Be A Part of Pro-elearning?</h1>
+						<p>Come Join Us</p>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+</div>
