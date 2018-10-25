@@ -17,7 +17,6 @@
         $dt = $_POST['date_time'];
 
         // Files Upload Code
-        print_r($_FILES);
         $tempPath = $_FILES['file']['tmp_name'];
         $uploadPath = '../jobPostings/' . $_FILES['file']['name'];
         move_uploaded_file($tempPath, $uploadPath);

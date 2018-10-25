@@ -562,11 +562,6 @@ angular.module('controllers', ['ngRoute'])
     $scope.toggleJSONView = false;
     $scope.toggleFormErrorsView = false;
 
-    $scope.formParams = {
-        ccEmail: '',
-        ccEmailList: []
-    };
-
     // Navigation functions
     $scope.next = function (stage) {
         //$scope.direction = 1;
@@ -591,10 +586,38 @@ angular.module('controllers', ['ngRoute'])
         $scope.stage = "";
     }
 
-    $scope.fn_candidateLogin = function() {
-        // Check form validity and submit data using $http
-        if($scope.careerRegistration.$valid) {
-            $scope.formValidation = false;
+    // Year of Pass out
+    $scope.fulldate = new Date();
+    $scope.year = $scope.fulldate.getFullYear();
+
+    /*-- File Upload --*/
+    $scope.uploadedFile = function(element) {
+        $scope.$apply(function($scope) {
+            $scope.files = element.files;
+        });
+    };
+    $scope.imageUpload = function(event){
+	    var files = event.target.files; // FileList object
+	    var file = files[files.length-1];
+	    $scope.file = file;
+	    var reader = new FileReader();
+	    reader.onload = $scope.imageIsLoaded;
+	    reader.readAsDataURL(file);
+	};
+	$scope.imageIsLoaded = function(e){
+	    $scope.$apply(function() {
+	    	$scope.step = e.target.result;
+	    });
+    };
+    
+    // Check form validity and Insert data using $http
+    $scope.fn_registerCandidate = function() {
+        // if($scope.careerRegistration.$valid) {
+        //     $scope.formValidation = false;
+        console.log($scope.formParams);         // Working
+        console.log($scope.formParams.files);   // Working
+        console.log($scope.formParams.resume);  // Undefined
+        var file = $scope.files[0];
 
             $http({
                 url: "./php/career-registrations.php",
@@ -622,151 +645,7 @@ angular.module('controllers', ['ngRoute'])
                 $scope.stage = "error";
                 console.log(response);
             });
-        };
-    };
-// 
-    var orig_jobId = $scope.job_id;
-    var orig_position = $scope.position;
-    var orig_minExp = $scope.min_experience;
-    var orig_maxExp = $scope.max_experience;
-    var orig_jobPostingDate = $scope.job_posting_date;
-    var orig_jobDesc = $scope.files;
-    $scope.dt = Date();
-    $scope.btnName = "Post New Job";
-
-    /*-- File Upload --*/
-    $scope.uploadedFile = function(element) {
-        $scope.$apply(function($scope) {
-            $scope.files = element.files;
-        });
-    };
-    $scope.imageUpload = function(event){
-	    var files = event.target.files; // FileList object
-	    var file = files[files.length-1];
-	    $scope.file = file;
-	    var reader = new FileReader();
-	    reader.onload = $scope.imageIsLoaded;
-	    reader.readAsDataURL(file);
-	};
-	$scope.imageIsLoaded = function(e){
-	    $scope.$apply(function() {
-	    	$scope.step = e.target.result;
-	    });
-    };
-    
-    /*-- Fetching all scheduled courses and display in table --*/
-    $scope.asc = "";
-    $scope.desc = false;
-    $scope.searchJobPostings = { job_id:"", position:"", min_experience:"", max_experience:"" };
-
-    function displayJobPostings() {
-        $scope.jobPostings = [];
-        $http({
-            url: "./php/job-postings-fetch.php",
-            method: "POST",
-            data: "",
-            headers: {
-                "Content-Type":"application/x-www-form-urlencoded"
-            }
-        })
-        .then(function(response) {
-            $scope.jobPostings = response.data;
-        });
-    }
-    displayJobPostings();
-
-    /*-- Insert New Course Schedule --*/
-    $scope.fn_insertJobPostings = function() {
-        
-        // Converting Date to Milliseconds
-        var ms = new Date($scope.job_posting_date).getTime();
-    
-        var formData = new FormData();
-        var file = $scope.files[0];
-        formData.append('sno',$scope.sno);
-        formData.append('job_id',$scope.job_id);
-        formData.append('position',$scope.position);
-        formData.append('min_experience',$scope.min_experience);
-        formData.append('max_experience',$scope.max_experience);
-        formData.append('posting_date',ms);
-        formData.append('file',file);
-        formData.append('date_time',$scope.dt);
-        formData.append('btnName',$scope.btnName);
-
-        $http({
-            method: 'POST',
-            url: './php/job-postings.php',
-            data: formData,
-            processData: false,
-            headers: {
-                'Content-Type': undefined
-            }
-        })
-        .then(function(response) {
-            $scope.job_id = angular.copy(orig_jobId);
-            $scope.position = angular.copy(orig_position);
-            $scope.min_experience = angular.copy(orig_minExp);
-            $scope.max_experience = angular.copy(orig_maxExp);
-            $scope.job_posting_date = angular.copy(orig_jobPostingDate);
-            $scope.files = angular.copy(orig_jobDesc);
-            $scope.jobPostingsForm.$setUntouched();
-            $scope.successMessage = "Updated successfully!!";
-            $timeout(function() {
-                $scope.successMessage = false;
-            }, 5000);
-            $scope.btnName = "Post New Job";
-            displayJobPostings();
-        }, function(error) {
-            $scope.errorMessage = "Sorry. Please try again!!";
-        });
-    };
-
-    /*-- Reset all form fields and take form to its initial state --*/
-    $scope.fn_reset = function() {
-        $scope.job_id = angular.copy(orig_jobId);
-        $scope.position = angular.copy(orig_position);
-        $scope.min_experience = angular.copy(orig_minExp);
-        $scope.max_experience = angular.copy(orig_maxExp);
-        $scope.job_posting_date = angular.copy(orig_jobPostingDate);
-        $scope.files = angular.copy(orig_jobDesc);
-        $scope.jobPostingsForm.$setUntouched();
-        $scope.btnName = "Post New Job";
-    };
-
-    /*-- Delete selected Job Posting --*/
-    $scope.fn_deleteJobPosting = function(sno, file) {
-        $http({
-            url: "./php/delete-job-posting.php",
-            method: "POST",
-            data: {'sno': sno, 'file': file}
-        })
-        .then(function() {
-            $scope.successMessage = "Record deleted successfully!";
-            $timeout(function() {
-                $scope.successMessage = false;
-            }, 5000);
-            displayJobPostings();
-        }, function(error) {
-            $scope.errorMessage = "Failed to delete record!";
-        })
-    };
-
-    /*-- Edit selected Job Posting --*/
-    $scope.fn_editJobPosting = function(sno, job_id, position, min_experience, max_experience, posting_date, file) {
-        $scope.sno = sno;
-        console.log($scope.sno);
-        $scope.job_id = job_id;
-        $scope.position = position;
-        $scope.min_experience = min_experience;
-        $scope.max_experience = max_experience;
-        $scope.job_posting_date = posting_date;
-        // Convert milliseconds to DateTime Format
-        $scope.msToDate = $filter('date')($scope.job_posting_date, 'dd-MMM-yyyy h:mm a');
-        // Converting Date String to Date Object
-        $scope.dtStringToObj = new Date($scope.msToDate);
-        $scope.job_posting_date = $scope.dtStringToObj;
-        $scope.files = file;
-        $scope.btnName = "Update";
+        // };
     };
 }])
 

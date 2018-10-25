@@ -7,54 +7,57 @@
 		die("Connection failed: " . $conn->connect_error);
     }
     
-	$btnName = $_POST['btnName'];
-    if($btnName == "Post New Job") {
-        $job_id = $_POST['job_id'];
-        $position = $_POST['position'];
-        $min_exp = $_POST['min_experience'];
-        $max_exp = $_POST['max_experience'];
-        $posting_date = $_POST['posting_date'];
-        $dt = $_POST['date_time'];
+    $data = json_decode(file_get_contents("php://input"));
+    if(count($data) > 0) {
+        $first_name = mysqli_real_escape_string($conn, $data->first_name);
+        $middle_name = mysqli_real_escape_string($conn, $data->middle_name);
+        $last_name = mysqli_real_escape_string($conn, $data->last_name);
+        $email = mysqli_real_escape_string($conn, $data->email);
+        $password = mysqli_real_escape_string($conn, $data->password);
+        $phone = mysqli_real_escape_string($conn, $data->phone);
+        $job_title = mysqli_real_escape_string($conn, $data->job_title);
+        $tot_exp = mysqli_real_escape_string($conn, $data->tot_exp);
+        $current_company = mysqli_real_escape_string($conn, $data->current_company);
+        $skills = mysqli_real_escape_string($conn, $data->skills);
+        $university = mysqli_real_escape_string($conn, $data->university);
+        $degree = mysqli_real_escape_string($conn, $data->degree);
+        $specialization = mysqli_real_escape_string($conn, $data->specialization);
+        $year_of_graduation = mysqli_real_escape_string($conn, $data->year_of_graduation);
+        $grade = mysqli_real_escape_string($conn, $data->grade);
+        $dt = date('U');
+        // Converting Seconds to Milliseconds
+        $dt = $dt * 1000;
 
+        // $first_name = $_POST['first_name'];
+        // $middle_name = $_POST['middle_name'];
+        // $last_name = $_POST['last_name'];
+        // $email = $_POST['email'];
+        // $password = $_POST['password'];
+        // $phone = $_POST['phone'];
+        // $job_title = $_POST['job_title'];
+        // $tot_exp = $_POST['tot_exp'];
+        // $current_company = $_POST['current_company'];
+        // $skills = $_POST['skills'];
+        // $university = $_POST['university'];
+        // $degree = $_POST['degree'];
+        // $specialization = $_POST['specialization'];
+        // $year_of_graduation = $_POST['year_of_graduation'];
+        // $grade = $_POST['grade'];
+        // $dt = $_POST['date_time'];
+        
         // Files Upload Code
+        echo $_FILES['resume']['name'];
         print_r($_FILES);
         $tempPath = $_FILES['file']['tmp_name'];
-        $uploadPath = '../jobPostings/' . $_FILES['file']['name'];
+        $uploadPath = '../resumes/' . $_FILES['file']['name'];
         move_uploaded_file($tempPath, $uploadPath);
         
-        $query = "INSERT INTO `job_postings` (`job_id`, `position`, `min_experience`, `max_experience`, `posting_date`, `file`, `date_time`) VALUES ('$job_id', '$position', '$min_exp', '$max_exp', '$posting_date', '".$_FILES['file']['name']."', '$dt')";
+        $query = "INSERT INTO `careers_registration` (`first_name`, `middle_name`, `last_name`, `email`, `password`, `phone`, `job_title`, `tot_exp`, `current_company`, `skills`, `resume`, `university`, `degree`, `specialization`, `year_of_graduation`, `grade`, `date_time`) VALUES ('$first_name', '$middle_name', '$last_name', '$email', '$password', '$phone', '$job_title', '$tot_exp', '$current_company', '$skills', '".$_FILES['file']['name']."', '$university', '$degree', '$specialization', '$year_of_graduation', '$grade', '$dt')";
         
         if(mysqli_query($conn, $query)) {
             echo "Data Inserted...";
         } else {
-            echo 'Error';
-        }
-    } else {
-        // Update Job Posting details
-        $sno = $_POST['sno'];
-        $job_id = $_POST['job_id'];
-        $position = $_POST['position'];
-        $min_exp = $_POST['min_experience'];
-        $max_exp = $_POST['max_experience'];
-        $posting_date = $_POST['posting_date'];
-        $dt = $_POST['date_time'];
-
-        if(empty($_FILES['file']['name'])) {
-            $query = "UPDATE `job_postings` SET `job_id`='$job_id', `position`='$position', `min_experience`='$min_exp', `max_experience`='$max_exp', `posting_date`='$posting_date', `date_time`='$dt' WHERE `sno`='$sno'";
-        } else {
-            // Files Upload Code
-            print_r($_FILES);
-            $tempPath = $_FILES['file']['tmp_name'];
-            $uploadPath = '../jobPostings/' . $_FILES['file']['name'];
-            move_uploaded_file($tempPath, $uploadPath);
-            
-            $query = "UPDATE `job_postings` SET `job_id`='$job_id', `position`='$position', `min_experience`='$min_exp', `max_experience`='$max_exp', `posting_date`='$posting_date', `file`='".$_FILES['file']['name']."', `date_time`='$dt' WHERE `sno`='$sno'";
-        }
-        
-        if(mysqli_query($conn, $query)) {
-            echo "Job Posting Updated Successfully..!";
-        } else {
-            echo 'Error Updating Job Posting from PHP';
+            echo "Error";
         }
     }
 	

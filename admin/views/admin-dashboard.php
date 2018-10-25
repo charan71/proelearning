@@ -41,7 +41,7 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 										<div class="metric">
-											<span class="icon"><i class="fa fa-download"></i></span>
+											<span class="icon"><i class="fa fa-users"></i></span>
 											<p>
 												<span class="number">1,252</span>
 												<span class="title">Students Trained</span>
@@ -50,7 +50,7 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 										<div class="metric">
-											<span class="icon"><i class="fa fa-shopping-bag"></i></span>
+											<span class="icon"><i class="fa fa-book"></i></span>
 											<p>
 												<span class="number">92</span>
 												<span class="title">Courses</span>

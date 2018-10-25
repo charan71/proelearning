@@ -168,7 +168,9 @@ a {
 span.validation_styles {
     color: red;
     font-size: 11px;
+    text-align: left;
     font-style: italic;
+    display: block;
 }
 
 /*-- nav --*/
@@ -333,6 +335,9 @@ span.validation_styles {
     margin-right: 5px;
     content: "";
     border: 1px solid #ccc;
+}
+input[type="file"] {
+    padding: 6px 0;
 }
 .admin-login-form .login-form-small .bottom {
     margin-top: 20px;

@@ -1,4 +1,4 @@
-<div class="admin-login-bg" ng-controller="careerRegistrationCtrl as vmForm">
+<div class="admin-login-bg" ng-controller="careerRegistrationCtrl">
     <div class="admin-login-wrap">
         <div class="admin-login-middle">
             <div class="admin-login-form">
@@ -12,50 +12,52 @@
                             <div class="animate-switch-container" ng-switch on="stage" ng-class="{forward: direction, backward:!direction}">
                                 <div class="animate-switch" ng-switch-default>
                                     <p class="lead">Welcome to the Career registration</p>
-                                    <button type="button" class="btn btn-primary" ng-click="next('stage1')">Go</button>
+                                    <button type="button" class="btn btn-primary" ng-click="next('stage1')">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </button>
                                 </div>
                                 <div class="animate-switch" ng-switch-when="stage1">
                                     <p class="lead">Personal Details</p>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <label for="fname" class="sr-only">First Name</label>
-                                        <input type="text" class="form-control" id="fname" name="firstName" ng-model="formParams.firstName" ng-minlength="3" ng-maxlength="60" placeholder="First Name" ng-class="{'input-error': formValidation && careerRegistration.firstName.$error.required}" ng-required="true">
+                                        <input type="text" class="form-control" id="fname" name="firstName" ng-model="formParams.first_name" ng-minlength="2" ng-maxlength="30" ng-pattern="/^[a-zA-Z]{1,30}$/" placeholder="First Name *" ng-class="{'input-error': formValidation && careerRegistration.firstName.$error.required}" ng-required="true">
                                         <span class="validation_styles" ng-show="careerRegistration.firstName.$error.required && careerRegistration.firstName.$touched">* First Name required.</span>
-                                        <span class="validation_styles" ng-show="careerRegistration.firstName.$error.minlength && careerRegistration.firstName.$touched">* Min character length is 3.</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.firstName.$error.pattern && careerRegistration.firstName.$invalid">* Full Name should contain only alphabets.<br></span>
+                                        <span class="validation_styles" ng-show="careerRegistration.firstName.$error.minlength && careerRegistration.firstName.$touched">* Min character length is 2.</span>
                                         <span class="validation_styles" ng-show="careerRegistration.firstName.$error.maxlength && careerRegistration.firstName.$touched">* Max character length reached.</span>
                                     </div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <label for="mname" class="sr-only">Middle Name</label>
-                                        <input type="text" class="form-control" id="mname" name="middleName" ng-model="formParams.middleName" ng-minlength="3" ng-maxlength="60" placeholder="Middle Name" ng-class="{'input-error': formValidation && careerRegistration.middleName.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.middleName.$error.required && careerRegistration.middleName.$touched">* Middle Name required.</span>
-                                        <span class="validation_styles" ng-show="careerRegistration.middleName.$error.minlength && careerRegistration.middleName.$touched">* Min character length is 3.</span>
+                                        <input type="text" class="form-control" id="mname" name="middleName" ng-model="formParams.middle_name" ng-maxlength="30" ng-pattern="/^[a-zA-Z]{1,30}$/" placeholder="Middle Name (optional)" ng-class="{'input-error': formValidation && careerRegistration.middleName.$invalid}">
                                         <span class="validation_styles" ng-show="careerRegistration.middleName.$error.maxlength && careerRegistration.middleName.$touched">* Max character length reached.</span>
                                     </div>
                                     <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <label for="lname" class="sr-only">Last Name</label>
-                                        <input type="text" class="form-control" id="lname" name="lastName" ng-model="formParams.lastName" ng-minlength="3" ng-maxlength="60" placeholder="Last Name" ng-class="{'input-error': formValidation && careerRegistration.lastName.$error.required}" ng-required="true">
+                                        <input type="text" class="form-control" id="lname" name="lastName" ng-model="formParams.last_name" ng-minlength="2" ng-maxlength="30" ng-pattern="/^[a-zA-Z]{1,30}$/" placeholder="Last Name *" ng-class="{'input-error': formValidation && careerRegistration.lastName.$error.required}" ng-required="true">
                                         <span class="validation_styles" ng-show="careerRegistration.lastName.$error.required && careerRegistration.lastName.$touched">* Last Name required.</span>
-                                        <span class="validation_styles" ng-show="careerRegistration.lastName.$error.minlength && careerRegistration.lastName.$touched">* Min character length is 3.</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.lastName.$error.minlength && careerRegistration.lastName.$touched">* Min character length is 2.</span>
                                         <span class="validation_styles" ng-show="careerRegistration.lastName.$error.maxlength && careerRegistration.lastName.$touched">* Max character length reached.</span>
                                     </div>
                                     <div class="clearfix hidden-sm"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <label for="email" class="sr-only">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" ng-model="formParams.email" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z.]{2,6}$/" ng-minlength="3" ng-maxlength="60" placeholder="Email Address" ng-class="{'input-error': formValidation && careerRegistration.email.$error.required}" ng-required="true">
+                                        <input type="email" class="form-control" id="email" name="email" ng-model="formParams.email" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z.]{2,6}$/" ng-minlength="3" ng-maxlength="60" placeholder="Email Address *" ng-class="{'input-error': formValidation && careerRegistration.email.$error.required}" ng-required="true">
                                         <span class="validation_styles" ng-show="careerRegistration.email.$error.required && careerRegistration.email.$touched">* Email is required</span>
                                         <span class="validation_styles" ng-show="careerRegistration.email.$error.pattern && careerRegistration.email.$touched">* Please enter a valid email</span>
                                     </div>
                                     <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <label for="password" class="sr-only">Password</label>
-                                        <input type="password" class="form-control" id="password" name="pwd" ng-model="formParams.password" ng-minlength="6" ng-maxlength="20" placeholder="Password" ng-class="{'input-error': formValidation && careerRegistration.pwd.$error.required}" ng-required="true">
+                                        <input type="password" class="form-control" id="password" name="pwd" ng-model="formParams.password" ng-minlength="8" ng-maxlength="20" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" placeholder="Password *" ng-class="{'input-error': formValidation && careerRegistration.pwd.$error.required}" ng-required="true">
                                         <span class="validation_styles" ng-show="careerRegistration.pwd.$error.required && careerRegistration.pwd.$touched">* Password is required</span>
-                                        <span class="validation_styles" ng-show="careerRegistration.pwd.$error.minlength && careerRegistration.pwd.$touched">* Minimum is 6 characters</span>
-                                        <span class="validation_styles" ng-show="careerRegistration.pwd.$error.maxlength && careerRegistration.pwd.$touched">* Maximum is 20 characters</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.pwd.$error.minlength && careerRegistration.pwd.$touched">* Password should be atleast 8 characters</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.pwd.$error.maxlength && careerRegistration.pwd.$touched">* Password should be maximum of 20 characters</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.pwd.$error.pattern && careerRegistration.pwd.$touched">* Password should contain atleast one alphabet, one number and one special character</span>
                                     </div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <label for="phone" class="sr-only">Phone</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" ng-model="formParams.phone" ng-pattern="/^\d{10}$/" placeholder="Phone" ng-class="{'input-error': formValidation && careerRegistration.phone.$error.required}" ng-required="true">
+                                        <input type="tel" class="form-control" id="phone" name="phone" ng-model="formParams.phone" ng-pattern="/^\d{10}$/" placeholder="Phone *" ng-class="{'input-error': formValidation && careerRegistration.phone.$error.required}" ng-required="true">
                                         <span class="validation_styles" ng-show="careerRegistration.phone.$error.required && careerRegistration.phone.$touched">* Phone is required</span>
                                         <span class="validation_styles" ng-show="careerRegistration.phone.$error.pattern && careerRegistration.phone.$touched">* Please enter a valid phone number</span>
                                     </div>
@@ -64,71 +66,91 @@
                                     <button type="button" class="btn btn-primary" ng-click="next('stage2')">Step 2</button>
                                 </div>
                                 <div class="animate-switch" ng-switch-when="stage2">
-                                    <p class="lead">Professional Details</p>
+                                    <p class="lead">Academic Details</p>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="job-title" class="sr-only">Job Title</label>
-                                        <input type="text" class="form-control" id="job-title" name="jobTitle" ng-model="formParams.jobTitle" placeholder="Job Title" ng-class="{'input-error': formValidation && careerRegistration.jobTitle.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.jobTitle.$error.required && careerRegistration.jobTitle.$touched">* Job title required</span>
+                                        <label for="univ" class="sr-only">University / School</label>
+                                        <input type="text" class="form-control" id="univ" name="univ" ng-model="formParams.university" ng-minlength="3" ng-maxlength="250" ng-pattern="/^[a-zA-Z. ]{1,250}$/" placeholder="University / School" ng-class="{'input-error': formValidation && careerRegistration.univ.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.univ.$error.required && careerRegistration.univ.$touched">* University / School is required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.univ.$error.pattern && careerRegistration.univ.$touched">* Only alphabets and dots are allowed</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.univ.$error.minlength && careerRegistration.univ.$touched">* Minimum 3 characters required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.univ.$error.maxlength && careerRegistration.univ.$touched">* Maximum character length reached</span>
                                     </div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="tot-exp" class="sr-only">Total Experience</label>
-                                        <input type="text" class="form-control" id="tot-exp" name="totExp" ng-model="formParams.totExp" placeholder="Total Experience" ng-class="{'input-error': formValidation && careerRegistration.totExp.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.totExp.$error.required && careerRegistration.totExp.$touched">* Total experience required</span>
+                                        <label for="degree" class="sr-only">Diploma / Degree / Class</label>
+                                        <input type="text" class="form-control" id="degree" name="degree" ng-model="formParams.degree" ng-minlength="3" ng-maxlength="250" ng-pattern="/^[a-zA-Z. ]{1,250}$/" placeholder="Diploma / Degree / Class" ng-class="{'input-error': formValidation && careerRegistration.degree.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.degree.$error.required && careerRegistration.degree.$touched">* Degree is required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.degree.$error.pattern && careerRegistration.degree.$touched">* Only alphabets and dots are allowed</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.degree.$error.minlength && careerRegistration.degree.$touched">* Minimum 2 characters required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.degree.$error.maxlength && careerRegistration.degree.$touched">* Maximum character length reached</span>
                                     </div>
                                     <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="current-company" class="sr-only">Current Company</label>
-                                        <input type="text" class="form-control" id="current-company" name="company" ng-model="formParams.currentCompany" placeholder="Current Company" ng-class="{'input-error': formValidation && careerRegistration.company.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.company.$error.required && careerRegistration.company.$touched">* Current company required</span>
+                                        <label for="specialization" class="sr-only">Specialization</label>
+                                        <input type="text" class="form-control" id="specialization" name="specialization" ng-model="formParams.specialization" ng-minlength="2" ng-maxlength="250" ng-pattern="/^[a-zA-Z. ]{1,250}$/" placeholder="Specialization" ng-class="{'input-error': formValidation && careerRegistration.specialization.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.specialization.$error.required && careerRegistration.specialization.$touched">* Specialization is required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.specialization.$error.pattern && careerRegistration.specialization.$touched">* Only alphabets and dots are allowed</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.specialization.$error.minlength && careerRegistration.specialization.$touched">* Minimum 2 characters required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.specialization.$error.maxlength && careerRegistration.specialization.$touched">* Maximum character length reached</span>
                                     </div>
                                     <div class="clearfix hidden-sm"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="skills" class="sr-only">Skills</label>
-                                        <input type="text" class="form-control" id="skills" name="skills" ng-model="formParams.skills" placeholder="Skills" ng-class="{'input-error': formValidation && careerRegistration.skills.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.skills.$error.required && careerRegistration.skills.$touched">* Skills required</span>
+                                        <label for="graduation" class="sr-only">Year of Graduation</label>
+                                        <input type="number" class="form-control" id="graduation" name="graduation" ng-model="formParams.year_of_graduation" min="1970" max="{{ year }}" placeholder="Year of Graduation" ng-class="{'input-error': formValidation && careerRegistration.graduation.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.graduation.$error.required && careerRegistration.graduation.$touched">* Year of graduation is required</span>
                                     </div>
+                                    <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="resume" class="control-label sr-only">Upload Resume <span class="important">*</span></label>
-                                        <input type="file" id="resume" name="resume" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".pdf" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.resume.$error.required && careerRegistration.resume.$touched">* Resume is required<br></span>
+                                        <label for="percentage" class="sr-only">Percentage / Grade</label>
+                                        <input type="text" class="form-control" id="percentage" name="percentage" ng-model="formParams.grade" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" placeholder="Percentage / Grade (ex: 75.2 | 7.52)" ng-class="{'input-error': formValidation && careerRegistration.percentage.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.percentage.$error.required && careerRegistration.percentage.$touched">* Percentage / Grade is required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.percentage.$error.pattern && careerRegistration.percentage.$touched">* Enter a valid value</span>
                                     </div>
                                     <div class="clearfix"></div>
                                     <button type="button" class="btn btn-info" ng-click="back('stage1')">Step 1</button>
                                     <button type="button" class="btn btn-primary" ng-click="next('stage3')">Step 3</button>
                                 </div>
                                 <div class="animate-switch" ng-switch-when="stage3">
-                                    <p class="lead">Academic Details</p>
+                                    <p class="lead">Professional Details</p>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="univ" class="sr-only">University / School</label>
-                                        <input type="text" class="form-control" id="univ" name="univ" ng-model="formParams.univ" placeholder="University / School" ng-class="{'input-error': formValidation && careerRegistration.univ.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.univ.$error.required && careerRegistration.univ.$touched">* University / School is required</span>
+                                        <label for="job-title" class="sr-only">Job Title</label>
+                                        <input type="text" class="form-control" id="job-title" name="jobTitle" ng-model="formParams.job_title" ng-minlength="4" ng-maxlength="60" ng-pattern="/^[a-zA-Z. ]{4,60}$/" placeholder="Job Title *" ng-class="{'input-error': formValidation && careerRegistration.jobTitle.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.jobTitle.$error.required && careerRegistration.jobTitle.$touched">* Job title required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.jobTitle.$error.pattern && careerRegistration.jobTitle.$touched">* Job Title contains only alphabets, dot and spaces.</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.jobTitle.$error.minlength && careerRegistration.jobTitle.$touched">* Minimum length is 4 characters.</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.jobTitle.$error.maxlength && careerRegistration.jobTitle.$touched">* Maximum character length reached.</span>
                                     </div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="degree" class="sr-only">Diploma / Degree / Class</label>
-                                        <input type="text" class="form-control" id="degree" name="degree" ng-model="formParams.degree" placeholder="Diploma / Degree / Class" ng-class="{'input-error': formValidation && careerRegistration.degree.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.degree.$error.required && careerRegistration.degree.$touched">* Degree is required</span>
+                                        <label for="tot-exp" class="sr-only">Total Experience</label>
+                                        <input type="number" class="form-control" id="tot-exp" name="totExp" ng-model="formParams.tot_exp" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" placeholder="Total Experience (ex: 0.0) *" step="0.1" min="0" ng-class="{'input-error': formValidation && careerRegistration.totExp.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.totExp.$error.required && careerRegistration.totExp.$touched">* Total experience required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.totExp.$error.pattern && careerRegistration.totExp.$touched">* Enter a valid experience</span>
                                     </div>
                                     <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="specialization" class="sr-only">Specialization</label>
-                                        <input type="text" class="form-control" id="specialization" name="specialization" ng-model="formParams.specialization" placeholder="Specialization" ng-class="{'input-error': formValidation && careerRegistration.specialization.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.specialization.$error.required && careerRegistration.specialization.$touched">* Specialization is required</span>
+                                        <label for="current-company" class="sr-only">Current Company</label>
+                                        <input type="text" class="form-control" id="current-company" name="company" ng-model="formParams.current_company" ng-minlength="2" ng-maxlength="250" ng-pattern="/^[a-zA-Z0-9#. ]{2,100}$/" placeholder="Current Company *" ng-class="{'input-error': formValidation && careerRegistration.company.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.company.$error.required && careerRegistration.company.$touched">* Current company required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.company.$error.pattern && careerRegistration.company.$touched">* Only alphabets, #, . and spaces are allowed</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.company.$error.minlength && careerRegistration.company.$touched">* Minimum length is 2 characters</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.company.$error.maxlength && careerRegistration.company.$touched">* Maximum character limit reached</span>
                                     </div>
                                     <div class="clearfix hidden-sm"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="passout" class="sr-only">Year of Passout</label>
-                                        <input type="text" class="form-control" id="passout" name="passout" ng-model="formParams.passout" placeholder="Year of Passout" ng-class="{'input-error': formValidation && careerRegistration.passout.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.passout.$error.required && careerRegistration.passout.$touched">* Year of passout is required</span>
+                                        <label for="skills" class="sr-only">Skills</label>
+                                        <input type="text" class="form-control" id="skills" name="skills" ng-model="formParams.skills" ng-minlength="2" ng-maxlength="255" ng-pattern="/^[a-zA-Z0-9#., ]{2,255}$/" placeholder="Skills (ex: Angular, AWS, IoT)" ng-class="{'input-error': formValidation && careerRegistration.skills.$error.required}" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.skills.$error.required && careerRegistration.skills.$touched">* Skills required</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.skills.$error.pattern && careerRegistration.skills.$touched">* Only alphabets, ., #, and spaces are allowed</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.skills.$error.minlength && careerRegistration.skills.$touched">* Minimum character length is 2.</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.skills.$error.maxlength && careerRegistration.skills.$touched">* Maximum character length reached.</span>
                                     </div>
-                                    <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                        <label for="percentage" class="sr-only">Percentage / Grade</label>
-                                        <input type="text" class="form-control" id="percentage" name="percentage" ng-model="formParams.percentage" placeholder="Percentage / Grade" ng-class="{'input-error': formValidation && careerRegistration.percentage.$error.required}" ng-required="true">
-                                        <span class="validation_styles" ng-show="careerRegistration.percentage.$error.required && careerRegistration.percentage.$touched">* Percentage / Grade is required</span>
+                                        <label for="resume" class="control-label sr-only">Upload Resume <span class="important">*</span></label>
+                                        <input type="file" id="resume" name="resume" ng-model="files" file-input="formParams.files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".doc,.docx,.pdf" ng-required="true">
+                                        <span class="validation_styles" ng-show="careerRegistration.resume.$error.required && careerRegistration.resume.$touched">* Resume is required<br></span>
                                     </div>
                                     <div class="clearfix"></div>
                                     <button type="button" class="btn btn-info" ng-click="back('stage2')">Step 2</button>
-                                    <button type="button" class="btn btn-custom transition" ng-click="fn_candidateLogin()">REGISTER</button>
+                                    <button type="button" class="btn btn-custom transition" ng-click="fn_registerCandidate()">REGISTER</button>
                                 </div>
                                 <div class="animate-switch" ng-switch-when="success">
                                     <div class="success-wrap">
@@ -147,7 +169,7 @@
                             </div>
 
                             <!-- <button class="btn btn-custom btn-lg transition" type="submit" ng-click="candidateLogin()">REGISTER</button> -->
-                            <!-- <button class="center-block btn-custom-inverse btn-custom-md transition btn-login pull-right" type="reset" ng-click="reset()">Cancel</button> -->
+                            <button class="" type="reset" ng-click="reset()" title="Clear Form"><i class="fa fa-repeat" aria-hidden="true"></i></button>
                             <div class="bottom">
                                 <span class="helper-text"><a href="careers-login">Already have an account? Login</a></span>
                             </div>
