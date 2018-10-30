@@ -15,13 +15,6 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		}
 	})
 	.when("/career-registration", {
-		// resolve: {
-		// 	check: function($location, user) {
-		// 		if(!user.isUserLoggedIn()) {
-		// 			$location.path('/careers-login');
-		// 		}
-		// 	},
-		// },
         title: "Career Registration - Pro-elearning Careers",
 		templateUrl: "views/career-registration.html",
 		controller: "careerRegistrationCtrl"

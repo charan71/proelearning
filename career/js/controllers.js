@@ -612,19 +612,33 @@ angular.module('controllers', ['ngRoute'])
     
     // Check form validity and Insert data using $http
     $scope.fn_registerCandidate = function() {
-        // if($scope.careerRegistration.$valid) {
-        //     $scope.formValidation = false;
-        console.log($scope.formParams);         // Working
-        console.log($scope.formParams.files);   // Working
-        console.log($scope.formParams.resume);  // Undefined
-        var file = $scope.files[0];
+        if($scope.careerRegistration.$valid) {
+            $scope.formValidation = false;
+            var formData = new FormData();
+            var file = $scope.formParams.resume[0];
+            formData.append('first_name',$scope.formParams.first_name);
+            formData.append('middle_name',$scope.formParams.middle_name);
+            formData.append('last_name',$scope.formParams.last_name);
+            formData.append('email',$scope.formParams.email);
+            formData.append('password',$scope.formParams.password);
+            formData.append('phone',$scope.formParams.phone);
+            formData.append('job_title',$scope.formParams.job_title);
+            formData.append('tot_exp',$scope.formParams.tot_exp);
+            formData.append('current_company',$scope.formParams.current_company);
+            formData.append('skills',$scope.formParams.skills);
+            formData.append('university',$scope.formParams.university);
+            formData.append('degree',$scope.formParams.degree);
+            formData.append('specialization',$scope.formParams.specialization);
+            formData.append('year_of_graduation',$scope.formParams.year_of_graduation);
+            formData.append('grade',$scope.formParams.grade);
+            formData.append('resume',file);
 
             $http({
                 url: "./php/career-registrations.php",
                 method: "POST",
-                data: JSON.stringify($scope.formParams),
+                data: formData,
                 headers: {
-                    "Content-Type":"application/x-www-form-urlencoded"
+                    "Content-Type": undefined
                 }
             })
             .then(function successCallback(response) {
@@ -645,7 +659,7 @@ angular.module('controllers', ['ngRoute'])
                 $scope.stage = "error";
                 console.log(response);
             });
-        // };
+        };
     };
 }])
 

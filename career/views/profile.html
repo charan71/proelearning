@@ -25,8 +25,16 @@
 										<table class="table acc-details-tbl">
 											<tbody>
 												<tr>
-													<td><b>Name</b></td>
-													<td>{{ data.d.username }}</td>
+													<td><b>First Name</b></td>
+													<td>{{ data.d.first_name }}</td>
+												</tr>
+												<tr>
+													<td><b>Middle Name</b></td>
+													<td>{{ data.d.middle_name }}</td>
+												</tr>
+												<tr>
+													<td><b>Last Name</b></td>
+													<td>{{ data.d.last_name }}</td>
 												</tr>
 												<tr>
 													<td><b>Email</b></td>
@@ -57,9 +65,12 @@
 							<div class="panel-body">
 								<div class="content-grid">
 									<p>Set a new password for your current profile <b>{{ data.d.email }}</b></p>
-									<form>
+									<form name="newPassword">
 										<div class="form-group">
-											<input type="password" ng-model="newpassword" class="form-control" placeholder="New Password" ng-required>
+											<input type="password" name="pwd" ng-model="newpassword" ng-minlength="8" ng-maxlength="20" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" class="form-control" placeholder="New Password" ng-required="true">
+                                        	<span class="validation_styles" ng-show="newPassword.pwd.$error.minlength && newPassword.pwd.$touched">* Password should be atleast 8 characters</span>
+                                        	<span class="validation_styles" ng-show="newPassword.pwd.$error.maxlength && newPassword.pwd.$touched">* Password should be maximum of 20 characters</span>
+                                        	<span class="validation_styles" ng-show="newPassword.pwd.$error.pattern && newPassword.pwd.$touched">* Password should contain atleast one alphabet, one number and one special character</span>
 										</div>
 										<button class="btn-custom-inverse transition" ng-click="newPass()">Update</button>
 									</form>

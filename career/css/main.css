@@ -186,12 +186,23 @@ span.validation_styles {
     color: #333;
     padding: 6px 15px;
 }
+.navbar-nav > li > a > i.fa {
+    margin-left: 2px;
+    margin-right: 0;
+    font-size: 18px;
+    position: relative;
+    top: 4px;
+}
 .navbar-custom .navbar-brand img {
     width: auto;
     height: 38px;
+    top: 2px;
+    position: relative;
 }
 .navbar-custom .navbar-nav>li>a {
     color: #777;
+    padding-top: 14px;
+    padding-bottom: 13px;
 }
 .nav>li>a:focus, .nav>li>a:hover {
     background-color: transparent;
@@ -215,6 +226,14 @@ span.validation_styles {
 }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
     background-color: #fafafa;
+}
+.navbar-nav > li > a > span {
+    position: relative;
+    top: 2px;
+}
+.navbar-nav > li > a img {
+    width: 22px;
+    margin-right: 2px;
 }
 /*-- //nav --*/
 
@@ -340,7 +359,7 @@ input[type="file"] {
     padding: 6px 0;
 }
 .admin-login-form .login-form-small .bottom {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
 }
 .bottom a:hover, .bottom a:focus, .bottom a:active {
@@ -365,6 +384,14 @@ input[type="file"] {
     font-weight: 500;
     display: inline-block;
     border: 1px solid #00a0f0;
+}
+.btn-go, .btn-reset {
+    background: none;
+    border: 1px solid transparent;
+}
+.btn-go img {
+    width: auto;
+    height: 100px;
 }
 .alert {
     position: fixed;
@@ -445,6 +472,12 @@ input[type="file"] {
     .admin-login-form {
         width: 90%;
     }
+    .animate-switch .heading {
+        font-size: 26px;
+    }
+}
+.animate-switch .heading {
+    font-weight: 300;
 }
 .admin-login-form:before {
     display: inline-block;
@@ -455,11 +488,13 @@ input[type="file"] {
 }
 .admin-login-form .left {
     float: left;
-    /* width: 42%; */
-    width: 100%;
+    width: 42%;
     height: 100%;
     padding: 0 30px;
     text-align: center;
+}
+.admin-login-form.registration .left {
+    width: 100%;
 }
 @media screen and (max-width: 1023px) {
     .admin-login-form .left {
@@ -792,27 +827,8 @@ footer p {
     padding-bottom: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------>>> Animations <<<-----*/
+/********** Career Registration Form **********/
+/*-- Animations --*/
 .fade {
     opacity: 0;
     -webkit-transition: opacity 0.25s ease-in;
@@ -821,133 +837,87 @@ footer p {
     -ms-transition: opacity 0.25s ease-in;
     transition: opacity 0.25s ease-in;
     transition-delay: 0.25s;
-  }
-  .fade.in{
+}
+.fade.in{
     opacity: 1;
-  }
-  
-  .animate-switch-container {
-    position:relative;
+}  
+.animate-switch-container {
+    position: relative;
     overflow: hidden;
-    /* height: 200px; */
     width: auto;
-    /* height: 500px; */
-    /* width: 550px; */
-    /* border: solid 1px black; */
-    /* padding:10px; */
-    /* border-radius:10px; */
-    /* background-size: 50px 50px; */
-  }
+}
 @media (max-width: 767px) {
     .animate-switch-container {
-        height: 400px;
+        height: 410px;
+    }
+}
+@media (max-width: 568px) {
+    .animate-switch .heading {
+        font-size: 24px;
     }
 }
 @media (min-width: 768px) {
     .animate-switch-container {
-        height: 270px;
+        height: 300px;
+    }
+    .animate-switch .heading {
+        font-size: 26px;
     }
 }
-    .animate-switch{
+@media (min-width: 992px) {
+    .animate-switch-container {
+        height: 240px;
+    }
+    .animate-switch .heading {
+        font-size: 32px;
+    }
+}
+.animate-switch{
     /* padding:10px; */
     width: 100%;
-  }
-  .animate-switch.ng-animate {
+}
+.animate-switch.ng-animate {
     -webkit-transition:all 0.5s;
     transition:all 0.5s;
     position:absolute;
   
-  }
-  /* hide leaving slide  */
-  /* show */
-  .animate-switch.ng-leave{
+}
+/* hide leaving slide  */
+/* show */
+.animate-switch.ng-leave{
     left:0;
-  }
-  /* hide */
-  .forward .animate-switch.ng-leave.ng-leave-active{
+}
+/* hide */
+.forward .animate-switch.ng-leave.ng-leave-active{
     left:-100%;
-  }
-  .backward .animate-switch.ng-leave.ng-leave-active{
+}
+.backward .animate-switch.ng-leave.ng-leave-active{
     left: 100%;
-  }
-  /* show entering slide  */
-  /* hide */
-  .forward .animate-switch.ng-enter {
+}
+/* show entering slide  */
+/* hide */
+.forward .animate-switch.ng-enter {
     left:100%;
-  }
-  .backward .animate-switch.ng-enter {
+}
+.backward .animate-switch.ng-enter {
     left:-100%;
-  }
-  /* show */
-  .animate-switch.ng-enter.ng-enter-active {
+}
+/* show */
+.animate-switch.ng-enter.ng-enter-active {
     left:0;
-  }
-  
-  
-  /*-----------------------------------*/
-  /*------>>> Validation <<<-----------*/
-  /*-----------------------------------*/
-  
-  .form-validation input.ng-invalid-maxlength {
-    border:1px solid #D9272D;
-  }
-  
-  
-  .length-error {
-    color: #D9272D;
-    display: block;
-    font-size: 12px;
-    opacity: .8;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    position: relative;
-    line-height: 18px;
-    padding: 10px 10px 5px 10px;
-    margin: -25px 0 20px 0;
-    background-color: #E3E3E3;
-    border-radius: 0 0 5px 5px;
-  }
-  
-  .input-error {
-    border: 1px solid #D9272D;
-  }
-  
-  /*-----------------------------------*/
-  /*------->>> FORM STYLES <<<---------*/
-  /*-----------------------------------*/
-  
-  .note {
-    display: block;
-    font-size: 12px;
-    opacity: .8;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    position: relative;
-    line-height: 18px;
-  }
-  
-  .note-input {
-    padding: 10px 10px 5px 10px;
-    margin: -25px 0 20px 0;
-    background-color: #E3E3E3;
-    border-radius: 0 0 5px 5px;
-  }
-  
-  .note-input-error, .required-error-banner {
-    background-color: rgba(217, 39, 45, 0.5);
-  }
-  
-  /*-----------------------------------*/
-  /*----------->>> HELPERS <<<-------------*/
-  /*-----------------------------------*/
-  
-  /*
-    Allow angular.js to be loaded in body, hiding cloaked elements until
-    templates compile.  The !important is important given that there may be
-    other selectors that are more specific or come later and might alter display.
-   */
-  [ng\:cloak], [ng-cloak], .ng-cloak {
-      display: none;
-  }
+}
+
+/*-- Validation --*/
+.input-error {
+  border: 1px solid #D9272D;
+}
+
+/*-- HELPERS --*/
+/*
+  Allow angular.js to be loaded in body, hiding cloaked elements until
+  templates compile.  The !important is important given that there may be
+  other selectors that are more specific or come later and might alter display.
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
