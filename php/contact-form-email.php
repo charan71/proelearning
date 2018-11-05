@@ -1,8 +1,8 @@
 <?php
- session_start();
+  session_start();
                
-                 $email = $_SESSION['email'];
-               $name =  $_SESSION['name'] ;
+  $email = $_SESSION['email'];
+  $name =  $_SESSION['name'] ;
 
 // multiple recipients
 

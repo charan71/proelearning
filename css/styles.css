@@ -2145,3 +2145,27 @@ h2 {
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+.response {
+    padding: 6px!important;
+    display: block !important;
+}
+.hide {
+    display: none !important;
+}
+.exists {
+    color: red !important;
+}
+.not-exists {
+    color: green !important;
+    /* display: none!important; */
+}

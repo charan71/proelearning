@@ -645,21 +645,41 @@ angular.module('ProELearning.controllers', [])
         $("#subscribeModal").modal("show");
     }
 
+    // Email Existence Check
+    $scope.checkEmail = function() {
+        console.log($scope.email);
+        $http.post(
+            './php/email-existence-check.php',
+            {'email': $scope.email}
+        ).then(function successCallback(response) {
+            $scope.emailStatus = response.data;
+        });
+    };
+        
+    // Set Class
+    $scope.addClass = function(emailStatus) {
+        if(emailStatus == "You have already subscribed with us!") {
+            return 'response exists';
+        } else {
+            return 'hide';
+        }
+    };
+        
     var orig_email = $scope.email;
     $scope.dt = Date();
     $scope.fn_subscribe = function() {
         $http.post(
             "./php/subscribe.php",
-                {'email': $scope.email, 'date_time': $scope.dt}
-            ).then(function(data) {
-                $scope.email = angular.copy(orig_email);
-                $scope.subscribeForm.$setUntouched();
-                $scope.successMessage = "Thanks for subscribing! We have sent our Corporate Training Brochure to your email. Have a nice day!!";
-                $timeout(function() {
-                    $scope.successMessage = false;
-                }, 5000);
-            }, function(error) {
-                $scope.errorMessage = "An error occurred. Please try again!";
+            {'email': $scope.email, 'date_time': $scope.dt}
+        ).then(function(data) {
+            $scope.email = angular.copy(orig_email);
+            $scope.subscribeForm.$setUntouched();
+            $scope.successMessage = "Thanks for subscribing! We have sent our Corporate Training Brochure to your email. Have a nice day!!";
+            $timeout(function() {
+                $scope.successMessage = false;
+            }, 5000);
+        }, function(error) {
+            $scope.errorMessage = "An error occurred. Please try again!";
         });
     };
     $scope.fn_reset = function() {
