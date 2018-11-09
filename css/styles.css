@@ -1560,7 +1560,7 @@ input, select, textarea {
 .form-control-wrapper {
     margin-bottom: 15px;
 }
-#contactForm .form-control-wrapper, .reg-form .form-control-wrapper, #courseSuggestion .form-control-wrapper {
+#contactForm .form-control-wrapper, .reg-form .form-control-wrapper, #courseSuggestion .form-control-wrapper, #freeDemo .form-control-wrapper {
     margin-bottom: 25px;
 }
 .placeholder-wrap {
@@ -2146,15 +2146,7 @@ h2 {
     display: none;
 }
 
-
-
-
-
-
-
-
-
-
+/************ Email Checking Styles  ************/
 .response {
     padding: 6px!important;
     display: block !important;
@@ -2169,3 +2161,4 @@ h2 {
     color: green !important;
     /* display: none!important; */
 }
+/************ //Email Checking Styles  ************/

@@ -47,23 +47,35 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-		title: "Profile - Pro-elearning Administrator",
+		title: "Profile - Pro-elearning",
 		templateUrl: "views/profile.html",
 		controller: "profileCtrl"
 	})
+    .when("/apply-for-job", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/careers-login');
+				}
+			},
+		},
+        title: "Apply for Job - Pro-elearning",
+        templateUrl: "views/apply-for-job.html",
+        controller: "applyForJob"
+    })
     .when("/registered-students", {
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "Registered Students - Pro-elearning Administrator",
+        title: "Registered Students - Pro-elearning",
         templateUrl: "views/reg-students.html",
         controller: "regStudents"
     })
@@ -71,11 +83,11 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "Registered Trainers - Pro-elearning Administrator",
+        title: "Registered Trainers - Pro-elearning",
         templateUrl: "views/reg-trainers.html",
         controller: "regTrainers"
     })
@@ -83,11 +95,11 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "Contacts List - Pro-elearning Administrator",
+        title: "Contacts List - Pro-elearning",
         templateUrl: "views/contacts-us-list.html",
         controller: "contactsList"
     })
@@ -95,11 +107,11 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "Course Suggestion List - Pro-elearning Administrator",
+        title: "Course Suggestion List - Pro-elearning",
         templateUrl: "views/course-suggestion-list.html",
         controller: "courseSuggestionList"
     })
@@ -107,11 +119,11 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "Free Demos List - Pro-elearning Administrator",
+        title: "Free Demos List - Pro-elearning",
         templateUrl: "views/free-demos-list.html",
         controller: "freeDemosList"
     })
@@ -119,11 +131,11 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "Subscribers List - Pro-elearning Administrator",
+        title: "Subscribers List - Pro-elearning",
         templateUrl: "views/subscribers-list.html",
         controller: "subscribersList"
     })
@@ -131,11 +143,11 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "Job Postings - Pro-elearning Administrator",
+        title: "Job Postings - Pro-elearning",
         templateUrl: "views/job-postings.html",
         controller: "jobPostingsUploadCtrl"
     })
@@ -143,11 +155,11 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "Course Upload - Pro-elearning Administrator",
+        title: "Course Upload - Pro-elearning",
         templateUrl: "views/course-upload.html",
         controller: "courseUploadCtrl"
     })
@@ -155,11 +167,11 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},
-        title: "New Course Schedule - Pro-elearning Administrator",
+        title: "New Course Schedule - Pro-elearning",
         templateUrl: "views/new-course-schedule.html",
         controller: "newCourseScheduleCtrl"
     })
@@ -167,7 +179,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		resolve: {
 			check: function($location, user) {
 				if(!user.isUserLoggedIn()) {
-					$location.path('/admin-login');
+					$location.path('/careers-login');
 				}
 			},
 		},

@@ -16,7 +16,7 @@
         $sel = mysqli_query($conn, "select * from `".$table_name."` where `email` = '".$email."' ");
         $row = mysqli_fetch_assoc($sel);
         if($row > 0) {
-            $resText = 'You have already subscribed with us!';
+            $resText = 'You have already registered with us!';
         } else {
             $resText = '';
         }

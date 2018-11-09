@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    angular.module('careers', ['ngRoute', 'ngAnimate', 'routes', 'controllers', 'services', 'filters', 'directives', 'ds.clock', 'angularUtils.directives.dirPagination'])
+    angular.module('careers', ['ngRoute', 'ngAnimate', 'ngMaterial', 'routes', 'controllers', 'services', 'filters', 'directives', 'ds.clock', 'angularUtils.directives.dirPagination'])
 
     /* Resolve Views Scroll Point Issue, Title */
     .run(['$rootScope', '$document', function($rootScope, $document) {

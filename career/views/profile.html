@@ -68,11 +68,16 @@
 									<form name="newPassword">
 										<div class="form-group">
 											<input type="password" name="pwd" ng-model="newpassword" ng-minlength="8" ng-maxlength="20" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" class="form-control" placeholder="New Password" ng-required="true">
+                                        	<span class="validation_styles" ng-show="newPassword.pwd.$error.required && newPassword.pwd.$touched">* Please enter a new password</span>
                                         	<span class="validation_styles" ng-show="newPassword.pwd.$error.minlength && newPassword.pwd.$touched">* Password should be atleast 8 characters</span>
                                         	<span class="validation_styles" ng-show="newPassword.pwd.$error.maxlength && newPassword.pwd.$touched">* Password should be maximum of 20 characters</span>
                                         	<span class="validation_styles" ng-show="newPassword.pwd.$error.pattern && newPassword.pwd.$touched">* Password should contain atleast one alphabet, one number and one special character</span>
 										</div>
-										<button class="btn-custom-inverse transition" ng-click="newPass()">Update</button>
+										<div class="form-group">
+											<input type="password" name="cpwd" ng-model="confirmPassword" ng-minlength="8" ng-maxlength="20" ng-pattern="/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/" class="form-control" placeholder="Confirm Password" ng-required="true">
+                                        	<span class="validation_styles" ng-show="newPassword.cpwd.$error.required && newPassword.cpwd.$touched">* Passwords do not match</span>
+										</div>
+										<button class="btn-custom-inverse transition" ng-click="newPass()" ng-disabled="newPassword.$invalid">Update</button>
 									</form>
 									<div class="clearfix"></div>
 								</div>

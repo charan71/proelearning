@@ -240,10 +240,10 @@
                             <form novalidate name="subscribeForm" method="POST" enctype="application/x-www-form-urlencoded" id="subscribe" class="form form-horizontal" autocomplete="on">
                                 <fieldset>
                                         <div class="input-group">
-                                            <input type="email" name="email" ng-model="email" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z]{2,6}$/" placeholder="Enter your email here..." ng-required="true" ng-keyup="checkEmail()" />
+                                            <input type="email" name="email" ng-model="email" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z.]{2,6}$/" placeholder="Enter your email here..." ng-required="true" ng-keyup="checkEmail()" />
 	        								<!-- <span class="validation_styles" ng-show="subscribeForm.email.$error.required && subscribeForm.email.$touched">* Email is required</span>
     		    							<span class="validation_styles" ng-show="subscribeForm.email.$error.pattern && subscribeForm.email.$touched">* Please enter a valid email</span> -->
-    		    							<span ng-class="addClass(emailStatus)">{{ emailStatus }}</span>
+    		    							<span class="validation_styles" ng-class="addClass(emailStatus)">{{ emailStatus }}</span>
                                             <span class="input-group-btn">
                                                 <button class="btn btn-subscribe transition" type="button" ng-disabled="subscribeForm.$invalid" ng-click="fn_subscribe()">Subscribe</button>
                                             </span>

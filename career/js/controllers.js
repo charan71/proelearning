@@ -96,6 +96,25 @@ angular.module('controllers', ['ngRoute'])
 	$scope.data = user.getData();
 })
 
+// Apply for Job
+.controller("applyForJob", ['$scope', '$http', function($scope, $http) {
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchStudent = { full_name:"", email:"", phone:"", course:"" };
+    $scope.students = [];
+    $http({
+        url: "./php/reg-students.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.students = response.data;
+    })
+}])
+
 // Registered Students List
 .controller("regStudents", ['$scope', '$http', function($scope, $http) {
     $scope.asc = "";
@@ -610,6 +629,32 @@ angular.module('controllers', ['ngRoute'])
 	    });
     };
     
+    // Table Name
+    $scope.table_name = "careers_registration";
+    // Email Existence Check
+    $scope.checkEmail = function() {
+        console.log();
+        $http.post(
+            './php/email-existence-check.php',
+            {'email': $scope.formParams.email, 'table_name': $scope.table_name}
+        ).then(function successCallback(response) {
+            $scope.emailStatus = response.data;
+            if($scope.emailStatus == "You have already registered with us!") {
+                $scope.careerRegistration.email.$setValidity("minlength", false);
+            }
+    
+        });
+    };
+        
+    // Set Class
+    $scope.addClass = function(emailStatus) {
+        if(emailStatus == "You have already registered with us!") {
+            return 'response exists';
+        } else {
+            return 'hide';
+        }
+    };
+
     // Check form validity and Insert data using $http
     $scope.fn_registerCandidate = function() {
         if($scope.careerRegistration.$valid) {

@@ -239,7 +239,7 @@ span.validation_styles {
 
 /*-- Active Navs --*/
 .nav.navbar-nav li a.active, .side-nav-items a.active {
-    border-left: 5px solid #00AAff;
+    border-left: 5px solid #00AAFF;
 }
 
 /*-- side nav --*/
@@ -302,6 +302,8 @@ span.validation_styles {
 }
 .content-grid {
     width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
     display: inline-block;
 }
 .form-control {
@@ -315,6 +317,7 @@ span.validation_styles {
     background-color: #fcfcfc;
 }
 .form-control:focus, .form-control:active {
+    background-color: #fff;
     border: 1px solid #ddd;
     box-shadow: none;
 }
@@ -367,23 +370,31 @@ input[type="file"] {
 }
 /*-- Custom Buttons --*/
 .btn {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
     border-radius: 2px;
-}
-.btn:hover, .btn:focus {
-    background-color: #0093dc;
-    color: #fff;
+    -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    padding: 6px 22px;
 }
 .btn:active {
-    background-color: #204d74;
-    color: #fff;
-    border-color: #122b40;
+    box-shadow: none;
 }
-.btn-custom {
+.btn-primary {
     background-color: #00AAFF;
-    color: #fff;
-    font-weight: 500;
-    display: inline-block;
-    border: 1px solid #00a0f0;
+    border-color: #00a0f0;
+}
+.btn-primary:hover {
+    background-color: #009ae6;
+    border-color: #00a0f0;
+}
+.btn-primary[disabled]:hover, .btn-primary[disabled]:active {
+    background-color: #00AAFF;
+    border-color: #00a0f0;
+}
+.btn-default:hover, .btn-default:focus {
+    background-color: #f7f7f7;
 }
 .btn-go, .btn-reset {
     background: none;
@@ -392,6 +403,23 @@ input[type="file"] {
 .btn-go img {
     width: auto;
     height: 100px;
+}
+/* Button Ripple Effect */
+button {
+    display: inline-block;
+    position: relative;
+}
+.ripple {
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 100%;
+    animation: ripple 1s ease-out;
+}
+/* Ripple Animation Definition */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
 }
 .alert {
     position: fixed;
@@ -713,7 +741,7 @@ footer p {
     border-radius: 3px;
 }
 .table thead {
-    background-color: #4077fe;
+    background-color: #00AAFF;
     color: #fff;
 }
 .table>thead>tr>th {

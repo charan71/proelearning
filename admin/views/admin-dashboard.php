@@ -17,7 +17,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="panel panel-headline">
 							<div class="panel-heading">
-								<h3 class="panel-title">Overview</h3>
+								<div class="panel-title">Overview</div>
 								<!-- <p class="panel-subtitle">Period: Oct 14, 2016 - Oct 21, 2016</p> -->
 							</div>
 							<div class="panel-body">

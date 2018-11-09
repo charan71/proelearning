@@ -645,17 +645,22 @@ angular.module('ProELearning.controllers', [])
         $("#subscribeModal").modal("show");
     }
 
+    // Table Name
+    $scope.table_name = "subscribers";
     // Email Existence Check
     $scope.checkEmail = function() {
-        console.log($scope.email);
         $http.post(
             './php/email-existence-check.php',
-            {'email': $scope.email}
+            {'email': $scope.email, 'table_name': $scope.table_name}
         ).then(function successCallback(response) {
             $scope.emailStatus = response.data;
+            if($scope.emailStatus == "You have already subscribed with us!") {
+                $scope.subscribeForm.email.$setValidity("size", false);
+            }
+    
         });
     };
-        
+    
     // Set Class
     $scope.addClass = function(emailStatus) {
         if(emailStatus == "You have already subscribed with us!") {
@@ -664,17 +669,17 @@ angular.module('ProELearning.controllers', [])
             return 'hide';
         }
     };
-        
+    
     var orig_email = $scope.email;
     $scope.dt = Date();
     $scope.fn_subscribe = function() {
         $http.post(
             "./php/subscribe.php",
-            {'email': $scope.email, 'date_time': $scope.dt}
+            {'email': $scope.email, 'date_time': $scope.dt, 'table_name': $scope.table_name}
         ).then(function(data) {
             $scope.email = angular.copy(orig_email);
             $scope.subscribeForm.$setUntouched();
-            $scope.successMessage = "Thanks for subscribing! We have sent our Corporate Training Brochure to your email. Have a nice day!!";
+            $scope.successMessage = "Thanks for subscribing! We have sent our Corporate Training Brochure to your email.";
             $timeout(function() {
                 $scope.successMessage = false;
             }, 5000);

@@ -45,9 +45,11 @@
                                     <div class="clearfix hidden-sm"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <label for="email" class="sr-only">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" ng-model="formParams.email" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z.]{2,6}$/" ng-minlength="3" ng-maxlength="60" placeholder="Email Address *" ng-class="{'input-error': formValidation && careerRegistration.email.$error.required}" ng-required="true">
+                                        <input type="email" class="form-control" id="email" name="email" ng-model="formParams.email" ng-pattern="/^[a-zA-Z0-9._]+@[a-zA-Z_]+?\.[a-zA-Z.]{2,6}$/" ng-minlength="3" ng-maxlength="60" placeholder="Email Address *" ng-class="{'input-error': formValidation && careerRegistration.email.$error.required}" ng-required="true" ng-keyup="checkEmail()">
                                         <span class="validation_styles" ng-show="careerRegistration.email.$error.required && careerRegistration.email.$touched">* Email is required</span>
                                         <span class="validation_styles" ng-show="careerRegistration.email.$error.pattern && careerRegistration.email.$touched">* Please enter a valid email</span>
+                                        <span class="validation_styles" ng-show="careerRegistration.email.$error.maxlength && careerRegistration.email.$touched">* Exceeded character limit</span>
+                                        <span class="validation_styles" ng-class="addClass(emailStatus)">{{ emailStatus }}</span>
                                     </div>
                                     <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -110,7 +112,7 @@
                                     <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                     <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                         <label for="percentage" class="sr-only">Percentage / Grade</label>
-                                        <input type="number" class="form-control" id="percentage" name="percentage" ng-model="formParams.grade" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" step="0.10" min="0" max="100" placeholder="Percentage / Grade (ex: 75.2 or 7.52)" ng-class="{'input-error': formValidation && careerRegistration.percentage.$error.required}" ng-required="true">
+                                        <input type="number" class="form-control" id="percentage" name="percentage" ng-model="formParams.grade" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" step="0.10" min="0" max="100" placeholder="Percentage or Grade (ex: 75.2 or 7.52)" ng-class="{'input-error': formValidation && careerRegistration.percentage.$error.required}" ng-required="true">
                                         <span class="validation_styles" ng-show="careerRegistration.percentage.$error.required && careerRegistration.percentage.$touched">* Percentage / Grade is required</span>
                                         <span class="validation_styles" ng-show="careerRegistration.percentage.$error.pattern && careerRegistration.percentage.$error.minlength && careerRegistration.percentage.$error.maxlength && careerRegistration.percentage.$touched">* Enter a valid value</span>
                                     </div>
@@ -197,15 +199,6 @@
                         </form>
                     </div>
                 </div>
-
-                <!-- Right Content -->
-                <!-- <div class="right">
-					<div class="overlay"></div>
-					<div class="content text">
-						<h1 class="heading">Dreaming To Be A Part of Pro-elearning?</h1>
-						<p>Join Us, Make Your Dream Come Alive</p>
-					</div>
-				</div> -->
             </div>
         </div>
     </div>
