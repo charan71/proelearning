@@ -55,6 +55,18 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		templateUrl: "views/profile.html",
 		controller: "profileCtrl"
 	})
+    .when("/jobs-applied", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/careers-login');
+				}
+			},
+		},
+        title: "Applied Jobs - Pro-elearning",
+        templateUrl: "views/jobs-applied.html",
+        controller: "appliedJobsCtrl"
+    })
     .when("/apply-for-job", {
 		resolve: {
 			check: function($location, user) {
@@ -65,7 +77,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		},
         title: "Apply for Job - Pro-elearning",
         templateUrl: "views/apply-for-job.html",
-        controller: "applyForJob"
+        controller: "applyForJobCtrl"
     })
     .when("/registered-students", {
 		resolve: {

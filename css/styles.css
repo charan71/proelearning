@@ -1015,6 +1015,10 @@ textarea {
     resize: vertical;
 }
 
+/* Table Styles */
+.table-responsive {
+    border-radius: 3px;
+}
 .table thead {
     background-color: #0077ff;
     color: #fff;
@@ -1043,6 +1047,13 @@ textarea {
 }
 .filterRow th {
     color: #333 !important;
+}
+.table input, .table select {
+    padding: 2px 5px !important;
+    width: 100%;
+    min-width: 130px;
+    font-weight: 400;
+    border-radius: 2px;
 }
 .searchFilterBox {
     width: 100%;

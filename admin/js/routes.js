@@ -50,6 +50,18 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		templateUrl: "views/profile.html",
 		controller: "profileCtrl"
 	})
+    .when("/applied-candidates", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/admin-login');
+				}
+			},
+		},
+        title: "Applied Candidates - Pro-elearning Administrator",
+        templateUrl: "views/applied-candidates.html",
+        controller: "appliedCandidates"
+    })
     .when("/registered-students", {
 		resolve: {
 			check: function($location, user) {

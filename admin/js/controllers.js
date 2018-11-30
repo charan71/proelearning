@@ -66,9 +66,56 @@ angular.module('controllers', ['ngRoute'])
 .controller('adminDashboardCtrl', function($scope, $http, $timeout, user) {
     $scope.data = user.getData();
 
-    // $scope.colors = ["rgba(255,0,0,0.5)","rgba(159,204,0,0.5)","rgba(250,109,33,0.7)","rgba(154,154,154,0.5)"];
-          $scope.labels = ["Red", "Green", "Orange", "Grey"];
-          $scope.data = [900, 300, 500, 100];
+    $scope.websiteHits = {
+        colors: ["rgba(0,170,255,0.7)","rgba(255,0,0,0.5)","rgba(159,204,0,0.5)","rgba(250,109,33,0.7)","rgba(154,154,154,0.5)"],
+        labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        series: ["2017", "2018"],
+        data: [
+            [29, 34, 27, 34, 38, 39, 28]
+        ]
+    };
+
+    $scope.weather = {
+        type: 'line',
+        colors: ["rgba(255,255,255,1)","rgba(90,193,70,0.5)","rgba(19,126,255,0.5)"],
+        labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        series: ["Nov"],
+        data: [
+            [29, 30, 26, 29, 30, 32, 28]
+        ],
+        options: {
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: false,
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                    }
+                }]
+            },
+            elements: {
+                point: {
+                    radius: 2
+                },
+                line: {
+                    fill: false,
+                    borderWidth: 2,
+                    showLines: false
+                }
+            }
+        }
+    };
 
     // $scope.colors = [
     //     {
@@ -95,6 +142,25 @@ angular.module('controllers', ['ngRoute'])
 .controller('headerCtrl', function($scope, $http, user) {
 	$scope.data = user.getData();
 })
+
+// Applied Candidates List
+.controller("appliedCandidates", ['$scope', '$http', function($scope, $http) {
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchAppliedCandidates = { job_id:"", position:"", email:"" };
+    $scope.appliedCandidates = [];
+    $http({
+        url: "./php/applied-candidates.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.appliedCandidates = response.data;
+    })
+}])
 
 // Registered Students List
 .controller("regStudents", ['$scope', '$http', function($scope, $http) {

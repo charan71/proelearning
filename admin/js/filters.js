@@ -23,7 +23,7 @@ angular.module("filters", [])
 		if(input == "") {
 			output = "-- NA --";
 		} else if (input == "undefined") {
-			output = "-- NA --";
+			output = "";
 		} else {
 			output = input;
 		}

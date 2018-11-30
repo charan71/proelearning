@@ -7,7 +7,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$query = $conn->query("SELECT * FROM `students_list` ORDER BY `sno` DESC");
+$query = $conn->query("SELECT * FROM `job_applications` ORDER BY `sno` DESC");
 $ar = array();
 
 while($row = mysqli_fetch_assoc($query)) {

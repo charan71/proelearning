@@ -12,7 +12,7 @@
 	<!-- Partial Views -->
 	<div class="main-content-wrapper">
 	    <div class="main-content">
-	        <div ng-controller="jobPostingsUploadCtrl">
+	        <div ng-controller="applyForJobCtrl">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="panel">
@@ -21,36 +21,36 @@
                             </div>
                             <div class="content-grid">
                                 <div class="clearfix">
-                                    <form novalidate name="jobPostingsForm" method="POST" enctype="multipart/form-data" id="jobPostingsForm" autocomplete="on">
+                                    <form novalidate name="jobApplyForm" method="POST" enctype="multipart/form-data" id="jobApplyForm" autocomplete="on">
                                         <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                             <label for="job-id">Job ID <span class="important">*</span></label>
                                             <input type="text" id="job-id" class="form-control" name="jobId" ng-model="job_id" ng-maxlength="12" ng-pattern="/^[a-zA-Z0-9]{1,12}$/" placeholder="Job ID" ng-required="true">
-                                            <span class="validation_styles" ng-show="jobPostingsForm.jobId.$error.required && jobPostingsForm.jobId.$touched">* Job ID is required<br></span>
-                                            <span class="validation_styles" ng-show="jobPostingsForm.jobId.$error.pattern && jobPostingsForm.jobId.$touched">* Job ID should contain only alphabets and numbers<br></span>
-                                            <span class="validation_styles" ng-show="jobPostingsForm.jobId.$error.maxlength && jobPostingsForm.jobId.$touched">* Job ID should be 12 characters only<br></span>
+                                            <span class="validation_styles" ng-show="jobApplyForm.jobId.$error.required && jobApplyForm.jobId.$touched">* Job ID is required<br></span>
+                                            <span class="validation_styles" ng-show="jobApplyForm.jobId.$error.pattern && jobApplyForm.jobId.$touched">* Job ID should contain only alphabets and numbers<br></span>
+                                            <span class="validation_styles" ng-show="jobApplyForm.jobId.$error.maxlength && jobApplyForm.jobId.$touched">* Job ID should be 12 characters only<br></span>
                                         </div>
                                         <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                             <label for="min-exp">Total Experience <span class="important">*</span></label>
-                                            <input type="number" id="min-exp" class="form-control" name="minExp" ng-model="min_experience" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" step="0.10" min="0" max="100" placeholder="ex: 0.6, 12.05" ng-required="true">
-                                            <span class="validation_styles" ng-show="jobPostingsForm.minExp.$error.required && jobPostingsForm.minExp.$touched">* Minimum Experience is required<br></span>
-                                            <span class="validation_styles" ng-show="jobPostingsForm.minExp.$error.pattern && jobPostingsForm.minExp.$invalid">* Minimum Experience should contain only numbers and dot<br></span>
+                                            <input type="number" id="min-exp" class="form-control" name="minExp" ng-model="tot_experience" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" step="0.10" min="0" max="100" placeholder="ex: 0.6, 12.05" ng-required="true">
+                                            <span class="validation_styles" ng-show="jobApplyForm.minExp.$error.required && jobApplyForm.minExp.$touched">* Minimum Experience is required<br></span>
+                                            <span class="validation_styles" ng-show="jobApplyForm.minExp.$error.pattern && jobApplyForm.minExp.$invalid">* Minimum Experience should contain only numbers and dot<br></span>
                                         </div>
                                         <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                         <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                            <label for="max-exp">Domain Experience <span class="important">*</span></label>
-                                            <input type="text" id="max-exp" class="form-control" name="maxExp" ng-model="max_experience" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" placeholder="ex: 0.6, 12.05" ng-required="true">
-                                            <span class="validation_styles" ng-show="jobPostingsForm.maxExp.$error.required && jobPostingsForm.maxExp.$touched">* Maximum Experience is required<br></span>
-                                            <span class="validation_styles" ng-show="jobPostingsForm.maxExp.$error.pattern && jobPostingsForm.maxExp.$invalid">* Maximum Experience should contain only numbers and dot<br></span>
+                                            <label for="domain-exp">Domain Experience <span class="important">*</span></label>
+                                            <input type="number" id="domain-exp" class="form-control" name="domainExp" ng-model="domain_experience" ng-pattern="/^[0-9]{1,2}.[0-9]{1,2}$/" step="0.10" min="0" max="100" placeholder="ex: 0.6, 12.05" ng-required="true">
+                                            <span class="validation_styles" ng-show="jobApplyForm.domainExp.$error.required && jobApplyForm.domainExp.$touched">* Domain Experience is required<br></span>
+                                            <span class="validation_styles" ng-show="jobApplyForm.domainExp.$error.pattern && jobApplyForm.domainExp.$invalid">* Domain Experience should contain only numbers and dot<br></span>
                                         </div>
                                         <div class="clearfix hidden-sm"></div>
                                         <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                             <label for="job-desc" class="control-label">Updated CV <span class="important">*</span></label>
                                             <input type="file" id="cv" name="cv" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".pdf" ng-required="true">
-                                            <span class="validation_styles" ng-show="jobPostingsForm.cv.$error.required && jobPostingsForm.cv.$touched">* Job description file is required<br></span>
+                                            <span class="validation_styles" ng-show="jobApplyForm.cv.$error.required && jobApplyForm.cv.$touched">* Job description file is required<br></span>
                                         </div>
                                         <div class="clearfix"></div>
                                         <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                            <button type="submit" class="btn btn-primary transition" ng-disabled="jobPostingsForm.$invalid" ng-click="fn_insertJobPostings()">{{ btnName }}</button>
+                                            <button type="submit" class="btn btn-primary transition" ng-disabled="jobApplyForm.$invalid" ng-click="fn_applyForJob()">Apply</button>
                                             <button type="reset" class="btn btn-default transition" ng-click="fn_reset()">Cancel</button>
                                         </div>
                                     </form>
@@ -73,7 +73,7 @@
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="panel">
                             <div class="panel-heading">
-                                <div class="panel-title">Job Postings List</div>
+                                <div class="panel-title">Your Previously Applied Jobs</div>
                             </div>
                             <div class="panel-body">
 				                <div class="table-wrapper">
@@ -83,16 +83,11 @@
                                                 <tr class="filterRow">
                                                     <th></th>
                                                     <th>
-                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchJobPostings.job_id" placeholder="Search Using Job ID">
-                                                    </th>
-                                                    <th></th>
-                                                    <th>
-                                                        <input class="searchFilterBox" type="text" size="6" ng-model="searchJobPostings.min_experience" placeholder="Min. Exp.">
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchAppliedJobs.job_id" placeholder="Search Using Job ID">
                                                     </th>
                                                     <th>
-                                                        <input class="searchFilterBox" type="text" size="6" ng-model="searchJobPostings.max_experience" placeholder="Max. Exp.">
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchAppliedJobs.position" placeholder="Search Using Position">
                                                     </th>
-                                                    <th></th>
                                                     <th></th>
                                                     <th></th>
                                                 </tr>
@@ -104,48 +99,26 @@
                                                         <i class="fa fa-sort-desc" aria-hidden="true"></i>
                                                     </th>
                                                     <th nowrap ng-click="asc='position'; desc=!desc">
-                                                        <span class="th-title-wrap">Job Title / Position</span>
+                                                        <span class="th-title-wrap">Position</span>
                                                         <i class="fa fa-sort-asc" aria-hidden="true"></i>
                                                         <i class="fa fa-sort-desc" aria-hidden="true"></i>
                                                     </th>
-                                                    <th nowrap ng-click="asc='min_experience'; desc=!desc" title="Minimum Experience">
-                                                        <span class="th-title-wrap">Min. Exp.</span>
-                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                                    </th>
-                                                    <th nowrap ng-click="asc='max_experience'; desc=!desc" title="Maximum Experience">
-                                                        <span class="th-title-wrap">Max. Exp.</span>
-                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-                                                    </th>
-                                                    <th nowrap>Job Posting Date & Time</th>
                                                     <th nowrap>Job Description</th>
-                                                    <th nowrap>Record Created Date</th>
+                                                    <th nowrap>Applied On</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="table-row" dir-paginate="post in jobPostings | orderBy:asc:desc | filter:searchJobPostings | itemsPerPage:10">
+                                                <tr class="table-row" dir-paginate="post in appliedJobs | orderBy:asc:desc | filter:searchAppliedJobs | itemsPerPage:10">
                                                     <td>{{ $index + 1 }}.</td>
                                                     <td nowrap class="btn-container">
-                                                        <!-- {{ post.job_id }} -->
-                                                        <span>PEL</span>{{ post.sno }}
-                                                        <span class="updateDelete">
-                                                            <button type="button" title="Delete" ng-click="fn_deleteJobPosting(post.sno, post.file);">
-                                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                                            </button>
-                                                            <button type="button" title="Edit" ng-click="fn_editJobPosting(post.sno, post.job_id, post.position, post.min_experience, post.max_experience, post.posting_date, post.file, post.btnName);">
-                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                            </button>
-                                                        </span>
+                                                        {{ post.job_id }}
+                                                        <!-- <span>PEL</span>{{ post.sno }} -->
                                                     </td>
                                                     <td nowrap>{{ post.position }}</td>
-                                                    <td nowrap>{{ post.min_experience }}</td>
-                                                    <td nowrap>{{ post.max_experience }}</td>
-                                                    <td nowrap>{{ post.posting_date | date:'dd MMM yyyy @ hh:mm a' }}</td>
                                                     <td nowrap class="text-center">
-                                                        <a class="btn-download transition" href="./jobPostings/{{ post.file }}" title="{{ post.file }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color: #ee2a03;"></i></a>
+                                                        <a class="btn-download transition" href="../admin/jobPostings/{{ post.job_description }}" title="{{ post.job_description }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color: red;"></i></a>
                                                     </td>
-                                                    <td nowrap>{{ post.date_time }}</td>
+                                                    <td nowrap>{{ post.date_time | date:'dd MM yyyy' }}</td>
                                                 </tr>
                                             </tbody>
                                         </table>

@@ -24,7 +24,7 @@
 								<div class="row">
 									<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 										<div class="metric">
-											<span class="icon"><i class="fa fa-eye"></i></span>
+											<span class="icon icon-1"><i class="fa fa-eye"></i></span>
 											<p>
 												<span class="number">
 													<?php
@@ -41,7 +41,7 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 										<div class="metric">
-											<span class="icon"><i class="fa fa-users"></i></span>
+											<span class="icon icon-2"><i class="fa fa-smile-o"></i></span>
 											<p>
 												<span class="number">1,252</span>
 												<span class="title">Students Trained</span>
@@ -50,7 +50,7 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 										<div class="metric">
-											<span class="icon"><i class="fa fa-book"></i></span>
+											<span class="icon icon-3"><i class="fa fa-book"></i></span>
 											<p>
 												<span class="number">92</span>
 												<span class="title">Courses</span>
@@ -59,7 +59,7 @@
 									</div>
 									<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
 										<div class="metric">
-											<span class="icon"><i class="fa fa-bar-chart"></i></span>
+											<span class="icon icon-4"><i class="fa fa-bar-chart"></i></span>
 											<p>
 												<span class="number">86%</span>
 												<span class="title">Students Placed</span>
@@ -72,10 +72,43 @@
 					</div>
 				</div>
 
-				<div class="">
-					<h3>Dashboard</h3>
-                	<div style="width:300px;height:300;">
-                	    <canvas class="chart chart-doughnut" chart-data="data" chart-labels="labels" chart-click="onClick" chart-colors="colors"></canvas>
+				<div class="row">
+					<!-- Graph Chart -->
+					<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+						<div class="panel panel-headline">
+							<div class="panel-heading">
+								<div class="panel-title">Website Visits</div>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div>
+										<canvas class="chart chart-bar" chart-data="websiteHits.data" chart-labels="websiteHits.labels" chart-series="websiteHits.series" chart-click="onClick" chart-colors="websiteHits.colors"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Weather -->
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+						<div class="panel panel-headline weather-card">
+							<div class="panel-heading">
+								<div class="panel-title">Weather <small class="weather-date">20th Nov, 2018</small></div>
+								<div class="weather-icon">
+									<h1>
+										<i class="fa fa-sun-o" aria-hidden="true"></i>
+										<span>26<sup>°</sup>
+									</h1>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div class="row">
+									<div>
+										<canvas class="chart chart-line" chart-data="weather.data" chart-labels="weather.labels" chart-series="weather.series" chart-options="weather.options" chart-click="onClick" chart-colors="weather.colors"></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 					
 					<div class="ngClock">

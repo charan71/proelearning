@@ -1,0 +1,94 @@
+<!-- Navigation Menu -->
+<header>
+    <div ng-include="'views/header.html'"></div>
+</header>
+<!-- //Navigation Menu -->
+
+<div class="main-container">
+    <!-- Side Nav -->
+    <div ng-include="'views/side-nav.html'"></div>
+    <!-- //Side Nav -->
+    
+    <!-- Partial Views -->
+    <div class="main-content-wrapper">
+        <div class="main-content">
+            <div ng-controller="appliedJobsCtrl">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Jobs You Applied</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-wrapper">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr class="filterRow">
+                                                    <th></th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchAppliedJobs.job_id" placeholder="Search Using Job ID">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchAppliedJobs.position" placeholder="Search Using Position">
+                                                    </th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th nowrap ng-click="asc='job_id'; desc=!desc">
+                                                        <span class="th-title-wrap">Job ID</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='position'; desc=!desc">
+                                                        <span class="th-title-wrap">Position</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>Job Description</th>
+                                                    <th nowrap>Applied On</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-row" dir-paginate="post in appliedJobs | orderBy:asc:desc | filter:searchAppliedJobs | itemsPerPage:10">
+                                                    <td>{{ $index + 1 }}.</td>
+                                                    <td nowrap class="btn-container">
+                                                        {{ post.job_id }}
+                                                        <!-- <span>PEL</span>{{ post.sno }} -->
+                                                    </td>
+                                                    <td nowrap>{{ post.position }}</td>
+                                                    <td nowrap class="text-center">
+                                                        <a class="btn-download transition" href="../admin/jobPostings/{{ post.job_description }}" title="{{ post.job_description }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color: red;"></i></a>
+                                                    </td>
+                                                    <td nowrap>{{ post.date_time | date:'dd MM yyyy' }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                    <!-- Pagination -->
+                                    <div class="text-center">
+                                       <dir-pagination-controls
+                                            max-size="5"
+                                            direction-links="true"
+                                            boundary-links="true" >
+                                       </dir-pagination-controls>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Partial Views -->
+    
+    <!-- Footer -->
+    <footer>
+        <div ng-include="'views/footer.html'"></div>
+    </footer>
+    <!-- //Footer -->
+</div>
