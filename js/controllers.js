@@ -151,6 +151,7 @@ angular.module('ProELearning.controllers', [])
     var orig_workExp = $scope.workExp;
     var orig_trainingExp = $scope.trainingExp;
     var orig_techExp = $scope.techExp;
+    var orig_courseName = $scope.courseName;
     var orig_resume = $scope.files;
     var orig_message = $scope.message;
     $scope.dt = Date();
@@ -188,6 +189,7 @@ angular.module('ProELearning.controllers', [])
         formData.append('work_exp',$scope.workExp);
         formData.append('training_exp',$scope.trainingExp);
         formData.append('technology_exp',$scope.techExp);
+        formData.append('course_name',$scope.courseName);
         formData.append('file',file);
         formData.append('message',$scope.message);
         formData.append('date_time',$scope.dt);
@@ -211,6 +213,7 @@ angular.module('ProELearning.controllers', [])
             $scope.workExp = angular.copy(orig_workExp);
             $scope.trainingExp = angular.copy(orig_trainingExp);
             $scope.techExp = angular.copy(orig_techExp);
+            $scope.courseName = angular.copy(orig_courseName);
             $scope.resume = angular.copy(orig_resume);
             $scope.message = angular.copy(orig_message);
             $scope.trainerRegForm.$setUntouched();
@@ -237,6 +240,7 @@ angular.module('ProELearning.controllers', [])
         $scope.workExp = angular.copy(orig_workExp);
         $scope.trainingExp = angular.copy(orig_trainingExp);
         $scope.techExp = angular.copy(orig_techExp);
+        $scope.courseName = angular.copy(orig_courseName);
         $scope.resume = angular.copy(orig_resume);
         $scope.message = angular.copy(orig_message);
         $scope.trainerRegForm.$setUntouched();
@@ -754,7 +758,7 @@ angular.module('ProELearning.controllers', [])
         },
         {
             city : 'India',
-            desc : '<b>Prodesign Technologies Pvt. Ltd.</b><br>501-A, Sai Rasik Building,<br>Vittal Rao Nagar, Madhapur,<br>Hyderabad, TG - 500081.<br><i  class="fa fa-phone" aria-hidden="true"></i> +91-8340905336',
+            desc : '<b>Prodesign Technologies Pvt. Ltd.</b><br>501-A, Sai Rasik Building,<br>Vittal Rao Nagar, Madhapur,<br>Hyderabad, TG - 500081.<br><i  class="fa fa-phone" aria-hidden="true"></i> +91-7901401499',
             lat : 17.442006,
             long : 78.3845023
         }

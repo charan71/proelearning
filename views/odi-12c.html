@@ -64,44 +64,8 @@
             <hr>
         </div>
 
-        <div class="row">
-            <div class="training-modes">
-                <h3>Available Modes of Training</h3>
-                <div class="col-md-4">
-                    <div class="training-modes-grid">
-                        <div class="training-modes-icon">
-                            <img src="./images/icons/online-training.svg">
-                        </div>
-                        <div class="training-modes-text">
-                            <h4>Online Training</h4>
-                            <p class="text-justify">Conducted through the virtual classroom also have the same program flow with theory and practical sessions. Our Labs can be accessed online from across the world allowing our online training student to make the best use of the infrastructure from the comfort of their home.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="training-modes-grid">
-                        <div class="training-modes-icon">
-                            <img src="./images/icons/classroom-training.svg">
-                        </div>
-                        <div class="training-modes-text">
-                            <h4>On-site Training</h4>
-                            <p class="text-justify">Trainings will be conducted on a daily basis. Practical exercises are provided for the topics conducted on daily basis to be worked upon during the lab session.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="training-modes-grid">
-                        <div class="training-modes-icon">
-                            <img src="./images/icons/on-demand-training.svg">
-                        </div>
-                        <div class="training-modes-text">
-                            <h4>On-demand Training</h4>
-                            <p class="text-justify">Select your flexible timings at your convenience for one-to-one training. You individually will assigned a trainer.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Modes of Training -->
+        <div ng-include="'views/modes-of-training-grid.html'"></div>
 
         <div class="row">
             <!-- Left Side Pane -->
@@ -117,11 +81,9 @@
                 <!-- About the Course -->
                 <h3>About The Course</h3>
                 <div id="derp" class="slideable course-desc">
-                    
                     <p>Oracle is a leader in the Data Integration market, with the industry’s most comprehensive fullyintegrated offering for data integration, including Oracle Data Integrator, Oracle GoldenGate, Oracle Enterprise Data Quality, Oracle Big Data Preparation Cloud Service and Oracle Enterprise Metadata Management. Oracle’s Data Integration solutions provide continuous access to timely, trusted, and heterogeneous data across the enterprise to support both analytical and operational data integration. Oracle Data Integrator (ODI) is a best-of-breed data integration platform focused on fast bulk data movement and handling complex data transformations. It provides high-performance data movement and transformation among enterprise platforms with its open and integrated E-LT architecture and extended support for Big Data. </p>
                     <p>Oracle Data Integrator is critical to leveraging data integration initiatives on-premise or in the cloud, such as Big Data management, Service Oriented Architecture and Business Intelligence. An easy-to-use user interface combined with a rich extensibility framework helps Oracle Data Integrator improve productivity, reduce development costs and lower total cost of ownership for data-centric architectures. Oracle Data Integrator is fully integrated with Oracle Fusion Middleware, Oracle GoldenGate, Oracle Enterprise Data Quality, Oracle Database, Oracle Big Data Appliance, and Exadata amongst other technologies to put data at the center of your enterprise. </p>
                     <p>Oracle Data Integrator is open and standards-based to work with 3rd party applications as well as Oracle’s applications. Oracle Data Integrator’s E-LT architecture generates native code for disparate RDBMS or big data engines. The E-LT architecture extracts data from the disparate sources, loads it into a target, and executes transformations using the power of the database or Hadoop. By leveraging existing databases and big data infrastructures, Oracle Data Integrator provides unparalleled efficiency by reducing network traffic and transforming data in the server containing the target data, the E-LT architecture delivers the highest possible performance.</p>
-				    
 				</div>
                 <div class="slide-toggler text-center">
                     <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">

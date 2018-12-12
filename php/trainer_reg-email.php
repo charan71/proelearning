@@ -16,7 +16,7 @@ $message ="
 <div style='background-color:#e8e6ea;text-align:center;padding:20px'>
             <p><img src='http://pro-elearning.com/images/logos/logo-h-70.png'/></p>
             <p><b>Hi $name,</b></p> 
-            <p><b>Thank you for Contacting Pro-e Learning.  Our team will contact you within 24 hours</b></p>
+            <p><b>Thank you for Contacting Pro-elearning.  Our team will contact you within 24 hours.</b></p>
             </div>
 </body>
 </html>

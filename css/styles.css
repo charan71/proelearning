@@ -882,6 +882,9 @@ a[role="tab"] {
 a[role="tab"]:hover {
     color: #8bc34a;
 }
+#trainer-registration .help-block {
+    margin-bottom: 0;
+}
 /* Nav-Tabs */
 .nav-tabs {
     margin-bottom: 40px !important;

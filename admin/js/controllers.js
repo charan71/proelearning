@@ -185,7 +185,7 @@ angular.module('controllers', ['ngRoute'])
 .controller("regTrainers", ['$scope', '$http', function($scope, $http) {
     $scope.asc = "";
     $scope.desc = false;
-    $scope.searchTrainer = { full_name:"", email:"", phone:"", current_company:"" };
+    $scope.searchTrainer = { full_name:"", email:"", phone:"", course_name:"", current_company:"" };
     $scope.trainers = [];
     $http({
         url: "./php/reg-trainers.php",

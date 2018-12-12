@@ -35,6 +35,9 @@
                                                     <th>
                                                         <input class="searchFilterBox" type="tel" ng-model="searchTrainer.phone" size="12" placeholder="Search by Phone">
                                                     </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="tel" ng-model="searchTrainer.course_name" size="12" placeholder="Search by Course">
+                                                    </th>
                                                     <th></th>
                                                     <th></th>
                                                     <th></th>
@@ -62,6 +65,11 @@
                                                     </th>
                                                     <th nowrap ng-click="asc='phone'; desc=!desc">
                                                         <span class="th-title-wrap">Phone</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='course_name'; desc=!desc">
+                                                        <span class="th-title-wrap">Course</span>
                                                         <i class="fa fa-sort-asc" aria-hidden="true"></i>
                                                         <i class="fa fa-sort-desc" aria-hidden="true"></i>
                                                     </th>
@@ -99,6 +107,7 @@
                                                     <td nowrap>{{ trainer.full_name }}</td>
                                                     <td nowrap>{{ trainer.email }}</td>
                                                     <td nowrap>{{ trainer.phone }}</td>
+                                                    <td nowrap>{{ trainer.course_name }}</td>
                                                     <td nowrap>{{ trainer.gender | genderFilter }}</td>
                                                     <td nowrap>{{ trainer.country }}</td>
                                                     <td nowrap>{{ trainer.state }}</td>

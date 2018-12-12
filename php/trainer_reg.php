@@ -17,6 +17,7 @@
         $work_exp = $_POST['work_exp'];
         $training_exp = $_POST['training_exp'];
         $technology_exp = $_POST['technology_exp'];
+        $course_name = $_POST['course_name'];
         $message = $_POST['message'];
         $dt = $_POST['date_time'];
         print_r($_FILES);
@@ -24,8 +25,14 @@
         $uploadPath = '../upload/' . $_FILES['file']['name'];
         move_uploaded_file($tempPath, $uploadPath);
         
-        $query = "INSERT INTO `trainers_list` (`full_name`, `email`, `phone`, `gender`, `country`, `state`, `current_company`, `work_exp`, `training_exp`, `technology_exp`, `resume`, `message`, `date_time`) VALUES ('$name', '$email', '$phone', '$gender', '$country', '$state', '$current_company', '$work_exp', '$training_exp', '$technology_exp', '".$_FILES['file']['name']."', '$message', '$dt')";
+        $query = "INSERT INTO `trainers_list` (`full_name`, `email`, `phone`, `gender`, `country`, `state`, `current_company`, `work_exp`, `training_exp`, `technology_exp`, `course_name`, `resume`, `message`, `date_time`) VALUES ('$name', '$email', '$phone', '$gender', '$country', '$state', '$current_company', '$work_exp', '$training_exp', '$technology_exp', '$course_name', '".$_FILES['file']['name']."', '$message', '$dt')";
         
+        if(mysqli_query($conn, $query)) {
+            echo "Data Inserted Successfully...";
+        } else {
+            echo 'Error Inserting Data...';
+        }
+	
         // Email from Trainer to Admin
         $to = "trainings@pro-elearning.com";
         $from = "trainings@pro-elearning.com";
@@ -66,16 +73,20 @@
                             <td>$current_company</td>
                         </tr>
                         <tr>
-                            <th><b>Work Experiance</b></th>
+                            <th><b>Work Experience</b></th>
                             <td>$work_exp</td>
                         </tr>
                         <tr>
-                            <th><b>Training Experiance</b></th>
+                            <th><b>Training Experience</b></th>
                             <td>$training_exp</td>
                         </tr>
                         <tr>
-                            <th><b>Technology Experiance</b></th>
+                            <th><b>Technology Experience</b></th>
                             <td>$technology_exp</td>
+                        </tr>
+                        <tr>
+                            <th><b>Course Name</b></th>
+                            <td>$course_name</td>
                         </tr>
                         <tr>
                             <th><b>Date</b></th>
@@ -99,12 +110,6 @@
             header('location:trainer_reg-email.php');
         }
 
-        if(mysqli_query($conn, $query)) {
-            echo "Data Inserted...";
-        } else {
-            echo 'Error';
-        }
-	
 	$conn->close();
 	
 ?>
