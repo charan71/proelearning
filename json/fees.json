@@ -38,6 +38,7 @@
     {"course":"aa", "IN":"18000", "others":"600"},
     {"course":"iot", "IN":"", "others":"600"},
     {"course":"machine-learning", "IN":"25000", "others":"600"},
+    {"course":"data-science", "IN":"", "others":""},
     {"course":"uipath", "IN":"18000", "others":"600"},
 
     {"course":"android", "IN":"20000", "others":"580"},

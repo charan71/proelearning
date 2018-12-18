@@ -271,6 +271,15 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     controller: "",
                     label: "Machine Learning"
                 })
+                    .when("/rpa/data-science",
+                          {
+                    title: "Data Science Training in Hyderabad, Machine Learning Online Training | Pro-elearning",
+                    description: "",
+                    keywords: "",
+                    templateUrl: "views/data-science.html",
+                    controller: "",
+                    label: "Data Science"
+                })
                     .when("/rpa/uipath",
                           {
                     title: "RPA UiPath Training in Hyderabad | UiPath Online Training | Pro-elearning",
