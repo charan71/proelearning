@@ -1,0 +1,312 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/cissp.png" alt="CISSP-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">CISSP Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (1,874)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Modes of Training -->
+        <div ng-include="'views/modes-of-training-grid.html'"></div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>The CISSP candidates who have received education and/or any credential deemed as approved, and apply it as recognized credit toward required work experience.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>The ISC2 CISSP exam consists of multiple choice questions and takes 6 hours. The course provides you with all the knowledge you need to pass the exam. </p>
+                    <p>Upon successful completion of your exam, you will receive a "CISSP" certificate from ISC2 and you will be able to register for your CISSP title and digital badge. Both the course material and the exam are in English.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖</span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                
+             <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">Introduction to CISSP <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>CISSP</li>
+                                    <li>About (ISC)²</li>
+                                    <li>CISSP Domains</li>
+                                    <li>Why CISSP?</li>
+                                    <li>How to Certify?</li>
+                                    <li>About CISSP Exam</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">1. Security and Risk Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Information Security Management</li>
+                                    <li>Confidentiality, Integrity, and Availability (CIA)</li>
+                                    <li>Security Policy Implementation</li>
+                                    <li>Information Risk Analysis and Risk Management</li>
+                                    <li>Managing Personnel Security and Managing Security Function</li>
+                                    <li>Computer crime</li>
+                                    <li>Major legal systems</li>
+                                     <li>Intellectual Property (IP) law</li>
+                                     <li>US Privacy laws and EU Council Directive (Law) on Data Protection</li>
+                                     <li>BCP process</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">2. Asset Security<span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Classify information and supporting assets</li>
+                                    <li>Determine and maintain ownership</li>
+                                    <li>Protect Privacy</li>
+                                    <li>Ensure appropriate retention</li>
+                                    <li>Establish handling requirements</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">3. Security Engineering <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understand security engineering processes using secure design principles</li>
+                                    <li>Architecture Frameworks</li>
+                                    <li>Security Models</li>
+                                    <li>Evaluation Criteria</li>
+                                    <li>Enterprise and System Security Architecture</li>
+                                    <li>Distributed Systems</li>
+                                    <li>System Security Threats and identify Countermeasures</li>
+                                    <li>Cryptography</li>
+                                    <li>Physical security</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">4. Communications and Network Security <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Secure network architecture and design</li>
+                                    <li>Securing network components</li>
+                                    <li>Secure communication channels</li>
+                                    <li>Network Attacks and Countermeasures</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">5. Identity and Access Management<span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ul>
+                                   <li>Controlling physical and logical access to assets</li>
+                                   <li>Identification and authentication of people and devices</li>
+                                   <li>Integrate identity as a service and third-party identity services</li>
+                                   <li>Implement and manage authorization mechanisms</li>
+                                   <li>Prevent or mitigate access control attacks</li>
+                                   <li>Manage the identity and access provisioning lifecycle</li>
+
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">6. Security Assessment and Testing&#x2014; Health Care Domain Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Design and validate assessment and test strategies</li>
+                                    <li>Conduct security control testing</li>
+                                    <li>Collect security process data</li>
+                                    <li>Analyze and report test output</li>
+                                    <li>Conduct or facilitate internal and third-party audits</li>
+								</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">7. Security Operations <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understand and support investigations</li>
+                                    <li>Understand requirements for investigation types</li>
+                                    <li>Conduct logging and monitoring activities</li>
+                                    <li>Secure the provisioning of resources</li>
+                                    <li>Understand and apply foundational security operations concepts</li>
+                                    <li>Employ resource protection techniques</li>
+                                    <li>Conduct incident response</li>
+                                    <li>Operate and maintain preventative measures</li>
+                                    <li>Implement and support patch and vulnerability management</li>
+                                    <li>Participate in and understand change management processes</li>
+                                    <li>Implement recovery strategies. Implement disaster recovery processes</li>
+							    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ten" aria-expanded="false" aria-controls="collapseNine">8. Software Development Security <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ten" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                               <ul>
+                                   <li>Recognize the importance of system environments and programming concepts</li>
+                                   <li>Discuss Object-Oriented Programming</li>
+                                   <li>Describe the system life cycle and systems development</li>
+                                   <li>Explain database and data warehousing environments</li>
+                                   <li>List the ten best practices for secure software development – (ISC)²</li>
+							   </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LDNr77sgK2Q?start=7" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>Learned real-time examples I don't know anything about CISSP but after the training, I got an idea and good knowledge of CISSP.</p>
+                            <h4 class="pull-right">&#x2015; Lakshman </h4>
+                        </div>
+                        <div class="item slide">
+                            <p>Best Place to Learn CISSP. The trainer was trained very interactive and gave real-time examples.</p>
+                            <h4 class="pull-right">&#x2015; Sekhar </h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,731 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/togaf.png" alt="AWS-SysOps-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">AWS SysOps Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (1,874)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Modes of Training -->
+        <div ng-include="'views/modes-of-training-grid.html'"></div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic knowledge of Software Languages.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>The Open Group Architecture Framework (TOGAF) is an enterprise architecture methodology that offers a high-level framework for enterprise software development. TOGAF helps organize the development process through a systematic approach aimed at reducing errors, maintaining timelines, staying on budget and aligning IT with business units to produce quality results.</p>
+                    <p>Like other IT management frameworks, TOGAF helps businesses align IT goals with overall business goals, while helping to organize cross-departmental IT efforts. TOGAF helps businesses define and organize requirements before a project starts, keeping the process moving quickly with few errors.</p>
+                    <h4> The Open Group states that TOGAF is intended to:</h4>
+                    <ul>
+                    <li>Ensure everyone speaks the same language</li>
+                    <li>Avoid lock-in to proprietary solutions by standardizing on open methods for enterprise architecture</li>
+                    <li>Save time and money, and utilize resources more effectively</li>
+                    <li>Achieve demonstrable ROI</li></ul>
+                    <h4>TOGAF’s business benefits</h4>
+                    <p>TOGAF helps organizations implement software technology in a structured and organized way, with a focus on governance and meeting business objectives. Software development relies on collaboration between multiple departments and business units both inside and outside of IT, and TOGAF helps address any issues around getting key stakeholders on the same page.</p>
+                    <h4>The evolution of TOGAF</h4>
+                    <p>TOGAF is based on TAFIM (Technical Architecture Framework for Information Management), an IT management framework developed by the U.S. Defense Department in the 1990s. It was released as a reference model for enterprise architecture, offering insight into DoD’s own technical infrastructure, including how it’s structured, maintained and configured to align with specific requirements. Since 1999, the DoD hasn’t used the TAFIM, and it’s been eliminated from all process documentation.</p>
+                    <h4>TOGAF pillars</h4>
+                    <p>There are four architectural domains in TOGAF 9.1 that offer specializations for businesses.</p>
+                    <p><b>Business architecture:</b> Includes information on business strategy, governance, organization and how to adapt any existing processes within the organization.</p>
+                    <p><b>Applications architecture:</b> A blueprint for structuring and deploying application systems and in accordance with business goals, other organizational frameworks and all core business processes.</p>
+                    <p><b>Data architecture:</b> Defining the organization’s data storage, management and maintenance, including logical and physical data models.</p>
+                    <p><b>Technical architecture:</b> Also called technology architecture; it describes all necessary hardware, software and IT infrastructure involved in developing and deploying business applications.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖</span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+               
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>About TOGAF® and the Open Group</li>
+                                    <li>The Training Course, TOGAF® Structure</li>
+                                    <li>Structure of the Training</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Core Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Definition of key concepts and terms of TOGAF®</li>
+                                    <li>Architecture Framework</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Introduction to the ADM <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Overview of the TOGAF® ADM</li>
+                                    <li>Objectives of each ADM Phase</li>
+                                    <li>Architecture Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Introduction to the Architecture Content Framework <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Ojectives of the Preliminary Phase</li>
+                                    <li>Seven Aspects Defining the enterprise</li>
+                                    <li>Identifying key drivers and elements</li>
+                                    <li>Requirements for architecture work</li>
+                                    <li>Framework to be used</li>
+                                    <li>Relationships between management frameworks</li>
+                                    <li>Evaluating the enterprise architecture maturity</li>
+                                    <li>Inputs to the phase with key elements: Architecture Frameworks, Business principles, business goals, and business drivers</li>
+                                    <li>Influence of pre-existing architectural inputs on the phase</li>
+                                    <li>Steps for: Enterprise architecture team and organization, Set of Architecture Principles for a given scenario, Tailoring the framework</li>
+                                    <li>Outputs & Key Elements : Architecture Principles</li>
+                                    <li>Architecture Governance Framework</li>
+                                    <li>Request for Architecture Work</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Introduction to Enterprise Continuum and Tools <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Enterprise Continuum - Introduction & Usage, Re-use of architecture artifacts</li>
+                                    <li>Constituents of the Enterprise Continuum</li>
+                                    <li>Definition of the Architecture Continuum</li>
+                                    <li>Stages of architecture evolution defined in the Architecture Continuum</li>
+                                    <li>Solutions Continuum, Stages of architecture evolution defined in the Solutions Continuum</li>
+                                    <li>Relationship between the Enterprise Continuum and the TOGAF® ADM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Architectural Work Product <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Architecture Deliverables across the ADM cycle</li>
+                                    <li>Define & understand relationships of key concepts like Stakeholders</li>
+                                    <li>Concerns, Views and Viewpoints</li>
+                                    <li>Differentiate viewpoints</li>
+                                    <li>View Creation process</li>
+                                    <li>Building block</li>
+                                    <li>Distinction between Architecture Building Blocks and Solution Building Blocks</li>
+                                    <li>Use of building blocks in the ADM cycle</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. Stakeholder Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Steps in developing a Stakeholder Map</li>
+                                    <li>Benefits of creating views</li>
+                                    <li>Three example views provided by TOGAF®</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Architecture Patterns <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Architecture Patterns</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Architecture Partitioning and Organization <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Architecture Partitioning</li>
+                                    <li>The Architecture Repository</li>
+                                    <li>Architecture Tools</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. Architecture Capability Framework <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Establishing an Architecture Capability using ADM</li>
+                                    <li>Architecture Contracts - contents & relationship to Architecture Governance</li>
+                                    <li>Architecture Maturity Models</li>
+                                    <li>Capability Maturity Model</li>
+                                    <li>CMMI process, structure and levels of the ACMM</li>
+                                    <li>The role of Maturity Assessments in the ADM</li>
+                                    <li>Architecture Skills Framework, including roles, skills and proficiency levels</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Architecture Governance <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Architecture Board- establishment, responsibilities, factors for setting up & operations</li>
+                                    <li>Architecture Governance - Concepts, Framework, Benefits</li>
+                                    <li>Fitment within ADM Cycle and key success factors for putting Architecture Governance into practice</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. Architecture Compliance and Risk Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Risk Management- characteristics & usage within the TOGAF® ADM</li>
+                                    <li>Risk monitoring</li>
+                                    <li>Architecture Compliance - meaning & need and Architecture Compliance Reviews - process & usage</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#apps" aria-expanded="false" aria-controls="collapseNine">13. Architecture Principles <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="apps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Architecture Principles and where they are used within TOGAF®</li>
+                                    <li>Standard Template for Architecture Principles</li>
+                                    <li>Good Architecture Principle</li>
+                                    <li>Identify and establish a set of Architecture Principles for a given scenario</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#lab" aria-expanded="false" aria-controls="collapseNine">14. Architecture Development Method (ADM) - Preliminary Phase <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="lab" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Ojectives of the Preliminary Phase</li>
+	  <li>Seven Aspects Defining the enterprise</li>
+	<li>Identifying key drivers and elements</li>
+	<li>Requirements for architecture work</li>
+	<li>Framework to be used, Relationships between management frameworks</li>
+	<li>Evaluating the enterprise architecture maturity</li>
+	<li>Inputs to the phase with key elements: Architecture Frameworks, Business principles,<br>business goals, and business drivers</li>
+	<li>Influence of pre-existing architectural inputs on the phase</li>
+	<li>Steps for: Enterprise architecture team and organization</li>
+	<li>Set of Architecture Principles for a given scenario</li>
+	<li>Tailoring the framework</li>
+	<li>Outputs &amp; Key Elements: Architecture Principles, Architecture Governance Framework, Request for Architecture Work</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFifteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#mtv" aria-expanded="false" aria-controls="collapseNine">15. Business Scenarios and Business Goals <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="mtv" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFifteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understand what a Business Scenario is and its purpose</li>
+	<li>Understand where Business Scenarios are used within the ADM cycle</li>
+	<li>Understanding the properties of a good Business Scenario</li>
+	<li>Learn how to develop and validate a Business Scenario</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSixteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#vce" aria-expanded="false" aria-controls="collapseNine">16. Architecture Development Method (ADM) - Phase A: Architecture Vision <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="vce" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSixteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Objectives of the Phase A: Architecture Vision and Business Scenarios</li>
+	<li>Typical contents of the Architecture Repository - stakeholders, concerns and business requirements</li>
+	<li>Business Transformation Readiness Assessment</li>
+	<li>Risk Assessment</li>
+	<li>Statement of Architecture Work</li>
+	<li>Capability Assessment</li>
+	<li>Architecture Vision and Communications Plan</li>
+	<li>Security Architecture influences on this phase</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeventeen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#uqp" aria-expanded="false" aria-controls="collapseNine">17. Architecture Implementation Support Techniques <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="uqp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeventeen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Gap Analysis- purpose &amp; technique</li>
+	<li>Migration Planning Techniques</li>
+	<li>Implementation Factor Assessment</li>
+	<li>Deduction Matrix</li>
+	<li>Consolidated Gaps &amp; Solutions</li>
+	<li>Dependencies Matrix</li>
+	<li>Architecture Definition Increments Table</li>
+	<li>Transition Architecture State Evolution Table in conjunction with the TRM</li>
+	<li>Business Value Assessment Technique</li>
+	<li>Interoperability Requirements</li>
+	<li>Use of Interoperability Requirements within the TOGAF<sup>®</sup>&nbsp;ADM</li>
+	<li>Reconcilation of Interoperability Requirements with potential solutions</li>
+	<li>Business Transformation Readiness Assessment</li>
+	<li>Business Transformation Readiness Program</li>
+	<li>Business Transformation Readiness within the ADM</li>
+	<li>Business Transformation Readiness Capability Based Planning</li>
+	<li>Capability - Based Planning &amp; application in an enterprise architecture context</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEighteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#pdp" aria-expanded="false" aria-controls="collapseNine">18. Architecture Development Method (ADM) - Phase B: Business Architecture <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="pdp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEighteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Inputs to the ADM using Business principles</li>
+	<li>Business goals and business drivers</li>
+	<li>Three techniques for business modeling</li>
+	<li>Considerations for selecting reference models</li>
+	<li>Viewpoints and tools</li>
+	<li>Technique of Gap Analysis</li>
+	<li>Building blocks in the development of the Business Architecture</li>
+	<li>Understand the outputs using Business Architecture components of the <br>Architecture Definition Document</li>
+	<li>Business Architecture components of the Architecture Requirements Specification &amp; Security Architecture influences on this phase</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNineteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#cu" aria-expanded="false" aria-controls="collapseNine">19. Architecture Development Method (ADM) - Phase C: Information Systems Architecture <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="cu" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNineteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Information Systems Architectures</li>
+	<li>Approach recommended by TOGAF<sup>®</sup>&nbsp;like Key considerations for the Data Architecture &amp; Architecture Repository</li>
+	<li>Phase C: Information Systems Architectures - Data Architecture, Implementation order of the Data and Application Architectures</li>
+	<li>Inputs to the phase and Data Principles</li>
+	<li>Steps &amp; considerations for selecting reference models, viewpoints and tools</li>
+	<li>Outputs using Data Architecture components of the Architecture Definition Document</li>
+	<li>Data Architecture components of the Architecture Requirements Specification &amp; Security Architecture influences on this phase</li>
+	<li>Phase C: Information Systems Architectures - Application Architecture, inputs &amp; Application Principles</li>
+	<li>Steps &amp; considerations for selecting reference models, viewpoints and tools</li>
+	<li>Outputs using Application Architecture components of the Architecture Definition Documen</li>
+	<li>Application Architecture components of the Architecture Requirements Specification &amp; Security Architecture influences on this phase</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwenty">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#aq" aria-expanded="false" aria-controls="collapseNine">20. Foundation Architecture TOGAF® TRM <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="aq" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwenty">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understanding the role of the TRM as a Foundation Architecture</li>
+	<li>Familiarising the major characteristics of a Foundation Architecture</li>
+	<li>Briefly understanding the basic concepts of the III-RM</li>
+	<li>Briefly learning the relationship of the III-RM to the concept of Boundaryless Information Flow</li>
+	<li>Understanding the TRM graphic, including the following key elements: Application Software Categories, Application Platform Interface, Application Platform</li>
+	<li>Communications Infrastructure Interface, Qualities</li>
+	<li>Briefly understanding the structure of the TRM</li>
+	<li>Briefly exploring the main architecture objectives of using the TRM</li>
+	<li>Understanding about the Platform Services Taxonomy</li>
+	<li>Understanding about the Service Quality Taxonomy</li>
+	<li>Understanding how to customize the TRM to meet an organization's specific needs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyone">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ii" aria-expanded="false" aria-controls="collapseNine">21. Integrated Information Infrastructure Reference Model <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ii" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyone">
+                            <div class="panel-body">
+                                <ul>
+	<li>Understanding the business and technical drivers for Boundaryless Information Flow</li>
+	<li>Learning how the III-RM fulfills the solution space for Boundaryless Information Flow</li>
+	<li>Briefly understanding the high-level structure of the III-RM, III-RM graphic, Business Applications, Infrastructure Applications, Application Platform, Interfaces, Qualities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentytwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ta" aria-expanded="false" aria-controls="collapseNine">22. Phase D: Technology Architecture <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ta" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentytwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understanding the main objectives of the Phase D</li>
+	<li>Briefly learning the approach to the phase including using the Architecture Repository</li>
+	<li>Understand the inputs to the phase and explain the following key elements: Technology Principles</li>
+	<li>Understand the steps involved and being able able to: Learning how the TRM can be used when developing a Technology Architecture, Learning the role of ABBs</li>
+	<li>Understand the outputs and be able to explain the following key elements: Technology Architecture components of the Architecture Definition Document, Technology Architecture components of the Architecture Requirements Specification</li>
+	<li>Understand the Security Architecture influences on this phase</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentythree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#adm" aria-expanded="false" aria-controls="collapseNine">23. Architecture Development Method (ADM) - Phase E: Opportunities and Solutions<span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="adm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentythree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understanding the main objectives of the Phase E</li>
+	<li>Briefly learn the approach to the Phase E</li>
+	<li>Understand the management frameworks that have to be coordinated within this phase</li>
+	<li>Learn how business value is assigned to each work package</li>
+	<li>Understand the steps to prioritize the migration projects</li>
+	<li>Understand the steps to confirm the Architecture Roadmap</li>
+	<li>Learning key outputs of this phase specifically: Implementation and Migration Plan, Architecture Definition Document, including Transition Architectures (if any) and Understanding the Security Architecture influences on this phase</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyfour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#admp" aria-expanded="false" aria-controls="collapseNine">24. Architecture Development Method (ADM) - Phase F: Migration Planning <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="admp" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyfour">
+                            <div class="panel-body">
+                                <ul>
+<li>Architecture Board</li>
+	<li>Briefly learn the need for establishment of an Architecture Board</li>
+	<li>Understand the responsibilities of an Architecture Board</li>
+	<li>Discuss the factors that should be considered when setting up an Architecture Board</li>
+	<li>Learn how to operate an Architecture Board vi) Architecture Governance</li>
+	<li>Briefly learn the concept of Architecture Governance</li>
+	<li>Describe the main concepts that make up an Architecture Governance framework</li>
+	<li>Understanding why Architecture Governance is beneficial</li>
+	<li>Understanding how Architecture Governance fits within the ADM cycle</li>
+	<li>Understanding the key success factors for putting Architecture Governance into practice</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyfive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ig" aria-expanded="false" aria-controls="collapseNine">25. Architecture Development Method (ADM) - Phase G: Implementation Governance <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ig" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyfive">
+                            <div class="panel-body">
+                                <ul>
+<li>Understand the main objectives of the phase</li>
+	<li>Briefly learn the approach to this phase</li>
+	<li>Understand the inputs to the phase</li>
+	<li>Understanding the steps involved and being able to describe the following: Explain how to tailor and conduct an Architecture Compliance Review</li>
+	<li>Understand the outputs and be able to explain the following key elements: The contents of Architecture Contracts, Their relationship to Architecture Governance</li>
+	<li>Understanding the Security Architecture influences on this phase</li>
+	<li>Demonstrate the role that risk monitoring plays in this phase</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentysix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#acm" aria-expanded="false" aria-controls="collapseNine">26.Architecture Development Method (ADM) - Phase H: Architecture Change Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="acm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentysix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understand the main objectives of the phase H</li>
+	<li>Briefly learn the approach to the phase including: Drivers for change Enterprise architecture management process</li>
+	<li>Guidelines for maintenance versus architecture redesign</li>
+	<li>Understand the inputs to this phase for better understanding of Change Requests</li>
+	<li>Understand the steps involved in Architecture Board meetings</li>
+	<li>Understanding the outputs and be able to explain when the following might occur</li>
+	<li>Updated Architecture Contracts</li>
+	<li>A new Request for Architecture Work</li>
+	<li>Understanding the Security Architecture influences on this phase</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyseven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#arm" aria-expanded="false" aria-controls="collapseNine">27. Architecture Requirements Management  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="arm" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyseven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Briefly understand how Requirements Management fits into the ADM cycle</li>
+	<li>Requirements Management process</li>
+	<li>Approaches to Requirements Management</li>
+	<li>Understand the inputs to the phase</li>
+	<li>Understand the steps and their correspondence to phases</li>
+	<li>Understanding how the Requirements Management steps correspond to ADM phases</li>
+	<li>Understanding the purpose of the outputs of Requirements Management</li>
+	<li>Understanding the Security Architecture influences on the requirements captured&nbsp;</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentyeight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#ail" aria-expanded="false" aria-controls="collapseNine">28. ADM Iteration and Levels  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="ail" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentyeight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understanding the concept of iteration and how it applies to TOGAF</li>
+	<li>Factors influencing the use of iteration</li>
+	<li>Learning some suggested iteration cycles</li>
+	<li>Understanding how the ADM supports different types of engagements within the organization</li>
+	<li>Learning how to apply iteration cycles to the ADM phases</li>
+	<li>Understanding how the concepts of levels and the Enterprise Continuum are used to organize the Architecture Landscape</li>
+	<li>Identify the different levels of architecture that exist in an organization</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwentynine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#saa" aria-expanded="false" aria-controls="collapseNine">29. Security Architecture and the ADM <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="saa" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwentynine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Understand the responsibility that Enterprise Architects have towards Security Architecture and the recommended Security adaptations to the ADM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingthirty">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#soa" aria-expanded="false" aria-controls="collapseNine">30. Using TOGAF® to Define and Govern SOAs <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="soa" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingthirty">
+                            <div class="panel-body">
+                                <ul>
+                                   <li>SOA as an architectural style</li>
+	<li>Understanding how enterprise architecture supports SOA</li>
+	<li>Recommended SOA adaptations to the ADM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/s6BSopFSDEU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>I joined in Pro-eleaning  since last 2 months. I Am very happy with my class room Environment as well as faculty teaching in Pro-eleaning.</p>
+                            <h4 class="pull-right">&#x2015; Aarush </h4>
+                        </div>
+                        <div class="item slide">
+                            <p>I am getting proper knowledge whatever  is required to software company in the present scenario even i am getting real time Example of All subject.</p>
+                            <h4 class="pull-right">&#x2015; Bhavin </h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

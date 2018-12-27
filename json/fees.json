@@ -10,6 +10,7 @@
     {"course":"cloudera", "IN":"", "others":"550"},
     
     {"course":"aws", "IN":"20000", "others":"580"},
+    {"course":"aws-sysops", "IN":"", "others":"580"},
     {"course":"salesforce-developer", "IN":"20000", "others":"550"},
     {"course":"salesforce-administrator", "IN":"20000", "others":"550"},
     {"course":"azure", "IN":"20000", "others":"550"},
@@ -46,6 +47,11 @@
 
     {"course":"ccna", "IN":"18000", "others":"580"},
     {"course":"cns", "IN":"20000", "others":"580"},
+    {"course":"comptia-network++", "IN":"", "others":"580"},
+    {"course":"comptia security++", "IN":"", "others":"580"},
+    {"course":"cisa", "IN":"", "others":"580"},
+    {"course":"ccsp", "IN":"", "others":"580"},
+    {"course":"cissp", "IN":"", "others":"580"},
 
     {"course":"devops", "IN":"18000", "others":"600"},
 
@@ -79,6 +85,9 @@
     {"course":"ba-finance", "IN":"", "others":"580"},
     {"course":"quickbooks", "IN":"", "others":"600"},
     {"course":"tech-manager", "IN":"", "others":"550"},
+    {"course":"togaf", "IN":"", "others":"550"},
+    {"course":"pmp", "IN":"", "others":"550"},
+    {"course":"six-sigma", "IN":"", "others":"550"},
 
     {"course":"tableau", "IN":"22000", "others":"590"},
     {"course":"remedy-tkt", "IN":"", "others":"560"},

@@ -1,0 +1,390 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/comptia-network+.png" alt="AWS-SysOps-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">AWS SysOps Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (1,874)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Modes of Training -->
+        <div ng-include="'views/modes-of-training-grid.html'"></div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic knowledge of Software Languages.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>The CompTIA Security Plus SY0-501 certification course helps you prove your competency in topics such as threats, vulnerabilities, and attacks, system security, network infrastructure, access control, cryptography, risk management, and organizational security.</p>
+                    <h4>What is the Security+ Certification?</h4>
+                    <p>Security+ is a certification sponsored by CompTIA, the Computing Technology Industry Association. The Security+ Certification shows that you have the competence required to apply knowledge of security concepts, tools, and procedures to react to security incidents, as well as anticipating security risks and guarding against them before they occur. The goal is to test what is generally assumed to be the knowledge held by a security professional with two years of full-time security-related work experience. CompTIA began offering Security+ Certification back in 2002. The course is considered to be one of the leading vendor-neutral certification for security professionals.</p>
+                    <h4>Why get Security+ Certified?</h4>
+                    <p>Since the Security+ Certification program is an industry wide, vendor-neutral program developed by CompTIA (The Computing Technology Industry Association), getting certified will give you credentials that are highly regarded by the top technology companies such as Lockheed Martin, Hitachi Information Systems, Trendmicro, the U.S. State Department, and U.S. government contractors such as General Dynamics, EDS and Northrop Grumman. CompTIA Security+ is one of the options for certifications required by the U.S. Department of Defense (DoD), for military personnel or military contractors engaged in information assurance activities. According to CompTIA, over 45,000 individuals have obtained the CompTIA Security+ Certification.</p>
+                    <p>CompTIA is a nonprofit, industry trade association. It consists of over 7,500 computer resellers, value-added resellers (VARs), distributors, manufacturers, and training companies all over the United States and Canada. Some of the members of CompTIA include Apple, Compaq, ATT, IBM, Intel, Microsoft, etc.</p>
+                    <h4>How can I get Security+ Certified?</h4>
+                    <p>If you are interested in becoming a Security+ certified professional, the information provided below will help you select products that are designed to assist you to learn the fundamental concepts of information security and prepare for the Security+ certification exam. You will learn about common common security threats, vulnerabilities, and weaknesses that exist in current systems, as well as security tools and methods, including sniffers, IDSs, active responses, and passive responses that can be used to secure them. The Security+ certification training course below will also provide all you need to know about access control and identity management, educating and protecting users, cryptography basics, physical and hardware-based security, and much more - all in a visual and easy to follow format. Once you have learned these skills, you will be ready to take the Security+ certification exam SY0-301.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖</span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Network Theory <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Network Types</li>
+                                    <li>Network Standards and the OSI Model</li>
+                                    <li>Data Transmission Methods</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Bounded Network Media <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Copper Media</li>
+                                    <li>Fiber Optic Media</li>
+                                    <li>Bounded Network Media Installation</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Unbounded Network Media <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Wireless Networking</li>
+                                    <li>Wireless Network Devices and Components</li>
+                                    <li>Implement Wireless Technology</li>
+                                    <li>Internet of Things</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Network Implementations <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Physical Network Topologies</li>
+                                    <li>Logical Network Topologies</li>
+                                    <li>Ethernet Networks</li>
+                                    <li>Network Devices</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. TCP/IP Addressing and Data Delivery <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>The TCP/IP Protocol Suite</li>
+                                    <li>IPv4 Addressing</li>
+                                    <li>Default IP Addressing Schemes</li>
+                                    <li>Create Custom IP Addressing Schemes</li>
+                                    <li>IPv6 Addressing</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Routing and Switching <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Switching</li>
+                                    <li>Network Packet Routing</li>
+                                    <li>Static and Dynamic IP Routing</li>
+                                    <li>VLANs</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. TCP/IP Implementation <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Configure IP Addresses</li>
+                                    <li>Naming Services</li>
+                                    <li>TCP/IP Utilities</li>
+                                    <li>Common TCP/IP Protocols</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Network Security Analysis <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Network Security</li>
+                                    <li>Network Security Policies</li>
+                                    <li>Physical Security</li>
+                                    <li>Common Network Attacks</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Network Security Implementation <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Authentication</li>
+                                    <li>Access Control</li>
+                                    <li>Port, Service, and Protocol Security</li>
+                                    <li>Wireless Network Security</li>
+                                    <li>Patches and Updates</li>
+                                    <li>Mitigation Techniques</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. WAN Infrastructure <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>WAN Basics</li>
+                                    <li>WAN Connectivity Methods</li>
+                                    <li>WAN Transmission Technologies</li>
+                                    <li>VoIP</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Cloud and Virtualization Techniques <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Virtualization Technologies</li>
+                                    <li>Network Storage Technologies</li>
+                                    <li>Cloud Computing</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. Remote Networking <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Remote Network Architectures</li>
+                                    <li>Remote Access Network Implementations</li>
+                                    <li>Virtual Private Networking</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#apps" aria-expanded="false" aria-controls="collapseNine">13. Network Management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="apps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Monitor Networks</li>
+                                    <li>Document the Network</li>
+                                    <li>Establish Baselines</li>
+                                    <li>Optimize Network Performance</li>
+                                    <li>Ensure Business Continuity</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#lab" aria-expanded="false" aria-controls="collapseNine">14. Troubleshooting Network Issues <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="lab" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Network Troubleshooting Methodology</li>
+                                    <li>Network Troubleshooting Tools</li>
+                                    <li>Troubleshoot Wired Connectivity and Performance Issues</li>
+                                    <li>Troubleshoot Wireless Connectivity and Performance Issues</li>
+                                    <li>Troubleshoot Network Service Issues</li>	
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Jbe8RpTq_eY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>Comptia Network++ Course learned here. Faculty explained all concepts with real time examples. </p>
+                            <h4 class="pull-right">&#x2015; Vivaan </h4>
+                        </div>
+                        <div class="item slide">
+                            <p>It is a good place to learn Comptia Network++  course.The faculty is good and he gave us practical knowledge about the subject. </p>
+                            <h4 class="pull-right">&#x2015; Uthkarsh </h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

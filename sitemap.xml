@@ -88,6 +88,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>http://pro-elearning.com/cloud-technologies/aws-sysops</loc>
+  <lastmod>2018-12-20T18:07:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>http://pro-elearning.com/cloud-technologies/servicenow</loc>
   <lastmod>2018-09-18T10:40:30+00:00</lastmod>
   <priority>0.80</priority>
@@ -253,6 +258,31 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>http://pro-elearning.com/network-security/comptia-network</loc>
+  <lastmod>2018-12-20T18:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/network-security/comptia-security</loc>
+  <lastmod>2018-12-20T18:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/network-security/cisa</loc>
+  <lastmod>2018-12-20T18:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/network-security/ccsp</loc>
+  <lastmod>2018-12-20T18:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/network-security/cissp</loc>
+  <lastmod>2018-12-20T18:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>http://pro-elearning.com/application-support</loc>
   <lastmod>2018-09-18T10:40:30+00:00</lastmod>
   <priority>0.80</priority>
@@ -280,6 +310,21 @@
 <url>
   <loc>http://pro-elearning.com/business-intelligence/power-bi</loc>
   <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-intelligence/togaf</loc>
+  <lastmod>2018-12-20T18:12:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-intelligence/pmp</loc>
+  <lastmod>2018-12-20T18:12:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/business-intelligence/six-sigma</loc>
+  <lastmod>2018-12-20T10:14:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>

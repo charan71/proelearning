@@ -1,0 +1,416 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/six-sigma.png" alt="Six-sigma-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Six Sigma Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (1,874)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Modes of Training -->
+        <div ng-include="'views/modes-of-training-grid.html'"></div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Modes of Training -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Basic knowledge of Software Languages.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>The job market is completely independent of your skills here. I’ve seen Doctors from other countries come and start their restaurant as well as teachers coming in and joining NGOs. </p>
+                    <p>What I’d suggest you is to rephrase the question. Out of the available jobs in IT, what kind of job am I capable enough of doing and how can I start working on it from now in order to gain enough exposure, before applying for jobs?</p>
+                    <p>For example, You’ll meet a 100 people everyday who’ll say I can work on AI or I’m interested in learning AI (since AI is a boom in the market) but the question is, how many people do you actually encounter that say, I’ve worked on AI, this is what I’ve achieved so far- how can I learn and add more to it?</p>
+                    <p>That’s the approach that’s going to get you in a position to land a job soon.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖</span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                
+             <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#one" aria-expanded="true" aria-controls="collapseOne">1. Introduction to Lean Six Sigma <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>History of Quality (Deming, Juran, JIT, Ishikawa, Taguchi, etc.)</li> 
+                                    <li>Evolution of Six Sigma</li>
+                                    <li>Defining Six Sigma – philosophy and objectives</li> 
+                                    <li>Overview of Six Sigma DMAIC process</li> 
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#two" aria-expanded="false" aria-controls="collapseTwo">2. Stakeholders & Setting up a Lean Six Sigma Project  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ol>
+                                    <li>Identifying and documenting stakeholder requirements
+                                        <ol type="a">
+                                            <li>Identifying stakeholders and customers</li>
+                                            <li>Data collection and analysis</li> 
+                                            <li>Determining critical requirements</li> 
+                                        </ol>
+                                    </li>
+                                    <li>Selection Criteria Project 
+                                        <ol type="a">
+                                            <li>Identifying performance metrics</li>
+                                            <li>Using financial criteria to evaluate project benefits</li>
+                                            <li>Maximizing project benefits for the organization</li> 
+ 
+                                        </ol>
+                                    </li>
+                                    <li>Project Planning  
+                                        <ol type="a">
+                                            <li>Creating Project Charter</li> 
+                                            <li>Charter Negotiation </li>
+                                        </ol>
+                                    </li>
+                                     <li>Managing Team Dynamics  
+                                        <ol type="a">
+                                            <li>Initiating teams</li>
+                                            <li>Stages of team evolution</li> 
+                                            <li>Maslow’s hierarchy of needs</li> 
+                                            <li>Motivation Techniques </li>
+                                            <li>Conflict Resolution Techniques</li> 
+                                            <li>Management / Leadership styles</li> 
+                                            <li>Roles played by people in a project</li> 
+
+                                        </ol>
+                                    </li>
+                                    <li>Important project management & planning tools</li>
+								</ol>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#three" aria-expanded="false" aria-controls="collapseThree">3.  Lean Six Sigma Methodology – Define <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ol>
+                                    <li>Inputs – Need for Six Sigma project, Executive management sponsorship, core team Identified </li>
+
+                                        
+                                    
+                                    <li>Tools
+                                        <ol type="a">
+                                            <li>Organization hierarchy </li>
+                                            <li>High level process maps</li> 
+                                            <li>High level Pareto charts </li>
+                                            <li>Idea generation and categorization tools</li> 
+
+ 
+                                        </ol>
+                                    </li>
+                                    <li>Outputs 
+                                        <ol type="a">
+                                            <li>Project charter </li>
+                                            <li>Established metrics </li>
+                                            <li>Problem statement</li> 
+                                            <li>Roles & responsibilities</li> 
+                                         </ol>
+                                    </li>
+                                    </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#four" aria-expanded="false" aria-controls="collapseFour">4. Lean Six Sigma Methodology – Measure  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ol>
+                                    <li>Objectives of Measure Phase</li>
+                                    <li>Inputs – the outputs of the Define phase </li>
+
+                                        
+                                    
+                                    <li>Tools 
+                                        <ol type="a">
+                                            <li>Data collection tools and techniques</li>
+                                            <li>Measurement scales</li>
+                                            <li>Validation techniques (Gauge R & R) </li>
+                                            <li>Statistical distributions</li> 
+                                            <li>Data mining</li> 
+                                            <li>Run charts</li> 
+                                            <li>Process map </li>
+                                            <li>Stakeholder tools </li>
+                                            <li>Process costs</li> 
+                                        </ol>
+                                    </li>
+                                    <li>Outputs 
+                                        <ol type="a">
+                                            <li>Well defined processes </li>
+                                            <li>Baseline process capability</li> 
+                                            <li>Process parameters affecting CTQs</li> 
+                                            <li>Cost of poor quality (COPQ)</li> 
+                                            <li>Measurement system </li>
+                                        </ol>
+                                    </li>
+                                    </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#five" aria-expanded="false" aria-controls="collapseFive">5. Lean Six Sigma Methodology – Analyze  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ol>
+                                    <li>Objectives of Analyze Phase </li>
+                                    <li>Inputs – outputs of the Measure phase  </li>
+
+                                        
+                                    
+                                    <li>Tools 
+                                        <ol type="a">
+                                            <li>Ishikawa diagram</li> 
+                                            <li>Failure mode and effects analysis</li> 
+                                            <li>Hypothesis testing </li>
+                                            <li>Process capability study</li> 
+ 
+                                        </ol>
+                                    </li>
+                                    <li>Outputs 
+                                        <ol type="a">
+                                            <li>Important causes of defects</li>
+                                            <li>Special and common causes of variation</li> 
+                                            <li>DPMO and sigma level</li> 
+
+                                        </ol>
+                                    </li>
+                                    </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#six" aria-expanded="false" aria-controls="collapseSix">6. Lean Six Sigma Methodology – Improve <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                               <ol>
+                                    <li>Objectives of Improve Phase  </li>
+                                    <li>Inputs – outputs of the Analyze phase   </li>
+
+                                        
+                                    
+                                    <li>Tools 
+                                        <ol type="a">
+                                            <li>Returns on investment</li> 
+                                            <li>Solution design matrix </li>
+                                            <li>Design of experiment</li> 
+                                            <li>Taguchi robustness concepts </li>
+                                            <li>Response surface methodology</li> 
+                                            <li>Project planning and management tools</li> 
+                                            <li>Prototypes</li> 
+
+ 
+                                        </ol>
+                                    </li>
+                                    <li>Outputs 
+                                        <ol type="a">
+                                            <li>Cost / benefit for different solution</li> 
+                                            <li>Selection of solutions for implementation</li> 
+                                            <li>Implementation plan</li> 
+
+
+                                        </ol>
+                                    </li>
+                                    </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#seven" aria-expanded="false" aria-controls="collapseSeven">7. Lean Six Sigma Methodology – Control &#x2014; Health Care Domain Concepts <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                 <ol>
+                                    <li>Objectives of Control Phase  </li>
+                                    <li>Inputs – outputs of the Improve phase   </li>
+
+                                        
+                                    
+                                    <li>Tools 
+                                        <ol type="a">
+                                            <li>Control plan</li> 
+                                            <li>Statistical process control</li> 
+                                            <li>Lean enterprise</li> 
+                                            <li>5S </li>
+                                            <li>Kaizen</li> 
+                                            <li>Kanban</li> 
+                                            <li>Total productive maintenance</li> 
+                                            <li>Measurement system reanalysis</li> 
+
+
+ 
+                                        </ol>
+                                    </li>
+                                    <li>Outputs 
+                                        <ol type="a">
+                                            <li>Implemented solutions</li>
+                                            <li>Revised measurement system</li> 
+                                            <li>Control plan for sustaining benefits </li>
+                                            <li>Improves process capability</li> 
+                                            <li>Lessons learned</li> 
+ 
+
+
+                                        </ol>
+                                    </li>
+                                    </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#nine" aria-expanded="false" aria-controls="collapseNine">8. More on Lean  <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="nine" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ol>
+                                    <li>Lean is speed</li> 
+                                    <li>Value stream map</li> 
+                                    <li>Total supply chain </li>
+                                    <li>Lean six sigma logistics</li> 
+                                    <li>Standard operations</li> 
+                                    <li>Operator work instructions</li> 
+                                    <li>Cycle time reduction and talk time</li> 
+
+							    </ol>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/wEBPVQ7W2wg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>Six Sigma  Learning here my Trainer was explaining well he gave us a good knowledge of Six Sigma.</p>
+                            <h4 class="pull-right">&#x2015; Dharma Teja </h4>
+                        </div>
+                        <div class="item slide">
+                            <p>My trainer was very good knowledgeable learned  Six Sigma  Course here. He gave more real-time examples.</p>
+                            <h4 class="pull-right">&#x2015; Vihaan </h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
