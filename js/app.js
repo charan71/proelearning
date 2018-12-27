@@ -273,9 +273,9 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                 })
                     .when("/rpa/data-science",
                           {
-                    title: "Data Science Training in Hyderabad, Machine Learning Online Training | Pro-elearning",
-                    description: "",
-                    keywords: "",
+                    title: "Best Institute for Data Science in Online Training | Pro-elearning | Data Science Training",
+                    description: "Pro-elearning is that the Best Institute for knowledge DATA SCIENCE in Hyderabad with knowledgeable trade professionals. ✓100% job help ✓FREE DEMO ☎ 7901401499.",
+                    keywords: "Data science, data science course, data analytics courses, data science tutorial, data science training in Hyderabad, analytics courses, masters in data science, online courses, free online courses, e learning websites, online website, data science course in India, free courses.",
                     templateUrl: "views/data-science.html",
                     controller: "",
                     label: "Data Science"
@@ -334,6 +334,15 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     controller: "",
                     label: "AWS"
                 })
+                .when("/cloud-technologies/aws-sysops",
+                          {
+                    title: "AWS SysOps Virtual Training | AWS SysOps | Pro-elearning",
+                    description: "Pro-elearning offers Best AWS SysOps virtual training with certified trainers. In this virtual learning environment you will gain knowledge on how to setup and run Cloud Services in amazon web services (AWS). Call us to attend a FREE DEMO! ☎ 7901401499.",
+                    keywords: "Aws training, virtual training, online learning, virtual learning environment, elearning, training, aws solution architect, aws online training, aws architecture, amazon web services, aws solution architect, aws certified developer, aws architecture, aws certified solutions architect, amazon web services, aws, amazon web services tutorial, amazon aws,  acloudguru,  aws login, free courses.",
+                    templateUrl: "views/aws-sysops.html",
+                    controller: "",
+                    label: "AWS SysOps"
+                })
                     .when("/cloud-technologies/servicenow",
                           {
                     title: "Service Now Training in Hyderabad | Pro-elearning",
@@ -387,6 +396,51 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     templateUrl: "views/network-security.html",
                     controller: "",
                     label: "Network & Security"
+                })
+                .when("/network-security/comptia-network",
+                          {
+                    title: "Virtual CompTIA Network++Training in Hyderabad | Pro-elearning",
+                    description: "To become skilled CompTIA Network++ Learn CompTIA Network++ coaching in Hyderabad. Currently, Pro-elearning offers Best CompTIA Network++ on-line coaching for interested candidates.",
+                    keywords: "CompTIA Network++ Training institute in Hyderabad, CompTIA Network++ online Training institute in Hyderabad, CompTIA Network++ virtual Training institute in Hyderabad, CompTIA Network++ course in Hyderabad, CompTIA Network++ Training in Hyderabad, CompTIA Network++ online Training in Hyderabad, CompTIA Network++ best Online Training in Hyderabad",
+                    templateUrl: "views/comptia-network++.html",
+                    controller: "",
+                    label: "Comptia Network++"
+                })
+                .when("/network-security/comptia-security",
+                          {
+                    title: "Providing Online Training |CompTIA Security++ Best Training | Pro-elearning",
+                    description: "Join with Pro-elearning virtual Training to become a skilled in CompTIA Security++ coaching in Hyderabad and get trained by experts who has vast experience in Virtual Training. Best CompTIA Security++ course in Hyderabad.",
+                    keywords: "CompTIA, security, comptia security+, CompTIA Security++ Training institute in Hyderabad, CompTIA Security++ online Training institute in Hyderabad, CompTIA Security++ best Training institute in Hyderabad, CompTIA Security++ course in Hyderabad, CompTIA Security++ Training in Hyderabad, CompTIA Security++online Training in Hyderabad, CompTIA Security++ best coaching in Hyderabad",
+                    templateUrl: "views/comptia-security++.html",
+                    controller: "",
+                    label: "Comptia Security++"
+                })
+                .when("/network-security/cisa",
+                          {
+                    title: "CISA coaching in Hyderabad |Virtual coaching Course | Pro-elearning",
+                    description: "Enrol today and find active time period coaching on CISSP, CCSP & CISA by industrial consultants. Pro-elearning offers you one among the simplest CISSP, CCSP & CISA coaching in Hyderabad.",
+                    keywords: "CISSP, CCSP & CISA Training in Hyderabad, CISSP, CCSP & CISA online training, CISSP, CCSP & CISA virtual training in Hyderabad, CISSP, CCSP & CISA  course training in Hyderabad, Best online coaching for CISSP, CCSP & CISA in Hyderabad, CISSP, CCSP & CISA technical training in Hyderabad, CISSP, CCSP & CISA best online course in Hyderabad, CISSP, CCSP & CISA training institutes in Hyderabad, Best CISSP, CCSP & CISA training online institutes in Hyderabad, CISSP, CCSP & CISA online training in Hyderabad.",
+                    templateUrl: "views/cisa.html",
+                    controller: "",
+                    label: "Cisa"
+                })
+                .when("/network-security/ccsp",
+                          {
+                    title: "CCSP coaching in Hyderabad |Virtual coaching Course | Pro-elearning",
+                    description: "Enrol today and find active time period coaching on CISSP, CCSP & CISA by industrial consultants. Pro-elearning offers you one among the simplest CISSP, CCSP & CISA coaching in Hyderabad.",
+                    keywords: "CISSP, CCSP & CISA Training in Hyderabad, CISSP, CCSP & CISA online training, CISSP, CCSP & CISA virtual training in Hyderabad, CISSP, CCSP & CISA  course training in Hyderabad, Best online coaching for CISSP, CCSP & CISA in Hyderabad, CISSP, CCSP & CISA technical training in Hyderabad, CISSP, CCSP & CISA best online course in Hyderabad, CISSP, CCSP & CISA training institutes in Hyderabad, Best CISSP, CCSP & CISA training online institutes in Hyderabad, CISSP, CCSP & CISA online training in Hyderabad.",
+                    templateUrl: "views/ccsp.html",
+                    controller: "",
+                    label: "Ccsp"
+                })
+                .when("/network-security/cissp",
+                          {
+                    title: "CISSP coaching in Hyderabad |Virtual coaching Course | Pro-elearning",
+                    description: "Enrol today and find active time period coaching on CISSP, CCSP & CISA by industrial consultants. Pro-elearning offers you one among the simplest CISSP, CCSP & CISA coaching in Hyderabad.",
+                    keywords: "CISSP, CCSP & CISA Training in Hyderabad, CISSP, CCSP & CISA online training, CISSP, CCSP & CISA virtual training in Hyderabad, CISSP, CCSP & CISA  course training in Hyderabad, Best online coaching for CISSP, CCSP & CISA in Hyderabad, CISSP, CCSP & CISA technical training in Hyderabad, CISSP, CCSP & CISA best online course in Hyderabad, CISSP, CCSP & CISA training institutes in Hyderabad, Best CISSP, CCSP & CISA training online institutes in Hyderabad, CISSP, CCSP & CISA online training in Hyderabad.",
+                    templateUrl: "views/cissp.html",
+                    controller: "",
+                    label: "Cissp"
                 })
                     .when("/network-security/ccna",
                           {
@@ -783,6 +837,33 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
                     templateUrl: "views/technical-manager.html",
                     controller: "",
                     label: "Technical Manager"
+                })
+                .when("/business-management/togaf",
+                          {
+                    title: "TOGAF BEST on-line coaching | TOGAF Training | Pro-elearning",
+                    description: "Pro-elearning, a specialized institute for TOGAF coaching in Hyderabad provides time period placement targeted employment. ✓FREE DEMO! ☎ 7901401499",
+                    keywords: "Togaf, TOGAF Training institute in Hyderabad, TOGAF online Training institute in Hyderabad, TOGAF Classroom Training institute in Hyderabad, TOGAF course in Hyderabad, TOGAF Training in Hyderabad, TOGAF online Training in Hyderabad, TOGAF classroom Training in Hyderabad",
+                    templateUrl: "views/togaf.html",
+                    controller: "",
+                    label: "ToGAF"
+                })
+                .when("/business-management/pmp",
+                          {
+                    title: "PMP Online-Classroom coaching in Hyderabad | Pro-elearning | PMP Virtual Training",
+                    description: "By this virtual training environment you will become a skilled in PMP Trained by IT consultants in Hyderabad. Pro-elearning provides Best online and Offline PMP coaching to Job Seekers and IT workers.",
+                    keywords: "PMP Training institute in Hyderabad, PMP online Training institute in Hyderabad, PMP Classroom Training institute in Hyderabad, Project Management Professional (PMP) course in Hyderabad, PMP Training in Hyderabad, PMP online Training in Hyderabad, PMP virtual Training in Hyderabad",
+                    templateUrl: "views/pmp.html",
+                    controller: "",
+                    label: "PMP"
+                })
+                .when("/business-management/six-sigma",
+                          {
+                    title: "Best Online Training |SIX SIGMA BEST Training| Pro-elearning Virtual Training",
+                    description: "Learn Six Sigma course with basic fundamentals to advanced concepts from experts with hands-on practical exposure from best institute Pro-elearning. Enrol now to attend FREE DEMO! ☎ +91-7901401499.",
+                    keywords: "Six sigma, lean six sigma, 6 sigma, six sigma course, six sigma Training institute in Hyderabad, six sigma online Training institute in Hyderabad, six sigma Virtual Training institute in Hyderabad, six sigma course in Hyderabad, six sigma Training in Hyderabad, six sigma online Training in Hyderabad, six sigma best online coaching in Hyderabad",
+                    templateUrl: "views/six-sigma.html",
+                    controller: "",
+                    label: "Six Sigma"
                 })
                     .when("/analytical-tools",
                           {

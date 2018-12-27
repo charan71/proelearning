@@ -213,7 +213,7 @@
                         <div class="stats-studs-trained">
                             <h4 class="stats-title">Courses</h4>
                             <div class="stats-num">
-                                <span animate-numbers>90</span>+
+                                <span animate-numbers>100</span>+
                             </div>
                         </div>
                     </div>
