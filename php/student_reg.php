@@ -29,7 +29,7 @@
         $subject = "Registered Student Details";
 
         // message
-        $message ="Below are the Registered Student Details:\r\n 
+        $message = "Below are the Registered Student Details:\r\n 
         <html>
             <body>
                 <div>

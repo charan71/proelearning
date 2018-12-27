@@ -8,7 +8,7 @@
 
 $to= $email;
 // subject
-$subject = 'Pro-e Learning';
+$subject = 'PRO e-Learning';
 // message
 $message ="
 <html>
