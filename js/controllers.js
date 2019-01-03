@@ -290,52 +290,52 @@ angular.module('ProELearning.controllers', [])
 /* Creating QualificationListController */
 .controller("QualificationListController", function($scope) {
     $scope.qualifications = [
-        {qualification: "B.A"},
-        {qualification: "B.Arch"},
-        {qualification: "BCA"},
-        {qualification: "B.B.A /  B.M.S"},
-        {qualification: "B.Com"},
-        {qualification: "B.Ed"},
-        {qualification: "BDS"},
-        {qualification: "BHM"},
-        {qualification: "B.Pharma"},
-        {qualification: "B.Sc"},
-        {qualification: "B.Tech / B.E."},
-        {qualification: "LLB"},
-        {qualification: "MBBS"},
-        {qualification: "Diploma"},
-        {qualification: "BVSC"},
-        {qualification: "BAMS"},
-        {qualification: "BHMS"},
-        {qualification: "B.El.Ed"},
-        {qualification: "B.P.Ed"},
-        {qualification: "B.Des."},
-        {qualification: "BFA"},
-        {qualification: "B.U.M.S"},
-        {qualification: "CA"},
-        {qualification: "CS"},
-        {qualification: "ICWA (CMA)"},
-        {qualification: "Integrated PG"},
-        {qualification: "LLM"},
-        {qualification: "M.A"},
-        {qualification: "M.Arch"},
-        {qualification: "M.Com"},
-        {qualification: "M.Ed"},
-        {qualification: "M.Pharma"},
-        {qualification: "MS / M.Sc(Science)"},
-        {qualification: "M.Tech"},
-        {qualification: "MBA / PGDM"},
-        {qualification: "MCA"},
-        {qualification: "Medical-MS / MD"},
-        {qualification: "PG Diploma"},
-        {qualification: "MVSC"},
-        {qualification: "MCM"},
-        {qualification: "MDS"},
-        {qualification: "MFA"},
-        {qualification: "M.Des."},
-        {qualification: "DM"},
-        {qualification: "M.Ch"},
-        {qualification: "Other"},
+        { qualification: "B.A" },
+        { qualification: "B.Arch" },
+        { qualification: "BCA" },
+        { qualification: "B.B.A /  B.M.S" },
+        { qualification: "B.Com" },
+        { qualification: "B.Ed" },
+        { qualification: "BDS" },
+        { qualification: "BHM" },
+        { qualification: "B.Pharma" },
+        { qualification: "B.Sc" },
+        { qualification: "B.Tech / B.E." },
+        { qualification: "LLB" },
+        { qualification: "MBBS" },
+        { qualification: "Diploma" },
+        { qualification: "BVSC" },
+        { qualification: "BAMS" },
+        { qualification: "BHMS" },
+        { qualification: "B.El.Ed" },
+        { qualification: "B.P.Ed" },
+        { qualification: "B.Des." },
+        { qualification: "BFA" },
+        { qualification: "B.U.M.S" },
+        { qualification: "CA" },
+        { qualification: "CS" },
+        { qualification: "ICWA (CMA)" },
+        { qualification: "Integrated PG" },
+        { qualification: "LLM" },
+        { qualification: "M.A" },
+        { qualification: "M.Arch" },
+        { qualification: "M.Com" },
+        { qualification: "M.Ed" },
+        { qualification: "M.Pharma" },
+        { qualification: "MS / M.Sc(Science)" },
+        { qualification: "M.Tech" },
+        { qualification: "MBA / PGDM" },
+        { qualification: "MCA" },
+        { qualification: "Medical-MS / MD" },
+        { qualification: "PG Diploma" },
+        { qualification: "MVSC" },
+        { qualification: "MCM" },
+        { qualification: "MDS" },
+        { qualification: "MFA" },
+        { qualification: "M.Des." },
+        { qualification: "DM" },
+        { qualification: "M.Ch" },
+        { qualification: "Other" },
     ];
 })
 
@@ -351,12 +351,14 @@ angular.module('ProELearning.controllers', [])
 .controller("CourseCardsController", ['$scope', '$http', '$rootScope', '$window', '$timeout', function($scope, $http, $rootScope, $window, $timeout) {
     $scope.coursePricesList = [];
 
-    // $http.get("http://ipinfo.io/json")
-    // .then(function(response) {
-    //     console.log("in controller success response");
+    $http.get("http://ipinfo.io/json")
+    .then(function(response) {
+        console.log("in controller success response");
       
-    //     $rootScope.shortCountryCode = response.data.country;
-    //     $window.sessionStorage.setItem('shortCountryCode', response.data.country);
+        $rootScope.shortCountryCode = response.data.country;
+        console.log($rootScope.shortCountryCode);
+        
+        $window.sessionStorage.setItem('shortCountryCode', response.data.country);
         $http.get("./json/fees.json")
         .then(function(response) {
             $scope.coursePricesList = response.data;
@@ -391,26 +393,27 @@ angular.module('ProELearning.controllers', [])
             ];
         
             $scope.ccCloudTech = [
-                {ccCloudTechURL:"cloud-technologies/salesforce-developer", ccCloudTechImage:"salesforce-developer.jpg", ccCloudTechAlt:"Salesforce-Developer-Training-Pro-elearning", ccCloudTechTitle:"Salesforce Developer", ccCloudTechDesc:"Salesforce is the number one destination for learning to build mobile & enterprise applications in the cloud.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
-                {ccCloudTechURL:"cloud-technologies/salesforce-administrator", ccCloudTechImage:"salesforce-administrator.jpg", ccCloudTechAlt:"Salesforce-Administrator-Training-Pro-elearning", ccCloudTechTitle:"Salesforce Administrator", ccCloudTechDesc:"A Salesforce Administrator is a business leader, deeply knowledgeable about how their company operates, intertwined in making all departments successful through process automations, and thus, integral to running a smooth & lean business.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
-                {ccCloudTechURL:"cloud-technologies/azure", ccCloudTechImage:"azure.jpg", ccCloudTechAlt:"Azure-Training-Pro-elearning", ccCloudTechTitle:"Azure", ccCloudTechDesc:"Microsoft Azure is an open, flexible, enterprise-grade cloud computing platform.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
-                {ccCloudTechURL:"cloud-technologies/aws", ccCloudTechImage:"aws.jpg", ccCloudTechAlt:"AWS-Training-Pro-elearning", ccCloudTechTitle:"AWS", ccCloudTechDesc:"Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
-                {ccCloudTechURL:"cloud-technologies/servicenow", ccCloudTechImage:"servicenow.jpg", ccCloudTechAlt:"ServiceNow-Training-Pro-elearning", ccCloudTechTitle:"ServiceNow", ccCloudTechDesc:"ServiceNow's cloud platform streamlines how work gets done.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
-                {ccCloudTechURL:"cloud-technologies/openstack", ccCloudTechImage:"openstack.jpg", ccCloudTechAlt:"OpenStack-Training-Pro-elearning", ccCloudTechTitle:"OpenStack", ccCloudTechDesc:"OpenStack is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service, whereby virtual servers and other resources are made available to customers.", ccCloudTechDuration: "45", ccCloudTechPrice:"25000"},
+                {ccCloudTechURL:"cloud-technologies/salesforce-developer", ccCloudTechImage:"salesforce-developer.jpg", ccCloudTechAlt:"Salesforce-Developer-Training-Pro-elearning", ccCloudTechTitle:"Salesforce Developer", ccCloudTechDesc:"Salesforce is the number one destination for learning to build mobile & enterprise applications in the cloud.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("salesforce-developer")},
+                {ccCloudTechURL:"cloud-technologies/salesforce-administrator", ccCloudTechImage:"salesforce-administrator.jpg", ccCloudTechAlt:"Salesforce-Administrator-Training-Pro-elearning", ccCloudTechTitle:"Salesforce Administrator", ccCloudTechDesc:"A Salesforce Administrator is a business leader, deeply knowledgeable about how their company operates, intertwined in making all departments successful through process automations, and thus, integral to running a smooth & lean business.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("salesforce-administrator")},
+                {ccCloudTechURL:"cloud-technologies/azure", ccCloudTechImage:"azure.jpg", ccCloudTechAlt:"Azure-Training-Pro-elearning", ccCloudTechTitle:"Azure", ccCloudTechDesc:"Microsoft Azure is an open, flexible, enterprise-grade cloud computing platform.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("azure")},
+                {ccCloudTechURL:"cloud-technologies/aws", ccCloudTechImage:"aws.jpg", ccCloudTechAlt:"AWS-Training-Pro-elearning", ccCloudTechTitle:"AWS", ccCloudTechDesc:"Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("aws")},
+                {ccCloudTechURL:"cloud-technologies/aws-sysops", ccCloudTechImage:"aws-sysops.jpg", ccCloudTechAlt:"AWS-SysOps-Training-Pro-elearning", ccCloudTechTitle:"AWS SysOps", ccCloudTechDesc:"AWS SysOps training program is designed to provide you hands-on exposure to the highly scalable Amazon Web Services (AWS) cloud platform, giving you technical expertise in deploying, managing and operating fault-tolerant system on AWS.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("aws-sysops")},
+                {ccCloudTechURL:"cloud-technologies/servicenow", ccCloudTechImage:"servicenow.jpg", ccCloudTechAlt:"ServiceNow-Training-Pro-elearning", ccCloudTechTitle:"ServiceNow", ccCloudTechDesc:"ServiceNow's cloud platform streamlines how work gets done.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("servicenow")},
+                {ccCloudTechURL:"cloud-technologies/openstack", ccCloudTechImage:"openstack.jpg", ccCloudTechAlt:"OpenStack-Training-Pro-elearning", ccCloudTechTitle:"OpenStack", ccCloudTechDesc:"OpenStack is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service, whereby virtual servers and other resources are made available to customers.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("openstack")},
             ];
         
             $scope.ccInfoTech = [
                 {ccInfoTechURL:"information-technology/java", ccInfoTechImage:"java.jpg", ccInfoTechAlt: "Java-Training-Pro-elearning", ccInfoTechTitle:"Java", ccInfoTechDesc:"Java is a programming language and computing platform first released by Sun Microsystems.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("java")},
                 {ccInfoTechURL:"information-technology/dotnet", ccInfoTechImage:"dotnet.jpg", ccInfoTechAlt: ".Net-Training-Pro-elearning", ccInfoTechTitle:".Net", ccInfoTechDesc:"A developer platform for building all your apps. Build for web, mobile, gaming, IoT, desktop, cloud and microservices.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("dotnet")},
                 {ccInfoTechURL:"information-technology/python", ccInfoTechImage:"python.jpg", ccInfoTechAlt: "", ccInfoTechTitle:"Python", ccInfoTechDesc:"Python is an interpreted high-level programming language for general-purpose programming.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("python")},
-                {ccInfoTechURL:"information-technology/embedded-systems", ccInfoTechImage:"embedded-systems.jpg", ccInfoTechAlt: "Embeddded-Systems-Training-Pro-elearning", ccInfoTechTitle:"Embedded Systems", ccInfoTechDesc:"An embedded system is a computer system with a dedicated function within a larger mechanical or electrical system, often with real-time computing constraints.", ccInfoTechDuration: "45", ccInfoTechPrice:"25000"},
-                {ccInfoTechURL:"information-technology/unix", ccInfoTechImage:"unix.jpg", ccInfoTechAlt: "Unix-Training-Pro-elearning", ccInfoTechTitle:"Unix", ccInfoTechDesc:"Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix.", ccInfoTechDuration: "45", ccInfoTechPrice:"25000"},
-                {ccInfoTechURL:"information-technology/linux", ccInfoTechImage:"linux.jpg", ccInfoTechAlt: "Linux-Training-Pro-elearning", ccInfoTechTitle:"Linux", ccInfoTechDesc:"Linux is a family of free and open-source software operating systems built around the Linux kernel.", ccInfoTechDuration: "45", ccInfoTechPrice:"25000"},
-                {ccInfoTechURL:"information-technology/build-and-deployment-engineer", ccInfoTechImage:"build-and-deployment-engineer.jpg", ccInfoTechAlt: "Build-and-Deployment-Engineer-Training-Pro-elearning", ccInfoTechTitle:"Build and Deployment Engineer", ccInfoTechDesc:"Build and Deployment Engineer is responsible for owning the creation and implementation of a technology framework and lead the design, development, testing, and deployment of software projects.", ccInfoTechDuration: "45", ccInfoTechPrice:"25000"},
-                {ccInfoTechURL:"information-technology/build-release-engineer", ccInfoTechImage:"build-release-engineer.jpg", ccInfoTechAlt: "Build-and-Release-Engineer-Training-Pro-elearning", ccInfoTechTitle:"Build & Release Engineer", ccInfoTechDesc:"Release engineering, frequently abbreviated as RE or as the clipped compound Releng, is a sub-discipline in software engineering concerned with the compilation, assembly, and delivery of source code into finished products or other software components.", ccInfoTechDuration: "45", ccInfoTechPrice:"25000"},
-                {ccInfoTechURL:"information-technology/ruby", ccInfoTechImage:"ruby.jpg", ccInfoTechAlt: "Ruby", ccInfoTechTitle:"Ruby", ccInfoTechDesc:"Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language.", ccInfoTechDuration: "45", ccInfoTechPrice:"25000"},
-                {ccInfoTechURL:"information-technology/sharepoint", ccInfoTechImage:"sharepoint.jpg", ccInfoTechAlt: "SharePoint-Training-Pro-elearning", ccInfoTechTitle:"SharePoint", ccInfoTechDesc:"SharePoint is a web-based collaborative platform that integrates with Microsoft Office.", ccInfoTechDuration: "45", ccInfoTechPrice:"25000"},
-                {ccInfoTechURL:"information-technology/itil-v3-foundation", ccInfoTechImage:"itil-v3-foundation.jpg", ccInfoTechAlt: "ITIL-V3-Foundation-Training-Pro-elearning", ccInfoTechTitle:"ITIL V3 Foundation", ccInfoTechDesc:"ITIL Foundation is an entry-level ITIL certification for IT professionals.", ccInfoTechDuration: "45", ccInfoTechPrice:"25000"},
+                {ccInfoTechURL:"information-technology/embedded-systems", ccInfoTechImage:"embedded-systems.jpg", ccInfoTechAlt: "Embeddded-Systems-Training-Pro-elearning", ccInfoTechTitle:"Embedded Systems", ccInfoTechDesc:"An embedded system is a computer system with a dedicated function within a larger mechanical or electrical system, often with real-time computing constraints.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("embedded-systems")},
+                {ccInfoTechURL:"information-technology/unix", ccInfoTechImage:"unix.jpg", ccInfoTechAlt: "Unix-Training-Pro-elearning", ccInfoTechTitle:"Unix", ccInfoTechDesc:"Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("unix")},
+                {ccInfoTechURL:"information-technology/linux", ccInfoTechImage:"linux.jpg", ccInfoTechAlt: "Linux-Training-Pro-elearning", ccInfoTechTitle:"Linux", ccInfoTechDesc:"Linux is a family of free and open-source software operating systems built around the Linux kernel.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("linux")},
+                {ccInfoTechURL:"information-technology/build-and-deployment-engineer", ccInfoTechImage:"build-and-deployment-engineer.jpg", ccInfoTechAlt: "Build-and-Deployment-Engineer-Training-Pro-elearning", ccInfoTechTitle:"Build and Deployment Engineer", ccInfoTechDesc:"Build and Deployment Engineer is responsible for owning the creation and implementation of a technology framework and lead the design, development, testing, and deployment of software projects.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("build-deploy-engg")},
+                {ccInfoTechURL:"information-technology/build-release-engineer", ccInfoTechImage:"build-release-engineer.jpg", ccInfoTechAlt: "Build-and-Release-Engineer-Training-Pro-elearning", ccInfoTechTitle:"Build & Release Engineer", ccInfoTechDesc:"Release engineering, frequently abbreviated as RE or as the clipped compound Releng, is a sub-discipline in software engineering concerned with the compilation, assembly, and delivery of source code into finished products or other software components.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("build-release-engg")},
+                {ccInfoTechURL:"information-technology/ruby", ccInfoTechImage:"ruby.jpg", ccInfoTechAlt: "Ruby", ccInfoTechTitle:"Ruby", ccInfoTechDesc:"Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("ruby")},
+                {ccInfoTechURL:"information-technology/sharepoint", ccInfoTechImage:"sharepoint.jpg", ccInfoTechAlt: "SharePoint-Training-Pro-elearning", ccInfoTechTitle:"SharePoint", ccInfoTechDesc:"SharePoint is a web-based collaborative platform that integrates with Microsoft Office.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("sharepoint")},
+                {ccInfoTechURL:"information-technology/itil-v3-foundation", ccInfoTechImage:"itil-v3-foundation.jpg", ccInfoTechAlt: "ITIL-V3-Foundation-Training-Pro-elearning", ccInfoTechTitle:"ITIL V3 Foundation", ccInfoTechDesc:"ITIL Foundation is an entry-level ITIL certification for IT professionals.", ccInfoTechDuration: "45", ccInfoTechPrice: getPrice("itilv3")},
             ];
         
             $scope.ccWebDev = [
@@ -426,7 +429,7 @@ angular.module('ProELearning.controllers', [])
                 {ccRpaURL:"rpa/automation-anywhere", ccRpaImage:"automation-anywhere.jpg", ccRpaAlt: "Automation-Anywhere-Training-Pro-elearning", ccRpaTitle:"Automation Anywhere", ccRpaDesc:"Automation Anywhere Enterprise is robotic process automation software designed to automate any process end-to-end with cognitive software robots.", ccRpaDuration: "45", ccRpaPrice: getPrice("aa")},
                 {ccRpaURL:"rpa/iot", ccRpaImage:"iot.jpg", ccRpaAlt: "IoT-Training-Pro-elearning", ccRpaTitle:"IoT", ccRpaDesc:"The internet of things, or IoT, is a system of interrelated computing devices, mechanical and digital machines, objects, animals or people that are provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction.", ccRpaDuration: "45", ccRpaPrice: getPrice("iot")},
                 {ccRpaURL:"rpa/machine-learning", ccRpaImage:"machine-learning.jpg", ccRpaAlt: "Machine-Learning-Training-Pro-elearning", ccRpaTitle:"Machine Learning", ccRpaDesc:"Machine learning is a field of computer science that uses statistical techniques to give computer systems the ability to 'learn' with data, without being explicitly programmed.", ccRpaDuration: "45", ccRpaPrice: getPrice("machine-learning")},
-                {ccRpaURL:"rpa/data-science", ccRpaImage:"data-science.jpg", ccRpaAlt: "Data-Science-Training-Pro-elearning", ccRpaTitle:"Data Science", ccRpaDesc:"", ccRpaDuration: "45", ccRpaPrice: getPrice("data-science")},
+                {ccRpaURL:"rpa/data-science", ccRpaImage:"data-science.jpg", ccRpaAlt: "Data-Science-Training-Pro-elearning", ccRpaTitle:"Data Science", ccRpaDesc:"As the world entered the era of big data, the need for its storage also grew.", ccRpaDuration: "45", ccRpaPrice: getPrice("data-science")},
                 {ccRpaURL:"rpa/uipath", ccRpaImage:"uipath.jpg", ccRpaAlt: "UiPath-Training-Pro-elearning", ccRpaTitle:"UiPath", ccRpaDesc:"UiPath is an Enterprise Robotic Process Automation (RPA) Software designed to empower companies to automate repetitive, manual, rules-based business processes.", ccRpaDuration: "45", ccRpaPrice: getPrice("uipath")},
             ];
         
@@ -438,6 +441,11 @@ angular.module('ProELearning.controllers', [])
             $scope.ccNetworkSecurity = [
                 {ccNetworkSecurityURL:"network-security/ccna", ccNetworkSecurityImage:"ccna.jpg", ccNetworkSecurityAlt: "CCNA-Training-Pro-elearning", ccNetworkSecurityTitle:"CCNA", ccNetworkSecurityDesc:"CCNA is the  knowledge and skills required to install, operate, and troubleshoot a small to medium size enterprise branch network.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("ccna")},
                 {ccNetworkSecurityURL:"network-security/cyber-network-security", ccNetworkSecurityImage:"cns.jpg", ccNetworkSecurityAlt: "CNS-Training-Pro-elearning", ccNetworkSecurityTitle:"CNS", ccNetworkSecurityDesc:"The Computer & Network Security program provides a firm foundation in cybersecurity while also providing the flexibility for students.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("cns")},
+                {ccNetworkSecurityURL:"network-security/comptia-network-plus", ccNetworkSecurityImage:"comptia-network+.jpg", ccNetworkSecurityAlt: "CompTIA-Network+-Training-Pro-elearning", ccNetworkSecurityTitle:"CompTIA Network+", ccNetworkSecurityDesc:"CompTIA Network+ course is one of the best and the most popular network courses in the world.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("comptia-network-plus")},
+                {ccNetworkSecurityURL:"network-security/comptia-security-plus", ccNetworkSecurityImage:"comptia-security+.jpg", ccNetworkSecurityAlt: "CompTIA-Security+-Training-Pro-elearning", ccNetworkSecurityTitle:"CompTIA Security+", ccNetworkSecurityDesc:"CompTIA Security+ course is one of the best and the most popular security courses in the world.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("comptia-security-plus")},
+                {ccNetworkSecurityURL:"network-security/cisa", ccNetworkSecurityImage:"CISA.jpg", ccNetworkSecurityAlt: "CISA-Training-Pro-elearning", ccNetworkSecurityTitle:"CISA", ccNetworkSecurityDesc:"CISA course is best suitable for them who are interested in Information Systems auditing, control and security.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("cisa")},
+                {ccNetworkSecurityURL:"network-security/ccsp", ccNetworkSecurityImage:"ccsp.jpg", ccNetworkSecurityAlt: "CCSP-Training-Pro-elearning", ccNetworkSecurityTitle:"CCSP", ccNetworkSecurityDesc:"CCSP course helps you advance your technical skills and knowledge in designing, managing and securing the data over cloud and make you an expert.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("ccsp")},
+                {ccNetworkSecurityURL:"network-security/cissp", ccNetworkSecurityImage:"cissp.jpg", ccNetworkSecurityAlt: "CISSP-Training-Pro-elearning", ccNetworkSecurityTitle:"CISSP", ccNetworkSecurityDesc:"CISSP course helps you advance your technical skills and knowledge in designing, managing and securing the data over cloud and make you an expert.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("cissp")},
             ];
 
             $scope.ccAppSupport = [
@@ -451,18 +459,18 @@ angular.module('ProELearning.controllers', [])
             ];
         
             $scope.ccErp = [
-                {ccErpURL:"erp/people-soft-hrms", ccErpImage:"people-soft-hrms.jpg", ccErpAlt: "PeopleSoft-HRMS-Functional-Training-Pro-elearning", ccErpTitle:"PeopleSoft HRMS Functional", ccErpDesc:"Peoplesoft HRMS manages the human resource covering many other HR aspects from application to retirement.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/salesforce-crm", ccErpImage:"salesforce-crm.jpg", ccErpAlt: "Salesforce-CRM-Training-Pro-elearning", ccErpTitle:"Salesforce CRM", ccErpDesc:"Salesforce is a (CRM) platform which provides cloud-based applications for sales, service, marketing, and more.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/oracle-apps", ccErpImage:"oracle-apps.jpg", ccErpAlt: "Oracle-Apps-Training-Pro-elearning", ccErpTitle:"Oracle Apps", ccErpDesc:"Oracle Applications is a software that helps to runs enterprise businesses such as Accounting, Humans Resource, or Financials.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sap-bi", ccErpImage:"sap-bi.jpg", ccErpAlt: "SAP-BI-Training-Pro-elearning", ccErpTitle:"SAP BI", ccErpDesc:"Business Intelligence is a SAP product which majorly focuses on providing its customers/organizations with a user friendly and very useful form of representing data that could be helpful for analyses purpose and making business decisions.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sap-bo", ccErpImage:"sap-bo.jpg", ccErpAlt: "SAP-BO-Training-Pro-elearning", ccErpTitle:"SAP BO", ccErpDesc:"SAP BO is a reporting and analytics business intelligence (BI) platform aimed at business users.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sap-crm", ccErpImage:"sap-crm.jpg", ccErpAlt: "SAP-CRM-Training-Pro-elearning", ccErpTitle:"SAP CRM", ccErpDesc:"SAP CRM targets business software requirements of midsize and large organizations in all industries and sectors.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sap-fico", ccErpImage:"sap-fico.jpg", ccErpAlt: "SAP-FICO-Training-Pro-elearning", ccErpTitle:"SAP FICO", ccErpDesc:"SAP Finance and Controlling is the best design module for internal as well as external accounting processes.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sap-hana", ccErpImage:"sap-hana.jpg", ccErpAlt: "SAP-HANA-Training-Pro-elearning", ccErpTitle:"SAP HANA", ccErpDesc:"Using SAP HANA run a business data platform for the intelligent enterprise to deliver data-driven insights throughout your business and predict real-time outcomes.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sap-mm", ccErpImage:"sap-mm.jpg", ccErpAlt: "SAP-MM-Training-Pro-elearning", ccErpTitle:"SAP MM", ccErpDesc:"Material Management handles the procurement to payment process, from inventory through final invoice receipt and verification.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sas", ccErpImage:"sas.jpg", ccErpAlt: "SAS-Training-Pro-elearning", ccErpTitle:"SAS", ccErpDesc:"SAS is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sas-clinical-research", ccErpImage:"sas-clinical-research.jpg", ccErpAlt: "SAS-Clinical-Research-Training-Pro-elearning", ccErpTitle:"SAS Clinical Research", ccErpDesc:"SAS Clinical Research validates a candidates' ability to apply SAS programming skills to clinical trials data.", ccErpDuration: "45", ccErpPrice:"25000"},
-                {ccErpURL:"erp/sas-bi", ccErpImage:"sas-bi.jpg", ccErpAlt: "SAS-BI-Training-Pro-elearning", ccErpTitle:"SAS BI", ccErpDesc:"SAS Business Intelligence software provides the most comprehensive, integrated and easy-to-use reporting and analytics features. In your office or on the go.", ccErpDuration: "45", ccErpPrice:"25000"},
+                {ccErpURL:"erp/people-soft-hrms", ccErpImage:"people-soft-hrms.jpg", ccErpAlt: "PeopleSoft-HRMS-Functional-Training-Pro-elearning", ccErpTitle:"PeopleSoft HRMS Functional", ccErpDesc:"Peoplesoft HRMS manages the human resource covering many other HR aspects from application to retirement.", ccErpDuration: "45", ccErpPrice:getPrice("peoplesoft-hrms")},
+                {ccErpURL:"erp/salesforce-crm", ccErpImage:"salesforce-crm.jpg", ccErpAlt: "Salesforce-CRM-Training-Pro-elearning", ccErpTitle:"Salesforce CRM", ccErpDesc:"Salesforce is a (CRM) platform which provides cloud-based applications for sales, service, marketing, and more.", ccErpDuration: "45", ccErpPrice:getPrice("salesforce-crm")},
+                {ccErpURL:"erp/oracle-apps", ccErpImage:"oracle-apps.jpg", ccErpAlt: "Oracle-Apps-Training-Pro-elearning", ccErpTitle:"Oracle Apps", ccErpDesc:"Oracle Applications is a software that helps to runs enterprise businesses such as Accounting, Humans Resource, or Financials.", ccErpDuration: "45", ccErpPrice:getPrice("oracle-apps")},
+                {ccErpURL:"erp/sap-bi", ccErpImage:"sap-bi.jpg", ccErpAlt: "SAP-BI-Training-Pro-elearning", ccErpTitle:"SAP BI", ccErpDesc:"Business Intelligence is a SAP product which majorly focuses on providing its customers/organizations with a user friendly and very useful form of representing data that could be helpful for analyses purpose and making business decisions.", ccErpDuration: "45", ccErpPrice:getPrice("sap-bi")},
+                {ccErpURL:"erp/sap-bo", ccErpImage:"sap-bo.jpg", ccErpAlt: "SAP-BO-Training-Pro-elearning", ccErpTitle:"SAP BO", ccErpDesc:"SAP BO is a reporting and analytics business intelligence (BI) platform aimed at business users.", ccErpDuration: "45", ccErpPrice:getPrice("sap-bo")},
+                {ccErpURL:"erp/sap-crm", ccErpImage:"sap-crm.jpg", ccErpAlt: "SAP-CRM-Training-Pro-elearning", ccErpTitle:"SAP CRM", ccErpDesc:"SAP CRM targets business software requirements of midsize and large organizations in all industries and sectors.", ccErpDuration: "45", ccErpPrice:getPrice("sap-crm")},
+                {ccErpURL:"erp/sap-fico", ccErpImage:"sap-fico.jpg", ccErpAlt: "SAP-FICO-Training-Pro-elearning", ccErpTitle:"SAP FICO", ccErpDesc:"SAP Finance and Controlling is the best design module for internal as well as external accounting processes.", ccErpDuration: "45", ccErpPrice:getPrice("sap-fico")},
+                {ccErpURL:"erp/sap-hana", ccErpImage:"sap-hana.jpg", ccErpAlt: "SAP-HANA-Training-Pro-elearning", ccErpTitle:"SAP HANA", ccErpDesc:"Using SAP HANA run a business data platform for the intelligent enterprise to deliver data-driven insights throughout your business and predict real-time outcomes.", ccErpDuration: "45", ccErpPrice:getPrice("sap-hana")},
+                {ccErpURL:"erp/sap-mm", ccErpImage:"sap-mm.jpg", ccErpAlt: "SAP-MM-Training-Pro-elearning", ccErpTitle:"SAP MM", ccErpDesc:"Material Management handles the procurement to payment process, from inventory through final invoice receipt and verification.", ccErpDuration: "45", ccErpPrice:getPrice("sap-mm")},
+                {ccErpURL:"erp/sas", ccErpImage:"sas.jpg", ccErpAlt: "SAS-Training-Pro-elearning", ccErpTitle:"SAS", ccErpDesc:"SAS is a software suite developed by SAS Institute for advanced analytics, multivariate analyses, business intelligence, data management, and predictive analytics.", ccErpDuration: "45", ccErpPrice:getPrice("sas")},
+                {ccErpURL:"erp/sas-clinical-research", ccErpImage:"sas-clinical-research.jpg", ccErpAlt: "SAS-Clinical-Research-Training-Pro-elearning", ccErpTitle:"SAS Clinical Research", ccErpDesc:"SAS Clinical Research validates a candidates' ability to apply SAS programming skills to clinical trials data.", ccErpDuration: "45", ccErpPrice:getPrice("sas-clinical")},
+                {ccErpURL:"erp/sas-bi", ccErpImage:"sas-bi.jpg", ccErpAlt: "SAS-BI-Training-Pro-elearning", ccErpTitle:"SAS BI", ccErpDesc:"SAS Business Intelligence software provides the most comprehensive, integrated and easy-to-use reporting and analytics features. In your office or on the go.", ccErpDuration: "45", ccErpPrice:getPrice("sas-bi")},
             ];
         
             $scope.ccEtl = [
@@ -481,6 +489,9 @@ angular.module('ProELearning.controllers', [])
                 {ccBussMgmtURL:"business-management/ba-finance", ccBussMgmtImage:"ba-finance.jpg", ccBussMgmtAlt: "BA-Finance-Training-Pro-elearning", ccBussMgmtTitle:"BA Finance", ccBussMgmtDesc:"BA - Finance programme has a strong focus on employability and will equip you with the knowledge and skills needed to excel in business and finance.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("ba-finance")},
                 {ccBussMgmtURL:"business-management/quickbooks", ccBussMgmtImage:"quickbooks.jpg", ccBussMgmtAlt: "QuickBooks-Training-Pro-elearning", ccBussMgmtTitle:"QuickBooks", ccBussMgmtDesc:"QuickBooks is an accounting software package developed and marketed by Intuit.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("quickbooks")},
                 {ccBussMgmtURL:"business-management/technical-manager", ccBussMgmtImage:"technical-manager.jpg", ccBussMgmtAlt: "Technical-Manager-Training-Pro-elearning", ccBussMgmtTitle:"Technical Manager", ccBussMgmtDesc:"The technical manager is a versatile position that requires sufficient managerial skills as well as sufficient technical skills.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("tech-manager")},
+                {ccBussMgmtURL:"business-management/togaf", ccBussMgmtImage:"togaf.jpg", ccBussMgmtAlt: "TOGAF-Training-Pro-elearning", ccBussMgmtTitle:"TOGAF", ccBussMgmtDesc:"TOGAF training provides a clear path for professional development and credibility to employers. The TOGAF Standard, which is an open Enterprise Architecture standard, is used by world's leading organizations to improve business efficiency.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("togaf")},
+                {ccBussMgmtURL:"business-management/pmp", ccBussMgmtImage:"pmp.jpg", ccBussMgmtAlt: "PMP-Training-Pro-elearning", ccBussMgmtTitle:"PMP", ccBussMgmtDesc:"Project Management Professional (PMP) course is used to validate a professional's educationa and experience in project management.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("pmp")},
+                {ccBussMgmtURL:"business-management/six-sigma", ccBussMgmtImage:"six-sigma.jpg", ccBussMgmtAlt: "Six-Sigma-Training-Pro-elearning", ccBussMgmtTitle:"Six Sigma", ccBussMgmtDesc:"Six Sigma is a disciplined, statistical-based, data-driven approach and continuous improvement methodology for eliminating defects in a product, process or service.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("six-sigma")},
             ];
         
             $scope.ccAnalyticalTools = [
@@ -526,10 +537,10 @@ angular.module('ProELearning.controllers', [])
         }, function(error) {
             $scope.coursePricesList = "Error occurred while fetching the Fees Data!";
         });
-    // }, function(error) {
-    //     // console.log("in controller error");
-    //     $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
-    // });
+    }, function(error) {
+        // console.log("in controller error");
+        $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
+    });
 
     function getPrice(courseName) {
         var returnVal = 0;

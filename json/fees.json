@@ -47,8 +47,8 @@
 
     {"course":"ccna", "IN":"18000", "others":"580"},
     {"course":"cns", "IN":"20000", "others":"580"},
-    {"course":"comptia-network++", "IN":"", "others":"580"},
-    {"course":"comptia security++", "IN":"", "others":"580"},
+    {"course":"comptia-network-plus", "IN":"", "others":"580"},
+    {"course":"comptia-security-plus", "IN":"", "others":"580"},
     {"course":"cisa", "IN":"", "others":"580"},
     {"course":"ccsp", "IN":"", "others":"580"},
     {"course":"cissp", "IN":"", "others":"580"},
