@@ -73,11 +73,11 @@
 				</div>
 
 				<div class="row">
-					<!-- Graph Chart -->
-					<div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+					<!-- Website Visits Chart -->
+					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 						<div class="panel panel-headline">
 							<div class="panel-heading">
-								<div class="panel-title">Website Visits</div>
+								<h3 class="panel-title">Website Visits</h3>
 							</div>
 							<div class="panel-body">
 								<div class="row">
@@ -89,7 +89,7 @@
 						</div>
 					</div>
 
-					<!-- Weather -->
+					<!-- Weather Chart -->
 					<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 						<div class="panel panel-headline weather-card">
 							<div class="panel-heading">

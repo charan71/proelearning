@@ -154,7 +154,10 @@
                             <span class="validation_styles" ng-show="studRegForm.message.$error.minlength && studRegForm.message.$touched">* Message should be minimum of 10 characters</span>
                             <span class="validation_styles" ng-show="studRegForm.message.$error.maxlength && studRegForm.message.$touched">* Message should be maximum of 250 characters</span>
                         </div>
-                        <button type="submit" class="btn-custom btn-custom-md transition pull-left" id="submit" name="insertStudent" ng-disabled="studRegForm.$invalid" ng-click="fn_insertStudent()">Register</button>
+                        <button type="submit" class="btn-custom btn-custom-md transition pull-left" id="submit" name="insertStudent" ng-disabled="studRegForm.$invalid || enable=='false'" ng-click="fn_insertStudent()">
+                            <span ng-show="submitBtnTxt == 'Submitting...'"><i class="fa fa-spinner fa-pulse" aria-hidden="true"></i></span>
+                            {{ submitBtnTxt }}
+                        </button>
                         <button type="reset" class="btn-custom-inverse btn-custom-md transition pull-right" ng-click="fn_reset()">Cancel</button>
                     </form>
                 </div>
@@ -304,7 +307,10 @@
                             <span class="validation_styles" ng-show="trainerRegForm.message.$error.minlength && trainerRegForm.message.$touched">* Message should be minimum of 10 characters</span>
                             <span class="validation_styles" ng-show="trainerRegForm.message.$error.maxlength && trainerRegForm.message.$touched">* Message should be maximum of 250 characters</span>
                         </div>
-                        <button type="submit" class="btn-custom btn-custom-md transition pull-left" id="submit" name="insertTrainer" ng-disabled="trainerRegForm.$invalid" ng-click="fn_insertTrainer()">Register</button>
+                        <button type="submit" class="btn-custom btn-custom-md transition pull-left" id="submit" name="insertTrainer" ng-disabled="trainerRegForm.$invalid || enable=='false'" ng-click="fn_insertTrainer()">
+                            <span ng-show="submitBtnTxt == 'Submitting...'"><i class="fa fa-spinner fa-pulse" aria-hidden="true"></i></span>
+                            {{ submitBtnTxt }}
+                        </button>
                         <button type="reset" class="btn-custom-inverse btn-custom-md transition pull-right" ng-click="fn_reset()">Cancel</button>
                     </form>
                 </div>

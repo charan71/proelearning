@@ -1,0 +1,239 @@
+<header>
+    <nav class="navbar navbar-custom navbar-fixed-top" id="navbar-main" role="navigation" ng-controller="navController">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" ng-click="isCollapsed = !isCollapsed">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar icon-bar-top"></span>
+                    <span class="icon-bar icon-bar-middle"></span>
+                    <span class="icon-bar icon-bar-bottom"></span>
+                </button>
+                <a class="navbar-brand" ng-href="/">
+                    <img class="img-responsive" alt="Pro-elearning Home" ng-src="images/logos/logo-h-70.png">
+                    <div class="nav-skew hidden-xs"></div>
+                </a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse" ng-class="isCollapsed ? 'collapse' : 'in'" data-hover="dropdown" data-animations="zoomIn zoomIn zoomIn zoomIn">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle transition" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <i class="fa fa-angle-down fa-fw chevron1" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/big-data')" ng-href="big-data">Big Data <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/big-data/kafka')" ng-href="big-data/kafka">Kafka</a></li>
+                                    <li><a class="transition" ng-class="getClass('/big-data/scala')" ng-href="big-data/scala">Scala</a></li>
+                                    <li><a class="transition" ng-class="getClass('/big-data/spark')" ng-href="big-data/spark">Spark</a></li>
+                                    <li><a class="transition" ng-class="getClass('/big-data/hadoop')" ng-href="big-data/hadoop">Hadoop</a></li>
+                                    <li><a class="transition" ng-class="getClass('/big-data/hadoop-administrator')" ng-href="big-data/hadoop-administrator">Hadoop Administrator</a></li>
+                                    <li><a class="transition" ng-class="getClass('/big-data/hp-vertica')" ng-href="big-data/hp-vertica">HP Vertica</a></li>
+                                    <li><a class="transition" ng-class="getClass('/big-data/talend')" ng-href="big-data/talend">Talend</a></li>
+                                    <li><a class="transition" ng-class="getClass('/big-data/cloudera')" ng-href="big-data/cloudera">Cloudera</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/cloud-technologies')" ng-href="cloud-technologies">Cloud Technologies <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/cloud-technologies/aws')" ng-href="cloud-technologies/aws">AWS</a></li>
+                                    <li><a class="transition" ng-class="getClass('/cloud-technologies/aws-sysops')" ng-href="cloud-technologies/aws-sysops">AWS SysOps</a></li>
+                                    <li><a class="transition" ng-class="getClass('/cloud-technologies/salesforce-developer')" ng-href="cloud-technologies/salesforce-developer">Salesforce Developer</a></li>
+                                    <li><a class="transition" ng-class="getClass('/cloud-technologies/salesforce-administrator')" ng-href="cloud-technologies/salesforce-administrator">Salesforce Administrator</a></li>
+                                    <li><a class="transition" ng-class="getClass('/cloud-technologies/azure')" ng-href="cloud-technologies/azure">Azure</a></li>
+                                    <li><a class="transition" ng-class="getClass('/cloud-technologies/servicenow')" ng-href="cloud-technologies/servicenow ">ServiceNow</a></li>
+                                    <li><a class="transition" ng-class="getClass('/cloud-technologies/openstack')" ng-href="cloud-technologies/openstack">OpenStack</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/information-technology')" href="information-technology">Information Technology <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/information-technology/python')" ng-href="information-technology/python">Python</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/java')" ng-href="information-technology/java">Java</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/dotnet')" ng-href="information-technology/dotnet">.Net</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/embedded-systems')" ng-href="information-technology/embedded-systems">Embedded Systems</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/unix')" ng-href="information-technology/unix">UNIX</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/linux')" ng-href="information-technology/linux">Linux</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/build-and-deployment-engineer')" ng-href="information-technology/build-and-deployment-engineer">Build &#x0026; Deployment Engineer</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/build-release-engineer')" ng-href="information-technology/build-release-engineer">Build &#x0026; Release Engineer</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/ruby')" ng-href="information-technology/ruby">Ruby</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/sharepoint')" ng-href="information-technology/sharepoint">SharePoint</a></li>
+                                    <li><a class="transition" ng-class="getClass('/information-technology/itil-v3-foundation')" ng-href="information-technology/itil-v3-foundation">ITIL V3 Foundation</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/web-development')" href="web-development">Web Development <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/web-development/ui-development')" ng-href="web-development/ui-development">UI Development</a></li>
+                                    <li><a class="transition" ng-class="getClass('/web-development/angular4')" ng-href="web-development/angular4">Angular 4</a></li>
+                                    <li><a class="transition" ng-class="getClass('/web-development/php')" ng-href="web-development/php">PHP</a></li>
+                                    <li><a class="transition" ng-class="getClass('/web-development/mysql')" ng-href="web-development/mysql">MySQL</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/rpa')" ng-href="rpa">RPA <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/rpa/blueprism')" ng-href="rpa/blueprism">Blue Prism</a></li>
+                                    <li><a class="transition" ng-class="getClass('/rpa/artificial-intelligence')" ng-href="rpa/artificial-intelligence">Artificial Intelligence</a></li>
+                                    <li><a class="transition" ng-class="getClass('/rpa/automation-anywhere')" ng-href="rpa/automation-anywhere">Automation Anywhere</a></li>
+                                    <li><a class="transition" ng-class="getClass('/rpa/iot')" ng-href="rpa/iot">IoT</a></li>
+                                    <li><a class="transition" ng-class="getClass('/rpa/machine-learning')" ng-href="rpa/machine-learning">Machine Learning</a></li>
+                                    <li><a class="transition" ng-class="getClass('/rpa/data-science')" ng-href="rpa/data-science">data science</a></li>
+                                    <li><a class="transition" ng-class="getClass('/rpa/uipath')" ng-href="rpa/uipath">UiPath</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/mobile-apps')" ng-href="mobile-apps">Mobile Applications <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/mobile-apps/android')" ng-href="mobile-apps/android">Android</a></li>
+                                    <li><a class="transition" ng-class="getClass('/mobile-apps/ios')" ng-href="mobile-apps/ios">iOS</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/network-security')" ng-href="network-security">Network &#x0026; Security <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/network-security/ccna')" ng-href="network-security/ccna">CCNA</a></li>
+                                    <li><a class="transition" ng-class="getClass('/network-security/cyber-network-security')" ng-href="network-security/cyber-network-security">Cyber Network Security</a></li>
+                                    <li><a class="transition" ng-class="getClass('/network-security/comptia-network-plus')" ng-href="network-security/comptia-network-plus">Comptia Network+</a></li>
+                                    <li><a class="transition" ng-class="getClass('/network-security/comptia-security-plus')" ng-href="network-security/comptia-security-plus">Comptia Security+</a></li>
+                                    <li><a class="transition" ng-class="getClass('/network-security/cisa')" ng-href="network-security/cisa">CISA</a></li>
+                                    <li><a class="transition" ng-class="getClass('/network-security/ccsp')" ng-href="network-security/ccsp">CCSP</a></li>
+                                    <li><a class="transition" ng-class="getClass('/network-security/cissp')" ng-href="network-security/cissp">CISSP</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/application-support')" ng-href="application-support">Application Support <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/application-support/devops')" ng-href="application-support/devops">DevOps</a></li>
+                                    <li><a class="transition" ng-class="getClass('/application-support/docker')" ng-href="application-support/docker">Docker</a></li>
+                                    <li><a class="transition" ng-class="getClass('/application-support/kubernetes')" ng-href="application-support/kubernetes">Kubernetes</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/business-intelligence')" ng-href="business-intelligence">Business Intelligence <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/business-intelligence/msbi')" ng-href="business-intelligence/msbi">MSBI</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-intelligence/obiee')" ng-href="business-intelligence/obiee">OBIEE</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-intelligence/power-bi')" ng-href="business-intelligence/power-bi">Power BI</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/erp')" ng-href="erp">ERP <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/erp/people-soft-hrms')" ng-href="erp/people-soft-hrms">People Soft HRMS</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/salesforce-crm')" ng-href="erp/salesforce-crm">Salesforce CRM</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/oracle-apps')" ng-href="erp/oracle-apps">Oracle Apps</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sap-bi')" ng-href="erp/sap-bi">SAP BI</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sap-bo')" ng-href="erp/sap-bo">SAP BO</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sap-crm')" ng-href="erp/sap-crm">SAP CRM</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sap-fico')" ng-href="erp/sap-fico">SAP FICO</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sap-hana')" ng-href="erp/sap-hana">SAP HANA</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sap-mm')" ng-href="erp/sap-mm">SAP MM</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sas')" ng-href="erp/sas">SAS</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sas-clinical-research')" ng-href="erp/sas-clinical-research">SAS Clinical Research</a></li>
+                                    <li><a class="transition" ng-class="getClass('/erp/sas-bi')" ng-href="erp/sas-bi">SAS BI</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/etl')" ng-href="etl">ETL Tools <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/etl/datastage')" ng-href="etl/datastage">DataStage</a></li>
+                                    <li><a class="transition" ng-class="getClass('/etl/informatica')" ng-href="etl/informatica">Informatica</a></li>
+                                    <li><a class="transition" ng-class="getClass('/etl/informatica-mdm')" ng-href="etl/informatica-mdm">Informatica MDM</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/business-management')" ng-href="business-management">Business Management <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/business-management/jbpm')" ng-href="business-management/jbpm">JBPM</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/pega-6.2')" ng-href="business-management/pega-6.2">Pega 6.2</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/pega-7')" ng-href="business-management/pega-7">Pega 7</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/business-analyst')" ng-href="business-management/business-analyst">Business Analyst</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/ba-bfsi')" ng-href="business-management/ba-bfsi">BA - BFSI</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/ba-health-care')" ng-href="business-management/ba-health-care">BA - Health Care</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/ba-finance')" ng-href="business-management/ba-finance">BA - Finance</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/quickbooks')" ng-href="business-management/quickbooks">QuickBooks</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/technical-manager')" ng-href="business-management/technical-manager">Technical Manager</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/togaf')" ng-href="business-management/togaf">ToGAF</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/pmp')" ng-href="business-management/pmp">PMP</a></li>
+                                    <li><a class="transition" ng-class="getClass('/business-management/six-sigma')" ng-href="business-management/six-sigma">Six Sigma</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/analytical-tools')" ng-href="analytical-tools">Analytical Tools <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/analytical-tools/tableau')" ng-href="analytical-tools/tableau">Tableau</a></li>
+                                    <li><a class="transition" ng-class="getClass('/analytical-tools/remedy-ticketing-tool')" ng-href="analytical-tools/remedy-ticketing-tool">Remedy Ticketing Tool</a></li>
+                                    <li><a class="transition" ng-class="getClass('/analytical-tools/qlikview')" ng-href="analytical-tools/qlikview">QlikView</a></li>
+                                    <li><a class="transition" ng-class="getClass('/analytical-tools/tibco-spotfire')" ng-href="analytical-tools/tibco-spotfire">Tibco Spotfire</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/software-testing')" ng-href="software-testing">Software Testing <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/software-testing/perfecto')" ng-href="software-testing/perfecto">Perfecto</a></li>
+                                    <li><a class="transition" ng-class="getClass('/software-testing/loadrunner')" ng-href="software-testing/loadrunner">LoadRunner</a></li>
+                                    <li><a class="transition" ng-class="getClass('/software-testing/selenium')" ng-href="software-testing/selenium">Selenium</a></li>
+                                    <li><a class="transition" ng-class="getClass('/software-testing/etl-testing')" ng-href="software-testing/etl-testing">ETL Testing</a></li>
+                                    <li><a class="transition" ng-class="getClass('/software-testing/web-app-penetration-testing')" ng-href="software-testing/web-app-penetration-testing">Web Applicaiton Penetration Testing</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/hyperion')" ng-href="hyperion">Hyperion <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/hyperion/hpcm')" ng-href="hyperion/hpcm">HPCM</a></li>
+                                    <li><a class="transition" ng-class="getClass('/hyperion/hyperion-epm')" ng-href="hyperion/hyperion-epm">Hyperion EPM</a></li>
+                                    <li><a class="transition" ng-class="getClass('/hyperion/hyperion-essbase')" ng-href="hyperion/hyperion-essbase">Hyperion Essbase</a></li>
+                                    <li><a class="transition" ng-class="getClass('/hyperion/hyperion-financial-management')" ng-href="hyperion/hyperion-financial-management">HFM</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/ibm')" ng-href="ibm">IBM <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/ibm/webfocus')" ng-href="ibm/webfocus">WebFocus</a></li>
+                                    <li><a class="transition" ng-class="getClass('/ibm/websphere-admin')" ng-href="ibm/websphere-admin">WebSphere Admin</a></li>
+                                    <li><a class="transition" ng-class="getClass('/ibm/websphere-message-broker')" ng-href="ibm/websphere-message-broker">WebSphere Message Broker</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="transition" ng-class="getClass('/oracle')" ng-href="oracle">Oracle <i class="fa fa-angle-right"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="transition" ng-class="getClass('/oracle/oracle-adf')" ng-href="oracle/oracle-adf">Oracle ADF</a></li>
+                                    <li><a class="transition" ng-class="getClass('/oracle/oracle-dba')" ng-href="oracle/oracle-dba">Oracle DBA</a></li>
+                                    <li><a class="transition" ng-class="getClass('/oracle/oracle-developer')" ng-href="oracle/oracle-developer">Oracle Developer</a></li>
+                                    <li><a class="transition" ng-class="getClass('/oracle/oracle-ebs')" ng-href="oracle/oracle-ebs">Oracle EBS</a></li>
+                                    <li><a class="transition" ng-class="getClass('/oracle/oracle-golden-gate')" ng-href="oracle/oracle-golden-gate">Oracle Golden Gate</a></li>
+                                    <li><a class="transition" ng-class="getClass('/oracle/oracle-soa')" ng-href="oracle/oracle-soa">Oracle SOA</a></li>
+                                    <li><a class="transition" ng-class="getClass('/oracle/weblogic')" ng-href="oracle/weblogic">WebLogic</a></li>
+                                    <li><a class="transition" ng-class="getClass('/oracle/siebel-open-ui')" ng-href="oracle/siebel-open-ui">Siebel Open UI</a></li>
+                                    <li><a class="transition" ng-class="getClass('/oracle/odi-12c')" ng-href="oracle/odi-12c">ODI 12C</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a class="transition" ng-class="getClass('/course-schedules')" ng-href="course-schedules">Course Schedules</a></li>
+                    <li><a class="transition" ng-class="getClass('/registration')" ng-href="registration">Register</a></li>
+                    <li><a class="transition" ng-class="getClass('/contact')" ng-href="contact">Contact</a></li>
+                    <li><a role="button" class="btn-free-demo animated flash infinite" data-toggle="modal" data-target="#freeDemo">Free Demo</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
+                    <li><a ng-href="tel:+91-7901401499"><i class="fa fa-phone" aria-hidden="true"></i> +91-7901401499</a></li>
+                </ul>
+                
+                <!-- <div ng-controller="searchCoursesController">
+                    <form class="navbar-form navbar-right transition" role="search">
+                        <div class="form-group">
+                            <input type="text" ng-model="keyword" class="form-control transition" placeholder="Search Categories...">
+                        </div>
+                        <button type="submit" class="btn btn-search" ng-click="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                    <p ng-repeat="result in results track by $index">{{result.full_name}}</p>
+                    <p>{{errMsg}}</p>
+                </div> -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>

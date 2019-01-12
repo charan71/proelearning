@@ -258,12 +258,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://pro-elearning.com/network-security/comptia-network</loc>
+  <loc>http://pro-elearning.com/network-security/comptia-network-plus</loc>
   <lastmod>2018-12-20T18:10:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://pro-elearning.com/network-security/comptia-security</loc>
+  <loc>http://pro-elearning.com/network-security/comptia-security-plus</loc>
   <lastmod>2018-12-20T18:10:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -290,6 +290,16 @@
 <url>
   <loc>http://pro-elearning.com/application-support/devops</loc>
   <lastmod>2018-09-18T10:40:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/application-support/docker</loc>
+  <lastmod>2019-01-08T06:56:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://pro-elearning.com/application-support/kubernetes</loc>
+  <lastmod>2019-01-08T07:23:56+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>

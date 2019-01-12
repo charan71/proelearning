@@ -3,6 +3,30 @@
 
 angular.module('ProELearning.controllers', [])
 
+// Navbar Controller
+.controller("navController", ['$scope', '$location', function($scope, $location) {
+    $scope.isCollapsed = true;
+    $scope.$on("$routeChangeSuccess", function() {
+        $scope.isCollapsed = true;
+    });
+
+    $scope.getClass = function(path) {
+        if(path === '/') {
+            if($location.path() === '/') {
+                return "active";
+            } else {
+                return "";
+            }
+        }
+     
+        if ($location.path().substr(0, path.length) === path) {
+            return "active";
+        } else {
+            return "";
+        }
+    };
+}])
+
 /* Breadcrumbs Controller */
 .controller('mainCtrl', ['$scope', 'breadcrumbs', function($scope, breadcrumbs) {
     $scope.breadcrumbs = breadcrumbs;
@@ -83,6 +107,7 @@ angular.module('ProELearning.controllers', [])
     $controller('QualificationListController', {$scope:$scope})
     $controller('professionListController', {$scope:$scope})
 
+    $scope.submitBtnTxt = "Register";
     var orig_name = $scope.sname;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;
@@ -96,6 +121,13 @@ angular.module('ProELearning.controllers', [])
     $scope.dt = Date();
     
     $scope.fn_insertStudent = function() {
+        $scope.enable = "false";
+        $scope.submitBtnTxt = "Submitting...";
+        $timeout(function() {
+            $scope.enable = "true";
+            $scope.submitBtnTxt = "Register";
+        }, 10000);
+
         $http.post(
             "./php/student_reg.php",
             {'full_name': $scope.sname, 'email': $scope.email, 'phone': $scope.phone, 'gender': $scope.gender, 'country': $scope.country, 'state': $scope.state, 'qualification': $scope.qualification, 'profession': $scope.profession, 'course': $scope.course, 'message': $scope.message, 'date_time': $scope.dt}
@@ -141,6 +173,7 @@ angular.module('ProELearning.controllers', [])
 /* Trainer Registration Controller */
 .controller("trainerController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
     
+    $scope.submitBtnTxt = "Register";
     var orig_name = $scope.tname;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;
@@ -177,6 +210,13 @@ angular.module('ProELearning.controllers', [])
     };
     
     $scope.fn_insertTrainer = function() {
+        $scope.enable = "false";
+        $scope.submitBtnTxt = "Submitting...";
+        $timeout(function() {
+            $scope.enable = "true";
+            $scope.submitBtnTxt = "Register";
+        }, 10000);
+
         var formData = new FormData();
         var file = $scope.files[0];
         formData.append('full_name',$scope.tname);
@@ -250,16 +290,24 @@ angular.module('ProELearning.controllers', [])
 /* Contact Form Controller */
 .controller("contactController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 
-	var orig_name = $scope.name;
+    $scope.submitBtnTxt = "Submit";
+    var orig_name = $scope.name;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;
     var orig_category = $scope.category;
     var orig_message = $scope.message;
     $scope.dt = Date();
     $scope.fn_insertContact = function() {
+        $scope.enable = "false";
+        $scope.submitBtnTxt = "Submitting...";
+        $timeout(function() {
+            $scope.enable = "true";
+            $scope.submitBtnTxt = "Submit";
+        }, 10000);
+
         $http.post(
             "./php/contact-form.php",
-                {'full_name': $scope.name, 'email': $scope.email, 'phone': $scope.phone, 'category': $scope.category, 'message': $scope.message, 'date_time': $scope.dt}
+            {'full_name': $scope.name, 'email': $scope.email, 'phone': $scope.phone, 'category': $scope.category, 'message': $scope.message, 'date_time': $scope.dt}
             ).then(function(data) {
                 $scope.name = angular.copy(orig_name);
                 $scope.email = angular.copy(orig_email);
@@ -351,14 +399,14 @@ angular.module('ProELearning.controllers', [])
 .controller("CourseCardsController", ['$scope', '$http', '$rootScope', '$window', '$timeout', function($scope, $http, $rootScope, $window, $timeout) {
     $scope.coursePricesList = [];
 
-    $http.get("http://ipinfo.io/json")
-    .then(function(response) {
-        console.log("in controller success response");
-      
-        $rootScope.shortCountryCode = response.data.country;
-        console.log($rootScope.shortCountryCode);
-        
-        $window.sessionStorage.setItem('shortCountryCode', response.data.country);
+    // $http.get("http://ipinfo.io/json")
+    // .then(function(response) {
+    //     console.log("in controller success response");
+
+    //     $rootScope.shortCountryCode = response.data.country;
+    //     console.log($rootScope.shortCountryCode);
+    //     $window.sessionStorage.setItem('shortCountryCode', response.data.country);
+
         $http.get("./json/fees.json")
         .then(function(response) {
             $scope.coursePricesList = response.data;
@@ -397,7 +445,7 @@ angular.module('ProELearning.controllers', [])
                 {ccCloudTechURL:"cloud-technologies/salesforce-administrator", ccCloudTechImage:"salesforce-administrator.jpg", ccCloudTechAlt:"Salesforce-Administrator-Training-Pro-elearning", ccCloudTechTitle:"Salesforce Administrator", ccCloudTechDesc:"A Salesforce Administrator is a business leader, deeply knowledgeable about how their company operates, intertwined in making all departments successful through process automations, and thus, integral to running a smooth & lean business.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("salesforce-administrator")},
                 {ccCloudTechURL:"cloud-technologies/azure", ccCloudTechImage:"azure.jpg", ccCloudTechAlt:"Azure-Training-Pro-elearning", ccCloudTechTitle:"Azure", ccCloudTechDesc:"Microsoft Azure is an open, flexible, enterprise-grade cloud computing platform.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("azure")},
                 {ccCloudTechURL:"cloud-technologies/aws", ccCloudTechImage:"aws.jpg", ccCloudTechAlt:"AWS-Training-Pro-elearning", ccCloudTechTitle:"AWS", ccCloudTechDesc:"Amazon Web Services provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("aws")},
-                {ccCloudTechURL:"cloud-technologies/aws-sysops", ccCloudTechImage:"aws-sysops.jpg", ccCloudTechAlt:"AWS-SysOps-Training-Pro-elearning", ccCloudTechTitle:"AWS SysOps", ccCloudTechDesc:"AWS SysOps training program is designed to provide you hands-on exposure to the highly scalable Amazon Web Services (AWS) cloud platform, giving you technical expertise in deploying, managing and operating fault-tolerant system on AWS.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("aws-sysops")},
+                {ccCloudTechURL:"cloud-technologies/aws-sysops", ccCloudTechImage:"aws-sysops.png", ccCloudTechAlt:"AWS-SysOps-Training-Pro-elearning", ccCloudTechTitle:"AWS SysOps", ccCloudTechDesc:"AWS SysOps training program is designed to provide you hands-on exposure to the highly scalable Amazon Web Services (AWS) cloud platform, giving you technical expertise in deploying, managing and operating fault-tolerant system on AWS.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("aws-sysops")},
                 {ccCloudTechURL:"cloud-technologies/servicenow", ccCloudTechImage:"servicenow.jpg", ccCloudTechAlt:"ServiceNow-Training-Pro-elearning", ccCloudTechTitle:"ServiceNow", ccCloudTechDesc:"ServiceNow's cloud platform streamlines how work gets done.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("servicenow")},
                 {ccCloudTechURL:"cloud-technologies/openstack", ccCloudTechImage:"openstack.jpg", ccCloudTechAlt:"OpenStack-Training-Pro-elearning", ccCloudTechTitle:"OpenStack", ccCloudTechDesc:"OpenStack is a free and open-source software platform for cloud computing, mostly deployed as infrastructure-as-a-service, whereby virtual servers and other resources are made available to customers.", ccCloudTechDuration: "45", ccCloudTechPrice:getPrice("openstack")},
             ];
@@ -441,15 +489,17 @@ angular.module('ProELearning.controllers', [])
             $scope.ccNetworkSecurity = [
                 {ccNetworkSecurityURL:"network-security/ccna", ccNetworkSecurityImage:"ccna.jpg", ccNetworkSecurityAlt: "CCNA-Training-Pro-elearning", ccNetworkSecurityTitle:"CCNA", ccNetworkSecurityDesc:"CCNA is the  knowledge and skills required to install, operate, and troubleshoot a small to medium size enterprise branch network.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("ccna")},
                 {ccNetworkSecurityURL:"network-security/cyber-network-security", ccNetworkSecurityImage:"cns.jpg", ccNetworkSecurityAlt: "CNS-Training-Pro-elearning", ccNetworkSecurityTitle:"CNS", ccNetworkSecurityDesc:"The Computer & Network Security program provides a firm foundation in cybersecurity while also providing the flexibility for students.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("cns")},
-                {ccNetworkSecurityURL:"network-security/comptia-network-plus", ccNetworkSecurityImage:"comptia-network+.jpg", ccNetworkSecurityAlt: "CompTIA-Network+-Training-Pro-elearning", ccNetworkSecurityTitle:"CompTIA Network+", ccNetworkSecurityDesc:"CompTIA Network+ course is one of the best and the most popular network courses in the world.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("comptia-network-plus")},
-                {ccNetworkSecurityURL:"network-security/comptia-security-plus", ccNetworkSecurityImage:"comptia-security+.jpg", ccNetworkSecurityAlt: "CompTIA-Security+-Training-Pro-elearning", ccNetworkSecurityTitle:"CompTIA Security+", ccNetworkSecurityDesc:"CompTIA Security+ course is one of the best and the most popular security courses in the world.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("comptia-security-plus")},
-                {ccNetworkSecurityURL:"network-security/cisa", ccNetworkSecurityImage:"CISA.jpg", ccNetworkSecurityAlt: "CISA-Training-Pro-elearning", ccNetworkSecurityTitle:"CISA", ccNetworkSecurityDesc:"CISA course is best suitable for them who are interested in Information Systems auditing, control and security.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("cisa")},
-                {ccNetworkSecurityURL:"network-security/ccsp", ccNetworkSecurityImage:"ccsp.jpg", ccNetworkSecurityAlt: "CCSP-Training-Pro-elearning", ccNetworkSecurityTitle:"CCSP", ccNetworkSecurityDesc:"CCSP course helps you advance your technical skills and knowledge in designing, managing and securing the data over cloud and make you an expert.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("ccsp")},
-                {ccNetworkSecurityURL:"network-security/cissp", ccNetworkSecurityImage:"cissp.jpg", ccNetworkSecurityAlt: "CISSP-Training-Pro-elearning", ccNetworkSecurityTitle:"CISSP", ccNetworkSecurityDesc:"CISSP course helps you advance your technical skills and knowledge in designing, managing and securing the data over cloud and make you an expert.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("cissp")},
+                {ccNetworkSecurityURL:"network-security/comptia-network-plus", ccNetworkSecurityImage:"comptia-network+.png", ccNetworkSecurityAlt: "CompTIA-Network+-Training-Pro-elearning", ccNetworkSecurityTitle:"CompTIA Network+", ccNetworkSecurityDesc:"CompTIA Network+ course is one of the best and the most popular network courses in the world.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("comptia-network-plus")},
+                {ccNetworkSecurityURL:"network-security/comptia-security-plus", ccNetworkSecurityImage:"comptia-security+.png", ccNetworkSecurityAlt: "CompTIA-Security+-Training-Pro-elearning", ccNetworkSecurityTitle:"CompTIA Security+", ccNetworkSecurityDesc:"CompTIA Security+ course is one of the best and the most popular security courses in the world.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("comptia-security-plus")},
+                {ccNetworkSecurityURL:"network-security/cisa", ccNetworkSecurityImage:"cisa.png", ccNetworkSecurityAlt: "CISA-Training-Pro-elearning", ccNetworkSecurityTitle:"CISA", ccNetworkSecurityDesc:"CISA course is best suitable for them who are interested in Information Systems auditing, control and security.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("cisa")},
+                {ccNetworkSecurityURL:"network-security/ccsp", ccNetworkSecurityImage:"ccsp.png", ccNetworkSecurityAlt: "CCSP-Training-Pro-elearning", ccNetworkSecurityTitle:"CCSP", ccNetworkSecurityDesc:"CCSP course helps you advance your technical skills and knowledge in designing, managing and securing the data over cloud and make you an expert.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("ccsp")},
+                {ccNetworkSecurityURL:"network-security/cissp", ccNetworkSecurityImage:"cissp.png", ccNetworkSecurityAlt: "CISSP-Training-Pro-elearning", ccNetworkSecurityTitle:"CISSP", ccNetworkSecurityDesc:"CISSP course helps you advance your technical skills and knowledge in designing, managing and securing the data over cloud and make you an expert.", ccNetworkSecurityDuration: "45", ccNetworkSecurityPrice: getPrice("cissp")},
             ];
 
             $scope.ccAppSupport = [
                 {ccAppSupportURL:"application-support/devops", ccAppSupportImage:"devops.jpg", ccAppSupportAlt: "DevOps-Training-Pro-elearning", ccAppSupportTitle:"DevOps", ccAppSupportDesc:"DevOps is a Application Support technology.", ccAppSupportDuration: "45", ccAppSupportPrice: getPrice("devops")},
+                {ccAppSupportURL:"application-support/docker", ccAppSupportImage:"docker.png", ccAppSupportAlt: "Docker-Training-Pro-elearning", ccAppSupportTitle:"Docker", ccAppSupportDesc:"Docker.", ccAppSupportDuration: "45", ccAppSupportPrice: getPrice("docker")},
+                {ccAppSupportURL:"application-support/kubernetes", ccAppSupportImage:"kubernetes.png", ccAppSupportAlt: "Kubernetes-Training-Pro-elearning", ccAppSupportTitle:"Kubernetes", ccAppSupportDesc:"Kubernetes.", ccAppSupportDuration: "45", ccAppSupportPrice: getPrice("kubernetes")},
             ];
         
             $scope.ccBI = [
@@ -489,9 +539,9 @@ angular.module('ProELearning.controllers', [])
                 {ccBussMgmtURL:"business-management/ba-finance", ccBussMgmtImage:"ba-finance.jpg", ccBussMgmtAlt: "BA-Finance-Training-Pro-elearning", ccBussMgmtTitle:"BA Finance", ccBussMgmtDesc:"BA - Finance programme has a strong focus on employability and will equip you with the knowledge and skills needed to excel in business and finance.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("ba-finance")},
                 {ccBussMgmtURL:"business-management/quickbooks", ccBussMgmtImage:"quickbooks.jpg", ccBussMgmtAlt: "QuickBooks-Training-Pro-elearning", ccBussMgmtTitle:"QuickBooks", ccBussMgmtDesc:"QuickBooks is an accounting software package developed and marketed by Intuit.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("quickbooks")},
                 {ccBussMgmtURL:"business-management/technical-manager", ccBussMgmtImage:"technical-manager.jpg", ccBussMgmtAlt: "Technical-Manager-Training-Pro-elearning", ccBussMgmtTitle:"Technical Manager", ccBussMgmtDesc:"The technical manager is a versatile position that requires sufficient managerial skills as well as sufficient technical skills.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("tech-manager")},
-                {ccBussMgmtURL:"business-management/togaf", ccBussMgmtImage:"togaf.jpg", ccBussMgmtAlt: "TOGAF-Training-Pro-elearning", ccBussMgmtTitle:"TOGAF", ccBussMgmtDesc:"TOGAF training provides a clear path for professional development and credibility to employers. The TOGAF Standard, which is an open Enterprise Architecture standard, is used by world's leading organizations to improve business efficiency.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("togaf")},
-                {ccBussMgmtURL:"business-management/pmp", ccBussMgmtImage:"pmp.jpg", ccBussMgmtAlt: "PMP-Training-Pro-elearning", ccBussMgmtTitle:"PMP", ccBussMgmtDesc:"Project Management Professional (PMP) course is used to validate a professional's educationa and experience in project management.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("pmp")},
-                {ccBussMgmtURL:"business-management/six-sigma", ccBussMgmtImage:"six-sigma.jpg", ccBussMgmtAlt: "Six-Sigma-Training-Pro-elearning", ccBussMgmtTitle:"Six Sigma", ccBussMgmtDesc:"Six Sigma is a disciplined, statistical-based, data-driven approach and continuous improvement methodology for eliminating defects in a product, process or service.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("six-sigma")},
+                {ccBussMgmtURL:"business-management/togaf", ccBussMgmtImage:"togaf.png", ccBussMgmtAlt: "TOGAF-Training-Pro-elearning", ccBussMgmtTitle:"TOGAF", ccBussMgmtDesc:"TOGAF training provides a clear path for professional development and credibility to employers. The TOGAF Standard, which is an open Enterprise Architecture standard, is used by world's leading organizations to improve business efficiency.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("togaf")},
+                {ccBussMgmtURL:"business-management/pmp", ccBussMgmtImage:"pmp.png", ccBussMgmtAlt: "PMP-Training-Pro-elearning", ccBussMgmtTitle:"PMP", ccBussMgmtDesc:"Project Management Professional (PMP) course is used to validate a professional's educationa and experience in project management.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("pmp")},
+                {ccBussMgmtURL:"business-management/six-sigma", ccBussMgmtImage:"six-sigma.png", ccBussMgmtAlt: "Six-Sigma-Training-Pro-elearning", ccBussMgmtTitle:"Six Sigma", ccBussMgmtDesc:"Six Sigma is a disciplined, statistical-based, data-driven approach and continuous improvement methodology for eliminating defects in a product, process or service.", ccBussMgmtDuration: "45", ccBussMgmtPrice: getPrice("six-sigma")},
             ];
         
             $scope.ccAnalyticalTools = [
@@ -537,24 +587,13 @@ angular.module('ProELearning.controllers', [])
         }, function(error) {
             $scope.coursePricesList = "Error occurred while fetching the Fees Data!";
         });
-    }, function(error) {
-        // console.log("in controller error");
-        $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
-    });
+    // }, function(error) {
+    //     // console.log("in controller error");
+    //     $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
+    // });
 
     function getPrice(courseName) {
         var returnVal = 0;
-        // $scope.coursePricesList.forEach(obj => {
-        //     if(obj.course == courseName) {
-        //         if($window.sessionStorage.getItem('shortCountryCode') == "IN") {
-        //             // $scope.currencySymbol = "₹";
-        //             returnVal = obj.IN;
-        //         } else {
-        //             // $scope.currencySymbol = "$";
-        //             returnVal = obj.others;
-        //         }
-        //     }
-        // });
         for(var i=0; i<$scope.coursePricesList.length; i++) {
             var obj = $scope.coursePricesList[i];
             if(obj.course == courseName) {
@@ -835,13 +874,6 @@ angular.module('ProELearning.controllers', [])
         readonly            : true,
         allowFractional     : true,
         eventName           : "rated"
-    };
-}])
-
-// Navbar Controller
-.controller("navController", ['$scope', '$location', function($scope, $location) {
-    $scope.isActive = function(destination) {
-        return destination === $location.path();
     };
 }])
 

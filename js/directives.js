@@ -8,12 +8,12 @@ angular.module('ProELearning.directives', [])
     link: function (scope, element) {
       var defaultOptions = {
           loop: false,
-          autoplay: true,
+        //   autoplay: true,
           autoplayHoverPause: true,
           autoplayTimeout: 2000,
           nav: true,
           rewind: true,
-          margin: 10,
+          margin: 20,
           navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
           dots: false,
           navSpeed: 300,
@@ -35,12 +35,16 @@ angular.module('ProELearning.directives', [])
                   items: 4
               },
               1201: {
-                  items: 5
+                  items: 4
               },
               1441: {
                   items: 6
               }
-        }
+        },
+        owl2row: true, // enable plugin
+        owl2rowTarget: 'item', // class for items in carousel div
+        owl2rowContainer: 'owl2row-item', // class for items container
+        owl2rowDirection: 'utd' // ltr
       };
       scope.initCarousel = function(element) {
 /*

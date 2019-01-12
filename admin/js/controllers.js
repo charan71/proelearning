@@ -71,7 +71,7 @@ angular.module('controllers', ['ngRoute'])
         labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
         series: ["2017", "2018"],
         data: [
-            [29, 34, 27, 34, 38, 39, 28]
+            [6357, 4634, 5927, 3394, 7398, 6639, 7528]
         ]
     };
 

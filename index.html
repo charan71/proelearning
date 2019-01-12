@@ -33,255 +33,18 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" type="text/css" href="css/app.animations.css">
 		<link rel="stylesheet" type="text/css" media="all" href="css/awesomeRating.min.css">
-		<!-- <link rel="stylesheet" type="text/css" href="css/angular-material.min.css"> -->
         <!-- //CSS -->
 		
 		<!-- Fonts -->
 		<style rel="stylesheet">
-			@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+			@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
 		</style>
 		<!-- //Fonts -->
 		
 	</head>
 	<body ng-controller="mainCtrl">
         <!-- Navbar Starts Here -->
-		<header>
-			<nav class="navbar navbar-custom navbar-fixed-top" id="navbar-main" ng-controller="navController">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#pel-main-navbar-collapse" aria-expanded="false">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar icon-bar-top"></span>
-							<span class="icon-bar icon-bar-middle"></span>
-							<span class="icon-bar icon-bar-bottom"></span>
-						</button>
-						<a class="navbar-brand" ng-href="/">
-							<img class="img-responsive" alt="Pro-elearning Home" ng-src="images/logos/logo-h-70.png">
-							<div class="nav-skew hidden-xs"></div>
-						</a>
-					</div>
-				
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="pel-main-navbar-collapse" data-hover="dropdown" data-animations="zoomIn zoomIn zoomIn zoomIn">
-						<ul class="nav navbar-nav navbar-left">
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Courses <i class="fa fa-angle-down fa-fw chevron1" aria-hidden="true"></i></a>
-								<ul class="dropdown-menu">
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/big-data')}" ng-href="big-data">Big Data <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li class="table-row"><a ng-class="{active: isActive('/big-data/kafka')}" ng-href="big-data/kafka">Kafka</a></li>
-											<li class="table-row"><a ng-class="{active: isActive('/big-data/scala')}" ng-href="big-data/scala">Scala</a></li>
-											<li class="table-row"><a ng-class="{active: isActive('/big-data/spark')}" ng-href="big-data/spark">Spark</a></li>
-											<li class="table-row"><a ng-class="{active: isActive('/big-data/hadoop')}" ng-href="big-data/hadoop">Hadoop</a></li>
-											<li class="table-row"><a ng-class="{active: isActive('/big-data/hadoop-administrator')}" ng-href="big-data/hadoop-administrator">Hadoop Administrator</a></li>
-											<li class="table-row"><a ng-class="{active: isActive('/big-data/hp-vertica')}" ng-href="big-data/hp-vertica">HP Vertica</a></li>
-											<li class="table-row"><a ng-class="{active: isActive('/big-data/talend')}" ng-href="big-data/talend">Talend</a></li>
-											<li class="table-row"><a ng-class="{active: isActive('/big-data/cloudera')}" ng-href="big-data/cloudera">Cloudera</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/cloud-technologies')}" ng-href="cloud-technologies">Cloud Technologies <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/cloud-technologies/aws')}" ng-href="cloud-technologies/aws">AWS</a></li>
-                                            <li><a ng-class="{active: isActive('/cloud-technologies/aws-sysops')}" ng-href="cloud-technologies/aws-sysops">AWS SysOps</a></li>
-											<li><a ng-class="{active: isActive('/cloud-technologies/salesforce-developer')}" ng-href="cloud-technologies/salesforce-developer">Salesforce Developer</a></li>
-											<li><a ng-class="{active: isActive('/cloud-technologies/salesforce-administrator')}" ng-href="cloud-technologies/salesforce-administrator">Salesforce Administrator</a></li>
-											<li><a ng-class="{active: isActive('/cloud-technologies/azure')}" ng-href="cloud-technologies/azure">Azure</a></li>
-											<li><a ng-class="{active: isActive('/cloud-technologies/servicenow')}" ng-href="cloud-technologies/servicenow ">ServiceNow</a></li>
-											<li><a ng-class="{active: isActive('/cloud-technologies/openstack')}" ng-href="cloud-technologies/openstack">OpenStack</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/information-technology')}" href="information-technology">Information Technology <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/information-technology/python')}" ng-href="information-technology/python">Python</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/java')}" ng-href="information-technology/java">Java</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/dotnet')}" ng-href="information-technology/dotnet">.Net</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/embedded-systems')}" ng-href="information-technology/embedded-systems">Embedded Systems</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/unix')}" ng-href="information-technology/unix">UNIX</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/linux')}" ng-href="information-technology/linux">Linux</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/build-and-deployment-engineer')}" ng-href="information-technology/build-and-deployment-engineer">Build &#x0026; Deployment Engineer</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/build-release-engineer')}" ng-href="information-technology/build-release-engineer">Build &#x0026; Release Engineer</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/ruby')}" ng-href="information-technology/ruby">Ruby</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/sharepoint')}" ng-href="information-technology/sharepoint">SharePoint</a></li>
-											<li><a ng-class="{active: isActive('/information-technology/itil-v3-foundation')}" ng-href="information-technology/itil-v3-foundation">ITIL V3 Foundation</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/web-development')}" href="web-development">Web Development <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/web-development/ui-development')}" ng-href="web-development/ui-development">UI Development</a></li>
-											<li><a ng-class="{active: isActive('/web-development/angular4')}" ng-href="web-development/angular4">Angular 4</a></li>
-											<li><a ng-class="{active: isActive('/web-development/php')}" ng-href="web-development/php">PHP</a></li>
-											<li><a ng-class="{active: isActive('/web-development/mysql')}" ng-href="web-development/mysql">MySQL</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/rpa')}" ng-href="rpa">RPA <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/rpa/blueprism')}" ng-href="rpa/blueprism">Blue Prism</a></li>
-											<li><a ng-class="{active: isActive('/rpa/artificial-intelligence')}" ng-href="rpa/artificial-intelligence">Artificial Intelligence</a></li>
-											<li><a ng-class="{active: isActive('/rpa/automation-anywhere')}" ng-href="rpa/automation-anywhere">Automation Anywhere</a></li>
-											<li><a ng-class="{active: isActive('/rpa/iot')}" ng-href="rpa/iot">IoT</a></li>
-											<li><a ng-class="{active: isActive('/rpa/machine-learning')}" ng-href="rpa/machine-learning">Machine Learning</a></li>
-                                            <li><a ng-class="{active: isActive('/rpa/data-science')}" ng-href="rpa/data-science">data science</a></li>
-											<li><a ng-class="{active: isActive('/rpa/uipath')}" ng-href="rpa/uipath">UiPath</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/mobile-apps')}" ng-href="mobile-apps">Mobile Applications <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/mobile-apps/android')}" ng-href="mobile-apps/android">Android</a></li>
-											<li><a ng-class="{active: isActive('/mobile-apps/ios')}" ng-href="mobile-apps/ios">iOS</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/network-security')}" ng-href="network-security">Network &#x0026; Security <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/network-security/ccna')}" ng-href="network-security/ccna">CCNA</a></li>
-											<li><a ng-class="{active: isActive('/network-security/cyber-network-security')}" ng-href="network-security/cyber-network-security">Cyber Network Security</a></li>
-                                            <li><a ng-class="{active: isActive('/network-security/comptia-network-plus')}" ng-href="network-security/comptia-network-plus">Comptia Network+</a></li>
-                                            <li><a ng-class="{active: isActive('/network-security/comptia-security-plus')}" ng-href="network-security/comptia-security-plus">Comptia Security+</a></li>
-											<li><a ng-class="{active: isActive('/network-security/cisa')}" ng-href="network-security/cisa">CISA</a></li>
-											<li><a ng-class="{active: isActive('/network-security/ccsp')}" ng-href="network-security/ccsp">CCSP</a></li>
-											<li><a ng-class="{active: isActive('/network-security/cissp')}" ng-href="network-security/cissp">CISSP</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/application-support')}" ng-href="application-support">Application Support <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/application-support/devops')}" ng-href="application-support/devops">DevOps</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/business-intelligence')}" ng-href="business-intelligence">Business Intelligence <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/business-intelligence/msbi')}" ng-href="business-intelligence/msbi">MSBI</a></li>
-											<li><a ng-class="{active: isActive('/business-intelligence/obiee')}" ng-href="business-intelligence/obiee">OBIEE</a></li>
-											<li><a ng-class="{active: isActive('/business-intelligence/power-bi')}" ng-href="business-intelligence/power-bi">Power BI</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/erp')}" ng-href="erp">ERP <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/erp/people-soft-hrms')}" ng-href="erp/people-soft-hrms">People Soft HRMS</a></li>
-											<li><a ng-class="{active: isActive('/erp/salesforce-crm')}" ng-href="erp/salesforce-crm">Salesforce CRM</a></li>
-											<li><a ng-class="{active: isActive('/erp/oracle-apps')}" ng-href="erp/oracle-apps">Oracle Apps</a></li>
-											<li><a ng-class="{active: isActive('/erp/sap-bi')}" ng-href="erp/sap-bi">SAP BI</a></li>
-											<li><a ng-class="{active: isActive('/erp/sap-bo')}" ng-href="erp/sap-bo">SAP BO</a></li>
-											<li><a ng-class="{active: isActive('/erp/sap-crm')}" ng-href="erp/sap-crm">SAP CRM</a></li>
-											<li><a ng-class="{active: isActive('/erp/sap-fico')}" ng-href="erp/sap-fico">SAP FICO</a></li>
-											<li><a ng-class="{active: isActive('/erp/sap-hana')}" ng-href="erp/sap-hana">SAP HANA</a></li>
-											<li><a ng-class="{active: isActive('/erp/sap-mm')}" ng-href="erp/sap-mm">SAP MM</a></li>
-											<li><a ng-class="{active: isActive('/erp/sas')}" ng-href="erp/sas">SAS</a></li>
-											<li><a ng-class="{active: isActive('/erp/sas-clinical-research')}" ng-href="erp/sas-clinical-research">SAS Clinical Research</a></li>
-											<li><a ng-class="{active: isActive('/erp/sas-bi')}" ng-href="erp/sas-bi">SAS BI</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/etl')}" ng-href="etl">ETL Tools <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/etl/datastage')}" ng-href="etl/datastage">DataStage</a></li>
-											<li><a ng-class="{active: isActive('/etl/informatica')}" ng-href="etl/informatica">Informatica</a></li>
-											<li><a ng-class="{active: isActive('/etl/informatica-mdm')}" ng-href="etl/informatica-mdm">Informatica MDM</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/business-management')}" ng-href="business-management">Business Management <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/business-management/jbpm')}" ng-href="business-management/jbpm">JBPM</a></li>
-											<li><a ng-class="{active: isActive('/business-management/pega-6.2')}" ng-href="business-management/pega-6.2">Pega 6.2</a></li>
-											<li><a ng-class="{active: isActive('/business-management/pega-7')}" ng-href="business-management/pega-7">Pega 7</a></li>
-											<li><a ng-class="{active: isActive('/business-management/business-analyst')}" ng-href="business-management/business-analyst">Business Analyst</a></li>
-											<li><a ng-class="{active: isActive('/business-management/ba-bfsi')}" ng-href="business-management/ba-bfsi">BA - BFSI</a></li>
-											<li><a ng-class="{active: isActive('/business-management/ba-health-care')}" ng-href="business-management/ba-health-care">BA - Health Care</a></li>
-											<li><a ng-class="{active: isActive('/business-management/ba-finance')}" ng-href="business-management/ba-finance">BA - Finance</a></li>
-											<li><a ng-class="{active: isActive('/business-management/quickbooks')}" ng-href="business-management/quickbooks">QuickBooks</a></li>
-											<li><a ng-class="{active: isActive('/business-management/technical-manager')}" ng-href="business-management/technical-manager">Technical Manager</a></li>
-                                            <li><a ng-class="{active: isActive('/business-management/togaf')}" ng-href="business-management/togaf">ToGAF</a></li>
-                                            <li><a ng-class="{active: isActive('/business-management/pmp')}" ng-href="business-management/pmp">PMP</a></li>
-                                            <li><a ng-class="{active: isActive('/business-management/six-sigma')}" ng-href="business-management/six-sigma">Six Sigma</a></li>
-                                            
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/analytical-tools')}" ng-href="analytical-tools">Analytical Tools <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/analytical-tools/tableau')}" ng-href="analytical-tools/tableau">Tableau</a></li>
-											<li><a ng-class="{active: isActive('/analytical-tools/remedy-ticketing-tool')}" ng-href="analytical-tools/remedy-ticketing-tool">Remedy Ticketing Tool</a></li>
-											<li><a ng-class="{active: isActive('/analytical-tools/qlikview')}" ng-href="analytical-tools/qlikview">QlikView</a></li>
-											<li><a ng-class="{active: isActive('/analytical-tools/tibco-spotfire')}" ng-href="analytical-tools/tibco-spotfire">Tibco Spotfire</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/software-testing')}" ng-href="software-testing">Software Testing <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/software-testing/perfecto')}" ng-href="software-testing/perfecto">Perfecto</a></li>
-											<li><a ng-class="{active: isActive('/software-testing/loadrunner')}" ng-href="software-testing/loadrunner">LoadRunner</a></li>
-											<li><a ng-class="{active: isActive('/software-testing/selenium')}" ng-href="software-testing/selenium">Selenium</a></li>
-											<li><a ng-class="{active: isActive('/software-testing/etl-testing')}" ng-href="software-testing/etl-testing">ETL Testing</a></li>
-											<li><a ng-class="{active: isActive('/software-testing/web-app-penetration-testing')}" ng-href="software-testing/web-app-penetration-testing">Web Applicaiton Penetration Testing</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/hyperion')}" ng-href="hyperion">Hyperion <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/hyperion/hpcm')}" ng-href="hyperion/hpcm">HPCM</a></li>
-											<li><a ng-class="{active: isActive('/hyperion/hyperion-epm')}" ng-href="hyperion/hyperion-epm">Hyperion EPM</a></li>
-											<li><a ng-class="{active: isActive('/hyperion/hyperion-essbase')}" ng-href="hyperion/hyperion-essbase">Hyperion Essbase</a></li>
-											<li><a ng-class="{active: isActive('/hyperion/hyperion-financial-management')}" ng-href="hyperion/hyperion-financial-management">HFM</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/ibm')}" ng-href="ibm">IBM <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/ibm/webfocus')}" ng-href="ibm/webfocus">WebFocus</a></li>
-											<li><a ng-class="{active: isActive('/ibm/websphere-admin')}" ng-href="ibm/websphere-admin">WebSphere Admin</a></li>
-											<li><a ng-class="{active: isActive('/ibm/websphere-message-broker')}" ng-href="ibm/websphere-message-broker">WebSphere Message Broker</a></li>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a ng-class="{active: isActive('/oracle')}" ng-href="oracle">Oracle <i class="fa fa-angle-right"></i></a>
-										<ul class="dropdown-menu">
-											<li><a ng-class="{active: isActive('/oracle/oracle-adf')}" ng-href="oracle/oracle-adf">Oracle ADF</a></li>
-											<li><a ng-class="{active: isActive('/oracle/oracle-dba')}" ng-href="oracle/oracle-dba">Oracle DBA</a></li>
-											<li><a ng-class="{active: isActive('/oracle/oracle-developer')}" ng-href="oracle/oracle-developer">Oracle Developer</a></li>
-											<li><a ng-class="{active: isActive('/oracle/oracle-ebs')}" ng-href="oracle/oracle-ebs">Oracle EBS</a></li>
-											<li><a ng-class="{active: isActive('/oracle/oracle-golden-gate')}" ng-href="oracle/oracle-golden-gate">Oracle Golden Gate</a></li>
-											<li><a ng-class="{active: isActive('/oracle/oracle-soa')}" ng-href="oracle/oracle-soa">Oracle SOA</a></li>
-											<li><a ng-class="{active: isActive('/oracle/weblogic')}" ng-href="oracle/weblogic">WebLogic</a></li>
-											<li><a ng-class="{active: isActive('/oracle/siebel-open-ui')}" ng-href="oracle/siebel-open-ui">Siebel Open UI</a></li>
-											<li><a ng-class="{active: isActive('/oracle/odi-12c')}" ng-href="oracle/odi-12c">ODI 12C</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a ng-class="{active: isActive('/course-schedules')}" ng-href="course-schedules">Course Schedules</a></li>
-							<li><a ng-class="{active: isActive('/registration')}" ng-href="registration">Register</a></li>
-							<li><a ng-class="{active: isActive('/contact')}" ng-href="contact">Contact</a></li>
-							<li><a role="button" class="btn-free-demo animated flash infinite" data-toggle="modal" data-target="#freeDemo">Free Demo</a></li>
-						</ul>
-
-						<ul class="nav navbar-nav navbar-right hidden-xs hidden-sm">
-							<li><a ng-href="tel:+91-7901401499"><i class="fa fa-phone" aria-hidden="true"></i> +91-7901401499</a></li>
-						</ul>
-						
-                        <!-- <div ng-controller="searchCoursesController">
-                        	<form class="navbar-form navbar-right transition" role="search">
-                        	    <div class="form-group">
-                        	        <input type="text" ng-model="keyword" class="form-control transition" placeholder="Search Categories...">
-                        	    </div>
-                        	    <button type="submit" class="btn btn-search" ng-click="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
-							</form>
-							<p ng-repeat="result in results track by $index">{{result.full_name}}</p>
-							<p>{{errMsg}}</p>
-                        </div> -->
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
-			</nav>
-		</header>
+		<div ng-include="'./views/header.html'"></div>
 		<!-- Navbar Ends Here -->
 		
 		<!-- Dummy div goes here -->
@@ -297,102 +60,7 @@
 		<!-- //Modals -->
 
 		<!-- Footer Starts -->
-		<footer class="footer-main">
-			<div class="container">
-            
-                <!-- Footer Contact -->
-                <div class="row">
-                    <div class="contactus">
-                        <div class="tel2 text-center col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <!-- <i class="fa fa-mobile" aria-hidden="true"></i> -->
-                            <h2><a ng-href="tel:+91-7901401499">+91-7901401499</a></h2>
-                        </div>
-                        <div class="email text-center col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                            <!-- <i class="fa fa-envelope-o" aria-hidden="true"></i> -->
-                            <h2><a ng-href="mailto:training@proelearning.com">trainings@pro-elearning.com</a></h2>
-                        </div>
-                    </div>
-                </div>
-                <hr/>
-                
-                <!-- Footer Menu -->
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <ul class="nav nav-pills footer-menu">
-                            <li><a ng-href="/">Home</a></li>
-                            <li><a ng-href="aboutus">About</a></li>
-                            <li><a ng-href="contact">Contact</a></li>
-                            <li><a ng-href="careers">Careers</a></li>
-                            <li><a ng-href="./admin/" target="_blank">Admin Login</a></li>
-                            <!-- <li><a ng-href="./trainer/" target="_blank">Trainer Login</a></li> -->
-                            <li><a ng-href="sitemap">Sitemap</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <hr/>
-                
-                <!-- <div class="row">
-                    <div class="container-fluid">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <h3 class="footer-menu-title">Pro-elearning</h3>
-                            <ul class="footer-menu">
-                                <li><a ng-href="aboutus">Our Company</a></li>
-                                <li><a ng-href="contact">Contact Us</a></li>
-                                <li><a ng-href="#">Careers</a> <a ng-href="http://www.prodesigntek.com/current-openings" target="_blank"><img class="we-hire animated infinite swing" ng-src="images/icons/we-are-hiring_sign_red.png" width="48" height="48"></a></li>
-                                <li><a ng-href="./admin/" target="_blank">Admin Login</a></li>
-                                <li><a ng-href="./trainer/" target="_blank">Trainer Login</a></li>
-                                <li><a ng-href="sitemap">Sitemap</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <h3 class="footer-menu-title">Business Consulting</h3>
-                            <ul class="footer-menu">
-                                <li><a ng-href="#">Business Intelligence</a></li>
-                                <li><a ng-href="#">Enterprise Resource Planning</a></li>
-                                <li><a ng-href="#">QA &#x0026; Testing</a></li>
-                            </ul>
-                        </div>
-                        <div class="clearfix visible-md-block visible-sm-block"></div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <h3 class="footer-menu-title">Services</h3>
-                            <ul class="footer-menu">
-                                <li><a ng-href="#">Online Training</a></li>
-                                <li><a ng-href="#">Classroom Training</a></li>
-                                <li><a ng-href="#">On-demand Training</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <h3 class="footer-menu-title">Staffing</h3>
-                            <ul class="footer-menu">
-                                <li><a ng-href="#">IT Staffing</a></li>
-                                <li><a ng-href="#">Trainings</a></li>
-                                <li><a ng-href="#">Payroll &#x0026; HR Services</a></li>
-                                <li><a ng-href="#">Customer Service Transformation</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <hr/>
-                 -->
-                <!-- Copyright Start -->
-                <div class="row">
-                    <div class="copy-social">
-                        <div class="copyright col-lg-5 col-md-6 col-sm-7 col-xs-12">
-                            <h5>Copyright &copy; 2018 | <a ng-href="/">pro-elearning.com</a>. All Rights Reserved</h5>
-                        </div>
-                        <div class="social col-lg-3 col-md-4 col-sm-5 col-xs-12">
-                            <ul class="social-list">
-                                <li><a href="https://www.facebook.com/Pro-elearning-138039733727866" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/pro-e-learning-6a20b6166" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a href="https://plus.google.com/u/2/114009020735948039165" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                <li><a href="https://twitter.com/pro_elearning" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- Copyright End -->
-            </div>
-        </footer>
+		<div ng-include="'./views/footer.html'"></div>
 		<!-- Footer Ends -->
 		
 		<!-- Bottom Fixed Navbar -->
@@ -434,10 +102,10 @@
 		<script type="text/javascript" src="js/angular-touch.min.js"></script>
 		<script type="text/javascript" src="js/angular-sanitize.min.js"></script>
 		<script type="text/javascript" src="js/angular-cookies.min.js"></script>
-		<script type="text/javascript" src="js/angular-material.min.js"></script>
 		<script type="text/javascript" src="js/ngStorage.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="plugins/owlcarousel/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="plugins/owlcarousel/owl.rows.js"></script>
         <script type="text/javascript" src="plugins/Chart.min.js"></script>
         <script type="text/javascript" src="plugins/chart.js/angular-chart.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap-dropdownhover.min.js"></script>
@@ -446,10 +114,11 @@
 		
 		<!-- Injecting Angular JS - Modules, Controllers, Services, Filters, Routing -->
 		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/routes.js"></script>
 		<script type="text/javascript" src="js/services.js"></script>
-		<script type="text/javascript" src="js/controllers.js"></script>
 		<script type="text/javascript" src="js/directives.js"></script>
 		<script type="text/javascript" src="js/filters.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
 		<script type="text/javascript" src="js/ng-clamp.js"></script>
 		<script type="text/javascript" src="plugins/angular-country-state-select.js"></script>
 		<script type="text/javascript" src="js/ng-breadcrumbs.min.js"></script>
@@ -460,12 +129,12 @@
 		<script type="text/javascript">
 			var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 			(function(){
-			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-			s1.async=true;
-			s1.src='https://embed.tawk.to/5ba4ce81c9abba579677c393/default';
-			s1.charset='UTF-8';
-			s1.setAttribute('crossorigin','*');
-			s0.parentNode.insertBefore(s1,s0);
+				var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+				s1.async=true;
+				s1.src='https://embed.tawk.to/5c307afd7a79fc1bddf360dc/default';
+				s1.charset='UTF-8';
+				s1.setAttribute('crossorigin','*');
+				s0.parentNode.insertBefore(s1,s0);
 			})();
 		</script>
 		<!--End of Tawk.to Script-->

@@ -1,0 +1,378 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/docker-banner.png" alt="Docker-Training-Pro-elearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Docker Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Modes of Training -->
+        <div ng-include="'views/modes-of-training-grid.html'"></div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Prerequisites -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Before proceeding with this tutorial you should have a computer with at least 4GB of RAM running Windows, OSX or Linux. Understanding of terminal or command prompt basics, Linux basics like shells, SSH, and package managers. Knowledge of GitHub and Docker Hub Account is required.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>An open-source project that automates the deployment of software applications inside containers by providing an additional layer of abstraction and automation of OS-level virtualization on Linux.</p>
+                    <p>Containerize a web-based application with a micro-service approach and automate it using Docker file.</p>
+                    <p>Design multi-container applications and automate the workflow using Compose.</p>
+                    <p>Best practices of working with Docker software in the field.</p>
+                    <p>Docker and containers are a whole new way of developing and delivering applications and IT infrastructure. In this course, you'll learn how this is going to impact you as an individual as well as the teams and organizations you work for. This course will cover Docker and containers, container registries, container orchestration, whether this stuff is for the enterprise, and how to prepare yourself for it.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Introduction <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>What can you use Docker for?</li>
+                                    <li>A logical segregation of duties</li>
+                                    <li>The relationship between Docker and SOA</li>
+                                    <li>How Docker fits into the development lifecycle</li>
+                                    <li>How Docker ensures consistency from development through UAT and staging, and on to production</li>
+                                    <li>Example use cases of Docker in the real world</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. The components of Docker <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Underlying technology</li>
+                                    <li>Docker client and server</li>
+                                    <li>Filesystem images</li>
+                                    <li>Registries</li>
+                                    <li>Containers</li>
+                                    <li>Networking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Getting set up to start using Docker <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Getting set up on Windows</li>
+                                    <li>Getting set up on the Mac</li>
+                                    <li>Trying out our first container</li>
+                                    <li>Getting set up for production on Linux</li>
+                                    <li>Tweaking your production environment for best performance</li>
+                                    <li>User interfaces for Docker management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Container management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Container naming</li>
+                                    <li>Starting and stopping containers</li>
+                                    <li>Attaching to a container</li>
+                                    <li>Seeing what is happening in a container</li>
+                                    <li>Running a process inside a container</li>
+                                    <li>Daemonizing a container</li>
+                                    <li>Automatic container restarts</li>
+                                    <li>Deleting containers when we are finished with them</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Docker images and repositories <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Docker images explained</li>
+                                    <li>How Docker images work</li>
+                                    <li>Getting a list of images</li>
+                                    <li>Searching for images on a repository</li>
+                                    <li>Pulling an image</li>
+                                    <li>Creating our own image</li>
+                                    <li>Specify an image in a Dockerfile</li>
+                                    <li>Building Dockerfile images</li>
+                                    <li>Using the build cache for templating</li>
+                                    <li>Viewing the image we have created</li>
+                                    <li>Launching a container using our new image</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Registries <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>What is the Docker hub?</li>
+                                    <li>Pushing images to the Docker hub</li>
+                                    <li>Running your own internal Docker registry</li>
+                                    <li>Testing the internal registry</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. A simple use case <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>A single container static website</li>
+                                    <li>Setting up a container running Nginx</li>
+                                    <li>Launching our static site</li>
+                                    <li>Updating our static site from git or bitbucket</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Continuous integration with Docker <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>How Docker enables and supports CI</li>
+                                    <li>Getting set up for Jenkins and Docker</li>
+                                    <li>A basic Jenkins job</li>
+                                    <li>Multi-configuration jobs</li>
+                                    <li>Drone</li>
+                                    <li>Shippable</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. A more complex use case: Multi container application stacks <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>A container for our NodeJS application</li>
+                                    <li>A base image for our Redis containers</li>
+                                    <li>Creating our Redis back-end cluster</li>
+                                    <li>Capturing logs</li>
+                                    <li>Managing containers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. Docker orchestration and service discovery <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Getting set up with Fig</li>
+                                    <li>Configuring the fig.yml file</li>
+                                    <li>How to use Fig</li>
+                                    <li>Console</li>
+                                    <li>Running a Console cluster</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Integrating with configuration management <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Managing your Docker hosts with Chef / Puppet / Ansible</li>
+                                    <li>Building containers using configuration management tools</li>
+                                    <li>Managing running containers with configuration management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. Docker and DevOps <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Enabling collaboration with Docker</li>
+                                    <li>Using Docker to streamline workflow</li>
+                                    <li>Using Docker's version control capabilities to enable experimentation and learning</li>
+                                    <li>Docker's role in the overall IT value chain</li>
+                                    <li>Creating value and quality with Docker</li>
+                                    <li>Enabling smoother flow of work</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThirteen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#apps" aria-expanded="false" aria-controls="collapseNine">13. Conclusion, open discussion, and Q&A <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="apps" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThirteen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Going back to work with a plan</li>
+                                    <li>What was not covered in this class</li>
+                                    <li>Q&A with the instructor</li>
+                                    <li>Goodbyes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>This course provides you with best quick-start set of knowledge to make a running kafka-server for testing/ small scale production. To be honest I've been digging through Apache kafka documentation for days without being able to make my setup work, while only 3 hours with the course I got everything up and running fine, as well as understanding the important parameter to set for my project.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This was a very good course for going from literally zero knowledge of Kafka to being confident in how it works and how to use it from a development standpoint.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

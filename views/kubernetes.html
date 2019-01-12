@@ -1,0 +1,367 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="row-gap-big">
+            <img class="img-responsive" src="./images/parallax-images/kubernetes-banner.png" alt="Kubernetes-Training-Pro-elearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+        <div class="row">
+            <div class="course-overview-title">
+                <h1 class="mt-50">Kubernetes Training</h1>
+            </div>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="courseDetailsStrip">
+                <div class="courseDetailsGrid">
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Duration</h4>
+                            <p>45 hrs</p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Schedules</h4>
+                            <p><a href="course-schedules">Click for schedules</a></p>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Ratings (791)</h4>
+                            <div ng-controller="ratingController">
+                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                (<span ng-bind="rating"></span>)
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="media-left">
+                            <i class="fa fa-user-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Enrolled</h4>
+                            <p>1274</p>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <!-- Modes of Training -->
+        <div ng-include="'views/modes-of-training-grid.html'"></div>
+
+        <div class="row">
+            <!-- Left Side Pane -->
+            <div class="course-left-pane col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <!-- Prerequisites -->
+                <div class="prerequisites">
+                    <h3>Prerequisites</h3>
+                    <div class="prerequisites-grid">
+                        <p>Knowledge required of containers, Linux kernel features, Container user experience, microservices, DevOps.</p>
+                    </div>
+                </div>
+
+                <!-- About the Course -->
+                <h3>About The Course</h3>
+                <div id="derp" class="slideable course-desc">
+                    <p>This course provides a walkthrough of the basics of the Kubernetes cluster orchestration system. Each module contains some background information on major Kubernetes features and concepts, and includes an interactive online tutorial. These interactive tutorials let you manage a simple cluster and its containerized applications for yourself.</p>
+                    <p>Using the interactive tutorials, you can learn to:
+                        <ul>
+                            <li>Deploy a containerized application on a cluster</li>
+                            <li>Scale the deployment</li>
+                            <li>Update the containerized application with a new software version</li>
+                            <li>Debug the containerized application</li>
+                        </ul>
+                    </p>
+                    <p>Enable the ability to use the same APIs for all your private and public data centers.</p>
+                    <p>Use Kubernetes as a tool to offer “container-as-a-service” capabilities to their teams.</p>
+                    <p>Automate many traditional operational tasks such as Load Balancing, High Availability, Resource utilization, etc.</p>
+                    <p>Empower both operational and development organizations to synchronize service delivery and common application outcomes.</p>
+                    <p>Use Kubernetes to support multi-tenancy and a multi-data center control place as an alpha feature.</p>
+                    <p>Leverage the same open-source Kubernetes technology that has been adopted by Walmart, Pokemon Go, eBay, Red Hat's Openshift, and other high profile early adopters.</p>
+                    <p>Deliver software and IT services as smaller, faster and more adaptive components of your overall architecture.</p>
+                    <p>Take major steps towards implementing microservices in a pragmatic, real-world fashion.</p>
+                </div>
+                <div class="slide-toggler text-center">
+                    <div slide-toggle="#derp" class="slide-toggler-icon-wrap transition">
+                        <span class="slide-toggler-icon transition">✖<span>
+                    </div>
+                </div>
+
+                <!-- Course Overview -->
+                <h3>Course Overview</h3>
+                <div class="panel-group" disable-contextmenu-cut-copy-paste id="accbp" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accbp" data-target="#introduction" aria-expanded="true" aria-controls="collapseOne">1. Overview of Kubernetes <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="introduction" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Introduction to Kubernetes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processStudio" aria-expanded="false" aria-controls="collapseTwo">2. Kubernetes Basics <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Basics of kubernetes</li>
+                                    <li>Setup</li>
+                                    <li>Local setup with minikube</li>
+                                    <li>Building docker containers</li>
+                                    <li>Docker image registery</li>
+                                    <li>Hello world app on Kubernetes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#objectStudio" aria-expanded="false" aria-controls="collapseThree">3. Core Concepts of Kubernetes <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="objectStudio" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Cluster Orchestration</li>
+                                    <li>Looking at K8S Origination at Google</li>
+                                    <li>Open Source</li>
+                                    <li>Benefits</li>
+                                    <li>Design Principles</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#processFlow" aria-expanded="false" aria-controls="collapseFour">4. Navigating Kubernetes Architecture <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="processFlow" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Master/Node</li>
+                                    <li>Kubectl</li>
+                                    <li>Replication Controller</li>
+                                    <li>Kubelet</li>
+                                    <li>Kube-Proxy</li>
+                                    <li>Persistent Volumes</li>
+                                    <li>Etcd</li>
+                                    <li>High Availability</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFive">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#inputsOutputs" aria-expanded="false" aria-controls="collapseFive">5. Using Kubernetes Features <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="inputsOutputs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Pods</li>
+                                    <li>Labels</li>
+                                    <li>Services</li>
+                                    <li>Namespaces</li>
+                                    <li>Resource Quota</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSix">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#businessObjects" aria-expanded="false" aria-controls="collapseSix">6. Security and Kubernetes <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="businessObjects" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Goals</li>
+                                    <li>Roles</li>
+                                    <li>Attribute-Based Access Control</li>
+                                    <li>Policies</li>
+                                    <li>Service Accounts</li>
+                                    <li>Secrets</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSeven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#errorCaseMgmt" aria-expanded="false" aria-controls="collapseSeven">7. Networking and Kubernetes <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="errorCaseMgmt" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Docker Networking</li>
+                                    <li>Kubernetes Networking</li>
+                                    <li>Pod to Pod</li>
+                                    <li>Exposing Services</li>
+                                    <li>IP Per Pod</li>
+                                    <li>Inter Pod Communication</li>
+                                    <li>Intra Pod Communication</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEight">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#addFeatures" aria-expanded="false" aria-controls="collapseEight">8. Cluster Add-ons <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="addFeatures" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEight">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Cluster DNS</li>
+                                    <li>Logging with Elasticsearch and Fluentd</li>
+                                    <li>Container Level Monitoring</li>
+                                    <li>cAdvisor</li>
+                                    <li>InfluxDB</li>
+                                    <li>Prometheus</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNine">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#reviewExercise" aria-expanded="false" aria-controls="collapseNine">9. Practical Kubernetes Examples <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="reviewExercise" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNine">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Hello World</li>
+                                    <li>Wordpress         </li>
+                                    <li>Guestbook</li>
+                                    <li>3 Tier App</li>
+                                    <li>Http/Https Load Balancing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTen">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#iws" aria-expanded="false" aria-controls="collapseNine">10. Continuous Integration with Kubernetes <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="iws" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTen">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Canary Release</li>
+                                    <li>Blue Green Deployment</li>
+                                    <li>A/B Testing</li>
+                                    <li>Rolling Update</li>
+                                    <li>Jenkins Plugin</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingEleven">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#rtat" aria-expanded="false" aria-controls="collapseNine">11. Roadmap/Beta <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="rtat" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingEleven">
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Ingress</li>
+                                    <li>Deployments</li>
+                                    <li>Autoscaling</li>
+                                    <li>Jobs</li>
+                                    <li>DaemonSets</li>
+                                    <li>Network Plugins</li>
+                                    <li>DNS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwelve">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accbp" data-target="#tools" aria-expanded="false" aria-controls="collapseNine">12. Conclusion – Implementation, Q and A, Next Steps <span class="transition"><i class="fa fa-angle-up transition" aria-hidden="true"></i></span></a>
+                            </h4>
+                        </div>
+                        <div id="tools" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwelve">
+                            <div class="panel-body">
+                                <ul>
+                                    <li><b>Discussion:</b> What can you apply?</li>
+                                    <li>How can Kubernetes help your situation?</li>
+                                    <li>Expert Q and A</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Pane -->
+            <div class="course-right-pane col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                
+                <!-- Overview Video -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/BGhlHsFBhLE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+                </div>
+                
+                <!-- Course Testimonials -->
+                <div class="testimonials-grid">
+                    <h4 class="testimonials-heading text-center">Students Say</h4>
+                    <data-owl-carousel-testimonials class="owl-carousel" style="margin-left: auto; margin-right: auto;">
+                        <div class="item slide">
+                            <p>This course provides you with best quick-start set of knowledge to make a running kafka-server for testing/ small scale production. To be honest I've been digging through Apache kafka documentation for days without being able to make my setup work, while only 3 hours with the course I got everything up and running fine, as well as understanding the important parameter to set for my project.</p>
+                            <h4 class="pull-right">&#x2015; Mandarin Deol</h4>
+                        </div>
+                        <div class="item slide">
+                            <p>This was a very good course for going from literally zero knowledge of Kafka to being confident in how it works and how to use it from a development standpoint.</p>
+                            <h4 class="pull-right">&#x2015; Akash Kumar</h4>
+                        </div>
+                    </data-owl-carousel-testimonials>
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- Phone Number -->
+                <div ng-include="'views/phone-grid.html'"></div>
+                
+                <!-- Contact form -->
+                <div ng-include="'views/course-contact-form.html'"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
