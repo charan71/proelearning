@@ -153,9 +153,30 @@ angular.module('controllers', ['ngRoute'])
 })
 
 // Header/Navbar
-.controller('headerCtrl', function($scope, $http, user) {
-	$scope.data = user.getData();
-})
+.controller('headerCtrl', ['$scope', '$location', 'user', function($scope, $location, user) {
+    $scope.data = user.getData();
+
+    $scope.isCollapsed = true;
+    $scope.$on("$routeChangeSuccess", function() {
+        $scope.isCollapsed = true;
+    });
+
+    $scope.getClass = function(path) {
+        if(path === '/') {
+            if($location.path() === '/') {
+                return "active";
+            } else {
+                return "";
+            }
+        }
+     
+        if ($location.path().substr(0, path.length) === path) {
+            return "active";
+        } else {
+            return "";
+        }
+    };
+}])
 
 // Applied Candidates List
 .controller("appliedCandidates", ['$scope', '$http', function($scope, $http) {

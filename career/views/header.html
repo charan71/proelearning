@@ -3,19 +3,19 @@
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<button type="button" class="navbar-toggle collapsed" ng-click="isCollapsed = !isCollapsed">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="admin-dashboard" title="Pro-elearning Admin Dashboard">
-					<img src="./images/proelearning-logo-h-70.png">
+				<a class="navbar-brand" ng-href="candidate-dashboard" title="Pro-elearning Candidate Dashboard">
+					<img src="./images/proelearning-logo-h-70.png" alt="Pro-elearning-Logo">
 				</a>
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" ng-class="isCollapsed ? 'collapse' : 'in'" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle transition" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -23,9 +23,9 @@
 							<span class="uname">{{ data.d.first_name }} {{ data.d.last_name }}</span>
 							<i class="fa fa-angle-down" aria-hidden="true"></i>
 						</a>
-						<ul class="dropdown-menu" ng-controller="navController">
-							<li><a ng-class="{active: isActive('/profile')}" href="profile" class=" transition"><i class="fa fa-user-o" aria-hidden="true"></i> Profile</a></li>
-							<li><a ng-class="{active: isActive('/logout')}" href="logout" class=" transition"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+						<ul class="dropdown-menu">
+							<li><a ng-href="profile" class="transition" ng-class="getClass('/profile')"><i class="fa fa-user-o" aria-hidden="true"></i> Profile</a></li>
+							<li><a ng-href="logout" class="transition"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
 						</ul>
 					</li>
 				</ul>

@@ -184,12 +184,23 @@ span.validation_styles {
     color: #333;
     padding: 6px 15px;
 }
+.navbar-nav > li > a > i.fa {
+    margin-left: 2px;
+    margin-right: 0;
+    font-size: 18px;
+    position: relative;
+    top: 4px;
+}
 .navbar-custom .navbar-brand img {
     width: auto;
     height: 38px;
+    top: 2px;
+    position: relative;
 }
 .navbar-custom .navbar-nav>li>a {
     color: #777;
+    padding-top: 14px;
+    padding-bottom: 13px;
 }
 .nav>li>a:focus, .nav>li>a:hover {
     background-color: transparent;
@@ -213,6 +224,14 @@ span.validation_styles {
 }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
     background-color: #fafafa;
+}
+.navbar-nav > li > a > span {
+    position: relative;
+    top: 2px;
+}
+.navbar-nav > li > a img {
+    width: 22px;
+    margin-right: 2px;
 }
 /*-- //nav --*/
 
