@@ -66,6 +66,20 @@ angular.module('controllers', ['ngRoute'])
 .controller('adminDashboardCtrl', function($scope, $http, $timeout, user) {
     $scope.data = user.getData();
 
+    // Website Visits
+    $scope.pageViewNumInc = 0;
+    $http({
+        url: "./php/website-visits.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.pageViewNumInc = response.data;
+    })
+
     $scope.websiteHits = {
         colors: ["rgba(0,170,255,0.7)","rgba(255,0,0,0.5)","rgba(159,204,0,0.5)","rgba(250,109,33,0.7)","rgba(154,154,154,0.5)"],
         labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],

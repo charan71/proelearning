@@ -23,7 +23,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 			},
 		},
         title: "Admin Dashboard - Pro-elearning Administrator",
-		templateUrl: "views/admin-dashboard.php",
+		templateUrl: "views/admin-dashboard.html",
 		controller: "adminDashboardCtrl"
 	})
 	.when("/admin-dashboard", {
@@ -35,7 +35,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 			},
 		},
         title: "Admin Dashboard - Pro-elearning Administrator",
-		templateUrl: "views/admin-dashboard.php",
+		templateUrl: "views/admin-dashboard.html",
 		controller: "adminDashboardCtrl"
 	})
 	.when("/profile", {

@@ -26,15 +26,7 @@
 										<div class="metric">
 											<span class="icon icon-1"><i class="fa fa-eye"></i></span>
 											<p>
-												<span class="number">
-													<?php
-														// Display the Value
-														$fp = fopen("../../views/visited.txt","r");
-														$fsize=filesize("../../views/visited.txt");
-														$str = fread($fp,$fsize);
-														echo "$str";
-                									?>
-												</span>
+												<span class="number" ng-bind="pageViewNumInc"></span>
 												<span class="title">Visits</span>
 											</p>
 										</div>
@@ -43,7 +35,7 @@
 										<div class="metric">
 											<span class="icon icon-2"><i class="fa fa-smile-o"></i></span>
 											<p>
-												<span class="number">1,252</span>
+												<span class="number">1,257</span>
 												<span class="title">Students Trained</span>
 											</p>
 										</div>
@@ -52,7 +44,7 @@
 										<div class="metric">
 											<span class="icon icon-3"><i class="fa fa-book"></i></span>
 											<p>
-												<span class="number">92</span>
+												<span class="number">104</span>
 												<span class="title">Courses</span>
 											</p>
 										</div>

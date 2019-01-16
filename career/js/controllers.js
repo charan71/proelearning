@@ -64,6 +64,21 @@ angular.module('controllers', ['ngRoute'])
 // Dashboard
 .controller('candidateDashboardCtrl', function($scope, $http, $timeout, user) {
     $scope.data = user.getData();
+
+    // Website Visits
+    $scope.pageViewNumInc = 0;
+    $http({
+        url: "./php/website-visits.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.pageViewNumInc = response.data;
+    })
+
 })
 
 // Header/Navbar
@@ -99,8 +114,6 @@ angular.module('controllers', ['ngRoute'])
 .controller("applyForJobCtrl", ['$scope', '$http', '$timeout', '$filter', 'user', function($scope, $http, $timeout, $filter, user) {
     // Fetching Current User Information to pass email id
     $scope.data = user.getData();
-    console.log($scope.data.email);
-    console.log($scope.data.d.first_name);
 
     var orig_jobId = $scope.job_id;
     var orig_totExp = $scope.tot_experience;
@@ -262,7 +275,6 @@ angular.module('controllers', ['ngRoute'])
     $scope.table_name = "careers_registration";
     // Email Existence Check
     $scope.checkEmail = function() {
-        console.log();
         $http.post(
             './php/email-existence-check.php',
             {'email': $scope.formParams.email, 'table_name': $scope.table_name}
@@ -331,7 +343,6 @@ angular.module('controllers', ['ngRoute'])
                 }
             }, function errorCallback(response) {
                 $scope.stage = "error";
-                console.log(response);
             });
         };
     };

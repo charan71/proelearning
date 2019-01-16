@@ -28,7 +28,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 			},
 		},
         title: "Candidate Dashboard - Pro-elearning Careers",
-		templateUrl: "views/candidate-dashboard.php",
+		templateUrl: "views/candidate-dashboard.html",
 		controller: "candidateDashboardCtrl"
 	})
 	.when("/candidate-dashboard", {
@@ -40,7 +40,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 			},
 		},
         title: "Candidate Dashboard - Pro-elearning Careers",
-		templateUrl: "views/candidate-dashboard.php",
+		templateUrl: "views/candidate-dashboard.html",
 		controller: "candidateDashboardCtrl"
 	})
 	.when("/profile", {
