@@ -1,16 +1,10 @@
-<!-- Navigation Menu -->
-<header>
-    <div ng-include="'views/header.html'"></div>
-</header>
-<!-- //Navigation Menu -->
-
 <div class="main-container">
     <!-- Side Nav -->
     <div ng-include="'views/side-nav.html'"></div>
     <!-- //Side Nav -->
     
     <!-- Partial Views -->
-    <div class="main-content-wrapper">
+    <div class="main-content-wrapper" [onload="true"] [autoscroll="true"]>
         <div class="main-content">
             <div ng-controller="regStudents">
                 <div class="row">

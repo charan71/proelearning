@@ -1791,7 +1791,169 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
     margin-right: 20px;
     color: coral;
 }
-/***** Course Pages *****/
+.certificate-content {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.certificate-box {
+    padding: 20px;
+}
+.certi-bg {
+    margin-bottom: 20px;
+}
+.certi-section {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+.certi-img-bg {
+    height: auto;
+    left: 0;
+    margin: 0 auto;
+    position: relative;
+    right: 0;
+    text-align: center;
+    width: 725px;
+    overflow: hidden;
+}
+.certi-username-sec {
+    left: 0;
+    margin: 35px auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 162px;
+}
+.certi-username {
+    color: #444545;
+    font-family: 'Tangerine', cursive;
+    font-size: 42.5px;
+    font-weight: 700;
+}
+.certi-coursename-sec {
+    left: 0;
+    margin: 20px auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 290px;
+}
+.certi-coursename {
+    color: #444545;
+    font-family: 'Raleway', sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+}
+.certi-id-date-sec {
+    left: 0;
+    margin: 5px auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 418px;
+}
+.certi-date {
+    color: #444545;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    left: 0;
+    position: absolute;
+    right: 400px;
+}
+.certi-id {
+    color: #444545;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    left: 65px;
+    position: absolute;
+    right: 0;
+}
+.certi-dir-sign {
+    color: #444545;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    left: 480px;
+    position: absolute;
+    right: 0;
+}
+.bg-grey {
+    background-color: #f5f5f5;
+}
+.certi-verf-box {
+    padding: 20px;
+}
+.certificate-verify-link {
+    margin-bottom: 20px;
+}
+/***** //Course Pages *****/
+
+/***** Certificate Verification Page *****/
+.certi-verify-grid {
+    background: #ffffff none repeat scroll 0 0;
+    display: inline-block;
+    padding: 45px 50px;
+    position: relative;
+    /* border-radius: 4px;
+    box-shadow: 0 0 8px 0px #ddd; */
+}
+.certi-verify-grid h1 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #444444;
+    text-align: center;
+    margin: 0 auto 40px;
+}
+.verify-input-box {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+.verify-input-box > .form-group {
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.verify-input {
+    height: 41px;
+    padding: 10px 15px;
+    color: #aaaaaa;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #dddddd;
+    margin-right: 23px;
+    width: 340px;
+}
+.verifytxtmsg {
+    font-size: 12px;
+    color: #f8605f;
+    font-weight: 400;
+    display: block;
+    margin-top: 8px;
+    text-align: left;
+}
+.verifybtn {
+    display: inline-block;
+    vertical-align: top;
+}
+.verifysubmitbtn {
+    padding: 9px 35px;
+    background: #0077ff;
+    font-weight: 800;
+    font-size: 16px;
+    color: #ffffff;
+    border: medium none;
+}
+.verify-contactus {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777777;
+    margin: 10px auto 0;
+    text-align: center;
+    display: block;
+}
+/***** //Certificate Verification Page *****/
 
 /*-- About us Page --*/
 .about p {

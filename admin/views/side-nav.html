@@ -1,23 +1,24 @@
-<div ng-controller="navController">
+<div ng-controller="navController" autoscroll="false">
 	<div class="side-nav">
 		<ul>
 			<li class="nav-cat-txt">General</li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/admin-dashboard')}" href="admin-dashboard" class="transition"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/applied-candidates')}" href="applied-candidates" class="transition"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Applied Candidates</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/registered-students')}" href="registered-students" class="transition"><i class="fa fa-users" aria-hidden="true"></i> Registered Students</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/registered-trainers')}" href="registered-trainers" class="transition"><i class="fa fa-users" aria-hidden="true"></i> Registered Trainers</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/contact-us-list')}" href="contact-us-list" class="transition"><i class="fa fa-address-card-o" aria-hidden="true"></i> Contact Us List</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/course-suggestion-list')}" href="course-suggestion-list" class="transition"><i class="fa fa-list-ul" aria-hidden="true"></i> Course Suggestion List</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/free-demos-list')}" href="free-demos-list" class="transition"><i class="fa fa-desktop" aria-hidden="true"></i> Free Demos List</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/subscribers-list')}" href="subscribers-list" class="transition"><i class="fa fa-suitcase" aria-hidden="true"></i> Subscribers List</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/admin-dashboard')}" ng-href="admin-dashboard" class="transition"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/applied-candidates')}" ng-href="applied-candidates" class="transition"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Applied Candidates</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/registered-students')}" ng-href="registered-students" class="transition"><i class="fa fa-users" aria-hidden="true"></i> Registered Students</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/registered-trainers')}" ng-href="registered-trainers" class="transition"><i class="fa fa-users" aria-hidden="true"></i> Registered Trainers</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/contact-us-list')}" ng-href="contact-us-list" class="transition"><i class="fa fa-address-card-o" aria-hidden="true"></i> Contact Us List</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/course-suggestion-list')}" ng-href="course-suggestion-list" class="transition"><i class="fa fa-list-ul" aria-hidden="true"></i> Course Suggestion List</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/free-demos-list')}" ng-href="free-demos-list" class="transition"><i class="fa fa-desktop" aria-hidden="true"></i> Free Demos List</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/subscribers-list')}" ng-href="subscribers-list" class="transition"><i class="fa fa-suitcase" aria-hidden="true"></i> Subscribers List</a></li>
 			<li role="separator" class="divider"></li>
 			<li class="nav-cat-txt">Forms</li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/job-postings')}" href="job-postings" class="transition"><i class="fa fa-file-text-o" aria-hidden="true"></i> Job Postings</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/course-upload')}" href="course-upload" class="transition"><i class="fa fa-upload" aria-hidden="true"></i> Upload a Course</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/new-course-schedule')}" href="new-course-schedule" class="transition"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New Course Schedule</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" href="#" class="transition"><i class="fa fa-user-plus" aria-hidden="true"></i> Register New Trainer</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" href="#" class="transition"><i class="fa fa-sliders" aria-hidden="true"></i> Upload New Slider</a></li>
-			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" href="#" class="transition"><i class="fa fa-commenting-o" aria-hidden="true"></i> Upload New Testmonial</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/job-postings')}" ng-href="job-postings" class="transition"><i class="fa fa-file-text-o" aria-hidden="true"></i> Job Postings</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/course-upload')}" ng-href="course-upload" class="transition"><i class="fa fa-upload" aria-hidden="true"></i> Upload a Course</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/new-course-schedule')}" ng-href="new-course-schedule" class="transition"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> New Course Schedule</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/certificate')}" ng-href="certificate" class="transition"><i class="fa fa-certificate" aria-hidden="true"></i> Certificate</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" ng-href="#" class="transition"><i class="fa fa-user-plus" aria-hidden="true"></i> Register New Trainer</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" ng-href="#" class="transition"><i class="fa fa-sliders" aria-hidden="true"></i> Upload New Slider</a></li>
+			<li class="side-nav-items"><a ng-class="{active: isActive('/#')}" ng-href="#" class="transition"><i class="fa fa-commenting-o" aria-hidden="true"></i> Upload New Testimonial</a></li>
 		</ul>
 	</div>
 </div>

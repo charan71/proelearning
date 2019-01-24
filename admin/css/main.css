@@ -300,6 +300,8 @@ span.validation_styles {
 }
 .content-grid {
     width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
     display: inline-block;
 }
 .form-control {
@@ -362,16 +364,31 @@ span.validation_styles {
 }
 /*-- Custom Buttons --*/
 .btn {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
     border-radius: 2px;
-}
-.btn:hover, .btn:focus {
-    background-color: #0093dc;
-    color: #fff;
+    -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+    padding: 6px 22px;
 }
 .btn:active {
-    background-color: #204d74;
-    color: #fff;
-    border-color: #122b40;
+    box-shadow: none;
+}
+.btn-primary {
+    background-color: #00AAFF;
+    border-color: #00a0f0;
+}
+.btn-primary:hover {
+    background-color: #009ae6;
+    border-color: #00a0f0;
+}
+.btn-primary[disabled]:hover, .btn-primary[disabled]:active {
+    background-color: #00AAFF;
+    border-color: #00a0f0;
+}
+.btn-default:hover, .btn-default:focus {
+    background-color: #f7f7f7;
 }
 .btn-custom {
     background-color: #00AAFF;

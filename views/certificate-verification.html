@@ -1,0 +1,44 @@
+<div class="container-fluid" ng-controller="verifyCertificateCtrl">
+    <div class="row">
+        <div class="">
+            <img class="img-responsive" src="./images/parallax-images/kafka-banner.jpg" alt="Kafka-Training-Pro-eLearning">
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+
+        <!-- Certificate Search Grid -->
+        <div class="certi-verify-grid col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+            <h1>Please enter the Certificate ID to verify the authenticity of the certificate issued by Pro-elearning</h1>
+            <div class="verify-input-sec col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                <div class="verify-input-box">
+                    <div class="form-group">
+                        <!--Add class verify-input-error for validation error message -->
+                        <form action="/verify" id="CertificateVerifyForm" method="post" accept-charset="utf-8">
+                            <div style="display:none;">
+                                <input type="hidden" name="_method" value="POST">
+                            </div>
+                            <div class="input text">
+                                <input name="data[Certificate][certificate_code]" class="verify-input" placeholder="Enter the Certification ID here.." type="text" id="CertificateCertificateCode">
+                            </div>
+                            <span class="verifytxtmsg" id="verifytxtmsg_certificate">
+                        <!--Please enter a valid certification id.-->
+                        </span>
+                    </form></div>
+                    <div class="verifybtn">
+                        <button class="verifysubmitbtn" type="submit">SUBMIT</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="verify-contactus col-lg-12 col-md-12 col-sm-12 col-xs-12 no-padding">
+                Kindly contact us at <a href="mailto:support@edureka.co">support@pro-elearning.com </a>regarding fraudulent certificates.
+            </div>
+        </div>
+
+    </div>
+</div>

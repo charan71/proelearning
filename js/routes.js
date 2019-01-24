@@ -42,6 +42,15 @@ angular.module('ProELearning.routes', ['ngRoute', 'chart.js'])
             controller: "",
             label: "About Us"
         })
+            .when("/verify/certificate-verification",
+                    {
+            title: "Certificate Verification | Pro-elearning",
+            description: "",
+            keywords: "",
+            templateUrl: "views/certificate-verification.html",
+            controller: "verifyCertificateCtrl",
+            label: "Certificate Verification"
+        })
             .when("/information-technology",
                     {
             title: "IT Training Institute in Hyderabad | IT Courses in Hyderabad | Pro-elearning",

@@ -695,11 +695,6 @@ angular.module('ProELearning.controllers', [])
 
 /* Subscribe Controller */
 .controller("subscribeCtrl", ['$scope', '$http', '$timeout', '$location', function($scope, $http, $timeout, $location) {
-    // Trigger Modal only on home page
-    if($location.path() == "/") {
-        $("#subscribeModal").modal("show");
-    }
-
     // Table Name
     $scope.table_name = "subscribers";
     // Email Existence Check
@@ -925,6 +920,10 @@ angular.module('ProELearning.controllers', [])
     .then(function(response) {
         $scope.jobPostings = response.data;
     });
+}])
+
+.controller("verifyCertificateCtrl", ["$scope", function($scope) {
+    
 }])
 
 ;

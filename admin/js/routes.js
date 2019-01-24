@@ -170,6 +170,18 @@ angular.module("routes", ['ngRoute', 'chart.js'])
         templateUrl: "views/new-course-schedule.html",
         controller: "newCourseScheduleCtrl"
     })
+    .when("/certificate", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/admin-login');
+				}
+			},
+		},
+        title: "Certificate - Pro-elearning Administrator",
+        templateUrl: "views/create-certificate.html",
+        controller: "createCertificateCtrl"
+    })
     .otherwise({
 		resolve: {
 			check: function($location, user) {

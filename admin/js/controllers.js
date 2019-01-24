@@ -655,4 +655,73 @@ angular.module('controllers', ['ngRoute'])
     };
 }])
 
+// Certificate Controller
+.controller("createCertificateCtrl", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
+    /*-- Fetching all certificates details and display in table --*/
+    $scope.asc = "";
+    $scope.desc = false;
+    $scope.searchCertificate = { candidate_name:"", candidate_email:"", certificate_id:"", course_name:"" };
+
+    $scope.certificateDetails = [];
+    $http({
+        url: "./php/generate-certificate-details-fetch.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.certificateDetails = response.data;
+    });
+
+    /*-- Generate And Insert New Certificate --*/
+    var orig_candidateName = $scope.candidateName;
+    var orig_candidateEmail = $scope.candidateEmail;
+    var orig_courseName = $scope.courseName;
+    $scope.btnName = "Generate";
+
+    $scope.fn_insertNewSchedules = function() {
+        // $scope.certificatePrefixCompany = "PL";     // Certificate ID Prefix Company Name
+        // // $scope.certificatePrefixCourse = "Java";    // Certificate ID Prefix Course Name
+        // $scope.trimStr = $scope.courseName.substring(0,2); // Trim Course Name Upto First Two Characters
+        // $scope.trimStrUpper = $scope.trimStr.toUpperCase();     // Convert Trimmed Characters Into Uppercase
+        // $scope.certificateIdPrefix = $scope.certificatePrefixCompany + $scope.trimStrUpper;   // Concatinating Both Prefixes
+
+        $http.post(
+            "./php/generate-certificate-details.php",
+            {
+                'candidate_name': $scope.candidateName,
+                'candidate_email': $scope.candidateEmail,
+                'course_name': $scope.courseName,
+                // 'certificate_id_prefix': $scope.certificateIdPrefix,
+                'btnName': $scope.btnName
+            })
+            .then(function(response) {
+            $scope.candidateName = angular.copy(orig_candidateName);
+            $scope.candidateEmail = angular.copy(orig_candidateEmail);
+            $scope.courseName = angular.copy(orig_courseName);
+            $scope.generateCertificateForm.$setUntouched();
+            $scope.successMessage = "Updated successfully!!";
+            $timeout(function() {
+                $scope.successMessage = false;
+            }, 5000);
+            $scope.btnName = "Generate";
+            // displaySchedules();
+        }, function(error) {
+            $scope.errorMessage = "Sorry. Please try again!!";
+        });
+    };
+
+    /*-- Reset all form fields and form to its initial state --*/
+    $scope.fn_reset = function() {
+        $scope.candidateName = angular.copy(orig_candidateName);
+        $scope.candidateEmail = angular.copy(orig_candidateEmail);
+        $scope.courseName = angular.copy(orig_courseName);
+        $scope.generateCertificateForm.$setUntouched();
+        $scope.btnName = "Generate";
+    };
+
+}])
+
 ;
