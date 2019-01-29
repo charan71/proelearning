@@ -2106,9 +2106,7 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
     background: -moz-linear-gradient(to bottom,#0077ff 60%,#001480 100%);
     background: linear-gradient(to bottom,#0077ff 60%,#001480 100%);
     width: 730px;
-    position: relative;
-    height: auto;
-    display: inline-block;
+    display: flex;
     border: 0;
     border-radius: 0;
 }
@@ -2183,7 +2181,7 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
     z-index: 1;
 }
 .custom-modal-left {
-    width: 310px;
+    width: 312px;
     float: left;
 }
 .custom-modal-txt {
@@ -2277,6 +2275,13 @@ input:focus~.floating-label-border, textarea:focus~.floating-label-border, selec
         -o-transform: translate(0,-50%);
         transform: translate(0,-50%);
     }
+}
+.modal-body {
+    background-image: url(../images/bg-images/modal-bg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
 }
 /*-- //Modal Designs --*/
 
@@ -2469,7 +2474,7 @@ h2 {
     display: none;
 }
 
-/************ Email Checking Styles  ************/
+/************ Email Checking Styles ************/
 .response {
     padding: 6px!important;
     display: block !important;
@@ -2484,4 +2489,62 @@ h2 {
     color: green !important;
     /* display: none!important; */
 }
-/************ //Email Checking Styles  ************/
+/************ //Email Checking Styles ************/
+
+/************ Free Demos ************/
+.demo-cards {
+    margin: 30px 0;
+    display: inline-block;
+}
+.demo-grid-outer {
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0px #ddd;
+}
+.demo-grid-outer:hover {
+    box-shadow: 0.6px 1px 8px #999;
+}
+.demo-grid-outer a {
+    padding: 20px 15px;
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+}
+.demo-grid-outer a h4 {
+    margin: 0;
+}
+.demo-grid-outer a img {
+    margin-top: 30px;
+}
+/************ //Free Demos ************/
+
+/************ Banner ************/
+.banner {
+    background-image: url("../images/bg-images/1899.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner .banner-title {
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    margin: 0;
+    height: 150px;
+    position: relative;
+}
+.banner .banner-title h1 {
+    color: #fff;
+    margin: 0;
+    width: 90%;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+/************ //Banner ************/
+

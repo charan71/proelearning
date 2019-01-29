@@ -1161,6 +1161,13 @@ angular.module('ProELearning.routes', ['ngRoute', 'chart.js'])
             controller: "careersController",
             label: "Careers"
         })
+            .when("/free-demos",
+                    {
+            title: "Free Demos - Pro-elearning",
+            templateUrl: "views/free-demos.html",
+            controller: "freeDemosController",
+            label: "Free Demos"
+        })
             .when("/sitemap",
                     {
             title: "Sitemap - Pro-elearning",

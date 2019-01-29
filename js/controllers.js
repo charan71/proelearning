@@ -657,7 +657,7 @@ angular.module('ProELearning.controllers', [])
 }])
 
 /* Free Demo Controller */
-.controller("freeDemoController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+.controller("freeDemosController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
 	var orig_name = $scope.name;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;
