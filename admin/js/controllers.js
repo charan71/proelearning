@@ -787,5 +787,11 @@
 
     }])
 
+    .controller("footerController", ["$scope", function($scope) {
+        // Copyright year
+        $scope.fulldate = new Date();
+        $scope.year = $scope.fulldate.getFullYear();
+    }])
+
     ;
 }(angular));

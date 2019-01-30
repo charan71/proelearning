@@ -2515,13 +2515,15 @@ h2 {
     margin: 0;
 }
 .demo-grid-outer a img {
+    width: 80px;
+    height: 80px;
     margin-top: 30px;
 }
 /************ //Free Demos ************/
 
 /************ Banner ************/
 .banner {
-    background-image: url("../images/bg-images/1899.png");
+    background-image: url("../images/bg-images/banner-bg.png");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;

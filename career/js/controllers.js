@@ -268,7 +268,7 @@ angular.module('controllers', ['ngRoute'])
         $scope.stage = "";
     }
 
-    // Year of Pass out
+    // Year of Graduation
     $scope.fulldate = new Date();
     $scope.year = $scope.fulldate.getFullYear();
 
@@ -367,6 +367,12 @@ angular.module('controllers', ['ngRoute'])
             });
         };
     };
+}])
+
+.controller("footerController", ["$scope", function($scope) {
+    // Copyright year
+    $scope.fulldate = new Date();
+    $scope.year = $scope.fulldate.getFullYear();
 }])
 
 ;

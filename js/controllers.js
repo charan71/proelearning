@@ -873,19 +873,7 @@ angular.module('ProELearning.controllers', [])
 }])
 
 // Course Schedules Controller
-.controller("courseSchedules", ['$scope', function($scope) {
-    $scope.asc = "courseName";
-    $scope.desc = false;
-    $scope.searchCourse = { courseName:"", batchType: "", tainingType: "", trainerName: "" };
-    $scope.courseSchedules = [
-        { courseName: "IOS", date: "10 July 2018", time: "9:30 PM", batchType: "Regular", tainingType: "Online", duration: "30", trainerName: "Praveen" },
-        { courseName: "FullStack", date: "26 July 2018", time: "9:30 PM", batchType: "Regular", tainingType: "Online", duration: "45", trainerName: "Vasu" },
-        { courseName: "WebFocus", date: "28 July 2018", time: "7:30 AM", batchType: "Regular", tainingType: "Online", duration: "45", trainerName: "Praneeth" },
-    ];
-}])
-
-// New Course Schedule
-.controller("courseSchedules", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
+.controller("courseSchedules", ['$scope', '$http', function($scope, $http) {
     $scope.asc = "";
     $scope.desc = false;
     $scope.searchSchedule = { course_name:"", batch_type:"", training_type:"", trainer_name:"" };
@@ -904,7 +892,7 @@ angular.module('ProELearning.controllers', [])
 }])
 
 // Careers
-.controller("careersController", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
+.controller("careersController", ['$scope', '$http', function($scope, $http) {
     $scope.asc = "";
     $scope.desc = false;
     $scope.searchSchedule = { course_name:"", batch_type:"", training_type:"", trainer_name:"" };
@@ -924,6 +912,12 @@ angular.module('ProELearning.controllers', [])
 
 .controller("verifyCertificateCtrl", ["$scope", function($scope) {
     
+}])
+
+.controller("footerController", ["$scope", function($scope) {
+    // Copyright year
+    $scope.fulldate = new Date();
+    $scope.year = $scope.fulldate.getFullYear();
 }])
 
 ;
