@@ -8,11 +8,12 @@
 	}
 	
     $data = json_decode(file_get_contents("php://input"));
-    $sno = mysqli_real_escape_string($conn, $data->sno);
+    $id = mysqli_real_escape_string($conn, $data->id);
     $filename = mysqli_real_escape_string($conn, $data->file);
+    echo $filename;
 
     // Delete internal file
-    $dir = "../jobPostings/";
+    $dir = "../../images/icons/";
     $dirHandle = opendir($dir);
     while ($file = readdir($dirHandle)) {
         if($file == $filename) {
@@ -20,12 +21,12 @@
         }
     }
 
-    $query = "DELETE FROM `job_postings` WHERE `sno`=$sno";
+    $query = "DELETE FROM `free_demos_tbl` WHERE `id`=$id";
     
     if(mysqli_query($conn, $query)) {
-        echo "Data Deleted successfully...";
+        echo "Record Deleted successfully...";
     } else {
-        echo 'Error deleting Data!';
+        echo 'Error deleting record!';
     }
 	
 	$conn->close();

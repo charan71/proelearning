@@ -276,14 +276,14 @@
         })
     }])
 
-    // Free Demos List
-    .controller("freeDemosList", ['$scope', '$http', function($scope, $http) {
+    // Free Demo Requests List
+    .controller("freeDemoRequestsList", ['$scope', '$http', function($scope, $http) {
         $scope.asc = "";
         $scope.desc = false;
         $scope.freeDemoCourse = { full_name:"", email:"", phone:"", course_name:"" };
         $scope.freeDemoCourses = [];
         $http({
-            url: "./php/free-demos-list.php",
+            url: "./php/free-demos-request-list.php",
             method: "POST",
             data: "",
             headers: {
@@ -312,6 +312,120 @@
         .then(function(response) {
             $scope.subscribers = response.data;
         })
+    }])
+
+    // Free Demos List
+    .controller("freeDemosList", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+        $scope.asc = "";
+        $scope.desc = false;
+        $scope.searchfreeDemos = { course_name:"" };
+
+        var orig_courseName = $scope.courseName;
+        var orig_courseImage = $scope.files;
+        $scope.dt = Date();
+        $scope.btnName = "Post New Demo";
+
+        $scope.uploadedFile = function(element) {
+            $scope.$apply(function($scope) {
+                $scope.files = element.files;
+            });
+        };
+        $scope.imageUpload = function(event){
+            var files = event.target.files; //FileList object
+            var file = files[files.length-1];
+            $scope.file = file;
+            var reader = new FileReader();
+            reader.onload = $scope.imageIsLoaded;
+            reader.readAsDataURL(file);
+        };
+        $scope.imageIsLoaded = function(e){
+            $scope.$apply(function() {
+                $scope.step = e.target.result;
+            });
+        };
+
+        /*-- Fetch all free demos and display in table --*/
+        function displayFreeDemos() {
+            $scope.freeDemos = [];
+            $http({
+                url: "./php/free-demos-fetch.php",
+                method: "POST",
+                data: "",
+                headers: {
+                    "Content-Type":"application/x-www-form-urlencoded"
+                }
+            })
+            .then(function(response) {
+                $scope.freeDemos = response.data;
+            });
+        }
+        displayFreeDemos();
+
+        /*-- Upload Free Demo --*/
+        $scope.fn_freeDemo = function() {
+            var formData = new FormData();
+            var file = $scope.files[0];
+            formData.append('id',$scope.id);
+            formData.append('course_name',$scope.courseName);
+            formData.append('file',file);
+            formData.append('date_time',$scope.dt);
+            formData.append('btnName',$scope.btnName);
+            
+            $http({
+                method: 'POST',
+                url: './php/free-demos-list.php',
+                data: formData,
+                processData: false,
+                headers: {
+                    'Content-Type': undefined
+                }
+            }).then(function(response) {
+                $scope.courseName = angular.copy(orig_courseName);
+                $scope.files = angular.copy(orig_courseImage);
+                $scope.freeDemosForm.$setUntouched();
+                $scope.successMessage = "New course uploaded successfully!!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
+                $scope.btnName = "Post New Demo";
+                displayFreeDemos();
+            }, function(error) {
+                $scope.errorMessage = "Sorry. Please try again!!";
+            });
+
+            /*-- Reset all form fields and form to its initial state --*/
+            $scope.fn_reset = function() {
+                $scope.courseName = angular.copy(orig_courseName);
+                $scope.files = angular.copy(orig_courseImage);
+                $scope.freeDemosForm.$setUntouched();
+            };
+        };
+
+        /*-- Delete a free demo record --*/
+        $scope.fn_deleteFreeDemo = function(id, file) {
+            $http({
+                url: "./php/delete-free-demo.php",
+                method: "POST",
+                data: {'id': id, 'file': file}
+            })
+            .then(function() {
+                $scope.successMessage = "Record deleted successfully!";
+                $timeout(function() {
+                    $scope.successMessage = false;
+                }, 5000);
+                displayFreeDemos();
+            }, function(error) {
+                $scope.errorMessage = "Failed to delete record!";
+            })
+        };
+
+        /*-- Edit Free Demo --*/
+        $scope.fn_editFreeDemo = function(id, course_name, file) {
+            $scope.id = id;
+            $scope.courseName = course_name;
+            $scope.files = file;
+            $scope.btnName = "Update";
+        };
     }])
 
     // Course Upload List
@@ -383,12 +497,12 @@
 
         /*-- Reset all form fields and form to its initial state --*/
         $scope.fn_reset = function() {
-        $scope.courseName = angular.copy(orig_courseName);
-        $scope.courseDesc = angular.copy(orig_courseDesc);
-        $scope.courseUrl = angular.copy(orig_courseUrl);
-        $scope.files = angular.copy(orig_courseImage);
-        $scope.coursePrice = angular.copy(orig_coursePrice);
-        $scope.courseUploadForm.$setUntouched();
+            $scope.courseName = angular.copy(orig_courseName);
+            $scope.courseDesc = angular.copy(orig_courseDesc);
+            $scope.courseUrl = angular.copy(orig_courseUrl);
+            $scope.files = angular.copy(orig_courseImage);
+            $scope.coursePrice = angular.copy(orig_coursePrice);
+            $scope.courseUploadForm.$setUntouched();
         };
 
         /*-- Fetch all uploaded courses and display in table --*/
@@ -408,11 +522,12 @@
 
     // New Course Schedule
     .controller("newCourseScheduleCtrl", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
-        /*-- Fetching all scheduled courses and display in table --*/
+        // Applying Filters
         $scope.asc = "";
         $scope.desc = false;
         $scope.searchSchedule = { course_name:"", batch_type:"", training_type:"", trainer_name:"" };
-
+        
+        /*-- Fetching all scheduled courses and display in table --*/
         function displaySchedules() {
             $scope.courseSchedules = [];
             $http({
@@ -642,7 +757,6 @@
         /*-- Edit selected Job Posting --*/
         $scope.fn_editJobPosting = function(sno, job_id, position, min_experience, max_experience, posting_date, file) {
             $scope.sno = sno;
-            console.log($scope.sno);
             $scope.job_id = job_id;
             $scope.position = position;
             $scope.min_experience = min_experience;

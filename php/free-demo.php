@@ -16,7 +16,7 @@
         $message = mysqli_real_escape_string($conn, $data->message);
         $dt = mysqli_real_escape_string($conn, $data->date_time);
         
-        $query = "INSERT INTO `free_demos` (`full_name`, `email`, `phone`, `course_name`, `message`, `date_time`) VALUES ('$name', '$email', '$phone', '$courseName', '$message', '$dt')";
+        $query = "INSERT INTO `free_demo_requests_tbl` (`full_name`, `email`, `phone`, `course_name`, `message`, `date_time`) VALUES ('$name', '$email', '$phone', '$courseName', '$message', '$dt')";
         
         if(mysqli_query($conn, $query)) {
             echo "Data Inserted...";

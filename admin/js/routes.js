@@ -110,6 +110,18 @@ angular.module("routes", ['ngRoute', 'chart.js'])
         templateUrl: "views/course-suggestion-list.html",
         controller: "courseSuggestionList"
     })
+    .when("/free-demo-requests", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/admin-login');
+				}
+			},
+		},
+        title: "Free Demo Requests List - Pro-elearning Administrator",
+        templateUrl: "views/free-demos-requests-list.html",
+        controller: "freeDemoRequestsList"
+    })
     .when("/free-demos-list", {
 		resolve: {
 			check: function($location, user) {

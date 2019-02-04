@@ -26,74 +26,12 @@
 
     <div class="row">
         <div class="demo-cards">
-            <div class="col-xs-12 col-sm-6 col-md-3">
+            <!-- Free Demo Tiles -->
+            <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="demo in freeDemos">
                 <div class="demo-grid-outer transition text-center">
                     <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4>Artificial Intelligence</h4>
-                        <img src="./images/icons/ai-icon.svg">
-                        <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="demo-grid-outer transition text-center">
-                    <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4>SAS Clinical Research</h4>
-                        <img src="./images/icons/sas-clinical-icon.svg">
-                        <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="demo-grid-outer transition text-center">
-                    <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4>Machine Learning</h4>
-                        <img src="./images/icons/ml-icon.svg">
-                        <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="demo-grid-outer transition text-center">
-                    <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4>Tableau</h4>
-                        <img src="./images/icons/tableau-icon.svg">
-                        <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="demo-grid-outer transition text-center">
-                    <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4>DevOps</h4>
-                        <img src="./images/icons/devops-icon.svg">
-                        <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="demo-grid-outer transition text-center">
-                    <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4>IoT</h4>
-                        <img src="./images/icons/iot-icon.svg">
-                        <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="demo-grid-outer transition text-center">
-                    <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4>WebFocus</h4>
-                        <img src="./images/icons/webfocus-icon.svg">
-                        <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="demo-grid-outer transition text-center">
-                    <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4>Salesforce Testing</h4>
-                        <img src="./images/icons/salesforce-testing-icon.svg">
+                        <h4 ng-bind="demo.course_name"></h4>
+                        <img src="./images/icons/{{ demo.file }}">
                         <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
                     </a>
                 </div>

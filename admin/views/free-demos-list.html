@@ -2,100 +2,133 @@
 	<!-- Side Nav -->
 	<div ng-include="'views/side-nav.html'"></div>
 	<!-- //Side Nav -->
-
+	
 	<!-- Partial Views -->
 	<div class="main-content-wrapper">
-		<div class="main-content">
-			<div ng-controller="freeDemosList">
+	    <div class="main-content">
+	        <div ng-controller="freeDemosList">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                		<div class="panel">
-                		    <div class="panel-heading">
-                		        <div class="panel-title">Free Demo Requests</div>
-                		    </div>
-                		    <div class="panel-body">
-								<div class="table-wrapper">
-									<div class="table-responsive">
-										<table class="table table-striped">
-											<thead>
-												<tr class="filterRow">
-													<th></th>
-													<th>
-														<input class="searchFilterBox" type="text" ng-model="freeDemoCourse.full_name" size="12" placeholder="Search by Name">
-													</th>
-													<th>
-														<input class="searchFilterBox" type="text" ng-model="freeDemoCourse.email" placeholder="Search by Email">
-													</th>
-													<th>
-														<input class="searchFilterBox" type="text" ng-model="freeDemoCourse.phone" size="12" placeholder="Search by Phone">
-													</th>
-													<th>
-														<input class="searchFilterBox" type="text" ng-model="freeDemoCourse.course_name" size="18" placeholder="Search by Course Name">
-													</th>
-													<th></th>
-													<th></th>
-												</tr>
-												<tr>
-													<th>#</th>
-													<th nowrap ng-click="asc='full_name'; desc=!desc">
-														<span class="th-title-wrap">Name</span>
-                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-													</th>
-													<th nowrap ng-click="asc='email'; desc=!desc">
-														<span class="th-title-wrap">Email</span>
-                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-													</th>
-													<th nowrap ng-click="asc='phone'; desc=!desc">
-														<span class="th-title-wrap">Phone</span>
-                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-													</th>
-													<th nowrap ng-click="asc='course_name'; desc=!desc">
-														<span class="th-title-wrap">Free Demos Course</span>
-                				                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
-                				                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
-													</th>
-													<th nowrap>Message</th>
-													<th nowrap>Date &#x0026; Time</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr class="table-row" dir-paginate="course in freeDemoCourses | orderBy:asc:desc | filter:freeDemoCourse | itemsPerPage:20">
-													<td>{{ $index + 1 }}.</td>
-													<td nowrap>{{ course.full_name }}</td>
-													<td nowrap>{{ course.email }}</td>
-													<td nowrap>{{ course.phone }}</td>
-													<td nowrap>{{ course.course_name }}</td>
-													<td>{{ course.message }}</td>
-													<td nowrap>{{ course.date_time }}</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								
-									<!-- Pagination -->
-                				    <div class="text-center">
-                				       <dir-pagination-controls
-                				            max-size="5"
-                				            direction-links="true"
-                				            boundary-links="true" >
-                				       </dir-pagination-controls>
-                				    </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Post a New Demo</div>
+                            </div>
+                            <div class="content-grid">
+                                <div class="clearfix">
+                                    <form novalidate name="freeDemosForm" method="POST" enctype="multipart/form-data" id="freeDemosForm" autocomplete="on">
+	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	                                        <label for="course-name">Course Name <span class="important">*</span></label>
+	                                        <input type="text" id="course-name" class="form-control" name="courseName" ng-model="courseName" ng-minlength="2" ng-maxlength="250" ng-pattern="/^[a-zA-Z0-9.# ]{2,250}$/" placeholder="Course Name" ng-required="true">
+	                                        <span class="validation_styles" ng-show="freeDemosForm.courseName.$error.required && freeDemosForm.courseName.$touched">* Course name is required<br></span>
+	                                        <span class="validation_styles" ng-show="freeDemosForm.courseName.$error.pattern && freeDemosForm.courseName.$invalid">* Course name should contain only alphabets, numbers, dots, hash and spaces.<br></span>
+	                                        <span class="validation_styles" ng-show="freeDemosForm.courseName.$error.minlength && freeDemosForm.courseName.$touched">* Course name should be minimum of 2 characters.<br></span>
+	                                        <span class="validation_styles" ng-show="freeDemosForm.courseName.$error.maxlength && freeDemosForm.courseName.$touched">* Course name should be maximum of 250 characters</span>
+                                        </div>
+                                        <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                            <label for="job-desc" class="control-label">Course Image Icon <span class="important">*</span></label>
+                                            <input type="file" id="job-desc" name="jobDesc" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".svg" ng-required="true">
+                                            <span class="validation_styles" ng-show="freeDemosForm.jobDesc.$error.required && freeDemosForm.jobDesc.$touched">* Job description file is required<br></span>
+                                            <p class="help-block">For best user experience upload <strong>.svg</strong> files only.</p>
+                                        </div>
+                                        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
+                                        <div class="clearfix"></div>
+                                        <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <button type="submit" class="btn btn-primary transition" ng-disabled="freeDemosForm.$invalid" ng-click="fn_freeDemo()">{{ btnName }}</button>
+                                            <button type="reset" class="btn btn-default transition" ng-click="fn_reset()">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+	            <div class="alert alert-success alert-dismissible" role="alert" ng-if="successMessage">
+	                <i class="fa fa-check" aria-hidden="true"></i> <span ng-bind="successMessage"></span>
+	                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	            </div>
+	            <div class="alert alert-danger alert-dismissible" role="alert" ng-if="errorMessage">
+	                <i class="fa fa-exclamation" aria-hidden="true"></i> <span ng-bind="errorMessage"></span>
+	                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                
+                <!-- Fetch all uploaded Job Postings and display in table -->
+                <div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Free Demos List</div>
+                            </div>
+                            <div class="panel-body">
+				                <div class="table-wrapper">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr class="filterRow">
+                                                    <th></th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchfreeDemos.course_name" placeholder="Search Using Course Name">
+                                                    </th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th nowrap ng-click="asc='course_name'; desc=!desc">
+                                                        <span class="th-title-wrap">Course Name</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>Image File</th>
+                                                    <th nowrap>Demo Posted Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="free-demo-tbl">
+                                                <tr class="table-row" dir-paginate="demo in freeDemos | orderBy:asc:desc | filter:searchfreeDemos | itemsPerPage:10">
+                                                    <td>{{ $index + 1 }}.</td>
+                                                    <td nowrap class="btn-container">
+                                                        <span>{{ demo.job_id }}</span>
+                                                        <span>{{ demo.course_name }}</span>
+                                                        <span class="updateDelete">
+                                                            <button type="button" title="Delete" ng-click="fn_deleteFreeDemo(demo.id, demo.file);">
+                                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                            </button>
+                                                            <button type="button" title="Edit" ng-click="fn_editFreeDemo(demo.id, demo.course_name, demo.file, demo.btnName);">
+                                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                            </button>
+                                                        </span>
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn-download transition" href="../images/icons/{{ demo.file }}" title="{{ demo.file }}" target="_blank">
+                                                            <img class="img-responsive center-block" src="../images/icons/{{ demo.file }}" alt="{{ demo.course_name }}">
+                                                        </a>
+                                                    </td>
+                                                    <td nowrap>{{ demo.date_time }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+				                </div>
+                            
+				                <!-- Pagination -->
+                                <div class="text-center">
+                                   <dir-pagination-controls
+                                        max-size="5"
+                                        direction-links="true"
+                                        boundary-links="true" >
+                                   </dir-pagination-controls>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+	        </div>
+	    </div>
 	</div>
 	<!-- //Partial Views -->
-
+	
 	<!-- Footer -->
 	<footer>
-		<div ng-include="'views/footer.html'"></div>
+	    <div ng-include="'views/footer.html'"></div>
 	</footer>
 	<!-- //Footer -->
 </div>

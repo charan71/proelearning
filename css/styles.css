@@ -356,8 +356,9 @@ p {
 
 /* Footer Styles Start */
 footer {
-    background-color: #002855; /* Fallback Color */
-    background: #002855 url(../images/bg-images/footer-bg.png) center;
+    background-color: #f5f5f5; /* Fallback Color */
+    /* background: #002855 url(../images/bg-images/footer-bg.png) center; */
+    border: 1px solid #ddd;
 }
 footer hr {
     border-top: 0;
@@ -367,11 +368,11 @@ footer hr {
 }
 .footer-main .contactus div h2 a {
 	text-decoration: none;
-    color: #ccc;
+    color: #676a6d;
     font-weight: 300;
 }
 .footer-main .contactus div h2 a:hover, .footer-main .contactus div h2 a:focus, .footer-main .contactus div h2 a:active, .contactus div i {
-	color: #fff;
+	color: #000;
 }
 .footer-main .contactus {
     margin-top: 20px;
@@ -406,7 +407,7 @@ footer hr {
     font-weight: 300;
 }
 .footer-menu li a {
-	color: #ccc;
+	color: #676a6d;
     margin: 10px 15px;
     padding: 0;
     font-size: 14px;
@@ -416,7 +417,7 @@ footer hr {
 }
 .footer-menu li a:hover, .footer-menu li a:focus, .footer-menu li a:active, .copyright h5 a:hover, .copyright h5 a:focus, .copyright h5 a:active {
     background-color: transparent;
-    color: #fff;
+    color: #000;
 }
 .we-hire {
 	position: absolute;
@@ -427,11 +428,11 @@ footer hr {
     padding-left: 15px;
 }
 .copyright h5 {
-    color: #ccc;
+    color: #676a6d;
     font-size: 14px;
 }
 .copyright h5 a {
-    color: #ccc;
+    color: #676a6d;
 	text-decoration: none;
 }
 .social-list {
@@ -455,10 +456,10 @@ footer hr {
     
 }
 .social-list .fa {
-    color: #ccc;
+    color: #676a6d;
 }
 .social-list .fa:hover {
-    color: #fff;
+    color: #000;
 }
 /* Footer Styles End */
 
@@ -531,7 +532,32 @@ footer hr {
     background-color: #f2f2f2;
 }
 
-/* Carousel */
+/* Main Carousel */
+#carousel-main-generic {
+    background: linear-gradient(90deg,#002855,#fff);
+}
+#carousel-main-generic .carousel-inner {
+    height: 600px;
+}
+#carousel-main-generic .carousel-inner .carousel-bg img {
+    position: absolute;
+    width: auto;
+    height: 400px;
+    right: 10%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+#carousel-main-generic .carousel-inner .item {
+    height: 100%;
+}
+.carousel-control {
+    width: 10%;
+}
 .carousel-control .fa.fa-angle-left, .carousel-control .icon-prev {
     left: 50%;
     margin-left: -10px;
@@ -564,18 +590,88 @@ footer hr {
 .carousel-control.left, .carousel-control.right {
     background-image: none;
 }
-.carousel-caption {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-}
 .carousel-caption h1, .carousel-caption h4, .carousel-caption p {
     color: #fff;
 }
+.carousel-caption h1 {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+.carousel-caption h4 {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
 @media screen and (min-width: 768px) {
     .carousel-caption {
-        right: 12%;
-        left: 12%;
+        width: 700px;
+        text-align: left;
+        bottom: auto;
+        left: 10%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
     }
 }
+/* Indicator Color */
+.carousel-fade .carousel-inner .item {
+    opacity: 0;
+    transition-property: opacity;
+  }
+  .carousel-fade .carousel-inner .active {
+    opacity: 1;
+  }
+  .carousel-fade .carousel-inner .active.left,
+  .carousel-fade .carousel-inner .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+  .carousel-fade .carousel-inner .next.left,
+  .carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+  }
+  .carousel-fade .carousel-control {
+    z-index: 2;
+  }
+
+.carousel-indicators {
+    left: 20%;
+}
+.carousel-indicators li {
+    box-sizing: content-box;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    opacity: .5;
+    transition: opacity .6s ease;
+    border: none;
+    border-radius: 0;
+}
+.carousel-indicators .active {
+    opacity: 1;
+    width: 30px;
+    height: 3px;
+    margin: 1px;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+/******* //Main Carousel *******/
 
 .para-desc {
     font-size: 1.0em;
@@ -1187,27 +1283,6 @@ input, select, textarea {
 }
 #testimonials-slider .carousel-inner .item p .testimonial-company {
     font-size: 14px;
-}
-
-/* indicator color */
-.carousel-indicators li {
-    background: #ffffff;
-}
-
-/* active indicator */
-.carousel-indicators .active {
-    background: #8bc34a;
-    margin: 0 3px;
-    border-color: #8bc34a;
-}
-
-.carousel-indicators li {
-    width: 25px;
-    height: 6px;
-    margin: 0 3px;
-    border: 1px solid #8bc34a;
-    vertical-align: -webkit-baseline-middle;
-    vertical-align: middle;
 }
 
 .bgStyles {

@@ -1,23 +1,55 @@
 <?php
 
-include("../php/config.php");
+	include("../php/config.php");
+    
+	$conn = new mysqli($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);
+    }
+    
+	$btnName = $_POST['btnName'];
+    if($btnName == "Post New Demo") {
+        $course_name = $_POST['course_name'];
+        $dt = $_POST['date_time'];
 
-$conn = new mysqli($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
+        // Files Upload Code
+        print_r($_FILES);
+        $tempPath = $_FILES['file']['tmp_name'];
+        $uploadPath = '../../images/icons/' . $_FILES['file']['name'];
+        move_uploaded_file($tempPath, $uploadPath);
+        
+        $query = "INSERT INTO `free_demos_tbl` (`course_name`, `file`, `date_time`) VALUES ('$course_name', '".$_FILES['file']['name']."', '$dt')";
+        
+        if(mysqli_query($conn, $query)) {
+            echo "Data Inserted...";
+        } else {
+            echo 'Error';
+        }
+    } else {
+        // Update Free Demos details
+        $id = $_POST['id'];
+        $course_name = $_POST['course_name'];
+        $dt = $_POST['date_time'];
 
-$query = $conn->query("SELECT * FROM `free_demos` ORDER BY `sno` DESC");
-$ar = array();
-
-while($row = mysqli_fetch_assoc($query)) {
-	$ar[] = $row;
-}
-
-$conn->close();
-
-header("Content-Type: application/json;");
-
-echo json_encode($ar);
-
+        if(empty($_FILES['file']['name'])) {
+            $query = "UPDATE `free_demos_tbl` SET `id`='$id', `course_name`='$course_name', `date_time`='$dt' WHERE `id`='$id'";
+        } else {
+            // Files Upload Code
+            print_r($_FILES);
+            $tempPath = $_FILES['file']['tmp_name'];
+            $uploadPath = '../jobPostings/' . $_FILES['file']['name'];
+            move_uploaded_file($tempPath, $uploadPath);
+            
+            $query = "UPDATE `free_demos_tbl` SET `id`='$id', `course_name`='$course_name', `file`='".$_FILES['file']['name']."', `date_time`='$dt' WHERE `id`='$id'";
+        }
+        
+        if(mysqli_query($conn, $query)) {
+            echo "Free Demo Updated Successfully...";
+        } else {
+            echo 'Error Updating Free Demo!';
+        }
+    }
+	
+	$conn->close();
+	
 ?>

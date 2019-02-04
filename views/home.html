@@ -2,7 +2,7 @@
         
 			<div class="row">
 				<!-- Carousel Starts Here -->
-				<div ng-controller="mainCarouselController" id="carousel-main-generic" class="carousel slide" data-ride="carousel">
+				<div ng-controller="mainCarouselController" id="carousel-main-generic" class="carousel slide carousel-fade" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators hidden-xs">
 					    <li ng-click="slideTo($index)" data-slide-to="$index" ng-class="{active:!$index}" ng-repeat="item in mainCarouselSlides" class="transition"></li>
@@ -11,11 +11,14 @@
 					<!-- Wrapper for slides -->
 					<!-- Maintain Carousel Images Sizes as 1920x640 -->
 					<div class="carousel-inner" role="listbox">
+                        <div class="carousel-bg">
+							<img ng-src="./images/carousel-images/main-carousel-bg.svg" alt="Pro-elearning">
+                        </div>
 						<div class="item" ng-class="{active:!$index}" ng-repeat="item in mainCarouselSlides">
-							<img ng-src="images/carousel-images/{{item.c_image}}" alt="{{item.c_imgAlt}}">
+							<!-- <img ng-src="images/carousel-images/{{item.c_image}}" alt="{{item.c_imgAlt}}"> -->
 							<div class="carousel-caption">
-								<h1 ng-bind-html="item.c_h1"></h1>
-								<h4 class="hidden-xs">{{item.c_h4}}</h4>
+								<h1 class="animated zoomInDown" ng-bind-html="item.c_h1"></h1>
+								<h4 class="hidden-xs animated flipInX">{{item.c_h4}}</h4>
                                 <p class="hidden-xs">{{item.c_para}}</p>
 							</div>
 						</div>

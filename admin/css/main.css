@@ -832,3 +832,11 @@ footer p {
     padding-top: 10px;
     padding-bottom: 15px;
 }
+
+.free-demo-tbl tr td {
+    vertical-align: middle !important;
+}
+.free-demo-tbl tr td a img {
+    width: auto;
+    height: 30px;
+}

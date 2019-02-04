@@ -658,6 +658,8 @@ angular.module('ProELearning.controllers', [])
 
 /* Free Demo Controller */
 .controller("freeDemosController", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+
+    // Insert Free Demo
 	var orig_name = $scope.name;
     var orig_email = $scope.email;
     var orig_phone = $scope.phone;
@@ -675,7 +677,7 @@ angular.module('ProELearning.controllers', [])
                 $scope.courseName = angular.copy(orig_courseName);
                 $scope.message = angular.copy(orig_message);
                 $scope.freeDemoForm.$setUntouched();
-                $scope.successMessage = "Hoila! Your request for a free demo is successfully registered with us. Your team will contact you within 24 hours. Have a nice day!!";
+                $scope.successMessage = "Your request for a free demo is successfully registered with us. Our team will contact you within 24 hours. Have a nice day!!";
                 $timeout(function() {
                     $scope.successMessage = false;
                 }, 5000);
@@ -691,6 +693,21 @@ angular.module('ProELearning.controllers', [])
         $scope.message = angular.copy(orig_message);
         $scope.freeDemoForm.$setUntouched();
     };
+
+    /*-- Fetch all free demos and display --*/
+    $scope.freeDemos = [];
+    $http({
+        url: "./php/free-demos-fetch.php",
+        method: "POST",
+        data: "",
+        headers: {
+            "Content-Type":"application/x-www-form-urlencoded"
+        }
+    })
+    .then(function(response) {
+        $scope.freeDemos = response.data;
+    });
+
 }])
 
 /* Subscribe Controller */
