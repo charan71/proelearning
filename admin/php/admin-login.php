@@ -33,7 +33,7 @@ if(mysqli_num_rows($result) > 0) {
     $_SESSION['id'] = $response['id'];
     $_SESSION['email'] = $email;
 } else {
-    $response['status'] = 'error';
+    $response['status'] = 'Connection error!';
 }
 
 $conn->close();
