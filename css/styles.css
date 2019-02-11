@@ -2594,7 +2594,283 @@ h2 {
     height: 80px;
     margin-top: 30px;
 }
+
+
+.no-padding {
+    padding: 0;
+}
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+.coursesmain {
+    display: inline-block;
+    padding: 0;
+}
+.coursesmain .individualmain {
+    display: inline-block;
+    width: 100%;
+}
+.coursesmain .individualmain h2 {
+    color: #4a4a4a;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a4a4a;
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0 5px 0;
+}
+.courseloader {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    width: 98%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    min-height: 150px;
+}
+.hide {
+    display: none!important;
+}
+.cssload-loader {
+    width: 97px;
+    height: 19px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+}
+.cssload-loader > div {
+    content: " ";
+    width: 19px;
+    height: 19px;
+    background: rgb(0,145,255);
+    border-radius: 100%;
+    position: absolute;
+    animation: cssload-shift 3.8s linear infinite;
+    -o-animation: cssload-shift 3.8s linear infinite;
+    -ms-animation: cssload-shift 3.8s linear infinite;
+    -webkit-animation: cssload-shift 3.8s linear infinite;
+    -moz-animation: cssload-shift 3.8s linear infinite;
+}
+.cssload-loader > div:nth-of-type(1) {
+    animation-delay: -0.76s;
+    -o-animation-delay: -0.76s;
+    -ms-animation-delay: -0.76s;
+    -webkit-animation-delay: -0.76s;
+    -moz-animation-delay: -0.76s;
+}
+.cssload-loader > div:nth-of-type(2) {
+    animation-delay: -1.52s;
+    -o-animation-delay: -1.52s;
+    -ms-animation-delay: -1.52s;
+    -webkit-animation-delay: -1.52s;
+    -moz-animation-delay: -1.52s;
+}
+.cssload-loader > div:nth-of-type(3) {
+    animation-delay: -2.28s;
+    -o-animation-delay: -2.28s;
+    -ms-animation-delay: -2.28s;
+    -webkit-animation-delay: -2.28s;
+    -moz-animation-delay: -2.28s;
+}
+.cssload-loader > div:nth-of-type(4) {
+    animation-delay: -3.04s;
+    -o-animation-delay: -3.04s;
+    -ms-animation-delay: -3.04s;
+    -webkit-animation-delay: -3.04s;
+    -moz-animation-delay: -3.04s;
+}
+.coursesmain .individualmain .coursecardblock {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+}
+.coursesmain .individualmain .coursecardblock .card {
+    display: flex;
+    align-items: initial;
+    justify-content: left;
+    width: 100%;
+    padding: 20px 15px;
+    border-bottom: 1px solid #e6e6e6;
+    transition: all 0.5s;
+}
+.coursesmain .individualmain .coursecardblock .card:hover {
+    background: #f9f9f9;
+    box-shadow: 4px 3px 10px -3px #ccc;
+}
+.coursesmain .individualmain .coursecardblock .card .imgcont {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    position: relative;
+    display: inline-block;
+}
+.coursesmain .individualmain .coursecardblock .card .imgcont img {
+    width: 100%;
+    height: auto;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo {
+    display: flex;
+    width: calc(100% - 120px);
+    justify-content: space-between;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft {
+    display: inline-block;
+    width: 70%;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a4a4a;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .highlights {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .highlights .stats {
+    display: inline-block;
+    width: auto;
+    margin-right: 15px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .highlights .stats i {
+    font-size: 12px;
+    color: #ababab;
+    margin-right: 2px;
+    position: relative;
+    top: -2px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .highlights .stats span {
+    font-size: 12px;
+    color: #9b9b9b;
+    vertical-align: text-top;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft ul {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 0;
+}
+.refwidgsocialshare>a:nth-last-child(2), ol, ul {
+    margin: 0;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft ul li {
+    display: list-item;
+    width: 100%;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .ratingsec {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec .rating, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .ratingsec .rating {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec .totalreviews, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .ratingsec .totalreviews {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9b8484;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .pricemain, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .pricemain {
+    display: inline-block;
+    width: 100%;
+    margin: 5px 0;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight {
+    display: inline-block;
+    width: 30%;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .ratingsec {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec .ratings {
+    float: right;
+    margin-bottom: 5px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec .ratings i {
+    font-size: 14px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .completionrate {
+    width: 50%;
+    float: left;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch .nextbatchtitle, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .completionrate .completionratetitle {
+    font-size: 12px;
+    font-weight: 400;
+    color: #9b9b9b;
+    margin-bottom: 5px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .completionrate .comppercent {
+    float: right;
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 600;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch .nextbatchdate {
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 600;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec {
+    font-size: 12px;
+    font-weight: 400;
+    color: #9b9b9b;
+    margin-bottom: 10px;
+}
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .wishlist span.viewdetailsbtn {
+    background-color: #fff;
+    border: solid 1px #0c5397;
+    font-size: 11px;
+    font-weight: 600;
+    color: #12589a;
+    padding: 6px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+}
 /************ //Free Demos ************/
+
+/************ Progress Bars ************/
+.progress {
+    height: 6px;
+    margin: 7px 0;
+    width: 85%;
+    float: left;
+}
+.progress-bar-success {
+    background-color: #43ce45;
+}
+/************ //Progress Bars ************/
 
 /************ Banner ************/
 .banner {

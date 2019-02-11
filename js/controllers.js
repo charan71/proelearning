@@ -803,9 +803,9 @@ angular.module('ProELearning.controllers', [])
     var cities = [
         {
             city : 'Pennsylvania',
-            desc : '<b>Astral Technologies Inc.</b><br>1704 St. John\'s court,<br>Bensalem, PA 19020<br><i class="fa fa-phone" aria-hidden="true"></i> +1 (267) 436-7840',
-            lat : 40.092983,
-            long : -74.932957
+            desc : '<b>Astral Technologies Inc.</b><br>12 Penns Trail,<br>Newtown, PA 18940<br><i class="fa fa-phone" aria-hidden="true"></i> +1 (267) 436-7840',
+            lat : 40.229482,
+            long : -74.909093
         },
         {
             city : 'Texas',

@@ -318,9 +318,14 @@
     .controller("freeDemosList", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
         $scope.asc = "";
         $scope.desc = false;
-        $scope.searchfreeDemos = { course_name:"" };
+        $scope.searchfreeDemos = { course_name:"", batch_type:"", training_type:"" };
 
         var orig_courseName = $scope.courseName;
+        var orig_enrolled = $scope.enrolled;
+        var orig_batchType = $scope.batchType;
+        var orig_trainingType = $scope.trainingType;
+        var orig_nextBatch = $scope.nextBatch;
+        var orig_completionRate = $scope.completionRate;
         var orig_courseImage = $scope.files;
         $scope.dt = Date();
         $scope.btnName = "Post New Demo";
@@ -363,10 +368,19 @@
 
         /*-- Upload Free Demo --*/
         $scope.fn_freeDemo = function() {
+
+            // Converting Date to Milliseconds
+            var ms = new Date($scope.nextBatch).getTime();
+        
             var formData = new FormData();
             var file = $scope.files[0];
             formData.append('id',$scope.id);
             formData.append('course_name',$scope.courseName);
+            formData.append('enrolled',$scope.enrolled);
+            formData.append('batch_type',$scope.batchType);
+            formData.append('training_type',$scope.trainingType);
+            formData.append('next_batch',ms);
+            formData.append('completion_rate',$scope.completionRate);
             formData.append('file',file);
             formData.append('date_time',$scope.dt);
             formData.append('btnName',$scope.btnName);
@@ -381,6 +395,11 @@
                 }
             }).then(function(response) {
                 $scope.courseName = angular.copy(orig_courseName);
+                $scope.enrolled = angular.copy(orig_enrolled);
+                $scope.batchType = angular.copy(orig_batchType);
+                $scope.trainingType = angular.copy(orig_trainingType);
+                $scope.nextBatch = angular.copy(orig_nextBatch);
+                $scope.completionRate = angular.copy(orig_completionRate);
                 $scope.files = angular.copy(orig_courseImage);
                 $scope.freeDemosForm.$setUntouched();
                 $scope.successMessage = "New course uploaded successfully!!";
@@ -392,13 +411,18 @@
             }, function(error) {
                 $scope.errorMessage = "Sorry. Please try again!!";
             });
+        };
 
-            /*-- Reset all form fields and form to its initial state --*/
-            $scope.fn_reset = function() {
-                $scope.courseName = angular.copy(orig_courseName);
-                $scope.files = angular.copy(orig_courseImage);
-                $scope.freeDemosForm.$setUntouched();
-            };
+        /*-- Reset all form fields and form to its initial state --*/
+        $scope.fn_reset = function() {
+            $scope.courseName = angular.copy(orig_courseName);
+            $scope.enrolled = angular.copy(orig_enrolled);
+            $scope.batchType = angular.copy(orig_batchType);
+            $scope.trainingType = angular.copy(orig_trainingType);
+            $scope.nextBatch = angular.copy(orig_nextBatch);
+            $scope.completionRate = angular.copy(orig_completionRate);
+            $scope.files = angular.copy(orig_courseImage);
+            $scope.freeDemosForm.$setUntouched();
         };
 
         /*-- Delete a free demo record --*/
@@ -420,9 +444,14 @@
         };
 
         /*-- Edit Free Demo --*/
-        $scope.fn_editFreeDemo = function(id, course_name, file) {
+        $scope.fn_editFreeDemo = function(id, course_name, enrolled, batch_type, training_type, next_batch, completion_rate, file) {
             $scope.id = id;
             $scope.courseName = course_name;
+            $scope.enrolled = enrolled;
+            $scope.batchType = batch_type;
+            $scope.trainingType = training_type;
+            $scope.nextBatch = next_batch;
+            $scope.completionRate = completion_rate;
             $scope.files = file;
             $scope.btnName = "Update";
         };

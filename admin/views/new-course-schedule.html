@@ -32,9 +32,9 @@
                                         </div>
 	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
 	                                        <label for="course-date-time">Start Date & Time <span class="important">*</span></label>
-	                                        <input type="datetime-local" id="course-date-time" class="form-control" name="courseDate" ng-model="course_schedule_date" placeholder="(ex: 29 Sep 2018)" ng-required="true">
+	                                        <input type="datetime-local" id="course-date-time" class="form-control" name="courseDate" ng-model="course_schedule_date" ng-required="true">
 	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseDate.$error.required && courseSchedulesForm.courseDate.$touched">* Course schedule date is required<br></span>
-	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseDate.$error.datetimelocal && courseSchedulesForm.courseDate.$touched">* Not a valid date or time!<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.courseDate.$error.datetimelocal && courseSchedulesForm.courseDate.$touched">* Not a valid date or time<br></span>
 	                                    </div>
                                         <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
 	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -45,28 +45,22 @@
                                                 <option value="Weekend">Weekend</option>
                                                 <option value="Fastrack">Fastrack</option>
                                             </select>
-	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.required && courseSchedulesForm.batchType.$touched">* Course batch type is required<br></span>
-	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.pattern && courseSchedulesForm.batchType.$invalid">* Course url should contain only alphabets, numbers, spaces, ., -, /, :, ?, =, %.<br></span>
-	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.minlength && courseSchedulesForm.batchType.$touched">* Course url should be minimum of 1 character.<br></span>
-	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.maxlength && courseSchedulesForm.batchType.$touched">* Course url should be maximum of 65000 characters</span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.batchType.$error.required && courseSchedulesForm.batchType.$touched">* Batch type is required<br></span>
 	                                    </div>
                                         <div class="clearfix hidden-sm"></div>
 	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
 	                                        <label for="trainingType">Training Type <span class="important">*</span></label>
-                                            <select id="trainingType" name="trainingType" class="form-control" name="trainingType" ng-model="training_type" ng-required="true">
+                                            <select id="trainingType" class="form-control" name="trainingType" ng-model="training_type" ng-required="true">
                                                 <option value="">-- Select Training Type --</option>
                                                 <option value="Online">Online</option>
                                                 <option value="On-site">On-site</option>
                                                 <option value="On-demand">On-demand</option>
                                             </select>
 	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.required && courseSchedulesForm.trainingType.$touched">* Course training type is required<br></span>
-	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.pattern && courseSchedulesForm.trainingType.$invalid">* Course url should contain only alphabets, numbers, spaces, ., -, /, :, ?, =, %.<br></span>
-	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.minlength && courseSchedulesForm.trainingType.$touched">* Course url should be minimum of 1 character.<br></span>
-	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainingType.$error.maxlength && courseSchedulesForm.trainingType.$touched">* Course url should be maximum of 65000 characters</span>
 	                                    </div>
                                         <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
 	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
-	                                        <label for="course-name">Duration <span class="important">*</span></label>
+	                                        <label for="duration">Duration <span class="important">*</span></label>
 	                                        <input type="number" id="duration" class="form-control" name="duration" string-to-number ng-model="duration" min="1" max="90" placeholder="Duration" ng-required="true">
 	                                        <span class="validation_styles" ng-show="courseSchedulesForm.duration.$error.required && courseSchedulesForm.duration.$touched">* Course duration is required<br></span>
 	                                        <span class="validation_styles" ng-show="courseSchedulesForm.duration.$error.min && courseSchedulesForm.duration.$error.max && courseSchedulesForm.duration.$touched">* Course duration should be between 1 and 90.<br></span>

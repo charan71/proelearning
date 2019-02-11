@@ -1,43 +1,112 @@
-<div class="container-fluid" ng-controller="freeDemosController">
-    <!-- <div class="row">
-        <img class="img-responsive" src="./images/parallax-images/contact.jpg" alt="Contact-Us-Pro-eLearning">
-    </div> -->
-    <div class="row">
-        <div class="banner">
-            <div class="banner-title">
-                <h1 class="text-center">Free Demos</h1>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <!-- Breadcrumbs -->
-    <div class="row hidden-xs">
-        <div ng-include="'views/breadcrumbs.html'"></div>
-    </div>
-
-    <div class="row">
-        <div class="container">
-            <h1 class="">Free Demos</h1>
-            <p>We are currently providing free demos for the following courses. Please select a course and register by filling the form.</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="demo-cards">
-            <!-- Free Demo Tiles -->
-            <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="demo in freeDemos">
-                <div class="demo-grid-outer transition text-center">
-                    <a role="button" data-toggle="modal" data-target="#freeDemo">
-                        <h4 ng-bind="demo.course_name"></h4>
-                        <img src="./images/icons/{{ demo.file }}">
-                        <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                    </a>
+<div ng-controller="freeDemosController">
+    <div class="container-fluid" ng-controller="freeDemosController">
+        <!-- <div class="row">
+            <img class="img-responsive" src="./images/parallax-images/contact.jpg" alt="Contact-Us-Pro-eLearning">
+        </div> -->
+        <div class="row">
+            <div class="banner">
+                <div class="banner-title">
+                    <h1 class="text-center">Free Demos</h1>
                 </div>
             </div>
         </div>
     </div>
-    
-</div>
 
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <div class="row hidden-xs">
+            <div ng-include="'views/breadcrumbs.html'"></div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <h1 class="">Free Demos</h1>
+                <p>We are currently providing free demos for the following courses. Please select a course and register by filling the form.</p>
+            </div>
+        </div>
+
+        <!-- Free Demo Tiles -->
+        <!-- <div class="row">
+            <div class="demo-cards">
+                <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="demo in freeDemos">
+                    <div class="demo-grid-outer transition text-center">
+                        <a role="button" data-toggle="modal" data-target="#freeDemo">
+                            <h4 ng-bind="demo.course_name"></h4>
+                            <img ng-src="./images/icons/{{ demo.file }}">
+                            <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="row">
+            <div class="no-padding search-results-div">
+                <!--Course List Main Starts -->
+                <div class="col-xs-12 col-md-9 coursesmain">
+                    <!--Individual Course List Starts -->
+                    <div class="individualmain">
+                        <h2>Online Training &amp; Certification Courses</h2>
+                        <div id="add-training-courses">
+                            <a class="coursecardblock" href="" ng-repeat="demo in freeDemos" role="button" data-toggle="modal" data-target="#freeDemo">
+                                <div class="card">
+                                    <div class="imgcont">
+                                        <img ng-src="./images/icons/{{ demo.file }}" alt="{{ demo.file }}">
+                                    </div>
+                                    <div class="courseinfo">
+                                        <div class="textinfoleft">
+                                            <h3 ng-bind="demo.course_name"></h3>
+                                            <div class="highlights hidden-xs">
+                                                <span class="stats">
+                                                    <i class="fa fa-user-o"></i>
+                                                    <span>{{ demo.enrolled }} Enrolled</span>
+                                                </span>
+                                                <span class="stats">
+                                                    <i class="fa fa-calendar"></i>
+                                                    <span>{{ demo.batch_type}}</span>
+                                                </span>
+                                                <span class="stats">
+                                                    <i class="fa fa-laptop"></i>
+                                                    <span>{{ demo.training_type }}</span>
+                                                </span>
+                                            </div>
+                                            <div class="batchinfocenter">
+                                                <span class="nextbatch">
+                                                    <div class="nextbatchtitle">Next Batch</div>
+                                                    <div class="nextbatchdate">{{ demo.next_batch | date }}</div>
+                                                </span>
+                                                <span class="completionrate">
+                                                    <div class="completionratetitle">Completion rate</div>
+                                                    <div class="comppercent">{{ demo.completion_rate }}%</div>
+                                                    <div class="progress">
+                                                        <div class="progress-bar progress-bar-success transition" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{ demo.completion_rate }}%;">
+                                                            <span class="sr-only">{{ demo.completion_rate }}% Complete</span>
+                                                        </div>
+                                                    </div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="numinforight hidden-xs">
+                                            <div class="ratingsec" ng-controller="ratingController">
+                                                <div class="ratings" awesome-rating="rating" awesome-rating-options="options"></div>
+                                                <div class="clearfix"></div>
+                                                <div class="ratenum text-right">
+                                                    <span class="rating" ng-bind="rating"></span>
+                                                    <span class="totalreviews">(1150)</span>
+                                                </div>
+                                            </div>
+                                            <div class="wishlist text-right">
+                                                <span class="viewdetailsbtn">Register Now</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Course List Main Ends -->
+            </div>
+        </div>
+    </div>
+</div>
