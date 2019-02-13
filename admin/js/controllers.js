@@ -423,6 +423,7 @@
             $scope.completionRate = angular.copy(orig_completionRate);
             $scope.files = angular.copy(orig_courseImage);
             $scope.freeDemosForm.$setUntouched();
+            $scope.btnName = "Post New Demo";
         };
 
         /*-- Delete a free demo record --*/
