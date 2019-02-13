@@ -24,7 +24,7 @@
                                     <form novalidate name="freeDemosForm" method="POST" enctype="multipart/form-data" id="freeDemosForm" autocomplete="on">
 	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
 	                                        <label for="course-name">Course Name <span class="important">*</span></label>
-	                                        <input type="text" id="course-name" class="form-control" name="courseName" ng-model="courseName" ng-minlength="2" ng-maxlength="250" ng-pattern="/^[a-zA-Z0-9.#/() ]{2,250}$/" placeholder="Course Name" ng-required="true">
+	                                        <input type="text" id="course-name" class="form-control" name="courseName" ng-model="courseName" ng-minlength="2" ng-maxlength="250" ng-pattern="/^[a-zA-Z0-9.#/()\-& ]{2,250}$/" placeholder="Course Name" ng-required="true">
 	                                        <span class="validation_styles" ng-show="freeDemosForm.courseName.$error.required && freeDemosForm.courseName.$touched">* Course name is required<br></span>
 	                                        <span class="validation_styles" ng-show="freeDemosForm.courseName.$error.pattern && freeDemosForm.courseName.$invalid">* Course name should contain only alphabets, numbers, dots, hash and spaces.<br></span>
 	                                        <span class="validation_styles" ng-show="freeDemosForm.courseName.$error.minlength && freeDemosForm.courseName.$touched">* Course name should be minimum of 2 characters.<br></span>
@@ -175,7 +175,7 @@
                                                     <td nowrap class="text-right">{{ demo.enrolled }}</td>
                                                     <td nowrap>{{ demo.batch_type }}</td>
                                                     <td nowrap>{{ demo.training_type }}</td>
-                                                    <td nowrap>{{ demo.next_batch | date }}</td>
+                                                    <td nowrap>{{ demo.next_batch | date:'MMM dd, yyyy @ hh:mm a' }}</td>
                                                     <td nowrap>{{ demo.date_time }}</td>
                                                 </tr>
                                             </tbody>

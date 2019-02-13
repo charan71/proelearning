@@ -839,4 +839,5 @@ footer p {
 .free-demo-tbl tr td a img {
     width: auto;
     height: 30px;
+    overflow: hidden;
 }

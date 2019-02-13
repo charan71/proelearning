@@ -315,7 +315,7 @@
     }])
 
     // Free Demos List
-    .controller("freeDemosList", ['$scope', '$http', '$timeout', function($scope, $http, $timeout) {
+    .controller("freeDemosList", ['$scope', '$http', '$timeout', '$filter', function($scope, $http, $timeout, $filter) {
         $scope.asc = "";
         $scope.desc = false;
         $scope.searchfreeDemos = { course_name:"", batch_type:"", training_type:"" };
@@ -451,6 +451,11 @@
             $scope.batchType = batch_type;
             $scope.trainingType = training_type;
             $scope.nextBatch = next_batch;
+            // Convert milliseconds to DateTime Format
+            $scope.msToDate = $filter('date')($scope.nextBatch, 'dd-MMM-yyyy h:mm a');
+            // Converting Date String to Date Object
+            $scope.dtStringToObj = new Date($scope.msToDate);
+            $scope.nextBatch = $scope.dtStringToObj;
             $scope.completionRate = completion_rate;
             $scope.files = file;
             $scope.btnName = "Update";

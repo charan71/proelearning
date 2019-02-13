@@ -47,7 +47,7 @@
             // Files Upload Code
             print_r($_FILES);
             $tempPath = $_FILES['file']['tmp_name'];
-            $uploadPath = '../jobPostings/' . $_FILES['file']['name'];
+            $uploadPath = '../../images/icons/' . $_FILES['file']['name'];
             move_uploaded_file($tempPath, $uploadPath);
             
             $query = "UPDATE `free_demos_tbl` SET `id`='$id', `course_name`='$course_name', `enrolled`='$enrolled', `batch_type`='$batch_type', `training_type`='$training_type', `next_batch`='$next_batch', `completion_rate`='$completion_rate', `file`='".$_FILES['file']['name']."', `date_time`='$dt' WHERE `id`='$id'";
