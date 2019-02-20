@@ -1,6 +1,6 @@
 angular.module('ProELearning.services', [])
 
-/* Modal Service */
+// Modal Service
 .factory('ModalService', function Service() {
     var modals = []; // array of modals on the page
     var service = {};

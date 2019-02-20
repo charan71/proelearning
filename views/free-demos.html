@@ -1,12 +1,9 @@
 <div ng-controller="freeDemosController">
     <div class="container-fluid" ng-controller="freeDemosController">
-        <!-- <div class="row">
-            <img class="img-responsive" src="./images/parallax-images/contact.jpg" alt="Contact-Us-Pro-eLearning">
-        </div> -->
         <div class="row">
             <div class="banner">
                 <div class="banner-title">
-                    <h1 class="text-center">Free Demos</h1>
+                    <div class="text-center">Free Demos</div>
                 </div>
             </div>
         </div>
@@ -21,37 +18,22 @@
         <div class="row">
             <div class="container">
                 <h1 class="">Free Demos</h1>
-                <p>We are currently providing free demos for the following courses. Please select a course and register by filling the form.</p>
+                <p>We currently provide demos for the following courses. To attend a demo select a course and register.</p>
             </div>
         </div>
 
         <!-- Free Demo Tiles -->
-        <!-- <div class="row">
-            <div class="demo-cards">
-                <div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="demo in freeDemos">
-                    <div class="demo-grid-outer transition text-center">
-                        <a role="button" data-toggle="modal" data-target="#freeDemo">
-                            <h4 ng-bind="demo.course_name"></h4>
-                            <img ng-src="./images/icons/{{ demo.file }}">
-                            <button class="btn-custom-form btn-plain btn-round btn-sm transition">Register Now</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div class="row">
             <div class="no-padding search-results-div">
                 <!--Course List Main Starts -->
                 <div class="col-xs-12 col-md-9 coursesmain">
                     <!--Individual Course List Starts -->
                     <div class="individualmain">
-                        <h2>Online Training &amp; Certification Courses</h2>
                         <div id="add-training-courses">
                             <a class="coursecardblock" href="" ng-repeat="demo in freeDemos" role="button" data-toggle="modal" data-target="#freeDemo">
                                 <div class="card">
                                     <div class="imgcont">
-                                        <img ng-src="./images/icons/{{ demo.file }}" alt="{{ demo.file }}">
+                                        <img ng-src="./images/icons/{{ demo.file }}" alt="{{ demo.course_name }} Demo">
                                     </div>
                                     <div class="courseinfo">
                                         <div class="textinfoleft">

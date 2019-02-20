@@ -1,13 +1,12 @@
 [
-    {"course":"kafka", "IN":"", "others":"600"},
-    {"course":"scala", "IN":"", "others":"600"},
-    {"course":"spark", "IN":"", "others":"580"},
+    {"course":"kafka", "IN":"14000", "others":"600"},
+    {"course":"scala", "IN":"16000", "others":"600"},
+    {"course":"spark", "IN":"16000", "others":"580"},
     {"course":"hadoop", "IN":"20000", "others":"560"},
     {"course":"hadoop-administrator", "IN":"25000", "others":"550"},
     {"course":"hp-vertica", "IN":"", "others":"550"},
-    {"course":"talend", "IN":"", "others":"550"},
-    {"course":"talend", "IN":"", "others":"550"},
-    {"course":"cloudera", "IN":"", "others":"550"},
+    {"course":"talend", "IN":"18000", "others":"550"},
+    {"course":"cloudera", "IN":"18000", "others":"550"},
     
     {"course":"aws", "IN":"20000", "others":"580"},
     {"course":"aws-sysops", "IN":"", "others":"580"},

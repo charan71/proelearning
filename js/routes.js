@@ -1163,7 +1163,9 @@ angular.module('ProELearning.routes', ['ngRoute', 'chart.js'])
         })
             .when("/free-demos",
                     {
-            title: "Free Demos - Pro-elearning",
+            title: "Trail Our Pro-elearning Modules | Online Training | Pro-elearning",
+            description: "Pro-elearning has Online Training courses and modules in our prospectus. We offer high-quality e-learning content that’s relevant to a variety of sectors.",
+            keywords: "Pro-elearning Training, Free Demos on Technologies, Latest online courses, IT Technologies, Software Courses by virtual  Training",
             templateUrl: "views/free-demos.html",
             controller: "freeDemosController",
             label: "Free Demos"

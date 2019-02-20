@@ -22,22 +22,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{{description}}">
 		<meta name="keywords" content="{{keywords}}">
-		<meta name="fragment" content="!">
+		<meta name="canonical" content="{{getCanonical}}">
+		<meta name="prerender-status-code" content="404">
+		<meta name="prerender-status-code" content="301">
+		<meta name="prerender-header" content="Location: http://pro-elearning.com/">
         <meta name="google-site-verification" content="6dfqoRBGvsm03b7lKyteHXqU7DAnr0a3bJERqvCmicU" />
         
         <!-- Favicon -->
 		<link rel="icon" href="./images/logos/favicon.ico" type="image/x-icon">
 		<link rel="shortcut icon" href="./images/logos/favicon.ico" type="image/x-icon">
+		<link rel="icon" type="image/png" href="./images/logos/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="./images/logos/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="./images/logos/favicon-96x96.png" sizes="96x96">
+		<link rel="apple-touch-icon" href="./images/logos/apple-touch-icon-57x57.png" sizes="57x57">
+		<link rel="apple-touch-icon" href="./images/logos/apple-touch-icon-60x60.png" sizes="60x60">
+		<link rel="apple-touch-icon" href="./images/logos/apple-touch-icon-72x72.png" sizes="72x72">
+		<link rel="apple-touch-icon" href="./images/logos/apple-touch-icon-76x76.png" sizes="76x76">
+		<link rel="apple-touch-icon" href="./images/logos/apple-touch-icon-114x114.png" sizes="114x114">
+		<link rel="apple-touch-icon" href="./images/logos/apple-touch-icon-120x120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="./images/logos/apple-touch-icon-152x152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="./images/logos/apple-touch-icon-180x180.png" sizes="180x180">
+		<link rel="manifest" href="./images/logos/site.webmanifest">
+		<link rel="mask-icon" href="./images/logos/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="./images/logos/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+        <!-- //Favicon -->
 		
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/animate.css">
+		<!-- CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap-dropdownhover.css">
-        <link rel="stylesheet" type="text/css" href="plugins/owlcarousel/owl.carousel.min.css">
-        <link rel="stylesheet" type="text/css" href="plugins/fontawesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<link rel="stylesheet" type="text/css" href="css/app.animations.css">
-		<link rel="stylesheet" type="text/css" media="all" href="css/awesomeRating.min.css">
         <!-- //CSS -->
 		
 		<!-- Fonts -->
@@ -98,20 +116,24 @@
 		<!-- Scroll To Top Button End -->
 
         <!-- Scripts -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/angular.min.js"></script>
-		<script type="text/javascript" src="js/angular-route.min.js"></script>
-		<script type="text/javascript" src="js/angular-animate.min.js"></script>
-		<script type="text/javascript" src="js/angular-aria.min.js"></script>
-		<!-- <script type="text/javascript" src="js/angular-messages.min.js"></script> -->
-		<script type="text/javascript" src="js/angular-touch.min.js"></script>
-		<script type="text/javascript" src="js/angular-sanitize.min.js"></script>
-		<script type="text/javascript" src="js/angular-cookies.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-route.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-animate.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-aria.min.js"></script>
+		<!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-messages.min.js"></script> -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-touch.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-sanitize.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-cookies.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-loader.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-resource.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-message-format.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-parse-ext.min.js"></script>
 		<script type="text/javascript" src="js/ngStorage.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="plugins/owlcarousel/owl.carousel.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
         <script type="text/javascript" src="plugins/owlcarousel/owl.rows.js"></script>
-        <script type="text/javascript" src="plugins/Chart.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
         <script type="text/javascript" src="plugins/chart.js/angular-chart.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap-dropdownhover.min.js"></script>
 		<script type="text/javascript" src="plugins/awesomeRating.angular.min.js"></script>

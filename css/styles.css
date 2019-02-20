@@ -192,6 +192,92 @@ p, li {
 }
 /*-- //Margins --*/
 
+/*-- Partial Views Animations --*/
+/* View Container Animations */
+.view-container {
+    position: relative;
+}
+
+.view-frame.ng-enter, .view-frame.ng-leave {
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.view-frame.ng-enter {
+    animation: 0.2s fade-in;
+}
+
+.view-frame.ng-leave {
+    animation: 0.2s fade-out;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+/*-- //Partial Views Animations --*/
+
+/*-- Ratings --*/
+.ratings * {
+	margin-right: 5px;
+	float: left;
+}
+.rating-star {
+	color: lightgrey;
+	cursor: pointer;
+	font-size: 2rem;
+}
+.rating-star.fa.fa-star {
+	color: #FDD05B;
+}
+.rating-star-hover-gold {
+	color: #FDD05B;
+}
+.rating-star-fractional {
+	 position: absolute;
+	 overflow: hidden;
+	 z-index: 2;
+}
+/*-- //Ratings --*/
+
+/* Table Animations */
+.table-row.ng-enter,
+.table-row.ng-leave,
+.table-row.ng-move {
+  transition: 0.5s linear all;
+}
+
+.table-row.ng-enter,
+.table-row.ng-move {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.table-row.ng-enter.ng-enter-active,
+.table-row.ng-move.ng-move-active {
+  height: 37px;
+  opacity: 1;
+}
+
+.table-row.ng-leave {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.table-row.ng-leave.ng-leave-active {
+  height: 0;
+  opacity: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
 strike {
     color: red;
 }
@@ -288,7 +374,7 @@ p {
     height: 100%;
 }
 .btn-free-demo {
-    background-color: #0cb0a0;
+    background-color: #ff6364;
     color: #fff !important;
     margin-top: 14px;
     margin-bottom: 14px;
@@ -301,7 +387,7 @@ p {
 }
 .btn-free-demo:hover, .btn-free-demo:active, .btn-free-demo:focus {
     background-color: #fff !important;
-    color: #0cb0a0 !important;
+    color: #ff6364 !important;
 }
 .navbar-toggle .icon-bar {
     background-color: #0077ff;
@@ -590,22 +676,18 @@ footer hr {
 .carousel-control.left, .carousel-control.right {
     background-image: none;
 }
-.carousel-caption h1, .carousel-caption h4, .carousel-caption p {
+.carousel-caption h2, .carousel-caption h4, .carousel-caption p {
     color: #fff;
 }
-.carousel-caption h1 {
-    -webkit-animation-delay: 0.4s;
-    -moz-animation-delay: 0.4s;
-    -ms-animation-delay: 0.4s;
-    -o-animation-delay: 0.4s;
-    animation-delay: 0.4s;
+.carousel-caption h2 {
+    font-size: 36px;
 }
 .carousel-caption h4 {
-    -webkit-animation-delay: 1.2s;
-    -moz-animation-delay: 1.2s;
-    -ms-animation-delay: 1.2s;
-    -o-animation-delay: 1.2s;
-    animation-delay: 1.2s;
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    -ms-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    animation-delay: 0.8s;
 }
 @media screen and (min-width: 768px) {
     .carousel-caption {
@@ -779,13 +861,13 @@ footer hr {
 .course-slid-ratings .tot-ratings {
     color: dimgrey;
 }
-.dicounted-price {
+.dicount-price {
     color: #111 !important;
     margin-right: 15px;
     font-size: 18px;
     font-weight: 600;
 }
-.actual-price {
+.original-price {
     color: dimgrey;
 }
 
@@ -920,9 +1002,10 @@ footer hr {
 .contact-link-text {
     padding: 50px 0;
 }
-.contact-link-text h1 {
+.contact-link-text h2 {
     margin-bottom: 20px;
     margin-top: 0;
+    font-size: 36px;
 }
 .contact-link-text p {
     margin: 0;
@@ -1203,6 +1286,12 @@ textarea {
     width: 100%;
     border: 1px solid transparent;
 }
+.no-data-msg {
+    font-size: 20px !important;
+    font-weight: 700;
+    padding: 50px 20px !important;
+}
+/* //Table Styles */
 
 /* Contact Addresses */
 input, select, textarea {
@@ -2611,15 +2700,6 @@ h2 {
     display: inline-block;
     width: 100%;
 }
-.coursesmain .individualmain h2 {
-    color: #4a4a4a;
-    font-size: 20px;
-    font-weight: 600;
-    color: #4a4a4a;
-    display: inline-block;
-    width: 100%;
-    margin: 20px 0 5px 0;
-}
 .courseloader {
     position: relative;
     left: 0;
@@ -2885,10 +2965,11 @@ h2 {
     height: 150px;
     position: relative;
 }
-.banner .banner-title h1 {
+.banner .banner-title div {
     color: #fff;
     margin: 0;
     width: 90%;
+    font-size: 36px;
     font-weight: 600;
     position: absolute;
     left: 50%;

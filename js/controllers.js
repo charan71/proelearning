@@ -47,7 +47,7 @@ angular.module('ProELearning.controllers', [])
         {c_image:"e-education-board-book-c-f.jpg", c_imgAlt:"E-Class-Room-Pro-eLearning", c_h1:"Online &middot; On-Site &middot; On-Demand", c_h4:"Learn At Your Convenience", c_para:""},
         {c_image:"e-education-book-tablet.jpg", c_imgAlt:"Learn-New-Skills-Online-Pro-eLearning", c_h1:"Flexible Timings &middot; Choice of Learning &middot; 24x7 Support", c_h4:"Never Miss The Chance", c_para:""},
         {c_image:"be-on-top-of-competition.jpg", c_imgAlt:"Be-on-Top-of-Competition-Pro-eLearning", c_h1:"Build Skills &middot; Work Smarter", c_h4:"Take Your Skills To The Next Level", c_para:""},
-        {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare Yourself For A Never Ending Race", c_h4:"You Are The Mentor, The Instructor and The Path Seeker of Your Career", c_para:""},
+        {c_image:"back-to-e-school.jpg", c_imgAlt:"Back-To-E-School-Pro-eLearning", c_h1:"Prepare For A Never Ending Race", c_h4:"You Are The Mentor, The Instructor and The Path Seeker of Your Career", c_para:""},
     ];
 
 }])
@@ -598,25 +598,16 @@ angular.module('ProELearning.controllers', [])
             var obj = $scope.coursePricesList[i];
             if(obj.course == courseName) {
                 if($window.sessionStorage.getItem('shortCountryCode') == "IN") {
-                    // $scope.currencySymbol = "₹";
+                    $scope.currencySymbol = "₹";
                     returnVal = obj.IN;
                 } else {
-                    // $scope.currencySymbol = "$";
+                    $scope.currencySymbol = "$";
                     returnVal = obj.others;
                 }
             }
         };
         return returnVal;
     };
-
-    // Dynamic Currency Symbol
-    $scope.currencySymbol;
-    if($window.sessionStorage.getItem('shortCountryCode') == "IN") {
-        $scope.currencySymbol = "₹";
-    } else {
-        $scope.currencySymbol = "$";
-    }
-
 }])
 
 /* Course Suggestion Controller */
@@ -906,6 +897,7 @@ angular.module('ProELearning.controllers', [])
     .then(function(response) {
         $scope.courseSchedules = response.data;
     });
+    
 }])
 
 // Careers

@@ -65,7 +65,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="table-row" dir-paginate="schedule in courseSchedules | orderBy:asc:desc | filter:searchSchedule | itemsPerPage:10">
+                        <tr class="table-row" ng-show="courseSchedules.length != 0" dir-paginate="schedule in courseSchedules | orderBy:asc:desc | filter:searchSchedule | itemsPerPage:10">
                             <td>{{ $index + 1 }}.</td>
                             <td nowrap>{{ schedule.course_name }}</td>
                             <td nowrap>{{ schedule.start_date | date:'dd MMM yyyy' }}</td>
@@ -73,7 +73,10 @@
                             <td nowrap>{{ schedule.batch_type }}</td>
                             <td nowrap>{{ schedule.training_type }}</td>
                             <td nowrap>{{ schedule.duration }} hrs</td>
-                            <td nowrap>Mr. {{ schedule.trainer_name }}</td>
+                            <td nowrap>{{ schedule.trainer_name }}</td>
+                        </tr>
+                        <tr ng-show="courseSchedules.length == 0">
+                            <td colspan="8" class="no-data-msg text-center">Oops! No schedules available at this time.</td>
                         </tr>
                     </tbody>
                 </table>
