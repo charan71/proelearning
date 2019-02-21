@@ -1182,7 +1182,8 @@ angular.module('ProELearning.routes', ['ngRoute', 'chart.js'])
                 {
             title: "404 Page Not Found - Pro-elearning",
             redirectTo: "/404",
-            templateUrl: "views/404.html"
+            templateUrl: "views/404.html",
+            controller: "pageNotFoundCtrl"
         })
         
         /* Configure HTML5 To Get Links Working */

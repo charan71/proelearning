@@ -923,6 +923,10 @@ angular.module('ProELearning.controllers', [])
     
 }])
 
+.controller("pageNotFoundCtrl", ["$scope", "$rootScope", "statusCodeService", function($scope, $rootScope, statusCodeService) {
+    statusCodeService.setStatusCode('404');
+}])
+
 .controller("footerController", ["$scope", function($scope) {
     // Copyright year
     $scope.fulldate = new Date();

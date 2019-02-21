@@ -1,5 +1,14 @@
 angular.module('ProELearning.services', [])
 
+// Page Redirects Service
+.service("statusCodeService", function($rootScope) {
+    return {
+        setStatusCode: function(code) {
+            $rootScope.statusCode = code;
+        }
+    };
+})
+
 // Modal Service
 .factory('ModalService', function Service() {
     var modals = []; // array of modals on the page
