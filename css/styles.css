@@ -2938,23 +2938,17 @@ h2 {
 .coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec .ratings i {
     font-size: 14px;
 }
-.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .completionrate {
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .demodates {
     width: 50%;
     float: left;
 }
-.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch .nextbatchtitle, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .completionrate .completionratetitle {
+.coursesmain .individualmain .coursecardblock .card .courseinfo .numinforight .ratingsec, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch .nextbatchtitle, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .demodates .demodatestitle {
     font-size: 12px;
     font-weight: 400;
     color: #9b9b9b;
     margin-bottom: 5px;
 }
-.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .completionrate .comppercent {
-    float: right;
-    color: #4a4a4a;
-    font-size: 14px;
-    font-weight: 600;
-}
-.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch .nextbatchdate {
+.coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .demodates .demodate, .coursesmain .individualmain .coursecardblock .card .courseinfo .textinfoleft .batchinfocenter .nextbatch .nextbatchdate {
     color: #4a4a4a;
     font-size: 14px;
     font-weight: 600;

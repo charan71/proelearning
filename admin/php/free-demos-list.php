@@ -14,7 +14,7 @@
         $batch_type = $_POST['batch_type'];
         $training_type = $_POST['training_type'];
         $next_batch = $_POST['next_batch'];
-        $completion_rate = $_POST['completion_rate'];
+        $demo_dates = $_POST['demo_dates'];
         $dt = $_POST['date_time'];
 
         // Files Upload Code
@@ -23,7 +23,7 @@
         $uploadPath = '../../images/icons/' . $_FILES['file']['name'];
         move_uploaded_file($tempPath, $uploadPath);
         
-        $query = "INSERT INTO `free_demos_tbl` (`course_name`, `enrolled`, `batch_type`, `training_type`, `next_batch`, `completion_rate`, `file`, `date_time`) VALUES ('$course_name', '$enrolled', '$batch_type', '$training_type', '$next_batch', '$completion_rate', '".$_FILES['file']['name']."', '$dt')";
+        $query = "INSERT INTO `free_demos_tbl` (`course_name`, `enrolled`, `batch_type`, `training_type`, `next_batch`, `demo_dates`, `file`, `date_time`) VALUES ('$course_name', '$enrolled', '$batch_type', '$training_type', '$next_batch', '$demo_dates', '".$_FILES['file']['name']."', '$dt')";
         
         if(mysqli_query($conn, $query)) {
             echo "Data Inserted...";
@@ -38,11 +38,11 @@
         $batch_type = $_POST['batch_type'];
         $training_type = $_POST['training_type'];
         $next_batch = $_POST['next_batch'];
-        $completion_rate = $_POST['completion_rate'];
+        $demo_dates = $_POST['demo_dates'];
         $dt = $_POST['date_time'];
 
         if(empty($_FILES['file']['name'])) {
-            $query = "UPDATE `free_demos_tbl` SET `id`='$id', `course_name`='$course_name', `enrolled`='$enrolled', `batch_type`='$batch_type', `training_type`='$training_type', `next_batch`='$next_batch', `completion_rate`='$completion_rate', `date_time`='$dt' WHERE `id`='$id'";
+            $query = "UPDATE `free_demos_tbl` SET `id`='$id', `course_name`='$course_name', `enrolled`='$enrolled', `batch_type`='$batch_type', `training_type`='$training_type', `next_batch`='$next_batch', `demo_dates`='$demo_dates', `date_time`='$dt' WHERE `id`='$id'";
         } else {
             // Files Upload Code
             print_r($_FILES);
@@ -50,7 +50,7 @@
             $uploadPath = '../../images/icons/' . $_FILES['file']['name'];
             move_uploaded_file($tempPath, $uploadPath);
             
-            $query = "UPDATE `free_demos_tbl` SET `id`='$id', `course_name`='$course_name', `enrolled`='$enrolled', `batch_type`='$batch_type', `training_type`='$training_type', `next_batch`='$next_batch', `completion_rate`='$completion_rate', `file`='".$_FILES['file']['name']."', `date_time`='$dt' WHERE `id`='$id'";
+            $query = "UPDATE `free_demos_tbl` SET `id`='$id', `course_name`='$course_name', `enrolled`='$enrolled', `batch_type`='$batch_type', `training_type`='$training_type', `next_batch`='$next_batch', `demo_dates`='$demo_dates', `file`='".$_FILES['file']['name']."', `date_time`='$dt' WHERE `id`='$id'";
         }
         
         if(mysqli_query($conn, $query)) {

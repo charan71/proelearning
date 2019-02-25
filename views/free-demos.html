@@ -53,18 +53,13 @@
                                                 </span>
                                             </div>
                                             <div class="batchinfocenter">
-                                                <span class="nextbatch">
-                                                    <div class="nextbatchtitle">Next Batch</div>
-                                                    <div class="nextbatchdate">{{ demo.next_batch | date }}</div>
+                                                <span class="demodates">
+                                                    <div class="demodatestitle">Demos on</div>
+                                                    <div class="demodate">{{ demo.demo_dates }}</div>
                                                 </span>
-                                                <span class="completionrate">
-                                                    <div class="completionratetitle">Completion rate</div>
-                                                    <div class="comppercent">{{ demo.completion_rate }}%</div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar progress-bar-success transition" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: {{ demo.completion_rate }}%;">
-                                                            <span class="sr-only">{{ demo.completion_rate }}% Complete</span>
-                                                        </div>
-                                                    </div>
+                                                <span class="nextbatch">
+                                                    <div class="nextbatchtitle">Next batch</div>
+                                                    <div class="nextbatchdate">{{ demo.next_batch | date }}</div>
                                                 </span>
                                             </div>
                                         </div>

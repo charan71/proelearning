@@ -325,7 +325,7 @@
         var orig_batchType = $scope.batchType;
         var orig_trainingType = $scope.trainingType;
         var orig_nextBatch = $scope.nextBatch;
-        var orig_completionRate = $scope.completionRate;
+        var orig_demoDates = $scope.demoDates;
         var orig_courseImage = $scope.files;
         $scope.dt = Date();
         $scope.btnName = "Post New Demo";
@@ -380,7 +380,7 @@
             formData.append('batch_type',$scope.batchType);
             formData.append('training_type',$scope.trainingType);
             formData.append('next_batch',ms);
-            formData.append('completion_rate',$scope.completionRate);
+            formData.append('demo_dates',$scope.demoDates);
             formData.append('file',file);
             formData.append('date_time',$scope.dt);
             formData.append('btnName',$scope.btnName);
@@ -399,7 +399,7 @@
                 $scope.batchType = angular.copy(orig_batchType);
                 $scope.trainingType = angular.copy(orig_trainingType);
                 $scope.nextBatch = angular.copy(orig_nextBatch);
-                $scope.completionRate = angular.copy(orig_completionRate);
+                $scope.demoDates = angular.copy(orig_demoDates);
                 $scope.files = angular.copy(orig_courseImage);
                 $scope.freeDemosForm.$setUntouched();
                 $scope.successMessage = "New course uploaded successfully!!";
@@ -420,7 +420,7 @@
             $scope.batchType = angular.copy(orig_batchType);
             $scope.trainingType = angular.copy(orig_trainingType);
             $scope.nextBatch = angular.copy(orig_nextBatch);
-            $scope.completionRate = angular.copy(orig_completionRate);
+            $scope.demoDates = angular.copy(orig_demoDates);
             $scope.files = angular.copy(orig_courseImage);
             $scope.freeDemosForm.$setUntouched();
             $scope.btnName = "Post New Demo";
@@ -445,7 +445,7 @@
         };
 
         /*-- Edit Free Demo --*/
-        $scope.fn_editFreeDemo = function(id, course_name, enrolled, batch_type, training_type, next_batch, completion_rate, file) {
+        $scope.fn_editFreeDemo = function(id, course_name, enrolled, batch_type, training_type, next_batch, demo_dates, file) {
             $scope.id = id;
             $scope.courseName = course_name;
             $scope.enrolled = enrolled;
@@ -457,7 +457,7 @@
             // Converting Date String to Date Object
             $scope.dtStringToObj = new Date($scope.msToDate);
             $scope.nextBatch = $scope.dtStringToObj;
-            $scope.completionRate = completion_rate;
+            $scope.demoDates = demo_dates;
             $scope.files = file;
             $scope.btnName = "Update";
         };

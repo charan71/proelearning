@@ -243,7 +243,7 @@ span.validation_styles {
 /*-- side nav --*/
 .side-nav {
     width: 240px;
-    height: 92.5vh;
+    height: calc(100vh - 50px);
     position: fixed;
     padding-top: 20px;
     background-color: #2B333E;
