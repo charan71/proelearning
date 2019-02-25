@@ -5,7 +5,7 @@ body
     /* background-color: #FAFAFA; */
     color: #676a6d;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     body {
         padding-top: 66px;
     }
@@ -19,14 +19,25 @@ body
 	background-color: #b9e3fe;
 	color: #395286;
 }
-
+* {
+    outline: none !important;
+}
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 100px white inset !important;
     box-shadow: 0 0 0px 100px white inset !important;
 }
-* {
-    outline: none !important;
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
 }
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
 .floating-label {
     pointer-events: none;
 }
