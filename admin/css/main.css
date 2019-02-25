@@ -775,6 +775,15 @@ footer p {
     padding: 50px 20px !important;
 }
 
+/*-- Progress Bars --*/
+.progress {
+    width: 100%;
+}
+.progress-bar-success {
+    background-color: #43ce45;
+}
+/*-- //Progress Bars */
+
 /*-- Update & Delete Buttons --*/
 .btn-container {
     position: relative;

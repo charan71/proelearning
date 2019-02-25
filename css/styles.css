@@ -2979,10 +2979,8 @@ h2 {
 
 /************ Progress Bars ************/
 .progress {
-    /* height: 6px; */
     margin: 7px 8px 7px 0;
     width: 100%;
-    float: left;
 }
 .progress-bar-success {
     background-color: #43ce45;

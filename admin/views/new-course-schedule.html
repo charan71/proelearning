@@ -176,9 +176,15 @@
                                                     <td nowrap>{{ schedule.start_date | date:'hh:mm a' }}</td>
                                                     <td nowrap>{{ schedule.batch_type }}</td>
                                                     <td nowrap>{{ schedule.training_type }}</td>
-                                                    <td nowrap>{{ schedule.duration }} hrs</td>
+                                                    <td nowrap class="text-right">{{ schedule.duration }} hrs</td>
                                                     <td nowrap>{{ schedule.trainer_name }}</td>
-                                                    <td nowrap>{{ schedule.completion_rate }}</td>
+                                                    <td nowrap class="text-right">
+                                                        <div class="progress">
+                                                            <div class="progress-bar progress-bar-success transition" role="progressbar" aria-valuenow="{{ schedule.completion_rate }}" aria-valuemin="0" aria-valuemax="100" ng-cloak style="width: {{ schedule.completion_rate }}%;">
+                                                                <span class="">{{ schedule.completion_rate }}%</span>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                     <td nowrap>{{ schedule.date_time }}</td>
                                                 </tr>
                                                 <tr ng-show="courseSchedules.length == 0">
