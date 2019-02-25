@@ -2,7 +2,7 @@
  
 	include("../php/config.php");
     
-	$conn = new mysqli($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
+	$conn = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE);
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
@@ -23,9 +23,10 @@
             $training_type = mysqli_real_escape_string($conn, $data->training_type);
             $duration = mysqli_real_escape_string($conn, $data->duration);
             $trainer_name = mysqli_real_escape_string($conn, $data->trainer_name);
+            $completion_rate = mysqli_real_escape_string($conn, $data->completion_rate);
             $dt = mysqli_real_escape_string($conn, $data->date_time);
             
-            $query = "INSERT INTO `course_schedules` (`course_name`, `start_date`, `batch_type`, `training_type`, `duration`, `trainer_name`, `date_time`) VALUES ('$course_name', '$convertedDateToMilliSec', '$batch_type', '$training_type', '$duration', '$trainer_name', '$dt')";
+            $query = "INSERT INTO `course_schedules` (`course_name`, `start_date`, `batch_type`, `training_type`, `duration`, `trainer_name`, `completion_rate`, `date_time`) VALUES ('$course_name', '$convertedDateToMilliSec', '$batch_type', '$training_type', '$duration', '$trainer_name', '$completion_rate', '$dt')";
             
             if(mysqli_query($conn, $query)) {
                 echo "New Course Schedule Inserted Successfully...";
@@ -45,9 +46,10 @@
             $training_type = mysqli_real_escape_string($conn, $data->training_type);
             $duration = mysqli_real_escape_string($conn, $data->duration);
             $trainer_name = mysqli_real_escape_string($conn, $data->trainer_name);
+            $completion_rate = mysqli_real_escape_string($conn, $data->completion_rate);
             $dt = mysqli_real_escape_string($conn, $data->date_time);
             
-            $query = "UPDATE `course_schedules` SET `course_name`='$course_name', `start_date`='$convertedDateToMilliSec', `batch_type`='$batch_type', `training_type`='$training_type', `duration`='$duration', `trainer_name`='$trainer_name', `date_time`='$dt' WHERE `sno`='$sno'";
+            $query = "UPDATE `course_schedules` SET `course_name`='$course_name', `start_date`='$convertedDateToMilliSec', `batch_type`='$batch_type', `training_type`='$training_type', `duration`='$duration', `trainer_name`='$trainer_name', `completion_rate`='$completion_rate', `date_time`='$dt' WHERE `sno`='$sno'";
             
             if(mysqli_query($conn, $query)) {
                 echo "Course Schedule Updated Successfully..!";

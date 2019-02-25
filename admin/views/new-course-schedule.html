@@ -72,6 +72,14 @@
 	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.pattern && courseSchedulesForm.trainerName.$invalid">* Course name should contain only alphabets, dots, hash and spaces.<br></span>
 	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.minlength && courseSchedulesForm.trainerName.$touched">* Course name should be minimum of 2 characters.<br></span>
 	                                        <span class="validation_styles" ng-show="courseSchedulesForm.trainerName.$error.maxlength && courseSchedulesForm.trainerName.$touched">* Course name should be maximum of 250 characters</span>
+                                        </div>
+                                        <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
+	                                    <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
+	                                        <label for="completionrate">Completion Rate <span class="important">*</span></label>
+	                                        <input type="number" id="completionrate" class="form-control" name="completionrate" string-to-number ng-model="completion_rate" min="0" max="100" placeholder="Completion Rate" ng-required="true">
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.completionrate.$error.required && courseSchedulesForm.completionrate.$touched">* Completion Rate is required<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.completionrate.$error.min && courseSchedulesForm.enrolled.$touched">* Completion Rate should be between 1 and 90.<br></span>
+	                                        <span class="validation_styles" ng-show="courseSchedulesForm.completionrate.$error.max && courseSchedulesForm.enrolled.$touched">* Completion Rate cannot exceed 100.<br></span>
 	                                    </div>
                                         <div class="clearfix"></div>
                                         <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -131,6 +139,7 @@
                                                     <th></th>
                                                     <th></th>
                                                     <th></th>
+                                                    <th></th>
                                                 </tr>
                                                 <tr>
                                                     <th>#</th>
@@ -145,6 +154,7 @@
                                                     <th nowrap>Training Type</th>
                                                     <th>Duration</th>
                                                     <th nowrap>Trainer Name</th>
+                                                    <th nowrap>Completion Rate</th>
                                                     <th nowrap>Posted Date</th>
                                                 </tr>
                                             </thead>
@@ -157,7 +167,7 @@
                                                             <button type="button" title="Delete" ng-click="fn_deleteSchedule(schedule.sno);">
                                                                 <i class="fa fa-trash-o" aria-hidden="true"></i>
                                                             </button>
-                                                            <button type="button" title="Edit" ng-click="fn_editSchedule(schedule.sno, schedule.course_name, schedule.start_date, schedule.batch_type, schedule.training_type, schedule.duration, schedule.trainer_name, schedule.btnName);">
+                                                            <button type="button" title="Edit" ng-click="fn_editSchedule(schedule.sno, schedule.course_name, schedule.start_date, schedule.batch_type, schedule.training_type, schedule.duration, schedule.trainer_name, schedule.completion_rate, schedule.btnName);">
                                                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                                             </button>
                                                         </span>
@@ -167,11 +177,12 @@
                                                     <td nowrap>{{ schedule.batch_type }}</td>
                                                     <td nowrap>{{ schedule.training_type }}</td>
                                                     <td nowrap>{{ schedule.duration }} hrs</td>
-                                                    <td nowrap>Mr. {{ schedule.trainer_name }}</td>
+                                                    <td nowrap>{{ schedule.trainer_name }}</td>
+                                                    <td nowrap>{{ schedule.completion_rate }}</td>
                                                     <td nowrap>{{ schedule.date_time }}</td>
                                                 </tr>
                                                 <tr ng-show="courseSchedules.length == 0">
-                                                    <td colspan="9" class="no-data-msg text-center">Oops! No schedules available at this time.</td>
+                                                    <td colspan="10" class="no-data-msg text-center">Oops! No schedules available at this time.</td>
                                                 </tr>
                                             </tbody>
                                         </table>

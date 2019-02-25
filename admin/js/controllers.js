@@ -586,13 +586,14 @@
         var orig_trainingType = $scope.training_type;
         var orig_duration = $scope.duration;
         var orig_trainerName = $scope.trainer_name;
+        var orig_completionRate = $scope.completion_rate;
         $scope.dt = Date();
         $scope.btnName = "Insert";
 
         $scope.fn_insertNewSchedules = function() {
             $http.post(
                 "./php/course-schedules.php",
-                {'sno': $scope.sno, 'course_name': $scope.course_name, 'start_date': $scope.course_schedule_date, 'batch_type': $scope.batch_type, 'training_type': $scope.training_type, 'duration': $scope.duration, 'trainer_name': $scope.trainer_name, 'date_time': $scope.dt, 'btnName': $scope.btnName}
+                {'sno': $scope.sno, 'course_name': $scope.course_name, 'start_date': $scope.course_schedule_date, 'batch_type': $scope.batch_type, 'training_type': $scope.training_type, 'duration': $scope.duration, 'trainer_name': $scope.trainer_name, 'completion_rate': $scope.completion_rate, 'date_time': $scope.dt, 'btnName': $scope.btnName}
                 )
                 .then(function(response) {
                 $scope.course_name = angular.copy(orig_courseName);
@@ -601,6 +602,7 @@
                 $scope.training_type = angular.copy(orig_trainingType);
                 $scope.duration = angular.copy(orig_duration);
                 $scope.trainer_name = angular.copy(orig_trainerName);
+                $scope.completion_rate = angular.copy(orig_completionRate);
                 $scope.courseSchedulesForm.$setUntouched();
                 $scope.successMessage = "Updated successfully!!";
                 $timeout(function() {
@@ -621,6 +623,7 @@
             $scope.training_type = angular.copy(orig_trainingType);
             $scope.duration = angular.copy(orig_duration);
             $scope.trainer_name = angular.copy(orig_trainerName);
+            $scope.completion_rate = angular.copy(orig_completionRate);
             $scope.courseSchedulesForm.$setUntouched();
             $scope.btnName = "Insert";
         };
@@ -644,7 +647,7 @@
         };
 
         /*-- Edit selected course schedule --*/
-        $scope.fn_editSchedule = function(sno, course_name, start_date, batch_type, training_type, duration, trainer_name) {
+        $scope.fn_editSchedule = function(sno, course_name, start_date, batch_type, training_type, duration, trainer_name, completion_rate) {
             $scope.sno = sno;
             $scope.course_name = course_name;
             $scope.course_schedule_date = start_date;
@@ -657,6 +660,7 @@
             $scope.training_type = training_type;
             $scope.duration = duration;
             $scope.trainer_name = trainer_name;
+            $scope.completion_rate = completion_rate;
             $scope.btnName = "Update";
         };
     }])

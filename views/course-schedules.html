@@ -48,6 +48,7 @@
                             </th>
                             <th></th>
                             <th></th>
+                            <th></th>
                         </tr>
                         <tr>
                             <th>#</th>
@@ -62,6 +63,7 @@
                             <th nowrap>Training Type</th>
                             <th>Duration</th>
                             <th nowrap>Trainer Name</th>
+                            <th nowrap>Completion Rate</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,9 +76,17 @@
                             <td nowrap>{{ schedule.training_type }}</td>
                             <td nowrap>{{ schedule.duration }} hrs</td>
                             <td nowrap>{{ schedule.trainer_name }}</td>
+                            <td nowrap>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-success transition" role="progressbar" aria-valuenow="{{ schedule.completion_rate }}" aria-valuemin="0" aria-valuemax="100" ng-cloak style="width: {{ schedule.completion_rate }}%;">
+                                        <span class="">{{ schedule.completion_rate }}%</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <div class="clearfix"></div>
                         </tr>
                         <tr ng-show="courseSchedules.length == 0">
-                            <td colspan="8" class="no-data-msg text-center">Oops! No schedules available at this time.</td>
+                            <td colspan="9" class="no-data-msg text-center">Oops! No schedules available at this time.</td>
                         </tr>
                     </tbody>
                 </table>

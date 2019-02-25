@@ -76,7 +76,7 @@
                                         <div class="clearfix hidden-xs hidden-md hidden-lg"></div>
                                         <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                             <label for="job-desc" class="control-label">Course Image Icon <span class="important">*</span></label>
-                                            <input type="file" id="job-desc" name="jobDesc" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".svg" ng-required="true">
+                                            <input type="file" id="job-desc" name="jobDesc" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".png,.svg,.jpg,.jpeg" ng-required="true">
                                             <span class="validation_styles" ng-show="freeDemosForm.jobDesc.$error.required && freeDemosForm.jobDesc.$touched">* Job description file is required<br></span>
                                             <p class="help-block">For best user experience upload <strong>.svg</strong> files only.</p>
                                         </div>
