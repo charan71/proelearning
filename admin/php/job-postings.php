@@ -19,7 +19,7 @@
         // Files Upload Code
         print_r($_FILES);
         $tempPath = $_FILES['file']['tmp_name'];
-        $uploadPath = '../jobPostings/' . $_FILES['file']['name'];
+        $uploadPath = '../../job-postings/' . $_FILES['file']['name'];
         move_uploaded_file($tempPath, $uploadPath);
         
         $query = "INSERT INTO `job_postings` (`job_id`, `position`, `min_experience`, `max_experience`, `posting_date`, `file`, `date_time`) VALUES ('$job_id', '$position', '$min_exp', '$max_exp', '$posting_date', '".$_FILES['file']['name']."', '$dt')";
@@ -45,7 +45,7 @@
             // Files Upload Code
             print_r($_FILES);
             $tempPath = $_FILES['file']['tmp_name'];
-            $uploadPath = '../jobPostings/' . $_FILES['file']['name'];
+            $uploadPath = '../../job-postings/' . $_FILES['file']['name'];
             move_uploaded_file($tempPath, $uploadPath);
             
             $query = "UPDATE `job_postings` SET `job_id`='$job_id', `position`='$position', `min_experience`='$min_exp', `max_experience`='$max_exp', `posting_date`='$posting_date', `file`='".$_FILES['file']['name']."', `date_time`='$dt' WHERE `sno`='$sno'";

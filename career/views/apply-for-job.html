@@ -45,8 +45,9 @@
                                         <div class="clearfix hidden-sm"></div>
                                         <div class="form-group col-xs-12 col-sm-6 col-md-4 col-lg-4">
                                             <label for="job-desc" class="control-label">Updated CV <span class="important">*</span></label>
-                                            <input type="file" id="cv" name="cv" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".pdf" ng-required="true">
+                                            <input type="file" id="cv" name="cv" ng-model="files" file-input="files" onchange="angular.element(this).scope().uploadedFile(this)" accept=".doc,.docx,.pdf" ng-required="true">
                                             <span class="validation_styles" ng-show="jobApplyForm.cv.$error.required && jobApplyForm.cv.$touched">* Job description file is required<br></span>
+                                            <p class="help-block">Only <strong>.doc | .docx | .pdf</strong> formats are supported.</p>
                                         </div>
                                         <div class="clearfix"></div>
                                         <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -116,7 +117,7 @@
                                                     </td>
                                                     <td nowrap>{{ post.position }}</td>
                                                     <td nowrap class="text-center">
-                                                        <a class="btn-download transition" href="../admin/jobPostings/{{ post.job_description }}" title="{{ post.job_description }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color: red;"></i></a>
+                                                        <a class="btn-download transition" href="../job-postings/{{ post.job_description }}" title="{{ post.job_description }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color: red;"></i></a>
                                                     </td>
                                                     <td nowrap>{{ post.date_time | date:'dd MM yyyy' }}</td>
                                                 </tr>

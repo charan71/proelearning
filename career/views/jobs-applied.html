@@ -60,7 +60,7 @@
                                                     </td>
                                                     <td nowrap>{{ post.position }}</td>
                                                     <td nowrap class="text-center">
-                                                        <a class="btn-download transition" href="../admin/jobPostings/{{ post.job_description }}" title="{{ post.job_description }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color: red;"></i></a>
+                                                        <a class="btn-download transition" href="../job-postings/{{ post.job_description }}" title="{{ post.job_description }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true" style="color: red;"></i></a>
                                                     </td>
                                                     <td nowrap>{{ post.date_time | date:'dd MM yyyy' }}</td>
                                                 </tr>
@@ -73,7 +73,7 @@
                                        <dir-pagination-controls
                                             max-size="5"
                                             direction-links="true"
-                                            boundary-links="true" >
+                                            boundary-links="true">
                                        </dir-pagination-controls>
                                     </div>
                                 </div>
