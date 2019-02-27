@@ -1,0 +1,175 @@
+<!-- Navigation Menu -->
+<header>
+	<div ng-include="'views/header.html'"></div>
+</header>
+<!-- //Navigation Menu -->
+
+<div class="main-container">
+    <!-- Side Nav -->
+    <div ng-include="'views/side-nav.html'"></div>
+    <!-- //Side Nav -->
+    
+    <!-- Partial Views -->
+    <div class="main-content-wrapper">
+        <div class="main-content">
+            <div ng-controller="careerRegistrations">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="panel">
+                            <div class="panel-heading">
+                                <div class="panel-title">Registered Candidates</div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-wrapper">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr class="filterRow">
+                                                    <th></th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.first_name" placeholder="Search Using Name">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.email" placeholder="Search Using Email">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.phone" placeholder="Search Using Phone">
+                                                    </th>
+                                                    <th></th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.job_title" placeholder="Search Using Position">
+                                                    </th>
+                                                    <th></th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.current_company" placeholder="Search Using Current Company">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.skills" placeholder="Search Using Skills">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.university" placeholder="Search Using University">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.degree" placeholder="Search Using Degree">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.specialization" placeholder="Search Using Specialization">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.year_of_graduation" placeholder="Search Using Graduation Year">
+                                                    </th>
+                                                    <th>
+                                                        <input class="searchFilterBox" type="text" size="15" ng-model="searchRegisteredCandidates.grade" placeholder="Search Using Grade">
+                                                    </th>
+                                                    <th></th>
+                                                </tr>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th nowrap ng-click="asc='first_name'; desc=!desc">
+                                                        <span class="th-title-wrap">First Name</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='email'; desc=!desc">
+                                                        <span class="th-title-wrap">Email</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='phone'; desc=!desc">
+                                                        <span class="th-title-wrap">Phone</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>Resume</th>
+                                                    <th nowrap ng-click="asc='job_title'; desc=!desc">
+                                                        <span class="th-title-wrap">Current Position</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>Total Exp.</th>
+                                                    <th nowrap ng-click="asc='current_company'; desc=!desc">
+                                                        <span class="th-title-wrap">Current Company</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='skills'; desc=!desc">
+                                                        <span class="th-title-wrap">Skills</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='university'; desc=!desc">
+                                                        <span class="th-title-wrap">University</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='degree'; desc=!desc">
+                                                        <span class="th-title-wrap">Degree</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='specialization'; desc=!desc">
+                                                        <span class="th-title-wrap">Specialization</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='year_of_graduation'; desc=!desc">
+                                                        <span class="th-title-wrap">Year of Graduation</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap ng-click="asc='grade'; desc=!desc">
+                                                        <span class="th-title-wrap">Grade</span>
+                                                        <i class="fa fa-sort-asc" aria-hidden="true"></i>
+                                                        <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                                                    </th>
+                                                    <th nowrap>Registered On</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-row" dir-paginate="candidate in registeredCandidates | orderBy:asc:desc | filter:searchRegisteredCandidates | itemsPerPage:10">
+                                                    <td>{{ $index + 1 }}.</td>
+                                                    <td nowrap>{{ candidate.first_name }} {{ candidate.middle_name | defaultValueFilter }} {{ candidate.last_name }}</td>
+                                                    <td nowrap>{{ candidate.email }}</td>
+                                                    <td nowrap>{{ candidate.phone }}</td>
+                                                    <td nowrap class="text-center">
+                                                        <a class="btn-download transition" href="../resumes/{{ candidate.resume }}" title="{{ candidate.resume }}" target="_blank"><i class="fa fa-file-text-o" aria-hidden="true" style="color: red;"></i></a>
+                                                    </td>
+                                                    <td nowrap>{{ candidate.job_title }}</td>
+                                                    <td nowrap class="text-center">{{ candidate.tot_exp }}</td>
+                                                    <td nowrap>{{ candidate.current_company }}</td>
+                                                    <td nowrap>{{ candidate.skills }}</td>
+                                                    <td nowrap>{{ candidate.university }}</td>
+                                                    <td nowrap>{{ candidate.degree }}</td>
+                                                    <td nowrap>{{ candidate.specialization }}</td>
+                                                    <td nowrap class="text-center">{{ candidate.year_of_graduation }}</td>
+                                                    <td nowrap class="text-right">{{ candidate.grade }}</td>
+                                                    <td nowrap>{{ candidate.date_time | date:'dd-MMM-yyyy' }}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                
+                                    <!-- Pagination -->
+                                    <div class="text-center">
+                                       <dir-pagination-controls
+                                            max-size="5"
+                                            direction-links="true"
+                                            boundary-links="true" >
+                                       </dir-pagination-controls>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Partial Views -->
+    
+    <!-- Footer -->
+    <footer>
+        <div ng-include="'views/footer.html'"></div>
+    </footer>
+    <!-- //Footer -->
+</div>

@@ -181,6 +181,25 @@
         };
     }])
 
+    // Candidates Registered in Careers List
+    .controller("careerRegistrations", ['$scope', '$http', function($scope, $http) {
+        $scope.asc = "";
+        $scope.desc = false;
+        $scope.searchRegisteredCandidates = { first_name:"", middle_name:"", last_name:"" };
+        $scope.registeredCandidates = [];
+        $http({
+            url: "./php/career-registrations.php",
+            method: "POST",
+            data: "",
+            headers: {
+                "Content-Type":"application/x-www-form-urlencoded"
+            }
+        })
+        .then(function(response) {
+            $scope.registeredCandidates = response.data;
+        })
+    }])
+
     // Applied Candidates List
     .controller("appliedCandidates", ['$scope', '$http', function($scope, $http) {
         $scope.asc = "";

@@ -3,8 +3,9 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 .config(['$routeProvider', '$locationProvider', 'ChartJsProvider', function($routeProvider, $locationProvider, ChartJsProvider) {
     $routeProvider
 	.when("/admin-login", {
+		title: "Login to Admin Dashboard - Pro-elearning",
 		templateUrl: "views/admin-login.html",
-		controller: "adminLoginCtrl"
+		controller: "adminLoginCtrl",
 	})
 	.when("/logout", {
 		resolve: {
@@ -12,7 +13,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 				user.clearData();
 				$location.path('/admin-login');
 			}
-		}
+		},
 	})
 	.when("/", {
 		resolve: {
@@ -50,6 +51,18 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 		templateUrl: "views/profile.html",
 		controller: "profileCtrl"
 	})
+    .when("/career-registrations", {
+		resolve: {
+			check: function($location, user) {
+				if(!user.isUserLoggedIn()) {
+					$location.path('/admin-login');
+				}
+			},
+		},
+        title: "Career Registrations - Pro-elearning Administrator",
+        templateUrl: "views/career-registrations.html",
+        controller: "careerRegistrations"
+    })
     .when("/applied-candidates", {
 		resolve: {
 			check: function($location, user) {

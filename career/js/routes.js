@@ -3,6 +3,7 @@ angular.module("routes", ['ngRoute', 'chart.js'])
 .config(['$routeProvider', '$locationProvider', 'ChartJsProvider', function($routeProvider, $locationProvider, ChartJsProvider) {
     $routeProvider
 	.when("/careers-login", {
+		title: "Login to Career Dashboard - Pro-elearning Careers",
 		templateUrl: "views/careers-login.html",
 		controller: "careersLoginCtrl"
 	})

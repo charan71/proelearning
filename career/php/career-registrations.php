@@ -27,7 +27,7 @@
         
     // Files Upload Code
     $tempPath = $_FILES['resume']['tmp_name'];
-    $uploadPath = '../resumes/' . $_FILES['resume']['name'];
+    $uploadPath = '../../resumes/' . $_FILES['resume']['name'];
     move_uploaded_file($tempPath, $uploadPath);
     
     $query = "INSERT INTO `careers_registration` (`first_name`, `middle_name`, `last_name`, `email`, `password`, `phone`, `job_title`, `tot_exp`, `current_company`, `skills`, `resume`, `university`, `degree`, `specialization`, `year_of_graduation`, `grade`, `date_time`) VALUES ('$first_name', '$middle_name', '$last_name', '$email', '$password', '$phone', '$job_title', '$tot_exp', '$current_company', '$skills', '".$_FILES['resume']['name']."', '$university', '$degree', '$specialization', '$year_of_graduation', '$grade', '$dt')";
