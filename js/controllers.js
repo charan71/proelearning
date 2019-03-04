@@ -390,8 +390,8 @@ angular.module('ProELearning.controllers', [])
 /* Creating professionListController */
 .controller("professionListController", function($scope) {
     $scope.professions = [
-        {profession: "Fresher"},
-        {profession: "Working Professional"},
+        { profession: "Fresher" },
+        { profession: "Working Professional" }
     ];
 })
 
@@ -407,6 +407,7 @@ angular.module('ProELearning.controllers', [])
     //     console.log($rootScope.shortCountryCode);
     //     $window.sessionStorage.setItem('shortCountryCode', response.data.country);
 
+    $scope.displayCourses = function() {
         $http.get("./json/fees.json")
         .then(function(response) {
             $scope.coursePricesList = response.data;
@@ -592,6 +593,9 @@ angular.module('ProELearning.controllers', [])
     //     $scope.shortCountryCode = "Error occurred while fetching the Geo Location";
     // });
 
+    }
+    $scope.displayCourses();
+
     function getPrice(courseName) {
         var returnVal = 0;
         for(var i=0; i<$scope.coursePricesList.length; i++) {
@@ -608,6 +612,7 @@ angular.module('ProELearning.controllers', [])
         };
         return returnVal;
     };
+
 }])
 
 /* Course Suggestion Controller */

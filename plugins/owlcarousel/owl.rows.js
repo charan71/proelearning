@@ -5,7 +5,7 @@
 ;(function ($, window, document, undefined) {
     Owl2row = function (scope) {
         this.owl = scope;
-        this.owl.options = $.extend({}, Owl2row.Defaults, this.owl.options);
+        this.owl.options = $.extend(Owl2row.Defaults, this.owl.options);
         //link callback events with owl carousel here
 
         this.handlers = {
@@ -26,7 +26,7 @@
         owl2rowDirection: 'utd' // ltr
     };
 
-    //mehtods:
+    //methods:
     Owl2row.prototype.build2row = function(thisScope){
     
         var carousel = $(thisScope.owl.$element);
@@ -136,4 +136,4 @@
     };
 
     $.fn.owlCarousel.Constructor.Plugins['owl2row'] = Owl2row;
-})( window.Zepto || window.jQuery, window,  document );
+})( window.Zepto || window.jQuery, window, document );

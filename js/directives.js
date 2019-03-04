@@ -6,46 +6,46 @@ angular.module('ProELearning.directives', [])
     restrict: 'E',
     transclude: false,
     link: function (scope, element) {
-      var defaultOptions = {
-          loop: false,
-        //   autoplay: true,
-          autoplayHoverPause: true,
-          autoplayTimeout: 2000,
-          nav: true,
-          rewind: true,
-          margin: 20,
-          navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
-          dots: false,
-          navSpeed: 300,
-          responsiveClass: true,
-          responsive: {
-              0: {
-                  items: 1
-              },
-              501: {
-                  items: 2
-              },
-              731: {
-                  items: 2
-              },
-              769: {
-                  items: 3
-              },
-              993: {
-                  items: 4
-              },
-              1201: {
-                  items: 4
-              },
-              1441: {
-                  items: 6
-              }
-        },
-        owl2row: true, // enable plugin
-        owl2rowTarget: 'item', // class for items in carousel div
-        owl2rowContainer: 'owl2row-item', // class for items container
-        owl2rowDirection: 'utd' // ltr
-      };
+        var defaultOptions = {
+            loop: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+            autoplayTimeout: 2000,
+            nav: true,
+            rewind: true,
+            margin: 20,
+            navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+            dots: false,
+            navSpeed: 300,
+            owl2row: true, // enable plugin
+            owl2rowTarget: 'item', // class for items in carousel div
+            owl2rowContainer: 'owl2row-item', // class for items container
+            owl2rowDirection: 'utd', // ltr
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                501: {
+                    items: 2
+                },
+                731: {
+                    items: 2
+                },
+                769: {
+                    items: 3
+                },
+                993: {
+                    items: 4
+                },
+                1201: {
+                    items: 4
+                },
+                1441: {
+                    items: 6
+                }
+            }
+        };
       scope.initCarousel = function(element) {
 /*
          provide any default options you want

@@ -12,10 +12,10 @@ var app = angular.module('ProELearning', ['ngRoute', 'ngAnimate', 'ngTouch', 'ng
     
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
 
-        $http.get("http://ipinfo.io/json")
+        $http.get("http://ip-api.com/json/")
         .then(function(response) {
-            $rootScope.shortCountryCode = response.data.country;
-            $window.sessionStorage.setItem('shortCountryCode', response.data.country);
+            $rootScope.shortCountryCode = response.data.countryCode;
+            $window.sessionStorage.setItem('shortCountryCode', response.data.countryCode);
         }, function(error) {
             $rootScope.shortCountryCode = "Error occurred while fetching the Geo Location";
         });
